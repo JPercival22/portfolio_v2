@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript">
+  <meta name="description" content="UX Portfolio for Joseph Percival">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Joseph Percival">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <script defer="" src="/dynamic-script.js"></script>
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="preload" href="/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <script src="https://kit.fontawesome.com/01d5458b98.js" crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/stylesheet.css">
+  </noscript>
+</head>
+
+<body>
+  <nav id="navbar" title="main navigation">
+    <div class="navbar-container container">
+      <div class="home-link">
+        <a href="/index.html" class="navbar-logo">
+          <img src="assets/images/jp-LOGO.svg" width="40" height="40" alt="company logo">
+          <div class="logo-container">
+            <div class="logo-name">Joseph Percival</div>
+            <div class="logo-title">UX &amp; UI DESIGNER</div>
+          </div>
+        </a>
+      </div>
+      <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
+        aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div id="navbar-menu" aria-labelledby="navbar-toggle">
+        <div class="navbar-links">
+          <a class="navbar-link navbar-item " href="/index.html">Home</a>
+          <a class="navbar-link navbar-item " href="/about-me.html">About</a>
+          <a class="navbar-link navbar-item active" href="/contact-form.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="contact form">
+ 
+        <div class="contact-container">
+
+          <div class="contact-card-container">
+        
+              <div class="contact-form">
+                <header>
+                  <h1 class="contact-form-title">Say Hello.</h1>
+                </header>
+                <p>
+                  Interested in connecting? Please fill the form below and I’ll get in touch with you shortly! Or you
+                  can email/ contact myself directly using the links
+                  in the <a class="tertiary-btn" href="#contact-details"> Contact Details </a>section. <br> Thank
+                  you.
+                </p>
+                <div class="contact-form-container">
+                  <div class="left">
+                    <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
+
+                      <input type="hidden" name="_subject" value="New Email From Portfolio">
+
+                      <!-- page forwards to thank you page after submission  -->
+
+                      <input type="hidden" name="_next" value="https://portfolio.josephmpercival.co.uk/thank-you.html">
+                      <!-- customers name section  -->
+                      <div class="input-container ">
+                        <label for="first_name" class="form__label">Full Name*</label>
+                        <input type="text" id="first_name" name="name" class="form__input"
+                          title="Please enter your first name here" aria-label="full name input field"
+                          autocomplete="off" placeholder="Please Enter Your Name Here." />
+                      </div>
+                      <div class="input-container ">
+                        <label for="first_name" class="form__label">Email*</label>
+                        <!-- required email section -->
+                        <input type="email" class="form__input" name="email" placeholder="Please Enter Your Email Here"
+                          title="e.g yourname@gmail.com" aria-label="email input field" required />
+
+                      </div>
+                      <div class="input-container ">
+                        <label for="first_name" class="form__label">Short Message</label>
+                        <!-- customer description  -->
+                        <textarea class="text-field" name="description" cols="43" rows="10"
+                          placeholder="Write your short message here" title="Please leave a short message here"
+                          aria-label="type your short message here" required></textarea>
+                      </div>
+                      <div class="input-container ">
+                        <input class="submit-button primary-button" type="submit" value="send" />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section>
+      <div id="contact-details" class="right">
+        <div class="header">
+          <h2>
+            Contact Details
+          </h2>
+        </div>
+        <div class="body">
+          <div class="contact-subtitle">
+            <p>Alternatively, please click any of the links below to send me an e-mail or to give me a call.</p>
+          </div>
+          <ul>
+            <li>
+              <span>
+                <i class="far fa-envelope"></i>
+              </span>
+              <a href="mailto:josephmpercival@gmail.com">
+                <span> Send E-Mail</span></a>
+            </li>
+            <li>
+              <span>
+                <i class="fa-solid fa-phone"></i>
+              </span>
+
+              <a href="tel:07709718757"> <span> 07709718757</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <p>Thank you.</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-social-icon">
+        <a href="/index.html" class="logo">
+          <img src="assets/images/jp-LOGO.svg" width="20" height="20" alt="Brand Logo Image"
+            title="Return to Home page button">
+        </a>
+        <a href="https://www.linkedin.com/in/joseph-percival" title="Click this link to see my Linked In my account">
+          <i class="fa-brands fa-linkedin fa-2xl" style="color: #007bb6;"></i>
+        </a>
+        <a href="https://github.com/JPercival22" title="Click this link to see my Version Control">
+          <i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i>
+        </a>
+        <a href="assets/JPercival-CV2021.pdf" download="assets/JPercival-CV2021.pdf"
+          title="Click this link to view my CV">
+          <i class="fa-solid fa-file-pdf fa-2xl" style="color: #007bb6;"></i>
+        </a>
+      </div>
+      <small>
+        &copy; Copyright 2023 Joseph M Percival
+      </small>
+    </div>
+  </footer>
+
+</body>
+
+</html>
