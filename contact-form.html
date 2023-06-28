@@ -46,62 +46,81 @@
     </div>
   </nav>
 
-  <main>
+  <main class="about-page-main">
     <section id="contact form">
- 
-        <div class="contact-container">
 
-          <div class="contact-form-container">
-        
-              <div class="contact-form">
-                <header>
-                  <h1 class="contact-form-title">Say Hello.</h1>
-                </header>
-                <p>
-                  Interested in connecting? Please fill the form below and I’ll get in touch with you shortly! Or you
-                  can email/ contact myself directly using the links
-                  in the <a class="tertiary-btn" href="#contact-details"> Contact Details </a>section. <br> Thank
-                  you.
-                </p>
-                <div class="contact-form-container">
-                  <!-- <div class="left"> -->
-                    <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
+      <div class="contact-form-container">
 
-                      <input type="hidden" name="_subject" value="New Email From Portfolio">
+        <div class="contact-form-editorial">
+          <div class="editorial-header">
+            <h1>Say Hello.</h1>
+          </div>
+          <div class="editorial-body">
+            <p>
+              Interested in connecting? Please fill the form below and I’ll get in touch with you shortly! Or you
+              can email/ contact myself directly using the links
+              in the <a class="tertiary-btn" href="#contact-details"> Contact Details </a>section. <br> Thank
+              you.
+            </p>
+          </div>
+        </div>
 
-                      <!-- page forwards to thank you page after submission  -->
+        <div class="contact-form-body">
 
-                      <input type="hidden" name="_next" value="https://portfolio.josephmpercival.co.uk/thank-you.html">
-                      <!-- customers name section  -->
-                      <div class="input-container ">
-                        <label for="first_name" class="form__label">Full Name*</label>
-                        <input type="text" id="first_name" name="name" class="form__input"
-                          title="Please enter your first name here" aria-label="full name input field"
-                          autocomplete="off" placeholder="Please Enter Your Name Here." />
-                      </div>
-                      <div class="input-container ">
-                        <label for="first_name" class="form__label">Email*</label>
-                        <!-- required email section -->
-                        <input type="email" class="form__input" name="email" placeholder="Please Enter Your Email Here"
-                          title="e.g yourname@gmail.com" aria-label="email input field" required />
+          <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
+            <h2>Contact Form</h2>
+            <input type="hidden" name="_subject" value="New Email From Portfolio">
 
-                      </div>
-                      <div class="input-container ">
-                        <label for="first_name" class="form__label">Short Message</label>
-                        <!-- customer description  -->
-                        <textarea class="text-field" name="description" cols="43" rows="10"
-                          placeholder="Write your short message here" title="Please leave a short message here"
-                          aria-label="type your short message here" required></textarea>
-                      </div>
-                      <div class="input-container ">
-                        <input class="submit-button primary-button" type="submit" value="send" />
-                      </div>
-                    </form>
-                  </div>
-                </div>
+            <!-- page forwards to thank you page after submission  -->
+
+            <input type="hidden" name="_next" value="https://portfolio.josephmpercival.co.uk/thank-you.html">
+            <!-- customers name section  -->
+            <div class="row">
+              <div class="input-group">
+                <label for="first_name" class="form__label">First Name *</label>
+                <input type="text" id="first_name" name="name" class="form__input"
+                  title="Please enter your first name here" aria-label="first name input field" autocomplete="off"
+                  placeholder="Please Enter Your First Name Here." />
+              </div>
+
+
+              <div class="input-group">
+                <label for="last_name" class="form__label">Last Name *</label>
+                <input type="text" id="last_name" name="name" class="form__input"
+                  title="Please enter your first name here" aria-label="Last name input field" autocomplete="off"
+                  placeholder="Please Enter Your Last Name Here." />
               </div>
             </div>
-          <!-- </div> -->
+
+            <div class="row">
+              <div class="input-group">
+                <label for="e-mail" class="form__label">Email Address *</label>
+                <!-- required email section -->
+                <input type="email" class="form__input" name="email" placeholder="Please Enter Your Email Here"
+                  title="e.g yourname@gmail.com" aria-label="email input field" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-group">
+                <label for="short_message" class="form__label">Short Message (Optional)</label>
+                <!-- customer description  -->
+                <textarea class="text-field" name="description" rows="10" placeholder="Write your short message here"
+                  title="Please leave a short message here" aria-label="type your short message here"
+                  required></textarea>
+              </div>
+            </div>
+            <div class="form-footer">
+              <input class="submit-button primary-button" type="submit" value="send" />
+            </div>
+          </form>
+
+
+        </div>
+
+
+        <!-- end of form container  -->
+      </div>
     </section>
 
     <section>
