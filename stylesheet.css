@@ -2181,6 +2181,10 @@ footer .footer-container {
     margin-bottom: 2em;
   }
 
+  .contact-form-container .contact-form-body .form-footer .submit-button {
+    width: 50%;
+  }
+
   .contact-card-container {
     max-width: 690px;
   }
