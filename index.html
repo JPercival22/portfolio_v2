@@ -22,34 +22,34 @@
 </head>
 
 <body>
-  <nav id="navbar">
-    <div class="navbar-container">
-      <div class="home-link">
-        <a href="/index.html" class="navbar-logo">
-          <img src="assets/images/jp-LOGO.svg" width="40" height="40" alt="company logo">
-          <div class="logo-container">
-            <div class="logo-name">Joseph Percival</div>
-            <div class="logo-title">UX &amp; UI DESIGNER</div>
+  <nav id="navbar" title="main navigation">
+      <div class="navbar-container container">
+          <div class="home-link">
+              <a href="/index.html" class="navbar-logo">
+                  <img src="assets/images/jp-LOGO.svg" width="40" height="40" alt="company logo">
+                  <div class="logo-container">
+                      <div class="logo-name">Joseph Percival</div>
+                      <div class="logo-title">UX &amp; UI DESIGNER</div>
+                  </div>
+              </a>
           </div>
-        </a>
+          <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
+              aria-expanded="false">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <div id="navbar-menu" aria-labelledby="navbar-toggle">
+              <div class="navbar-links">
+                  <a class="navbar-link navbar-item " href="/index.html">Home</a>
+                  <a class="navbar-link navbar-item active" href="/about-me.html">About</a>
+                  <a class="navbar-link navbar-item" href="/contact-form.html">Contact</a>
+              </div>
+          </div>
       </div>
-      <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
-        aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div id="navbar-menu" aria-labelledby="navbar-toggle">
-        <div class="navbar-links">
-          <a class="navbar-link navbar-item active" href="/index.html" title="You are on this page">Home</a>
-          <a class="navbar-link navbar-item " href="/about-me.html" title="Go to About Me page">About</a>
-          <a class="navbar-link navbar-item" href="/contact-form.html" title="Go to the contact form">Contact</a>
-        </div>
-      </div>
-    </div>
   </nav>
 
-  <main>
+  <main class="p0">
     <section id="btt-anchor">
       <div class="hero-container">
 
@@ -60,6 +60,9 @@
         <div class="hero-editorial">
           <div class="hero-text-content">
             <h2>Hi, my name is Joe </h2>
+            <div class="image-container">
+            <div class="profile-image"></div>
+            </div>
             <p>
               I am a passionate UX &amp; Designer dedicated to creating seamless, user-centric digital experiences that
               result in improved User engagement,
@@ -70,7 +73,7 @@
               User Experiences across
               Android, iOS and Web.
             </p>
-            <div class="profile-image-index-page">
+          
               <a class="primary-button" href="/contact-form.html" aria-label="button link to contact page"
                 title="Please click this button if you would like to set up a chat over a project.">
                 Lets Talk
@@ -79,9 +82,9 @@
                 title="Please click this button if you would like to view my experience and skills.">
                 About Me
               </a>
-            </div>
+           
           </div>
-          <div class="image-container-about-page"></div>
+        
 
         </div>
 
@@ -102,7 +105,7 @@
               <div class="left-project-1"> </div>
               <div class="right">
                 <div class="card-title">
-                  <h3>Voice Recognition R &amp; D</h3>
+                  <h3>ASR Research &amp; Development</h3>
                 </div>
                 <div class="card-editorial">
                   <p>PM, UX Research, UX &amp; UI Design, Prototyping, Test Facilitator.</p>
@@ -118,7 +121,7 @@
               <div class="left-project-2"> </div>
               <div class="right">
                 <div class="card-title">
-                  <h3>Mobile Application Design</h3>
+                  <h3>Mobile App Design</h3>
                 </div>
                 <div class="card-editorial">
                   <p>UX Research, UX &amp; UI Design, Prototyping, User Test Facilitator.</p>
@@ -133,7 +136,7 @@
               <div class="left-project-3"> </div>
               <div class="right">
                 <div class="card-title">
-                  <h3>E-Commerce Platform UI Design</h3>
+                  <h3>E-Commerce UI Design</h3>
                 </div>
                 <div class="card-editorial">
                   <p>UX Research, UX &amp; UI Design, Prototyping, User Test Facilitator.</p>
