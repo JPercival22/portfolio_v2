@@ -3031,6 +3031,7 @@ footer .footer-container {
   }
 
   /* about page */
+
   .skills-section,
   .experience-container {
     width: 80%;
@@ -3043,6 +3044,9 @@ footer .footer-container {
     justify-content: flex-end;
   }
 
+  .experience-body {
+    display: flex;
+  }
   /* contact page styles  */
 
 
@@ -3165,33 +3169,32 @@ footer .footer-container {
 
   /* about page  */
 
-  .hero-editorial-about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .profile-image-about-page {
-    width: 14%;
-  }
-
-  .about-primary-button-container {
-    width: 12%;
-    margin-top: 2em;
-  }
-
-  .experience-wrapper,
-  .experience-body {
-    width: 100%;
-  }
-
+  .skills-section,
   .experience-container {
-    margin: 0;
-    max-width: 100%;
+    width: 65%;
   }
 
-  .experience-header {
-    margin-top: 2em;
+  .centered-row .col {
+    margin-right: 4.2em;
+  }
+
+  .experience-body {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  .experience-duration {
+    display: flex;
+    justify-content: flex-start;
+    width: 19%;
+    margin-right: 8px;
+  }
+  .experience-body .experience-container {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
   }
 
   /* contact page styles  */
