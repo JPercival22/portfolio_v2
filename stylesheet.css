@@ -437,7 +437,7 @@ footer {
   border-radius: 50%;
 }
 
-.button-container {
+.two-button-container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -446,6 +446,14 @@ footer {
   width: -webkit-fill-available;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: -webkit-fill-available;
+}
 
 .portfolio {
   display: flex;
@@ -1967,20 +1975,40 @@ footer .footer-container {
     flex-wrap: nowrap;
   }
 
+  .two-button-container {
+    flex-direction: row;
+    gap: 1em;
+
+  }
+
+  .two-button-container .primary-button,
+  .two-button-container .secondary-button {
+    width: 50%;
+    height: 42px;
+  }
+
   .button-container {
     flex-direction: row;
     justify-content: flex-start;
     gap: 1em;
   }
 
+  .portfolio {
+    margin-bottom: 2em;
+  }
+
   .portfolio .portfolio-container {
     grid-gap: 1.5em;
   }
 
-  /* about page  */
-  .sm {
-    width: 25%;
+  .card-editorial button {
+    margin-bottom: 0;
+    width: -webkit-fill-available;
+    height: 55px;
   }
+
+  /* about page  */
+
 
   /* Skills Section  */
   .centered-row {
@@ -2059,6 +2087,21 @@ footer .footer-container {
 
   .hero-container {
     padding: 0 0.7em;
+  }
+
+  .two-button-container {
+    flex-direction: row;
+    display: flex;
+    gap: 1em;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .two-button-container .primary-button,
+  .two-button-container .secondary-button {
+    width: 30%;
+    height: 28px;
   }
 
   .portfolio {
@@ -2922,6 +2965,10 @@ footer .footer-container {
   .navbar-item:hover {
     border-bottom: 1px solid #1a1a1a;
   }
+  .two-button-container .primary-button,
+  .two-button-container .secondary-button {
+    width: 20%;
+  }
 
   .primary-button:hover {
     background: #b3e2bb;
@@ -3047,6 +3094,7 @@ footer .footer-container {
   .experience-body {
     display: flex;
   }
+
   /* contact page styles  */
 
 
@@ -3158,8 +3206,17 @@ footer .footer-container {
     width: 65%;
   }
 
+  .two-button-container .primary-button,
+  .two-button-container .secondary-button {
+    width: 15%;
+  }
+
   .portfolio {
     width: 65%;
+  }
+
+  .portfolio {
+    margin-bottom: 2em;
   }
 
   .portfolio .portfolio-container {
@@ -3185,12 +3242,14 @@ footer .footer-container {
     justify-content: space-evenly;
     align-items: flex-start;
   }
+
   .experience-duration {
     display: flex;
     justify-content: flex-start;
     width: 19%;
     margin-right: 8px;
   }
+
   .experience-body .experience-container {
     display: flex;
     justify-content: flex-end;
@@ -3252,7 +3311,7 @@ footer .footer-container {
   }
 
 
-/* contact page styles  */
+  /* contact page styles  */
   .contact-card-container {
     max-width: 690px;
   }
