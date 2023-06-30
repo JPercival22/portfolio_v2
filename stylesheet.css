@@ -479,7 +479,6 @@ footer {
 }
 
 .card-container a {
-  background-color: var(--white-bkg)2ce;
   border-radius: 24px;
   box-shadow: var(--br-shadow);
 }
@@ -1800,11 +1799,11 @@ footer .footer-container {
     width: 100%;
   }
 
-  .card-container {
+  /* .card-container {
     flex-direction: column;
     border: none;
     box-shadow: var(--br-shadow);
-  }
+  } */
 
   .card-container .left-project-1,
   .card-container .left-project-2,
@@ -3339,7 +3338,7 @@ footer .footer-container {
 @media only screen and (min-width: 1800px) {
 
   .navbar-container {
-    margin: 0 300px;
+    margin: 0 310px;
   }
 
   .about-page-main {
@@ -3358,4 +3357,10 @@ footer .footer-container {
     max-width: 690px;
   }
 
+}
+
+@media only screen and (min-width: 1920px) {
+  .navbar-container {
+    margin: 0 350px;
+  }
 }
