@@ -3233,6 +3233,7 @@ footer .footer-container {
     margin: 0 310px;
   }
 
+  /* about page styles  */
   .about-page-main {
     max-width: 1000px;
     align-items: center;
@@ -3245,6 +3246,13 @@ footer .footer-container {
     margin-bottom: 2em;
   }
 
+  .centered-row .col {
+    width: 24%;
+    margin-right: 0;
+  }
+
+
+/* contact page styles  */
   .contact-card-container {
     max-width: 690px;
   }
