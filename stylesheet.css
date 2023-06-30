@@ -550,41 +550,10 @@ footer {
   font-family: "Poppins";
 }
 
-/* end of index page  */
-
 /* about page  */
 
 .p0 {
   padding: 0;
-}
-
-.profile-image-about-page {
-  object-fit: cover;
-  width: 200px;
-  height: 200px;
-  background-image: url(assets/images/me.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  margin-bottom: 2em;
-}
-
-.about-primary-button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 20px;
-}
-
-.skills-section {
-  display: flex;
-  flex-direction: column;
-  padding: 8px;
-}
-
-.skills-section ul li {
-  padding-top: 10px;
 }
 
 .centered-row {
@@ -593,10 +562,18 @@ footer {
   padding: 0 12px 12px 12px;
 }
 
+.skills-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-section ul li {
+  padding-top: 10px;
+}
+
 .experience-container {
   display: flex;
   flex-direction: column;
-  padding: 8px;
 }
 
 .experience-header {
@@ -618,18 +595,14 @@ footer {
   width: -webkit-fill-available;
 }
 
-.experience-header .right .secondary-button {
-  font-family: 'Poppins';
-  font-size: 16px;
-  display: flex;
-  color: #1a1a1a;
-}
-
-.experience-wrapper,
-.experience-body {
+.experience-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.experience-body {
+  border-bottom: var(--border);
 }
 
 /* contact page styles  */
@@ -1628,7 +1601,7 @@ footer {
 }
 
 footer {
-  margin-top: 4em;
+  margin-top: 2em;
 }
 
 footer .footer-container {
@@ -1642,7 +1615,7 @@ footer .footer-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 100vw;
 }
 
@@ -1774,18 +1747,11 @@ footer .footer-container {
 
   main {
     top: 63px;
+    margin-bottom: 1em;
   }
 
   .navbar-container {
-    margin: var(--side-margins-576px);
-  }
-
-  .nav-container header .logo .logo-placeholder {
-    margin-left: 0.5em;
-  }
-
-  .nav-container header .logo .logo-container .logo-name {
-    font-size: 2em;
+    margin: 0 8px;
   }
 
   .hero-container {
@@ -1798,12 +1764,6 @@ footer .footer-container {
     grid-gap: 1em;
     width: 100%;
   }
-
-  /* .card-container {
-    flex-direction: column;
-    border: none;
-    box-shadow: var(--br-shadow);
-  } */
 
   .card-container .left-project-1,
   .card-container .left-project-2,
@@ -1824,11 +1784,6 @@ footer .footer-container {
     border-radius: 0 0 24px 24px;
   }
 
-  /* 
-  .portfolio .portfolio-container .right .card-title {
-    max-height: 100px;
-  } */
-
   .portfolio .portfolio-container .right .card-title h3 {
     font-size: 20px;
     margin: 1em 0;
@@ -1843,6 +1798,8 @@ footer .footer-container {
   }
 
   /* about page styles  */
+
+
 
   /*contact page styles*/
   .contact-form-container,
@@ -1960,8 +1917,13 @@ footer .footer-container {
     margin: var(--side-margins-768px);
   }
 
+.primary-button {
+  width: 120px;
+  height: 24px;
+}
+
   .navbar-container {
-    margin: var(--side-margins-768px);
+    margin: 0 12px;
   }
 
   #navbar-toggle,
@@ -2016,26 +1978,47 @@ footer .footer-container {
   }
 
   /* about page  */
-  .about-primary-button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2em 0 2em 13px;
-    width: 50%;
+  .sm {
+    width: 25%;
   }
 
-  .experience-header {
+  /* Skills Section  */
+  .centered-row {
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    flex-flow: row wrap;
+    align-items: stretch;
+  }
+
+  .centered-row:nth-of-type(1) {
+    flex-grow: 1;
+  }
+
+  .centered-row:nth-of-type(2) {
+    flex-grow: 1;
+  }
+
+  .centered-row:nth-of-type(3) {
+    flex-grow: 2;
+  }
+
+  /* Experience section  */
+  .experience-header {
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .experience-header .right .button-container {
+    justify-content: flex-end;
   }
 
   .experience-header .right .secondary-button {
-    width: 150px;
-  }
+      width: 120px;
+      height: 24px;
+    }
+    
 
   /* contact page styles  */
 
