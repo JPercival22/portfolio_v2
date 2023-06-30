@@ -694,7 +694,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1em 0;
 }
 
 .contact-form-container .contact-form-body .form-footer .primary-button {
@@ -721,6 +720,7 @@ footer {
   border-radius: 8px;
   border: var(--border);
   flex-direction: column;
+  margin-bottom: 2em;
 }
 
 .contact-card-container .header {
@@ -761,7 +761,7 @@ footer {
   align-items: center;
   justify-content: center;
   color: #1a1a1a;
-  padding: 2em 0px;
+  padding: 1em;
 }
 
 .thank-you-section {
