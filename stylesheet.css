@@ -743,14 +743,13 @@ footer {
 
 .contact-card-container .body ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 1em;
 }
 
 .contact-card-container .body ul li a {
-  margin-left: 1em;
   font-size: 16px;
   color: #1a1a1a;
   border-bottom: var(--border);
@@ -1747,6 +1746,15 @@ footer .footer-container {
   }
 
 } */
+@media only screen and (min-width: 500px) {
+  .contact-card-container .body ul {
+    gap: 2em;
+  }
+
+  .contact-card-container .body ul li span {
+   padding-right: 8px;
+  }
+}
 
 @media only screen and (min-width: 576px) {
   body {
@@ -2049,7 +2057,7 @@ footer .footer-container {
 
   /* contact page styles  */
 
-  .about-page-main {
+  .page-boundary {
     max-width: 1000px;
     align-items: center;
     gap: 1em;
@@ -2065,8 +2073,12 @@ footer .footer-container {
   .contact-card-container {
     max-width: 690px;
   }
+  .contact-card-container .body ul {
+    flex-direction: column;
+  }
 
   .tertiary-btn {
+    color: inherit;
     font-weight: 500;
     border-bottom: none
   }
@@ -2156,7 +2168,7 @@ footer .footer-container {
 
   /* contact page styles  */
 
-  .about-page-main {
+  .page-boundary {
     max-width: 1000px;
     align-items: center;
     gap: 0.5em;
@@ -3080,7 +3092,8 @@ footer .footer-container {
   /* about page */
 
   .skills-section,
-  .experience-container {
+  .experience-container,
+  .page-boundary {
     width: 80%;
     margin: 0 auto;
   }
@@ -3227,7 +3240,8 @@ footer .footer-container {
   /* about page  */
 
   .skills-section,
-  .experience-container {
+  .experience-container,
+  .page-boundary {
     width: 65%;
   }
 
@@ -3290,30 +3304,6 @@ footer .footer-container {
 
   .navbar-container {
     margin: 0 310px;
-  }
-
-  /* about page styles  */
-  .about-page-main {
-    max-width: 1000px;
-    align-items: center;
-    gap: 1em;
-    margin: 0 auto;
-  }
-
-  .contact-form-container {
-    max-width: 900px;
-    margin-bottom: 2em;
-  }
-
-  .centered-row .col {
-    width: 24%;
-    margin-right: 0;
-  }
-
-
-  /* contact page styles  */
-  .contact-card-container {
-    max-width: 690px;
   }
 
 }
