@@ -8,9 +8,9 @@
   <meta name="keywords" content="HTML, CSS, JavaScript">
   <meta name="author" content="Joseph Percival">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thanks Page</title>
+  <title>Contact Page</title>
   <script defer="" src="/dynamic-script.js"></script>
-  <link rel="icon" href="/assets/images/jp-LOGO.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
   <link rel="preload" href="/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <script src="https://kit.fontawesome.com/01d5458b98.js" crossorigin="anonymous"></script>
   <noscript>
@@ -21,40 +21,51 @@
 <body>
   <nav id="navbar" title="main navigation">
     <div class="navbar-container container">
-        <div class="home-link">
-            <a href="/index.html" class="navbar-logo">
-                <img src="assets/images/jp-LOGO.svg" width="40" height="40" alt="company logo">
-                <div class="logo-container">
-                    <div class="logo-name">Joseph Percival</div>
-                    <div class="logo-title">UX &amp; UI DESIGNER</div>
-                </div>
-            </a>
+      <div class="home-link">
+        <a href="/index.html" class="navbar-logo">
+          <img src="assets/images/jp-LOGO.svg" width="40" height="40" alt="company logo">
+          <div class="logo-container">
+            <div class="logo-name">Joseph Percival</div>
+            <div class="logo-title">UX &amp; UI DESIGNER</div>
+          </div>
+        </a>
+      </div>
+      <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
+        aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div id="navbar-menu" aria-labelledby="navbar-toggle">
+        <div class="navbar-links">
+          <a class="navbar-link navbar-item " href="/index.html">Home</a>
+          <a class="navbar-link navbar-item " href="/about-me.html">About</a>
+          <a class="navbar-link navbar-item active" href="/contact-form.html">Contact</a>
         </div>
-        <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
-            aria-expanded="false">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <div id="navbar-menu" aria-labelledby="navbar-toggle">
-            <div class="navbar-links">
-                <a class="navbar-link navbar-item " href="/index.html">Home</a>
-                <a class="navbar-link navbar-item active" href="/about-me.html">About</a>
-                <a class="navbar-link navbar-item" href="/contact-form.html">Contact</a>
-            </div>
-        </div>
+      </div>
     </div>
-</nav>
+  </nav>
 
-  <main>
-    <section class="thank-you-section">
+  <main class="page-boundary p0">
+    <section>
       <div class="thank-you-container">
-        <div class="thank-you-message">
+
+        <div class="thankyou-header">
+
           <img src="/assets/videos/check-gif.gif" width="415" height="320" alt="animated success video">
-          <h1>Thank You!</h1>
+          
+          <div class="thankyou-title">
+            <h1>Thank You!</h1>
+          </div>
+        </div>
+
+        <div class="thankyou-body">
           <p>
-            Your message has been sent to my email and I will get back to you shortly <br>
-            <span>* Very responsive, typically reaches out to you within 2 hours </span>
+            Your message has been sent to my email and I will get back to you shortly.
+          </p>
+        </div>
+        <div class="thankyou-footer">
+          <p><span>* Very responsive, typically reaches out to you within 2 hours. </span>
           </p>
           <a class="primary-button" href="/index.html" aria-label="link to the home page"
             title="Please click this button if you would like to set up a chat over a project.">
