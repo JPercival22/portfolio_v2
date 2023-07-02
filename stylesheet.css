@@ -174,8 +174,9 @@ img {
 
 footer {
   display: flex;
-  flex-direction: column;
-  flex-grow: 2;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Top nav and menu  */
@@ -778,6 +779,7 @@ footer {
   border-radius: 8px;
   background-color: var(--white-bkg)fff;
   padding: 8px;
+  margin: 0 auto;
 }
 
 .thankyou-title {
@@ -1747,7 +1749,6 @@ footer .footer-container {
   /* thankyou styles  */
   .thank-you-container {
     width: 80%;
-    margin: 0 auto;
   }
 
   .prototyping-section .summary-container .discovery-cards .discovery-card-inner .card-image {
@@ -2006,8 +2007,7 @@ footer .footer-container {
 
   /* thankyou styles  */
   .thank-you-container {
-    width: 80%;
-    margin: 0 auto;
+    width: 60%;
     padding: 2em;
     margin-bottom: 2em;
   }
@@ -2124,9 +2124,6 @@ footer .footer-container {
   /* thankyou styles  */
   .thank-you-container {
     width: 40%;
-    margin: 0 auto;
-    padding: 2em;
-    margin-bottom: 2em;
   }
 
   /* ####case study styles ####### */
@@ -3225,11 +3222,6 @@ footer .footer-container {
 
   .navbar-container {
     margin: 0 310px;
-  }
-
-  /* thankyou styles  */
-  .thank-you-container {
-    margin-bottom: 5em;
   }
 
 }
