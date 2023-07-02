@@ -1740,16 +1740,19 @@ footer .footer-container {
     padding: 16px;
   }
 
+    /* thankyou styles  */
+    .thank-you-container {
+      width: 80%;
+    }
+
   /* case study sections  */
+
   .case-study-inner {
     margin: 1em;
     margin-top: 0;
   }
 
-  /* thankyou styles  */
-  .thank-you-container {
-    width: 80%;
-  }
+
 
   .prototyping-section .summary-container .discovery-cards .discovery-card-inner .card-image {
     display: -webkit-box;
