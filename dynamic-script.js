@@ -1,3 +1,4 @@
+let navbar = document.querySelector("#navbar");
 const navbarToggle = navbar.querySelector('#navbar-toggle');
 let isNavbarExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
 

@@ -437,7 +437,7 @@ footer {
   object-fit: cover;
   width: 200px;
   height: 200px;
-  background-image: url(assets/images/me.webp);
+  background-image: url(assets/images/me-min.webp);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -502,7 +502,7 @@ footer {
   min-height: 250px;
   border-radius: 24px 24px 0 0;
   background-color: var(--white-bkg);
-  background-image: url(assets/images/guitarUX.webp);
+  background-image: url(assets/images/guitarUX-min.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
