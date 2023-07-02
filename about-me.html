@@ -13,9 +13,6 @@
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link rel="preload" href="/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <script defer src="https://kit.fontawesome.com/01d5458b98.js" crossorigin="anonymous"></script>
-    <noscript>
-        <link rel="stylesheet" href="/stylesheet.css">
-    </noscript>
 </head>
 
 <body>
@@ -77,7 +74,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <a class="primary-button" href="/contact-form.html" aria-label="button link to contact page"
+                    <a class="primary-button" href="/contact-form.html" aria-label="link to contact page"
                         title="Please click this button if you would like to set up a chat over a project.">
                         Lets Talk
                     </a>
@@ -234,30 +231,29 @@
 
     </main>
     <footer>
-        <section>
-            <div class="footer-container">
-                <div class="footer-social-icon">
-                    <a href="/index.html" class="logo">
-                        <img src="assets/images/jp-LOGO.svg" width="20" height="20" alt="Brand Logo Image"
-                            title="Return to Home page button">
-                    </a>
-                    <a href="https://www.linkedin.com/in/joseph-percival"
-                        title="Click this link to see my Linked In my account">
-                        <i class="fa-brands fa-linkedin fa-2xl" style="color: #007bb6;"></i>
-                    </a>
-                    <a href="https://github.com/JPercival22" title="Click this link to see my Version Control">
-                        <i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i>
-                    </a>
-                    <a href="assets/documents/CV2023.pdf" target="_blank" title="Click this link to view my CV">
-                        <i class="fa-solid fa-file-pdf fa-2xl" style="color: #007bb6;"></i>
-                    </a>
-                </div>
-                <small>
-                    &copy; Copyright 2023 Joseph M Percival
-                </small>
-            </div>
-        </section>
-    </footer>
+        <div class="footer-container">
+          <div class="footer-social-icon">
+            <a href="/index.html" class="logo">
+              <img src="assets/images/jp-LOGO.svg" width="20" height="20" alt="Return to Home page button">
+            </a>
+            <a href="https://www.linkedin.com/in/joseph-percival" title="Click this link to see my Linked In my account"
+              aria-label="linked in button link">
+              <i class="fa-brands fa-linkedin fa-2xl" style="color: #007bb6;"></i>
+            </a>
+            <a href="https://github.com/JPercival22" title="Click this link to see my Version Control"
+              aria-label="git hub button link">
+              <i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i>
+            </a>
+            <a href="assets/documents/CV2023.pdf" target="_blank" title="Click this link to view my CV"
+              aria-label="CV PDF button link">
+              <i class="fa-solid fa-file-pdf fa-2xl" style="color: #007bb6;"></i>
+            </a>
+          </div>
+          <small>
+            &copy; Copyright 2023 Joseph M Percival
+          </small>
+        </div>
+      </footer>
 
 </body>
 

@@ -13,9 +13,6 @@
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
   <link rel="preload" href="/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <script src="https://kit.fontawesome.com/01d5458b98.js" crossorigin="anonymous"></script>
-  <noscript>
-    <link rel="stylesheet" href="/stylesheet.css">
-  </noscript>
 </head>
 
 <body>
@@ -47,133 +44,133 @@
   </nav>
 
   <main class="page-boundary p0">
- 
-      <section id="contact form">
 
-        <div class="contact-form-container">
+    <section id="contact form">
 
-          <div class="contact-form-editorial">
-            <div class="editorial-header">
-              <h1>Say Hello.</h1>
-            </div>
-            <div class="editorial-body">
-              <p>
-                Interested in connecting? Please fill the form below and I’ll get in touch with you shortly! Or you
-                can email/ contact myself directly using the links
-                in the <a class="tertiary-btn" href="#contact-details"> Contact Details </a>section. <br> Thank
-                you.
-              </p>
-            </div>
+      <div class="contact-form-container">
+
+        <div class="contact-form-editorial">
+          <div class="editorial-header">
+            <h1>Say Hello.</h1>
           </div>
-
-          <div class="contact-form-body">
-
-            <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
-              <h2>Contact Form</h2>
-              <input type="hidden" name="_subject" value="New Email From Portfolio">
-
-              <!-- page forwards to thank you page after submission  -->
-
-              <input type="hidden" name="_next" value="https://portfolio.josephmpercival.co.uk/thank-you.html">
-              <!-- customers name section  -->
-              <div class="row">
-                <div class="input-group">
-                  <label for="first_name" class="form__label">First Name *</label>
-                  <input type="text" id="first_name" name="name" class="form__input"
-                    title="Please enter your first name here" aria-label="first name input field" autocomplete="off"
-                    placeholder="Please Enter Your First Name Here." />
-                </div>
-
-
-                <div class="input-group">
-                  <label for="last_name" class="form__label">Last Name *</label>
-                  <input type="text" id="last_name" name="name" class="form__input"
-                    title="Please enter your first name here" aria-label="Last name input field" autocomplete="off"
-                    placeholder="Please Enter Your Last Name Here." />
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="input-group">
-                  <label for="e-mail" class="form__label">Email Address *</label>
-                  <!-- required email section -->
-                  <input type="email" class="form__input" name="email" placeholder="Please Enter Your Email Here"
-                    title="e.g yourname@gmail.com" aria-label="email input field" required />
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="input-group">
-                  <label for="short_message" class="form__label">Short Message (Optional)</label>
-                  <!-- customer description  -->
-                  <textarea class="text-field" name="description" rows="10" placeholder="Write your short message here"
-                    title="Please leave a short message here" aria-label="type your short message here"
-                    required></textarea>
-                </div>
-              </div>
-              <div class="form-footer">
-                <input class="submit-button primary-button" type="submit" value="send" />
-              </div>
-            </form>
-
-
-          </div>
-
-
-          <!-- end of form container  -->
-        </div>
-      </section>
-
-      <section>
-        <div id="contact-details" class="contact-card-container">
-          <div class="header">
-            <h2>
-              Contact Details
-            </h2>
-          </div>
-          <div class="body">
-            <div class="contact-subtitle">
-              <p>Alternatively, please click any of the links below to send me an e-mail or to give me a call.</p>
-            </div>
-            <ul>
-              <li>
-                <span>
-                  <i class="far fa-envelope"></i>
-                </span>
-                <a href="mailto:josephmpercival@gmail.com">
-                  <span> Send E-Mail</span></a>
-              </li>
-              <li>
-                <span>
-                  <i class="fa-solid fa-phone"></i>
-                </span>
-
-                <a href="tel:07709718757"> <span> 07709718757</span></a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer">
-            <p>Thank you.</p>
+          <div class="editorial-body">
+            <p>
+              Interested in connecting? Please fill the form below and I’ll get in touch with you shortly! Or you
+              can email/ contact myself directly using the links
+              in the <a class="tertiary-btn" href="#contact-details"> Contact Details </a>section. <br> Thank
+              you.
+            </p>
           </div>
         </div>
-      </section>
-   
+
+        <div class="contact-form-body">
+
+          <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
+            <h2>Contact Form</h2>
+            <input type="hidden" name="_subject" value="New Email From Portfolio">
+
+            <!-- page forwards to thank you page after submission  -->
+
+            <input type="hidden" name="_next" value="https://portfolio.josephmpercival.co.uk/thank-you.html">
+            <!-- customers name section  -->
+            <div class="row">
+
+              <div class="input-group">
+                <label for="first_name" class="form__label">First Name *</label>
+                <input type="text" id="first_name" name="name" class="form__input"
+                  title="Please enter your first name here" aria-label="first name input field" 
+                  autocomplete="off"
+                  placeholder="Please Enter Your First Name Here." required />
+              </div>
+
+
+              <div class="input-group">
+                <label for="last_name" class="form__label">Last Name *</label>
+                <input type="text" id="last_name" name="name" class="form__input"
+                  title="Please enter your first name here" autocomplete="off"
+                  placeholder="Please Enter Your Last Name Here."  required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-group">
+                <label for="email" class="form__label">Email Address *</label>
+                <!-- required email section -->
+                <input type="email" id="email" name="email" class="form__input"
+                  title="e.g yourname@gmail.com" autocomplete="off"
+                  placeholder="Please Enter Your Email Here" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-group">
+                <label for="more-detail" class="form__label">Short Message (Optional)</label>
+                <!-- customer description  -->
+                <textarea class="textarea" id="more-detail" name="more-detail" rows="10" placeholder="Write your short message here"
+                  title="Please leave a short message here" required></textarea>
+              </div>
+            </div>
+            <div class="form-footer">
+              <input class="submit-button primary-button" type="submit" value="send" />
+            </div>
+          </form>
+        </div>
+        <!-- end of form container  -->
+      </div>
+    </section>
+
+    <section>
+      <div id="contact-details" class="contact-card-container">
+        <div class="header">
+          <h2>
+            Contact Details
+          </h2>
+        </div>
+        <div class="body">
+          <div class="contact-subtitle">
+            <p>Alternatively, please click any of the links below to send me an e-mail or to give me a call.</p>
+          </div>
+          <ul>
+            <li>
+              <span>
+                <i class="far fa-envelope"></i>
+              </span>
+              <a href="mailto:josephmpercival@gmail.com">
+                <span> Send E-Mail</span></a>
+            </li>
+            <li>
+              <span>
+                <i class="fa-solid fa-phone"></i>
+              </span>
+
+              <a href="tel:07709718757"> <span> 07709718757</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <p>Thank you.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     <div class="footer-container">
       <div class="footer-social-icon">
         <a href="/index.html" class="logo">
-          <img src="assets/images/jp-LOGO.svg" width="20" height="20" alt="Brand Logo Image"
-            title="Return to Home page button">
+          <img src="assets/images/jp-LOGO.svg" width="20" height="20" alt="Return to Home page button">
         </a>
-        <a href="https://www.linkedin.com/in/joseph-percival" title="Click this link to see my Linked In my account">
+        <a href="https://www.linkedin.com/in/joseph-percival" title="Click this link to see my Linked In my account"
+          aria-label="linked in button link">
           <i class="fa-brands fa-linkedin fa-2xl" style="color: #007bb6;"></i>
         </a>
-        <a href="https://github.com/JPercival22" title="Click this link to see my Version Control">
+        <a href="https://github.com/JPercival22" title="Click this link to see my Version Control"
+          aria-label="git hub button link">
           <i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i>
         </a>
-        <a href="assets/documents/CV2023.pdf" target="_blank" title="Click this link to view my CV">
+        <a href="assets/documents/CV2023.pdf" target="_blank" title="Click this link to view my CV"
+          aria-label="CV PDF button link">
           <i class="fa-solid fa-file-pdf fa-2xl" style="color: #007bb6;"></i>
         </a>
       </div>
