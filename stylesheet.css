@@ -804,24 +804,14 @@ footer {
 
 /* ########## case study styles ################ */
 
-/* just-speak styles */
-.hero-header .bullet-list-row {
+/* case study styles  */
+.sm-cs-hero {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 0.3em;
-  margin-bottom: 1em;
 }
 
-.hero-header .bullet-list-row li {
-  font-size: 16px;
-  color: #4E4E4C;
+.lg-cs-hero {
+  display: none;
 }
-
-
-
-
 
 .hero-container.remind-me-project {
   display: -webkit-box;
@@ -1767,6 +1757,7 @@ footer .footer-container {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
+    width: 100%;
     gap: 3em;
   }
 
@@ -1775,10 +1766,6 @@ footer .footer-container {
     flex-direction: column;
     width: 50%;
   }
-  /* .col-2 .left-col p,
-  .col-2 .right-col p {
-    font-size: 20px;
-  } */
 
   .col-2 .right-col {
     display: flex;
@@ -1824,9 +1811,6 @@ footer .footer-container {
     width: -webkit-fill-available;
     height: 55px;
   }
-
-  /* about page  */
-
 
   /* Skills Section  */
   .centered-row {
@@ -1903,6 +1887,59 @@ footer .footer-container {
 
   .thankyou-footer {
     align-items: center;
+  }
+
+  /* ####case study styles ####### */
+
+  .flex-row-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .flex-row-reverse-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .flex-col-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+.bullet-list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 0.3em;
+  margin-bottom: 1em;
+}
+
+.bullet-list-row li {
+  font-size: 16px;
+  color: #4E4E4C;
+}
+
+.bullet-list-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.3em;
+  margin-left: 1em;
+  list-style: disc;
+}
+
+.bullet-list-col li {
+  font-size: 16px;
+}
+  .sm-cs-hero {
+    display: none;
+  }
+
+  .lg-cs-hero {
+    display: flex;
   }
 
 }
@@ -2013,30 +2050,6 @@ footer .footer-container {
   /* thankyou styles  */
   .thank-you-container {
     width: 40%;
-  }
-
-  /* ####case study styles ####### */
-
-  .flex-row-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .flex-row-reverse-container {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  .flex-col-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .list-col {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
   }
 
   .prototyping-section .summary-container .discovery-cards .discovery-card-inner .wireframes-link .secondary-button {
