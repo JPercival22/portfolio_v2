@@ -96,7 +96,7 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 22pt;
   color: var(--brand-color);
@@ -1588,10 +1588,10 @@ footer .footer-container {
     padding: 16px;
   }
 
-    /* thankyou styles  */
-    .thank-you-container {
-      width: 80%;
-    }
+  /* thankyou styles  */
+  .thank-you-container {
+    width: 80%;
+  }
 
   /* case study sections  */
 
@@ -1741,11 +1741,49 @@ footer .footer-container {
     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
+  .hero-header .bullet-list-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: inherit;
+  }
+
+  .hero-header .bullet-list-row li {
+    padding-right: 16px;
+    font-size: 14px;
+  }
+
   .hero-editorial {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
+  }
+
+  .col-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 3em;
+  }
+
+  .col-2 .left-col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  /* .col-2 .left-col p,
+  .col-2 .right-col p {
+    font-size: 20px;
+  } */
+
+  .col-2 .right-col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
   }
 
   .hero-text-content {
@@ -1979,42 +2017,26 @@ footer .footer-container {
 
   /* ####case study styles ####### */
 
-  .hero-container.guitar-project .is-centered .hero-text-content {
-    margin-left: 0.3em;
-    background: none;
-  }
-
-  .hero-container.guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
-    font-size: 2.8em;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: 12pt;
-    line-height: 30pt;
-  }
-
-  .hero-container.guitar-project .is-centered .hero-text-content h2 {
-    color: #f97d95;
-    font-size: 2em;
-    letter-spacing: 6pt;
-  }
-
-  .hero-container.remind-me-project .is-centered .hero-text-content {
+  .flex-row-container {
     display: flex;
-    align-items: center;
-    margin-left: 1.3em;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-
-  .hero-container.remind-me-project .is-centered .hero-text-content .hero-title-case-study {
+  .flex-row-reverse-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  .flex-col-container {
+    display: flex;
     flex-direction: column;
   }
 
-  .hero-container.remind-me-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
-    -ms-flex-item-align: start;
-    align-self: flex-start;
-    text-align: left;
+  .list-col {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
   .prototyping-section .summary-container .discovery-cards .discovery-card-inner .wireframes-link .secondary-button {
