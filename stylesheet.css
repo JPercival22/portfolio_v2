@@ -198,6 +198,7 @@ footer {
   width: -webkit-fill-available;
   min-width: 320px;
   height: 53px;
+  padding-right: 8px;
 }
 
 .home-link {
@@ -427,7 +428,7 @@ footer {
 
 .image-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: -webkit-fill-available;
