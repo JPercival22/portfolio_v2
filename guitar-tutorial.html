@@ -63,16 +63,17 @@
                 <div class="image-container">
                     <img class="lg-cs-hero" src="/assets/images/CS1-lg-device-demo.webp" width="150" height="150"
                         alt="A caption of the Application in a real world environment">
-                    <img  class="sm-cs-hero" src="/assets/images/CS1-sm-device-demo.webp" width="150" height="150"
+                    <img class="sm-cs-hero" src="/assets/images/CS1-sm-device-demo.webp" width="150" height="150"
                         alt="A caption of the Application in a real world environment">
                 </div>
                 <div class="flex-row-container">
                     <div class="col-2">
                         <div class="left-col">
                             <h2>Background</h2>
-                            <p>Just Speak Guitar Lessons is a vocally navigable website using a non AI 
-                                speech recognition algorithm. The inspiration came from a UX meet-up 
-                                concerning advancements in Speech recognition and how including this improves Accessability 
+                            <p>Just Speak Guitar Lessons is a vocally navigable website using a non AI
+                                speech recognition algorithm. The inspiration came from a UX meet-up
+                                concerning advancements in Speech recognition and how including this improves
+                                Accessability
                                 and increases User engagement.
 
                             </p>
@@ -107,81 +108,383 @@
                 </div>
             </div>
         </section>
+        <div class="page-boundary">
+            <section>
 
-        <section>
-            <div class="flex-col-container">
-                <h2>Research</h2>
-                        <h3>Goals</h3>
-                        <p>
-                            Below are the areas we explored during Desk Research to understand:
-                        <ul class="bullet-list-col">
-                            <li>The patterns behind online guitar tutorials.</li>
-                            <li>Would voice control be useful for this sort of website.</li>
-                            <li>Suitable Non AI Speech recognition libraries.</li>
-                            <li>What are the User's motivations to learn this subject.</li>
-                        </ul>
-                        </p>
-                        <h3> Methodologies</h3>
-                        <p>
-                            Secondary research on top products related to Voice Navigable Guitar Tutorials to determine
-                            the gap in the market.
-                            In-depth user interviews with 6 University students who started and want to continue in
-                            their personal
-                            studies in playing the guitar.
-                        </p>
-                    </div>
-        </section>
-        <section>
-            <h2>Competitive Research</h2>
-
-            <div class="flex-row-container">
-
-                <p>For this part of the project I decided to explore top rated app care plants and compare key
-                    features and see what problems they address. I discovered that almost all of them provide basic
-                    care plant advice user can access after purchasing the plant, in most of cases after getting
-                    premium access.
-                </p>
-                <p>
-                    No apps offer much of free content aimed at helping the users grow their plant collection, plant
-                    exchange community and getting advice during the purchase or research phase. As I’d like to set
-                    my users for the long-time success, I realized that can be achieved by designing a product, that
-                    addresses the problems that occur before the purchasing decision. Synthesized data from the user
-                    interviews only confirmed that assumption.</p>
-            </div>
-        </section>
-        <section>
-            <div class="flex-col-container">
-
-
-
-                <h1>User Interviews</h1>
-                <div class="image-container">
-                    <a target="_blank"><img src="/assets/images/Group 2.svg" alt=""></a>
-                    <img src="/assets/images/Group 8.svg" alt="">
-
+                <div class="flex-col-container">
+                    <h2>Research</h2>
+                    <h3>Goals</h3>
+                    <p>
+                        Below are the areas we explored during Desk Research to understand:
+                    <ul class="bullet-list-col">
+                        <li>The patterns behind online guitar tutorials standards.</li>
+                        <li>User identified pain points of available online tutorials.</li>
+                        <li>Would voice control be useful for this sort of website.</li>
+                        <li>Suitable Non AI Speech recognition libraries.</li>
+                        <li>What are the User's motivations to learn this subject.</li>
+                    </ul>
+                    </p>
+                    <h3> Methodologies</h3>
+                    <p>
+                        Secondary research on top products related to Voice Navigable Guitar Tutorials to determine
+                        the gap in the market.
+                        In-depth user interviews with 6 University students who started and want to continue in
+                        their personal
+                        studies in playing the guitar.
+                    </p>
                 </div>
-                <h2>Research Synopsis</h2>
 
-                <p>
-                    User Testing and Focus Groups were formed by recruiting willing participating students from
-                    different departments
-                    on the University Campus - this was to create an unbiased set of results.
-                    <br>
-                    User input was obtained through Public Surveys and Interviews, ensuring participant anonymity
-                    procedures were ethically upheld.
-                    <br>
-                    Acknowledgement of different accents amongst students, meant creating keywords that the User's
-                    would
-                    use would have to be surveyed leaving the majority of winning keywords being be used for
-                    development.
-                    <br>
-                    Think Aloud Protocol was applied on the completed designs and again on the finished product to
-                    capture the user's needs.
-                    <br>
-                </p>
-            </div>
-        </section>
-        <!--  <section class="summary bg-gradient-warm">
+            </section>
+            <section>
+                <div class="flex-row-container">
+                    <h2>Competitive Research</h2>
+                    <p>For this part of the project I decided to explore top rated online Guitar Tutorials and compare
+                        key
+                        features and see what problems they address. I discovered that almost all of them provide basic
+                        lessons after paying for premium access. I assume this is the reason many decide not to continue learning.</p>
+                    <p> No website offered free content aimed helping the user to achieve their goals, as I would like
+                        to set
+                        my users up for learner success, I realised that this can be achieved by designing a product,
+                        that offers a completely free service, that addresses the problem before the the usual purchasing decision.
+                        Synthesised data from User Interviews confirmed this assumption.
+                    </p>
+                    <div class="table">
+                        <div class="tr th">
+                            <div class="td" style="flex-grow: 2; justify-content: flex-start;">
+                                Name
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                Free Content
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                Easy Navigation
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                Voice Navigable
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                Novice Lessons
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                Subscription
+                            </div>
+
+                        </div>
+                        <div class="tr table-total">
+                            <div class="td" style="flex-grow: 2;">
+                                <b>Fender Play</b>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td" style="flex-grow: 2;">
+                                <b>Guitar Tricks</b>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td" style="flex-grow: 2;">
+                                <b>True Fire</b>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td" style="flex-grow: 2;">
+                                <b>Artist Works</b>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td" style="flex-grow: 2;">
+                                <b>Justin Guitar </b>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td" style="flex-grow: 2;">
+                                <b>Guitareo</b>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td" style="flex-grow: 2;">
+                                <b>Jam Play</b>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td" style="flex-grow: 2;">
+                                <b>Orange Learn</b>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td" style="flex-grow: 2;">
+                                <b>Jam Track</b>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-check fa-lg" style="color: #409d34;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                            <div class="td" style="justify-content: center;">
+                                <span>
+                                    <i class="fa-solid fa-xmark fa-lg" style="color: #b21515;"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>Competitive Research Table depicting what other online Guitar Tutorials offer.
+                    </figcaption>
+                    <p>I analysed the UI and features of competitor websites in order to gain a better understanding
+                        of industry standards. No website offers Voice command navigation so in the next phase User
+                        Interviews were conducted to see if
+                        this would be Useful, Usable and Desired. This became important to follow at the design
+                        stage
+                        for familiarity and context for the user.</p>
+                </div>
+            </section>
+            <section>
+                <div class="flex-col-container">
+                    <h1>User Interviews</h1>
+                    <div class="image-container">
+                        <a target="_blank"><img src="/assets/images/Group 2.svg" alt=""></a>
+                        <img src="/assets/images/Group 8.svg" alt="">
+
+                    </div>
+                    <h2>Research Synopsis</h2>
+
+                    <p>
+                        User Testing and Focus Groups were formed by recruiting. willing participating students
+                        from
+                        different departments
+                        on the University Campus - this was to create an unbiased set of results.
+                        <br>
+                        User input was obtained through Public Surveys and Interviews, ensuring participant
+                        anonymity
+                        procedures were ethically upheld.
+                        <br>
+                        Acknowledgement of different accents amongst students, meant creating keywords that the
+                        User's
+                        would
+                        use would have to be surveyed leaving the majority of winning keywords being be used for
+                        development.
+                        <br>
+                        Think Aloud Protocol was applied on the completed designs and again on the finished
+                        product to
+                        capture the user's needs.
+                        <br>
+                    </p>
+                </div>
+            </section>
+            <!--  <section class="summary bg-gradient-warm">
             <h1 class="text-center">Case Summary</h1>
             <div class="summary-container">
 
@@ -340,8 +643,8 @@
                             <div class="auto-btn4"></div>
                         </div> -->
 
-        <!-- manual-navigation  -->
-        <!-- <div class="navigation-manual">
+            <!-- manual-navigation  -->
+            <!-- <div class="navigation-manual">
                             <label for="radio1" class="manual-btn"></label>
                             <label for="radio2" class="manual-btn"></label>
                             <label for="radio3" class="manual-btn"></label>
@@ -351,8 +654,8 @@
 
                 </div>
             </div> -->
-        <!-- </section> -->
-        <!-- <section>
+            <!-- </section> -->
+            <!-- <section>
             <div class="Discovery-section">
                 <h1 class="text-center">Discovery Analysis</h1>
                 <h2>Desk Research</h2>
@@ -382,7 +685,7 @@
                 </p>
             </div>
         </section> -->
-        <!-- <section class="ideation-and-discovery-section">
+            <!-- <section class="ideation-and-discovery-section">
             <div class="idea-container">
                 <div class="idea-left-col">
                     <h1 class="text-center">Idea Prioritisation</h1>
@@ -428,7 +731,7 @@
                 </div>
             </div>
         </section> -->
-        <!-- <section class="nielson-quote">
+            <!-- <section class="nielson-quote">
             <div class="quote-text">
                 <h2>
                     "Although voice interaction is markedly different from graphical user interfaces, classic usability
@@ -663,8 +966,8 @@
         </section>
 
         <section class="outcomes-gallery-container"> -->
-        <!-- Mobile Viewport Outcome  -->
-        <!-- <div class="row">
+            <!-- Mobile Viewport Outcome  -->
+            <!-- <div class="row">
                 <h1 class="text-center">Final Design and Specifications</h1>
                 <div class="col">
                     <div class="feature-img">
@@ -701,8 +1004,8 @@
                 </div>
             </div> -->
 
-        <!-- Desktop Designs  -->
-        <!-- <div class="row desktop-design-row">
+            <!-- Desktop Designs  -->
+            <!-- <div class="row desktop-design-row">
                 <div class="col">
                     <div class="small-img-row">
                         <div class="small-img">
@@ -730,7 +1033,7 @@
             </div>
         </section> -->
 
-        <!-- <section class="final-editorial bg-gradient-hot">
+            <!-- <section class="final-editorial bg-gradient-hot">
             <h1 class="text-center">Like What you see?</h1>
             <p>Hopefully you like what you have seen, how the story unfolded and more importantly why the user
                 experience
@@ -741,6 +1044,7 @@
             <p>Thank you for your time.</p>
 
         </section>  -->
+        </div>
     </main>
 
 
