@@ -1954,6 +1954,7 @@ footer .footer-container {
   .flex-col-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1em;
   }
 
 .bullet-list-row {
@@ -2750,11 +2751,24 @@ footer .footer-container {
     margin: 0;
   }
 
-  /* index styles  */
+  section {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .page-boundary {
+    max-width: 1400px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
 
   .hero-container {
-    width: 65%;
+    width: 100%;
   }
+
+  /* index styles  */
 
   .two-button-container .primary-button,
   .two-button-container .secondary-button {
@@ -2777,8 +2791,7 @@ footer .footer-container {
   /* about page  */
 
   .skills-section,
-  .experience-container,
-  .page-boundary {
+  .experience-container {
     width: 65%;
   }
 
