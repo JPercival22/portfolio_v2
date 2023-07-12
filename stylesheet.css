@@ -2652,8 +2652,7 @@ footer .footer-container {
   /* about page */
 
   .skills-section,
-  .experience-container,
-  .page-boundary {
+  .experience-container {
     width: 80%;
     margin: 0 auto;
   }
