@@ -2903,25 +2903,39 @@ footer .footer-container {
   /* in page-nav prototype  */
   aside {
     position: fixed;
-    top: 70px;
+    top: 58px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
     color: #fff;
-    width: 150px;
-    padding-left: 20px;
+    width: 160px;
+    padding-left: 16px;
     height: 100vh;
-    background-image: linear-gradient(30deg , #0048bd, #44a7fd);
+    background-image: linear-gradient(30deg, #0048bd, #44a7fd);
     border-top-right-radius: 80px;
   }
-  
+
+  ion-icon {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+
   aside a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     font-size: 12px;
     color: #fff;
-    display: block;
-    padding: 12px;
+    display: inline-block;
+    padding: 12px 6px;
     text-decoration: none;
-    -webkit-tap-highlight-color:transparent;
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
+    word-break: break-word;
   }
-  
+
   aside a:hover {
     color: #3f5efb;
     background: #fff;
@@ -2931,12 +2945,12 @@ footer .footer-container {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
-  
+
   aside a i {
     margin-right: 5px;
   }
-  
-  /* aside a:hover::after {
+
+  aside a:hover::after {
     content: "";
     position: absolute;
     background-color: transparent;
@@ -2947,7 +2961,7 @@ footer .footer-container {
     border-bottom-right-radius: 18px;
     box-shadow: 0 20px 0 0 #fff;
   }
-  
+
   aside a:hover::before {
     content: "";
     position: absolute;
@@ -2958,11 +2972,11 @@ footer .footer-container {
     width: 35px;
     border-top-right-radius: 18px;
     box-shadow: 0 -20px 0 0 #fff;
-  } */
-  
-  aside p {
+  }
+
+  aside h3 {
     margin: 0;
     padding: 40px 0;
   }
-  
+
 }
