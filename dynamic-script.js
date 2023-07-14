@@ -14,3 +14,12 @@ const navbarLinksContainer = navbarMenu.querySelector('.navbar-links');
 
 navbarLinksContainer.addEventListener('click', (e) => e.stopPropagation());
 navbarMenu.addEventListener('click', toggleNavbarVisibility);
+
+// side bar functionality 
+
+let btn = document.querySelector('#sidebar-menu-btn')
+let sidebar = document.querySelector('.sidebar')
+
+btn.onclick = function () {
+  sidebar.classList.toggle('active');
+};
