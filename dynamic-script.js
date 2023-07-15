@@ -18,6 +18,7 @@ navbarMenu.addEventListener('click', toggleNavbarVisibility);
 // side bar functionality 
 
 let btn = document.querySelector('#sidebar-menu-btn')
+let listItem = document.querySelector('.side-bar-list-item')
 let sidebar = document.querySelector('.sidebar')
 
 btn.onclick = function () {
