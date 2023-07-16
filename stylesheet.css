@@ -2946,7 +2946,8 @@ footer .footer-container {
 
   .sidebar #sidebar-menu-btn {
     position: absolute;
-    color: #12171e;
+    color: #222222;
+    background-color: #fff;
     top: 1rem;
     left: 40%;
     transition: all .5s ease-in-out;
@@ -2955,7 +2956,7 @@ footer .footer-container {
     fill: #fff;
     border-radius: 100%;
   }
-  
+
   .sidebar #sidebar-menu-btn:hover {
     background-color: #b7d1c8;
   }
@@ -3042,6 +3043,7 @@ footer .footer-container {
     opacity: 1;
     margin-left: .5em;
   }
+
 
 }
 
