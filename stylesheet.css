@@ -1658,6 +1658,20 @@ footer .footer-container {
   }
 
   /* Case Study Styles  */
+  #ui-design .paper-prototyping .centered-row {
+    align-items: center;
+    justify-content: space-between;
+  }
+  #ui-design .paper-prototyping .centered-row .col,
+  #ui-design .paper-prototyping .centered-row .col:nth-child(2),
+  #ui-design .paper-prototyping .centered-row .col:nth-child(3) {
+    width: 30%;
+  }
+
+  #ui-design .paper-prototyping .centered-row .col img {
+    max-height: 300px;
+  }
+
   #ui-design .centered-row {
     padding: 1em;
     margin-top: 1em;
