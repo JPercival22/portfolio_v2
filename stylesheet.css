@@ -1285,7 +1285,6 @@ footer .footer-container {
 
   .zoom {
     transition: transform ease-in-out 0.3s;
-    /* Animation */
   }
 
   .zoom:hover {
