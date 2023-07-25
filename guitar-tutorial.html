@@ -9,10 +9,12 @@
     <meta name="author" content="Joseph Percival">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study 1</title>
-    <script defer="" src="/dynamic-script.js"></script>
+    <script defer="" src="/js/dynamic-script.js"></script>
+    <script src="/js/lightbox-plus-jquery.js"></script>
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/stylesheet.css">
-    <link rel="preload" href="/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="/styles/stylesheet.css">
+    <link rel="preload" href="/styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="/styles/lightbox.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,1,0" />
     <link rel="stylesheet"
@@ -167,21 +169,20 @@
 
                 <div class="image-container">
                     <img class="lg-cs-hero" src="/assets/images/Case-Studies/CS1/CS1-lg-device-demo.webp" width="150"
-                        height="150" alt="A caption of the Application in a real world environment">
-
+                        height="150" alt="Hero Banner Image Of The Launched Application On Several Device Viewports">
                     <img class="sm-cs-hero" src="/assets/images/Case-Studies/CS1/CS1-sm-device-demo.webp" width="150"
-                        height="150" alt="A caption of the Application in a real world environment">
+                        height="150"
+                        alt="Mobile Hero Banner Image Of The Launched Application On Several Device Viewports">
 
                     <div class="flex-row-container">
                         <div class="col-2">
                             <div class="left-col">
                                 <h2>Background</h2>
                                 <p>Just Speak Guitar Lessons is a vocally navigable website using a non AI
-                                    speech recognition algorithm. The inspiration came from a UX meet-up
+                                    speech recognition algorithm. The inspiration came from a professional
+                                    UX Designer meeting (courtesy of UX Circus Ltd)
                                     concerning advancements in Speech recognition and how including this improves
-                                    Accessability
-                                    and increases User engagement.
-
+                                    Accessability and increases User engagement.
                                 </p>
                             </div>
                             <div class="right-col">
@@ -444,9 +445,7 @@
                     <figcaption>Competitive Research Table depicting what other online Guitar Tutorials offer.
                     </figcaption>
                     <p> No website offers Voice command navigation so in the next phase User
-                        Interviews were conducted to see if
-                        this would be Useful, Usable and Desired.</p>
-
+                        Interviews were conducted to see if this would be Useful, Usable and Desired.</p>
                 </div>
             </section>
 
@@ -454,16 +453,16 @@
                 <div class="flex-col-container">
                     <h2>User Interviews</h2>
                     <div class="image-container">
-                        <img class="zoom" src="/assets/images/Case-Studies/CS1/User-Interviews-mini.webp" alt="">
+                        <img src="/assets/images/Case-Studies/CS1/User-Interviews-mini.webp"
+                            alt="User Interview Affinity Diagram" width="150" height="300">
+                        <figcaption>User Interview Affinity Diagram</figcaption>
                     </div>
                     <p>
-                        5 participants were interviewed (4male and 1 female) over 2 phases. The majority were aged
-                        between
-                        18 and 22 years old.
-                        3 had been playing guitar for a while and had a lot of experience learning with online tutorials
-                        and
-                        2 had never played a guitar before,
-                        but always wanted to start.
+                        Five participants were interviewed (4 Male and 1 Female) over Two phases. The majority were aged
+                        between the ages of 18 and 22 years old.
+                        Three participants had played guitar for a while and had a lot of experience using online
+                        tutorials
+                        and two participants had never played a guitar but had always wanted to learn how to.
                     </p>
                     <p>
                         Research revealed that participants often prefer to interact with internet products, the general
@@ -484,79 +483,66 @@
             </section>
             <section id="outcomes">
                 <h2>Outcomes</h2>
-                <div class="centered-row">
-                    <div class="col">
-                        <p>1. Visuals</p>
-                        <p>Participants were most excited by the experience of an online voice command navigation.
-                        </p>
-                    </div>
-                    <div class="col">
-                        <p>2. Key Information</p>
-                        <p>Participants felt that Price, Simple Language and more visual content as opposed to videos
-                            were
-                            important in this type of application.</p>
-                    </div>
-                    <div class="col">
-                        <p>3. Preparation</p>
-                        <p>Participants were more than aware of existing Speech recognition platforms not being able to
-                            recognise local
-                            accents and idioms. Participants felt that some existing tutorials were not created for
-                            beginners,
-                            the
-                            language was too
-                            advanced, became mis-understood and therefore increased the learning curve and was a leading
-                            reason
-                            for
-                            abandonment.</p>
-                    </div>
+
+                <div class="col">
+                    <p>1. Visuals</p>
+                    <p>Participants were most excited by the experience of an online voice command navigation.
+                    </p>
                 </div>
+                <div class="col">
+                    <p>2. Key Information</p>
+                    <p>Participants felt that Price, Simple Language and more visual content as opposed to videos
+                        were
+                        important in this type of application.</p>
+                </div>
+                <div class="col">
+                    <p>3. Preparation</p>
+                    <p>Participants were more than aware of existing Speech recognition platforms not being able to
+                        recognise local
+                        accents and idioms. Participants felt that some existing tutorials were not created for
+                        beginners, the language was too advanced, became mis-understood and therefore increased the
+                        learning curve and was a leading reason for abandonment.</p>
+                </div>
+
             </section>
 
             <section id="persona">
                 <div>
                     <h2>Persona</h2>
                     <p>Combining earlier research and data retrieved form User Research, I created a persona to create a
-                        visual
-                        representation of the target audience.</p>
-                    <img class="zoom" src="/assets/images/Case-Studies/CS1/CS1-Persona -mini.webp" style="background-color: #fff;"
-                        alt="">
+                        visual representation of the target audience.</p>
+                    <img src="/assets/images/Case-Studies/CS1/CS1-Persona -mini.webp" style="background-color: #fff;"
+                        alt="Created User Persona" width="150" height="300">
+                    <figcaption>Created User Persona.</figcaption>
                 </div>
             </section>
 
             <section id="brainstorming">
                 <div>
                     <h2>Brainstorming</h2>
-                    Using the research data, I devised a brainstorming session outlining useful key features the site
-                    would
-                    need
-                    to be beneficial. Due to time constraints some where out of scope for the project.
+                    <p>Using the research data, I devised a brainstorming session outlining useful key features the site
+                        would need to be beneficial. Due to time constraints some where deemed to be out of scope for
+                        this project.</p>
                     <ol>
                         <li>Clear and engaging design: Use visuals that showcase the essence of playing the guitar, such
-                            as
-                            high-quality images or videos of skilled guitarists. Employ a visually appealing color
-                            scheme
-                            that
-                            catches the user's attention and reflects the energy of playing music.
+                            as high-quality images or videos of skilled guitarists. Employ a visually appealing color
+                            scheme that catches the user's attention and reflects the energy of playing music.
                         </li>
                         <li>
                             User-friendly navigation: Make sure that the navigation menu is intuitive and easy to use.
                             Categorize the tutorials based on skill level or genre, allowing users to find the content
-                            they're
-                            interested in quickly and efficiently.
+                            they're interested in quickly and efficiently.
                         </li>
                         <li>
                             Concise and informative headlines: Use descriptive and enticing headlines for each tutorial,
-                            clearly
-                            stating what users can expect to learn. This helps users identify the content that matches
-                            their
-                            interests and skill level.
+                            clearly stating what users can expect to learn. This helps users identify the content that
+                            matches
+                            their interests and skill level.
                         </li>
                         <li>
                             Interactive and engaging elements: Incorporate interactive elements into the landing page,
-                            such
-                            as
-                            playable audio samples or interactive chord diagrams. This allows users to have a hands-on
-                            experience and get a feel for the lessons before hand.
+                            such as playable audio samples or interactive chord diagrams. This allows users to have a
+                            hands-on experience and get a feel for the lessons before hand.
                         </li>
                         <li>
                             Progress tracking: Implement a feature that allows users to track their progress through the
@@ -565,28 +551,23 @@
                         </li>
                         <li>
                             Community and social features: Foster a sense of community by including features like a
-                            forum or
-                            a
-                            comment section where users can connect, ask questions, and share their progress. This
-                            encourages
-                            user engagement and can lead to a more enjoyable and collaborative learning experience.
-                            <strong>Out
-                                Of Scope</strong> <br>
+                            forum or a comment section where users can connect, ask questions, and share their progress.
+                            This
+                            encourages user engagement and can lead to a more enjoyable and collaborative learning
+                            experience.
+                            <strong>Out Of Scope</strong> <br>
                         </li>
                         <li>
                             Clear subscription or payment options: If the tutorials require a subscription or payment,
-                            clearly
-                            outline the different plans or pricing options available. Provide a simple and secure
-                            payment
-                            process and highlight any special offers or discounts. <strong>Out Of Scope</strong> <br>
+                            clearly outline the different plans or pricing options available. Provide a simple and
+                            secure
+                            payment process and highlight any special offers or discounts. <strong>Out Of Scope</strong>
+                            <br>
                         </li>
                         <li>
                             Responsive design: Ensure that the landing page is fully optimized for mobile devices, as
-                            users
-                            may
-                            access it from their mobile phones or tablets. The content and layout should adapt
-                            seamlessly to
-                            different screen sizes.
+                            users may access it from their mobile phones or tablets. The content and layout should adapt
+                            seamlessly to different screen sizes.
                         </li>
                         <li>
                             Additional resources: Offer supplementary materials, such as downloadable chord charts,
@@ -620,7 +601,9 @@
                         what was most useful, usable, and user-friendly.</p>
                     <h3>Sitemap</h3>
                     <p>The following Sitemap was created in order to visualise the layout and content for the site.</p>
-                    <img class="zoom" src="/assets/images/Case-Studies/CS1/CS1-IA-minimised.webp" alt="">
+                    <img src="/assets/images/Case-Studies/CS1/CS1-IA-minimised.webp"
+                        alt="Information Architecture and Hierarchy Design" width="150" height="300">
+                    <figcaption>Information Architecture and Hierarchy Design</figcaption>
                 </div>
             </section>
             <section id="design">
@@ -631,7 +614,9 @@
                         the
                         page.
                     </p>
-                    <img class="zoom" src="/assets/images/Case-Studies/CS1/CS1-TF-minimised.webp" alt="">
+                    <img src="/assets/images/Case-Studies/CS1/CS1-TF-minimised.webp" alt="Task Flow Diagram" width="150"
+                        height="300">
+                    <figcaption>Task Flow Diagram</figcaption>
                 </div>
             </section>
             <section>
@@ -641,7 +626,9 @@
                         flow
                         above.
                     </p>
-                    <img class="zoom" src="/assets/images/Case-Studies/CS1/CS1-UsFlw.webp" alt="">
+                    <img src="/assets/images/Case-Studies/CS1/CS1-UsFlw.webp" alt="User Flow Diagram" width="150"
+                        height="300">
+                    <figcaption>User Flow Diagram</figcaption>
                 </div>
             </section>
 
@@ -670,70 +657,106 @@
                     <h2>Wireframes</h2>
                     <h3>Sketches</h3>
                     <p>Early iterations produced design sketches for the Home Screen, Components, content and layouts
-                        for
-                        the lesson screens.</p>
-                    <div class="centered-row">
-                        <div class="col">
-                            <img class="zoom" src="/assets/images/Case-Studies/CS1/home-paper.webp"
-                                alt="Home Screen Wire Frame for I Pad" width="150" height="300">
-                        </div>
-                        <div class="col">
-                            <img class="zoom" src="/assets/images/Case-Studies/CS1/lesson-paper.webp"
-                                alt="Home Screen Wire Frame for I Pad" width="150" height="300">
-                        </div>
-                        <div class="col">
-                            <img class="zoom" src="/assets/images/Case-Studies/CS1/lesson2-paper.webp"
-                                alt="Home Screen Wire Frame for Mobile" width="100" height="300">
-                        </div>
+                        for the lesson screens.</p>
+                    <p>You can click any image to enlarge them.</p>
+                    <div class="gallery">
+                        <a href="/assets/images/Case-Studies/CS1/home-paper.webp" data-lightbox="mygallery"
+                            data-title="Paper Prototype Design - Index page initial layout and Navigation areas.">
+                            <img class="md" src="/assets/images/Case-Studies/CS1/home-paper.webp"
+                                alt="Paper Prototype Design - Index page initial layout and Navigation areas."
+                                width="150" height="300">
+                            <figcaption>Paper Prototype Design - Index page initial layout and Navigation areas.
+                            </figcaption>
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS1/lesson-paper.webp" data-lightbox="mygallery"
+                            data-title="Paper Prototype Design - Lesson page with card system layout.">
+                            <img class="md" src="/assets/images/Case-Studies/CS1/lesson-paper.webp"
+                                alt="Paper Prototype Design - Lesson page with card system layout." width="150"
+                                height="300">
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS1/lesson2-paper.webp" data-lightbox="mygallery"
+                            data-title="Paper Prototype Design - Single image and image carousel layout.">
+                            <img class="md" src="/assets/images/Case-Studies/CS1/lesson2-paper.webp"
+                                alt="Paper Prototype Design - Single image and image carousel layout." width="100"
+                                height="300">
+                            <figcaption>Paper Prototype Design - single image and image carousel layout.</figcaption>
+                        </a>
                     </div>
                 </div>
                 <div>
                     <h2>Responsive Wireframes</h2>
-                    These early sketches were then adapted and transposed to create wireframes. Below are the
-                    responsive wireframes for the Home page, showing Desktop, Tablet and Mobile viewports.
+                    <p>These early sketches were then adapted and transposed to create wireframes. Below are the
+                        responsive wireframes for the Home page, showing Desktop, Tablet and Mobile viewports.</p>
+                    <p>You can click any image to enlarge them.</p>
                 </div>
-                <div class="centered-row">
-                    <div class="col">
-                        <img class="zoom" src="/assets/images/Case-Studies/CS1/desktop-home-WF.webp"
-                            alt="Home Screen Wire Frame for Desktop" width="200" height="300">
-                    </div>
-                    <div class="col">
-                        <img class="zoom" src="/assets/images/Case-Studies/CS1/iPad-Hone-WF.webp"
-                            alt="Home Screen Wire Frame for I Pad" width="150" height="300">
-                    </div>
-                    <div class="col">
-                        <img class="zoom" src="/assets/images/Case-Studies/CS1/Mob-Home-WF.webp"
-                            alt="Home Screen Wire Frame for Mobile" width="100" height="300">
-                    </div>
+                <div class="gallery">
+                    <a href="/assets/images/Case-Studies/CS1/desktop-home-WF.webp" data-lightbox="mygallery"
+                        data-title="Home Screen Wire Frame for Desktop viewports.">
+                        <img class="md" src="/assets/images/Case-Studies/CS1/desktop-home-WF.webp"
+                            alt="Home Screen Wire Frame for Desktop" width="150" height="300">
+                        <figcaption>Home Screen Wire Frame for Desktop.</figcaption>
+                    </a>
+                    <a href="/assets/images/Case-Studies/CS1/iPad-Hone-WF.webp" data-lightbox="mygallery"
+                        data-title="Home Screen Wire Frame for large tablet Viewports.">
+                        <img class="md2" src="/assets/images/Case-Studies/CS1/iPad-Hone-WF.webp"
+                            alt="Home Screen Wire Frame for large tablet Viewports" width="150" height="300">
+                        <figcaption>Home Screen Wire Frame for<br>large tablet Viewports.</figcaption>
+                    </a>
+                    <a href="/assets/images/Case-Studies/CS1/Mob-Home-WF.webp" data-lightbox="mygallery"
+                        data-title="Home Screen Wire Frame for Mobile Viewports.">
+                        <img class="sm" src="/assets/images/Case-Studies/CS1/Mob-Home-WF.webp"
+                            alt="Home Screen Wire Frame for Mobile" width="150" height="300">
+                        <figcaption>Home Screen <br> Wire Frame for  <br> Mobile Viewports.</figcaption>
+                    </a>
                 </div>
                 <div class="task-flow-design-section">
                     <h2>Task Flow Wireframes</h2>
-                    I then created the wireframes for the key screens for the site.
-                    <div class="centered-row">
-                        <div class="col">
-                            <img src="/assets/images/Case-Studies/CS1/TFD-index.webp" class="zoom" alt="">
-                        </div>
-                        <div class="col">
-                            <img src="/assets/images/Case-Studies/CS1/TFD-voice-modals.webp" class="zoom" alt="">
-                        </div>
-                        <div class="col">
-                            <img src="/assets/images/Case-Studies/CS1/TFD-image-section.webp" class="zoom" alt="">
-                        </div>
-                        <div class="col">
-                            <img src="/assets/images/Case-Studies/CS1/TFD-image-section-1.webp" class="zoom" alt="">
-                        </div>
-                        <div class="col">
-                            <img src="/assets/images/Case-Studies/CS1/TFD-image-carousel – 1.webp" class="zoom" alt="">
-                        </div>
-                        <div class="col">
-                            <img src="/assets/images/Case-Studies/CS1/TFD-image-carousel-2.webp" class="zoom" alt="">
-                        </div>
+                    <p>I then created the wireframes for the key screens for the site.</p>
+                    <p>You can click any image to enlarge them.</p>
+                    <div class="gallery">
+                        <a href="/assets/images/Case-Studies/CS1/TFWF-1-index-final.webp" data-lightbox="mygallery"
+                            data-title="Low-Fidelity Index Page Prototype.">
+                            <img src="/assets/images/Case-Studies/CS1/TFWF-1-index-final.webp"
+                                alt="Low-Fidelity Index Page Prototype." width="150" height="300">
+                            <figcaption>Low-Fidelity Index Page Prototype.</figcaption>
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS1/TFWF-2-confirmations-final.webp"
+                            data-lightbox="mygallery"
+                            data-title="Low-Fidelity Voice Command &amp; Confirmation Modals Prototypes.">
+                            <img src="/assets/images/Case-Studies/CS1/TFWF-2-confirmations-final.webp"
+                                alt="Low-Fidelity Voice Command &amp; Confirmation Modals Prototypes." width="150"
+                                height="300">
+                            <figcaption>Low-Fidelity Voice Command &amp; Confirmation Modals Prototypes.</figcaption>
+                        </a>
+                    </div>
+                    <div class="gallery">
+                        <a href="/assets/images/Case-Studies/CS1/TFWF-3-multiple-card-final.webp"
+                            data-lightbox="mygallery" data-title="Low-Fidelity Information Card System prototype.">
+                            <img src="/assets/images/Case-Studies/CS1/TFWF-3-multiple-card-final.webp"
+                                alt="Low-Fidelity Information Card System prototype." width="150" height="300">
+                            <figcaption>Low-Fidelity Information Card System prototype.</figcaption>
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS1/TFWF-4-image-sections-final.webp"
+                            data-lightbox="mygallery" data-title="Low-Fidelity Image section prototype.">
+                            <img src="/assets/images/Case-Studies/CS1/TFWF-4-image-sections-final.webp"
+                                alt="Low-Fidelity Image section prototype." width="150" height="300">
+                            <figcaption>Low-Fidelity Image section prototype.</figcaption>
+                        </a>
+                    </div>
+                    <div class="gallery">
+                        <a href="/assets/images/Case-Studies/CS1/TFWF-5-image-carousel-dialogue-final.webp"
+                            data-lightbox="mygallery" data-title="Low-Fidelity Image Slider Prototype.">
+                            <img src="/assets/images/Case-Studies/CS1/TFWF-5-image-carousel-dialogue-final.webp"
+                                alt="Low-Fidelity Image slider prototype." width="150" height="300">
+                            <figcaption>Low-Fidelity Image slider prototype.</figcaption>
+                        </a>
                     </div>
                 </div>
                 <div class="task-flow-design-section">
                     <h2>A/B Testing</h2>
                     <p>During this design iterations, the Online Tuner would need to be tested on the User
-                        to identify which of the designs would be more useful, simpler to use and have the optimal user
+                        to identify which of the designs would be more useful, simpler to use and have the optimal
+                        user
                         flow in
                         terms of conversion rate. <br>
                         Option A, offers additional voice commands separate from the main navigation prompts and
@@ -743,24 +766,42 @@
                         plays a sound bite of the selected strings note once triggered, so that the User can then
                         compare their guitar strings note to then tune their guitar. This is can be achieved by both
                         manual or vocal interaction. <br>
-                        These extra steps and voice commands could potentially increase User confusion, learning curve and some
+                        These extra steps and voice commands could potentially increase User confusion, learning
+                        curve and some
                         frustration. <br>
 
-                        Option B, offers an alternative dynamic. This Tuner utilises the browser accessing the devices microphone,
-                        this then analyses the note played by the User and accurately calculates the note. The UI displays this 
-                        to the user using a chromatic metric. Once the tuner identifies the note is correctly tuned, an identifier
+                        Option B, offers an alternative dynamic. This Tuner utilises the browser accessing the
+                        devices microphone,
+                        this then analyses the note played by the User and accurately calculates the note. The UI
+                        displays this
+                        to the user using a chromatic metric. Once the tuner identifies the note is correctly tuned,
+                        an identifier
                         signifying this is displayed.<br>
-                        This is provided by a 3rd party library, could potentially conflict with the selected library for the Speech 
-                        Recognition library and cause catastrophe. From a positive perspective, would be much simpler for the User.
+                        This is provided by a 3rd party library, could potentially conflict with the selected
+                        library for the Speech
+                        Recognition library and cause catastrophe. From a positive perspective, would be much
+                        simpler for the User.
                     </p>
-                    <div class="centered-row">
+                    <p>You can click any image to enlarge them.</p>
+                    <div class="gallery">
                         <div class="col">
                             <h3>Option A</h3>
-                            <img src="/assets/images/Case-Studies/CS1/TFD-Tuner-Test-A.webp" class="zoom" alt="">
+                            <a href="/assets/images/Case-Studies/CS1/A-B-1-Tuner-Test-A.webp" data-lightbox="mygallery"
+                                data-title="Home Screen Wire Frame for Desktop viewports.">
+                                <img src="/assets/images/Case-Studies/CS1/A-B-1-Tuner-Test-A.webp"
+                                    alt="Option A. Sound bite Guitar tuner prototype." width="150" height="300">
+                                <figcaption>Option A. Sound bite Guitar tuner prototype.</figcaption>
+                            </a>
                         </div>
                         <div class="col">
                             <h3>Option B</h3>
-                            <img src="/assets/images/Case-Studies/CS1/TFD-Tuner-Test B.webp" class="zoom" alt="">
+                            <a href="/assets/images/Case-Studies/CS1/A-B-2-Tuner-Test B.webp" data-lightbox="mygallery"
+                                data-title="Home Screen Wire Frame for Desktop viewports.">
+                                <img src="/assets/images/Case-Studies/CS1/A-B-2-Tuner-Test B.webp"
+                                    alt="Option B. Interactive Microphone assisted tuner prototype." width="150"
+                                    height="300">
+                                <figcaption>Option B. Interactive Microphone assisted tuner prototype.</figcaption>
+                            </a>
                         </div>
                     </div>
                 </div>

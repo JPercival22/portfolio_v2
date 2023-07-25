@@ -1283,12 +1283,49 @@ footer .footer-container {
     margin-top: 0;
   }
 
-  .zoom {
-    transition: transform ease-in-out 0.3s;
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1em;
+    margin-bottom: 1em;
   }
 
-  .zoom:hover {
-    transform: scale(1.4);
+  .gallery img {
+    transition: transform ease-in-out 0.3s;
+    width: 500px;
+    height: 630px;
+  }
+
+  .gallery .sm {
+    transition: transform ease-in-out 0.3s;
+    width: 100px;
+    height: 460px;
+  }
+
+  .gallery .md {
+    transition: transform ease-in-out 0.3s;
+    width: 300px;
+    height: 460px;
+  }
+
+  .gallery .md2 {
+    transition: transform ease-in-out 0.3s;
+    width: 200px;
+    height: 400px;
+  }
+
+  .gallery img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.02);
+  }
+
+  figcaption {
+    font-family: inherit;
+    color: var(--primary-text-color);
+    font-size: 14px;
+    text-transform: capitalize;
   }
 
   footer .footer-container .footer-details {
@@ -1666,49 +1703,14 @@ footer .footer-container {
   }
 
   /* Case Study Styles  */
-  #ui-design .paper-prototyping .centered-row {
-    align-items: center;
-    justify-content: space-between;
-  }
 
-  #ui-design .paper-prototyping .centered-row .col,
-  #ui-design .paper-prototyping .centered-row .col:nth-child(2),
-  #ui-design .paper-prototyping .centered-row .col:nth-child(3) {
-    width: 30%;
-  }
-
-  #ui-design .paper-prototyping .centered-row .col img {
-    max-height: 300px;
-  }
-
-  #ui-design .centered-row {
+  .task-flow-design-section .centered-row {
     padding: 1em;
-    margin-top: 1em;
+    flex-direction: row;
   }
 
-  #ui-design .centered-row .col {
-    width: 57%;
-    margin-right: 1em;
-  }
-
-  #ui-design .centered-row .col:nth-child(2) {
-    width: 28%;
-    margin-right: 1em;
-  }
-
-  #ui-design .centered-row .col:nth-child(3) {
-    width: 11%;
-    margin-right: 0;
-  }
-
-  #ui-design .task-flow-design-section .centered-row .col {
-    width: 48%;
-    margin-right: 1em;
-    margin-bottom: 1em;
-  }
-
-  #ui-design .task-flow-design-section .centered-row .col img {
-    max-height: 650px;
+  .task-flow-design-section .centered-row .image-container {
+    width: 50%;
   }
 
   /* thankyou styles  */
@@ -1869,7 +1871,6 @@ footer .footer-container {
 
   .experience-header .right {
     display: flex;
-    width: -webkit-fill-available;
     justify-content: flex-end;
   }
 
