@@ -1278,6 +1278,14 @@ footer .footer-container {
 
   /* case study sections  */
 
+  /* scrollable ID's  */
+
+  #competitive-analysis, #user-interviews, #outcomes,
+  #persona, #ideation, #i-a, #i-design, #ui-design, 
+  #ux-testing, #conclusion {
+    margin-bottom: 4em;
+  }
+
   .case-study-inner {
     margin: 1em;
     margin-top: 0;
@@ -1314,6 +1322,12 @@ footer .footer-container {
   .gallery .wide {
     width: 700px;
     height: 500px;
+  } 
+
+  .gallery .wide2 {
+    width: 80vw;
+    height: 60vh;
+    padding: 1em;
   }
 
   .gallery .md {
