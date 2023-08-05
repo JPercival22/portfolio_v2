@@ -27,73 +27,26 @@
     sidebar.classList.toggle('active');
   };
 
-  // tool tip 
-
-  var tooltipDelay = 500;
-  var timer = null;
-
-  document.body.addEventListener("mouseout", function () {
-    window.clearTimeout(timer);
-  });
-
-  document.body.addEventListener("mousemove", function (e) {
-    var el = e.target;
-
-    if (el != document.body && (el.hasAttribute("title") || el.hasAttribute("data-styletip"))) {
-      if (el.title) {
-        el["tt-title"] = el.title;
-        el["tt-show"] = function (pos) {
-          var tip = document.createElement("div");
-          tip.classList.add("style-tip");
-
-          if (el.hasAttribute("data-styletip-class")) {
-            tip.classList.add(el.getAttribute("data-styletip-class"));
-          }
-
-          tip.innerText = el["tt-title"];
-          tip.style.zIndex = 9e9;
-          tip.style.pointerEvents = "none";
-          tip.style.position = "absolute";
-          tip.style.left =  "55px";
-          tip.style.top = pos.y + "px";
-          tip.style.backgroundColor ="grey";
-          tip.style.color ="#fff";
-          tip.style.padding ="6px";
-          tip.style.borderRadius ="10px";
-          
-          document.body.appendChild(tip);
-
-          el["tt-tip"] = tip;
-          this.addEventListener("mouseout", el["tt-destroy"]);
-        };
-
-        el["tt-destroy"] = function () {
-          if (el["tt-tip"]) {
-            document.body.removeChild(el["tt-tip"]);
-            delete el["tt-tip"];
-          }
-        };
-
-        el.removeAttribute("title");
-        el.setAttribute("data-styletip", true);
-      }
-
-      clearTimeout(timer);
-      timer = window.setTimeout(function () {
-        el["tt-destroy"]();
-        el["tt-show"]({
-          x: e.pageX,
-          y: e.pageY
-        });
-      }, tooltipDelay);
-    }
-  });
 
 })
 
 ();
 
+// collapsable table
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 // tab view functionality 
 const tabs = document.querySelectorAll('[data-tab-target')
 const tabContents = document.querySelectorAll('[data-tab-content')

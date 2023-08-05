@@ -11,6 +11,7 @@
     <title>Case Study 1</title>
     <script src="/js/dynamic-script.js" defer></script>
     <script src="/js/lightbox-plus-jquery.js" defer></script>
+    <script src="/js/lazysizes.min.js" async=""></script>
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/styles/stylesheet.css">
     <link rel="preload" href="/styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -21,15 +22,16 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,200,0,0" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,200,1,-25" />
+
 </head>
 
 <body>
-    <nav id="navbar" title="main navigation">
+    <nav id="navbar">
         <div class="navbar-container container">
             <div class="home-link">
                 <a href="/index.html" class="navbar-logo">
                     <img src="assets/images/jp-LOGO.svg" width="40" height="40" alt="company logo">
-                    <div class="logo-container">
+                    <div class="logo-container" title="Authors name and profession">
                         <div class="logo-name">Joseph Percival</div>
                         <div class="logo-title">UX &amp; UI DESIGNER</div>
                     </div>
@@ -43,9 +45,9 @@
             </button>
             <div id="navbar-menu" aria-labelledby="navbar-toggle">
                 <div class="navbar-links">
-                    <a class="navbar-link navbar-item " href="/index.html">Home</a>
-                    <a class="navbar-link navbar-item active" href="/about-me.html">About</a>
-                    <a class="navbar-link navbar-item" href="/contact-form.html">Contact</a>
+                    <a class="navbar-link navbar-item" href="/index.html" title="Link to the Home Page">Home</a>
+                    <a class="navbar-link navbar-item" href="/about-me.html" title="Link to the About Us page">About</a>
+                    <a class="navbar-link navbar-item" href="/contact-form.html" title="Link to the Contact Us page">Contact</a>
                 </div>
             </div>
         </div>
@@ -56,11 +58,11 @@
         <div class="main-content p-0">
             <div class="sidebar">
                 <div class="top">
-                    
+
                     <div class="logo">
                         <span>Contents</span>
                     </div>
-                    <span class="material-symbols-outlined tooltip" id="sidebar-menu-btn"
+                    <span class="material-symbols-outlined " id="sidebar-menu-btn"
                         title="Click To Open Contents">arrow_forward_ios</span>
                 </div>
                 <ul>
@@ -145,14 +147,14 @@
                 </ul>
 
                 <div class="image-container">
-                    <img class="lg-cs-hero" src="/assets/images/Case-Studies/CS1/CS1-lg-device-demo.webp" width="150"
+                    <img class="lg-cs-hero lazyload"  data-sizes="auto" data-src="/assets/images/Case-Studies/CS1/CS1-lg-device-demo.webp" width="150"
                         height="150" alt="Hero Banner Image Of The Launched Application On Several Device Viewports">
-                    <img class="sm-cs-hero" src="/assets/images/Case-Studies/CS1/CS1-sm-device-demo.webp" width="150"
+                    <img class="sm-cs-hero lazyload" data-src="/assets/images/Case-Studies/CS1/CS1-sm-device-demo.webp" width="150"
                         height="150"
                         alt="Mobile Hero Banner Image Of The Launched Application On Several Device Viewports">
 
                     <div class="flex-row-container">
-                        <h1>Brief</h1>
+                        <h1>Introduction</h1>
                         <div class="col-2">
                             <div class="left-col">
                                 <h2>Background</h2>
@@ -214,211 +216,482 @@
                             unnecessary
                             movements.
                         </p>
-                        <p><b>An early assumption here, was that the access premium, could be
-                                the reason that many beginners, decide not to continue with their learning.</b></p>
+                        <p>An early assumption here, was that the access premium, could be
+                            the reason that many beginners, decide not to continue with their learning.</p>
                         <p> Synthesised data from User Interviews confirmed this assumption. </p>
                     </div>
-                    <div class="table">
+                    <div class="table-sm">
+                        <button type="button" class="collapsible">
+                            <div>Artist Works</div>
+                            <div class="icon"><span class="material-symbols-sharp">expand_more</span></div>
+                        </button>
+                        <div class="content">
+                            <div class="td">
+                                <div> Free Content </div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Simple Navigation</div>
+                                <div><span class="material-symbols-outlined" style="color: #409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Voice Navigable</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div> Novice Lessons</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Subscription</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="collapsible">
+                            <div>Fender Play</div>
+                            <div class="icon"><span class="material-symbols-sharp">expand_more</span></div>
+                        </button>
+                        <div class="content">
+                            <div class="td">
+                                <div> Free Content </div>
+                                <div><span class="material-symbols-outlined" style="color: #409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Simple Navigation</div>
+                                <div><span class="material-symbols-outlined" style="color: #409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Voice Navigable</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div> Novice Lessons</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Subscription</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="collapsible">
+                            <div>Guitareo</div>
+                            <div class="icon"><span class="material-symbols-sharp">expand_more</span></div>
+                        </button>
+                        <div class="content">
+                            <div class="td">
+                                <div> Free Content </div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Simple Navigation</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Voice Navigable</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div> Novice Lessons</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Subscription</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="collapsible">
+                            <div>Guitar Tricks</div>
+                            <div class="icon"><span class="material-symbols-sharp">expand_more</span></div>
+                        </button>
+                        <div class="content">
+                            <div class="td">
+                                <div> Free Content </div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Simple Navigation</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Voice Navigable</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div> Novice Lessons</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Subscription</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="collapsible">
+                            <div>Jam Play</div>
+                            <div class="icon"><span class="material-symbols-sharp">expand_more</span></div>
+                        </button>
+                        <div class="content">
+                            <div class="td">
+                                <div> Free Content </div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Simple Navigation</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Voice Navigable</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div> Novice Lessons</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Subscription</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="collapsible">
+                            <div>Jam Track</div>
+                            <div class="icon"><span class="material-symbols-sharp">expand_more</span></div>
+                        </button>
+                        <div class="content">
+                            <div class="td">
+                                <div> Free Content </div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Simple Navigation</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Voice Navigable</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div> Novice Lessons</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Subscription</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="collapsible">
+                            <div>Justin Guitar </div>
+                            <div class="icon"><span class="material-symbols-sharp">expand_more</span></div>
+                        </button>
+                        <div class="content">
+                            <div class="td">
+                                <div> Free Content </div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Simple Navigation</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Voice Navigable</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div> Novice Lessons</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Subscription</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="collapsible">
+                            <div>Orange Learn</div>
+                            <div class="icon"><span class="material-symbols-sharp">expand_more</span></div>
+                        </button>
+                        <div class="content">
+                            <div class="td">
+                                <div> Free Content </div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Simple Navigation</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Voice Navigable</div>
+                                <div><span class="material-symbols-outlined" style="color:#b21515;">close</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div> Novice Lessons</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div>Subscription</div>
+                                <div><span class="material-symbols-outlined" style="color:#409d34;">check</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="table-lg">
                         <div class="tr th">
-                            <div class="td" style="flex-grow: 2; justify-content: flex-start;">
+                            <div class="td">
                                 Name
                             </div>
-                            <div class="td" style="justify-content: center;">
+
+                            <div class="td" >
                                 Free Content
                             </div>
-                            <div class="td" style="justify-content: center;">
-                                Easy Navigation
+                            <div class="td" >
+                                Simple Navigation
                             </div>
-                            <div class="td" style="justify-content: center;">
+                            <div class="td" >
                                 Voice Navigable
                             </div>
-                            <div class="td" style="justify-content: center;">
+                            <div class="td">
                                 Novice Lessons
                             </div>
-                            <div class="td" style="justify-content: center;">
+                            <div class="td">
                                 Subscription
                             </div>
+                        </div>
 
-                        </div>
                         <div class="tr table-total">
-                            <div class="td" style="flex-grow: 2;">
-                                <b>Fender Play</b>
+                            <div class="tr">
+                                <div class="td">
+                                    Artist Works
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
                             </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
+
+                            <div class="tr">
+                                <div class="td" >
+                                    Fender Play
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check </span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check </span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check </span>
+                                </div>
                             </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle </span>
+
+                            <div class="tr">
+                                <div class="td">
+                                    Guitar Tricks
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined  close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
                             </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
+
+                            <div class="tr">
+                                <div class="td">
+                                    Guitareo
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
                             </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle </span>
+
+                            <div class="tr">
+                                <div class="td">
+                                    Jam Play
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
                             </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle </span>
+
+                            <div class="tr">
+                                <div class="td">
+                                    Jam Track
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tr">
-                            <div class="td" style="flex-grow: 2;">
-                                <b>Guitar Tricks</b>
+
+                            <div class="tr">
+                                <div class="td">
+                                    Justin Guitar
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
                             </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle </span>
+
+                            <div class="tr">
+                                <div class="td">
+                                    Orange Learn
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
                             </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
+
+                            <div class="tr">
+                                <div class="td" >
+                                    True Fire
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined close">close</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
+                                <div class="td">
+                                    <span class="material-symbols-outlined check">check</span>
+                                </div>
                             </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle </span>
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="td" style="flex-grow: 2;">
-                                <b>True Fire</b>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle </span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle </span>
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="td" style="flex-grow: 2;">
-                                <b>Artist Works</b>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="td" style="flex-grow: 2;">
-                                <b>Justin Guitar </b>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="td" style="flex-grow: 2;">
-                                <b>Guitareo</b>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="td" style="flex-grow: 2;">
-                                <b>Jam Play</b>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="td" style="flex-grow: 2;">
-                                <b>Orange Learn</b>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="td" style="flex-grow: 2;">
-                                <b>Jam Track</b>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #409d34;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
-                            <div class="td" style="justify-content: center;">
-                                <span class="material-symbols-outlined" style="color: #b21515;">Circle</span>
-                            </div>
+
                         </div>
                     </div>
                     <figcaption>Competitive Research Table depicting what other online Guitar Tutorials offer.
@@ -430,18 +703,10 @@
 
             <div id="user-interviews"></div>
 
-            <section>
+            <section class="align-top">
                 <h1>Synthesize</h1>
                 <div class="flex-col-container">
                     <h2>User Interviews</h2>
-                    <div class="gallery">
-                        <a href="/assets/images/Case-Studies/CS1/planning/User-Interviews-mini.webp"
-                            data-lightbox="mygallery" data-title="User Interviews Affinity Map">
-                            <img class="wide2" src="/assets/images/Case-Studies/CS1/planning/User-Interviews-mini.webp"
-                                alt="User Interviews Affinity Map" width="150" height="300">
-                            <figcaption>User Interviews Affinity Map</figcaption>
-                        </a>
-                    </div>
                     <p>
                         Five participants were interviewed (4 Male and 1 Female) over Two phases. The majority were aged
                         between the ages of 18 and 22 years old.
@@ -464,6 +729,16 @@
                         All participants confirmed my initial assumption by agreeing the Premium to access the basic of
                         lessons put them off and in most cases caused abandonment.
                     </p>
+                    <p>Below is the affinity map following these interviews, click on the image to zoom in.</p>
+                    <div class="gallery">
+                        <a href="/assets/images/Case-Studies/CS1/planning/User-Interviews-mini.webp"
+                            data-lightbox="mygallery" data-title="User Interviews Affinity Map">
+                            <img class="wide lazyload" data-src="/assets/images/Case-Studies/CS1/planning/User-Interviews-mini.webp"
+                                alt="User Interviews Affinity Map" width="150" height="300">
+                            <figcaption>User Interviews Affinity Map</figcaption>
+                        </a>
+                    </div>
+
                 </div>
             </section>
 
@@ -494,7 +769,7 @@
 
             </section>
             <div id="persona"></div>
-            <section>
+            <section class="align-top">
                 <div>
                     <h2>Persona</h2>
                     <p>To help communicate information about users that I collected during research, I created a
@@ -502,7 +777,7 @@
                     <div class="gallery">
                         <a href="/assets/images/Case-Studies/CS1/planning/CS1-Persona -mini.webp"
                             data-lightbox="mygallery" data-title="Created Persona">
-                            <img class="wide2" src="/assets/images/Case-Studies/CS1/planning/CS1-Persona -mini.webp"
+                            <img class="wide lazyload" data-src="/assets/images/Case-Studies/CS1/planning/CS1-Persona -mini.webp"
                                 alt="Created Persona" width="150" height="300">
                             <figcaption>Created Persona</figcaption>
                         </a>
@@ -587,7 +862,7 @@
                 </div>
             </section>
             <div id="interaction-design"></div>
-            <section>
+            <section class="align-top">
                 <div>
                     <h2>Interaction Design</h2>
                     <h3>Task Flow</h3>
@@ -599,14 +874,14 @@
                     <div class="gallery">
                         <a href="/assets/images/Case-Studies/CS1/planning/CS1-TF-minimised.webp"
                             data-lightbox="mygallery" data-title="Task Flow Diagram">
-                            <img class="wide2" src="/assets/images/Case-Studies/CS1/planning/CS1-TF-minimised.webp"
+                            <img class="wide lazyload" data-src="/assets/images/Case-Studies/CS1/planning/CS1-TF-minimised.webp"
                                 alt="Task Flow Diagram" width="150" height="300">
                             <figcaption>Task Flow Diagram</figcaption>
                         </a>
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="align-top">
                 <div>
                     <h3>User Flow</h3>
                     <p>I identified the three major paths users could take to achieve the path described in the task
@@ -616,7 +891,7 @@
                     <div class="gallery">
                         <a href="/assets/images/Case-Studies/CS1/planning/CS1-UsFlw.webp" data-lightbox="mygallery"
                             data-title="User Flow Diagram.">
-                            <img class="wide2" src="/assets/images/Case-Studies/CS1/planning/CS1-UsFlw.webp"
+                            <img class="wide lazyload" dat-src="/assets/images/Case-Studies/CS1/planning/CS1-UsFlw.webp"
                                 alt="User Flow Diagram" width="150" height="300">
                             <figcaption>User Flow Diagram</figcaption>
                         </a>
@@ -625,41 +900,39 @@
             </section>
 
             <div id="i-a"></div>
-            <section>
-                <div>
-                    <h2>Information Architecture</h2>
-                    <p>Information architecture (IA) is the process of organizing, structuring, and labeling information
-                        in a way that makes it easy for users to find and understand. It involves creating an effective
-                        and intuitive framework that allows users to navigate through a digital or physical product,
-                        such as a website or application.
-                        <br>
-                        To ensure that users can easily locate information, comprehend its meaning and
-                        significance, and ultimately achieve their goals with minimal effort and frustration. It
-                        involves carefully considering the relationship between different components of information,
-                        such as content, features, and functionality.
-                    </p>
+            <section class="align-top">
+                <h2>Information Architecture</h2>
+                <p>Information architecture (IA) is the process of organizing, structuring, and labeling information
+                    in a way that makes it easy for users to find and understand. It involves creating an effective
+                    and intuitive framework that allows users to navigate through a digital or physical product,
+                    such as a website or application.
+                    <br>
+                    To ensure that users can easily locate information, comprehend its meaning and
+                    significance, and ultimately achieve their goals with minimal effort and frustration. It
+                    involves carefully considering the relationship between different components of information,
+                    such as content, features, and functionality.
+                </p>
 
-                    <h3>Sitemap</h3>
-                    <p>The following Sitemap was created in order to visualise the layout and content for the site.</p>
-                    <div class="gallery">
-                        <a href="/assets/images/Case-Studies/CS1/planning/IA.webp" data-lightbox="mygallery"
-                            data-title="Information Architecture and Hierarchy Design">
-                            <img class="wide2" src="/assets/images/Case-Studies/CS1/planning/IA.webp"
-                                alt="Information Architecture and Hierarchy Design" width="150" height="300">
-                            <figcaption>Information Architecture and Hierarchy Design</figcaption>
-                        </a>
-                    </div>
-                    <p>Based on my research insights and persona, I began to categorize and structure the information
-                        based
-                        on
-                        what was most useful, usable, and user-friendly.
-                        <br>
-                        By implementing solid IA principles, I could create a user-friendly interface that
-                        facilitated easy navigation and comprehension. When information is structured and labeled in a
-                        logical manner, users can confidently explore and interact with a product, leading to a positive
-                        user experience and increased satisfaction.
-                    </p>
+                <h3>Sitemap</h3>
+                <p>The following Sitemap was created in order to visualise the layout and content for the site.</p>
+                <div class="gallery">
+                    <a href="/assets/images/Case-Studies/CS1/planning/IA.webp" data-lightbox="mygallery"
+                        data-title="Information Architecture and Hierarchy Design">
+                        <img class="wide lazyload" data-src="/assets/images/Case-Studies/CS1/planning/IA.webp"
+                            alt="Information Architecture and Hierarchy Design" width="150" height="300">
+                        <figcaption>Information Architecture and Hierarchy Design</figcaption>
+                    </a>
                 </div>
+                <p>Based on my research insights and persona, I began to categorize and structure the information
+                    based
+                    on
+                    what was most useful, usable, and user-friendly.
+                    <br>
+                    By implementing solid IA principles, I could create a user-friendly interface that
+                    facilitated easy navigation and comprehension. When information is structured and labeled in a
+                    logical manner, users can confidently explore and interact with a product, leading to a positive
+                    user experience and increased satisfaction.
+                </p>
             </section>
             <section>
                 <div>
@@ -681,178 +954,169 @@
                     </p>
                 </div>
             </section>
-            <section>
-                <div>
-                    <h2>Design</h2>
-                    <h3>Lo-Fidelity Sketches</h3>
-                    <p>Early iterations produced design sketches for the Home Screen, Components, content and layouts
-                        for the lesson screens.</p>
-                    <p>You can click any image to enlarge them.</p>
+            <section class="align-top">
+                <h2>Design</h2>
+                <h3>Lo-Fidelity Sketches</h3>
+                <p>Early iterations produced design sketches for the Home Screen, Components, content and layouts
+                    for the lesson screens.</p>
+                <p>You can click any image to enlarge them.</p>
 
-                    <div class="gallery">
-                        <a href="/assets/images/Case-Studies/CS1/lo-fi/home-paper.webp" data-lightbox="mygallery"
-                            data-title="Paper Prototype Design - Index page initial layout.">
-                            <img class="md" src="/assets/images/Case-Studies/CS1/lo-fi/home-paper.webp"
-                                alt="Paper Prototype Design - Index page initial layout." width="150" height="300">
-                            <figcaption>Paper Prototype - Index page initial layout.
-                            </figcaption>
+                <div class="gallery">
+                    <a href="/assets/images/Case-Studies/CS1/lo-fi/home-paper.webp" data-lightbox="mygallery"
+                        data-title="Paper Prototype Design - Index page initial layout.">
+                        <img class="lg lazyload" data-src="/assets/images/Case-Studies/CS1/lo-fi/home-paper.webp"
+                            alt="Paper Prototype Design - Index page initial layout." width="150" height="300">
+                        <figcaption>Paper Prototype - Index page initial layout.
+                        </figcaption>
+                    </a>
+                    <a href="/assets/images/Case-Studies/CS1/lo-fi/lesson-paper.webp" data-lightbox="mygallery"
+                        data-title="Paper Prototype Design - Card system layout.">
+                        <img class="lg lazyload" data-src="/assets/images/Case-Studies/CS1/lo-fi/lesson-paper.webp"
+                            alt="Paper Prototype Design - Lesson page with card system layout." width="150"
+                            height="300">
+                        <figcaption>Paper Prototype - image section and carousel.
+                        </figcaption>
+                    </a>
+                    <a href="/assets/images/Case-Studies/CS1/lo-fi/lesson2-paper.webp" data-lightbox="mygallery"
+                        data-title="Paper Prototype - Single image and carousel layout.">
+                        <img class="lg lazyload" data-src="/assets/images/Case-Studies/CS1/lo-fi/lesson2-paper.webp"
+                            alt="Paper Prototype Design - Single image and carousel layout." width="100" height="300">
+                        <figcaption>Paper Prototype - image and carousel layout.
+                        </figcaption>
+                    </a>
+                </div>
+            </section>
+
+            <section class="align-top">
+                <h3>Responsive Wireframes</h3>
+                <p>These early sketches were then adapted and transposed to create wireframes. Below are the
+                    responsive wireframes for the Home page, showing Desktop, Tablet and Mobile viewports.</p>
+                <p>You can click any image to enlarge them.</p>
+
+                <div class="gallery">
+                    <a href="/assets/images/Case-Studies/CS1/lo-fi/desktop-home-WF.webp" data-lightbox="mygallery"
+                        data-title="Home Screen Wire Frame for Desktop viewports.">
+                        <img class="lg" src="/assets/images/Case-Studies/CS1/lo-fi/desktop-home-WF.webp"
+                            alt="Home Screen Wire Frame for Desktop" width="150" height="300">
+                        <figcaption>Home Screen Wire Frame for Desktop.</figcaption>
+                    </a>
+                    <a href="/assets/images/Case-Studies/CS1/lo-fi/iPad-Hone-WF.webp" data-lightbox="mygallery"
+                        data-title="Home Screen Wire Frame for large tablet Viewports.">
+                        <img class="md" src="/assets/images/Case-Studies/CS1/lo-fi/iPad-Hone-WF.webp"
+                            alt="Home Screen Wire Frame for large tablet Viewports" width="150" height="300">
+                        <figcaption>Home Screen Wire Frame for<br>large tablet Viewports.</figcaption>
+                    </a>
+                    <a href="/assets/images/Case-Studies/CS1/lo-fi/Mob-Home-WF.webp" data-lightbox="mygallery"
+                        data-title="Home Screen Wire Frame for Mobile Viewports.">
+                        <img class="sm" src="/assets/images/Case-Studies/CS1/lo-fi/Mob-Home-WF.webp"
+                            alt="Home Screen Wire Frame for Mobile" width="150" height="300">
+                        <figcaption>Home Screen <br> Wire Frame for <br> Mobile Viewports.</figcaption>
+                    </a>
+                </div>
+            </section>
+
+            <section class="align-top">
+                <h2>Task Flow Wireframes</h2>
+                <p>I then created the wireframes for the key screens for the site.</p>
+                <p>You can click any image to enlarge them.</p>
+                <div class="gallery">
+                    <a href="/assets/images/Case-Studies/CS1/lo-fi/TFWF-1-index-final.webp" data-lightbox="mygallery"
+                        data-title="Low-Fidelity Index Page Prototype.">
+                        <img class="lg" src="/assets/images/Case-Studies/CS1/lo-fi/TFWF-1-index-final.webp"
+                            alt="Low-Fidelity Index Page Prototype." width="150" height="300">
+                        <figcaption>Low-Fidelity Index Page.</figcaption>
+                    </a>
+                    <a href="/assets/images/Case-Studies/CS1/lo-fi/TFWF-2-confirmations-final.webp"
+                        data-lightbox="mygallery"
+                        data-title="Low-Fidelity Voice Command &amp; Confirmation Modals Prototypes.">
+                        <img class="lg" src="/assets/images/Case-Studies/CS1/lo-fi/TFWF-2-confirmations-final.webp"
+                            alt="Low-Fidelity Voice Command &amp; Confirmation Modals Prototypes." width="150"
+                            height="300">
+                        <figcaption>Low-Fidelity Confirmation Modals.</figcaption>
+                    </a>
+                    <a href="/assets/images/Case-Studies/CS1/lo-fi/TFWF-3-multiple-card-final.webp"
+                        data-lightbox="mygallery" data-title="Low-Fidelity Information Card System prototype.">
+                        <img class="lg" src="/assets/images/Case-Studies/CS1/lo-fi/TFWF-3-multiple-card-final.webp"
+                            alt="Low-Fidelity Information Card System prototype." width="150" height="300">
+                        <figcaption>Low-Fidelity Card System.</figcaption>
+                    </a>
+                </div>
+                <div class="gallery">
+
+                    <a href="/assets/images/Case-Studies/CS1/lo-fi/TFWF-4-image-sections-final.webp"
+                        data-lightbox="mygallery" data-title="Low-Fidelity Image section prototype.">
+                        <img class="lg" src="/assets/images/Case-Studies/CS1/lo-fi/TFWF-4-image-sections-final.webp"
+                            alt="Low-Fidelity Image section prototype." width="150" height="300">
+                        <figcaption>Low-Fidelity Image section.</figcaption>
+                    </a>
+                    <a href="/assets/images/Case-Studies/CS1/lo-fi/TFWF-5-image-carousel-dialogue-final.webp"
+                        data-lightbox="mygallery" data-title="Low-Fidelity Image Slider Prototype.">
+                        <img class="lg"
+                            src="/assets/images/Case-Studies/CS1/lo-fi/TFWF-5-image-carousel-dialogue-final.webp"
+                            alt="Low-Fidelity Image slider prototype." width="150" height="300">
+                        <figcaption>Low-Fidelity Image slider prototype.</figcaption>
+                    </a>
+                </div>
+            </section>
+
+            <section class="align-top">
+                <h3>A/B Testing</h3>
+                <p>During this design iterations, the Online Tuner would need to be tested on the User
+                    to identify which of the designs would be more useful, simpler to use and have the optimal
+                    user
+                    flow in
+                    terms of conversion rate. <br>
+                    Option A, offers additional voice commands separate from the main navigation prompts and
+                    specific
+                    to this feature. This requires the user to interact with buttons related to a guitar string,
+                    which
+                    plays a sound bite of the selected strings note once triggered, so that the User can then
+                    compare their guitar strings note to then tune their guitar. This is can be achieved by both
+                    manual or vocal interaction. <br>
+                    These extra steps and voice commands could potentially increase User confusion, learning
+                    curve and some
+                    frustration. <br>
+
+                    Option B, offers an alternative dynamic. This Tuner utilises the browser accessing the
+                    devices microphone,
+                    this then analyses the note played by the User and accurately calculates the note. The UI
+                    displays this
+                    to the user using a chromatic metric. Once the tuner identifies the note is correctly tuned,
+                    an identifier
+                    signifying this is displayed.<br>
+                    This is provided by a 3rd party library, could potentially conflict with the selected
+                    library for the Speech
+                    Recognition library and cause catastrophe. From a positive perspective, would be much
+                    simpler for the User.
+                </p>
+                <p>You can click any image to enlarge them.</p>
+                <div class="gallery">
+                    <div class="col">
+                        <h3>Option A</h3>
+                        <a href="/assets/images/Case-Studies/CS1/lo-fi/A-B-1-Tuner-Test-A.webp"
+                            data-lightbox="mygallery" data-title="Home Screen Wire Frame for Desktop viewports.">
+                            <img class="lg" src="/assets/images/Case-Studies/CS1/lo-fi/A-B-1-Tuner-Test-A.webp"
+                                alt="Option A. Sound bite Guitar tuner prototype." width="150" height="300">
+                            <figcaption>Option A. Sound bite Guitar prototype.</figcaption>
                         </a>
-                        <a href="/assets/images/Case-Studies/CS1/lo-fi/lesson-paper.webp" data-lightbox="mygallery"
-                            data-title="Paper Prototype Design - Card system layout.">
-                            <img class="md" src="/assets/images/Case-Studies/CS1/lo-fi/lesson-paper.webp"
-                                alt="Paper Prototype Design - Lesson page with card system layout." width="150"
+                    </div>
+                    <div class="col">
+                        <h3>Option B</h3>
+                        <a href="/assets/images/Case-Studies/CS1/lo-fi/A-B-2-Tuner-Test B.webp"
+                            data-lightbox="mygallery" data-title="Home Screen Wire Frame for Desktop viewports.">
+                            <img class="lg" src="/assets/images/Case-Studies/CS1/lo-fi/A-B-2-Tuner-Test B.webp"
+                                alt="Option B. Interactive Microphone assisted tuner prototype." width="150"
                                 height="300">
-                            <figcaption>Paper Prototype - image section and carousel.
-                            </figcaption>
-                        </a>
-                        <a href="/assets/images/Case-Studies/CS1/lo-fi/lesson2-paper.webp" data-lightbox="mygallery"
-                            data-title="Paper Prototype - Single image and carousel layout.">
-                            <img class="md" src="/assets/images/Case-Studies/CS1/lo-fi/lesson2-paper.webp"
-                                alt="Paper Prototype Design - Single image and carousel layout." width="100"
-                                height="300">
-                            <figcaption>Paper Prototype - image and carousel layout.
-                            </figcaption>
+                            <figcaption>Option B. Microphone assisted prototype.</figcaption>
                         </a>
                     </div>
                 </div>
+                <h3>Outcomes</h3>
+                <p>After testing on 5 participants, it was concluded a tie, confirming both designs were useful,
+                    both were included in the final designs.</p>
             </section>
 
-            <section>
-                <div class="align-top">
-                    <h3>Responsive Wireframes</h3>
-                    <p>These early sketches were then adapted and transposed to create wireframes. Below are the
-                        responsive wireframes for the Home page, showing Desktop, Tablet and Mobile viewports.</p>
-                    <p>You can click any image to enlarge them.</p>
-
-                    <div class="gallery">
-                        <a href="/assets/images/Case-Studies/CS1/desktop-home-WF.webp" data-lightbox="mygallery"
-                            data-title="Home Screen Wire Frame for Desktop viewports.">
-                            <img class="md" src="/assets/images/Case-Studies/CS1/lo-fi/desktop-home-WF.webp"
-                                alt="Home Screen Wire Frame for Desktop" width="150" height="300">
-                            <figcaption>Home Screen Wire Frame for Desktop.</figcaption>
-                        </a>
-                        <a href="/assets/images/Case-Studies/CS1/iPad-Hone-WF.webp" data-lightbox="mygallery"
-                            data-title="Home Screen Wire Frame for large tablet Viewports.">
-                            <img class="md2" src="/assets/images/Case-Studies/CS1/lo-fi/iPad-Hone-WF.webp"
-                                alt="Home Screen Wire Frame for large tablet Viewports" width="150" height="300">
-                            <figcaption>Home Screen Wire Frame for<br>large tablet Viewports.</figcaption>
-                        </a>
-                        <a href="/assets/images/Case-Studies/CS1/Mob-Home-WF.webp" data-lightbox="mygallery"
-                            data-title="Home Screen Wire Frame for Mobile Viewports.">
-                            <img class="sm" src="/assets/images/Case-Studies/CS1/lo-fi/Mob-Home-WF.webp"
-                                alt="Home Screen Wire Frame for Mobile" width="150" height="300">
-                            <figcaption>Home Screen <br> Wire Frame for <br> Mobile Viewports.</figcaption>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="align-top">
-                    <h2>Task Flow Wireframes</h2>
-                    <p>I then created the wireframes for the key screens for the site.</p>
-                    <p>You can click any image to enlarge them.</p>
-                    <div class="gallery">
-                        <a href="/assets/images/Case-Studies/CS1/lo-fi/TFWF-1-index-final.webp"
-                            data-lightbox="mygallery" data-title="Low-Fidelity Index Page Prototype.">
-                            <img class="md" src="/assets/images/Case-Studies/CS1/lo-fi/TFWF-1-index-final.webp"
-                                alt="Low-Fidelity Index Page Prototype." width="150" height="300">
-                            <figcaption>Low-Fidelity Index Page.</figcaption>
-                        </a>
-                        <a href="/assets/images/Case-Studies/CS1/lo-fi/TFWF-2-confirmations-final.webp"
-                            data-lightbox="mygallery"
-                            data-title="Low-Fidelity Voice Command &amp; Confirmation Modals Prototypes.">
-                            <img class="md" src="/assets/images/Case-Studies/CS1/lo-fi/TFWF-2-confirmations-final.webp"
-                                alt="Low-Fidelity Voice Command &amp; Confirmation Modals Prototypes." width="150"
-                                height="300">
-                            <figcaption>Low-Fidelity Confirmation Modals.</figcaption>
-                        </a>
-                        <a href="/assets/images/Case-Studies/CS1/lo-fi/TFWF-3-multiple-card-final.webp"
-                            data-lightbox="mygallery" data-title="Low-Fidelity Information Card System prototype.">
-                            <img class="md" src="/assets/images/Case-Studies/CS1/lo-fi/TFWF-3-multiple-card-final.webp"
-                                alt="Low-Fidelity Information Card System prototype." width="150" height="300">
-                            <figcaption>Low-Fidelity Card System.</figcaption>
-                        </a>
-                    </div>
-                    <div class="gallery">
-
-                        <a href="/assets/images/Case-Studies/CS1/lo-fi/TFWF-4-image-sections-final.webp"
-                            data-lightbox="mygallery" data-title="Low-Fidelity Image section prototype.">
-                            <img class="md" src="/assets/images/Case-Studies/CS1/lo-fi/TFWF-4-image-sections-final.webp"
-                                alt="Low-Fidelity Image section prototype." width="150" height="300">
-                            <figcaption>Low-Fidelity Image section.</figcaption>
-                        </a>
-                        <a href="/assets/images/Case-Studies/CS1/lo-fi/TFWF-5-image-carousel-dialogue-final.webp"
-                            data-lightbox="mygallery" data-title="Low-Fidelity Image Slider Prototype.">
-                            <img class="md"
-                                src="/assets/images/Case-Studies/CS1/lo-fi/TFWF-5-image-carousel-dialogue-final.webp"
-                                alt="Low-Fidelity Image slider prototype." width="150" height="300">
-                            <figcaption>Low-Fidelity Image slider prototype.</figcaption>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="align-top">
-                    <h3>A/B Testing</h3>
-                    <p>During this design iterations, the Online Tuner would need to be tested on the User
-                        to identify which of the designs would be more useful, simpler to use and have the optimal
-                        user
-                        flow in
-                        terms of conversion rate. <br>
-                        Option A, offers additional voice commands separate from the main navigation prompts and
-                        specific
-                        to this feature. This requires the user to interact with buttons related to a guitar string,
-                        which
-                        plays a sound bite of the selected strings note once triggered, so that the User can then
-                        compare their guitar strings note to then tune their guitar. This is can be achieved by both
-                        manual or vocal interaction. <br>
-                        These extra steps and voice commands could potentially increase User confusion, learning
-                        curve and some
-                        frustration. <br>
-
-                        Option B, offers an alternative dynamic. This Tuner utilises the browser accessing the
-                        devices microphone,
-                        this then analyses the note played by the User and accurately calculates the note. The UI
-                        displays this
-                        to the user using a chromatic metric. Once the tuner identifies the note is correctly tuned,
-                        an identifier
-                        signifying this is displayed.<br>
-                        This is provided by a 3rd party library, could potentially conflict with the selected
-                        library for the Speech
-                        Recognition library and cause catastrophe. From a positive perspective, would be much
-                        simpler for the User.
-                    </p>
-                    <p>You can click any image to enlarge them.</p>
-                    <div class="gallery">
-                        <div class="col">
-                            <h3>Option A</h3>
-                            <a href="/assets/images/Case-Studies/CS1/lo-fi/A-B-1-Tuner-Test-A.webp"
-                                data-lightbox="mygallery" data-title="Home Screen Wire Frame for Desktop viewports.">
-                                <img class="md" src="/assets/images/Case-Studies/CS1/lo-fi/A-B-1-Tuner-Test-A.webp"
-                                    alt="Option A. Sound bite Guitar tuner prototype." width="150" height="300">
-                                <figcaption>Option A. Sound bite Guitar prototype.</figcaption>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <h3>Option B</h3>
-                            <a href="/assets/images/Case-Studies/CS1/lo-fi/A-B-2-Tuner-Test B.webp"
-                                data-lightbox="mygallery" data-title="Home Screen Wire Frame for Desktop viewports.">
-                                <img class="md" src="/assets/images/Case-Studies/CS1/lo-fi/A-B-2-Tuner-Test B.webp"
-                                    alt="Option B. Interactive Microphone assisted tuner prototype." width="150"
-                                    height="300">
-                                <figcaption>Option B. Microphone assisted prototype.</figcaption>
-                            </a>
-                        </div>
-                    </div>
-                    <h3>Outcomes</h3>
-                    <p>After testing on 5 participants, it was concluded a tie, confirming both designs were useful,
-                        both were included in the final designs.</p>
-                </div>
-            </section>
-
-            <section>
+            <section class="align-top">
                 <h1>Prototype</h1>
                 <h2>UI Kit</h2>
                 <p>In preparation for the Hi-Fidelity design iterations, alternative styles and a provisional
@@ -865,7 +1129,7 @@
                             data-title="UI Kit image 1 -Logo, Color Swatch and Typography styles.">
                             <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/UIK-1.webp"
                                 alt="UI Kit image 1 -Logo, Color Swatch and Typography styles." width="150" height="300"
-                                class="md">
+                                class="lg">
                         </a>
                     </div>
                     <div class="col">
@@ -873,14 +1137,14 @@
                             data-title="UI Kit image 2 - Icons, Button States and FAB's.">
                             <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/UIK-2.webp"
                                 alt="UI Kit image 2 - Icons, Button States and FAB's." width="150" height="300"
-                                class="md">
+                                class="lg">
                         </a>
                     </div>
                     <div class="col">
                         <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/UIK-3.webp" data-lightbox="mygallery"
                             data-title="UI Kit image 3 - Card Overview">
                             <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/UIK-3.webp"
-                                alt="UI Kit image 3 - Card Overview" width="150" height="300" class="md">
+                                alt="UI Kit image 3 - Card Overview" width="150" height="300" class="lg">
                         </a>
                     </div>
                 </div>
@@ -889,14 +1153,14 @@
                         <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/UIK-4.webp" data-lightbox="mygallery"
                             data-title="UI Kit image 3 - Card Specs">
                             <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/UIK-4.webp"
-                                alt="UI Kit image 3 - Card Specs" width="150" height="300" class="md">
+                                alt="UI Kit image 3 - Card Specs" width="150" height="300" class="lg">
                         </a>
                     </div>
                     <div class="col">
                         <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/UIK-5.webp" data-lightbox="mygallery"
                             data-title="UI Kit image 4 - Card Guidelines.">
                             <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/UIK-5.webp"
-                                alt="UI Kit image 4 - Card Guidelines." width="150" class="md">
+                                alt="UI Kit image 4 - Card Guidelines." width="150" class="lg">
                         </a>
                     </div>
                 </div>
@@ -911,7 +1175,7 @@
                                 data-title="UI Kit image 1 -Logo, Color Swatch and Typography styles.">
                                 <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/index.webp"
                                     alt="UI Kit image 1 -Logo, Color Swatch and Typography styles." width="150"
-                                    height="500" class="md">
+                                    height="500" class="lg">
                             </a>
                         </div>
                         <div class="col" style="display:flex;flex-direction: column;">
@@ -919,14 +1183,14 @@
                                 data-lightbox="mygallery" data-title="UI Kit image 2 - Icons, Button States and FAB's.">
                                 <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/modals.webp"
                                     alt="UI Kit image 2 - Icons, Button States and FAB's." width="150" height="300"
-                                    class="md">
+                                    class="lg">
                             </a>
                         </div>
                         <div class="col">
                             <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics1.webp"
                                 data-lightbox="mygallery" data-title="UI Kit image 3 - Card Specs">
                                 <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics1.webp"
-                                    alt="UI Kit image 3 - Card Specs" width="150" height="300" class="md">
+                                    alt="UI Kit image 3 - Card Specs" width="150" height="300" class="lg">
                             </a>
                         </div>
                     </div>
@@ -943,159 +1207,151 @@
                 </ul>
                 <div class="tab-content">
                     <div id="small" data-tab-content class="active">
-                        <div class="align-top">
-                            <h3>Small Viewports</h3>
-                            <p>Below are the Hi-Fi Designs for desktop viewports (equal to and below 600px). Click on
-                                any of the
-                                images to zoom in.
-                            </p>
-                            <div class="gallery">
 
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                        data-lightbox="mygallery" data-title="Image of index page for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                            alt="Image of index page for small viewports." width="150" height="500"
-                                            class="sm">
-                                    </a>
-                                </div>
+                        <h3>Small Viewports</h3>
+                        <p>Below are the Hi-Fi Designs for desktop viewports (equal to and below 600px). Click on
+                            any of the
+                            images to zoom in.
+                        </p>
+                        <div class="gallery">
 
-                                <div class="col" style="display:flex;flex-direction: column;">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/commands.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of voice commands modal for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/commands.webp"
-                                            alt="Image of voice commands modal for small viewports." width="150"
-                                            height="300" class="sm">
-                                    </a>
-                                </div>
-
-                                <div class="col" style="display:flex;flex-direction: column;">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/confirmation modal.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of confirmation modal for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/confirmation modal.webp"
-                                            alt="Image of confirmation modal for small viewports." width="150"
-                                            height="300" class="sm">
-                                    </a>
-                                </div>
-
-                                <div class="col" style="display:flex;flex-direction: column;">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/mobile nav.webp"
-                                        data-lightbox="mygallery" data-title="Image of navigation for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/mobile nav.webp"
-                                            alt="Image of navigation for small viewports." width="150" height="300"
-                                            class="sm">
-                                    </a>
-                                </div>
-
-                                <div class="col" style="display:flex;flex-direction: column;">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/basics-1.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of Basics Lesson 1 for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/basics-1.webp"
-                                            alt="Image of Basics Lesson 1 for small viewports." width="150" height="300"
-                                            class="sm">
-                                    </a>
-                                </div>
-
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
+                                    data-lightbox="mygallery" data-title="Image of index page for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
+                                        alt="Image of index page for small viewports." width="150" height="500"
+                                        class="sm">
+                                </a>
                             </div>
 
-                            <div class="gallery">
-
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/basics-2.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of Basics Lesson 2 for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/basics-2.webp"
-                                            alt="Image of Basics Lesson 2 for small viewports." width="150" height="250"
-                                            class="sm">
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Strings.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of Strings Lesson 1 for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Strings.webp"
-                                            alt="Image of Strings Lesson 1 for small viewports." width="150"
-                                            height="300" class="sm">
-                                    </a>
-                                </div>
-
-
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Tuning.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of Tuning Lesson for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Tuning.webp"
-                                            alt="Image of Tuning Lesson for small viewports." width="150" height="300"
-                                            class="sm">
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Frets.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of Frets Lesson 1 for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Frets.webp"
-                                            alt="Image of Frets Lesson 1 for small viewports." width="150" height="300"
-                                            class="sm">
-                                    </a>
-                                </div>
-
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Frets2.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of Frets Lesson 2 for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Frets2.webp"
-                                            alt="Image of Frets Lesson 2 for small viewports." width="150" height="300"
-                                            class="sm">
-                                    </a>
-                                </div>
-
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/commands.webp"
+                                    data-lightbox="mygallery"
+                                    data-title="Image of voice commands modal for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/commands.webp"
+                                        alt="Image of voice commands modal for small viewports." width="150"
+                                        height="300" class="xsm">
+                                </a>
                             </div>
-                            <div class="gallery">
 
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Chords.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of Chords Lesson for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Chords.webp"
-                                            alt="Image of Chords Lesson for small viewports." width="150" height="150"
-                                            class="sm">
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Rhythm.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of Rhythm Lesson for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Rhythm.webp"
-                                            alt="Image of Rhythm Lesson for small viewports." width="150" height="150"
-                                            class="sm">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/lead.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of Lead Lesson 1 for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/lead.webp"
-                                            alt="Image of Lead Lesson 1 for small viewports." width="150" height="300"
-                                            class="sm">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/lead2.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of Lead Lesson 2 for small viewports.">
-                                        <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/lead2.webp"
-                                            alt="Image of Lead Lesson 2 for small viewports." width="150" height="300"
-                                            class="sm">
-                                    </a>
-                                </div>
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/confirmation modal.webp"
+                                    data-lightbox="mygallery"
+                                    data-title="Image of confirmation modal for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/confirmation modal.webp"
+                                        alt="Image of confirmation modal for small viewports." width="150" height="300"
+                                        class="xsm">
+                                </a>
+                            </div>
 
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/mobile nav.webp"
+                                    data-lightbox="mygallery" data-title="Image of navigation for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/mobile nav.webp"
+                                        alt="Image of navigation for small viewports." width="150" height="300"
+                                        class="xsm">
+                                </a>
+                            </div>
+
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/basics-1.webp"
+                                    data-lightbox="mygallery"
+                                    data-title="Image of Basics Lesson 1 for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/basics-1.webp"
+                                        alt="Image of Basics Lesson 1 for small viewports." width="150" height="300"
+                                        class="sm">
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="gallery">
+
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/basics-2.webp"
+                                    data-lightbox="mygallery"
+                                    data-title="Image of Basics Lesson 2 for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/basics-2.webp"
+                                        alt="Image of Basics Lesson 2 for small viewports." width="150" height="250"
+                                        class="sm">
+                                </a>
+                            </div>
+
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Strings.webp"
+                                    data-lightbox="mygallery"
+                                    data-title="Image of Strings Lesson 1 for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Strings.webp"
+                                        alt="Image of Strings Lesson 1 for small viewports." width="150" height="300"
+                                        class="sm">
+                                </a>
+                            </div>
+
+
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Tuning.webp"
+                                    data-lightbox="mygallery" data-title="Image of Tuning Lesson for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Tuning.webp"
+                                        alt="Image of Tuning Lesson for small viewports." width="150" height="300"
+                                        class="sm">
+                                </a>
+                            </div>
+
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Frets.webp"
+                                    data-lightbox="mygallery" data-title="Image of Frets Lesson 1 for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Frets.webp"
+                                        alt="Image of Frets Lesson 1 for small viewports." width="150" height="300"
+                                        class="sm">
+                                </a>
+                            </div>
+
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Frets2.webp"
+                                    data-lightbox="mygallery" data-title="Image of Frets Lesson 2 for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Frets2.webp"
+                                        alt="Image of Frets Lesson 2 for small viewports." width="150" height="300"
+                                        class="sm">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="gallery">
+
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Chords.webp"
+                                    data-lightbox="mygallery" data-title="Image of Chords Lesson for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Chords.webp"
+                                        alt="Image of Chords Lesson for small viewports." width="150" height="150"
+                                        class="sm">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/Rhythm.webp"
+                                    data-lightbox="mygallery" data-title="Image of Rhythm Lesson for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/Rhythm.webp"
+                                        alt="Image of Rhythm Lesson for small viewports." width="150" height="150"
+                                        class="sm">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/lead.webp"
+                                    data-lightbox="mygallery" data-title="Image of Lead Lesson 1 for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/lead.webp"
+                                        alt="Image of Lead Lesson 1 for small viewports." width="150" height="300"
+                                        class="sm">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="/assets/images/Case-Studies/CS1/hi-fi/mobile/lead2.webp"
+                                    data-lightbox="mygallery" data-title="Image of Lead Lesson 2 for small viewports.">
+                                    <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/lead2.webp"
+                                        alt="Image of Lead Lesson 2 for small viewports." width="150" height="300"
+                                        class="sm">
+                                </a>
                             </div>
                         </div>
+
                     </div>
                     <div id="medium" data-tab-content>
                         <div class="align-top">
@@ -1110,7 +1366,7 @@
                                         data-title="Image of Index page for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/index.webp"
                                             alt="Image of Index page for medium sized viewports." width="150"
-                                            height="500" class="md2">
+                                            height="500" class="md">
                                     </a>
                                 </div>
                                 <div class="col" style="display:flex;flex-direction: column;">
@@ -1119,7 +1375,7 @@
                                         data-title="Image of all modals for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/modals.webp"
                                             alt="Image of all modals for medium sized viewports." width="150"
-                                            height="300" class="md2">
+                                            height="300" class="md">
                                     </a>
                                 </div>
                                 <div>
@@ -1128,7 +1384,7 @@
                                         data-title="Image of the Basics Lesson 1 for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/basics-1.webp"
                                             alt="Image of the Basics Lesson 1 for medium sized viewports." width="150"
-                                            height="250" class="md2">
+                                            height="250" class="md">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1137,7 +1393,7 @@
                                         data-title="Image of the Basics Lesson 2 for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/basics-2.webp"
                                             alt="Image of the Basics Lesson 2 for medium sized viewports." width="150"
-                                            height="300" class="md2">
+                                            height="300" class="md">
                                     </a>
                                 </div>
                             </div>
@@ -1150,7 +1406,7 @@
                                         data-title="Image of the Strings Lesson for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/strings.webp"
                                             alt="Image of the Strings Lesson  for medium sized viewports." width="150"
-                                            height="300" class="md2">
+                                            height="300" class="md">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1159,7 +1415,7 @@
                                         data-title="Image of the Tuning Lesson for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/tuning.webp"
                                             alt="Image of the Strings Lesson for medium sized viewports." width="150"
-                                            height="300" class="md2">
+                                            height="300" class="md">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1168,7 +1424,7 @@
                                         data-title="Image of the Frets Lesson 1 for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/frets-1.webp"
                                             alt="Image of the Frets Lesson 1 for medium sized viewports." width="150"
-                                            height="300" class="md2">
+                                            height="300" class="md">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1177,7 +1433,7 @@
                                         data-title="Image of the Frets Lesson 2 for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/frets-2.webp"
                                             alt="Image of the Frets Lesson 2 for medium sized viewports." width="150"
-                                            height="150" class="md2">
+                                            height="150" class="md">
                                     </a>
                                 </div>
                             </div>
@@ -1188,7 +1444,7 @@
                                         data-title="Image of the Chords Lesson for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/chords.webp"
                                             alt="UI Kit image 4 - Card Guidelines." width="150" height="300"
-                                            class="md2">
+                                            class="md">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1197,7 +1453,7 @@
                                         data-title="Image of the Rhythm Lesson for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/rhthym.webp"
                                             alt="Image of the Rhythm Lesson for medium sized viewports." width="150"
-                                            height="300" class="md2">
+                                            height="300" class="md">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1206,7 +1462,7 @@
                                         data-title="Image of the Lead Guitar Lesson 1 for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/lead-1.webp"
                                             alt="Image of the Lead Guitar Lesson 1 for medium sized viewports."
-                                            width="150" height="300" class="md2">
+                                            width="150" height="300" class="md">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1215,7 +1471,7 @@
                                         data-title="Image of the Lead Guitar Lesson 2 for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/tablet/lead-2.webp"
                                             alt="Image of the Lead Guitar Lesson 2 for medium sized viewports."
-                                            width="150" height="300" class="md2">
+                                            width="150" height="300" class="md">
                                     </a>
                                 </div>
                             </div>
@@ -1234,7 +1490,7 @@
                                         data-title="Image of the Index page for Large sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/index.webp"
                                             alt="Image of the Index page for large sized viewports." width="150"
-                                            height="500" class="md">
+                                            height="500" class="lg">
                                     </a>
                                 </div>
                                 <div class="col" style="display:flex;flex-direction: column;">
@@ -1243,7 +1499,7 @@
                                         data-title="Image of the Confirmation modal for medium sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/modals.webp"
                                             alt="Image of the Confirmation modal for medium sized viewports."
-                                            width="150" height="300" class="md">
+                                            width="150" height="300" class="lg">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1251,28 +1507,29 @@
                                         data-lightbox="mygallery"
                                         data-title="Image of the Basics Lesson 1 for large sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics1.webp"
-                                            alt="UI Kit image 3 - Card Overview" width="150" height="300" class="md">
+                                            alt="UI Kit image 3 - Card Overview" width="150" height="300" class="lg">
                                     </a>
                                 </div>
-                            </div>
-
-                            <div class="gallery">
                                 <div class="col">
                                     <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics2.webp"
                                         data-lightbox="mygallery"
                                         data-title="Image of the Basics Lesson 2 for large sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics2.webp"
                                             alt="Image of the Basics Lesson 2 for large sized viewports." width="150"
-                                            height="300" class="md">
+                                            height="300" class="lg">
                                     </a>
                                 </div>
+                            </div>
+
+                            <div class="gallery">
+
                                 <div class="col">
                                     <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/strings.webp"
                                         data-lightbox="mygallery"
                                         data-title="Image of the Strings Lesson for large sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/strings.webp"
                                             alt="Image of the Strings Lesson for large sized viewports." width="150"
-                                            height="300" class="md">
+                                            height="300" class="lg">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1281,18 +1538,16 @@
                                         data-title="Image of the Tuning Lesson for large sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/tuning.webp"
                                             alt="Image of the Tuning Lesson for large sized viewports." width="150"
-                                            height="300" class="md">
+                                            height="300" class="lg">
                                     </a>
                                 </div>
-                            </div>
-                            <div class="gallery">
                                 <div class="col">
                                     <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets1.webp"
                                         data-lightbox="mygallery"
                                         data-title="Image of the Frets Lesson 1 for large sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets1.webp"
                                             alt="Image of the Frets Lesson 2 for large sized viewports." width="150"
-                                            height="150" class="md">
+                                            height="150" class="lg">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1301,27 +1556,28 @@
                                         data-title="Image of the Frets Lesson 2 for large sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets2.webp"
                                             alt="Image of the Frets Lesson 2 for large sized viewports." width="150"
-                                            height="300" class="md">
+                                            height="300" class="lg">
                                     </a>
                                 </div>
+                            </div>
+                            <div class="gallery">
+
                                 <div class="col">
                                     <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/chords.webp"
                                         data-lightbox="mygallery"
                                         data-title="Image of the Chords Lesson for large sized viewports..">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/chords.webp"
                                             alt="Image of the Chords Lesson for large sized viewports." width="150"
-                                            height="300" class="md">
+                                            height="300" class="lg">
                                     </a>
                                 </div>
-                            </div>
-                            <div class="gallery">
                                 <div class="col">
                                     <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/rhythm.webp"
                                         data-lightbox="mygallery"
                                         data-title="Image of the Rhythm Guitar Lesson for large sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/rhythm.webp"
                                             alt="Image of the Rhythm Guitar Lesson for large sized viewports."
-                                            width="150" height="150" class="md">
+                                            width="150" height="150" class="lg">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1330,7 +1586,7 @@
                                         data-title="Image of the Lead Guitar Lesson 1 for large sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead1.webp"
                                             alt="Image of the Lead Guitar Lesson 1 for large sized viewports."
-                                            width="150" height="300" class="md">
+                                            width="150" height="300" class="lg">
                                     </a>
                                 </div>
                                 <div class="col">
@@ -1339,7 +1595,7 @@
                                         data-title="Image of the Lead Guitar Lesson 2 for large sized viewports.">
                                         <img src="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead2.webp"
                                             alt="Image of the Lead Guitar Lesson 2 for large sized viewports."
-                                            width="150" height="300" class="md">
+                                            width="150" height="300" class="lg">
                                     </a>
                                 </div>
                             </div>
