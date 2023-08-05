@@ -161,11 +161,13 @@ section {
 }
 
 ul {
-  list-style: none;
-  margin: 0;
+  list-style: disc;
+  margin-left: 40px;
   padding: 0;
 }
-
+ul li {
+  font-size: 16px;
+}
 img {
   width: 100%;
   height: auto;
@@ -1280,9 +1282,16 @@ footer .footer-container {
 
   /* scrollable ID's  */
 
-  #competitive-analysis, #user-interviews, #outcomes,
-  #persona, #ideation, #i-a, #i-design, #ui-design, 
-  #ux-testing, #conclusion {
+  #competitive-analysis,
+  #user-interviews,
+  #outcomes,
+  #persona,
+  #ideation,
+  #i-a,
+  #i-design,
+  #ui-design,
+  #ux-testing,
+  #conclusion {
     margin-bottom: 4em;
   }
 
@@ -1322,10 +1331,10 @@ footer .footer-container {
   .gallery .wide {
     width: 700px;
     height: 500px;
-  } 
+  }
 
   .gallery .wide2 {
-    width: 80vw;
+    width: 50vw;
     height: 60vh;
     padding: 1em;
   }
@@ -1344,6 +1353,7 @@ footer .footer-container {
     width: 300px;
     height: 196px;
   }
+
   .gallery .sm {
     width: 100px;
     height: 460px;
@@ -1370,16 +1380,41 @@ footer .footer-container {
     margin-bottom: 1em;
   }
 
-.video-lg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .video-lg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.video-lg iframe {
-  width: 50vw;
-  height: 50vh;
-}
+  .mobile-playback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .i-phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid black;
+    border-radius: 40px;
+    height: 500px;
+    width: 230px;
+    box-shadow: 0 20px 15px #33333335;
+  }
+
+  .mobile-playback video {
+    height: 500px;
+    width: 230px;
+    margin-top: 10px;
+    border-radius: 25px;
+  }
+
+  .interactive-mob {
+    border-radius: 30px;
+  }
 
   footer .footer-container .footer-details {
     padding: 2em;
