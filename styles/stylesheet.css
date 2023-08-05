@@ -223,6 +223,50 @@ img {
   padding: 12px;
 }
 
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s;
+}
+
+.tab.active {
+  background-color: #b7d1c8;
+}
+
+.tab:hover {
+  background-color: #93c0b0;
+}
+
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+[data-tab-target] {
+  cursor: pointer;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
 footer {
   display: flex;
   flex-direction: row;
@@ -1355,8 +1399,8 @@ footer .footer-container {
   }
 
   .gallery .sm {
-    width: 100px;
-    height: 460px;
+    width: 80px;
+    height: 240px;
   }
 
   .gallery img:hover {
@@ -2017,6 +2061,12 @@ footer .footer-container {
   }
 
   .sidebar.active {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    /* align-content: center; */
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 200px;
     background-color: #f0f0f0;
     border-right: 1px solid rgb(187, 187, 187);
@@ -2042,7 +2092,7 @@ footer .footer-container {
   }
 
   .sidebar.active #sidebar-menu-btn {
-    left: 90%;
+    left: 80%;
     rotate: 180deg;
     background: #fff;
   }
@@ -2053,12 +2103,18 @@ footer .footer-container {
 
   .sidebar .top {
     display: flex;
+    height: 30px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .sidebar .top .logo {
     color: #12171e;
     display: flex;
     width: 100%;
+    justify-content: center;
     align-items: center;
     pointer-events: none;
     opacity: 0;
@@ -2066,6 +2122,10 @@ footer .footer-container {
 
   .sidebar.active .top .logo {
     opacity: 1;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .sidebar ul {
@@ -2080,8 +2140,8 @@ footer .footer-container {
 
   .sidebar ul li {
     list-style-type: none;
-    height: 24px;
-    width: 100%;
+    height: 50px;
+    width: 80px;
     margin: .5rem auto;
     line-height: 16px;
   }
@@ -2106,13 +2166,14 @@ footer .footer-container {
     line-height: 50px;
     font-size: 32px;
     color: #12171e;
-    transition: translateX(-50%);
     cursor: pointer;
     padding: 5px 0;
+    opacity: 1;
   }
 
   .sidebar ul li a:hover {
     color: var(--brand-color);
+    max-width: 50px;
   }
 
   .sidebar .nav-item {
@@ -2124,6 +2185,16 @@ footer .footer-container {
     margin-left: .5em;
   }
 
+  .sidebar.active ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 /*Large Desktop viewport styles */
