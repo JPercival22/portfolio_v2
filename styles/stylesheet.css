@@ -949,7 +949,7 @@ footer {
 .sidebar.active {
   top: 56px;
   padding: 20px;
-  width: 250px;
+  width: 150px;
   background-color: #f0f0f0;
   box-shadow: var(--br-shadow);
   z-index: 0;
