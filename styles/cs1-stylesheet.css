@@ -409,18 +409,14 @@ img {
 
 .sidebar #sidebar-menu-btn {
     position: absolute;
-    font-size: 16px;
-    font-weight: 700;
-    color: #12171e;
     background-color: #fff;
-    border: 1px solid #12171e;
-    border-radius: 100%;
-    padding: 5px;
     top: 1rem;
-    left: 20%;
+    left: 3%;
+    border-radius: 100%;
     transition: all .5s ease-in-out;
     cursor: pointer;
     box-shadow: 6px 6px 6px -8px rgba(143, 143, 143, 0.94);
+    display: flex;
 }
 
 .sidebar.active #sidebar-menu-btn {
@@ -548,6 +544,14 @@ img {
 .content .td .col-right {
     width: 30%;
     text-align: center;
+}
+
+.content .td .col-right .close svg {
+    fill: #b21515;
+}
+
+.content .td .col-right .check svg {
+    fill: #409d34;
 }
 
 .content .td:nth-child(even) {
@@ -905,11 +909,11 @@ footer .footer-container {
     }
 
     .table-lg .table-total .td .check {
-        color: #409d34;
+        fill: #409d34;
     }
 
     .table-lg .table-total .td .close {
-        color: #b21515;
+        fill: #b21515;
     }
 
     footer .footer-container .footer-details {
