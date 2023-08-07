@@ -1,1 +1,30 @@
-!function(){"use strict";let e=document.querySelector("#navbar"),t=e.querySelector("#navbar-toggle"),a="true"===t.getAttribute("aria-expanded"),r=()=>{a=!a,t.setAttribute("aria-expanded",a)};t.addEventListener("click",r);let c=document.querySelector("#navbar-menu"),s=c.querySelector(".navbar-links");s.addEventListener("click",e=>e.stopPropagation()),c.addEventListener("click",r);let n=document.querySelector("#sidebar-menu-btn"),i=document.querySelector(".sidebar");n.onclick=function(){i.classList.toggle("active")}}();const tabs=document.querySelectorAll("[data-tab-target]"),tabContents=document.querySelectorAll("[data-tab-content]");tabs.forEach(e=>{e.addEventListener("click",()=>{let t=document.querySelector(e.dataset.tabTarget);tabContents.forEach(e=>{e.classList.remove("active")}),tabs.forEach(e=>{e.classList.remove("active")}),e.classList.add("active"),t.classList.add("active")})});
+! function () {
+    "use strict";
+    let e = document.querySelector("#navbar"),
+        t = e.querySelector("#navbar-toggle"),
+        a = "true" === t.getAttribute("aria-expanded"),
+        r = () => {
+            a = !a, t.setAttribute("aria-expanded", a)
+        };
+    t.addEventListener("click", r);
+    let c = document.querySelector("#navbar-menu"),
+        s = c.querySelector(".navbar-links");
+    s.addEventListener("click", e => e.stopPropagation()), c.addEventListener("click", r);
+    let n = document.querySelector("#sidebar-menu-btn"),
+        i = document.querySelector(".sidebar");
+    n.onclick = function () {
+        i.classList.toggle("active")
+    }
+}();
+const tabs = document.querySelectorAll("[data-tab-target]"),
+    tabContents = document.querySelectorAll("[data-tab-content]");
+tabs.forEach(e => {
+    e.addEventListener("click", () => {
+        let t = document.querySelector(e.dataset.tabTarget);
+        tabContents.forEach(e => {
+            e.classList.remove("active")
+        }), tabs.forEach(e => {
+            e.classList.remove("active")
+        }), e.classList.add("active"), t.classList.add("active")
+    })
+});

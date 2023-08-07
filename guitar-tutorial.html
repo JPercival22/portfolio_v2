@@ -10,15 +10,10 @@
     <meta name="author" content="Joseph Percival">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study 1</title>
-    <script src="/js/dynamic-script.js" defer></script>
-    <script src="/js/lightbox-plus-jquery.js" defer></script>
-    <script src="/js/lazysizes.min.js" async=""></script>
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <!-- <link rel="preload" href="/styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    <meta name="theme-color" content="#317EFB"/>
     <link rel="preload" href="/styles/cs1-stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="/styles/lightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
-
 </head>
 
 <body>
@@ -2156,12 +2151,11 @@
                             you would want to go back to the home page.</li>
                     </ul>
                     <div class="mobile-playback">
-                        <div class="i-phone">
-                            <iframe class="interactive-mob" width="230" height="500" title="interactive prototype"
-                                src="https://xd.adobe.com/embed/c7dd0076-2049-4255-900b-d5ab3ecc022a-928e/"
-                                frameborder="0" allowfullscreen></iframe>
-                        </div>
-
+                            <div class="i-phone">
+                                <a href="https://xd.adobe.com/embed/c7dd0076-2049-4255-900b-d5ab3ecc022a-928e/" alt="link to interactive prototype">
+                                <img src="/assets/images/Case-Studies/CS1/hi-fi/mobile/mobile-demo.png" alt="link to interactive prototype" height="500">
+                                </a>
+                            </div>
                     </div>
                 </div>
             </section>
@@ -2265,6 +2259,12 @@
             </footer>
         </div>
     </main>
+<!-- custom js  -->
+    <script type="module" src="/js/dynamic-script.js" async defer></script>
+    <!-- lightbox js  -->
+    <script nomodule  src="/js/lightbox.min.js" async defer></script>
+    <!-- lazyload-images  -->
+    <script type="module"  src="/js/lazysizes.min.js" async defer=""></script>
 </body>
 
 </html>

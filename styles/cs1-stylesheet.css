@@ -115,14 +115,6 @@ a {
     text-decoration: none;
 }
 
-label {
-    font-family: 'Poppins';
-    color: var(--brand-color);
-    font-size: 14px;
-    font-weight: 500;
-}
-
-
 section {
     padding-top: 1em;
     margin-bottom: 1em;
@@ -620,8 +612,21 @@ figcaption {
     height: 500px;
     width: 230px;
     box-shadow: 0 20px 15px #33333335;
+    transition: all .5s;
+    cursor: pointer;
 }
 
+.i-phone:hover {
+    filter: grayscale(100%);
+    transform: scale(1.02);
+}
+
+.i-phone img {
+    display: flex;
+    height: 500px;
+    width: 230px;
+    border-radius: 30px;
+}
 .interactive-mob {
     border-radius: 30px;
 }
