@@ -1,15 +1,6 @@
-@font-face {
-    font-family: Poppins;
-    font-size: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
-        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    font-display: swap;
-    color: #1a1a1a;
-}
-
 :root {
+    /* fonts  */
+    --body-copy: "Poppins";
     /* colors  */
     --brand-color: #2c4465;
     --primary-text-color: #1a1a1a;
@@ -56,24 +47,27 @@ html {
     max-width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-family: var(--body-copy);
 }
 
 body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    font-family: Poppins;
     background: var(--white-bkg);
+    font-family: var(--body-copy);
 }
 
 main {
     position: relative;
-    top: 73px;
+    top: 42px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
 
 h1 {
+    font-family: var(--body-copy);
     font-size: 26px;
     font-weight: 500;
     line-height: 24pt;
@@ -85,6 +79,7 @@ h1 {
 }
 
 h2 {
+    font-family: var(--body-copy);
     font-size: 22px;
     font-weight: 500;
     line-height: 24pt;
@@ -95,6 +90,7 @@ h2 {
 }
 
 h3 {
+    font-family: var(--body-copy);
     font-size: 20px;
     font-weight: 500;
     line-height: 22pt;
@@ -105,6 +101,7 @@ h3 {
 }
 
 p {
+    font-family: var(--body-copy);
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 1px;
@@ -112,6 +109,7 @@ p {
 }
 
 a {
+    font-family: var(--body-copy);
     text-decoration: none;
 }
 
@@ -121,19 +119,21 @@ section {
 }
 
 ul {
+    font-family: var(--body-copy);
     list-style: disc;
     margin-left: 16px;
     padding: 0;
 }
 
 ol {
+    font-family: var(--body-copy);
     margin-left: 16px;
     padding: 0;
 }
 
 ul li,
 ol li {
-    font-family: "Poppins";
+    font-family: var(--body-copy);
     font-size: 16px;
 }
 
@@ -153,6 +153,7 @@ img {
     flex-grow: 1;
     flex-basis: 0;
     padding: 6px;
+    font-family: var(--body-copy);
     word-break: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -223,39 +224,26 @@ img {
     padding-right: 8px;
 }
 
-.home-link {
-    display: flex;
-    flex-direction: row;
-    padding-left: 8px;
-}
-
 .home-link,
 .navbar-links {
+    font-family: var(--body-copy);
     color: var(--brand-color);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.navbar-links {
-    justify-content: center;
-    width: 100%;
-    padding: 0.4em 0.8em;
-}
-
-.navbar-links li a {
-    width: 100%;
-}
-
 .navbar-logo {
-    color: var(--brand-color-focus);
     display: flex;
+    font-family: var(--body-copy);
+    color: var(--brand-color-focus);
     flex-direction: row;
     align-items: center;
 }
 
 .navbar-logo img {
     width: 40px;
+    height: auto;
     background-color: var(--white-bkg);
     border-radius: 50%;
 }
@@ -267,26 +255,18 @@ img {
 }
 
 .logo-name {
-    padding: 0;
-    margin: 0;
     font-size: 18px;
     line-height: 20px;
 }
 
 .logo-title {
-    padding: 0;
-    margin: 0;
     font-size: 16px;
     line-height: 16px;
     letter-spacing: 0.3pt;
 }
 
 #navbar-toggle {
-    cursor: pointer;
     border: none;
-    background-color: transparent;
-    width: 40px;
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -294,31 +274,8 @@ img {
 }
 
 .icon-bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 3px 0;
-    font-family: "Poppins";
-    background-color: var(--brand-color);
-}
-
-#navbar-toggle[aria-expanded='true'] .icon-bar:is(:first-child, :last-child) {
-    position: absolute;
-    margin: 0;
     width: 30px;
-    font-family: "Poppins";
-}
-
-#navbar-toggle[aria-expanded='true'] .icon-bar:first-child {
-    transform: rotate(45deg);
-}
-
-#navbar-toggle[aria-expanded='true'] .icon-bar:nth-child(2) {
-    opacity: 0;
-}
-
-#navbar-toggle[aria-expanded='true'] .icon-bar:last-child {
-    transform: rotate(-45deg);
+    color: var(--brand-color);
 }
 
 #navbar-menu {
@@ -329,41 +286,27 @@ img {
 }
 
 #navbar-toggle[aria-expanded='true']+#navbar-menu {
-    background-color: rgba(0, 0, 0, 0.4);
     opacity: 1;
     visibility: visible;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .navbar-links {
-    list-style: none;
-    position: relative;
     background-color: var(--yellow_bkg);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-self: center;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
-    flex-wrap: nowrap;
-    align-content: center;
     justify-content: center;
-    font-family: "Poppins";
+    width: 100vw;
+    height: 100vh;
 }
 
 .navbar-link {
     display: flex;
-    font-family: "Poppins";
     color: #1a1a1a;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 42px;
+    width: 100%;
+    height: 80px;
     margin: 8px;
 }
 
@@ -391,19 +334,20 @@ img {
 
 /*side bar*/
 .sidebar.active {
+    position: fixed;
     top: 56px;
+    left: 0;
     padding: 20px;
-    width: 150px;
+    height: 100vh;
     background-color: #f0f0f0;
     box-shadow: var(--br-shadow);
-    z-index: 0;
 }
 
 .sidebar #sidebar-menu-btn {
-    position: absolute;
+    position: fixed;
     background-color: #fff;
-    top: 1rem;
-    left: 3%;
+    left: 0;
+    top: 8%;
     border-radius: 100%;
     transition: all .5s ease-in-out;
     cursor: pointer;
@@ -412,14 +356,19 @@ img {
 }
 
 .sidebar.active #sidebar-menu-btn {
-    left: 86%;
+    left: 55%;
+}
+
+.sidebar.active #sidebar-menu-btn svg{
     rotate: 180deg;
-    animation: none;
 }
 
 .sidebar .top {
     display: flex;
     width: 100%;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .sidebar .top .logo {
@@ -442,16 +391,17 @@ img {
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
-    gap: .5em;
+    gap: 2em;
     flex-wrap: wrap;
     display: none;
+    padding-top: 1em;
+    margin-left: 0;
 }
 
 .sidebar ul li {
     list-style-type: none;
-    height: 24px;
+    height: 42px;
     width: 100%;
-    margin: .5rem auto;
     line-height: 16px;
 }
 
@@ -459,8 +409,6 @@ img {
     color: #12171e;
     display: flex;
     align-items: center;
-    text-decoration: none;
-    border-radius: .8rem;
 }
 
 .sidebar .nav-item {
