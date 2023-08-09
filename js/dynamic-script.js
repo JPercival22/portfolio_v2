@@ -1,30 +1,55 @@
-! function () {
-    "use strict";
-    let e = document.querySelector("#navbar"),
-        t = e.querySelector("#navbar-toggle"),
-        a = "true" === t.getAttribute("aria-expanded"),
-        r = () => {
-            a = !a, t.setAttribute("aria-expanded", a)
-        };
-    t.addEventListener("click", r);
-    let c = document.querySelector("#navbar-menu"),
-        s = c.querySelector(".navbar-links");
-    s.addEventListener("click", e => e.stopPropagation()), c.addEventListener("click", r);
-    let n = document.querySelector("#sidebar-menu-btn"),
-        i = document.querySelector(".sidebar");
-    n.onclick = function () {
-        i.classList.toggle("active")
-    }
-}();
-const tabs = document.querySelectorAll("[data-tab-target]"),
-    tabContents = document.querySelectorAll("[data-tab-content]");
-tabs.forEach(e => {
-    e.addEventListener("click", () => {
-        let t = document.querySelector(e.dataset.tabTarget);
-        tabContents.forEach(e => {
-            e.classList.remove("active")
-        }), tabs.forEach(e => {
-            e.classList.remove("active")
-        }), e.classList.add("active"), t.classList.add("active")
-    })
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("show");
+}
+
+function toggleMenu() {
+    const navMenu = document.getElementById("navMenu");
+    navMenu.classList.toggle("show");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    openTab(event, 'tab1'); // Open the first tab by default
 });
+
+function openTab(evt, tabName) {
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => {
+        content.style.display = 'none';
+    });
+
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.classList.remove('active');
+    });
+
+    const tabContent = document.getElementById(tabName);
+    if (tabContent) {
+        tabContent.style.display = 'block';
+    }
+
+    evt.currentTarget.classList.add('active');
+}
+
+document.getElementById("goBackButton").addEventListener("click", function() {
+    history.back();
+});
+
+document.getElementById("goForwardButton").addEventListener("click", function() {
+    history.forward();
+});
+
+// Load different images based on viewport width
+function setResponsiveImage() {
+    const imgElement = document.getElementById("responsiveImage");
+    
+    if (window.innerWidth <= 480) {
+        imgElement.src = "/assets/images/Case-Studies/CS1/CS1-sm-device-demo.webp"; // Image for mobile devices
+    } else if (window.innerWidth <= 768) {
+        imgElement.src = "/assets/images/Case-Studies/CS1/CS1-lg-device-demo.webp"; // Image for desktops
+    }
+}
+
+// Adjust the image when the window is resized
+window.addEventListener("resize", setResponsiveImage);
+
