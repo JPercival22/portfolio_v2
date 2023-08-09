@@ -1468,7 +1468,6 @@ footer .footer-container {
   .two-button-container {
     flex-direction: row;
     gap: 1em;
-
   }
 
   .two-button-container .primary-button,

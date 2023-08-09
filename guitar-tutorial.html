@@ -31,42 +31,53 @@
                     </div>
                 </a>
             </div>
-            <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
-                aria-expanded="false">
+
+            <button type="button" class="menu-toggle" onclick="toggleMenu()" aria-label="main navigation menu button">
                 <!-- <span class="icon-bar"> -->
-                    <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
-                        width="48">
-                        <path
-                            d="M150-240q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-300h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-240H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-510h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-450H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-720h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-660H150Z" />
-                    </svg>
+                <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
+                    width="48">
+                    <path
+                        d="M150-240q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-300h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-240H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-510h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-450H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-720h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-660H150Z" />
+                </svg>
                 <!-- </span> -->
             </button>
-            <div id="navbar-menu" aria-labelledby="navbar-toggle">
-                <div class="navbar-links">
-                    <a class="navbar-link navbar-item" href="/index.html" title="Link to the Home Page">Home</a>
-                    <a class="navbar-link navbar-item" href="/about-me.html" title="Link to the About Us page">About</a>
-                    <a class="navbar-link navbar-item" href="/contact-form.html"
-                        title="Link to the Contact Us page">Contact</a>
-                </div>
-            </div>
+            <ul id="navMenu" class="nav-menu">
+                <li class="navbar-link navbar-item">
+                    <a href="/index.html" title="Link to the Home Page">Home</a>
+                </li>
+                <li class="navbar-link navbar-item">
+                    <a href="/about-me.html" title="Link to the About Us page">About</a>
+                </li>
+                <li class="navbar-link navbar-item">
+                    <a href="/contact-form.html" title="Link to the Contact Us page">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
+
+
+
     <main>
+        <div class="contents">
+            <button class="open-sidebar-btn" onclick="toggleSidebar()" aria-label="Open side bar button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                    <path
+                        d="M533.616-480 421.154-367.538q-6.692 6.596-6.692 15.759t6.692 15.855q6.692 7.077 16.308 6.885 9.615-.192 16.307-6.885l123.846-123.845q8.615-8.616 8.615-20.231 0-11.615-8.615-20.231L453.154-624.692q-6.693-6.692-16-6.577-9.308.116-16 7.193-6.692 6.692-6.5 15.999.193 9.308 6.885 16L533.616-480Zm-53.549 379.999q-78.836 0-148.204-29.92-69.369-29.92-120.682-81.71-51.314-51.791-81.247-120.936-29.933-69.146-29.933-147.366 0-78.836 29.92-148.204 29.92-69.369 81.21-120.682 51.291-51.314 120.629-81.247 69.337-29.933 148.173-29.933t147.704 29.92q68.869 29.92 120.682 81.21 51.814 51.291 81.747 120.629 29.933 69.337 29.933 148.173 0 78.221-29.92 147.397-29.92 69.176-81.71 120.989-51.791 51.814-120.629 81.747-68.837 29.933-147.673 29.933Z" />
+                </svg>
+            </button>
+        </div>
         <!-- Sidebar -->
         <div class="main-content p-0">
-            <div class="sidebar">
-                <div class="top">
-                    <div class="logo">
-                        <span>Contents</span>
-                    </div>
-                    <span id="sidebar-menu-btn" title="Click To Open Contents">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000" height="40" viewBox="0 -960 960 960"
-                            width="40">
+            <nav id="sidebar" class="sidebar">
+                <div class="header">
+                    <h3>Contents</h3>
+                    <button class="close-btn" onclick="toggleSidebar()" aria-label="close sidebar button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
                             <path
-                                d="M547.333-480 430.667-363.333q-3.334 3.083-3.334 8.041 0 4.959 3.334 8.292 3.333 4.333 8.666 3.833 5.334-.5 8.667-3.833l113.333-113.333q8.334-8.334 8.334-19.667 0-11.333-8.334-19.667L448-613q-3.333-3.333-8.667-3.833-5.333-.5-8.666 3.833-3.334 3.333-2.834 8.667.5 5.333 3.834 8.666L547.333-480Zm-67.159 348Q408-132 344.442-159.391q-63.559-27.392-110.575-74.681-47.015-47.29-74.441-110.435Q132-407.652 132-479.826q0-72.174 27.391-135.732 27.392-63.559 74.348-110.574 46.957-47.016 110.435-74.442Q407.652-828 479.826-828q72.174 0 135.399 27.391 63.225 27.392 110.574 74.348 47.349 46.957 74.775 110.435Q828-552.348 828-480.174q0 72.174-27.391 135.399-27.392 63.225-74.682 110.574-47.289 47.349-110.434 74.775Q552.348-132 480.174-132ZM480-156q135.333 0 229.667-94.333Q804-344.667 804-480t-94.333-229.667Q615.333-804 480-804t-229.667 94.333Q156-615.333 156-480t94.333 229.667Q344.667-156 480-156Zm0-324Z" />
+                                d="M533.616-480 421.154-367.538q-6.692 6.596-6.692 15.759t6.692 15.855q6.692 7.077 16.308 6.885 9.615-.192 16.307-6.885l123.846-123.845q8.615-8.616 8.615-20.231 0-11.615-8.615-20.231L453.154-624.692q-6.693-6.692-16-6.577-9.308.116-16 7.193-6.692 6.692-6.5 15.999.193 9.308 6.885 16L533.616-480Zm-53.549 379.999q-78.836 0-148.204-29.92-69.369-29.92-120.682-81.71-51.314-51.791-81.247-120.936-29.933-69.146-29.933-147.366 0-78.836 29.92-148.204 29.92-69.369 81.21-120.682 51.291-51.314 120.629-81.247 69.337-29.933 148.173-29.933t147.704 29.92q68.869 29.92 120.682 81.21 51.814 51.291 81.747 120.629 29.933 69.337 29.933 148.173 0 78.221-29.92 147.397-29.92 69.176-81.71 120.989-51.791 51.814-120.629 81.747-68.837 29.933-147.673 29.933Z" />
                         </svg>
-                    </span>
+                    </button>
                 </div>
                 <ul>
                     <li class="side-bar-list-item">
@@ -164,17 +175,25 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
+
+
             <!-- end of side bar  -->
             <section id="top">
                 <div class="hero-container">
                     <div class="hero-header">
                         <h1>Just Speak Guitar Lessons - 2019</h1>
                     </div>
-                    <div class="navigation-buttons">
-                        <button onclick="history.back();">Projects</button>
-                        <button onclick="history.forward();">Next</button>
-
+                    <div class="two-button-container">
+                        <a id="goBackButton" class="secondary-button" aria-label="button link to home page"
+                            title="Please click this button if you would like to go back one page">
+                            View Projects
+                        </a>
+                        <a id="goForwardButton" class="primary-button" aria-label="button link to go forward one page"
+                            title="Please click this button if you would like to view the next project.">
+                            Next Project
+                        </a>
+                        <script src="/js/dynamic-script.js"></script>
                     </div>
                 </div>
                 <ul class="bullet-list-row">
@@ -188,12 +207,10 @@
                 </ul>
 
                 <div class="image-container">
-                    <img class="lg-cs-hero" src="/assets/images/Case-Studies/CS1/CS1-lg-device-demo.webp" width="150"
-                        height="150" alt="Hero Banner Image Of The Launched Application On Several Device Viewports">
-                    <img class="sm-cs-hero" src="/assets/images/Case-Studies/CS1/CS1-sm-device-demo.webp" width="150"
-                        height="150"
-                        alt="Mobile Hero Banner Image Of The Launched Application On Several Device Viewports">
 
+                    <img id="responsiveImage" src="/assets/images/Case-Studies/CS1/CS1-lg-device-demo.webp" width="150"
+                        height="150" alt="responsive hero image">
+                    <script src="/js/dynamic-script.js"></script>
                     <div class="flex-row-container">
                         <h1>Introduction</h1>
                         <div class="col-2">
@@ -1230,16 +1247,17 @@
                         lessons put them off and in most cases caused abandonment.
                     </p>
                     <p>Below is the affinity map following these interviews, click on the image to zoom in.</p>
-                    <div class="gallery">
-                        <a href="/assets/images/Case-Studies/CS1/planning/User-Interviews-mini.webp"
-                            data-lightbox="mygallery" data-title="User Interviews Affinity Map">
-                            <img class="wide lazyload"
-                                data-src="/assets/images/Case-Studies/CS1/planning/User-Interviews-mini.webp"
-                                alt="User Interviews Affinity Map" width="150" height="300">
-                            <figcaption>User Interviews Affinity Map</figcaption>
-                        </a>
+                    <div class="image-container">
+                        <div class="gallery">
+                            <a href="/assets/images/Case-Studies/CS1/planning/User-Interviews-mini.webp"
+                                data-lightbox="mygallery" data-title="User Interviews Affinity Map">
+                                <img class="wide lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/planning/User-Interviews-mini.webp"
+                                    alt="User Interviews Affinity Map" width="150" height="300">
+                                <figcaption>User Interviews Affinity Map</figcaption>
+                            </a>
+                        </div>
                     </div>
-
                 </div>
             </section>
 
@@ -1275,14 +1293,16 @@
                     <h2>Persona</h2>
                     <p>To help communicate information about users that I collected during research, I created a
                         provisional persona. </p>
-                    <div class="gallery">
-                        <a href="/assets/images/Case-Studies/CS1/planning/CS1-Persona -mini.webp"
-                            data-lightbox="mygallery" data-title="Created Persona">
-                            <img class="wide lazyload"
-                                data-src="/assets/images/Case-Studies/CS1/planning/CS1-Persona -mini.webp"
-                                alt="Created Persona" width="150" height="300">
-                            <figcaption>Created Persona</figcaption>
-                        </a>
+                    <div class="image-container">
+                        <div class="gallery">
+                            <a href="/assets/images/Case-Studies/CS1/planning/CS1-Persona -mini.webp"
+                                data-lightbox="mygallery" data-title="Created Persona">
+                                <img class="wide lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/planning/CS1-Persona -mini.webp"
+                                    alt="Created Persona" width="150" height="300">
+                                <figcaption>Created Persona</figcaption>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1373,14 +1393,16 @@
                         the
                         page.
                     </p>
-                    <div class="gallery">
-                        <a href="/assets/images/Case-Studies/CS1/planning/CS1-TF-minimised.webp"
-                            data-lightbox="mygallery" data-title="Task Flow Diagram">
-                            <img class="wide lazyload"
-                                data-src="/assets/images/Case-Studies/CS1/planning/CS1-TF-minimised.webp"
-                                alt="Task Flow Diagram" width="150" height="300">
-                            <figcaption>Task Flow Diagram</figcaption>
-                        </a>
+                    <div class="image-container">
+                        <div class="gallery">
+                            <a href="/assets/images/Case-Studies/CS1/planning/CS1-TF-minimised.webp"
+                                data-lightbox="mygallery" data-title="Task Flow Diagram">
+                                <img class="wide lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/planning/CS1-TF-minimised.webp"
+                                    alt="Task Flow Diagram" width="150" height="300">
+                                <figcaption>Task Flow Diagram</figcaption>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1391,14 +1413,16 @@
                         flow
                         above.
                     </p>
-                    <div class="gallery">
-                        <a href="/assets/images/Case-Studies/CS1/planning/CS1-UsFlw.webp" data-lightbox="mygallery"
-                            data-title="User Flow Diagram.">
-                            <img class="wide lazyload"
-                                data-src="/assets/images/Case-Studies/CS1/planning/CS1-UsFlw.webp"
-                                alt="User Flow Diagram" width="150" height="300">
-                            <figcaption>User Flow Diagram</figcaption>
-                        </a>
+                    <div class="image-container">
+                        <div class="gallery">
+                            <a href="/assets/images/Case-Studies/CS1/planning/CS1-UsFlw.webp" data-lightbox="mygallery"
+                                data-title="User Flow Diagram.">
+                                <img class="wide lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/planning/CS1-UsFlw.webp"
+                                    alt="User Flow Diagram" width="150" height="300">
+                                <figcaption>User Flow Diagram</figcaption>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1416,16 +1440,17 @@
                     involves carefully considering the relationship between different components of information,
                     such as content, features, and functionality.
                 </p>
-
                 <h3>Sitemap</h3>
                 <p>The following Sitemap was created in order to visualise the layout and content for the site.</p>
-                <div class="gallery">
-                    <a href="/assets/images/Case-Studies/CS1/planning/IA.webp" data-lightbox="mygallery"
-                        data-title="Information Architecture and Hierarchy Design">
-                        <img class="wide lazyload" data-src="/assets/images/Case-Studies/CS1/planning/IA.webp"
-                            alt="Information Architecture and Hierarchy Design" width="150" height="300">
-                        <figcaption>Information Architecture and Hierarchy Design</figcaption>
-                    </a>
+                <div class="image-container">
+                    <div class="gallery">
+                        <a href="/assets/images/Case-Studies/CS1/planning/IA.webp" data-lightbox="mygallery"
+                            data-title="Information Architecture and Hierarchy Design">
+                            <img class="wide lazyload" data-src="/assets/images/Case-Studies/CS1/planning/IA.webp"
+                                alt="Information Architecture and Hierarchy Design" width="150" height="300">
+                            <figcaption>Information Architecture and Hierarchy Design</figcaption>
+                        </a>
+                    </div>
                 </div>
                 <p>Based on my research insights and persona, I began to categorize and structure the information
                     based
@@ -1459,12 +1484,12 @@
                 </div>
             </section>
             <section class="align-top">
+
                 <h2>Design</h2>
-                <h3>Lo-Fidelity Sketches</h3>
+                <h3>Low-Fidelity Sketches</h3>
                 <p>Early iterations produced design sketches for the Home Screen, Components, content and layouts
                     for the lesson screens.</p>
                 <p>You can click any image to enlarge them.</p>
-
                 <div class="gallery">
                     <a href="/assets/images/Case-Studies/CS1/lo-fi/home-paper.webp" data-lightbox="mygallery"
                         data-title="Paper Prototype Design - Index page initial layout.">
@@ -1489,6 +1514,7 @@
                         </figcaption>
                     </a>
                 </div>
+
             </section>
 
             <section class="align-top">
@@ -1559,7 +1585,7 @@
                     </a>
                     <a href="/assets/images/Case-Studies/CS1/lo-fi/TFWF-5-image-carousel-dialogue-final.webp"
                         data-lightbox="mygallery" data-title="Low-Fidelity Image Slider Prototype.">
-                        <img class="lglazyload"
+                        <img class="lg lazyload"
                             data-src="/assets/images/Case-Studies/CS1/lo-fi/TFWF-5-image-carousel-dialogue-final.webp"
                             alt="Low-Fidelity Image slider prototype." width="150" height="300">
                         <figcaption>Low-Fidelity Image slider prototype.</figcaption>
@@ -1712,19 +1738,17 @@
                 <h2>Hi-Fidelity Designs</h2>
                 <p>After creating the Information Architecture for the main customer facing screens, I designed the
                     following responsive Hi-Fidelity designs.</p>
-                <ul class="tabs">
-                    <li class="active tab" data-tab-target="#small">Small</li>
-                    <li class="tab" data-tab-target="#medium">Medium</li>
-                    <li class="tab" data-tab-target="#large">Large</li>
-                </ul>
-                <div class="tab-content">
-                    <div id="small" data-tab-content class="active">
-
-                        <h3>Small Viewports</h3>
-                        <p>Below are the Hi-Fi Designs for desktop viewports (equal to and below 600px). Click on
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" onclick="openTab(event, 'tab1')">Small</button>
+                        <button class="tab-button" onclick="openTab(event, 'tab2')">Medium</button>
+                        <button class="tab-button" onclick="openTab(event, 'tab3')">Large</button>
+                    </div>
+                    <div id="tab1" class="tab-content">
+                        <h2>Small Viewports</h2>
+                        <p>Below are the Hi-Fi Designs for smaller viewports (equal to and below 600px). Click on
                             any of the
-                            images to zoom in.
-                        </p>
+                            images to zoom in..</p>
                         <div class="gallery">
 
                             <div class="col">
@@ -1866,278 +1890,263 @@
                         </div>
 
                     </div>
-                    <div id="medium" data-tab-content>
-                        <div class="align-top">
-                            <h3>Medium Viewports</h3>
-                            <p>Below are the Hi-Fi Designs for small to large Tablet viewports (600px upto 1200px).
-                                Click on any of the
-                                images to zoom in.</p>
-                            <div class="gallery">
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/index.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of Index page for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/index.webp"
-                                            alt="Image of Index page for medium sized viewports." width="150"
-                                            height="500">
-                                    </a>
-                                </div>
-                                <div class="col" style="display:flex;flex-direction: column;">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/modals.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of all modals for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/modals.webp"
-                                            alt="Image of all modals for medium sized viewports." width="150"
-                                            height="300">
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/basics-1.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Basics Lesson 1 for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/basics-1.webp"
-                                            alt="Image of the Basics Lesson 1 for medium sized viewports." width="150"
-                                            height="250">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/basics-2.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Basics Lesson 2 for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/basics-2.webp"
-                                            alt="Image of the Basics Lesson 2 for medium sized viewports." width="150"
-                                            height="300">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="gallery">
-
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/strings.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Strings Lesson for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/strings.webp"
-                                            alt="Image of the Strings Lesson  for medium sized viewports." width="150"
-                                            height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/tuning.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Tuning Lesson for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/tuning.webp"
-                                            alt="Image of the Strings Lesson for medium sized viewports." width="150"
-                                            height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/frets-1.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Frets Lesson 1 for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/frets-1.webp"
-                                            alt="Image of the Frets Lesson 1 for medium sized viewports." width="150"
-                                            height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/frets-2.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Frets Lesson 2 for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/frets-2.webp"
-                                            alt="Image of the Frets Lesson 2 for medium sized viewports." width="150"
-                                            height="150">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="gallery">
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/chords.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Chords Lesson for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/chords.webp"
-                                            alt="UI Kit image 4 - Card Guidelines." width="150" height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/rhthym.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Rhythm Lesson for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/rhthym.webp"
-                                            alt="Image of the Rhythm Lesson for medium sized viewports." width="150"
-                                            height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/lead-1.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Lead Guitar Lesson 1 for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/lead-1.webp"
-                                            alt="Image of the Lead Guitar Lesson 1 for medium sized viewports."
-                                            width="150" height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/lead-2.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Lead Guitar Lesson 2 for medium sized viewports.">
-                                        <img class="md lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/lead-2.webp"
-                                            alt="Image of the Lead Guitar Lesson 2 for medium sized viewports."
-                                            width="150" height="300">
-                                    </a>
-                                </div>
-                            </div>
+                </div>
+                <div id="tab2" class="tab-content">
+                    <h2>Medium Viewports</h2>
+                    <p>Below are the Hi-Fi Designs for small to large Tablet viewports (600px upto 1200px).
+                        Click on any of the
+                        images to zoom in.</p>
+                    <div class="gallery">
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/index.webp" data-lightbox="mygallery"
+                                data-title="Image of Index page for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/index.webp"
+                                    alt="Image of Index page for medium sized viewports." width="150" height="500">
+                            </a>
+                        </div>
+                        <div class="col" style="display:flex;flex-direction: column;">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/modals.webp" data-lightbox="mygallery"
+                                data-title="Image of all modals for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/modals.webp"
+                                    alt="Image of all modals for medium sized viewports." width="150" height="300">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/basics-1.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Basics Lesson 1 for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/basics-1.webp"
+                                    alt="Image of the Basics Lesson 1 for medium sized viewports." width="150"
+                                    height="250">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/basics-2.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Basics Lesson 2 for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/basics-2.webp"
+                                    alt="Image of the Basics Lesson 2 for medium sized viewports." width="150"
+                                    height="300">
+                            </a>
                         </div>
                     </div>
-                    <div id="large" data-tab-content>
-                        <div class="align-top">
-                            <h3>Large Viewports</h3>
-                            <p>Below are the Hi-Fi Designs for Large Laptops and Desktop viewports (equal to and greater
-                                than 1200px). Click on any of the
-                                images to zoom in.</p>
-                            <div class="gallery">
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/index.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Index page for Large sized viewports.">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/index.webp"
-                                            alt="Image of the Index page for large sized viewports." width="150"
-                                            height="500">
-                                    </a>
-                                </div>
-                                <div class="col" style="display:flex;flex-direction: column;">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/modals.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Confirmation modal for medium sized viewports.">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/modals.webp"
-                                            alt="Image of the Confirmation modal for medium sized viewports."
-                                            width="150" height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics1.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Basics Lesson 1 for large sized viewports.">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics1.webp"
-                                            alt="UI Kit image 3 - Card Overview" width="150" height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics2.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Basics Lesson 2 for large sized viewports.">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics2.webp"
-                                            alt="Image of the Basics Lesson 2 for large sized viewports." width="150"
-                                            height="300">
-                                    </a>
-                                </div>
-                            </div>
 
-                            <div class="gallery">
+                    <div class="gallery">
 
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/strings.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Strings Lesson for large sized viewports.">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/strings.webp"
-                                            alt="Image of the Strings Lesson for large sized viewports." width="150"
-                                            height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/tuning.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Tuning Lesson for large sized viewports.">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/tuning.webp"
-                                            alt="Image of the Tuning Lesson for large sized viewports." width="150"
-                                            height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets1.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Frets Lesson 1 for large sized viewports.">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets1.webp"
-                                            alt="Image of the Frets Lesson 2 for large sized viewports." width="150"
-                                            height="150">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets2.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Frets Lesson 2 for large sized viewports.">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets2.webp"
-                                            alt="Image of the Frets Lesson 2 for large sized viewports." width="150"
-                                            height="300">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="gallery">
-
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/chords.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Chords Lesson for large sized viewports..">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/chords.webp"
-                                            alt="Image of the Chords Lesson for large sized viewports." width="150"
-                                            height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/rhythm.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Rhythm Guitar Lesson for large sized viewports.">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/rhythm.webp"
-                                            alt="Image of the Rhythm Guitar Lesson for large sized viewports."
-                                            width="150" height="150">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead1.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Lead Guitar Lesson 1 for large sized viewports.">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead1.webp"
-                                            alt="Image of the Lead Guitar Lesson 1 for large sized viewports."
-                                            width="150" height="300">
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead2.webp"
-                                        data-lightbox="mygallery"
-                                        data-title="Image of the Lead Guitar Lesson 2 for large sized viewports.">
-                                        <img class="lg lazyload"
-                                            data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead2.webp"
-                                            alt="Image of the Lead Guitar Lesson 2 for large sized viewports."
-                                            width="150" height="300">
-                                    </a>
-                                </div>
-                            </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/strings.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Strings Lesson for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/strings.webp"
+                                    alt="Image of the Strings Lesson  for medium sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/tuning.webp" data-lightbox="mygallery"
+                                data-title="Image of the Tuning Lesson for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/tuning.webp"
+                                    alt="Image of the Strings Lesson for medium sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/frets-1.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Frets Lesson 1 for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/frets-1.webp"
+                                    alt="Image of the Frets Lesson 1 for medium sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/frets-2.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Frets Lesson 2 for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/frets-2.webp"
+                                    alt="Image of the Frets Lesson 2 for medium sized viewports." width="150"
+                                    height="150">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery">
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/chords.webp" data-lightbox="mygallery"
+                                data-title="Image of the Chords Lesson for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/chords.webp"
+                                    alt="UI Kit image 4 - Card Guidelines." width="150" height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/rhthym.webp" data-lightbox="mygallery"
+                                data-title="Image of the Rhythm Lesson for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/rhthym.webp"
+                                    alt="Image of the Rhythm Lesson for medium sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/lead-1.webp" data-lightbox="mygallery"
+                                data-title="Image of the Lead Guitar Lesson 1 for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/lead-1.webp"
+                                    alt="Image of the Lead Guitar Lesson 1 for medium sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/lead-2.webp" data-lightbox="mygallery"
+                                data-title="Image of the Lead Guitar Lesson 2 for medium sized viewports.">
+                                <img class="md lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/lead-2.webp"
+                                    alt="Image of the Lead Guitar Lesson 2 for medium sized viewports." width="150"
+                                    height="300">
+                            </a>
                         </div>
                     </div>
                 </div>
+                <div id="tab3" class="tab-content">
+                    <h2>Large Viewports</h2>
+                    <p>Below are the Hi-Fi Designs for Large Laptops and Desktop viewports (equal to and
+                        greater
+                        than 1200px). Click on any of the
+                        images to zoom in.</p>
+                    <div class="gallery">
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/index.webp" data-lightbox="mygallery"
+                                data-title="Image of the Index page for Large sized viewports.">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/index.webp"
+                                    alt="Image of the Index page for large sized viewports." width="150" height="500">
+                            </a>
+                        </div>
+                        <div class="col" style="display:flex;flex-direction: column;">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/modals.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Confirmation modal for medium sized viewports.">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/modals.webp"
+                                    alt="Image of the Confirmation modal for medium sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics1.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Basics Lesson 1 for large sized viewports.">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics1.webp"
+                                    alt="UI Kit image 3 - Card Overview" width="150" height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics2.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Basics Lesson 2 for large sized viewports.">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics2.webp"
+                                    alt="Image of the Basics Lesson 2 for large sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="gallery">
+
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/strings.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Strings Lesson for large sized viewports.">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/strings.webp"
+                                    alt="Image of the Strings Lesson for large sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/tuning.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Tuning Lesson for large sized viewports.">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/tuning.webp"
+                                    alt="Image of the Tuning Lesson for large sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets1.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Frets Lesson 1 for large sized viewports.">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets1.webp"
+                                    alt="Image of the Frets Lesson 2 for large sized viewports." width="150"
+                                    height="150">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets2.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Frets Lesson 2 for large sized viewports.">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets2.webp"
+                                    alt="Image of the Frets Lesson 2 for large sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery">
+
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/chords.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Chords Lesson for large sized viewports..">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/chords.webp"
+                                    alt="Image of the Chords Lesson for large sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/rhythm.webp"
+                                data-lightbox="mygallery"
+                                data-title="Image of the Rhythm Guitar Lesson for large sized viewports.">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/rhythm.webp"
+                                    alt="Image of the Rhythm Guitar Lesson for large sized viewports." width="150"
+                                    height="150">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead1.webp" data-lightbox="mygallery"
+                                data-title="Image of the Lead Guitar Lesson 1 for large sized viewports.">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead1.webp"
+                                    alt="Image of the Lead Guitar Lesson 1 for large sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead2.webp" data-lightbox="mygallery"
+                                data-title="Image of the Lead Guitar Lesson 2 for large sized viewports.">
+                                <img class="lg lazyload"
+                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead2.webp"
+                                    alt="Image of the Lead Guitar Lesson 2 for large sized viewports." width="150"
+                                    height="300">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <section>
@@ -2162,7 +2171,7 @@
                         <li>Again, using your intuition, dictate what you would naturally say, to tell the system that
                             you would want to go back to the home page.</li>
                     </ul>
-                    <div class="mobile-playback">
+                    <div class="centered-row">
                         <div class="i-phone">
                             <a href="https://xd.adobe.com/embed/c7dd0076-2049-4255-900b-d5ab3ecc022a-928e/"
                                 alt="link to interactive prototype">
