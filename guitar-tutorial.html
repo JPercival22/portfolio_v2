@@ -173,8 +173,6 @@
                     </li>
                 </ul>
             </nav>
-
-
             <!-- end of side bar  -->
             <section id="top">
                 <div class="hero-container">
@@ -182,11 +180,11 @@
                         <h1>Just Speak Guitar Lessons - 2019</h1>
                     </div>
                     <div class="two-button-container">
-                        <a id="goBackButton" class="secondary-button" aria-label="button link to home page"
+                        <a id="backButton" class="secondary-button" onclick="goBack()" aria-label="button link to home page"
                             title="Please click this button if you would like to go back one page">
                             View Projects
                         </a>
-                        <a id="goForwardButton" class="primary-button" aria-label="button link to go forward one page"
+                        <a id="forwardButton" class="primary-button" onclick="goForward()" aria-label="button link to go forward one page"
                             title="Please click this button if you would like to view the next project.">
                             Next Project
                         </a>
@@ -1737,7 +1735,7 @@
                     following responsive Hi-Fidelity designs.</p>
                 <div class="tab-container">
                     <div class="tab-buttons">
-                        <button class="tab-button active" onclick="openTab(event, 'tab1')">Small</button>
+                        <button class="tab-button" onclick="openTab(event, 'tab1')">Small</button>
                         <button class="tab-button" onclick="openTab(event, 'tab2')">Medium</button>
                         <button class="tab-button" onclick="openTab(event, 'tab3')">Large</button>
                     </div>
