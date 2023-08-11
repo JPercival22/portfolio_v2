@@ -9,6 +9,7 @@
     --blue-bkg: #f0f8ff;
     --form-p-text: #666;
 
+    --tertiary-link: text-decoration:underline;
 
     /* box shadow styles  */
     --b-shadow: -2px 10px 21px -2px rgba(201, 201, 201, 0.75);
@@ -324,7 +325,8 @@ img {
 }
 
 .sidebar.show {
-    width: 25%;
+    width: 67%;
+    padding: 20px;
 }
 
 .sidebar .header {
@@ -661,6 +663,65 @@ figcaption {
     filter: grayscale(50%);
 }
 
+.centered-row {
+    background-color: var(--blue-bkg);
+    border-radius: 8px;
+    padding: 0 12px 12px 12px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 3em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid lightgray;
+}
+.no-border {
+    border: none;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.tertiary-link { 
+    color: var(--body-copy);
+    font-size: 16px;
+    border-bottom: 1px solid black;
+}
+
+.tertiary-link:hover {
+    border: none; 
+}
+
 footer {
     margin-top: 2em;
 }
@@ -705,6 +766,11 @@ footer .footer-container {
         height: 50px;
         width: 60px;
         padding-right: 20px;
+    }
+
+    .sidebar.show {
+        width: 50%;
+        padding: 20px;
     }
 
     .hero-container {
@@ -752,6 +818,66 @@ footer .footer-container {
 
     .content .td .col-right {
         width: 24%;
+    }
+
+    .centered-row {
+        background-color: var(--blue-bkg);
+        border-radius: 8px;
+        padding: 0 12px 12px 12px;
+    }
+    
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        gap: 3em;
+        margin-bottom: 1em;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: space-around;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .left-col {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .right-col {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+    }
+    
+    .tertiary-link { 
+        color: var(--body-copy);
+        font-size: 16px;
+        border-bottom: 1px solid black;
+    }
+    
+    .tertiary-link:hover {
+        border: none; 
     }
 
     footer .footer-container .footer-details {
@@ -830,6 +956,11 @@ footer .footer-container {
         top: .5rem;
     }
 
+    .sidebar.show {
+        width: 40%;
+        padding: 20px;
+    }
+
     .image-container .gallery a img {
         width: 100%;
         height: auto;
@@ -867,6 +998,10 @@ footer .footer-container {
 
     .body {
         margin: var(--side-margins-992px);
+    }
+
+    .sidebar.show {
+        width: 30%;
     }
 
     .two-button-container {
@@ -1042,6 +1177,19 @@ footer .footer-container {
         border-bottom: 1px solid var(--brand-color);
     }
 
+    .sidebar.show {
+        width: 26%;
+    }
+
+    .open-sidebar-btn, .sidebar .close-btn {
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+    }
+
+    .open-sidebar-btn:hover, .sidebar .close-btn:hover {
+        opacity:.7;
+    }
+
     .two-button-container .primary-button,
     .two-button-container .secondary-button {
         width: 20%;
@@ -1120,22 +1268,9 @@ footer .footer-container {
         margin: 0 130px;
     }
 
-
-    .open-sidebar-btn {
-        padding: 0;
-        box-shadow: 10px 10px 21px -2px rgba(0, 0, 0, 0.29);
-        transition: all .5s;
+    .sidebar.show {
+        width: 22%;
     }
-
-    .sidebar .close-btn {
-        transition: all .5s;
-    }
-
-    .open-sidebar-btn:hover,
-    .sidebar .close-btn:hover {
-        opacity: 0.75;
-    }
-
 
     .hero-container {
         width: 100%;
@@ -1184,5 +1319,9 @@ footer .footer-container {
 
     .navbar-container {
         margin: 0 170px;
+    }
+
+    .sidebar.show {
+        width: 17%;
     }
 }
