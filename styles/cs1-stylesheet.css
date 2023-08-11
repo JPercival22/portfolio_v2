@@ -643,16 +643,25 @@ figcaption {
     height: 517px;
     width: 184px;
     box-shadow: 0 20px 15px #33333335;
-    transition: all .5s;
+    overflow: hidden;
     cursor: pointer;
+    transition: transform .2s;
 }
 
 .i-phone img {
     display: flex;
-    height: 517px;
-    width: 184px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
+
+.i-phone:hover {
+    transform: scale(1.03);
+    filter: grayscale(50%);
+}
+
+
 
 footer {
     margin-top: 2em;
