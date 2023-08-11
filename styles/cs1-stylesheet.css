@@ -12,8 +12,8 @@
     --tertiary-link: text-decoration:underline;
 
     /* box shadow styles  */
-    --b-shadow: -2px 10px 21px -2px rgba(201, 201, 201, 0.75);
-    --br-shadow: 8px 8px 22px 8px #b3b3b37a;
+    --b-shadow: 10px 10px 22px -6px rgba(0,0,0,0.44);
+    --br-shadow: 10px 10px 22px -6px rgba(0,0,0,0.44);
 
     /* border-styles  */
     --border: 1px solid #afafaf;
@@ -746,6 +746,34 @@ footer .footer-container {
     align-items: center;
     justify-content: space-around;
     width: 100vw;
+}
+
+.btt-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dc143c;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    box-shadow: 10px 10px 22px -6px rgba(0,0,0,0.44);
+}
+.btt-button .span{
+    fill: white;
+    transition: 0.2s ease-out;
+}
+
+.btt-button:hover {
+    background-color: #be1a3b;
+    box-shadow: none;
+}
+
+.btt-button:hover .span {
+    transform: translateY(-4px);
 }
 
 @media only screen and (min-width: 576px) {
