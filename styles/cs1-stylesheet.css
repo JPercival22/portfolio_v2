@@ -1432,6 +1432,9 @@ td::before {
     .footer-container .footer-social-icon a:hover {
         opacity: .5;
     }
+td {
+    width: 100%;
+}
 
 }
 
@@ -1522,11 +1525,6 @@ table {
         padding-top: 0.5rem;
     }
 
-    td {
-        grid-template-columns: 16ch auto;
-        justify-content: center;
-        justify-items: center;
-    }
 }
 
 @media only screen and (min-width: 1800px) {
@@ -1542,19 +1540,20 @@ table {
     table {
         margin-bottom: 1em;
     }
-
+tbody {
+    max-width: 90%;
+}
     th {
         display: flex;
         width: 49%;
         font-size: 16px;
-        padding: 20px 40px;
+        padding: 6px 30px;
     }
 
-    td {
-        grid-template-columns: 20ch auto;
-    }
+
 
     tr {
-        width: 99%;
+        max-width: 91%;
+        width: 100%;
     }
 }
