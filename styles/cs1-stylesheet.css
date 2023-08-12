@@ -422,94 +422,9 @@ img {
     gap: 1em;
 }
 
-/* market research table  */
-.table-sm {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2em;
-}
-
-.table-sm .table-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 18px;
-    align-items: center;
-    border-bottom: 1px solid #b9b9b9;
-    background-color: #d9ebe4;
-    color: black;
-    padding: 16px;
-}
-
-.table-sm .table-header .col-left {
-    width: 75%;
-}
-
-.table-sm .table-header .col-right {
-    width: 25%;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.content .td {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #d0d0d0;
-    flex-direction: row;
-    align-items: center;
-}
-
-.content .td .col-left {
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.content .td .col-right {
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.content .td .col-right .close svg {
-    fill: #b21515;
-}
-
-.content .td .col-right .check svg {
-    fill: #409d34;
-}
-
-.content .td:nth-child(even) {
-    background-color: var(--blue-bkg);
-    width: 94%;
-}
-
-.td {
-    display: flex;
-    flex-flow: row nowrap;
-    font-family: var(--body-copy);
-    word-break: break-word;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0px;
-    white-space: nowrap;
-    border-bottom: 1px solid #d0d0d0;
-    padding: 12px;
-}
-
 .research-list li {
     padding: 16px 32px;
     list-style: none;
-
 }
 
 .research-list li a {
@@ -1189,73 +1104,6 @@ td::before {
         border: 1px solid darkgrey;
     }
 
-    .table-sm {
-        display: none;
-    }
-
-    .table-lg {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: stretch;
-    }
-
-    .table-lg .th {
-        background-color: #b7d1cb;
-        display: flex;
-        align-content: center;
-        align-items: center;
-    }
-
-    .table-lg .th>.td {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        font-size: 16px;
-        font-weight: 500;
-        width: 16.66%;
-    }
-
-    .table-total {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .table-lg .table-total .tr {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .table-lg .table-total .tr .td {
-        display: flex;
-        white-space: nowrap;
-        padding: 12px;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        width: 16.66%;
-        border-bottom: none;
-    }
-
-    .table-lg .table-total .td span {
-        align-items: center;
-    }
-
-    .table-lg .table-total .tr:nth-child(even) {
-        background-color: var(--blue-bkg);
-    }
-
-    .table-lg .table-total .td .check {
-        fill: #409d34;
-    }
-
-    .table-lg .table-total .td .close {
-        fill: #b21515;
-    }
-
     footer .footer-container .footer-details {
         padding: 2.2em;
     }
@@ -1432,9 +1280,10 @@ td::before {
     .footer-container .footer-social-icon a:hover {
         opacity: .5;
     }
-td {
-    width: 100%;
-}
+
+    td {
+        width: 100%;
+    }
 
 }
 
@@ -1504,9 +1353,11 @@ td {
         text-transform: capitalize;
         padding: 0;
     }
-table {
-    margin-bottom: 1em;
-}
+
+    table {
+        margin-bottom: 1em;
+    }
+
     tbody {
         width: 100%;
     }
@@ -1539,17 +1390,17 @@ table {
     table {
         margin-bottom: 1em;
     }
-tbody {
-    max-width: 90%;
-}
+
+    tbody {
+        max-width: 90%;
+    }
+
     th {
         display: flex;
         width: 49%;
         font-size: 16px;
         padding: 6px 30px;
     }
-
-
 
     tr {
         max-width: 91%;
