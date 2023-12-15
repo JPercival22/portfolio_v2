@@ -33,15 +33,12 @@ function openTab(evt, tabName) {
     }
 }
 
-function goBack() {
-    const goBackButton = document.getElementById("goBackButton");
-    window.history.back();
-}
+// function projectsPage(url) {
+//   window.location.href = url;
+// }
+// projectsPage("/index.html");
 
-function goForward() {
-    const forwardButton = document.getElementById("forwardButton");
-    window.history.forward();
-}
+
 
 // Load different images based on viewport width
 function setResponsiveImage() {
