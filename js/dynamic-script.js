@@ -33,12 +33,6 @@ function openTab(evt, tabName) {
     }
 }
 
-// function projectsPage(url) {
-//   window.location.href = url;
-// }
-// projectsPage("/index.html");
-
-
 
 // Load different images based on viewport width
 function setResponsiveImage() {

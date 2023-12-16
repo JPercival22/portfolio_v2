@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <script src="/js/tab-functionality.js" defer></script>
 </head>
 
 <body>
@@ -600,42 +602,67 @@
                     designing efficient navigation systems. In this section, we will delve into the IA of this
                     application, which is founded on insights derived from user needs, business requirements, and
                     typical flows from similar applications.</p>
-                <h3>Sitemap</h3>
-                <p>By combining data gathered from user interviews and aligning it with the business requirements, I was
-                    able to create a comprehensive sitemap for the application. This sitemap follows established
-                    conventions in the e-commerce industry, meeting user expectations and satisfying business
-                    objectives. It serves as a visual representation of the site's layout and content.</p>
-                <div class="image-container">
-                    <div class="gallery">
-                        <a href="/assets/images/Case-Studies/CS2/planning/siteMap.svg" data-lightbox="mygallery"
-                            data-title="Information Architecture and Hierarchy Design">
-                            <img class="wide lazyload" data-src="/assets/images/Case-Studies/CS2/planning/siteMap.svg"
-                                alt="Information Architecture and Hierarchy Design" width="150" height="300">
-                            <figcaption>IA Site Map</figcaption>
-                        </a>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <div class="gallery">
-                        <a href="/assets/images/Case-Studies/CS2/planning/Nav-System.svg" data-lightbox="mygallery"
-                            data-title="Information Architecture and Hierarchy Design">
-                            <img class="wide lazyload"
-                                data-src="/assets/images/Case-Studies/CS2/planning/Nav-System.svg"
-                                alt="Information Architecture and Hierarchy Design" width="150" height="300">
-                            <figcaption>IA Navigation System</figcaption>
-                        </a>
-                    </div>
-                </div>
-                <p>The site maps above, visually represented the IA of the digital product, showcasing its structure and
+                <p>The site maps below, visually represent the IA of the digital product, showcasing its structure and
                     organization. It outlines the hierarchy of pages and sections, helping to understand the
                     product's interconnected components. The site map aided in evaluating and refining user flows and
                     navigation paths. In this section, we examined the site map of an e-commerce iOS app, discussing its
                     role in enhancing user experience.
                 </p>
+
+                <div class="tab">
+                    <button id="siteMapBtn" class="tablinks active">Site Map</button>
+                    <button id="siteNavigationBtn" class="tablinks">System Navigation</button>
+                </div>
+
+                <div id="siteMap" class="tabcontent">
+                    <h3>Sitemap</h3>
+                    <p>By combining data gathered from user interviews and aligning it with the business requirements, I
+                        was
+                        able to create a comprehensive sitemap for the application. This sitemap follows established
+                        conventions in the e-commerce industry, meeting user expectations and satisfying business
+                        objectives. It serves as a visual representation of the site's layout and content.</p>
+                    <div class="image-container">
+                        <div class="gallery">
+                            <a href="/assets/images/Case-Studies/CS2/planning/siteMap.svg" data-lightbox="mygallery"
+                                data-title="Information Architecture and Hierarchy Design">
+                                <img class="wide lazyload"
+                                    data-src="/assets/images/Case-Studies/CS2/planning/siteMap.svg"
+                                    alt="Information Architecture and Hierarchy Design" width="150" height="300">
+                                <figcaption>IA Site Map</figcaption>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="siteNavigation" class="tabcontent">
+                    <h3>System Navigation</h3>
+                    <p>These system navigation aim to create a user-centric, structured, and intuitive framework that
+                        empowers users to find and navigate through the digital system efficiently and effectively.
+                        These designs play a crucial role in enhancing the user experience and ensuring that users can
+                        achieve their goals within the system with minimal effort.</p>
+                    <div class="image-container">
+                        <div class="gallery">
+                            <a href="/assets/images/Case-Studies/CS2/planning/Nav-System.svg" data-lightbox="mygallery"
+                                data-title="Information Architecture and Hierarchy Design">
+                                <img class="wide lazyload"
+                                    data-src="/assets/images/Case-Studies/CS2/planning/Nav-System.svg"
+                                    alt="Information Architecture and Hierarchy Design" width="150" height="300">
+                                <figcaption>IA Navigation System</figcaption>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </section>
             <div id="interaction"></div>
             <section class="align-top">
-                <div>
+                <div class="tab">
+                    <button id="taskFlowBtn" class="tablinks active">Task Flow</button>
+                    <button id="userFlowBtn" class="tablinks">User Flow</button>
+                </div>
+
+                <div id="taskFlow" class="tabcontent">
+
                     <h2>Interaction Design</h2>
                     <h3>Task Flow</h3>
                     <p> In this section, we will explore the intricacies of designing user-centric experiences that
@@ -664,9 +691,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="align-top">
-                <div>
+
+                <div id="userFlow" class="tabcontent">
                     <h3>User Flow</h3>
                     <p>User flow is a visual representation of the path a user takes to accomplish a task or goal within
                         a digital product. It illustrates the various steps, actions, and decisions a user might make as
@@ -741,7 +767,6 @@
                 </div>
             </section>
             <section class="align-top">
-
                 <h2>Design</h2>
                 <h3>Rapid Prototyping.</h3>
                 <p>Detailed sketches for the initial iterations of the Home Screen, Top Bar, Footer, Product Description
@@ -839,29 +864,113 @@
 
             <section class="align-top">
                 <h3>Low-Fidelity Designs.</h3>
-                <p>These early sketches were then adapted and transposed to create wireframes using Figma. Below are the 
-                    designs generated from the Research in previous sections.
+                <p>These initial sketches were further developed and translated into wireframes using Figma. The
+                    following designs are a result of the research conducted in the preceding phases, aiming to capture
+                    and convey the user-centric insights and requirements identified during research.
                 </p>
                 <p>You can click any image to enlarge them.</p>
+            </section>
+            <section>
+                <div class="tab">
+                    <button id="mainPagesBtn" class="tablinks active">Main Pages</button>
+                    <button id="topBarCompsBtn" class="tablinks">Top Bar Components</button>
+                </div>
 
+                <div id="mainPages" class="tabcontent">
+                    <h3>Main Pages</h3>
+                    <p>These designs encompass the primary pages of the application, addressing all business and user
+                        requirements. The focus is on ensuring that the design effectively meets the needs and goals of
+                        both the business and the end users, resulting in a comprehensive and purposeful user
+                        experience.</p>
+                    <div class="grid-container-6col figma">
+                        <a href="/assets/images/Case-Studies/CS2/Wireframes/Index.webp" data-lightbox="mygallery"
+                            data-title="Home Page Wire Frame.">
+                            <img class="lg lazyload" data-src="/assets/images/Case-Studies/CS2/Wireframes/Index.webp"
+                                alt="Home Page Wire Frame Design." width="150" height="300">
+                            <figcaption>Home Page Wire Frame.</figcaption>
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS2/Wireframes/Product-List.webp" data-lightbox="mygallery"
+                            data-title="Product List Page Wire Frame.">
+                            <img class="md lazyload"
+                                data-src="/assets/images/Case-Studies/CS2/Wireframes/Product-List.webp"
+                                alt="Product List Page Wire Frame Design." width="150" height="300">
+                            <figcaption>Product List Page Wire Frame.</figcaption>
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS2/Wireframes/Prod-Desc.webp" data-lightbox="mygallery"
+                            data-title="Product Description Page Wire Frame.">
+                            <img class="sm lazyload"
+                                data-src="/assets/images/Case-Studies/CS2/Wireframes/Prod-Desc.webp"
+                                alt="Product Description Page Wire Frame Design." width="150" height="300">
+                            <figcaption>Product Description Page Wire Frame.</figcaption>
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS2/Wireframes/basket-modal.webp" data-lightbox="mygallery"
+                            data-title="Basket Modal Overlay Wire Frame.">
+                            <img class="sm lazyload"
+                                data-src="/assets/images/Case-Studies/CS2/Wireframes/basket-modal.webp"
+                                alt="Basket Modal Overlay Wire Frame Design." width="150" height="300">
+                            <figcaption>Basket Modal Overlay Wire Frame.</figcaption>
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS2/Wireframes/Basket.webp" data-lightbox="mygallery"
+                            data-title="Basket Page Wire Frame.">
+                            <img class="sm lazyload"
+                                data-src="/assets/images/Case-Studies/CS2/Wireframes/Prod-Desc.webp"
+                                alt="Basket Page Wire Frame Design." width="150" height="300">
+                            <figcaption>Basket Page Wire Frame.</figcaption>
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS2/Wireframes/Menu.webp" data-lightbox="mygallery"
+                            data-title="Menu Page Wire Frame.">
+                            <img class="sm lazyload" data-src="/assets/images/Case-Studies/CS2/Wireframes/Menu.webp"
+                                alt="Menu Page Wire Frame Design." width="150" height="300">
+                            <figcaption>Menu Page Wire Frame.</figcaption>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="topBarComps" class="tabcontent">
+                    <h3>Top Bar Interactive Designs.</h3>
+                    <p>These top bar designs have been created based on insights from user research. The components
+                        incorporate purposeful iconography representing links to key user-centric pages, accompanied by
+                        subtle interactive overlays. The use of relevant iconography and discreet interactive elements
+                        aims to enhance the user's understanding and engagement with the application's key features.
+                    </p>
+                    <div class="grid-container-6col figma">
+                        <a href="/assets/images/Case-Studies/CS2/Wireframes/Search-Open.webp" data-lightbox="mygallery"
+                            data-title="Global Search Field Wire Frame.">
+                            <img class="lg lazyload"
+                                data-src="/assets/images/Case-Studies/CS2/Wireframes/Search-Open.webp"
+                                alt="Global Search Field Wire Frame Design." width="150" height="300">
+                            <figcaption>Global Search Field Wire Frame.</figcaption>
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS2/Wireframes/User-Menu.webp" data-lightbox="mygallery"
+                            data-title="User Menu Wire Frame Design.">
+                            <img class="lg lazyload"
+                                data-src="/assets/images/Case-Studies/CS2/Wireframes/User-Menu.webp"
+                                alt="User Menu Wire Frame Design." width="150" height="300">
+                            <figcaption>User Menu Wire Frame.</figcaption>
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS2/Wireframes/Basket-empty.webp" data-lightbox="mygallery"
+                            data-title="Empty Basket Wire Frame.">
+                            <img class="lg lazyload"
+                                data-src="/assets/images/Case-Studies/CS2/Wireframes/Basket-empty.webp"
+                                alt="Empty Basket Wire Frame." width="150" height="300">
+                            <figcaption>Empty Basket Wire Frame.</figcaption>
+                        </a>
+                        <a href="/assets/images/Case-Studies/CS2/Wireframes/Basket-orders.webp"
+                            data-lightbox="mygallery" data-title="Ordered Items in Basket Wire Frame.">
+                            <img class="lg lazyload"
+                                data-src="/assets/images/Case-Studies/CS2/Wireframes/Basket-orders.webp"
+                                alt="Ordered Items in Basket Wire Frame Design" width="150" height="300">
+                            <figcaption>Ordered Items in Basket Wire Frame.</figcaption>
+                        </a>
+                    </div>
+                </div>
                 <div class="gallery">
-                    <a href="/assets/images/Case-Studies/CS1/lo-fi/desktop-home-WF.webp" data-lightbox="mygallery"
-                        data-title="Home Screen Wire Frame for Desktop viewports.">
-                        <img class="lg lazyload" data-src="/assets/images/Case-Studies/CS1/lo-fi/desktop-home-WF.webp"
-                            alt="Home Screen Wire Frame for Desktop" width="150" height="300">
-                        <figcaption>Home Screen Wire Frame for Desktop.</figcaption>
-                    </a>
-                    <a href="/assets/images/Case-Studies/CS1/lo-fi/iPad-Hone-WF.webp" data-lightbox="mygallery"
-                        data-title="Home Screen Wire Frame for large tablet Viewports.">
-                        <img class="md lazyload" data-src="/assets/images/Case-Studies/CS1/lo-fi/iPad-Hone-WF.webp"
-                            alt="Home Screen Wire Frame for large tablet Viewports" width="150" height="300">
-                        <figcaption>Home Screen Wire Frame for<br>large tablet Viewports.</figcaption>
-                    </a>
-                    <a href="/assets/images/Case-Studies/CS1/lo-fi/Mob-Home-WF.webp" data-lightbox="mygallery"
-                        data-title="Home Screen Wire Frame for Mobile Viewports.">
-                        <img class="sm lazyload" data-src="/assets/images/Case-Studies/CS1/lo-fi/Mob-Home-WF.webp"
-                            alt="Home Screen Wire Frame for Mobile" width="150" height="300">
-                        <figcaption>Home Screen <br> Wire Frame for <br> Mobile Viewports.</figcaption>
+                    <a href="/assets/images/Case-Studies/CS2/Wireframes/card-options.webp" data-lightbox="mygallery"
+                        data-title="Card Options Wireframes For A/B Testing.">
+                        <img class="lg lazyload" data-src="/assets/images/Case-Studies/CS2/Wireframes/card-options.webp"
+                            alt="Card Options Wireframes For A/B Testing." width="150" height="300">
+                        <figcaption>Card Options Wireframes For A/B Testing.</figcaption>
                     </a>
                 </div>
             </section>
@@ -1673,8 +1782,9 @@
             </svg>
         </a>
     </main>
+
     <!-- custom js  -->
-    <script type="module" src="/js/dynamic-script.js" async defer></script>
+    <script src="/js/dynamic-script.js"></script>
     <!-- lightbox js  -->
     <script nomodule src="/js/lightbox.min.js" async defer></script>
     <!-- lazyload-images  -->
