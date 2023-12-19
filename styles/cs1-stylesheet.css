@@ -8,6 +8,7 @@
     --white-bkg: #fff;
     --blue-bkg: #f0f8ff;
     --form-p-text: #666;
+    --no-background: transparent;
 
     --tertiary-link: text-decoration:underline;
 
@@ -597,7 +598,9 @@ figcaption {
     border-radius: 8px;
     padding: 0 12px 12px 12px;
 }
-
+.no-background {
+    background-color: var(--no-background);
+}
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -864,7 +867,9 @@ td::before {
         border-radius: 8px;
         padding: 0 12px 12px 12px;
     }
-
+    .no-background {
+        background-color: var(--no-background);
+    }
     .flex-row {
         display: flex;
         flex-direction: row;
