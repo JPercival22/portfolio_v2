@@ -68,15 +68,22 @@
               <div class="profile-image"></div>
             </div>
             <p>
-              I am a passionate UX &amp; Designer dedicated to creating seamless, user-centric digital experiences that
-              result in improved User engagement,
-              increased traffic and company sales.
-              <br>I am an accomplished UX and UI Designer and for the past 4+ Years I have been helping Start-up
-              Businesses, Global E-commerce Corporations, Government and National Security Data platforms deliver
-              valuable
-              User Experiences across
-              Android, iOS and Web.
-            </p>
+              I'm a passionate UX &amp; UI Designer with a strong Front End Development background. I create
+              user-centric
+              digital experiences to drive engagement and business growth. With over four years of experience, I've
+              collaborated with diverse clients, including renowned brands like THG, where I designed and developed User
+              Friendly E-Commerce platform for Calvin Klein, Adidas and L'Oreal to name a few.
+            <br>
+              Recently, I was employed as a Senior UX Designer, Test Facilitator and UI Designer at a Data Aggregation
+              Company.
+              This role involved me leading UX Design and governing Development Projects that the UK Government,
+              Metropolitan Police, and the National Crime Agency were using. This enabled me to deliver exceptional User
+              Experiences across various platforms.
+          
+              <br>My academic foundation at Edge Hill University, gaining my First Class BSc(Hons) Degree, in Web Design and 
+                Development has been pivotal in driving my career toward creating innovative digital solutions.
+              
+              </p>
           </div>
           <div class="two-button-container">
             <a class="primary-button" href="/contact-form.html" aria-label="button link to contact page"
@@ -103,10 +110,14 @@
       <!-- <div class="portfolio"> -->
       <h2>Recent Projects</h2>
 
-      <div class="carousel">
-
-        <div class="overlays">
-          <div class="bar" style="--bar-color: #bdc3c7;">
+      <div class="wide-card">
+        <div class="editorial" data-type="yellow">
+          <div class="card-title">
+            <h2>
+              Just Speak Guitar Tutorials
+            </h2>
+          </div>
+          <div class="card-editorial">
             <p>Just Speak Guitar Tutorials, meticulously crafted through advanced UX research and design production
               techniques. By integrating a cutting-edge non-AI voice command system, we've harnessed innovation to
               empower our users. Our user-centric approach, anchored in extensive research and refined design,
@@ -115,7 +126,52 @@
               command system. Join us as we transcend traditional learning barriers, harmonizing technology and
               expertise to create a platform that speaks your language – quite literally.</p>
           </div>
-          <div class="bar" style="--bar-color: #218c74;">
+          <div class="button-row">
+            <a class="primary-button large"> Click To See Case Study</a>
+          </div>
+        </div>
+        <div class="slides">
+          <a href="#">
+            <img src="/assets/images/guitar-lessons-banner.webp" alt="guitar lesson case study" />
+            <div class="overlay">
+              <div class="primary-button">Click To View Case Study.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="wide-card">
+        <div class="editorial" data-type="Cerulean-Blue">
+          <div class="card-title">
+            <h2>
+              IOS E-Commerce Design
+            </h2>
+          </div>
+          <div class="card-editorial">
+            <p>Just Speak Guitar Tutorials, meticulously crafted through advanced UX research and design production
+              techniques. By integrating a cutting-edge non-AI voice command system, we've harnessed innovation to
+              empower our users. Our user-centric approach, anchored in extensive research and refined design,
+              culminates in an immersive experience tailored to your unique learning style. Explore a comprehensive
+              repository of guitar tutorials while leveraging the seamless interaction offered by our non-AI voice
+              command system. Join us as we transcend traditional learning barriers, harmonizing technology and
+              expertise to create a platform that speaks your language – quite literally.</p>
+          </div>
+          <div class="button-row">
+            <a class="primary-button large"> Click To See Case Study</a>
+          </div>
+        </div>
+        <div class="slides">
+          <a href="#">
+            <img src="/assets/images/syn-banner.webp" alt="guitar lesson case study" />
+            <div class="overlay">
+              <div class="primary-button">Click To View Case Study.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- <div class="bar" style="--bar-color: ">
             <p style="color:#fff;">Just Speak Guitar Tutorials, meticulously crafted through advanced UX research and design production
               techniques. By integrating a cutting-edge non-AI voice command system, we've harnessed innovation to
               empower our users. Our user-centric approach, anchored in extensive research and refined design,
@@ -129,139 +185,17 @@
         </div>
 
         <div class="slides">
-          <img class="left-project-1"/>
+         
           <img src="/assets/images/remind-me-project.webp" alt="Army Green" />
           <img src="/assets/images/e-commerce-placeholder.webp" alt="Cranberry" />
           <img src="/assets/images/come-together-logo_sm.svg" alt="Midnight Blue" />
-        </div>
-
-        <ul class="nav-links">
-          <li><a href="#" class="nav-link">Stainless Steel</a></li>
-          <li><a href="#" class="nav-link">Army Green</a></li>
-          <li><a href="#" class="nav-link">Cranberry</a></li>
-          <li><a href="#" class="nav-link">Midnight Blue</a></li>
-        </ul>
-      </div>
+        </div> -->
 
 
-    </section>
+    <!-- </div> -->
 
-    <style>
-      .carousel {
-        position: relative;
-        display: grid;
-        grid-template-columns: 50% 30% 20%;
-        align-items: center;
-        justify-items: stretch;
-        margin: 2em;
-      }
 
-      .carousel .slides {
-        position: relative;
-        width: 450px;
-        height: 450px;
-        align-content: center;
-        justify-content: center;
-        grid-column: 2;
-      }
-
-      .carousel .slides img {
-        position: absolute;
-        height: 100%;
-        border-radius: 8px;
-        box-shadow: 10px 10px 23px -2px rgba(0, 0, 0, 0.25);
-        opacity: 0;
-        z-index: 9999;
-      }
-
-      .carousel .slides img.active {
-        background-color: #fff;
-        opacity: 1;
-      }
-
-      .carousel .overlays {
-        position: relative;
-        grid-column: 1;
-        height: 320px;
-      }
-
-      .carousel .overlays .bar {
-        position: absolute;
-        width: 92%;
-        height: 100%;
-        background: var(--bar-color);
-        transition: all ease-in-out .5s;
-        padding: 2em;
-        border-radius: 16px;
-      }
-
-      .carousel .nav-links {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        margin: 0;
-        padding: 0 0 0 6em;
-        list-style-type: none;
-        grid-column: 3;
-      }
-
-      .carousel .nav-links .nav-link {
-        font-size: 1.5rem;
-        font-family: inherit;
-        line-height: 2;
-        text-decoration: none;
-        color: #7f8c8d;
-        transition: 0.5s;
-      }
-
-      .carousel .nav-links .nav-link:hover {
-        color: #1c1e1f;
-      }
-
-      .carousel .nav-links .nav-link.active {
-        color: black;
-        pointer-events: none;
-      }
-    </style>
-    <script>
-
-      var navLinks = document.querySelectorAll(".carousel .nav-link");
-      var slides = document.querySelectorAll(".carousel .slides img");
-      var overlays = document.querySelectorAll(".carousel .bar");
-      var maxZIndex = navLinks.length;
-      var easeInOutQuart = "cubic-bezier(0.77, 0, 0.175, 1)";
-      slides[0].classList.add("active");
-      navLinks[0].classList.add("active");
-
-      navLinks.forEach(function (navLink, activeIndex) {
-        overlays[activeIndex].style.zIndex = "".concat(navLinks.length - activeIndex);
-
-        navLink.addEventListener("mouseover", function () {
-          // Reset all nav links and slides to initial state
-          navLinks.forEach(function (link) {
-            link.classList.remove("active");
-          });
-          slides.forEach(function (slide) {
-            slide.classList.remove("active");
-          });
-
-          // Set the hovered nav link and corresponding slide to active
-          navLink.classList.add("active");
-          slides[activeIndex].classList.add("active");
-
-          // Overlay animation
-          maxZIndex += 1;
-          var activeOverlay = overlays[activeIndex];
-          activeOverlay.style.zIndex = "".concat(maxZIndex);
-          activeOverlay.animate([
-            { transform: "scaleX(0)" },
-            { transform: "scaleX(1)" }
-          ], { duration: 1200, fill: "forwards", easing: easeInOutQuart });
-        });
-      });
-
-    </script>
+    <!-- </section> -->
 
     <!-- <div class="portfolio-container" id="work">
           <div class="card-container">
@@ -328,7 +262,7 @@
               </div>
             </a>
           </div>
-          <!-- end of portfolio container  -->
+          end of portfolio container  -->
     <!-- </div> -->
 
 

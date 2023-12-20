@@ -404,6 +404,11 @@ footer {
   background-color: #bbefc4;
 }
 
+.primary-button.large {
+  width: 250px;
+  height: auto;
+}
+
 .secondary-button {
   background-color: var(--white-bkg);
   color: var(--primary-text-color);
@@ -505,35 +510,78 @@ footer {
   margin-top: 1em;
 }
 
-.card-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.wide-card {
+  display: grid;
+  grid-template-columns: 70% 30%;
   align-items: center;
+  justify-items: center;
+  margin: 2em;
+}
+
+.wide-card .editorial {
+  padding: 2em;
+  border-radius: 16px 0 0 16px;
+  grid-column: 1;
+}
+
+.wide-card .editorial[data-type=yellow] {
+  background-color: #ffdf99;
+}
+
+.editorial[data-type=Cerulean-Blue] {
+  background-color: #b1bfe5;
+}
+
+.wide-card .slides {
+  position: relative;
+  display: grid;
+  width: 450px;
+  height: 450px;
+  align-content: center;
   justify-content: center;
-  border-radius: 24px;
+  grid-column: 2;
+  cursor: pointer;
+  animation: pulse 1s ease-in-out 5s 1;
+  animation-delay: 5s;
 }
 
-.card-container a {
-  border-radius: 24px;
-  box-shadow: var(--br-shadow);
-}
-
-.left-project-1 {
-  background-color: var(--white-bkg);
-  background-image: url(/assets/images/UX-1.webp);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.left-project-2 {
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  min-height: 250px;
-  border-radius: 24px 24px 0 0;
-  background-color: var(--white-bkg);
-  background-image: url(/assets/images/remind-me-project.webp);
-  background-repeat: no-repeat;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay .primary-button {
+  width: 240px;
+  height: 50px;
+  border-color: #4f9985;
+}
+
+.slides a:hover .overlay {
+  opacity: 1;
+}
+
+.slides img.syn-banner {
+  height: 100%;
+  background-image: url(/assets/images/Case-Studies/CS2/main-banner.webp);
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wide-card .slides img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 10px 10px 23px -2px rgba(0, 0, 0, 0.25);
 }
 
 .centered-row {
@@ -586,9 +634,13 @@ footer {
   width: 100%;
 }
 
-.card-editorial button {
+.editorial .button-row {
   font-size: 16px;
   font-family: "Poppins";
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 /* about page  */
@@ -1282,16 +1334,11 @@ footer .footer-container {
   }
   .card-title,
   .card-editorial {
-    padding: 16px;
-    width: 414px;
+    width: 100%;
   }
   .right .primary-button {
     margin: 0 auto;
     width: 50%;
-  }
-  .card-container:hover {
-    filter: brightness(70%);
-    transition: all 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   }
   /* about page */
   .skills-section,
