@@ -529,11 +529,14 @@ footer {
   border-radius: 16px 0 0 16px;
   grid-column: 1;
 }
-.wide-card .editorial[data-type="yellow"] {
+.editorial[data-type="yellow"] {
   background-color: #ffdf99;
 }
 .editorial[data-type="Cerulean-Blue"] {
   background-color: #b1bfe5;
+}
+.editorial[data-type="beige"] {
+  background-color: beige;
 }
 
 .wide-card .slides {
