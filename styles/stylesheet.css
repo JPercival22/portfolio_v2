@@ -520,13 +520,10 @@ footer {
 }
 
 .left-project-1 {
-  height: 100%;
-  min-height: 250px;
-  border-radius: 24px 24px 0 0;
   background-color: var(--white-bkg);
-  background-image: url(/assets/images/guitarUX-min.webp);
+  background-image: url(/assets/images/UX-1.webp);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .left-project-2 {
@@ -537,6 +534,14 @@ footer {
   background-image: url(/assets/images/remind-me-project.webp);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.centered-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
 }
 
 .left-project-3 {
