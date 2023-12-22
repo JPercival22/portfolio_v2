@@ -527,34 +527,22 @@ footer {
   align-items: center;
   justify-items: center;
   margin: 2em;
+  margin-left: 0;
 }
 
 .wide-card .editorial {
   padding: 2em;
+  padding-left: 0;
   border-radius: 16px 0 0 16px;
   grid-column: 1;
 }
-.editorial[data-type="yellow"] {
-  background-color: #ffdf99;
-}
-.editorial[data-type="Cerulean-Blue"] {
-  background-color: #b1bfe5;
-}
-.editorial[data-type="beige"] {
-  background-color: beige;
-}
 
 .wide-card .slides {
-  position: relative;
   display: grid;
-  width: 450px;
-  height: 450px;
   align-content: center;
   justify-content: center;
   grid-column: 2;
   cursor: pointer;
-  animation: pulse 1s ease-in-out 5s 1;
-  animation-delay: 5s;
 }
 
 .overlay {
@@ -1492,7 +1480,7 @@ footer .footer-container {
   }
 
   .portfolio {
-    width: 65%;
+    width: 100%;
     margin-bottom: 2em;
   }
 
