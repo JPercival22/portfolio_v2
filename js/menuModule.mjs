@@ -1,9 +1,16 @@
 const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.getElementById("navMenu");
 
 function toggleMobileMenu() {
-  document.body.classList.toggle("mobile-menu-open"); // Assuming you want to modify the body class
+  navMenu.classList.toggle("show");
 }
 
-menuToggle.addEventListener("click", toggleMobileMenu);
+function addToggleListener() {
+  menuToggle.addEventListener("click", toggleMobileMenu);
+}
 
-export { toggleMobileMenu };
+function removeToggleListener() {
+  menuToggle.removeEventListener("click", toggleMobileMenu);
+}
+
+export { addToggleListener, removeToggleListener };

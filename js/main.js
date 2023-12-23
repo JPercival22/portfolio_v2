@@ -1,10 +1,13 @@
-// main.js
-import { toggleMobileMenu } from './menuModule.mjs';
+import { addToggleListener, removeToggleListener } from './menuModule.mjs';
 
-const menuToggle = document.querySelector(".menu-toggle");
-menuToggle.addEventListener("click", toggleMobileMenu);
+// Function to toggle the menu
+function toggleMenu() {
+  document.body.classList.toggle("mobile-menu-open");
+}
 
-// Check if specific elements or conditions are present on the current page before importing and using other modules
+// Add event listener to toggle the menu on user interaction
+addToggleListener();
+
 
 // Example condition 1 for importing and using module1
 if (window.innerWidth < 768) {

@@ -31,26 +31,26 @@
             </a>
         </div>
 
-        <button type="button" class="menu-toggle" onclick="toggleMenu()" aria-label="main navigation menu button">
-            <!-- <span class="icon-bar"> -->
-            <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
-                width="48">
-                <path
-                    d="M150-240q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-300h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-240H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-510h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-450H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-720h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-660H150Z" />
-            </svg>
-            <!-- </span> -->
-        </button>
-        <ul id="navMenu" class="nav-menu">
-            <li class="navbar-link navbar-item">
-                <a href="/index.html" title="Link to the Home Page">Home</a>
-            </li>
-            <li class="navbar-link navbar-item">
-                <a href="/about-me.html" title="Link to the About Us page">About</a>
-            </li>
-            <li class="navbar-link navbar-item">
-                <a href="/contact-form.html" title="Link to the Contact Us page">Contact</a>
-            </li>
-        </ul>
+        <button type="button" class="menu-toggle" aria-label="main navigation menu button">
+          <!-- <span class="icon-bar"> -->
+          <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
+              width="48">
+              <path
+                  d="M150-240q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-300h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-240H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-510h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-450H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-720h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-660H150Z" />
+          </svg>
+          <!-- </span> -->
+      </button>
+      <ul id="navMenu" class="nav-menu">
+          <li class="navbar-link navbar-item">
+              <a href="/index.html" title="Link to the Home Page">Home</a>
+          </li>
+          <li class="navbar-link navbar-item">
+              <a href="/about-me.html" title="Link to the About Us page">About</a>
+          </li>
+          <li class="navbar-link navbar-item">
+              <a href="/contact-form.html" title="Link to the Contact Us page">Contact</a>
+          </li>
+      </ul>
     </div>
 </nav>
 
@@ -198,8 +198,10 @@
       </div>
     </footer>
   </main>
-  <!-- custom js  -->
-  <script src="/js/global.js" async></script>
+  <!-- <script type="module" src="sidebarModule.mjs"></script> -->
+  <script type="module" src="/js/menuModule.mjs"></script>
+  <script type="module" src="/js/readMore.mjs"></script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 
 </html>
