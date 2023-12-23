@@ -16,47 +16,47 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
   <nav id="navbar">
     <div class="navbar-container">
-        <div class="home-link">
-            <a href="/index.html" class="navbar-logo" alt="">
-                <img src="assets/images/jp-LOGO.svg" width="40" height="40" alt="company logo">
-                <div class="logo-container" title="Authors name and profession">
-                    <div class="logo-name">Joseph Percival</div>
-                    <div class="logo-title">UX &amp; UI DESIGNER</div>
-                </div>
-            </a>
-        </div>
+      <div class="home-link">
+        <a href="/index.html" class="navbar-logo" alt="">
+          <img src="assets/images/jp-LOGO.svg" width="40" height="40" alt="company logo">
+          <div class="logo-container" title="Authors name and profession">
+            <div class="logo-name">Joseph Percival</div>
+            <div class="logo-title">UX &amp; UI DESIGNER</div>
+          </div>
+        </a>
+      </div>
 
-        <button type="button" class="menu-toggle" aria-label="main navigation menu button">
-          <!-- <span class="icon-bar"> -->
-          <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
-              width="48">
-              <path
-                  d="M150-240q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-300h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-240H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-510h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-450H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-720h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-660H150Z" />
-          </svg>
-          <!-- </span> -->
+      <button type="button" class="menu-toggle" aria-label="main navigation menu button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+          <path
+            d="M150-240q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-300h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-240H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-510h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-450H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-720h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-660H150Z" />
+        </svg>
+
       </button>
       <ul id="navMenu" class="nav-menu">
-          <li class="navbar-link navbar-item">
-              <a href="/index.html" title="Link to the Home Page">Home</a>
-          </li>
-          <li class="navbar-link navbar-item">
-              <a href="/about-me.html" title="Link to the About Us page">About</a>
-          </li>
-          <li class="navbar-link navbar-item">
-              <a href="/contact-form.html" title="Link to the Contact Us page">Contact</a>
-          </li>
+        <li class="navbar-link navbar-item">
+          <a href="/index.html" title="Link to the Home Page">Home</a>
+        </li>
+        <li class="navbar-link navbar-item">
+          <a href="/about-me.html" title="Link to the About Us page">About Me</a>
+        </li>
+        <li class="navbar-link navbar-item">
+          <a href="/contact-form.html" title="Link to the Contact Us page">Contact Me</a>
+        </li>
       </ul>
     </div>
-</nav>
+  </nav>
 
-  <main class="page-boundary p0">
-    <div class="centered-row">
-      <section id="contact form">
+  <main class="page-boundary">
+    <div class="centered-row no-background">
+      <section id="contact-form">
 
         <div class="contact-form-container">
 
@@ -78,45 +78,44 @@
 
             <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
               <h2>Contact Form</h2>
+              <p>Please complete fields marked with *. These are mandatory for the form to send.</p>
               <input type="hidden" name="_subject" value="New Email From Portfolio">
 
-              <!-- page forwards to thank you page after submission  -->
-
               <input type="hidden" name="_next" value="https://portfolio.josephmpercival.co.uk/thank-you.html">
-              <!-- customers name section  -->
+
               <div class="row">
 
                 <div class="input-group">
                   <label for="first_name" class="form__label">First Name *</label>
                   <input type="text" id="first_name" name="name" class="form__input"
-                    title="Please enter your first name here" aria-label="first name input field" autocomplete="off"
-                    placeholder="Please Enter Your First Name Here." required />
+                    title="Please enter your first name" aria-label="first name input field" autocomplete="off"
+                    placeholder="Please Enter Your First Name." required />
                 </div>
 
 
                 <div class="input-group">
                   <label for="last_name" class="form__label">Last Name *</label>
                   <input type="text" id="last_name" name="name" class="form__input"
-                    title="Please enter your first name here" autocomplete="off"
-                    placeholder="Please Enter Your Last Name Here." required />
+                    title="Please enter your first name." autocomplete="off" placeholder="Please Enter Your Last Name."
+                    required />
                 </div>
               </div>
 
               <div class="row">
                 <div class="input-group">
                   <label for="email" class="form__label">Email Address *</label>
-                  <!-- required email section -->
+
                   <input type="email" id="email" name="email" class="form__input" title="e.g yourname@gmail.com"
-                    autocomplete="off" placeholder="Please Enter Your Email Here" required />
+                    autocomplete="off" placeholder="Please Enter Your Email." required />
                 </div>
               </div>
 
               <div class="row">
                 <div class="input-group">
                   <label for="more-detail" class="form__label">Short Message (Optional)</label>
-                  <!-- customer description  -->
+
                   <textarea class="textarea" id="more-detail" name="more-detail" rows="10"
-                    placeholder="Write your short message here" title="Please leave a short message here"
+                    placeholder="Write your short message here" title="Please leave a short message."
                     required></textarea>
                 </div>
               </div>
@@ -126,7 +125,7 @@
             </form>
 
           </div>
-          <!-- end of form container  -->
+
         </div>
       </section>
 
@@ -138,23 +137,24 @@
             </h2>
           </div>
           <div class="body">
-            <div class="contact-subtitle">
-              <p>Alternatively, please click any of the links below to send me an e-mail or to give me a call.</p>
-            </div>
+
+            <p>Alternatively, please click any of the links below to send me an e-mail or to give me a call.</p>
+
             <ul>
               <li>
-                <span>
-                  <i class="far fa-envelope"></i>
-                </span>
                 <a href="mailto:josephmpercival@gmail.com">
-                  <span> Send E-Mail</span></a>
+                  <span class="material-symbols-outlined">
+                    mail
+                  </span>
+                  <span class="link-text"> Send E-Mail</span></a>
               </li>
               <li>
-                <span>
-                  <i class="fa-solid fa-phone"></i>
-                </span>
-
-                <a href="tel:07709718757"> <span> 07709718757</span></a>
+                <a href="tel:07709718757">
+                  <span class="material-symbols-outlined">
+                    call
+                  </span>
+                  <span class="link-text"> 07709718757</span>
+                </a>
               </li>
             </ul>
           </div>
