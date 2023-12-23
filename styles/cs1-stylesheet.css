@@ -1296,41 +1296,6 @@ td::before {
         height: auto;
     }
 
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Transparent dark background */
-        color: #fff;
-        /* Text color of the message */
-        font-size: 20px;
-        /* Adjust the font size as per your design */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        /* Initially hidden */
-        transition: opacity 0.5s;
-        /* Smooth transition effect */
-        cursor: pointer;
-        border-radius: 8px;
-    }
-
-    .overlay-message {
-        background-color: var(--white-bkg);
-        padding: 12px 24px;
-        border-radius: 8px;
-        border: 1px solid var(--brand-color);
-    }
-
-    .image-container:hover .overlay {
-        opacity: 1;
-        /* Display the message when the user hovers over the image */
-    }
-
     .sidebar a {
         width: 100%;
         padding: 10px;
