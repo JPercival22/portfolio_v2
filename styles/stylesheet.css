@@ -466,6 +466,21 @@ footer {
   justify-content: flex-start;
   margin-top: 50px;
 }
+@keyframes jitter {
+  0% {
+    transform: rotate(-0.5deg);
+  }
+  50% {
+    transform: rotate(0.7deg);
+  }
+  100% {
+    transform: rotate(-0.5deg);
+  }
+}
+.hero-container .hero-header .jitter {
+  animation: jitter 0.5s ease-in-out infinite;
+  display: inline-block; /* Ensures the element stays inline */
+}
 .hero-container .hero-editorial {
   display: flex;
   flex-direction: column-reverse;
@@ -1117,8 +1132,12 @@ footer .footer-container {
   .hero-container .hero-editorial {
     flex-direction: row;
   }
+  .hero-container .editorial-footer .two-button-container {
+    width: 25%;
+  }
   .hero-container .editorial-footer .two-button-container a {
-    width: 30%;
+    padding: 12px 24px;
+    font-size: 18px;
   }
   .primary-button,
   .secondary-button {
@@ -1233,10 +1252,6 @@ footer .footer-container {
     border-bottom: 1px solid var(--brand-color);
   }
   /* home page styles  */
-  .two-button-container .primary-button,
-  .two-button-container .secondary-button {
-    width: 20%;
-  }
   .primary-button:hover {
     background: #b3e2bb;
     border-color: #4f9985;
@@ -1267,11 +1282,6 @@ footer .footer-container {
   .button-container {
     width: 50%;
   }
-  .hero-container .hero-button-container .primary-button,
-  .hero-container .hero-button-container .secondary-button {
-    width: 20%;
-    height: 20px;
-  }
   .portfolio {
     width: 80%;
     margin: 0 auto;
@@ -1281,6 +1291,9 @@ footer .footer-container {
     width: 100%;
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+  .hero-container .editorial-footer .two-button-container {
+    width: 45%;
   }
   .wide-card {
     display: flex;
@@ -1302,17 +1315,21 @@ footer .footer-container {
     display: inherit;
   }
   .wide-card .card-body .card-editorial {
+    flex-direction: column;
     width: 70%;
+    margin-right: 2em;
   }
-  .wide-card .card-body .button-row {
-    width: 70;
-    justify-content: flex-end;
+  .wide-card .card-body .image-container {
+    width: 30%;
   }
   .wide-card .card-body .image-container img {
     width: 100%;
-    height: auto;
+    height: 90%;
     border-radius: 8px;
     box-shadow: 8px 4px 23px 0px rgba(0, 0, 0, 0.1098039216);
+  }
+  .wide-card .mobile-btn {
+    display: none;
   }
   /* about page */
   .skills-section,
@@ -1417,6 +1434,9 @@ footer .footer-container {
 @media only screen and (min-width: 1800px) {
   .navbar-container {
     margin: 0 170px;
+  }
+  .hero-container .editorial-footer .two-button-container {
+    width: 30%;
   }
   .contact-page-content {
     max-width: 1100px;

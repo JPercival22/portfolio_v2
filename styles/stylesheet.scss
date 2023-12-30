@@ -96,7 +96,6 @@ h1 {
   text-transform: capitalize;
 }
 
-
 h2 {
   font-size: 22px;
   font-weight: 500;
@@ -474,6 +473,22 @@ footer {
     align-items: flex-start;
     justify-content: flex-start;
     margin-top: 50px;
+    @keyframes jitter {
+      0% {
+        transform: rotate(-0.5deg);
+      }
+      50% {
+        transform: rotate(0.7deg);
+      }
+      100% {
+        transform: rotate(-0.5deg);
+      }
+    }
+
+    .jitter {
+      animation: jitter 0.5s ease-in-out infinite;
+      display: inline-block; /* Ensures the element stays inline */
+    }
   }
   .hero-editorial {
     display: flex;
@@ -879,62 +894,62 @@ footer .footer-container {
   .menu-toggle {
     width: 74px;
   }
-.hero-header h1 {
-  .highlight {
-    font-weight: 800;
-    padding: 10px;
-    background-color: var(--illuminate-yellow);
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-    &:hover {
-      background-color: transparent;
-      font-weight: normal;
-      padding: 0;
+  .hero-header h1 {
+    .highlight {
+      font-weight: 800;
+      padding: 10px;
+      background-color: var(--illuminate-yellow);
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        background-color: transparent;
+        font-weight: normal;
+        padding: 0;
+      }
+    }
+    .outline {
+      display: inline-block;
+      border-radius: 0px;
+      opacity: 1;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      text-shadow:
+        1px 1px 1px #000,
+        0 -1px 1px #000,
+        1px 1px 1px #000,
+        -1px 0 0 #000,
+        1px 1px 0 #000,
+        1px 0 0 #000,
+        0 -1px 0 #000;
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
+
+      &.green:hover {
+        background-color: #cefe9d;
+        color: #191b1e;
+        text-shadow: none;
+      }
+
+      &.pink:hover {
+        background-color: #ff90ed;
+        color: #191b1e;
+        text-shadow: none;
+      }
+
+      &.blue:hover {
+        background-color: #9ee3fe;
+        color: #191b1e;
+        text-shadow: none;
+      }
+
+      &.orange:hover {
+        background-color: #ffb366;
+        color: #191b1e;
+        text-shadow: none;
+      }
     }
   }
-  .outline {
-    display: inline-block;
-    border-radius: 0px;
-    opacity: 1;
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-    text-shadow:
-      1px 1px 1px #000,
-      0 -1px 1px #000,
-      1px 1px 1px #000,
-      -1px 0 0 #000,
-      1px 1px 0 #000,
-      1px 0 0 #000,
-      0 -1px 0 #000;
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-  
-    &.green:hover {
-      background-color: #cefe9d;
-      color: #191b1e;
-      text-shadow: none;
-    }
-  
-    &.pink:hover {
-      background-color: #ff90ed;
-      color: #191b1e;
-      text-shadow: none;
-    }
-  
-    &.blue:hover {
-      background-color: #9ee3fe;
-      color: #191b1e;
-      text-shadow: none;
-    }
-  
-    &.orange:hover {
-      background-color: #ffb366;
-      color: #191b1e;
-      text-shadow: none;
-    }
-  }
-}
   .hero-container {
     padding: 0;
   }
@@ -1189,10 +1204,13 @@ footer .footer-container {
   .hero-container .hero-editorial {
     flex-direction: row;
   }
-  .hero-container .editorial-footer .two-button-container a {
-    width: 30%;
+  .hero-container .editorial-footer .two-button-container {
+    width: 25%;
+    a {
+      padding: 12px 24px;
+      font-size: 18px;
+    }
   }
-
   .primary-button,
   .secondary-button {
     padding: 12px 24px;
@@ -1330,11 +1348,6 @@ footer .footer-container {
 
   /* home page styles  */
 
-  .two-button-container .primary-button,
-  .two-button-container .secondary-button {
-    width: 20%;
-  }
-
   .primary-button:hover {
     background: #b3e2bb;
     border-color: #4f9985;
@@ -1372,12 +1385,6 @@ footer .footer-container {
     width: 50%;
   }
 
-  .hero-container .hero-button-container .primary-button,
-  .hero-container .hero-button-container .secondary-button {
-    width: 20%;
-    height: 20px;
-  }
-
   .portfolio {
     width: 80%;
     margin: 0 auto;
@@ -1388,6 +1395,14 @@ footer .footer-container {
     width: 100%;
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+
+  .hero-container {
+    .editorial-footer {
+      .two-button-container{
+        width: 45%;
+      }
+    }
   }
 
   .wide-card {
@@ -1408,21 +1423,21 @@ footer .footer-container {
     .card-body {
       display: inherit;
       .card-editorial {
+        flex-direction: column;
         width: 70%;
-      }
-      .button-row {
-        width: 70;
-        justify-content: flex-end;
+        margin-right: 2em;
       }
       .image-container {
+        width: 30%;
         img {
           width: 100%;
-          height: auto;
+          height: 90%;
           border-radius: 8px;
           box-shadow: 8px 4px 23px 0px #0000001c;
         }
       }
     }
+    .mobile-btn {display: none;}
   }
   /* about page */
 
@@ -1551,7 +1566,13 @@ footer .footer-container {
   .navbar-container {
     margin: 0 170px;
   }
-
+  .hero-container {
+    .editorial-footer {
+      .two-button-container{
+        width: 30%;
+      }
+    }
+  }
   .contact-page-content {
     max-width: 1100px;
   }
