@@ -34,7 +34,8 @@
       </div>
 
       <button type="button" class="menu-toggle" aria-label="main navigation menu button">
-        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+
+        <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
           <path
             d="M150-240q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-300h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-240H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-510h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-450H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-720h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-660H150Z" />
         </svg>
@@ -54,116 +55,141 @@
     </div>
   </nav>
 
-  <main class="page-boundary">
-    <div class="centered-row no-background">
-      <section id="contact-form">
-
-        <div class="contact-form-container">
-
-          <div class="contact-form-editorial">
-            <div class="editorial-header">
-              <h1>Say Hello.</h1>
-            </div>
-            <div class="editorial-body">
-              <p>
-                Interested in connecting? Please fill the form below and I’ll get in touch with you shortly! Or you
-                can email/ contact myself directly using the links
-                in the <a class="tertiary-btn" href="#contact-details"> Contact Details </a>section. <br> Thank
-                you.
-              </p>
-            </div>
+  <main>
+    <section id="btt-anchor">
+      <div class="wrapper">
+        <div class="hero-header">
+          <h1>Say Hello.</h1>
+        </div>
+        <div class="hero-editorial">
+          <div class="hero-text-content">
+            <p>
+              Interested in connecting? Please fill the form below and I’ll get in touch with you shortly! Or you
+              can email/ contact myself directly using the links
+              in the <a class="tertiary-btn" href="#contact-details"> Contact Details </a>section. <br> Thank
+              you.
+            </p>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="contact-form-body">
+    <section>
+      <div class="wrapper">
+        <div id="contact-form">
 
-            <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
+          <div class="contact-form-container">
+            <div class="header">
               <h2>Contact Form</h2>
               <p>Please complete fields marked with *. These are mandatory for the form to send.</p>
-              <input type="hidden" name="_subject" value="New Email From Portfolio">
+            </div>
+            <div class="contact-form-body">
 
-              <input type="hidden" name="_next" value="https://portfolio.josephmpercival.co.uk/thank-you.html">
-
-              <div class="row">
-
-                <div class="input-group">
-                  <label for="first_name" class="form__label">First Name *</label>
-                  <input type="text" id="first_name" name="name" class="form__input"
-                    title="Please enter your first name" aria-label="first name input field" autocomplete="off"
-                    placeholder="Please Enter Your First Name." required />
-                </div>
+              <div class="input-group">
 
 
-                <div class="input-group">
-                  <label for="last_name" class="form__label">Last Name *</label>
-                  <input type="text" id="last_name" name="name" class="form__input"
-                    title="Please enter your first name." autocomplete="off" placeholder="Please Enter Your Last Name."
-                    required />
-                </div>
+
+
+
+                <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
+
+                  <input type="hidden" name="_subject" value="New Email From Portfolio">
+
+                  <input type="hidden" name="_next" value="https://portfolio.josephmpercival.co.uk/thank-you.html">
+
+                  <div class="input input-border">
+                    <label for="first_name">Enter your first name *</label>
+                    <input type="text" autocomplete="off" autofocus spellcheck="false" id="first_name"
+                      class="form__input" title="Please enter your first name" aria-label="first name input field"
+                      required />
+                  </div>
+
+                  <div class="input input-border">
+                    <label for="last_name">Enter your last name *</label>
+                    <input type="text" autocomplete="off" autofocus spellcheck="false" id="last_name"
+                      class="form__input" title="Please enter your first name" aria-label="first name input field"
+                      required />
+                  </div>
+
+                  <div class="input input-border">
+                    <label for="email">Enter your E-mail address *</label>
+                    <input type="text" autocomplete="off" autofocus spellcheck="false" id="email" class="form__input"
+                      title="Please enter your first name" aria-label="first name input field" required />
+                  </div>
+                  <div class="input input-border">
+                    <label for="more-detail">Enter more details (optional)</label>
+                    <textarea type="text" autocomplete="off" autofocus spellcheck="false" id="more-detail" class="textarea"
+                      title="Enter more details" aria-label="more details input field" required></textarea>
+                  </div>
+
+
+                  <div class="form-footer">
+                    <input class="submit-button primary-button" type="submit" value="send" />
+                  </div>
+                </form>
+
               </div>
 
-              <div class="row">
-                <div class="input-group">
-                  <label for="email" class="form__label">Email Address *</label>
-
-                  <input type="email" id="email" name="email" class="form__input" title="e.g yourname@gmail.com"
-                    autocomplete="off" placeholder="Please Enter Your Email." required />
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="input-group">
-                  <label for="more-detail" class="form__label">Short Message (Optional)</label>
-
-                  <textarea class="textarea" id="more-detail" name="more-detail" rows="10"
-                    placeholder="Write your short message here" title="Please leave a short message."
-                    required></textarea>
-                </div>
-              </div>
-              <div class="form-footer">
-                <input class="submit-button primary-button" type="submit" value="send" />
-              </div>
-            </form>
+            </div>
 
           </div>
 
+          <div id="contact-details" class="contact-card-container">
+            <div class="header">
+              <h2>
+                Contact Details
+              </h2>
+            </div>
+            <div class="body">
+
+              <p>Alternatively, please click any of the links below to send me an e-mail or to give me a call.</p>
+
+              <ul>
+                <li>
+                  <a href="mailto:josephmpercival@gmail.com">
+                    <span class="material-symbols-outlined">
+                      mail
+                    </span>
+                    <span class="link-text"> Send E-Mail</span></a>
+                </li>
+                <li>
+                  <a href="tel:07709718757">
+                    <span class="material-symbols-outlined">
+                      call
+                    </span>
+                    <span class="link-text"> 07709718757</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer">
+              <p>Thank you.</p>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div id="contact-details" class="contact-card-container">
-          <div class="header">
-            <h2>
-              Contact Details
-            </h2>
-          </div>
-          <div class="body">
+    </section>
+    <script>
+  var inputs = document.getElementsByClassName('input');
+      for (i = 0; i < inputs.length; i++) {
+        inputs[i].getElementsByTagName('input')[0].addEventListener('focus', function() {
+          this.parentElement.classList.add('input-active');
+          this.parentElement.classList.remove('input-filled-in-not-focus');
+        });
+        inputs[i].getElementsByTagName('input')[0].addEventListener('blur', function() {
+          if(this.value == "") {
+            this.parentElement.classList.remove('input-active');
+          }
+          else {
+            this.parentElement.classList.add('input-filled-in-not-focus');
+          }
+        });
+      }
 
-            <p>Alternatively, please click any of the links below to send me an e-mail or to give me a call.</p>
+ 
 
-            <ul>
-              <li>
-                <a href="mailto:josephmpercival@gmail.com">
-                  <span class="material-symbols-outlined">
-                    mail
-                  </span>
-                  <span class="link-text"> Send E-Mail</span></a>
-              </li>
-              <li>
-                <a href="tel:07709718757">
-                  <span class="material-symbols-outlined">
-                    call
-                  </span>
-                  <span class="link-text"> 07709718757</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer">
-            <p>Thank you.</p>
-          </div>
-        </div>
-      </section>
-    </div>
+    </script>
     <footer>
       <div class="footer-container">
         <div class="footer-social-icon">
