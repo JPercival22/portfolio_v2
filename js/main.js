@@ -1,5 +1,9 @@
 import { addToggleListener, removeToggleListener } from './menuModule.mjs'
 import { setResponsiveImages } from './responsiveImageModule.mjs';
+import { handleScroll } from './navigationModule.mjs';
+
+handleScroll();
+
 
 // Function to toggle the menu
 function toggleMenu () {
