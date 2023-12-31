@@ -19,8 +19,8 @@
 </head>
 
 <body>
-  <nav id="navbar">
-    <div class="navbar-container">
+  <header id="navbar">
+    <nav class="navbar-container">
       <div class="home-link">
         <a href="/index.html" class="navbar-logo" alt="">
           <img src="assets/images/jp-LOGO.svg" width="40" height="40" alt="company logo">
@@ -31,14 +31,14 @@
         </a>
       </div>
 
-      <button type="button" class="menu-toggle" aria-label="main navigation menu button">
-        <!-- <span class="icon-bar"> -->
-        <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+      <button type="button" class="menu-toggle" aria-label="main navigation menu button" aria-expanded="false"
+        aria-controls="navMenu">
+        <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="42" viewBox="0 -960 960 960" width="42">
           <path
             d="M150-240q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-300h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-240H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-510h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-450H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-720h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-660H150Z" />
         </svg>
-        <!-- </span> -->
       </button>
+
       <ul id="navMenu" class="nav-menu">
         <li class="navbar-link navbar-item">
           <a href="/index.html" title="Link to the Home Page">Home</a>
@@ -50,14 +50,14 @@
           <a href="/contact-form.html" title="Link to the Contact Us page">Contact Me</a>
         </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <main class="white-theme">
+  <main>
     <section id="btt-anchor">
       <div class="hero-container">
         <div class="hero-header">
-          <h1>Hi, my name is <span class="highlight">Joe</span></h1>
+          <h1>Hi, I'm <span class="highlight">Joe</span>.</h1>
           <h1>I
             <span class="outline green">Research</span>,
             <span class="outline pink jitter">Design</span>,
@@ -75,13 +75,17 @@
               collaborated with diverse clients, including renowned brands like THG, where I designed and developed User
               Friendly E-Commerce platform for Calvin Klein, Adidas and L'Oreal to name a few.
               <br>
-              Recently, I was employed as a Senior UX Designer, Test Facilitator and UI Designer at a Data Aggregation
-              Company.
-              This role involved me leading UX Design and governing Development Projects that the UK Government,
-              Metropolitan Police, and the National Crime Agency were using. This enabled me to deliver exceptional User
-              Experiences across various platforms.
-              <br>My academic foundation at Edge Hill University, gaining my First Class BSc(Hons) Degree, in Web Design
-              and Development has been pivotal in driving my career toward creating innovative digital solutions.
+              <span class="desktop-text">Recently, I was employed as a Senior UX Designer, Test Facilitator and UI
+                Designer at a Data Aggregation
+                Company.
+                This role involved me leading UX Design and governing Development Projects that the UK Government,
+                Metropolitan Police, and the National Crime Agency were using. This enabled me to deliver exceptional
+                User
+                Experiences across various platforms.
+                <br>My academic foundation at Edge Hill University, gaining my First Class BSc(Hons) Degree, in Web
+                Design
+                and Development has been pivotal in driving my career toward creating innovative digital
+                solutions.</span>
             </p>
           </div>
           <div class="image-container">
@@ -90,26 +94,26 @@
         </div>
         <!-- end of editorial  -->
         <div class="editorial-footer">
-          <div class="two-button-container">
-            <a class="primary-button" href="/contact-form.html" aria-label="button link to contact page"
-              title="Please click this button if you would like to set up a chat over a project.">
-              Lets Talk
-            </a>
-            <a class="secondary-button" href="/about-me.html" aria-label="button link to about page"
-              title="Please click this button if you would like to view my experience and skills.">
-              About Me
-            </a>
-          </div>
 
-
-          <div class="mouse-scroller">
-            <div class="mouse">
-              <div class="mouse-animation"></div>
-            </div>
-          </div>
+          <a class="primary-button" href="/contact-form.html" aria-label="button link to contact page"
+            title="Please click this button if you would like to set up a chat over a project.">
+            Lets Talk
+          </a>
+          <a class="secondary-button" href="/about-me.html" aria-label="button link to about page"
+            title="Please click this button if you would like to view my experience and skills.">
+            About Me
+          </a>
         </div>
 
+
+        <div class="mouse-scroller">
+          <div class="mouse">
+            <div class="mouse-animation"></div>
+          </div>
+        </div>
       </div>
+
+
     </section>
 
     <section aria-label="Portfolio of recent projects">
@@ -120,8 +124,11 @@
         <div class="wide-card">
           <div class="card-header">
             <h3>
-              Just Speak Guitar Tutorials - R &amp; D Case Study
+              Just Speak Guitar Tutorials.
             </h3>
+            <h4>
+              Research, Design &amp; Development Case Study.
+            </h4>
             <ul class="inline-decorated-list">
               <li>
                 Lead UX Researcher
@@ -141,10 +148,11 @@
             <div class="card-editorial">
               <p>
                 Just Speak Guitar Tutorials is an innovative Research and Development Project focused on evaluating the
-                integration of a non-AI voice command system into a responsive and content-rich website. The project
-                seamlessly combined UX design methodologies during the design and development stages, leveraging user
-                data gathered from interviews, surveys, and testing. <br>
-                <span class="more-content">
+                integration of a non-AI voice command system into a responsive and content-rich website. <span
+                  class="more-content">
+                  The project seamlessly combined UX design methodologies during the design and development stages,
+                  leveraging user
+                  data gathered from interviews, surveys, and testing. <br>
                   By synthesizing user requirements and empathizing with
                   users, the project successfully eliminated frustrations, alleviated concerns, and ensured transparency
                   at
@@ -152,16 +160,13 @@
                 </span>
                 <a href="#" class="read-more">Read more</a>
               </p>
-              <div class="button-row large-devices">
-                <a class="primary-button large" href="/guitar-tutorial.html"> Click To See Case Study</a>
+              <div class="button-row">
+                <a class="primary-button" href="/guitar-tutorial.html"> Click To See Case Study</a>
               </div>
             </div>
             <div class="image-container">
               <img id="ux-guitar" src="/assets/images/guitar-lessons-banner.webp" alt="Image Description">
             </div>
-          </div>
-          <div class="button-row mobile-btn">
-            <a class="primary-button large" href="/guitar-tutorial.html"> Click To See Case Study</a>
           </div>
 
         </div>
@@ -173,8 +178,11 @@
         <div class="wide-card">
           <div class="card-header">
             <h3>
-              Synalogik Innovative Solutions Ltd - IOS App Design
+              Synalogik Innovative Solutions Ltd.
             </h3>
+            <h4>
+              IOS App Design (UX &amp; UI) Case Study.
+            </h4>
             <ul class="inline-decorated-list">
               <li>
                 Lead UX Designer
@@ -195,11 +203,12 @@
               <p>
                 Synalogik Innovative Solutions Ltd, a prominent data aggregator, empowers local governments, law
                 enforcement, and gambling institutions in their fight against fraud using their exclusive platform.
-                As their sole Senior UX and UI Designer, I provided expert guidance and solutions for this and provided
-                an E-commerce IOS Application to bolster Marketing campaigns and Strategies.
-                <span class="more-content">
-                  This Case Study covers the Research and Design phases involved in crafting their private, design
-                  driven, user centric e-commerce platform.
+                As their sole Senior UX and UI Designer,<span class="more-content">
+                  I provided expert guidance and solutions for this and provided
+                  an E-commerce IOS Application to bolster Marketing campaigns and Strategies. This Case Study covers
+                  the Research and Design phases involved in crafting their private, design driven, user centric
+                  e-commerce
+                  platform.
                 </span>
                 <a href="#" class="read-more">Read more</a>
               </p>
@@ -211,9 +220,6 @@
               <img id="syn-banner" src="/assets/images/syn-banner.webp" />
             </div>
           </div>
-          <div class="button-row mobile-btn">
-            <a class="primary-button large" href="/guitar-tutorial.html"> Click To See Case Study</a>
-          </div>
 
         </div>
 
@@ -224,13 +230,21 @@
         <div class="wide-card">
           <div class="card-header">
             <h3>
-              Come Together Hub<sup>TM</sup> - Bespoke Responsive Website.
+              Come Together Hub<sup>TM</sup>
             </h3>
+            <h4>
+              Responsive Re-design &amp; Development Case Study.
+            </h4>
             <ul class="inline-decorated-list">
               <li>
-                Lead UX &amp; UI Designer
+                Lead UX Designer
               </li>
-
+              <li>
+                Lead UI Designer
+              </li>
+              <li>
+                Design System Creator
+              </li>
               <li>
                 Front-End Developer.
               </li>
@@ -241,15 +255,13 @@
               <p>
                 Come Together Hub <sup>TM</sup>, a charitable organization based in Merseyside, UK, faced significant
                 usability challenges with their initial WordPress website. Upon investigation, it became evident that
-                the original site lacked responsiveness, functionality (owing to JavaScript bottleneck issues), and
-                completion.
-                The Organisation did provide valuable user requirements and
-                insights. Given the organization's
-                early stage, I
-                volunteered to provide a full <span class="bold-italic">pro bono</span>
-                <span class="more-content">website redesign and
-                  development
-                  service to elevate user engagement and
+                the original site lacked responsiveness, functionality (owing to JavaScript bottleneck issues), <span
+                  class="more-content">
+                  and completion.
+                  The Organisation did provide valuable user requirements and insights. Given the organization's early
+                  stage, I volunteered to
+                  provide a full <span class="bold-italic">pro bono</span> website redesign and development service to
+                  elevate user engagement and
                   bolster investor confidence. This case study covers this process.
                 </span>
                 <a href="#" class="read-more">Read more</a>
@@ -261,9 +273,6 @@
             <div class="image-container">
               <img id="come-together-banner" src="/assets/images/Come-Together-Banner.webp" />
             </div>
-          </div>
-          <div class="button-row mobile-btn">
-            <a class="primary-button large" href="/guitar-tutorial.html"> Click To See Case Study</a>
           </div>
 
         </div>
@@ -302,9 +311,9 @@
             </svg>
           </a>
         </div>
-        <small>
-          &copy; Copyright 2023 Joseph M Percival
-        </small>
+        <div class="copy-panel">
+          <p>&copy; Copyright 2023 Joseph M Percival</p>
+        </div>
       </div>
     </footer>
   </main>
