@@ -174,27 +174,6 @@
 
       </div>
     </section>
-    <script>
-      var inputs = document.querySelectorAll('.input input, .input textarea');
-      for (var i = 0; i < inputs.length; i++) {
-        var input = inputs[i];
-
-        input.addEventListener('focus', function () {
-          this.parentElement.classList.add('input-active');
-        });
-
-        input.addEventListener('blur', function () {
-          if (this.value.trim() !== "" || this.tagName === 'TEXTAREA' || this.placeholder !== "") {
-            this.parentElement.classList.add('input-filled');
-          } else {
-            this.parentElement.classList.remove('input-filled');
-            this.parentElement.classList.remove('input-active');
-          }
-        });
-      }
-
-
-    </script>
     <footer>
       <div class="footer-container">
         <div class="footer-social-icon">
@@ -230,6 +209,8 @@
     </footer>
   </main>
   <!-- <script type="module" src="sidebarModule.mjs"></script> -->
+
+  <script type="module" src="/js/form-floating-labels.mjs"></script>
   <script type="module" src="/js/menuModule.mjs"></script>
   <script type="module" src="/js/readMore.mjs"></script>
   <script type="module" src="/js/main.js"></script>

@@ -1,7 +1,7 @@
 import { addToggleListener, removeToggleListener } from './menuModule.mjs'
 import { setResponsiveImages } from './responsiveImageModule.mjs';
 import { handleScroll } from './navigationModule.mjs';
-
+import { inputs } from './form-floating-labels.mjs';
 handleScroll();
 
 
