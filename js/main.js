@@ -3,11 +3,48 @@ import { handleScroll as navigationHandleScroll } from './navigationModule.mjs' 
 import { initFloatingLabels } from './form-floating-labels.mjs'; // Changed import to only 
 import { setResponsiveImages } from './responsiveImageModule.mjs'
 import { handleScroll } from './navigationModule.mjs'
+import { openTab, openFirstTabByDefault } from './tabModule.mjs';
 
 document.addEventListener('DOMContentLoaded', function () {
   addToggleListener()
   handleScroll()
   initFloatingLabels(); // Call the initFloatingLabels function
+
+// tabs functionality 
+// Function to open the first tab by default
+function openFirstTabByDefault() {
+  // Get the first tab button and trigger a click event on it
+  var firstTabButton = document.getElementsByClassName("tablinks")[0];
+  firstTabButton.click();
+}
+// Function to handle tab switching
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+// Add event listeners to the tab buttons to call the function
+var tabButtons = document.getElementsByClassName("tablinks");
+for (var i = 0; i < tabButtons.length; i++) {
+  tabButtons[i].addEventListener("click", function(event) {
+    openTab(event, this.id.replace('Btn', ''));
+  });
+}
+
+// Call the function to open the first tab by default when the page loads
+window.addEventListener('load', openFirstTabByDefault);
+
+// Call the function to open the first tab by default when the page loads
+window.addEventListener('load', openFirstTabByDefault);
+
   window.onload = function() {
     // Here you can initiate the preload of the webp image
     var image = new Image();
