@@ -1,11 +1,8 @@
 @font-face {
-  font-family: Poppins;
-  font-size: normal;
+  font-family: "Poppins";
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   font-display: swap;
-  color: #1a1a1a;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format("woff2");
 }
 :root {
   --yellow_bkg: #fff2ce;
@@ -675,7 +672,7 @@ img {
   gap: 1em;
   justify-content: center;
 }
-.contact-page-container .contact-details-container .contact-card-container .body ul {
+.contact-page-container .contact-details-container .contact-card-container .body .contact-links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -684,7 +681,7 @@ img {
   list-style: none;
   margin: 0;
 }
-.contact-page-container .contact-details-container .contact-card-container .body ul li a {
+.contact-page-container .contact-details-container .contact-card-container .body .contact-links a {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
@@ -692,14 +689,14 @@ img {
   font-weight: 800;
   color: #1a1a1a;
 }
-.contact-page-container .contact-details-container .contact-card-container .body ul li a .tertiary-link {
+.contact-page-container .contact-details-container .contact-card-container .body .contact-links a .tertiary-link {
   display: flex;
   flex-direction: column;
 }
-.contact-page-container .contact-details-container .contact-card-container .body ul li a .tertiary-link .title {
+.contact-page-container .contact-details-container .contact-card-container .body .contact-links a .tertiary-link .title {
   font-weight: 500;
 }
-.contact-page-container .contact-details-container .contact-card-container .body ul li a .tertiary-link .link-text {
+.contact-page-container .contact-details-container .contact-card-container .body .contact-links a .tertiary-link .link-text {
   font-weight: 700;
   text-decoration: underline;
   text-decoration-color: var(--primary-text-color);
@@ -707,7 +704,7 @@ img {
   text-underline-offset: 2px;
   cursor: pointer;
 }
-.contact-page-container .contact-details-container .contact-card-container .body ul li a .tertiary-link .link-text:hover {
+.contact-page-container .contact-details-container .contact-card-container .body .contact-links a .tertiary-link .link-text:hover {
   text-decoration: none;
 }
 .contact-page-container .contact-details-container .contact-card-container .footer {

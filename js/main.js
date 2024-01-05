@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
   addToggleListener()
   handleScroll()
   initFloatingLabels(); // Call the initFloatingLabels function
-
+  window.onload = function() {
+    // Here you can initiate the preload of the webp image
+    var image = new Image();
+    image.src = '/assets/images/contact-page-bkg.webp';
+  };
   // Function to toggle the menu
   function toggleMenu () {
     document.body.classList.toggle('mobile-menu-open')
