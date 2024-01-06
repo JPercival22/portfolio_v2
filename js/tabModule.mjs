@@ -1,20 +1,29 @@
-export function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+// tabModule.mjs
+export function initTabs(tabLinks, tabContents) {
+  function handleTabClick(index) {
+    tabLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+    tabContents.forEach(content => {
+      content.style.display = 'none';
+    });
+
+    tabLinks[index].classList.add('active');
+    tabContents[index].style.display = 'block';
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
+
+  tabLinks.forEach((tabLink, index) => {
+    tabLink.addEventListener('click', () => {
+      handleTabClick(index);
+    });
+  });
 }
 
+export function openFirstTabByDefault(tabLinks, tabContents) {
+  tabContents.forEach(content => {
+    content.style.display = 'none';
+  });
 
-export function openFirstTabByDefault() {
-  // Get the first tab button and trigger a click event on it
-  var firstTabButton = document.getElementsByClassName("tablinks")[0];
-  firstTabButton.click();
+  tabLinks[0].classList.add('active');
+  tabContents[0].style.display = 'block';
 }

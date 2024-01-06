@@ -221,61 +221,17 @@ img {
   border-radius: 50px;
 }
 
-.tabs {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid black;
-}
-
-.tab {
-  cursor: pointer;
-  padding: 10px;
-  width: 33.33%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 1s;
-}
-
-.tab.active {
-  background-color: #b7d1c8;
-}
-
-.tab:hover {
-  background-color: #93c0b0;
-}
-
-.tab-content {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-[data-tab-target] {
-  cursor: pointer;
-}
-
-[data-tab-content] {
-  display: none;
-}
-
-.active[data-tab-content] {
-  display: block;
-}
-
 /* Top nav and menu  */
 #navbar {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: var(--white-bkg);
-  transition: background-color 0.3s ease;
+  transition: box-shadow 0.3s ease; /* Add transition for the box shadow property */
   z-index: 100;
+  box-shadow: none; /* Initially no box shadow */
 }
 #navbar.scrolled {
-  background-color: var(--white-bkg);
   box-shadow: var(--b-shadow);
 }
 #navbar .navbar-container {

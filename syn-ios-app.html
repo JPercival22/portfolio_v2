@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
     <meta name="keywords" content="HTML5, CSS3, JavaScript">
     <meta name="description" content="UX Portfolio for Joseph Percival">
     <meta name="keywords"
@@ -318,7 +318,7 @@
                             title="Please click this button if you would like to view the next project.">
                             Next Project
                         </a>
-                       
+
                     </div>
                 </div>
                 <ul class="bullet-list-row">
@@ -368,13 +368,15 @@
                         </div>
                         <div class="item">
                             <h2>My Role</h2>
-                            <li>UX Researcher</li><br>
-                            <li> UX &amp; UI Designer</li><br>
-                            <li> Product Designer</li><br>
-                            <li> User Tester Facilitator</li><br>
-                            <li> Branding &amp; Design System Creator</li><br>
-                            <li> Front End Framework Analysis</li><br>
-                            <li> Front End Standards Creator</li><br>
+                            <ul>
+                                <li>UX Researcher</li><br>
+                                <li> UX &amp; UI Designer</li><br>
+                                <li> Product Designer</li><br>
+                                <li> User Tester Facilitator</li><br>
+                                <li> Branding &amp; Design System Creator</li><br>
+                                <li> Front End Framework Analysis</li><br>
+                                <li> Front End Standards Creator</li><br>
+                            </ul>
                         </div>
                         <div class="item">
                             <h2>Solution</h2>
@@ -633,11 +635,11 @@
                     </p>
 
                     <div class="tab">
-                        <button id="siteMapBtn" class="tablinks active">Site Map</button>
-                        <button id="siteNavigationBtn" class="tablinks">System Navigation</button>
+                        <button class="tablinks active" data-target="tab1">Site Map</button>
+                        <button class="tablinks" data-target="tab2">System Navigation</button>
                     </div>
 
-                    <div id="siteMap" class="tabcontent">
+                    <div id="tab1" class="tabcontent">
                         <h3>Sitemap</h3>
                         <p>By combining data gathered from user interviews and aligning it with the business
                             requirements, I
@@ -668,7 +670,7 @@
 
                     </div>
 
-                    <div id="siteNavigation" class="tabcontent">
+                    <div id="tab2" class="tabcontent">
                         <h3>System Navigation</h3>
                         <p>These system navigation aim to create a user-centric, structured, and intuitive framework
                             that empowers users to find and navigate through the digital system efficiently and
@@ -710,9 +712,11 @@
                     keep them highly engaged.
                 </p>
                 <aside>
+                  
+           
                     <div class="tab">
-                        <button id="taskFlowBtn" class="tablinks active">Task Flow</button>
-                        <button id="userFlowBtn" class="tablinks">User Flow</button>
+                        <button type="button" id="taskFlowBtn" class="tablinks active">Task Flow</button>
+                        <button type="button" id="userFlowBtn" class="tablinks">User Flow</button>
                     </div>
 
                     <div id="taskFlow" class="tabcontent">
@@ -821,8 +825,10 @@
                             <a href="https://react.dev/">React (Documentation)</a>
                         </li>
                         <li class="li-flex">
-                            <img class="logo-sm" src="/assets/images/Case-Studies/CS2/Logos/MUI-logo.svg" width="40" height="40" alt="Swift UI Logo Image">
-                        <a href="https://mui.com/">MUI (Documentation)</a></li>
+                            <img class="logo-sm" src="/assets/images/Case-Studies/CS2/Logos/MUI-logo.svg" width="40"
+                                height="40" alt="Swift UI Logo Image">
+                            <a href="https://mui.com/">MUI (Documentation)</a>
+                        </li>
                     </ul>
                     <p>
                         After carefully analyzing and scrutinizing each of the options, it was evident that Swift UI,
@@ -1220,7 +1226,7 @@
                                     height="500">
                             </a>
                         </div>
-                        <div class="col" style="display:flex;flex-direction: column;">
+                        <div class="col">
                             <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/modals.webp"
                                 data-lightbox="mygallery" data-title="UI Kit image 2 - Icons, Button States and FAB's.">
                                 <img class="lg lazyload"
@@ -1250,7 +1256,7 @@
                         <button class="tab-button" onclick="openTab(event, 'tab2')">Medium</button>
                         <button class="tab-button" onclick="openTab(event, 'tab3')">Large</button>
                     </div>
-                    <div id="tab1" class="tab-content">
+                    <div class="tab-content">
                         <h2>Small Viewports</h2>
                         <p>Below are the Hi-Fi Designs for smaller viewports (equal to and below 600px). Click on
                             any of the images to zoom in.</p>
@@ -1395,7 +1401,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="tab2" class="tab-content">
+                <div  class="tab-content">
                     <h2>Medium Viewports</h2>
                     <p>Below are the Hi-Fi Designs for small to large Tablet viewports (600px to 1200px).
                         Click on any of the
@@ -1409,7 +1415,7 @@
                                     alt="Image of Index page for medium sized viewports." width="150" height="500">
                             </a>
                         </div>
-                        <div class="col" style="display:flex;flex-direction: column;">
+                       <div class="col">
                             <a href="/assets/images/Case-Studies/CS1/hi-fi/tablet/modals.webp" data-lightbox="mygallery"
                                 data-title="Image of all modals for medium sized viewports.">
                                 <img class="md lazyload"
@@ -1534,7 +1540,7 @@
                                     alt="Image of the Index page for large sized viewports." width="150" height="500">
                             </a>
                         </div>
-                        <div class="col" style="display:flex;flex-direction: column;">
+                       <div class="col">
                             <a href="/assets/images/Case-Studies/CS1/hi-fi/desktop/modals.webp"
                                 data-lightbox="mygallery"
                                 data-title="Image of the Confirmation modal for medium sized viewports.">
