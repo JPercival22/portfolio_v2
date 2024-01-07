@@ -292,13 +292,33 @@ img.logo-sm {
 .hero-container {
   display: flex;
   flex-direction: column;
+  background: white;
+  padding: 10px;
+  margin-bottom: 1em;
 }
-
-.hero-header {
+.hero-container .hero-header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+}
+.hero-container .hero-header .two-button-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: -webkit-fill-available;
+  gap: 1em;
+}
+.hero-container .hero-header .bullet-list-row {
+  list-style-type: none;
+}
+.hero-container .hero-header .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-container {
@@ -575,7 +595,6 @@ figcaption {
   justify-content: center;
   background-color: var(--blue-bkg);
   border-radius: 8px;
-  padding: 0 12px 12px 12px;
 }
 
 .i-phone {
@@ -711,7 +730,7 @@ footer .footer-container {
   transform: translateY(-4px);
 }
 
-.introduction {
+.editorial {
   display: flex;
   flex-direction: column;
   align-content: flex-start;
@@ -720,6 +739,10 @@ footer .footer-container {
   background-color: #fff;
   padding: 10px;
   border-radius: var(--br-8);
+}
+.editorial .skills-section {
+  width: 100%;
+  padding: 10px;
 }
 
 .grid-container {
@@ -801,35 +824,8 @@ tr:nth-of-type(odd) {
   .hero-container {
     padding: 0;
   }
-  #competitive-analysis {
-    margin-bottom: 4em;
-  }
-  #user-interviews {
-    margin-bottom: 4em;
-  }
-  #outcomes {
-    margin-bottom: 4em;
-  }
-  #persona {
-    margin-bottom: 4em;
-  }
-  #ideation {
-    margin-bottom: 4em;
-  }
-  #i-a {
-    margin-bottom: 4em;
-  }
-  #i-design {
-    margin-bottom: 4em;
-  }
-  #ui-design {
-    margin-bottom: 4em;
-  }
-  #ux-testing {
-    margin-bottom: 4em;
-  }
-  #conclusion {
-    margin-bottom: 4em;
+  .editorial {
+    margin-bottom: 1em;
   }
   .case-study-inner {
     margin: 1em;
@@ -855,11 +851,6 @@ tr:nth-of-type(odd) {
   }
   .content .td .col-right {
     width: 24%;
-  }
-  .centered-row {
-    background-color: var(--blue-bkg);
-    border-radius: 8px;
-    padding: 0 12px 12px 12px;
   }
   .no-background {
     background-color: var(--no-background);
@@ -1009,12 +1000,16 @@ tr:nth-of-type(odd) {
   .sidebar.show {
     width: 30%;
   }
-  .introduction {
+  .editorial {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
+    padding: 2em;
+  }
+  .editorial .skills-section .centered-row {
     padding: 2em;
   }
   .grid-container {
@@ -1246,7 +1241,7 @@ tr:nth-of-type(odd) {
     margin: 0;
   }
   section {
-    width: 80%;
+    width: 84%;
     margin: 0 auto;
   }
   .grid-container-2col {
@@ -1369,15 +1364,19 @@ tr:nth-of-type(odd) {
   }
   .hero-container {
     width: 100%;
+    padding: 2em;
   }
-  .two-button-container {
+  .hero-container .two-button-container {
     justify-content: flex-end;
   }
-  .two-button-container .primary-button {
+  .hero-container .two-button-container .primary-button {
     width: 15%;
   }
-  .two-button-container .secondary-button {
+  .hero-container .two-button-container .secondary-button {
     width: 15%;
+  }
+  .hero-container .bullet-list-row {
+    list-style: none;
   }
   .main-content {
     width: 70%;
