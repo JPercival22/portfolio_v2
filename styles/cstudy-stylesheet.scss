@@ -1321,6 +1321,7 @@ tr {
 	section {
 		width: 84%;
 		margin: 0 auto;
+		padding-top: 0;
 	}
 	.grid-container-2col {
 		display: grid;
@@ -1435,12 +1436,13 @@ tr {
 		display: none;
 	}
 	.sidebar {
-		width: auto;
-		left: 4em;
-		overflow-x: visible;
+		top: 50px;
+		width: 300px;
+		padding-left: 4em;
 		border: none;
 		box-shadow: none;
 		border-radius: var(--br-8);
+		
 	}
 	.mobile-sidebar {
 		display: none;
@@ -1448,6 +1450,7 @@ tr {
 	.hero-container {
 		width: 100%;
 		padding: 2em;
+		padding-top: 0;
 		.two-button-container {
 			.primary-button {
 				width: 15%;

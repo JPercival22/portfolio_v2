@@ -1243,6 +1243,7 @@ tr:nth-of-type(odd) {
   section {
     width: 84%;
     margin: 0 auto;
+    padding-top: 0;
   }
   .grid-container-2col {
     display: grid;
@@ -1352,9 +1353,9 @@ tr:nth-of-type(odd) {
     display: none;
   }
   .sidebar {
-    width: auto;
-    left: 4em;
-    overflow-x: visible;
+    top: 50px;
+    width: 300px;
+    padding-left: 4em;
     border: none;
     box-shadow: none;
     border-radius: var(--br-8);
@@ -1365,6 +1366,7 @@ tr:nth-of-type(odd) {
   .hero-container {
     width: 100%;
     padding: 2em;
+    padding-top: 0;
   }
   .hero-container .two-button-container {
     justify-content: flex-end;
