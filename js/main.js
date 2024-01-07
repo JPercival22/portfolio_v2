@@ -1,142 +1,155 @@
-import { addToggleListener } from "./menuModule.mjs";
+// Import statements
+import { addToggleListener } from './menuModule.mjs'; // Import addToggleListener from menuModule
 import { handleScroll as customNavigationHandleScroll } from "./navigationModule.mjs";
 import { initFloatingLabels } from "./form-floating-labels.mjs";
-import { setResponsiveImages } from "./responsiveImageModule.mjs";
-import { createTabModule } from "./tabModule.mjs"; // Import createTabModule from tabModule.mjs
+import { createTabModule } from "./tabModule.mjs";
 
-const addMainFunctionality = () => {
-  addToggleListener(); // Initiates menu toggle functionality
-  customNavigationHandleScroll(); // Handles scroll behavior for navigation
-  initFloatingLabels(); // Initializes floating labels for form inputs
-  setResponsiveImages(); // Sets up responsive images
-  handleDynamicImports(); // Dynamic imports for responsive image, sidebar, and read more modules
-  initializeTabModules(); // Initialize tab modules
-  preloadWebpImage(); // Preloads a webp image
-};
+// Define menuToggle
+const menuToggle = document.querySelector(".menu-toggle");
 
-// Function to toggle the menu
-function toggleMenu() {
-  const menuToggle = document.querySelector(".menu-toggle"); // Select the menu toggle button
-  const navMenu = document.getElementById("navMenu"); // Select the navigation menu
-
-  const toggleMobileMenu = () => {
-    navMenu.classList.toggle("show"); // Toggle the 'show' class on the navigation menu
-  };
-
-  menuToggle.addEventListener("click", toggleMobileMenu); // Attach the toggleMobileMenu function to the menu toggle button
+// Function to add main functionality
+function addMainFunctionality() {
+  addToggleListener(menuToggle); // Use addToggleListener to attach toggleMobileMenu to menuToggle
+  customNavigationHandleScroll();
+  initFloatingLabels();
+  initializeTabModules();
+  preloadWebpImage();
+  initLightboxFunctionality();
+  handleDynamicImports();
 }
+
+// DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', () => {
+  addMainFunctionality();
+});
 
 function initializeTabModules() {
   const tabContainers = document.querySelectorAll('.tab-container');
-  tabContainers.forEach(tabContainer => {
-    const tabButtons = tabContainer.querySelectorAll('.tab-buttons .tab-button');
-    const tabContents = tabContainer.querySelectorAll('.tab-contents .tab-module');
+  tabContainers.forEach((tabContainer) => {
+    try {
+      const tabButtons = tabContainer.querySelectorAll('.tab-buttons .tab-button');
+      const tabContents = tabContainer.querySelectorAll('.tab-contents .tab-module');
 
-    tabButtons.forEach((tabButton, index) => {
-      tabButton.addEventListener('click', () => {
-        // Hide all tab contents
-        tabContents.forEach(tabContent => {
-          if (tabContent) {
-            tabContent.style.display = 'none';
-          }
-        });
-
-        // Display the clicked tab content if it exists
-        if (tabContents[index]) {
-          tabContents[index].style.display = 'block';
-        }
-
-        // Update active tab button
-        tabButtons.forEach(button => {
-          button.classList.remove('active');
-        });
-        tabButton.classList.add('active');
-
-        // Store the active tab index in sessionStorage
-        sessionStorage.setItem('activeTabIndex', index);
-      });
-    });
-
-    // Retrieve the active tab index from sessionStorage upon page load
-    const activeTabIndex = sessionStorage.getItem('activeTabIndex');
-    if (activeTabIndex !== null && activeTabIndex < tabContents.length) {
-      // Hide all tab contents
-      tabContents.forEach(tabContent => {
-        if (tabContent) {
-          tabContent.style.display = 'none';
+      tabContainer.addEventListener('click', (event) => {
+        const tabButton = event.target.closest('.tab-button');
+        if (tabButton) {
+          tabButtons.forEach((button, index) => {
+            if (button === tabButton) {
+              tabContents.forEach((tabContent, contentIndex) => {
+                if (tabContent) {
+                  tabContent.style.display = contentIndex === index ? 'block' : 'none';
+                }
+              });
+              tabButtons.forEach((button) => {
+                button.classList.remove('active');
+              });
+              tabButton.classList.add('active');
+              sessionStorage.setItem('activeTabIndex', index);
+            }
+          });
         }
       });
-      // Display the tab content based on the retrieved active tab index, if it exists
-      if (tabContents[activeTabIndex]) {
-        tabContents[activeTabIndex].style.display = 'block';
+
+      const activeTabIndex = sessionStorage.getItem('activeTabIndex');
+      if (activeTabIndex !== null && activeTabIndex < tabContents.length) {
+        tabContents.forEach((tabContent, index) => {
+          tabContent.style.display = index == activeTabIndex ? 'block' : 'none';
+        });
+        tabButtons.forEach((button, index) => {
+          button.classList.toggle('active', index == activeTabIndex);
+        });
+      } else {
+        tabContents[0].style.display = 'block';
+        tabButtons[0].classList.add('active');
+        sessionStorage.setItem('activeTabIndex', 0);
       }
-      // Update the active tab button
-      tabButtons.forEach(button => {
-        button.classList.remove('active');
-      });
-      if (tabButtons[activeTabIndex]) {
-        tabButtons[activeTabIndex].classList.add('active');
-      }
-    } else {
-      // If no valid activeTabIndex is found in sessionStorage, display the content of the first tab
-      tabContents[0].style.display = 'block';
-      tabButtons[0].classList.add('active');
-      sessionStorage.setItem('activeTabIndex', 0);
+    } catch (error) {
+      console.error('Error initializing tab modules:', error);
     }
   });
 }
 
+function openLightbox(imageSrc, imageAlt, lightbox) {
+  lightbox.querySelector('img').src = imageSrc;
+  lightbox.querySelector('img').alt = imageAlt;
+  lightbox.style.display = 'block';
+  // Additional logic for displaying/handling the lightbox
+}
+
+function closeLightbox(lightbox) {
+  lightbox.style.display = 'none';
+  // Additional logic for hiding the lightbox
+}
+
+function initLightboxFunctionality() {
+  const tabContainers = document.querySelectorAll('.tab-container');
+
+  tabContainers.forEach((tabContainer) => {
+    const images = tabContainer.querySelectorAll('.gallery img');
+    const lightbox = tabContainer.querySelector('.lightbox');
+    
+    images.forEach((image) => {
+      image.addEventListener('click', () => {
+        openLightbox(image.src, image.alt, lightbox);
+      });
+    });
+
+    if (lightbox) {
+      const closeBtn = lightbox.querySelector('.close-btn'); // Assuming there's a close button with the class 'close-btn'
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          closeLightbox(lightbox);
+        });
+      }
+
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox || event.target === lightbox.querySelector('img') || event.target === closeBtn) {
+          closeLightbox(lightbox);
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.style.display === 'block') {
+          closeLightbox(lightbox);
+        }
+      });
+    }
+  });
+}
+
+initLightboxFunctionality();
 
 
-// Function to preload webp image
+// Preload a webp image
 const preloadWebpImage = () => {
   const image = new Image();
   image.src = '/assets/images/contact-page-bkg.webp';
 };
 
-// Function to handle dynamic imports
-const handleDynamicImports = () => {
+// Handle dynamic imports
+const handleDynamicImports = async () => {
   try {
-    const allImages = document.querySelectorAll('img[data-responsive]'); // Assuming data attribute indicates responsive images
+    const allImages = document.querySelectorAll('img[data-responsive]');
     if (allImages.length > 0) {
-      import('./responsiveImageModule.mjs')
-        .then(({ setResponsiveImages }) => {
-          setResponsiveImages();
-        })
-        .catch(error => {
-          console.error('Error importing responsive image module:', error);
-        });
+      const { setResponsiveImages } = await import('./responsiveImageModule.mjs');
+      setResponsiveImages();
     }
 
     const sidebarElement = document.getElementById('sidebar');
     if (sidebarElement) {
-      import('./sideBarModule.mjs')
-        .then(module => {
-          module.toggleSidebar(); // Assuming module exports a toggleSidebar function
-        })
-        .catch(error => {
-          console.error('Error importing sidebar module:', error);
-        });
+      const { toggleSidebar } = await import('./sideBarModule.mjs');
+      toggleSidebar();
     }
 
     const readMoreElement = document.querySelector('.read-more');
     if (readMoreElement) {
-      import('./readMore.mjs')
-        .then(readMoreModule => {
-          readMoreModule.initReadMore();
-        })
-        .catch(error => {
-          console.error('Error importing read more module:', error);
-        });
+      const { initReadMore } = await import('./readMore.mjs');
+      initReadMore();
     }
   } catch (error) {
     console.error('Error handling dynamic imports:', error);
   }
 };
 
-// Additional helper functions or code can be placed below
-document.addEventListener('DOMContentLoaded', () => {
-  toggleMenu(); // Call the function to handle the menu toggle
-  addMainFunctionality(); // Call the composite function on DOM ready
-  initializeTabModules(); // Initialize tab modules after the DOM is fully loaded
-});
+// Call the main functionality
+document.addEventListener('DOMContentLoaded', addMainFunctionality);

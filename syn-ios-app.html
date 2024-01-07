@@ -13,7 +13,6 @@
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <meta name="theme-color" content="#317EFB" />
     <link rel="preload" href="/styles/cstudy-stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/styles/lightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -32,7 +31,7 @@
                 </a>
             </div>
 
-            <button type="button" class="menu-toggle" onclick="toggleMenu()" aria-label="main navigation menu button">
+            <button type="button" class="menu-toggle" aria-label="main navigation menu button">
                 <!-- <span class="icon-bar"> -->
                 <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
                     width="48">
@@ -457,21 +456,13 @@
 
                         <div class="no-background centered-row ">
                             <div class="image-container">
-                                <div class="gallery">
-                                    <a href="/assets/images/Case-Studies/CS2/planning/SynUser-Interview-Affinity-Map.svg"
-                                        data-lightbox="mygallery" data-title="User Interviews Affinity Map">
-                                        <img class="wide lazyload"
-                                            data-src="/assets/images/Case-Studies/CS2/planning/SynUser-Interview-Affinity-Map.svg"
-                                            alt="User Interviews Affinity Map" width="150" height="300">
-                                        <div class="overlay">
-                                            <div class="overlay-message">
-                                                <p>Click to enlarge.</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                <figure class="gallery">
+                                    <img class="wide lazyload"
+                                        src="/assets/images/Case-Studies/CS2/planning/SynUser-Interview-Affinity-Map.svg"
+                                        alt="User Interviews Affinity Map" width="150" height="300">
+                                    <figcaption>User Insights gained from User Interviews and Surveys</figcaption>
+                                </figure>
                             </div>
-                            <figcaption>Qualitative Persona</figcaption>
                         </div>
                     </div>
                 </div>
@@ -554,20 +545,11 @@
                     <div class="no-background centered-row ">
                         <div class="image-container">
                             <div class="gallery">
-                                <a href="/assets/images/Case-Studies/CS2/planning/persona.svg" data-lightbox="mygallery"
-                                    data-title="Created Persona">
-                                    <img class="wide lazyload"
-                                        data-src="/assets/images/Case-Studies/CS2/planning/persona.svg"
-                                        alt="Created Persona" width="150" height="300">
-                                    <div class="overlay">
-                                        <div class="overlay-message">
-                                            <p>Click to enlarge.</p>
-                                        </div>
-                                    </div>
-                                </a>
+                                <img class="generic-image" src="/assets/images/Case-Studies/CS2/planning/persona.svg" alt="Created Persona" />
+                                <figcaption>Qualitative Persona</figcaption>
                             </div>
+
                         </div>
-                        <figcaption>Qualitative Persona</figcaption>
                     </div>
                 </div>
             </section>
@@ -681,25 +663,15 @@
                                         sitemap follows established conventions in the e-commerce industry, meeting user
                                         expectations and satisfying business objectives. It serves as a visual
                                         representation of the site's layout and content.</p>
-                                    <div class="no-background centered-row">
-                                        <div class="image-container">
-                                            <div class="gallery">
-                                                <a href="/assets/images/Case-Studies/CS2/planning/siteMap.svg"
-                                                    data-lightbox="mygallery"
-                                                    data-title="Information Architecture and Hierarchy Design">
-                                                    <img class="wide lazyload"
-                                                        data-src="/assets/images/Case-Studies/CS2/planning/siteMap.svg"
-                                                        alt="Information Architecture and Hierarchy Design" width="150"
-                                                        height="300">
-                                                    <div class="overlay">
-                                                        <div class="overlay-message">
-                                                            <p>Click to enlarge.</p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <figcaption>Qualitative Persona</figcaption>
+                                        <div class="no-background centered-row">
+                                            <div class="image-container">
+                                                <figure class="gallery" data-index="0">
+                                                <img src="/assets/images/Case-Studies/CS2/planning/siteMap.svg"
+                                                    alt="Information Architecture and Hierarchy Design" />
+                                                <figcaption>Site Map</figcaption>
+                                            </figure>
                                         </div>
+                                        
                                     </div>
                                 </div>
                                 <div id="tabContent2" class="tab-module" data-title="Tab 2">
@@ -713,23 +685,22 @@
                                         minimal effort.</p>
                                     <div class="no-background centered-row">
                                         <div class="image-container">
-                                            <div class="gallery">
-                                                <a href="/assets/images/Case-Studies/CS2/planning/Nav-System.svg"
-                                                    data-lightbox="mygallery"
-                                                    data-title="Information Architecture and Hierarchy Design">
-                                                    <img class="wide lazyload"
-                                                        data-src="/assets/images/Case-Studies/CS2/planning/Nav-System.svg"
-                                                        alt="Information Architecture and Hierarchy Design" width="150"
-                                                        height="300">
-                                                    <div class="overlay">
-                                                        <div class="overlay-message">
-                                                            <p>Click to enlarge.</p>
-                                                        </div>
-                                                    </div>
-                                                </a>
+                                            <figure class="gallery" data-index="0">
+                                                <img class="md" src="/assets/images/Case-Studies/CS2/planning/Nav-System.svg"
+                                                    alt="Navigation System IA Design" width="150" height="300" />
+                                                <figcaption>Navigation System</figcaption>
+                                            </figure>
+
+                                            <div id="lightbox" class="lightbox">
+                                                <div class="lightbox-content">
+                                                    <img id="lightbox-image md"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        alt="Navigation System IA Design" />
+                                                    <button type="button" id="close-btn"
+                                                        class="close-btn">&times;</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <figcaption>Qualitative Persona</figcaption>
                                     </div>
                                 </div>
                             </div>
@@ -776,23 +747,26 @@
                                     </p>
                                     <div class="no-background centered-row ">
                                         <div class="image-container">
-                                            <div class="gallery">
-                                                <a href="/assets/images/Case-Studies/CS2/planning/Task-Flow.webp"
-                                                    data-lightbox="mygallery" data-title="User Flow Diagram.">
-                                                    <img class="wide lazyload"
-                                                        data-src="/assets/images/Case-Studies/CS2/planning/Task-Flow.webp"
-                                                        alt="Task Flow Diagram" width="150" height="300">
+                                            <figure class="gallery" data-index="1">
+                                                <img src="/assets/images/Case-Studies/CS2/planning/Task-Flow.webp"
+                                                    alt="Task Flow Diagram.">
 
-                                                    <div class="overlay">
-                                                        <div class="overlay-message">
-                                                            <p>Click to enlarge.</p>
-                                                        </div>
-                                                    </div>
-                                                </a>
+                                                <figcaption>Task Flow depicting key journeys when buying an item.
+                                                </figcaption>
+                                            </figure>
+
+                                            <div id="lightbox1" class="lightbox">
+                                                <div class="lightbox-content">
+                                                    <img id="lightbox-image1"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        alt="Navigation System IA Design" />
+                                                    <button type="button" id="close-btn1"
+                                                        class="close-btn">&times;</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <figcaption>Task Flow depicting key journeys when buying an item.</figcaption>
+
                                 </div>
                                 <div id="tabContent4" class="tab-module" data-title="Tab 2">
                                     <h3>User Flow</h3>
@@ -814,25 +788,28 @@
 
                                     <div class="no-background centered-row ">
                                         <div class="image-container">
-                                            <div class="gallery">
-                                                <a href="/assets/images/Case-Studies/CS2/planning/userflow.webp"
-                                                    data-lightbox="mygallery" data-title="User Flow Diagram.">
-                                                    <img class="wide lazyload"
-                                                        data-src="/assets/images/Case-Studies/CS2/planning/userflow.webp"
-                                                        alt="User Flow Diagram" width="150" height="300">
-                                                    <div class="overlay">
-                                                        <div class="overlay-message">
-                                                            <p>Click to enlarge.</p>
-                                                        </div>
+                                                <figure class="gallery" data-index="2">
+                                                    <img src="/assets/images/Case-Studies/CS2/planning/userflow.webp"
+                                                        alt="User Flow Diagram." width="150" height="300">
+
+                                                    <figcaption>User Flow Diagram gained from research.</figcaption>
+                                                </figure>
+
+                                                <div id="lightbox2" class="lightbox">
+                                                    <div class="lightbox-content">
+                                                        <img id="lightbox-image2"
+                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                            alt="Navigation System IA Design" />
+                                                        <button type="button" id="close-btn2"
+                                                            class="close-btn">&times;</button>
                                                     </div>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <figcaption>User Flow Diagram gained from research.</figcaption>
                                 </div>
                             </div>
-                        </div>
+                      
                     </aside>
                 </div>
             </section>
@@ -1021,8 +998,8 @@
                         and convey the user-centric insights and requirements identified during research.
                     </p>
                     <p>You can click any image to enlarge them.</p>
-        
-      
+
+
                     <aside>
                         <div class="tab-container" id="tabContainer3">
                             <div class="tab-buttons">
@@ -1831,7 +1808,8 @@
                                             <h3>Visit</h3>
                                             <p>This is a private and specific to the organisation.</p>
                                             <p>Below is a link to a design replication.</p>
-                                            <a class="tertiary-link" href="www.josephpercival.co.uk">##insert Design link###</a>
+                                            <a class="tertiary-link" href="www.josephpercival.co.uk">##insert Design
+                                                link###</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1913,15 +1891,12 @@
             </svg>
         </a>
     </main>
-
-    <!-- custom js  -->
+    <!-- module js  -->
     <script type="module" src="/js/tabModule.mjs" defer></script>
     <script type="module" src="/js/menuModule.mjs" defer></script>
-    <!-- main js  -->
+
+    <!-- custom js  -->
     <script type="module" src="/js/main.js" defer></script>
-    <!-- lightbox js  -->
-    <script nomodule src="/js/lightbox.min.js" async defer></script>
-    <!-- lazyload-images  -->
     <script type="module" src="/js/lazysizes.min.js" async defer=""></script>
 </body>
 
