@@ -1,20 +1,24 @@
-export function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+export function createTabModule(title, content) {
+  const tabButton = document.createElement('button');
+  tabButton.classList.add('tab-button');
+  tabButton.textContent = title;
 
+  const tabContent = document.createElement('div');
+  tabContent.classList.add('tab-content');
+  tabContent.textContent = content;
 
-export function openFirstTabByDefault() {
-  // Get the first tab button and trigger a click event on it
-  var firstTabButton = document.getElementsByClassName("tablinks")[0];
-  firstTabButton.click();
+  function addButtonToContainer(container) {
+    container.appendChild(tabButton);
+  }
+
+  function addContentToContainer(container) {
+    container.appendChild(tabContent);
+  }
+
+  return {
+    tabButton,
+    tabContent,
+    addButtonToContainer,
+    addContentToContainer,
+  };
 }

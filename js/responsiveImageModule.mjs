@@ -1,10 +1,19 @@
-function setResponsiveImages(imageData) {
-  window.onload = function() {
+function setResponsiveImages() {
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img[data-responsive]');
+    const imageData = Array.from(images).map(image => {
+      return {
+        elementId: image.id,
+        smallImagePath: image.getAttribute('data-small'),
+        largeImagePath: image.getAttribute('data-large')
+      };
+    });
+
     imageData.forEach(image => {
       const imageElement = document.getElementById(image.elementId);
       if (!imageElement) {
         console.error('Element with id ' + image.elementId + ' not found');
-        return; // Exit the loop iteration if the element is not found
+        return;
       }
 
       if (window.innerWidth < 768) {
@@ -13,7 +22,7 @@ function setResponsiveImages(imageData) {
         imageElement.src = image.largeImagePath;
       }
     });
-  };
+  });
 }
 
 export { setResponsiveImages };
