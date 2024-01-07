@@ -8,7 +8,7 @@
   --blue-bkg: #f0f8ff;
   --form-p-text: #666;
   --no-background: transparent;
-  --tertiary-link: text-decoration:underline;
+  --tertiary-link: text-decoration: underline;
   --b-shadow: 10px 10px 22px -6px #b9b9b9;
   --br-shadow: 8px 8px 16px -8px #b9b9b9;
   --border: 1px solid #afafaf;
@@ -531,14 +531,19 @@ img.logo-sm {
   justify-content: center;
   border: none;
   padding: 10px 20px;
-  transition: all 1s;
+  transition: all 0.5s ease-in-out;
   font-family: var(--body-copy);
   font-size: 18px;
-  width: 33.33%;
+  background-color: white;
+  border-bottom: 2px solid transparent;
+  color: grey;
 }
 
 .tab-button.active {
-  background-color: #b7d1c8;
+  border-bottom: 2px solid #b7d1c8;
+  background-color: white;
+  font-weight: 800;
+  color: #1a1a1a;
 }
 
 .tab-content {
@@ -1217,13 +1222,10 @@ tr:nth-of-type(odd) {
     box-shadow: none;
   }
   .secondary-button:hover {
-    background-color: #DFEDFF;
+    background-color: #dfedff;
     color: #1a1a1a;
     border-color: #1a1a1a;
     box-shadow: none;
-  }
-  .tab:hover {
-    background-color: #93c0b0;
   }
   .image-container {
     position: relative;
@@ -1338,37 +1340,37 @@ tr:nth-of-type(odd) {
     padding: 1em;
     border-radius: 8px;
   }
-  .tab {
-    overflow: hidden;
-    background-color: lightblue;
-    display: inline-flex;
+  .tab-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .tab-container .tab-buttons {
+    display: flex;
+    flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     width: 100%;
+    background-color: aliceblue;
   }
-  .tab:hover {
-    background-color: lightblue;
+  .tab-container .tab-buttons button:hover {
+    border-color: #b7d1c8;
+    color: #1a1a1a;
   }
-  .tab button:hover {
-    background-color: #568898;
-    color: #fff;
-  }
-  .tablinks {
-    background-color: #f2f2f2;
-    font-family: inherit;
-    font-size: 1rem;
-    padding: 8px 16px;
-    border: none;
-    cursor: pointer;
-  }
-  .tablinks.active {
-    background-color: #568898;
-    color: #fff;
-  }
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
+  .tab-container .tab-module {
+    border: 1px solid gainsboro;
     border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 1em;
+  }
+  .tab-container .tab-module .gallery {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2em;
   }
   .navbar-container {
     margin: 0 130px;
@@ -1413,7 +1415,7 @@ tr:nth-of-type(odd) {
   }
   .bullet-list-row li {
     font-size: 16px;
-    color: #4E4E4C;
+    color: #4e4e4c;
   }
   .bullet-list-col {
     display: flex;

@@ -1,116 +1,142 @@
-import { addToggleListener, removeToggleListener } from './menuModule.mjs'
-import { handleScroll as navigationHandleScroll } from './navigationModule.mjs' // Rename
-import { initFloatingLabels } from './form-floating-labels.mjs'; // Changed import to only 
-import { setResponsiveImages } from './responsiveImageModule.mjs'
-import { handleScroll } from './navigationModule.mjs'
-import { openTab, openFirstTabByDefault } from './tabModule.mjs';
+import { addToggleListener } from "./menuModule.mjs";
+import { handleScroll as customNavigationHandleScroll } from "./navigationModule.mjs";
+import { initFloatingLabels } from "./form-floating-labels.mjs";
+import { setResponsiveImages } from "./responsiveImageModule.mjs";
+import { createTabModule } from "./tabModule.mjs"; // Import createTabModule from tabModule.mjs
 
-document.addEventListener('DOMContentLoaded', function () {
-  addToggleListener()
-  handleScroll()
-  initFloatingLabels(); // Call the initFloatingLabels function
+const addMainFunctionality = () => {
+  addToggleListener(); // Initiates menu toggle functionality
+  customNavigationHandleScroll(); // Handles scroll behavior for navigation
+  initFloatingLabels(); // Initializes floating labels for form inputs
+  setResponsiveImages(); // Sets up responsive images
+  handleDynamicImports(); // Dynamic imports for responsive image, sidebar, and read more modules
+  initializeTabModules(); // Initialize tab modules
+  preloadWebpImage(); // Preloads a webp image
+};
 
-// tabs functionality 
-// Function to open the first tab by default
-function openFirstTabByDefault() {
-  // Get the first tab button and trigger a click event on it
-  var firstTabButton = document.getElementsByClassName("tablinks")[0];
-  firstTabButton.click();
+// Function to toggle the menu
+function toggleMenu() {
+  const menuToggle = document.querySelector(".menu-toggle"); // Select the menu toggle button
+  const navMenu = document.getElementById("navMenu"); // Select the navigation menu
+
+  const toggleMobileMenu = () => {
+    navMenu.classList.toggle("show"); // Toggle the 'show' class on the navigation menu
+  };
+
+  menuToggle.addEventListener("click", toggleMobileMenu); // Attach the toggleMobileMenu function to the menu toggle button
 }
-// Function to handle tab switching
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-// Add event listeners to the tab buttons to call the function
-var tabButtons = document.getElementsByClassName("tablinks");
-for (var i = 0; i < tabButtons.length; i++) {
-  tabButtons[i].addEventListener("click", function(event) {
-    openTab(event, this.id.replace('Btn', ''));
+
+function initializeTabModules() {
+  const tabContainers = document.querySelectorAll('.tab-container');
+  tabContainers.forEach(tabContainer => {
+    const tabButtons = tabContainer.querySelectorAll('.tab-buttons .tab-button');
+    const tabContents = tabContainer.querySelectorAll('.tab-contents .tab-module');
+
+    tabButtons.forEach((tabButton, index) => {
+      tabButton.addEventListener('click', () => {
+        // Hide all tab contents
+        tabContents.forEach(tabContent => {
+          if (tabContent) {
+            tabContent.style.display = 'none';
+          }
+        });
+
+        // Display the clicked tab content if it exists
+        if (tabContents[index]) {
+          tabContents[index].style.display = 'block';
+        }
+
+        // Update active tab button
+        tabButtons.forEach(button => {
+          button.classList.remove('active');
+        });
+        tabButton.classList.add('active');
+
+        // Store the active tab index in sessionStorage
+        sessionStorage.setItem('activeTabIndex', index);
+      });
+    });
+
+    // Retrieve the active tab index from sessionStorage upon page load
+    const activeTabIndex = sessionStorage.getItem('activeTabIndex');
+    if (activeTabIndex !== null && activeTabIndex < tabContents.length) {
+      // Hide all tab contents
+      tabContents.forEach(tabContent => {
+        if (tabContent) {
+          tabContent.style.display = 'none';
+        }
+      });
+      // Display the tab content based on the retrieved active tab index, if it exists
+      if (tabContents[activeTabIndex]) {
+        tabContents[activeTabIndex].style.display = 'block';
+      }
+      // Update the active tab button
+      tabButtons.forEach(button => {
+        button.classList.remove('active');
+      });
+      if (tabButtons[activeTabIndex]) {
+        tabButtons[activeTabIndex].classList.add('active');
+      }
+    } else {
+      // If no valid activeTabIndex is found in sessionStorage, display the content of the first tab
+      tabContents[0].style.display = 'block';
+      tabButtons[0].classList.add('active');
+      sessionStorage.setItem('activeTabIndex', 0);
+    }
   });
 }
 
-// Call the function to open the first tab by default when the page loads
-window.addEventListener('load', openFirstTabByDefault);
 
-// Call the function to open the first tab by default when the page loads
-window.addEventListener('load', openFirstTabByDefault);
 
-  window.onload = function() {
-    // Here you can initiate the preload of the webp image
-    var image = new Image();
-    image.src = '/assets/images/contact-page-bkg.webp';
-  };
-  // Function to toggle the menu
-  function toggleMenu () {
-    document.body.classList.toggle('mobile-menu-open')
-  }
-  // Example condition for importing and using responsive image module
-  const imagesExist = document.querySelectorAll('.responsive-image').length > 0 // Assume all responsive images have a common class 'responsive-image'
-  if (imagesExist) {
-    import('./responsiveImageModule.mjs')
-      .then(({ setResponsiveImages }) => {
-        const imageData = [
-          {
-            elementId: 'ux-guitar',
-            smallImagePath: '/assets/images/guitar-lessons-banner.webp',
-            largeImagePath: '/assets/images/guitar-lessons-banner.webp'
-          },
-          {
-            elementId: 'syn-banner',
-            smallImagePath: '/assets/images/syn-banner.webp',
-            largeImagePath: '/assets/images/syn-banner.webp'
-          },
-          {
-            elementId: 'come-together-banner',
-            smallImagePath: '/assets/images/Come-Together-Banner.webp',
-            largeImagePath: '/assets/images/Come-Together-Banner.webp'
-          }
-          // Add more image data objects here
-        ]
+// Function to preload webp image
+const preloadWebpImage = () => {
+  const image = new Image();
+  image.src = '/assets/images/contact-page-bkg.webp';
+};
 
-        setResponsiveImages(imageData)
-      })
-      .catch(error => {
-        console.error(
-          'An error occurred while importing the responsive image module:',
-          error
-        )
-      })
-  }
+// Function to handle dynamic imports
+const handleDynamicImports = () => {
+  try {
+    const allImages = document.querySelectorAll('img[data-responsive]'); // Assuming data attribute indicates responsive images
+    if (allImages.length > 0) {
+      import('./responsiveImageModule.mjs')
+        .then(({ setResponsiveImages }) => {
+          setResponsiveImages();
+        })
+        .catch(error => {
+          console.error('Error importing responsive image module:', error);
+        });
+    }
 
-  // Example condition for importing and using the slider module
-  if (document.getElementById('sidebar') !== null) {
-    import('./sideBarModule.mjs')
-      .then(module2 => {
-        // Use module2 functionality here
-        module2.toggleSidebar() // Assuming module2 exports a defaultExportedFunction
-      })
-      .catch(error => {
-        console.error('An error occurred while importing module2:', error)
-      })
+    const sidebarElement = document.getElementById('sidebar');
+    if (sidebarElement) {
+      import('./sideBarModule.mjs')
+        .then(module => {
+          module.toggleSidebar(); // Assuming module exports a toggleSidebar function
+        })
+        .catch(error => {
+          console.error('Error importing sidebar module:', error);
+        });
+    }
+
+    const readMoreElement = document.querySelector('.read-more');
+    if (readMoreElement) {
+      import('./readMore.mjs')
+        .then(readMoreModule => {
+          readMoreModule.initReadMore();
+        })
+        .catch(error => {
+          console.error('Error importing read more module:', error);
+        });
+    }
+  } catch (error) {
+    console.error('Error handling dynamic imports:', error);
   }
-  // Add more condition checks and dynamic imports as needed for other modules
-  if (document.querySelector('.read-more') !== null) {
-    import('./readMore.mjs')
-      .then(readMoreModule => {
-        // Use readMoreModule functionality here
-        readMoreModule.initReadMore()
-      })
-      .catch(error => {
-        console.error(
-          'An error occurred while importing readMoreModule:',
-          error
-        )
-      })
-  }
-})
+};
+
+// Additional helper functions or code can be placed below
+document.addEventListener('DOMContentLoaded', () => {
+  toggleMenu(); // Call the function to handle the menu toggle
+  addMainFunctionality(); // Call the composite function on DOM ready
+  initializeTabModules(); // Initialize tab modules after the DOM is fully loaded
+});
