@@ -1,20 +1,23 @@
 // Import statements
-import { addToggleListener } from './menuModule.mjs'; // Import addToggleListener from menuModule
+import { addToggleListener } from './menuModule.mjs';
 import { handleScroll as customNavigationHandleScroll } from "./navigationModule.mjs";
 import { initFloatingLabels } from "./form-floating-labels.mjs";
 import { createTabModule } from "./tabModule.mjs";
+import { openLightbox } from './lightbox.mjs';
 
-// Define menuToggle
-const menuToggle = document.querySelector(".menu-toggle");
-
-// Function to add main functionality
+// Define function to add main functionality
 function addMainFunctionality() {
-  addToggleListener(menuToggle); // Use addToggleListener to attach toggleMobileMenu to menuToggle
+  // Check if menuToggle exists before using it
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (menuToggle) {
+    addToggleListener(menuToggle);
+  }
+
   customNavigationHandleScroll();
   initFloatingLabels();
   initializeTabModules();
   preloadWebpImage();
-  initLightboxFunctionality();
+  initLightboxFunctionality(); // Check if this function is called
   handleDynamicImports();
 }
 
@@ -23,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addMainFunctionality();
 });
 
+// Function to initialize tab modules
 function initializeTabModules() {
   const tabContainers = document.querySelectorAll('.tab-container');
   tabContainers.forEach((tabContainer) => {
@@ -69,33 +73,30 @@ function initializeTabModules() {
   });
 }
 
-function openLightbox(imageSrc, imageAlt, lightbox) {
-  lightbox.querySelector('img').src = imageSrc;
-  lightbox.querySelector('img').alt = imageAlt;
-  lightbox.style.display = 'block';
-  // Additional logic for displaying/handling the lightbox
-}
-
-function closeLightbox(lightbox) {
-  lightbox.style.display = 'none';
-  // Additional logic for hiding the lightbox
-}
 
 function initLightboxFunctionality() {
-  const tabContainers = document.querySelectorAll('.tab-container');
+  const figures = document.querySelectorAll('.gallery[data-index]');
 
-  tabContainers.forEach((tabContainer) => {
-    const images = tabContainer.querySelectorAll('.gallery img');
-    const lightbox = tabContainer.querySelector('.lightbox');
-    
-    images.forEach((image) => {
+  figures.forEach((figure) => {
+    const image = figure.querySelector('img');
+    const lightboxIndex = figure.getAttribute('data-index');
+    const lightbox = document.getElementById(`lightbox_${lightboxIndex}`);
+    const figcaption = figure.querySelector('figcaption');
+
+    // trigger lightbox, using image 
+    if (image && lightbox) {
       image.addEventListener('click', () => {
         openLightbox(image.src, image.alt, lightbox);
       });
-    });
 
-    if (lightbox) {
-      const closeBtn = lightbox.querySelector('.close-btn'); // Assuming there's a close button with the class 'close-btn'
+      // Trigger lightbox on figcaption click
+      if (figcaption) {
+        figcaption.addEventListener('click', () => {
+          openLightbox(image.src, image.alt, lightbox);
+        });
+      }
+
+      const closeBtn = lightbox.querySelector(`#close-btn_${lightboxIndex}`);
       if (closeBtn) {
         closeBtn.addEventListener('click', () => {
           closeLightbox(lightbox);
@@ -103,7 +104,7 @@ function initLightboxFunctionality() {
       }
 
       lightbox.addEventListener('click', (event) => {
-        if (event.target === lightbox || event.target === lightbox.querySelector('img') || event.target === closeBtn) {
+        if (event.target === lightbox || event.target === image || event.target === closeBtn) {
           closeLightbox(lightbox);
         }
       });
@@ -113,13 +114,16 @@ function initLightboxFunctionality() {
           closeLightbox(lightbox);
         }
       });
+    } else {
+      console.error(`Image or Lightbox element not found for figure with data-index ${lightboxIndex}`);
     }
   });
 }
 
-initLightboxFunctionality();
-
-
+function closeLightbox(lightbox) {
+  lightbox.style.display = 'none';
+  // Additional logic for hiding the lightbox
+}
 // Preload a webp image
 const preloadWebpImage = () => {
   const image = new Image();
@@ -150,6 +154,3 @@ const handleDynamicImports = async () => {
     console.error('Error handling dynamic imports:', error);
   }
 };
-
-// Call the main functionality
-document.addEventListener('DOMContentLoaded', addMainFunctionality);
