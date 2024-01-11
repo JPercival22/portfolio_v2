@@ -1,5 +1,6 @@
 /* Style the tab content */
 :root {
+  --body-bkg: #f0f2f5;
   --yellow_bkg: #fff2ce;
   --white-bkg: #fff;
   --blue-bkg: #f0f8ff;
@@ -45,7 +46,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(244, 244, 244, 0.2392156863);
+  background-color: var(--body-bkg);
   color: var(--primary-text-color);
   font-family: var(--body-copy);
 }
@@ -87,19 +88,17 @@ h3 {
   font-weight: 500;
   line-height: 22pt;
   color: var(--brand-color);
-  text-align: left;
   letter-spacing: 3pt;
   text-transform: capitalize;
 }
 
 h4 {
   font-family: var(--body-copy);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 22pt;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 0.1pt;
   color: var(--brand-color);
-  text-align: left;
-  letter-spacing: 3pt;
+  letter-spacing: 1pt;
   text-transform: capitalize;
 }
 
@@ -139,11 +138,12 @@ ol {
   padding: 0;
 }
 ol li {
+  display: list-item;
   font-family: var(--body-copy);
   font-size: 16px;
 }
 
-li.li-flex {
+li {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -152,11 +152,14 @@ li.li-flex {
 img {
   width: 100%;
   height: auto;
+  border: 1px solid gainsboro;
+  border-radius: var(--br-8);
 }
 
 img.logo-sm {
   width: 40px;
   height: auto;
+  border: none;
 }
 
 .primary-button {
@@ -412,6 +415,7 @@ img.logo-sm {
 }
 .sidebar a .nav-item {
   margin-left: 10px;
+  fill: #404040;
 }
 
 .sidebar.show {
@@ -426,7 +430,7 @@ img.logo-sm {
   align-items: flex-start;
   border-radius: var(--br-8);
 }
-.sideBar .ul {
+.sideBar .sideBar-content ul {
   list-style-type: none;
   padding: 0;
   margin: 0 1em;
@@ -438,7 +442,7 @@ img.logo-sm {
   align-items: flex-start;
   gap: 1em;
 }
-.sideBar .ul .side-bar-list-item {
+.sideBar .sideBar-content ul .side-bar-list-item {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -446,8 +450,8 @@ img.logo-sm {
   align-items: center;
   width: 100%;
 }
-.sideBar .ul .side-bar-list-item a {
-  color: #000;
+.sideBar .sideBar-content ul .side-bar-list-item a {
+  color: #404040;
   text-decoration: none;
   display: block;
   transition: 0.3s;
@@ -457,6 +461,9 @@ img.logo-sm {
   align-items: center;
   width: 100%;
   padding: 10px;
+}
+.sideBar .sideBar-content ul .side-bar-list-item a .side-bar-icon svg {
+  fill: #404040;
 }
 
 .sm-cs-hero {
@@ -510,7 +517,7 @@ img.logo-sm {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 2em;
 }
 
@@ -737,6 +744,17 @@ footer .footer-container {
   background-color: #fff;
   padding: 10px;
   border-radius: var(--br-8);
+  margin-bottom: 1em;
+}
+.editorial .conclusion_attached {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+}
+.editorial .conclusion_attached ol li {
+  margin: 0 0 10px 10px;
 }
 .editorial .skills-section {
   width: 100%;
@@ -821,9 +839,6 @@ tr:nth-of-type(odd) {
   }
   .hero-container {
     padding: 0;
-  }
-  .editorial {
-    margin-bottom: 1em;
   }
   .case-study-inner {
     margin: 1em;
@@ -959,14 +974,8 @@ tr:nth-of-type(odd) {
     width: 30%;
   }
   .editorial {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    justify-content: center;
-    align-items: flex-start;
     width: 100%;
     padding: 2em;
-    border-radius: var(--br);
   }
   .editorial .skills-section .centered-row {
     padding: 2em;

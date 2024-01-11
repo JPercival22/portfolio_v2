@@ -51,7 +51,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(244, 244, 244, 0.2392156863);
+  background-color: #f0f2f5;
   color: var(--primary-text-color);
   font-family: var(--body-copy);
 }
