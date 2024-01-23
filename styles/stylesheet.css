@@ -404,11 +404,17 @@ img {
 }
 .wrapper .hero-header {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .hero-header .headline {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.wrapper .hero-header .highlight {
+.wrapper .hero-header .headline .highlight {
   color: var(--primary-text-color);
   font-weight: 800;
   padding: 8px;
@@ -416,21 +422,21 @@ img {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
-.wrapper .hero-header .outline {
+.wrapper .hero-header .headline .outline {
   color: var(--primary-text-color);
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
-.wrapper .hero-header .outline.green {
+.wrapper .hero-header .headline .outline.green {
   background-color: #cefe9d;
 }
-.wrapper .hero-header .outline.pink {
+.wrapper .hero-header .headline .outline.pink {
   background-color: #ff90ed;
 }
-.wrapper .hero-header .outline.blue {
+.wrapper .hero-header .headline .outline.blue {
   background-color: #9ee3fe;
 }
-.wrapper .hero-header .outline.orange {
+.wrapper .hero-header .headline .outline.orange {
   background-color: #ffb366;
 }
 @keyframes jitter {
@@ -444,25 +450,26 @@ img {
     transform: rotate(-0.5deg);
   }
 }
-.wrapper .hero-header .jitter {
+.wrapper .hero-header .headline .jitter {
   animation: jitter 0.5s ease-in-out infinite;
   display: inline-block; /* Ensures the element stays inline */
 }
-.wrapper .hero-editorial {
-  display: flex;
-  flex-direction: column-reverse;
-}
-.wrapper .hero-editorial .image-container {
+.wrapper .hero-header .image-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.wrapper .hero-editorial .image-container .profile-image {
-  width: 200px;
-  height: 200px;
+.wrapper .hero-header .image-container .profile-image {
+  width: 130px;
+  height: 130px;
   background-image: url(/assets/images/me-min.webp);
   background-size: cover;
+  background-color: gainsboro;
   border-radius: 50%;
+}
+.wrapper .hero-editorial {
+  display: flex;
+  flex-direction: column-reverse;
 }
 .wrapper .editorial-footer {
   display: flex;

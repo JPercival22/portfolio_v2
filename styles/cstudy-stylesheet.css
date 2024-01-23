@@ -131,6 +131,9 @@ ul li {
   font-family: var(--body-copy);
   font-size: 16px;
 }
+ul li .emphasis {
+  font-weight: 700;
+}
 
 ol {
   font-family: var(--body-copy);
@@ -141,12 +144,6 @@ ol li {
   display: list-item;
   font-family: var(--body-copy);
   font-size: 16px;
-}
-
-li {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
 }
 
 img {
@@ -499,26 +496,9 @@ img.logo-sm {
   gap: 1em;
 }
 
-.research-list li {
-  padding: 16px 32px;
-  list-style: none;
-}
-.research-list li a {
-  color: var(--brand-color);
-  font-weight: 700;
-  border-bottom: 1px solid var(--brand-color);
-  transition: all ease-in-out 0.5s;
-}
-.research-list li a:hover {
-  border-bottom: none;
-}
-
-.align-top .gallery {
+.vertical-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2em;
 }
 
 .tab-container {
@@ -974,7 +954,6 @@ tr:nth-of-type(odd) {
     width: 30%;
   }
   .editorial {
-    width: 100%;
     padding: 2em;
   }
   .editorial .skills-section .centered-row {
@@ -1203,6 +1182,7 @@ tr:nth-of-type(odd) {
     width: 100%;
     margin: unset;
     display: flex;
+    flex-direction: column;
     padding-top: 0;
     border-radius: var(--br-8);
   }
