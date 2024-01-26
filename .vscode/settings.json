@@ -28,7 +28,9 @@
         "lazysizes",
         "lazyunveilread",
         "minimising",
+        "mouseleave",
         "mygallery",
+        "opsz",
         "optimise",
         "Organisations",
         "picturefill",
@@ -52,6 +54,7 @@
         "utilises",
         "visualise",
         "webp",
+        "wght",
         "zout"
     ],
     "liveServer.settings.multiRootWorkspaceName": "portfolio"

@@ -3,8 +3,8 @@ import { addToggleListener } from './menuModule.mjs';
 import { handleScroll as customNavigationHandleScroll } from "./navigationModule.mjs";
 import { initFloatingLabels } from "./form-floating-labels.mjs";
 import { createTabModule } from "./tabModule.mjs";
-import { openLightbox } from './lightbox.mjs';
-
+import { initLightboxFunctionality, openLightbox, closeLightbox } from './lightboxModule.mjs';
+import { initCarousel } from './carousel.mjs';
 // Define function to add main functionality
 function addMainFunctionality() {
   // Check if menuToggle exists before using it
@@ -12,19 +12,31 @@ function addMainFunctionality() {
   if (menuToggle) {
     addToggleListener(menuToggle);
   }
-
   customNavigationHandleScroll();
   initFloatingLabels();
   initializeTabModules();
   preloadWebpImage();
-  initLightboxFunctionality(); // Check if this function is called
+  initLightboxFunctionality();
+  initCarousels(); // Add initialization for carousels
   handleDynamicImports();
 }
 
 // DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
   addMainFunctionality();
+  initLightboxFunctionality();
+  document.addEventListener('click', (event) => {
+    const closeBtn = event.target.closest('.lightbox [data-action="close-lightbox"]');
+    if (closeBtn) {
+      const lightbox = closeBtn.closest('.lightbox');
+      if (lightbox) {
+        lightbox.style.display = 'none';
+      }
+    }
+  });
+
 });
+
 
 // Function to initialize tab modules
 function initializeTabModules() {
@@ -73,56 +85,17 @@ function initializeTabModules() {
   });
 }
 
+// Function to initialize carousels
+function initCarousels() {
+  const carouselContainers = document.querySelectorAll('.carousel-container');
+  carouselContainers.forEach((carouselContainer, index) => {
+    const trackId = `carouselTrack_${index}`;
+    const prevButtonId = `prevButton_${index}`;
+    const nextButtonId = `nextButton_${index}`;
+    const paginationId = `pagination_${index}`;
 
-function initLightboxFunctionality() {
-  const figures = document.querySelectorAll('.gallery[data-index]');
-
-  figures.forEach((figure) => {
-    const image = figure.querySelector('img');
-    const lightboxIndex = figure.getAttribute('data-index');
-    const lightbox = document.getElementById(`lightbox_${lightboxIndex}`);
-    const figcaption = figure.querySelector('figcaption');
-
-    // trigger lightbox, using image 
-    if (image && lightbox) {
-      image.addEventListener('click', () => {
-        openLightbox(image.src, image.alt, lightbox);
-      });
-
-      // Trigger lightbox on figcaption click
-      if (figcaption) {
-        figcaption.addEventListener('click', () => {
-          openLightbox(image.src, image.alt, lightbox);
-        });
-      }
-
-      const closeBtn = lightbox.querySelector(`#close-btn_${lightboxIndex}`);
-      if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-          closeLightbox(lightbox);
-        });
-      }
-
-      lightbox.addEventListener('click', (event) => {
-        if (event.target === lightbox || event.target === image || event.target === closeBtn) {
-          closeLightbox(lightbox);
-        }
-      });
-
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && lightbox.style.display === 'block') {
-          closeLightbox(lightbox);
-        }
-      });
-    } else {
-      console.error(`Image or Lightbox element not found for figure with data-index ${lightboxIndex}`);
-    }
+    initCarousel(carouselContainer.id, trackId, prevButtonId, nextButtonId, paginationId);
   });
-}
-
-function closeLightbox(lightbox) {
-  lightbox.style.display = 'none';
-  // Additional logic for hiding the lightbox
 }
 // Preload a webp image
 const preloadWebpImage = () => {
