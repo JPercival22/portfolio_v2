@@ -1293,6 +1293,14 @@ tr:nth-of-type(odd) {
     padding-top: 0;
     border-radius: var(--br-8);
   }
+  .grid-container-1col {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    background-color: var(--blue-bkg);
+    padding: 1em;
+    border-radius: 8px;
+  }
   .grid-container-2col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
