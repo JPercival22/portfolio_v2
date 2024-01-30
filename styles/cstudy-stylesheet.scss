@@ -583,7 +583,7 @@ img.logo-sm {
 }
 .tab-contents {
 	background-color: var(--white-bkg);
-	border-top: .5px solid gainsboro;
+	border-top: 0.5px solid gainsboro;
 	padding: 10px;
 	.gallery {
 		display: flex;
@@ -632,7 +632,7 @@ img.logo-sm {
 			height: auto;
 			background-size: cover;
 			.gallery img,
-			figure img  {
+			figure img {
 				border: none;
 			}
 		}
@@ -1112,7 +1112,7 @@ tr {
 			justify-content: center;
 			margin: 0;
 			.lg {
-				max-width: 800px;
+				width: 800px;
 				height: auto;
 				border-radius: 6px;
 				margin-bottom: 0.8em;
@@ -1124,6 +1124,14 @@ tr {
 			.xsm {
 				width: 110px;
 				height: 400px;
+			}
+		}
+		.carousel-container {
+			width: -webkit-fill-available;
+			height: auto;
+			.carousel-track .carousel-slide .gallery .lg {
+				width: 90%;
+				height: auto;
 			}
 		}
 	}

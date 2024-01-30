@@ -1095,7 +1095,7 @@ tr:nth-of-type(odd) {
     margin: 0;
   }
   .tab-container .tab-contents .tab-module .gallery .lg {
-    max-width: 800px;
+    width: 800px;
     height: auto;
     border-radius: 6px;
     margin-bottom: 0.8em;
@@ -1107,6 +1107,14 @@ tr:nth-of-type(odd) {
   .tab-container .tab-contents .tab-module .gallery .xsm {
     width: 110px;
     height: 400px;
+  }
+  .tab-container .tab-contents .tab-module .carousel-container {
+    width: -webkit-fill-available;
+    height: auto;
+  }
+  .tab-container .tab-contents .tab-module .carousel-container .carousel-track .carousel-slide .gallery .lg {
+    width: 90%;
+    height: auto;
   }
   footer .footer-container .footer-details {
     padding: 2.2em;
