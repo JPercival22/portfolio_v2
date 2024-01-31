@@ -547,71 +547,79 @@ img.logo-sm {
 	display: flex;
 	flex-direction: column;
 }
+
 .tab-container {
 	width: 100%;
-}
-.tab-buttons {
-	display: flex;
-	list-style: none;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-content: center;
-	justify-content: space-between;
-	border-radius: 8px 8px 0 0;
-	.tab-button {
-		cursor: pointer;
+
+	.tab-buttons {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: none;
-		padding: 10px 20px;
-		transition: all 0.5s ease-in-out;
-		font-family: $font-family_1;
-		font-size: 18px;
-		background-color: white;
-		border-bottom: 2px solid transparent;
-		color: var(--primary-text-color);
+		list-style: none;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-content: center;
+		justify-content: space-between;
 		border-radius: 8px 8px 0 0;
-		&.active {
-			border-bottom: 2px solid #b7d1c8;
+		.tab-button {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: none;
+			padding: 10px 20px;
+			transition: all 0.5s ease-in-out;
+			font-family: $font-family_1;
+			font-size: 18px;
 			background-color: white;
-			font-weight: 800;
-			color: $color_4;
-			border-radius: 8px 0px 0 0;
+			border-bottom: 2px solid transparent;
+			color: var(--primary-text-color);
+			border-radius: 8px 8px 0 0;
+			&.active {
+				border-bottom: 2px solid #b7d1c8;
+				background-color: white;
+				font-weight: 800;
+				color: $color_4;
+				border-radius: 8px 0px 0 0;
+			}
 		}
 	}
-}
-.tab-contents {
-	background-color: var(--white-bkg);
-	border-top: 0.5px solid gainsboro;
-	padding: 10px;
-	.gallery {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-		align-items: flex-start;
-		margin-bottom: 1em;
-		.col {
-			display: flex;
-			flex-direction: column;
-			.md {
-				width: 180px;
-				height: 440px;
-				border: 1px solid lightgray;
-				border-radius: 6px;
-			}
-			.sm {
-				width: 70px;
-				height: 500px;
-				border: 1px solid lightgray;
-				border-radius: 6px;
-			}
-			.xsm {
-				width: 70px;
-				height: 270px;
-				border: 1px solid lightgrey;
-				border-radius: 5px;
+	.tab-contents {
+		background-color: var(--white-bkg);
+		border-top: 0.5px solid gainsboro;
+		padding: 10px;
+		border-radius: 8px;
+		.tab-module {
+			.gallery {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				align-items: flex-start;
+				margin-bottom: 1em;
+				img {
+					border: none;
+				}
+				.col {
+					display: flex;
+					flex-direction: column;
+					.md {
+						width: 180px;
+						height: 440px;
+						border: 1px solid lightgray;
+						border-radius: 6px;
+					}
+					.sm {
+						width: 70px;
+						height: 500px;
+						border: 1px solid lightgray;
+						border-radius: 6px;
+					}
+					.xsm {
+						width: 70px;
+						height: 270px;
+						border: 1px solid lightgrey;
+						border-radius: 5px;
+					}
+				}
 			}
 		}
 	}
@@ -1099,17 +1107,42 @@ tr {
 		flex-direction: column;
 		align-items: center;
 		background-color: $background-color_5;
-		.headline {
-			width: 100%;
+		.carousel-header {
 			display: flex;
-			flex-direction: row;
-			justify-content: start;
+			width: 100%;
+			margin-bottom: 1em;
+			.flex-col-left {
+				flex: 70%;
+				box-sizing: border-box;
+				.carousel-editorial {
+					padding: 20px 0 20px 0;
+					.headline {
+						width: 100%;
+						display: flex;
+						flex-direction: row;
+						justify-content: start;
+					}
+				}
+			}
+			.flex-col-right {
+				flex: 30%;
+				box-sizing: border-box;
+				.carousel-banner-1 {
+					background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
+					width: 100%;
+					height: 100%;
+					background-size: cover;
+					background-position: center;
+					border-radius: 8px;
+				}
+			}
 		}
 		.gallery {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			border-radius: 8px;
 			margin: 0;
 			.lg {
 				width: 800px;
@@ -1124,6 +1157,12 @@ tr {
 			.xsm {
 				width: 110px;
 				height: 400px;
+			}
+			figcaption {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				justify-self: flex-start;
 			}
 		}
 		.carousel-container {
