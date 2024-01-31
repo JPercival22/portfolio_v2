@@ -655,17 +655,17 @@ img.logo-sm {
   text-align: center;
   margin-top: 10px;
 }
-.carousel-container .pagination .pagination-dot {
+.carousel-container .pagination .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   margin: 0 5px;
   background-color: lightblue;
   border: 1px solid var(--brand-color);
   border-radius: 50%;
   cursor: pointer;
 }
-.carousel-container .pagination .pagination-dot ~ .active {
+.carousel-container .pagination .active {
   background-color: var(--brand-color);
 }
 

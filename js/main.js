@@ -12,6 +12,7 @@ function addMainFunctionality() {
   if (menuToggle) {
     addToggleListener(menuToggle);
   }
+  
   customNavigationHandleScroll();
   initFloatingLabels();
   initializeTabModules();
@@ -34,9 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-
 });
-
 
 // Function to initialize tab modules
 function initializeTabModules() {
