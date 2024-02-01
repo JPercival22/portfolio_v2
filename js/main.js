@@ -52,7 +52,7 @@ function initializeTabModules() {
             if (button === tabButton) {
               tabContents.forEach((tabContent, contentIndex) => {
                 if (tabContent) {
-                  tabContent.style.display = contentIndex === index ? 'block' : 'none';
+                  tabContent.style.display = contentIndex === index ? 'flex' : 'none';
                 }
               });
               tabButtons.forEach((button) => {
@@ -68,13 +68,13 @@ function initializeTabModules() {
       const activeTabIndex = sessionStorage.getItem('activeTabIndex');
       if (activeTabIndex !== null && activeTabIndex < tabContents.length) {
         tabContents.forEach((tabContent, index) => {
-          tabContent.style.display = index == activeTabIndex ? 'block' : 'none';
+          tabContent.style.display = index == activeTabIndex ? 'flex' : 'none';
         });
         tabButtons.forEach((button, index) => {
           button.classList.toggle('active', index == activeTabIndex);
         });
       } else {
-        tabContents[0].style.display = 'block';
+        tabContents[0].style.display = 'flex';
         tabButtons[0].classList.add('active');
         sessionStorage.setItem('activeTabIndex', 0);
       }

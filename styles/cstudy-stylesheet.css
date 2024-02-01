@@ -564,7 +564,7 @@ img.logo-sm {
   background-color: var(--white-bkg);
   border-top: 0.5px solid gainsboro;
   padding: 10px;
-  border-radius: 8px;
+  width: -webkit-fill-available;
 }
 .tab-container .tab-contents .tab-module .gallery {
   display: flex;
@@ -1102,11 +1102,27 @@ tr:nth-of-type(odd) {
     justify-content: start;
   }
   .tab-container .tab-contents .tab-module .carousel-header .flex-col-right {
-    flex: 30%;
+    flex: 20%;
     box-sizing: border-box;
   }
   .tab-container .tab-contents .tab-module .carousel-header .flex-col-right .carousel-banner-1 {
     background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+  .tab-container .tab-contents .tab-module .carousel-header .flex-col-right .carousel-banner-2 {
+    background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+  .tab-container .tab-contents .tab-module .carousel-header .flex-col-right .carousel-banner-3 {
+    background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
     width: 100%;
     height: 100%;
     background-size: cover;
