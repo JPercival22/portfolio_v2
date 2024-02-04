@@ -571,14 +571,11 @@ img.logo-sm {
 			font-size: 18px;
 			background-color: white;
 			border-bottom: 2px solid transparent;
-			color: var(--primary-text-color);
+			color: #525252;
 			border-radius: 8px 8px 0 0;
 			&.active {
 				border-bottom: 2px solid #b7d1c8;
-				background-color: white;
-				font-weight: 800;
-				color: $color_4;
-				border-radius: 8px 0px 0 0;
+				color: #000;
 			}
 		}
 	}
@@ -680,9 +677,9 @@ img.logo-sm {
 		margin-top: 10px;
 		.dot {
 			display: inline-block;
-			width: 20px;
-			height: 20px;
-			margin: 0 5px;
+			width: 10px;
+			height: 10px;
+			margin: 0 10px;
 			background-color: lightblue;
 			border: 1px solid var(--brand-color);
 			border-radius: 50%;
@@ -1145,6 +1142,14 @@ tr {
 				}
 				.carousel-banner-3 {
 					background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
+					width: 100%;
+					height: 100%;
+					background-size: cover;
+					background-position: center;
+					border-radius: 8px;
+				}
+				.carousel-banner-4 {
+					background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
 					width: 100%;
 					height: 100%;
 					background-size: cover;
