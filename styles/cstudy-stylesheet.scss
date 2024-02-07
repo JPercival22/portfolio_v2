@@ -558,7 +558,11 @@ img.logo-sm {
 		flex-wrap: nowrap;
 		align-content: center;
 		justify-content: space-between;
-		border-radius: 8px 8px 0 0;
+		border-top-left-radius: 8px;
+		background-color: white;
+		> :first-child {
+			border-top-left-radius: 8px;
+		}
 		.tab-button {
 			cursor: pointer;
 			display: flex;
@@ -572,7 +576,6 @@ img.logo-sm {
 			background-color: white;
 			border-bottom: 2px solid transparent;
 			color: #525252;
-			border-radius: 8px 8px 0 0;
 			&.active {
 				border-bottom: 2px solid #b7d1c8;
 				color: #000;
@@ -699,31 +702,7 @@ img.logo-sm {
 	background-color: $background-color_10;
 	border-radius: 8px;
 }
-.i-phone {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	border: 10px solid black;
-	border-radius: 20px;
-	height: 517px;
-	width: 184px;
-	box-shadow: 0 20px 15px #33333335;
-	overflow: hidden;
-	cursor: pointer;
-	transition: transform 0.2s;
-	img {
-		display: flex;
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-		border-radius: 10px;
-	}
-	&:hover {
-		transform: scale(1.03);
-		filter: grayscale(50%);
-	}
-}
+
 .no-background {
 	background-color: $background-color_11;
 }
@@ -1102,7 +1081,7 @@ tr {
 	.tab-container .tab-contents .tab-module {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		background-color: $background-color_5;
 		.carousel-header {
 			display: flex;
@@ -1165,6 +1144,7 @@ tr {
 			justify-content: center;
 			border-radius: 8px;
 			margin: 0;
+			width: -webkit-fill-available;
 			.lg {
 				width: 800px;
 				height: auto;
@@ -1415,6 +1395,7 @@ tr {
 		padding-top: 0;
 		border-radius: var(--br-8);
 	}
+
 	.grid-container-1col {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -1425,11 +1406,35 @@ tr {
 	}
 	.grid-container-2col {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 30% auto;
+		grid-template-rows: auto;
 		grid-gap: 1em;
 		background-color: $background-color_10;
 		padding: 1em;
 		border-radius: 8px;
+		.prototype-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			align-items: start;
+			cursor: pointer;
+			transition: filter 0.5s ease-in-out;
+			a {
+				font-family: inherit;
+				color: var(--primary-text-color);
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+				video {
+					width: 100%;
+					height: auto;
+					&:hover {
+						filter: grayscale(70%);
+					}
+				}
+			}
+		}
 	}
 	.grid-container-4col {
 		display: grid;
@@ -1440,8 +1445,18 @@ tr {
 		padding: 1em;
 		border-radius: 8px;
 	}
+	.grid-container-5col {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: auto;
+		grid-gap: 1em;
+		background-color: $background-color_10;
+		padding: 1em;
+		border-radius: 8px;
+	}
 
 	.no-background {
+		background-color: transparent;
 		.image-container {
 			.gallery {
 				background-color: var(--white-bkg);
