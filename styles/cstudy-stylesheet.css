@@ -795,15 +795,54 @@ footer .footer-container {
   border-radius: var(--br-8);
   margin-bottom: 1em;
 }
-.editorial .conclusion_attached {
+.editorial .header_2-col-banner-right {
+  display: grid;
+  grid-template-columns: 70% auto;
+}
+.editorial .header_2-col-banner-right .editorial-headline {
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
+}
+.editorial .header_2-col-banner-right .primary-banner {
+  border-radius: 30px;
+}
+.editorial .header_2-col-banner-right .primary-banner .sus {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
+}
+.editorial .concluding_editorial {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-.editorial .conclusion_attached ol li {
+.editorial .concluding_editorial ol li {
   margin: 0 0 10px 10px;
+}
+.editorial .banner-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 100%;
+}
+.editorial .banner-container .banner-wrapper {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+}
+.editorial .banner-container .banner-wrapper.banner-1 {
+  background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Results-Banner.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.editorial .banner-container .banner-wrapper.banner-2 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-stats-Banner.svg);
 }
 .editorial .skills-section {
   width: 100%;
@@ -1345,7 +1384,7 @@ tr:nth-of-type(odd) {
   }
   .grid-container-2col {
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 40% auto;
     grid-template-rows: auto;
     grid-gap: 1em;
     background-color: var(--blue-bkg);
