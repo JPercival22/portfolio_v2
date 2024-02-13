@@ -235,6 +235,7 @@ img.logo-sm {
   height: auto;
   background-color: var(--white-bkg);
   border-radius: 50%;
+  border-color: transparent;
 }
 #navbar .navbar-container .home-link .navbar-logo .logo-container {
   display: flex;
@@ -433,11 +434,8 @@ img.logo-sm {
   margin: 0 1em;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1em;
+  align-items: baseline;
+  gap: 0.5em;
 }
 .sideBar .sideBar-content ul .side-bar-list-item {
   display: flex;
@@ -905,10 +903,7 @@ tr:nth-of-type(odd) {
   background-color: #f0f8ff;
 }
 
-@media only screen and (min-width: 576px) {
-  body {
-    margin: var(--side-margins-576px);
-  }
+@media only screen and (min-width: 425px) {
   main {
     top: 63px;
     margin-bottom: 1em;
@@ -1241,12 +1236,12 @@ tr:nth-of-type(odd) {
 }
 @media only screen and (min-width: 1200px) {
   #navbar .navbar-container {
-    margin: 0 40px;
+    margin: 0 60px;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    width: 93%;
-    height: 50px;
+    width: 92%;
+    height: 60px;
   }
   #navbar .navbar-container .menu-toggle {
     display: none;
@@ -1359,6 +1354,9 @@ tr:nth-of-type(odd) {
   }
   .sideBar .sideBar-content {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
   }
   .main-content {
     width: 80%;
