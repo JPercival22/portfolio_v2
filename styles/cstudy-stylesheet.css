@@ -12,7 +12,7 @@
   --light-orange: #ffd992;
   /* box shadow styles  */
   --b-shadow: -2px 10px 21px -2px rgba(201, 201, 201, 0.75);
-  --br-shadow: 0px 6px 9px 0px rgba(181, 181, 181, 0.4);
+  --br-shadow: 0 8px 16px 0 rgba(181, 181, 181, 0.4);
   /* border-styles  */
   --border: 1px solid #afafaf;
   --br-8: 8px;
@@ -49,14 +49,13 @@ body {
   background-color: var(--body-bkg);
   color: var(--primary-text-color);
   font-family: var(--body-copy);
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 main {
-  position: relative;
-  top: 42px;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
 }
 
 h1 {
@@ -187,15 +186,12 @@ img.logo-sm {
   border-radius: 40px;
   padding: 8px 16px;
   width: -webkit-fill-available;
-  color: var(--primary-text-color);
-  font-size: 16px;
   line-height: 30px;
   letter-spacing: 1px;
   text-transform: capitalize;
   cursor: pointer;
   transition: linear 0.1s ease-in-out;
   box-shadow: var(--br-shadow);
-  margin-bottom: 1em;
   background-color: var(--white-bkg);
   color: var(--primary-text-color);
 }
@@ -291,6 +287,19 @@ img.logo-sm {
   color: var(--primary-text-color);
 }
 
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  top: 60px;
+}
+
+.main-content {
+  width: -webkit-fill-available;
+}
+
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -329,8 +338,8 @@ img.logo-sm {
 }
 
 .contents {
-  position: sticky;
-  top: 74px;
+  position: fixed;
+  top: 55px;
 }
 
 .open-sidebar-btn {
@@ -461,6 +470,12 @@ img.logo-sm {
   fill: #404040;
 }
 
+.page-components {
+  display: flex;
+  flex-direction: column;
+  position: 60px;
+}
+
 .sm-cs-hero {
   display: flex;
 }
@@ -511,8 +526,7 @@ img.logo-sm {
 
 .two-button-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: -webkit-fill-available;
@@ -674,6 +688,13 @@ img.logo-sm {
   justify-content: center;
   background-color: var(--blue-bkg);
   border-radius: 8px;
+}
+.centered-row .image-container {
+  display: inherit;
+}
+.centered-row .image-container .gallery {
+  margin: 0;
+  padding: 0;
 }
 
 .no-background {
