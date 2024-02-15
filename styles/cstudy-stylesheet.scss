@@ -370,6 +370,7 @@ img.logo-sm {
 .contents {
 	position: fixed;
 	top: 55px;
+	z-index: 1;
 }
 .open-sidebar-btn {
 	border: none;
@@ -499,10 +500,47 @@ img.logo-sm {
 		}
 	}
 }
+
+.accordion {
+	width: 100%;
+}
+
+.accordion-item {
+	border-bottom: 1px solid #ccc;
+}
+
+.accordion-header {
+	background-color: #f5f5f5;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.accordion-header:hover {
+	background-color: #e0e0e0;
+}
+
+.accordion-header h2 {
+	margin: 0;
+}
+
+.accordion-content {
+	padding: 10px;
+	display: none;
+	background-color: #fff;
+}
+
+.accordion-item.active .accordion-content {
+	display: block;
+}
+
+.accordion-item:not(.active) .accordion-content {
+	display: none;
+}
 .page-components {
 	display: flex;
 	flex-direction: column;
-	position: 60px;
+	position: relative;
+    top: 20px;
 }
 .sm-cs-hero {
 	display: flex;
@@ -637,7 +675,8 @@ img.logo-sm {
 .grid-container-2col,
 .grid-container-3col,
 .grid-container-4col,
-.grid-container-5col {
+.grid-container-5col, 
+.grid-container-6col {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 1em;

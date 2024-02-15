@@ -5,6 +5,7 @@ import { initFloatingLabels } from "./form-floating-labels.mjs";
 import { createTabModule } from "./tabModule.mjs";
 import { initLightboxFunctionality, openLightbox, closeLightbox } from './lightboxModule.mjs';
 import { initCarousel } from './carousel.mjs';
+import './accordion.mjs';
 // Define function to add main functionality
 function addMainFunctionality() {
   // Check if menuToggle exists before using it
