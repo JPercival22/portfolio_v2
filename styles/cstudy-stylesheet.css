@@ -480,30 +480,38 @@ img.logo-sm {
 
 .accordion {
   width: 100%;
+  width: 100%;
+  border: 1px solid grey;
 }
-
-.accordion-item {
+.accordion .accordion-item {
   border-bottom: 1px solid #ccc;
 }
-
-.accordion-header {
+.accordion .accordion-item .accordion-header {
   background-color: #f5f5f5;
   padding: 10px;
   cursor: pointer;
+  background-color: #f5f5f5;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.accordion-header:hover {
+.accordion .accordion-item .accordion-header:hover {
   background-color: #e0e0e0;
 }
-
-.accordion-header h2 {
+.accordion .accordion-item .accordion-header .headline {
   margin: 0;
 }
-
-.accordion-content {
+.accordion .accordion-item .accordion-content {
   padding: 10px;
   display: none;
   background-color: #fff;
+}
+.accordion .accordion-item .accordion-content .gallery {
+  width: -webkit-fill-available;
+  margin: 0;
 }
 
 .accordion-item.active .accordion-content {
@@ -651,6 +659,9 @@ img.logo-sm {
   height: 270px;
   border: 1px solid lightgrey;
   border-radius: 5px;
+}
+.tab-container.hide-sm {
+  display: none;
 }
 
 .grid-container-1col,
