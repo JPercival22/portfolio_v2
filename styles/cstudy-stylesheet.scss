@@ -9,18 +9,10 @@ $color_8: #4e4e4c;
 $font-family_1: var(--body-copy);
 $main-bkg: var(--body-bkg);
 $background-color_1: #bbefc4;
-$background-color_2: var(--white-bkg);
-$background-color_3: var(--navbar-bg-color);
+$background-color_d-blue: $color_1;
+$background-color_white: var(--white-bkg);
+$background-green: var(--pale-green);
 $background-color_4: var(--yellow_bkg);
-$background-color_5: white;
-$background-color_6: #fff;
-$background-color_7: #ffffff;
-$background-color_8: #b7d1c8;
-$background-color_9: #f9f9f9;
-$background-color_10: var(--blue-bkg);
-$background-color_11: var(--no-background);
-$background-color_12: #dc143c;
-$background-color_13: #be1a3b;
 $background-color_14: #b7d1cb;
 $background-color_15: #f0f8ff;
 $background-color_16: #dfedff;
@@ -225,7 +217,7 @@ img.logo-sm {
 	cursor: pointer;
 	transition: linear 0.1s ease-in-out;
 	box-shadow: var(--br-shadow);
-	background-color: $background-color_2;
+	background-color: $background-color_white;
 	color: $color_2;
 }
 
@@ -325,7 +317,7 @@ img.logo-sm {
 	flex-direction: row;
 	justify-content: flex-start;
 	position: relative;
-	top: 60px;
+	top: 30px;
 }
 .main-content {
 	width: -webkit-fill-available;
@@ -335,6 +327,7 @@ img.logo-sm {
 	flex-direction: column;
 	background: white;
 	padding: 10px;
+	padding-top: 2em;
 	margin-bottom: 1em;
 	border-radius: var(--br-8);
 	.hero-header {
@@ -375,7 +368,7 @@ img.logo-sm {
 .open-sidebar-btn {
 	border: none;
 	border-radius: 100%;
-	background-color: $background-color_5;
+	background-color: $background-color_white;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -393,7 +386,7 @@ img.logo-sm {
 	left: 0;
 	overflow-x: hidden;
 	top: 54px;
-	background-color: $background-color_7;
+	background-color: $background-color_white;
 	border: 1px solid lightgrey;
 	box-shadow: 10px 10px 28px -5px rgba(0, 0, 0, 0.49);
 	transition: width 0.5s ease-in;
@@ -403,7 +396,7 @@ img.logo-sm {
 			width: 42px;
 			height: 42px;
 		}
-		background-color: $background-color_6;
+		background-color: $background-color_d-blue;
 		border-radius: 100%;
 		cursor: pointer;
 		display: flex;
@@ -619,11 +612,14 @@ img.logo-sm {
 	flex-direction: column;
 	.tab-buttons {
 		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
 		.tab-button {
 			cursor: pointer;
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-start;
 			border: none;
 			padding: 10px 20px;
 			transition: all 0.5s ease-in-out;
@@ -691,7 +687,7 @@ img.logo-sm {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 1em;
-	background-color: $background-color_10;
+	background-color: $background-color_white;
 	border-radius: 8px;
 	.image-container {
 		display: flex;
@@ -699,7 +695,7 @@ img.logo-sm {
 		margin: 0;
 		padding: 0;
 		.gallery {
-			background-color: var(--white-bkg);
+			background-color: $background-color_white;
 			border: 1px solid #f2fbfe;
 			border-radius: var(--br-8);
 			transition: 0.5s all ease-in-out;
@@ -774,13 +770,38 @@ img.logo-sm {
 			}
 		}
 	}
+	.prototype-container {
+		display: flex;
+		flex-direction: column;
+		a {
+			color: var(--primary-text-color);
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.editorial-sm {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		.content {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			ul {
+				list-style-type: none;
+				text-wrap: pretty;
+				margin: 0;
+			}
+		}
+	}
 }
 .carousel-container {
 	position: relative;
 	overflow: hidden;
-	width: 700px;
+	width: -webkit-fill-available;
 	height: auto;
-	/* Adjust as needed */
 	margin: auto;
 	.carousel-track {
 		display: flex;
@@ -789,8 +810,9 @@ img.logo-sm {
 			min-width: 100%;
 			height: auto;
 			background-size: cover;
-			.gallery img,
-			figure img {
+			.gallery .lg {
+				width: -webkit-fill-available;
+				height: auto;
 				border: none;
 			}
 		}
@@ -849,7 +871,7 @@ img.logo-sm {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: $background-color_10;
+	background-color: $background-color_white;
 	border-radius: 8px;
 	.image-container {
 		display: inherit;
@@ -861,7 +883,7 @@ img.logo-sm {
 }
 
 .no-background {
-	background-color: $background-color_11;
+	background-color: $background-color_white;
 }
 .flex-row {
 	display: flex;
@@ -917,41 +939,43 @@ footer {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	background-color: $background-color-white;
 	.footer-container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}
-}
-.footer-container {
-	.footer-social-icon {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-around;
-		width: 100vw;
+		.footer-social-icon {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			width: 100vw;
+			.logo img {
+				border: none;
+			}
+		}
 	}
 }
 .btt-button {
 	position: fixed;
-	bottom: 2rem;
-	right: 2rem;
+	bottom: 6rem;
+	right: 0;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background-color: $background-color_12;
+	background-color: $background-green;
 	border-radius: 0.5rem;
 	padding: 0.5rem;
 	text-decoration: none;
 	transition: 0.2s ease-out;
-	box-shadow: 10px 10px 22px -6px rgba(0, 0, 0, 0.44);
+	box-shadow: var(--b-shadow);
 	.span {
-		fill: white;
+		fill: $color_1;
 		transition: 0.2s ease-out;
 	}
 	&:hover {
-		background-color: $background-color_13;
+		background-color: #74c974;
 		box-shadow: none;
 		.span {
 			transform: translateY(-4px);
@@ -961,61 +985,40 @@ footer {
 .editorial {
 	display: flex;
 	flex-direction: column;
-	align-content: flex-start;
 	justify-content: center;
 	align-items: flex-start;
-	background-color: $background-color_6;
+	background-color: $background-color_white;
 	padding: 10px;
 	border-radius: var(--br-8);
 	margin-bottom: 1em;
+
 	.header_2-col-banner-right {
-		display: grid;
-		grid-template-columns: 70% auto;
-		.editorial-headline {
-			display: flex;
-			flex-direction: column;
-		}
-		.primary-banner {
-			border-radius: 30px;
-			.sus {
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
+		display: none;
+	}
+	.skills-section {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: -webkit-fill-available;
+		.centered-row {
+			align-items: flex-start;
+			justify-content: flex-start;
+			.flex-row {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+				gap: 10px;
+				.left-col,
+				.right-col {
+					flex-direction: column;
+					width: 100%;
+				}
 			}
-		}
-		ol li {
-			margin: 0 0 10px 10px;
 		}
 	}
 }
 .banner-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr; // Two equal columns
-	grid-gap: 10px; // Adjust gap between grid items as needed
-	width: 100%;
-	.banner-wrapper {
-		height: 500px; // Set the height as needed
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: white;
-		font-size: 24px;
-
-		&.banner-1 {
-			background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Results-Banner.svg);
-			background-size: contain;
-			background-repeat: no-repeat;
-		}
-		&.banner-2 {
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-stats-Banner.svg);
-		}
-	}
-}
-.skills-section {
-	width: 100%;
-	padding: 10px;
+	display: none;
 }
 
 .grid-container {
@@ -1087,9 +1090,7 @@ tr {
 		width: 50%;
 		padding: 20px;
 	}
-	.hero-container {
-		padding: 0;
-	}
+	
 	.case-study-inner {
 		margin: 1em;
 		margin-top: 0;
@@ -1227,6 +1228,31 @@ tr {
 		width: 40%;
 		padding: 20px;
 	}
+	.banner-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr; // Two equal columns
+		grid-gap: 10px; // Adjust gap between grid items as needed
+		width: 100%;
+		.banner-wrapper {
+			height: 500px; // Set the height as needed
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			font-size: 24px;
+	
+			&.banner-1 {
+				background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Results-Banner.svg);
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			&.banner-2 {
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-stats-Banner.svg);
+			}
+		}
+	}
 }
 @media only screen and (min-width: 992px) {
 	.body {
@@ -1271,7 +1297,7 @@ tr {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		background-color: $background-color_5;
+		background-color: $background-color_white;
 		.carousel-header {
 			display: flex;
 			width: 100%;
@@ -1592,7 +1618,7 @@ tr {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap: 1em;
-		background-color: $background-color_10;
+		background-color: $background-color_white;
 		padding: 1em;
 		border-radius: 8px;
 	}
@@ -1601,7 +1627,7 @@ tr {
 		grid-template-columns: 40% auto;
 		grid-template-rows: auto;
 		grid-gap: 1em;
-		background-color: $background-color_10;
+		background-color: $background-color_white;
 		padding: 1em;
 		border-radius: 8px;
 		.prototype-container {
@@ -1636,7 +1662,7 @@ tr {
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: auto;
 		grid-gap: 1em;
-		background-color: $background-color_10;
+		background-color: $background-color_white;
 		padding: 1em;
 		border-radius: 8px;
 	}
@@ -1645,7 +1671,7 @@ tr {
 		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows: auto;
 		grid-gap: 1em;
-		background-color: $background-color_10;
+		background-color: $background-color_white;
 		padding: 1em;
 		border-radius: 8px;
 	}
@@ -1733,7 +1759,7 @@ tr {
 						position: absolute;
 						top: 10px;
 						right: 10px;
-						background-color: var(--white-bkg);
+						background-color: $background-color_white;
 						color: var(--primary-text-color);
 						border: 1px solid var(--primary-text-color);
 						font-size: 30px;
@@ -1756,12 +1782,12 @@ tr {
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: auto;
 		grid-gap: 1em;
-		background-color: $background-color_10;
+		background-color: $background-color_white;
 		padding: 1em;
 		border-radius: 8px;
 		.image-container {
 			.gallery {
-				background-color: var(--white-bkg);
+				background-color: $background-color_white;
 				border: 1px solid #f2fbfe;
 				border-radius: var(--br-8);
 				filter: opacity(0.64) saturate(1.3);
@@ -1965,6 +1991,29 @@ tr {
 		height: 600px;
 	}
 }
+
+.editorial {
+	.header_2-col-banner-right {
+		display: grid;
+		grid-template-columns: 70% auto;
+		.editorial-headline {
+			display: flex;
+			flex-direction: column;
+		}
+		.primary-banner {
+			border-radius: 30px;
+			.sus {
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
+			}
+		}
+		ol li {
+			margin: 0 0 10px 10px;
+		}
+}
+}
+
 @media only screen and (min-width: 1800px) {
 	.navbar-container {
 		margin: 0 170px;
