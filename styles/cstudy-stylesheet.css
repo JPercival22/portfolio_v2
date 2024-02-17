@@ -8,7 +8,7 @@
   --illuminate-yellow: #fffaa3;
   --pale-green: #aafaaa;
   --pale-pink: #eda4fc;
-  --pale-blue: rgb(155, 234, 245);
+  --pale-blue: #e8f8ff;
   --light-orange: #ffd992;
   /* box shadow styles  */
   --b-shadow: -2px 10px 21px -2px rgba(201, 201, 201, 0.75);
@@ -180,8 +180,7 @@ img.logo-sm {
   text-transform: capitalize;
   cursor: pointer;
   transition: linear 0.1s ease-in-out;
-  box-shadow: var(--br-shadow);
-  margin-bottom: 1em;
+  box-shadow: var(--b-shadow);
   background-color: #bbefc4;
 }
 
@@ -198,7 +197,7 @@ img.logo-sm {
   text-transform: capitalize;
   cursor: pointer;
   transition: linear 0.1s ease-in-out;
-  box-shadow: var(--br-shadow);
+  box-shadow: var(--b-shadow);
   background-color: var(--white-bkg);
   color: var(--primary-text-color);
 }
@@ -374,8 +373,6 @@ img.logo-sm {
   overflow-x: hidden;
   top: 54px;
   background-color: var(--white-bkg);
-  border: 1px solid lightgrey;
-  box-shadow: 10px 10px 28px -5px rgba(0, 0, 0, 0.49);
   transition: width 0.5s ease-in;
 }
 .sidebar .close-btn {
@@ -591,11 +588,6 @@ img.logo-sm {
   gap: 1em;
 }
 
-.vertical-section {
-  display: flex;
-  flex-direction: column;
-}
-
 .tab-container {
   width: 100%;
   display: flex;
@@ -605,6 +597,8 @@ img.logo-sm {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: var(--pale-blue);
+  border-top-right-radius: 8px;
 }
 .tab-container .tab-buttons .tab-button {
   cursor: pointer;
@@ -625,7 +619,9 @@ img.logo-sm {
   color: #000;
 }
 .tab-container .tab-contents {
-  border-top: 0.5px solid gainsboro;
+  border: 0.5px solid gainsboro;
+  padding: 8px;
+  border-radius: 0 0 8px 8px;
 }
 .tab-container .tab-contents .tab-module {
   display: flex;
@@ -702,7 +698,7 @@ img.logo-sm {
   transition: 0.5s all ease-in-out;
   padding: 0.5em;
   border-radius: var(--br-8);
-  box-shadow: var(--br-shadow);
+  box-shadow: var(--b-shadow);
   margin: 10px;
 }
 .grid-container-1col .image-container .gallery:first-child,
@@ -1121,7 +1117,7 @@ table {
 th {
   padding: 1rem;
   text-align: left;
-  background-color: #b7d1cb;
+  background-color: var(--pale-blue);
   display: none;
 }
 
@@ -1215,17 +1211,15 @@ tr:nth-of-type(odd) {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: center;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
   .right-col {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: center;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 50%;
   }
   .tertiary-link {
@@ -1250,21 +1244,21 @@ tr:nth-of-type(odd) {
   .lg-cs-hero {
     display: flex;
   }
+  .accordion {
+    display: none;
+  }
+  .hide-sm {
+    display: flex !important;
+  }
   .two-button-container {
     flex-direction: row;
     gap: 1em;
+    max-height: 42px;
   }
-  .two-button-container .primary-button {
-    width: 50%;
-    height: 42px;
-  }
+  .two-button-container .primary-button,
   .two-button-container .secondary-button {
     width: 50%;
-    height: 42px;
-  }
-  .primary-button {
-    width: 120px;
-    height: 24px;
+    height: inherit;
   }
   .col-2 {
     display: flex;
@@ -1301,6 +1295,53 @@ tr:nth-of-type(odd) {
     width: 40%;
     padding: 20px;
   }
+  .tab-container .tab-buttons {
+    flex-direction: row;
+  }
+  .grid-container-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    background-color: var(--white-bkg);
+    border-radius: 8px;
+  }
+  .grid-container-2col .prototype-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .grid-container-4col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    background-color: var(--white-bkg);
+    padding: 1em;
+    border-radius: 8px;
+  }
+  .grid-container-5col {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    background-color: var(--white-bkg);
+    padding: 1em;
+    border-radius: 8px;
+  }
+  .grid-container-6col {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    background-color: var(--pale-blue);
+    padding: 1em;
+    border-radius: 8px;
+  }
+  .editorial .skills-section .centered-row .flex-row {
+    flex-direction: row;
+  }
   .banner-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1325,8 +1366,12 @@ tr:nth-of-type(odd) {
     background-repeat: no-repeat;
     background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-stats-Banner.svg);
   }
+  .btt-button {
+    bottom: 2rem;
+    right: 1rem;
+  }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .body {
     margin: var(--side-margins-992px);
   }
@@ -1336,9 +1381,6 @@ tr:nth-of-type(odd) {
   .editorial {
     padding: 2em;
   }
-  .editorial .skills-section .centered-row {
-    padding: 2em;
-  }
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1346,20 +1388,7 @@ tr:nth-of-type(odd) {
     grid-gap: 10px;
   }
   .two-button-container {
-    flex-direction: row;
-    display: flex;
-    gap: 1em;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .two-button-container .primary-button {
-    width: 18%;
-    height: 36px;
-  }
-  .two-button-container .secondary-button {
-    width: 18%;
-    height: 36px;
+    width: 50%;
   }
   .tab-container .tab-contents .tab-module {
     display: flex;
@@ -1393,7 +1422,8 @@ tr:nth-of-type(odd) {
     background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
     width: 100%;
     height: 100%;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
   }
@@ -1401,7 +1431,8 @@ tr:nth-of-type(odd) {
     background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
     width: 100%;
     height: 100%;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
   }
@@ -1409,16 +1440,16 @@ tr:nth-of-type(odd) {
     background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 8px;
   }
   .tab-container .tab-contents .tab-module .carousel-header .flex-col-right .carousel-banner-4 {
     background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 8px;
   }
   .tab-container .tab-contents .tab-module .gallery {
@@ -1525,6 +1556,7 @@ tr:nth-of-type(odd) {
   }
   #navbar .navbar-container .nav-menu {
     display: flex;
+    flex-direction: row;
   }
   #navbar .navbar-container .nav-menu a {
     color: #1a1a1a;
@@ -1614,14 +1646,22 @@ tr:nth-of-type(odd) {
     justify-content: flex-start;
     gap: 1em;
     margin: 0 auto;
+    position: relative;
+    top: 70px;
+    margin-bottom: 5em;
+  }
+  .page-components {
+    position: static;
+  }
+  .two-button-container {
+    width: 100%;
   }
   article {
-    width: 20%;
-    padding: 0 1em;
+    width: 23%;
     background-color: white;
     border-radius: var(--br-8);
   }
-  .sideBar {
+  article .sideBar {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1629,11 +1669,17 @@ tr:nth-of-type(odd) {
     width: 100%;
     position: inherit;
   }
-  .sideBar .sideBar-content {
+  article .sideBar .sideBar-content {
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: baseline;
+  }
+  article .sideBar .sideBar-content ul {
+    gap: 0.5em;
+  }
+  article .sideBar .sideBar-content ul .side-bar-list-item {
+    height: 50px;
   }
   .main-content {
     width: 80%;
@@ -1926,14 +1972,6 @@ tr:nth-of-type(odd) {
   .open-sidebar-btn {
     display: none;
   }
-  .sidebar {
-    top: 68px;
-    left: 0;
-    padding-left: 0;
-    border: none;
-    box-shadow: none;
-    border-radius: var(--br-8);
-  }
   .mobile-sidebar {
     display: none;
   }
@@ -1962,7 +2000,8 @@ tr:nth-of-type(odd) {
     align-items: flex-start;
     flex-direction: row;
     gap: 0.3em;
-    margin-bottom: 1em;
+    margin: 0;
+    padding-top: 1em;
   }
   .bullet-list-row li {
     font-size: 16px;
@@ -2006,27 +2045,36 @@ tr:nth-of-type(odd) {
     width: -webkit-fill-available;
     height: 600px;
   }
+  .editorial .header_2-col-banner-right {
+    display: grid;
+    grid-template-columns: 70% auto;
+    width: 100%;
+    height: 150px;
+  }
+  .editorial .header_2-col-banner-right .editorial-headline {
+    display: flex;
+    flex-direction: column;
+  }
+  .editorial .header_2-col-banner-right .primary-banner {
+    border-radius: 30px;
+    width: 100%;
+    margin: 0;
+  }
+  .editorial .header_2-col-banner-right .primary-banner .sus {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
+    background-position: center;
+  }
+  .editorial .header_2-col-banner-right ol li {
+    margin: 0 0 10px 10px;
+  }
+  .editorial .tab-container .tab-contents {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+  }
 }
-.editorial .header_2-col-banner-right {
-  display: grid;
-  grid-template-columns: 70% auto;
-}
-.editorial .header_2-col-banner-right .editorial-headline {
-  display: flex;
-  flex-direction: column;
-}
-.editorial .header_2-col-banner-right .primary-banner {
-  border-radius: 30px;
-}
-.editorial .header_2-col-banner-right .primary-banner .sus {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
-}
-.editorial .header_2-col-banner-right ol li {
-  margin: 0 0 10px 10px;
-}
-
 @media only screen and (min-width: 1800px) {
   .navbar-container {
     margin: 0 170px;

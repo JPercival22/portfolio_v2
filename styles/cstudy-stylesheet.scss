@@ -13,7 +13,7 @@ $background-color_d-blue: $color_1;
 $background-color_white: var(--white-bkg);
 $background-green: var(--pale-green);
 $background-color_4: var(--yellow_bkg);
-$background-color_14: #b7d1cb;
+$background-pale-blue: var(--pale-blue);
 $background-color_15: #f0f8ff;
 $background-color_16: #dfedff;
 $background-color_17: #93c0b0;
@@ -37,7 +37,7 @@ $border-color_2: #1a1a1a;
 	--illuminate-yellow: #fffaa3;
 	--pale-green: #aafaaa;
 	--pale-pink: #eda4fc;
-	--pale-blue: rgb(155, 234, 245);
+	--pale-blue: #e8f8ff;
 	--light-orange: #ffd992;
 	/* box shadow styles  */
 	--b-shadow: -2px 10px 21px -2px rgba(201, 201, 201, 0.75);
@@ -199,8 +199,7 @@ img.logo-sm {
 	text-transform: capitalize;
 	cursor: pointer;
 	transition: linear 0.1s ease-in-out;
-	box-shadow: var(--br-shadow);
-	margin-bottom: 1em;
+	box-shadow: var(--b-shadow);
 	background-color: $background-color_1;
 }
 .secondary-button {
@@ -216,7 +215,7 @@ img.logo-sm {
 	text-transform: capitalize;
 	cursor: pointer;
 	transition: linear 0.1s ease-in-out;
-	box-shadow: var(--br-shadow);
+	box-shadow: var(--b-shadow);
 	background-color: $background-color_white;
 	color: $color_2;
 }
@@ -387,8 +386,6 @@ img.logo-sm {
 	overflow-x: hidden;
 	top: 54px;
 	background-color: $background-color_white;
-	border: 1px solid lightgrey;
-	box-shadow: 10px 10px 28px -5px rgba(0, 0, 0, 0.49);
 	transition: width 0.5s ease-in;
 	.close-btn {
 		svg {
@@ -601,10 +598,6 @@ img.logo-sm {
 	width: -webkit-fill-available;
 	gap: 1em;
 }
-.vertical-section {
-	display: flex;
-	flex-direction: column;
-}
 
 .tab-container {
 	width: 100%;
@@ -614,7 +607,8 @@ img.logo-sm {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-
+		background-color: $background-pale-blue;
+		border-top-right-radius: 8px;
 		.tab-button {
 			cursor: pointer;
 			display: flex;
@@ -635,7 +629,9 @@ img.logo-sm {
 		}
 	}
 	.tab-contents {
-		border-top: 0.5px solid gainsboro;
+		border: 0.5px solid gainsboro;
+		padding: 8px;
+		border-radius: 0 0 8px 8px;
 		.tab-module {
 			display: flex;
 			flex-direction: column;
@@ -701,7 +697,7 @@ img.logo-sm {
 			transition: 0.5s all ease-in-out;
 			padding: 0.5em;
 			border-radius: var(--br-8);
-			box-shadow: var(--br-shadow);
+			box-shadow: var(--b-shadow);
 			margin: 10px;
 			&:first-child {
 				filter: opacity(1) saturate(1.3);
@@ -1036,7 +1032,7 @@ table {
 th {
 	padding: 1rem;
 	text-align: left;
-	background-color: $background-color_14;
+	background-color: $background-pale-blue;
 	display: none;
 }
 td {
@@ -1090,7 +1086,7 @@ tr {
 		width: 50%;
 		padding: 20px;
 	}
-	
+
 	.case-study-inner {
 		margin: 1em;
 		margin-top: 0;
@@ -1136,17 +1132,15 @@ tr {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
-		align-content: center;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 	}
 	.right-col {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
-		align-content: center;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		width: 50%;
 	}
 	.tertiary-link {
@@ -1175,21 +1169,21 @@ tr {
 	.lg-cs-hero {
 		display: flex;
 	}
+	.accordion {
+		display: none;
+	}
+	.hide-sm {
+		display: flex !important;
+	}
 	.two-button-container {
 		flex-direction: row;
 		gap: 1em;
-		.primary-button {
-			width: 50%;
-			height: 42px;
-		}
+		max-height: 42px;
+		.primary-button,
 		.secondary-button {
 			width: 50%;
-			height: 42px;
+			height: inherit;
 		}
-	}
-	.primary-button {
-		width: 120px;
-		height: 24px;
 	}
 	.col-2 {
 		display: flex;
@@ -1228,6 +1222,53 @@ tr {
 		width: 40%;
 		padding: 20px;
 	}
+	.tab-container .tab-buttons {
+		flex-direction: row;
+	}
+	.grid-container-2col {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+		grid-gap: 1em;
+		background-color: var(--white-bkg);
+		border-radius: 8px;
+		.prototype-container {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+		}
+	}
+	.grid-container-4col {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: auto;
+		grid-gap: 1em;
+		background-color: var(--white-bkg);
+		padding: 1em;
+		border-radius: 8px;
+	}
+	.grid-container-5col {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: auto;
+		grid-gap: 1em;
+		background-color: var(--white-bkg);
+		padding: 1em;
+		border-radius: 8px;
+	}
+	.grid-container-6col {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: auto;
+		grid-gap: 1em;
+		background-color: $background-pale-blue;
+		padding: 1em;
+		border-radius: 8px;
+	}
+	.editorial .skills-section .centered-row .flex-row {
+		flex-direction: row;
+	}
 	.banner-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr; // Two equal columns
@@ -1240,7 +1281,7 @@ tr {
 			align-items: center;
 			color: white;
 			font-size: 24px;
-	
+
 			&.banner-1 {
 				background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Results-Banner.svg);
 				background-size: contain;
@@ -1253,8 +1294,12 @@ tr {
 			}
 		}
 	}
+	.btt-button {
+		bottom: 2rem;
+		right: 1rem;
+	}
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
 	.body {
 		margin: var(--side-margins-992px);
 	}
@@ -1264,11 +1309,6 @@ tr {
 
 	.editorial {
 		padding: 2em;
-		.skills-section {
-			.centered-row {
-				padding: 2em;
-			}
-		}
 	}
 	.grid-container {
 		display: grid;
@@ -1277,20 +1317,7 @@ tr {
 		grid-gap: 10px;
 	}
 	.two-button-container {
-		flex-direction: row;
-		display: flex;
-		gap: 1em;
-		align-content: center;
-		justify-content: flex-start;
-		align-items: center;
-		.primary-button {
-			width: 18%;
-			height: 36px;
-		}
-		.secondary-button {
-			width: 18%;
-			height: 36px;
-		}
+		width: 50%;
 	}
 
 	.tab-container .tab-contents .tab-module {
@@ -1322,7 +1349,8 @@ tr {
 					background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
 					width: 100%;
 					height: 100%;
-					background-size: cover;
+					background-size: contain;
+					background-repeat: no-repeat;
 					background-position: center;
 					border-radius: 8px;
 				}
@@ -1330,7 +1358,8 @@ tr {
 					background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
 					width: 100%;
 					height: 100%;
-					background-size: cover;
+					background-size: contain;
+					background-repeat: no-repeat;
 					background-position: center;
 					border-radius: 8px;
 				}
@@ -1338,16 +1367,16 @@ tr {
 					background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
 					width: 100%;
 					height: 100%;
-					background-size: cover;
-					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
 					border-radius: 8px;
 				}
 				.carousel-banner-4 {
 					background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
 					width: 100%;
 					height: 100%;
-					background-size: cover;
-					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
 					border-radius: 8px;
 				}
 			}
@@ -1468,6 +1497,7 @@ tr {
 			}
 			.nav-menu {
 				display: flex;
+				flex-direction: row;
 				a {
 					color: #1a1a1a;
 					font-size: 16px;
@@ -1574,30 +1604,41 @@ tr {
 		justify-content: flex-start;
 		gap: 1em;
 		margin: 0 auto;
+		position: relative;
+		top: 70px;
+		margin-bottom: 5em;
 	}
-
+	.page-components {
+		position: static;
+	}
+	.two-button-container {
+		width: 100%;
+	}
 	article {
-		width: 20%;
-		padding: 0 1em;
+		width: 23%;
 		background-color: white;
 		border-radius: var(--br-8);
-	}
-
-	.sideBar {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
-		width: 100%;
-		position: inherit;
-		.sideBar-content {
-			position: fixed;
+		.sideBar {
 			display: flex;
 			flex-direction: column;
-			align-items: baseline;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 100%;
+			position: inherit;
+			.sideBar-content {
+				position: fixed;
+				display: flex;
+				flex-direction: column;
+				align-items: baseline;
+				ul {
+					gap: 0.5em;
+					.side-bar-list-item {
+						height: 50px;
+					}
+				}
+			}
 		}
 	}
-
 	.main-content {
 		width: 80%;
 		display: flex;
@@ -1908,14 +1949,7 @@ tr {
 	.open-sidebar-btn {
 		display: none;
 	}
-	.sidebar {
-		top: 68px;
-		left: 0;
-		padding-left: 0;
-		border: none;
-		box-shadow: none;
-		border-radius: var(--br-8);
-	}
+
 	.mobile-sidebar {
 		display: none;
 	}
@@ -1944,7 +1978,8 @@ tr {
 		align-items: flex-start;
 		flex-direction: row;
 		gap: 0.3em;
-		margin-bottom: 1em;
+		margin: 0;
+		padding-top: 1em;
 		li {
 			font-size: 16px;
 			color: $color_8;
@@ -1990,28 +2025,38 @@ tr {
 		width: -webkit-fill-available;
 		height: 600px;
 	}
-}
 
-.editorial {
-	.header_2-col-banner-right {
-		display: grid;
-		grid-template-columns: 70% auto;
-		.editorial-headline {
-			display: flex;
-			flex-direction: column;
-		}
-		.primary-banner {
-			border-radius: 30px;
-			.sus {
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
+	.editorial {
+		.header_2-col-banner-right {
+			display: grid;
+			grid-template-columns: 70% auto;
+			width: 100%;
+			height: 150px;
+			.editorial-headline {
+				display: flex;
+				flex-direction: column;
+			}
+			.primary-banner {
+				border-radius: 30px;
+				width: 100%;
+				margin: 0;
+				.sus {
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
+					background-position: center;
+				}
+			}
+			ol li {
+				margin: 0 0 10px 10px;
 			}
 		}
-		ol li {
-			margin: 0 0 10px 10px;
+		.tab-container .tab-contents {
+			width: 100%;
+			overflow-x: hidden;
+			padding: 0;
 		}
-}
+	}
 }
 
 @media only screen and (min-width: 1800px) {
