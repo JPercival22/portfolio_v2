@@ -1,4 +1,4 @@
-// Import statements
+import { toggleSidebar, closeSidebarOnLinkClick } from './sideBarModule.mjs'; // Import the toggleSidebar and closeSidebarOnLinkClick functions from sideBarModule
 import { addToggleListener } from './menuModule.mjs';
 import { handleScroll as customNavigationHandleScroll } from "./navigationModule.mjs";
 import { initFloatingLabels } from "./form-floating-labels.mjs";
@@ -6,6 +6,7 @@ import { createTabModule } from "./tabModule.mjs";
 import { initLightboxFunctionality, openLightbox, closeLightbox } from './lightboxModule.mjs';
 import { initCarousel } from './carousel.mjs';
 import './accordion.mjs';
+
 // Define function to add main functionality
 function addMainFunctionality() {
   // Check if menuToggle exists before using it
@@ -25,17 +26,30 @@ function addMainFunctionality() {
 
 // DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
-  addMainFunctionality();
-  initLightboxFunctionality();
-  document.addEventListener('click', (event) => {
-    const closeBtn = event.target.closest('.lightbox [data-action="close-lightbox"]');
-    if (closeBtn) {
-      const lightbox = closeBtn.closest('.lightbox');
-      if (lightbox) {
-        lightbox.style.display = 'none';
-      }
+    const openSidebarBtn = document.querySelector('.open-sidebar-btn');
+    const closeSidebarBtn = document.querySelector('.close-btn');
+
+    if (openSidebarBtn) {
+        openSidebarBtn.addEventListener('click', toggleSidebar); // Add event listener to open button
     }
-  });
+
+    if (closeSidebarBtn) {
+        closeSidebarBtn.addEventListener('click', toggleSidebar); // Add event listener to close button
+    }
+
+    closeSidebarOnLinkClick(); // Call closeSidebarOnLinkClick to add event listener to links in the sidebar
+
+    addMainFunctionality();
+    initLightboxFunctionality();
+    document.addEventListener('click', (event) => {
+      const closeBtn = event.target.closest('.lightbox [data-action="close-lightbox"]');
+      if (closeBtn) {
+        const lightbox = closeBtn.closest('.lightbox');
+        if (lightbox) {
+          lightbox.style.display = 'none';
+        }
+      }
+    });
 });
 
 // Function to initialize tab modules
