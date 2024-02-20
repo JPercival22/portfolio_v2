@@ -1,3 +1,8 @@
+@font-face {
+	font-family: SF-Pro;
+	src: url(/assets/fonts/SF-Pro.ttf);
+}
+
 $color_brand: var(--brand-color);
 $color_primary_text: var(--primary-text-color);
 $color_brand_focus: var(--brand-color-focus);
@@ -58,7 +63,7 @@ $border-color_2: #1a1a1a;
 	--navbar-position: fixed;
 
 	// Typography
-	--body-copy: "Poppins";
+	--body-copy: "SF-Pro", sans-serif;
 	--brand-color: #2c4465;
 	--primary-text-color: #1a1a1a;
 	--h1-mobile: 30px;

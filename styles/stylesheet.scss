@@ -1,49 +1,71 @@
 @font-face {
-  font-family: 'Poppins';
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+	font-family: SF-Pro;
+	src: url(/assets/fonts/SF-Pro.ttf);
 }
 
+$color_brand: var(--brand-color);
+$color_primary_text: var(--primary-text-color);
+$color_brand_focus: var(--brand-color-focus);
+$color_white: var(--white-bkg);
+$color_6: var(--body-copy);
+$color_8: #4e4e4c;
+$font-family_1: var(--body-copy);
+$main-bkg: var(--body-bkg);
+$border-color: var(--border);
+$background-color_1: #bbefc4;
+$background-color_d-blue: $color_brand;
+$background-color_white: var(--white-bkg);
+$background-green: var(--pale-green);
+$background-color_4: var(--yellow_bkg);
+$background-pale-blue: var(--pale-blue);
+$right-shadow: var(--r-shadow);
+$background-color_15: #f0f8ff;
+$background-color_16: #dfedff;
+$background-color_17: #93c0b0;
+$background-color_18: #f2fbfe;
+$background-color_19: #f1f1f1;
+$background-color_20: lightblue;
+$background-color_21: #648c99;
+$background-color_22: #f2f2f2;
+$background-color_23: transparent;
+$border-color_1: #4f9985;
+$border-color_2: #1a1a1a;
 
+/* Style the tab content */
 :root {
-  // themes
-  --yellow_bkg: #fff2ce;
-  --white-bkg: #fff;
-  --blue-bkg: #f0f8ff;
-  --form-p-text: #666;
-  --illuminate-yellow: #fffaa3;
-  --pale-green: #aafaaa;
-  --pale-pink: #eda4fc;
-  --pale-blue: rgb(155, 234, 245);
-  --light-orange: #ffd992;
-  /* box shadow styles  */
-  --b-shadow: -2px 10px 21px -2px rgba(201, 201, 201, 0.75);
-  --br-shadow: 6px 6px 14px -3px rgba(181, 181, 181, 0.74);
+	// themes
+	--body-bkg: #f0f2f5;
+	--yellow_bkg: #fff2ce;
+	--white-bkg: #fff;
+	--blue-bkg: #f0f8ff;
+	--form-p-text: #666;
+	--illuminate-yellow: #fffaa3;
+	--pale-green: #aafaaa;
+	--pale-pink: #eda4fc;
+	--pale-blue: #e8f8ff;
+	--light-orange: #ffd992;
+	/* box shadow styles  */
+	--b-shadow: 0 8px 8px 0 rgba(201, 201, 201, 0.5);
+	--r-shadow: 8px 0 8px 0 rgba(201, 201, 201, 0.5);
+	/* border-styles  */
+	--border: 1px solid #d4d4d4;
+	--br-8: 8px;
+	--br-16: 16px;
+	--br-24: 24px;
+	--br-50: 50px;
+	/* input field border-radius  */
+	--form-br-4: 4px;
+	--form-br-8: 8px;
+	--form-br-16: 16px;
 
-  /* border-styles  */
-  --border: 1px solid #afafaf;
-  --br-8: 8px;
-  --br-16: 16px;
-  --br-24: 24px;
-  --br-50: 50px;
-  /* input field border-radius  */
-  --form-br-4: 4px;
-  --form-br-8: 8px;
-  --form-br-16: 16px;
+	/* navigation defaults  */
+	--navbar-height: 56px;
+	--navbar-position: fixed;
 
-  /* navigation defaults  */
-  --navbar-height: 56px;
-  --navbar-position: fixed;
-
-  // Typography
-  --body-copy: "Poppins";
-  --brand-color: #2c4465;
-  --primary-text-color: #1a1a1a;
-  --h1-mobile: 30px;
-  --h1-desktop: 48px;
-  --h2-mobile: 27px;
-  --h2--desktop: 30px;
+	// Typography
+	--body-copy: "SF-Pro", sans-serif;
+	--brand-color: #2c4465;
+	--primary-text-color: #1a1a1a;
 }
 
 html {
@@ -76,80 +98,91 @@ footer {
 }
 
 h1 {
-  font-size: var(--h1-mobile);
-  font-weight: 500;
-  line-height: 36px;
-  color: var(--brand-color);
-  text-align: left;
-  letter-spacing: 3pt;
-  margin-top: 0;
-  text-transform: capitalize;
+	font-family: $font-family_1;
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 24pt;
+	color: $color_brand;
+	text-align: left;
+	letter-spacing: 3pt;
+	margin-top: 0;
+	text-transform: capitalize;
 }
-
 h2 {
-  font-size: var(--h2-mobile);
-  font-weight: 500;
-  line-height: 30pt;
-  color: var(--brand-color);
-  text-align: left;
-  letter-spacing: 3pt;
-  text-transform: capitalize;
-  text-decoration: none;
-  text-underline-offset: 10px;
+	font-family: $font-family_1;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 24pt;
+	color: $color_brand;
+	text-align: left;
+	letter-spacing: 3pt;
+	text-transform: capitalize;
 }
-
 h3 {
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 22pt;
-  color: var(--brand-color);
-  text-transform: capitalize;
+	font-family: $font-family_1;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 22pt;
+	color: $color_brand;
+	letter-spacing: 3pt;
+	text-transform: capitalize;
 }
-
 h4 {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 22pt;
-  color: var(--brand-color);
-  text-transform: capitalize;
+	font-family: $font-family_1;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 0.1pt;
+	color: $color_brand;
+	letter-spacing: 1pt;
+	text-transform: capitalize;
 }
-
 p {
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 1px;
-  color: var(--primary-text-color);
-  .bold-italic {
-    font-weight: 700;
-    font-style: italic;
-  }
+	font-family: $font-family_1;
+	font-size: 16px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	color: $color_primary_text;
 }
-
 a {
-  text-decoration: none;
+	font-family: $font-family_1;
+	text-decoration: none;
 }
-
 section {
-  padding-top: 1em;
-  margin-bottom: 1em;
+	width: 100%;
+	padding-top: 1em;
+	margin-bottom: 1em;
 }
-
 ul {
-  list-style: disc;
-  margin-left: 16px;
-  padding: 0;
+	font-family: $font-family_1;
+	list-style: disc;
+	margin-left: 16px;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	&.no-disc {
+		margin-left: 0;
+		list-style: none;
+	}
+	li {
+		font-family: $font-family_1;
+		font-size: 16px;
+		.emphasis {
+			font-weight: 700;
+		}
+	}
 }
-
 ol {
-  margin-left: 16px;
-  padding: 0;
+	font-family: $font-family_1;
+	margin-left: 16px;
+	padding: 0;
+	li {
+		display: list-item;
+		font-family: $font-family_1;
+		font-size: 16px;
+	}
 }
 
-ul li,
-ol li {
-  font-family: "Poppins";
-  font-size: 16px;
-}
 
 img {
   width: 100%;
