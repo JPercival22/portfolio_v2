@@ -2,8 +2,8 @@ import { toggleSidebar, closeSidebarOnLinkClick } from './sideBarModule.mjs'; //
 import { addToggleListener } from './menuModule.mjs';
 import { handleScroll as customNavigationHandleScroll } from "./navigationModule.mjs";
 import { initFloatingLabels } from "./form-floating-labels.mjs";
-import { createTabModule } from "./tabModule.mjs";
-import { initLightboxFunctionality, openLightbox, closeLightbox } from './lightboxModule.mjs';
+import { initializeTabModules } from './tabModule.mjs';
+import { initLightboxFunctionality } from './lightboxModule.mjs';
 import { initCarousel } from './carousel.mjs';
 import './accordion.mjs';
 
@@ -40,64 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeSidebarOnLinkClick(); // Call closeSidebarOnLinkClick to add event listener to links in the sidebar
 
     addMainFunctionality();
-    initLightboxFunctionality();
-    document.addEventListener('click', (event) => {
-      const closeBtn = event.target.closest('.lightbox [data-action="close-lightbox"]');
-      if (closeBtn) {
-        const lightbox = closeBtn.closest('.lightbox');
-        if (lightbox) {
-          lightbox.style.display = 'none';
-        }
-      }
-    });
 });
-
-// Function to initialize tab modules
-function initializeTabModules() {
-  const tabContainers = document.querySelectorAll('.tab-container');
-  tabContainers.forEach((tabContainer) => {
-    try {
-      const tabButtons = tabContainer.querySelectorAll('.tab-buttons .tab-button');
-      const tabContents = tabContainer.querySelectorAll('.tab-contents .tab-module');
-
-      tabContainer.addEventListener('click', (event) => {
-        const tabButton = event.target.closest('.tab-button');
-        if (tabButton) {
-          tabButtons.forEach((button, index) => {
-            if (button === tabButton) {
-              tabContents.forEach((tabContent, contentIndex) => {
-                if (tabContent) {
-                  tabContent.style.display = contentIndex === index ? 'flex' : 'none';
-                }
-              });
-              tabButtons.forEach((button) => {
-                button.classList.remove('active');
-              });
-              tabButton.classList.add('active');
-              sessionStorage.setItem('activeTabIndex', index);
-            }
-          });
-        }
-      });
-
-      const activeTabIndex = sessionStorage.getItem('activeTabIndex');
-      if (activeTabIndex !== null && activeTabIndex < tabContents.length) {
-        tabContents.forEach((tabContent, index) => {
-          tabContent.style.display = index == activeTabIndex ? 'flex' : 'none';
-        });
-        tabButtons.forEach((button, index) => {
-          button.classList.toggle('active', index == activeTabIndex);
-        });
-      } else {
-        tabContents[0].style.display = 'flex';
-        tabButtons[0].classList.add('active');
-        sessionStorage.setItem('activeTabIndex', 0);
-      }
-    } catch (error) {
-      console.error('Error initializing tab modules:', error);
-    }
-  });
-}
 
 // Function to initialize carousels
 function initCarousels() {

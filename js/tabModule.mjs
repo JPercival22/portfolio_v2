@@ -1,24 +1,46 @@
-export function createTabModule(title, content) {
-  const tabButton = document.createElement('button');
-  tabButton.classList.add('tab-button');
-  tabButton.textContent = title;
+export function initializeTabModules() {
+  const tabContainers = document.querySelectorAll('.tab-container');
+  tabContainers.forEach((tabContainer) => {
+      try {
+          const tabButtons = tabContainer.querySelectorAll('.tab-buttons .tab-button');
 
-  const tabContent = document.createElement('div');
-  tabContent.classList.add('tab-content');
-  tabContent.textContent = content;
+          tabButtons.forEach((tabButton, index) => {
+              const title = tabButton.textContent.trim();
+              const tabContents = tabContainer.querySelectorAll('.tab-contents .tab-module');
 
-  function addButtonToContainer(container) {
-    container.appendChild(tabButton);
-  }
+              // Check if the index exists
+              if (index < tabContents.length) {
+                  const tabContent = tabContents[index];
+                  const content = tabContent.innerHTML.trim();
 
-  function addContentToContainer(container) {
-    container.appendChild(tabContent);
-  }
+                  // Add event listener to tab button
+                  tabButton.addEventListener('click', () => {
+                      // Hide all tab contents and remove active class from buttons
+                      tabContents.forEach((content) => {
+                          content.style.display = 'none';
+                      });
+                      tabButtons.forEach((button) => {
+                          button.classList.remove('active');
+                      });
 
-  return {
-    tabButton,
-    tabContent,
-    addButtonToContainer,
-    addContentToContainer,
-  };
+                      // Display clicked tab content and set active class to button
+                      tabContent.style.display = 'flex';
+                      tabButton.classList.add('active');
+
+                      // Store active tab index in session storage
+                      sessionStorage.setItem('activeTabIndex', index);
+                  });
+
+                  // Check if tab is active
+                  const activeTabIndex = sessionStorage.getItem('activeTabIndex');
+                  if (activeTabIndex && parseInt(activeTabIndex) === index) {
+                      tabContent.style.display = 'flex';
+                      tabButton.classList.add('active');
+                  }
+              }
+          });
+      } catch (error) {
+          console.error('Error initializing tab modules:', error);
+      }
+  });
 }
