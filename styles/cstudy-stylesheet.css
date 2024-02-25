@@ -1330,6 +1330,11 @@ tr:nth-of-type(odd) {
     background-color: var(--pale-blue);
     padding: 1em;
     border-radius: 8px;
+    align-items: start;
+    justify-content: space-evenly;
+  }
+  .grid-container-6col.no-background {
+    background-color: var(--white-bkg);
   }
   .editorial .skills-section .centered-row .flex-row {
     flex-direction: row;
