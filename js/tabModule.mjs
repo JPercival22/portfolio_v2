@@ -5,7 +5,7 @@ export function initializeTabModules() {
             const tabButtons = tabContainer.querySelectorAll('.tab-buttons .tab-button');
             const tabContents = tabContainer.querySelectorAll('.tab-contents .tab-module');
   
-            // Get active tab index from session storage or default to 0
+            // Get active tab index from session storage or default to 0 (Tab1)
             let activeTabIndex = parseInt(sessionStorage.getItem('activeTabIndex')) || 0;
   
             // Hide all tab contents except the active one
