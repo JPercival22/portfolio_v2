@@ -1249,6 +1249,11 @@ tr {
 		background-color: $background-pale-blue;
 		padding: 1em;
 		border-radius: 8px;
+		align-items: start;
+		justify-content: space-evenly;
+		&.no-background {
+			background-color: $background-color_white;
+		}
 	}
 	.editorial .skills-section .centered-row .flex-row {
 		flex-direction: row;
