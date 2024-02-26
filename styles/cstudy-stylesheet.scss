@@ -616,7 +616,7 @@ img.logo-sm {
 				justify-content: space-evenly;
 				align-items: flex-start;
 				margin-bottom: 1em;
-				img {
+				.no-border {
 					border: none;
 				}
 				.col {

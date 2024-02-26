@@ -614,7 +614,7 @@ img.logo-sm {
   align-items: flex-start;
   margin-bottom: 1em;
 }
-.tab-container .tab-contents .tab-module .gallery img {
+.tab-container .tab-contents .tab-module .gallery .no-border {
   border: none;
 }
 .tab-container .tab-contents .tab-module .gallery .col {
