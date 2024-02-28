@@ -719,7 +719,7 @@ img.logo-sm {
 					border-radius: var(--br-16);
 				}
 				.sm-device {
-					width: 100vw;
+					width: 40vw;
 					height: auto;
 				}
 				.close-btn {
@@ -1813,28 +1813,29 @@ tr {
 			padding: 1em 0;
 			border-radius: var(--br-16);
 			cursor: context-menu;
-			img {
+			.lightbox-img {
 				width: 60%;
 				height: auto;
-			}
-			.vertical_94 {
+			
+			&.vertical_94 {
 				width: 94%;
 			}
-			.vertical_60 {
+			&.vertical_60 {
 				width: 60%;
 			}
-			.vertical {
+			&vertical {
 				width: 40%;
 			}
-			.vertical_46 {
+			&.vertical_46 {
 				width: 46%;
 			}
-			.vertical_36 {
+			&.vertical_36 {
 				width: 36%;
 			}
-			.vertical_30 {
+			&.vertical_30 {
 				width: 27%;
 			}
+		}
 			.close-btn {
 				position: absolute;
 				top: 10px;
