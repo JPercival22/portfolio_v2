@@ -749,10 +749,10 @@ img.logo-sm {
 		a {
 			color: var(--primary-text-color);
 			text-decoration: underline;
-			transition: all ease-in-out .5s;
+			transition: all ease-in-out 0.5s;
 			&:hover {
 				text-decoration: none;
-				filter:brightness(0.9);
+				filter: brightness(0.9);
 			}
 			.border {
 				border: 20px solid #1a1a1a;
@@ -1270,6 +1270,10 @@ tr {
 	}
 	.editorial .skills-section .centered-row .flex-row {
 		flex-direction: row;
+		.right-col .flex-row .col {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 	.banner-container {
 		display: grid;
@@ -1522,41 +1526,64 @@ tr {
 		}
 	}
 
-	.two-button-container {
+	.hero-container {
+		padding: 1em;
+		.two-button-container {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			justify-content: flex-end;
+			gap: 1em;
+			.primary-button,
+			.secondary-button {
+				width: 16%;
+			}
+		}
 		.primary-button {
-			width: 20%;
+			&:hover {
+				background: #b3e2bb;
+				border-color: $border-color_1;
+				box-shadow: none;
+			}
 		}
 		.secondary-button {
-			width: 20%;
+			&:hover {
+				background-color: $background-color_16;
+				color: $color_primary_text;
+				border-color: $border-color_2;
+				box-shadow: none;
+			}
+		}
+		.bullet-list-row {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			list-style: none;
 		}
 	}
-	.primary-button {
-		&:hover {
-			background: #b3e2bb;
-			border-color: $border-color_1;
-			box-shadow: none;
-		}
-	}
-	.secondary-button {
-		&:hover {
-			background-color: $background-color_16;
-			color: $color_primary_text;
-			border-color: $border-color_2;
-			box-shadow: none;
-		}
+
+	.contents {
+		top: 70px;
+		left: 20px;
 	}
 
 	.main-content {
-		width: 83%;
+		width: 90%;
 		margin: 0 auto;
 	}
-	.hero-container {
-		padding: 0;
-	}
-	.primary-banner {
-		display: inherit;
-	}
 
+	.skills-section .centered-row {
+		width: 100%;
+		.flex-row .right-col .flex-row .col .tertiary-link {
+			color: $color_brand;
+			font-weight: 700;
+			text-decoration: underline;
+			border: none;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
 	.footer-container {
 		.footer-social-icon {
 			width: 50vw;
