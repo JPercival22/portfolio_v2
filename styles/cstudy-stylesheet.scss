@@ -582,7 +582,7 @@ img.logo-sm {
 	flex-direction: column;
 	.tab-buttons {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-items: flex-start;
 		background-color: $background-pale-blue;
 		border-top-right-radius: 8px;
@@ -700,7 +700,7 @@ img.logo-sm {
 			background: #00000075;
 			z-index: 9999;
 			cursor: zoom-out;
-			&-content {
+			.lightbox-content {
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -714,13 +714,20 @@ img.logo-sm {
 				border-radius: var(--br-16);
 				cursor: context-menu;
 				img {
-					width: 100%;
 					height: auto;
-					border-radius: var(--br-16);
-				}
-				.sm-device {
-					width: 40vw;
-					height: auto;
+					background-color: $background-color_white;
+					border-color: $background-color_d-blue;
+					&.lightbox-image_27 {width: 33vw;}
+					&.lightbox-image_35, &.lightbox-image_30, .lightbox-image_40  {width: 42vw;}
+					&.lightbox-image_50, &.lightbox-image_55 {width: 55vw;}
+					&.lightbox-image_45 {
+						width: 47vw;
+					}
+					&.lightbox-image_60 {width: 90vw;}
+					&.lightbox-image_65 {width: 93vw;}
+					&.lightbox-image_100-vW, &.lightbox-image_100, &.lightbox-image_70 {
+						width: 97vw;
+					}
 				}
 				.close-btn {
 					position: absolute;
