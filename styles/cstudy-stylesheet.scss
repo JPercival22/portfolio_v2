@@ -1800,7 +1800,7 @@ tr {
 		background: #00000075;
 		z-index: 9999;
 		cursor: zoom-out;
-		&-content {
+		.lightbox-content {
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -1813,29 +1813,48 @@ tr {
 			padding: 1em 0;
 			border-radius: var(--br-16);
 			cursor: context-menu;
-			.lightbox-img {
-				width: 60%;
+			img {
 				height: auto;
-			
-			&.vertical_94 {
-				width: 94%;
+				background-color: $background-color_white;
+				border-color: $background-color_d-blue;
+				&.lightbox-image_100-vW {
+					width: 97vw;
+				}
+				&.lightbox-image_100 {
+					width: 100%;
+				}
+				&.lightbox-image_70 {
+					width: 70%;
+				}
+				&.lightbox-image_65 {
+					width: 65%;
+				}
+				&.lightbox-image_60 {
+					width: 60%;
+				}
+				&.lightbox-image_55 {
+					width: 55%;
+				}
+				&.lightbox-image_50 {
+					width: 50%;
+				}
+				&.lightbox-image_45 {
+					width: 45%;
+				}
+				&.lightbox-image_40 {
+					width: 40%;
+				}
+				&.lightbox-image_35 {
+					width: 35%;
+				}
+				&.lightbox-image_30 {
+					width: 30%;
+				}
+				&.lightbox-image_27 {
+					width: 29%;
+				}
+				
 			}
-			&.vertical_60 {
-				width: 60%;
-			}
-			&vertical {
-				width: 40%;
-			}
-			&.vertical_46 {
-				width: 46%;
-			}
-			&.vertical_36 {
-				width: 36%;
-			}
-			&.vertical_30 {
-				width: 27%;
-			}
-		}
 			.close-btn {
 				position: absolute;
 				top: 10px;
