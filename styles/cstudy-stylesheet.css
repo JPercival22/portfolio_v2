@@ -1358,6 +1358,10 @@ tr:nth-of-type(odd) {
   .editorial .skills-section .centered-row .flex-row {
     flex-direction: row;
   }
+  .editorial .skills-section .centered-row .flex-row .right-col .flex-row .col {
+    display: flex;
+    flex-direction: column;
+  }
   .banner-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1592,32 +1596,56 @@ tr:nth-of-type(odd) {
   .open-sidebar-btn:hover {
     opacity: 0.7;
   }
-  .two-button-container .primary-button {
-    width: 20%;
+  .hero-container {
+    padding: 1em;
   }
-  .two-button-container .secondary-button {
-    width: 20%;
+  .hero-container .two-button-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 1em;
   }
-  .primary-button:hover {
+  .hero-container .two-button-container .primary-button,
+  .hero-container .two-button-container .secondary-button {
+    width: 16%;
+  }
+  .hero-container .primary-button:hover {
     background: #b3e2bb;
     border-color: #4f9985;
     box-shadow: none;
   }
-  .secondary-button:hover {
+  .hero-container .secondary-button:hover {
     background-color: #dfedff;
     color: var(--primary-text-color);
     border-color: #1a1a1a;
     box-shadow: none;
   }
+  .hero-container .bullet-list-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+  }
+  .contents {
+    top: 70px;
+    left: 20px;
+  }
   .main-content {
-    width: 83%;
+    width: 90%;
     margin: 0 auto;
   }
-  .hero-container {
-    padding: 0;
+  .skills-section .centered-row {
+    width: 100%;
   }
-  .primary-banner {
-    display: inherit;
+  .skills-section .centered-row .flex-row .right-col .flex-row .col .tertiary-link {
+    color: var(--brand-color);
+    font-weight: 700;
+    text-decoration: underline;
+    border: none;
+  }
+  .skills-section .centered-row .flex-row .right-col .flex-row .col .tertiary-link:hover {
+    text-decoration: none;
   }
   .footer-container .footer-social-icon {
     width: 50vw;
