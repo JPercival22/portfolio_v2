@@ -1291,9 +1291,7 @@ footer {
 	.accordion {
 		display: none;
 	}
-	.hide-sm {
-		display: flex !important;
-	}
+	
 	.two-button-container {
 		flex-direction: row;
 		gap: 1em;
@@ -1395,6 +1393,53 @@ footer {
 		justify-content: space-evenly;
 		&.no-background {
 			background-color: $background-color_white;
+		}
+	}
+	.grid-container-1col,
+	.grid-container-2col,
+	.grid-container-3col,
+	.grid-container-4col,
+	.grid-container-5col,
+	.grid-container-6col {
+		.image-container {
+			.lightbox {
+				.lightbox-content {
+					img {
+						&.lightbox-image_25 {
+							width: 17vw;
+						}
+						&.lightbox-image_30 {
+							width: 20vw;
+						}
+						&.lightbox-image_35 {
+							width: 22vw;
+						}
+						&.lightbox-image_40 {
+							width: 24vw;
+						}
+						&.lightbox-image_45 {
+							width: 28vw;
+						}
+						&.lightbox-image_50 {
+							width: 30vw;
+						}
+						&.lightbox-image_55 {
+							width: 46vw;
+						}
+						&.lightbox-image_60 {
+							width: 36vw;
+						}
+						&.lightbox-image_65 {
+							width: 38vw;
+						}
+						&.lightbox-image_70,
+						&.lightbox-image_100,
+						&.lightbox-image_100-vW {
+							width: 97vw;
+						}
+					}
+				}
+			}
 		}
 	}
 	.editorial .skills-section .centered-row .flex-row {
