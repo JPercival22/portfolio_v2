@@ -750,7 +750,11 @@ img.logo-sm {
 					}
 				}
 				p {
-					padding-left: 20px;
+					font-size: 14px;
+					line-height: 14px;
+					letter-spacing: .5px;
+					padding-left: 10px;
+					margin-bottom: 0;
 				}
 				.close-btn {
 					position: absolute;
@@ -1016,6 +1020,13 @@ footer {
 			transform: translateY(-4px);
 		}
 	}
+	&::after {
+		background-color: $background-green;
+		box-shadow: var(--b-shadow);
+		.span {
+			transform: translateY(0);
+		}
+	}
 }
 .editorial {
 	display: flex;
@@ -1084,23 +1095,23 @@ footer {
 							width: 30vw;
 						}
 						&.lightbox-image_35 {
-							width: 35vw;
+							width: 32vw;
 						}
 						&.lightbox-image_40 {
-							width: 40vw;
+							width: 36vw;
 						}
 						&.lightbox-image_45,
 						&.lightbox-image_50 {
-							width: 47vw;
+							width: 40vw;
 						}
 						&.lightbox-image_55 {
 							width: 46vw;
 						}
 						&.lightbox-image_60 {
-							width: 100vw;
+							width: 50vw;
 						}
 						&.lightbox-image_65 {
-							width: 60vw;
+							width: 65vw;
 						}
 						&.lightbox-image_70,
 						&.lightbox-image_100,
