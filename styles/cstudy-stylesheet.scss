@@ -752,7 +752,7 @@ img.logo-sm {
 				p {
 					font-size: 14px;
 					line-height: 14px;
-					letter-spacing: .5px;
+					letter-spacing: 0.5px;
 					padding-left: 10px;
 					margin-bottom: 0;
 				}
@@ -989,8 +989,8 @@ footer {
 						"wght" 400,
 						"GRAD" 0,
 						"opsz" 24;
-						font-size: 30px;
-						color: #2c4465;
+					font-size: 30px;
+					color: #2c4465;
 				}
 			}
 		}
@@ -1134,9 +1134,7 @@ footer {
 		padding-left: 20px;
 	}
 	.menu-toggle {
-		height: 50px;
 		width: 60px;
-		padding-right: 20px;
 	}
 	.sidebar.show {
 		width: 50%;
@@ -1224,29 +1222,31 @@ footer {
 				.lightbox-content {
 					img {
 						&.lightbox-image_25 {
-							width: 25vw;
+							width: 20vw;
 						}
 						&.lightbox-image_30 {
-							width: 30vw;
+							width: 25vw;
 						}
 						&.lightbox-image_35 {
-							width: 35vw;
+							width: 28vw;
 						}
 						&.lightbox-image_40 {
-							width: 40vw;
+							width: 30vw;
 						}
-						&.lightbox-image_45,
+						&.lightbox-image_45 {
+							width: 35vw;
+						}
 						&.lightbox-image_50 {
-							width: 47vw;
+							width: 40vw;
 						}
 						&.lightbox-image_55 {
 							width: 46vw;
 						}
 						&.lightbox-image_60 {
-							width: 55vw;
+							width: 45vw;
 						}
 						&.lightbox-image_65 {
-							width: 60vw;
+							width: 50vw;
 						}
 						&.lightbox-image_70,
 						&.lightbox-image_100,
