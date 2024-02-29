@@ -1486,6 +1486,9 @@ footer {
 	.sidebar-open {
 		width: 30%;
 	}
+	.two-button-container {
+		width: 50%;
+	}
 	.editorial {
 		padding: 2em;
 	}
@@ -1495,10 +1498,54 @@ footer {
 		grid-template-rows: 1fr 1fr;
 		grid-gap: 10px;
 	}
-	.two-button-container {
-		width: 50%;
-	}
 
+	.grid-container-1col,
+	.grid-container-2col,
+	.grid-container-3col,
+	.grid-container-4col,
+	.grid-container-5col,
+	.grid-container-6col {
+		.image-container {
+			.lightbox {
+				.lightbox-content {
+					img {
+						&.lightbox-image_25 {
+							width: 9vw;
+						}
+						&.lightbox-image_30 {
+							width: 10vw;
+						}
+						&.lightbox-image_35 {
+							width: 12vw;
+						}
+						&.lightbox-image_40 {
+							width: 14vw;
+						}
+						&.lightbox-image_45 {
+							width: 16vw;
+						}
+						&.lightbox-image_50 {
+							width: 15vw;
+						}
+						&.lightbox-image_55 {
+							width: 46vw;
+						}
+						&.lightbox-image_60 {
+							width: 20vw;
+						}
+						&.lightbox-image_65 {
+							width: 20vw;
+						}
+						&.lightbox-image_70,
+						&.lightbox-image_100,
+						&.lightbox-image_100-vW {
+							width: 97vw;
+						}
+					}
+				}
+			}
+		}
+	}
 	.tab-container .tab-contents .tab-module {
 		display: flex;
 		flex-direction: column;
