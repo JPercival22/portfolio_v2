@@ -709,7 +709,7 @@ img.logo-sm {
 				justify-content: center;
 				align-items: center;
 				background-color: #fff;
-				padding: 1em 0;
+				padding: 1em;
 				border-radius: var(--br-8);
 				cursor: context-menu;
 				img {
@@ -1291,7 +1291,7 @@ footer {
 	.accordion {
 		display: none;
 	}
-	
+
 	.two-button-container {
 		flex-direction: row;
 		gap: 1em;
@@ -1941,36 +1941,44 @@ footer {
 				.lightbox-content {
 					img {
 						&.lightbox-image_25 {
-							width: 9vw;
+							width: 7vw;
 						}
 						&.lightbox-image_30 {
-							width: 10vw;
+							width: 8vw;
 						}
 						&.lightbox-image_35 {
-							width: 12vw;
+							width: 9vw;
 						}
 						&.lightbox-image_40 {
-							width: 14vw;
+							width: 10vw;
 						}
 						&.lightbox-image_45 {
-							width: 16vw;
+							width: 11vw;
 						}
 						&.lightbox-image_50 {
-							width: 15vw;
+							width: 12vw;
 						}
 						&.lightbox-image_55 {
-							width: 46vw;
+							width: 13vw;
 						}
 						&.lightbox-image_60 {
-							width: 20vw;
+							width: 25vw;
+						}
+						&.desktop_60 {
+							width: 14vw;
 						}
 						&.lightbox-image_65 {
-							width: 20vw;
+							width: 15vw;
 						}
-						&.lightbox-image_70,
-						&.lightbox-image_100,
+						&.lightbox-image_70 {
+							width: 34vw;
+						}
 						&.lightbox-image_100-vW {
-							width: 97vw;
+							width: 90vw;
+						}
+
+						&.lightbox-image_100 {
+							width: 60vw;
 						}
 					}
 				}
