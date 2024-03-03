@@ -743,7 +743,7 @@ img.logo-sm {
 					&.lightbox-image_65 {
 						width: 65vw;
 					}
-					&.lightbox-image_70,
+					&.lightbox-image_70 {width:88vw}
 					&.lightbox-image_100,
 					&.lightbox-image_100-vW {
 						width: 97vw;
@@ -1247,7 +1247,7 @@ footer {
 							width: 46vw;
 						}
 						&.lightbox-image_60 {
-							width: 45vw;
+							width: 70vw;
 						}
 						&.lightbox-image_65 {
 							width: 50vw;
@@ -1263,14 +1263,7 @@ footer {
 		}
 	}
 
-	.tertiary-link {
-		color: $color_6;
-		font-size: 16px;
-		border-bottom: 1px solid black;
-		&:hover {
-			border: none;
-		}
-	}
+	
 	footer {
 		.footer-container {
 			.footer-details {
@@ -1410,36 +1403,46 @@ footer {
 				.lightbox-content {
 					img {
 						&.lightbox-image_25 {
-							width: 17vw;
+							width: 11vw;
 						}
 						&.lightbox-image_30 {
-							width: 20vw;
+							width: 13vw;
 						}
 						&.lightbox-image_35 {
-							width: 22vw;
+							width: 15vw;
 						}
 						&.lightbox-image_40 {
-							width: 24vw;
+							width: 16vw;
 						}
 						&.lightbox-image_45 {
-							width: 28vw;
+							width: 18vw;
 						}
 						&.lightbox-image_50 {
-							width: 30vw;
+							width: 20vw;
 						}
 						&.lightbox-image_55 {
 							width: 46vw;
 						}
+						&.lightbox-image_55a {
+							width: 15vw;
+						}
 						&.lightbox-image_60 {
+							width: 60vw;
+						}
+						&.lightbox-image_60a {
+							width: 24vw;
+						}
+						&.lightbox-image_61 {
 							width: 36vw;
 						}
 						&.lightbox-image_65 {
-							width: 38vw;
+							width: 26vw;
 						}
-						&.lightbox-image_70,
+						&.lightbox-image-50 {width:50vw}
+						&.lightbox-image_70 {width: 70vw}
 						&.lightbox-image_100,
 						&.lightbox-image_100-vW {
-							width: 97vw;
+							width: 60vw;
 						}
 					}
 				}
@@ -1490,6 +1493,9 @@ footer {
 	.sidebar-open {
 		width: 30%;
 	}
+	.tab-container.hide-sm {
+		display: flex;
+	}
 	.two-button-container {
 		width: 50%;
 	}
@@ -1513,14 +1519,26 @@ footer {
 			.lightbox {
 				.lightbox-content {
 					img {
+						&.lightbox-image_20 {
+							width: 6vw;
+						}
+						&.lightbox-image_21 {
+							width: 8vw;
+						}
 						&.lightbox-image_25 {
 							width: 9vw;
+						}
+						&.lightbox-image_27 {
+							width: 27vw;
 						}
 						&.lightbox-image_30 {
 							width: 10vw;
 						}
 						&.lightbox-image_35 {
 							width: 12vw;
+						}
+						&.lightbox-image_37 {
+							width: 37vw;
 						}
 						&.lightbox-image_40 {
 							width: 14vw;
@@ -1531,16 +1549,36 @@ footer {
 						&.lightbox-image_50 {
 							width: 15vw;
 						}
+						&.lightbox-image_50-24 {
+							width: 24vw;
+						}
+						&.lightbox-image_50-35 {
+							width: 35vw;
+						}
+						&.lightbox-image_50a {
+							width: 30vw;
+						}
+						&.lightbox-image_50b {
+							width: 40vw;
+						}
 						&.lightbox-image_55 {
-							width: 46vw;
+							width: 45vw;
 						}
 						&.lightbox-image_60 {
-							width: 20vw;
+							width: 44vw;
+						}
+						&.lightbox-image_60a {
+							width: 24vw;
 						}
 						&.lightbox-image_65 {
 							width: 20vw;
 						}
-						&.lightbox-image_70,
+						&.lightbox-image_67 {
+							width: 57vw;
+						}
+						&.lightbox-image_70 {width: 60vw;}
+						&.lightbox-image_75 {width: 65vw;}
+
 						&.lightbox-image_100,
 						&.lightbox-image_100-vW {
 							width: 97vw;
