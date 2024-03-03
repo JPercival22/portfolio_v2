@@ -743,7 +743,9 @@ img.logo-sm {
 					&.lightbox-image_65 {
 						width: 65vw;
 					}
-					&.lightbox-image_70 {width:88vw}
+					&.lightbox-image_70 {
+						width: 88vw;
+					}
 					&.lightbox-image_100,
 					&.lightbox-image_100-vW {
 						width: 97vw;
@@ -827,18 +829,32 @@ img.logo-sm {
 			min-width: 100%;
 			height: auto;
 			background-size: cover;
-			.gallery .lg {
+			.gallery {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 				width: -webkit-fill-available;
-				height: auto;
-				border: none;
+				margin: 0;
+				img {
+					width: -webkit-fill-available;
+					height: auto;
+					border: none;
+					&.lg {
+						width: 100vw;
+					}
+				}
+				figcaption {
+					display: flex;
+				}
 			}
 		}
 	}
 	.carousel-buttons {
 		position: absolute;
 		top: 50%;
-		transform: translateY(-50%);
-		width: 100%;
+		transform: translateY(-246%);
+		width: -webkit-fill-available;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -854,7 +870,7 @@ img.logo-sm {
 			height: 50px;
 			transition: all 0.3s ease-in-out;
 			background-color: var(--white-bkg);
-			box-shadow: var(--br-shadow);
+			box-shadow: var(--b-shadow);
 			color: var(--brand-color);
 			cursor: pointer;
 			&:hover {
@@ -1053,7 +1069,7 @@ footer {
 				justify-content: flex-start;
 				gap: 10px;
 				.left-col,
-				.right-col, 
+				.right-col,
 				.col {
 					display: flex;
 					flex-direction: column;
@@ -1259,7 +1275,6 @@ footer {
 		}
 	}
 
-	
 	footer {
 		.footer-container {
 			.footer-details {
@@ -1280,9 +1295,6 @@ footer {
 	}
 	.lg-cs-hero {
 		display: flex;
-	}
-	.accordion {
-		display: none;
 	}
 
 	.two-button-container {
@@ -1434,8 +1446,12 @@ footer {
 						&.lightbox-image_65 {
 							width: 26vw;
 						}
-						&.lightbox-image-50 {width:50vw}
-						&.lightbox-image_70 {width: 70vw}
+						&.lightbox-image-50 {
+							width: 50vw;
+						}
+						&.lightbox-image_70 {
+							width: 70vw;
+						}
 						&.lightbox-image_100,
 						&.lightbox-image_100-vW {
 							width: 60vw;
@@ -1489,6 +1505,7 @@ footer {
 	.sidebar-open {
 		width: 30%;
 	}
+	.accordion {display: none;}
 	.tab-container.hide-sm {
 		display: flex;
 	}
@@ -1572,8 +1589,12 @@ footer {
 						&.lightbox-image_67 {
 							width: 57vw;
 						}
-						&.lightbox-image_70 {width: 60vw;}
-						&.lightbox-image_75 {width: 65vw;}
+						&.lightbox-image_70 {
+							width: 60vw;
+						}
+						&.lightbox-image_75 {
+							width: 65vw;
+						}
 
 						&.lightbox-image_100,
 						&.lightbox-image_100-vW {
@@ -1866,8 +1887,12 @@ footer {
 						&.lightbox-image_67 {
 							width: 47vw;
 						}
-						&.lightbox-image_70 {width: 47vw;}
-						&.lightbox-image_75 {width: 52vw;}
+						&.lightbox-image_70 {
+							width: 47vw;
+						}
+						&.lightbox-image_75 {
+							width: 52vw;
+						}
 						&.lightbox-image_100,
 						&.lightbox-image_100-vW {
 							width: 97vw;
@@ -1900,7 +1925,6 @@ footer {
 			}
 		}
 	}
-
 }
 @media only screen and (min-width: 1400px) {
 	body {
@@ -2040,7 +2064,6 @@ footer {
 				font-family: inherit;
 				color: var(--primary-text-color);
 				text-decoration: underline;
-
 			}
 			&:hover {
 				text-decoration: none;
@@ -2311,17 +2334,17 @@ footer {
 						&.lightbox-image_45 {
 							width: 11vw;
 						}
-				
+
 						&.lightbox-image_50 {
 							width: 12vw;
 						}
 						&.lightbox-image_50a {
 							width: 16vw;
 						}
-						&.lightbox-image_55  {
+						&.lightbox-image_55 {
 							width: 13vw;
 						}
-						&.lightbox-image_55-25  {
+						&.lightbox-image_55-25 {
 							width: 25vw;
 						}
 						&.lightbox-image_50-24 {
