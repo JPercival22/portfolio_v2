@@ -1,20 +1,29 @@
-@font-face {
-	font-family: SF-Pro;
-	src: url(/assets/fonts/SF-Pro.ttf);
-}
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
 
-$color_brand: var(--brand-color);
-$color_primary_text: var(--primary-text-color);
-$color_brand_focus: var(--brand-color-focus);
-$color_white: var(--white-bkg);
-$color_6: var(--body-copy);
+// Typography
+$font-family: "Spartan";
+
+// color palette
+
+// grey scale 
+$color_white: #fff;
+$color_main-bkg: #f0f2f5;
+$color_primary_text:#1a1a1a;
+$color_border-settings-grey: 1px solid #d4d4d4;
+// blue-scale
+$color_brand:#2c4465;
+$color_border-settings-secondary: 1px solid #2c4465;
+
 $color_8: #4e4e4c;
-$font-family_1: var(--body-copy);
-$main-bkg: var(--body-bkg);
-$border-color: var(--border);
+
+// green scale 
+$color_border-settings-primary: 1px solid #4eca63;
+$color_primary-btn-bkg: #bbefc4;
+$color_focus: #7fffd4;
+
 $background-color_1: #bbefc4;
 $background-color_d-blue: $color_brand;
-$background-color_white: var(--white-bkg);
+$background-color_white: $color_white;
 $background-green: var(--pale-green);
 $background-color_4: var(--yellow_bkg);
 $background-pale-blue: var(--pale-blue);
@@ -29,15 +38,15 @@ $background-color_20: lightblue;
 $background-color_21: #648c99;
 $background-color_22: #f2f2f2;
 $background-color_23: transparent;
-$border-color_1: #4f9985;
-$border-color_2: #1a1a1a;
+$color_border-settings_1: #4f9985;
+$color_border-settings_2: #1a1a1a;
 
 /* Style the tab content */
 :root {
 	// themes
-	--body-bkg: #f0f2f5;
+
 	--yellow_bkg: #fff2ce;
-	--white-bkg: #fff;
+
 	--blue-bkg: #f0f8ff;
 	--form-p-text: #666;
 	--illuminate-yellow: #fffaa3;
@@ -49,7 +58,7 @@ $border-color_2: #1a1a1a;
 	--b-shadow: 0 8px 8px 0 rgba(201, 201, 201, 0.5);
 	--r-shadow: 8px 0 8px 0 rgba(201, 201, 201, 0.5);
 	/* border-styles  */
-	--border: 1px solid #d4d4d4;
+
 	--br-8: 8px;
 	--br-16: 16px;
 	--br-24: 24px;
@@ -62,128 +71,72 @@ $border-color_2: #1a1a1a;
 	/* navigation defaults  */
 	--navbar-height: 56px;
 	--navbar-position: fixed;
+}
 
-	// Typography
-	--body-copy: "SF-Pro", sans-serif;
-	--brand-color: #2c4465;
-	--primary-text-color: #1a1a1a;
-	--h1-mobile: 30px;
-	--h1-desktop: 48px;
-	--h2-mobile: 27px;
-	--h2--desktop: 30px;
+html,
+body { 
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: $font-family;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: $color_primary_text;
 }
-html {
-	height: 100%;
-	max-width: 100%;
-	overflow-x: hidden;
-	scroll-behavior: smooth;
-	font-family: $font-family_1;
-}
-body {
-	margin: 0;
-	padding: 0;
-	background-color: var(--body-bkg);
-	color: var(--primary-text-color);
-	font-family: var(--body-copy);
-	font-size: 16px;
-	line-height: 1.5;
-	overflow-x: hidden;
-}
-main {
-	margin: 0 auto;
-}
+
 h1 {
-	font-family: $font-family_1;
-	font-size: 26px;
-	font-weight: 500;
-	line-height: 24pt;
-	color: $color_brand;
-	text-align: left;
-	letter-spacing: 3pt;
-	margin-top: 0;
-	text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 20pt;
+    color: $color_brand;
 }
+
 h2 {
-	font-family: $font-family_1;
-	font-size: 22px;
-	font-weight: 500;
-	line-height: 24pt;
-	color: $color_brand;
-	text-align: left;
-	letter-spacing: 3pt;
-	text-transform: capitalize;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    line-height: 27pt;
+    color: $color_brand;
 }
+
 h3 {
-	font-family: $font-family_1;
-	font-size: 20px;
-	font-weight: 500;
-	line-height: 22pt;
-	color: $color_brand;
-	letter-spacing: 3pt;
-	text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    line-height: 18pt;
+    color: $color_brand;
 }
-h4 {
-	font-family: $font-family_1;
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 0.1pt;
-	color: $color_brand;
-	letter-spacing: 1pt;
-	text-transform: capitalize;
-}
+
 p {
-	font-family: $font-family_1;
-	font-size: 16px;
-	line-height: 30px;
-	letter-spacing: 1px;
-	color: $color_primary_text;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 15pt;
+  letter-spacing: 0.55pt;
 }
+
 a {
-	font-family: $font-family_1;
-	text-decoration: none;
+    font-size: 1.1rem;
+     color: $color_brand; 
+    display: inline;
+    text-decoration: none;
 }
-section {
-	width: 100%;
-	padding-top: 1em;
-	margin-bottom: 1em;
-}
+
 ul {
-	font-family: $font-family_1;
-	list-style: disc;
-	margin-left: 16px;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	&.no-disc {
-		margin-left: 0;
-		list-style: none;
-	}
-	li {
-		font-family: $font-family_1;
-		font-size: 16px;
-		.emphasis {
-			font-weight: 700;
-		}
-	}
-}
-ol {
-	font-family: $font-family_1;
-	margin-left: 16px;
-	padding: 0;
-	li {
-		display: list-item;
-		font-family: $font-family_1;
-		font-size: 16px;
-	}
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 img {
-	width: 100%;
-	height: auto;
-	border: 1px solid gainsboro;
-	border-radius: var(--br-8);
+    max-width: 100%;
+    height: auto;
 }
+
+
+
 img.logo-sm {
 	width: 40px;
 	height: auto;
@@ -196,7 +149,7 @@ img.logo-sm {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: var(--border);
+	border:$color_border-settings-primary;
 	border-radius: 40px;
 	padding: 8px 16px;
 	width: -webkit-fill-available;
@@ -214,7 +167,7 @@ img.logo-sm {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: var(--border);
+	border:$color_border-settings-secondary;
 	border-radius: 40px;
 	padding: 8px 16px;
 	width: -webkit-fill-available;
@@ -233,11 +186,11 @@ img.logo-sm {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-color: var(--white-bkg);
+	background-color: $color_white;
 	transition: background-color 0.3s ease;
 	z-index: 100;
 	&.scrolled {
-		background-color: var(--white-bkg);
+		background-color: $color_white;
 		box-shadow: var(--b-shadow);
 	}
 	.navbar-container {
@@ -250,14 +203,14 @@ img.logo-sm {
 			padding-left: 1em;
 			.navbar-logo {
 				display: flex;
-				font-family: var(--body-copy);
-				color: var(--brand-color-focus);
+				font-family: $font-family;
+				color: $color_brand;
 				flex-direction: row;
 				align-items: center;
 				img {
 					width: 40px;
 					height: auto;
-					background-color: var(--white-bkg);
+					background-color: $color_white;
 					border-radius: 50%;
 					border-color: transparent;
 				}
@@ -311,7 +264,7 @@ img.logo-sm {
 					font-size: 20px;
 					a {
 						font-family: inherit;
-						color: var(--primary-text-color);
+						color: $color_primary_text;
 					}
 				}
 			}
@@ -332,7 +285,7 @@ img.logo-sm {
 .hero-container {
 	display: flex;
 	flex-direction: column;
-	background: white;
+	background: $color_white;
 	padding: 10px;
 	padding-top: 2em;
 	margin-bottom: 1em;
@@ -373,7 +326,7 @@ img.logo-sm {
 	z-index: 1;
 }
 .open-sidebar-btn {
-	background-color: var(--brand-color);
+	background-color: $color_brand;
 	cursor: pointer;
 	display: flex;
 	flex-direction: column;
@@ -400,10 +353,10 @@ img.logo-sm {
 	overflow-x: hidden;
 	top: 54px;
 	background-color: $background-color_white;
-	border-right: $border-color;
+	border-right: $color_border-settings-grey;
 	box-shadow: $right-shadow;
 	.close-btn {
-		background-color: var(--brand-color);
+		background-color: $color_brand;
 		cursor: pointer;
 		display: flex;
 		flex-direction: column;
@@ -472,13 +425,10 @@ img.logo-sm {
 .accordion {
 	width: 100%;
 	width: 100%;
-	border: 1px solid grey;
+	border: $color_border-settings-grey;
 	.accordion-item {
-		border-bottom: 1px solid #ccc;
+		border-bottom: $color_border-settings-grey;
 		.accordion-header {
-			background-color: #f5f5f5;
-			padding: 10px;
-			cursor: pointer;
 			background-color: #f5f5f5;
 			padding: 10px;
 			cursor: pointer;
@@ -558,7 +508,7 @@ img.logo-sm {
 			color: $color_primary_text;
 			font-weight: 500;
 			text-decoration: underline;
-			color: var(--brand-color);
+			color: $color_brand;
 			&:hover {
 				text-decoration: none;
 			}
@@ -593,7 +543,7 @@ img.logo-sm {
 			border: none;
 			padding: 10px 20px;
 			transition: all 0.5s ease-in-out;
-			font-family: $font-family_1;
+			font-family: $font-family;
 			font-size: 18px;
 			background-color: white;
 			border-bottom: 2px solid transparent;
@@ -762,9 +712,9 @@ img.logo-sm {
 					position: absolute;
 					top: 0;
 					right: 0;
-					background-color: var(--white-bkg);
-					color: var(--primary-text-color);
-					border: 1px solid var(--primary-text-color);
+					background-color: $color_white;
+					color: $color_primary_text;
+					border: 1px solid $color_primary_text;
 					font-size: 30px;
 					width: 42px;
 					height: 42px;
@@ -783,7 +733,7 @@ img.logo-sm {
 		display: flex;
 		flex-direction: column;
 		a {
-			color: var(--primary-text-color);
+			color: $color_primary_text;
 			text-decoration: underline;
 			transition: all ease-in-out 0.5s;
 			&:hover {
@@ -864,17 +814,17 @@ img.logo-sm {
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			border: 1px solid var(--brand-color);
+			border: 1px solid $color_brand;
 			border-radius: 50%;
 			width: 50px;
 			height: 50px;
 			transition: all 0.3s ease-in-out;
-			background-color: var(--white-bkg);
+			background-color: $color_white;
 			box-shadow: var(--b-shadow);
-			color: var(--brand-color);
+			color: $color_brand;
 			cursor: pointer;
 			&:hover {
-				background-color: var(--brand-color);
+				background-color: $color_brand;
 				color: white;
 				box-shadow: none;
 			}
@@ -889,12 +839,12 @@ img.logo-sm {
 			height: 10px;
 			margin: 0 10px;
 			background-color: lightblue;
-			border: 1px solid var(--brand-color);
+			border: 1px solid $color_brand;
 			border-radius: 50%;
 			cursor: pointer;
 		}
 		.active {
-			background-color: var(--brand-color);
+			background-color: $color_brand
 		}
 	}
 }
@@ -959,7 +909,7 @@ img.logo-sm {
 	width: 50%;
 }
 .tertiary-link {
-	color: $color_6;
+	color: $font-family;
 	font-size: 16px;
 	text-decoration: underline;
 	&:hover {
@@ -1010,30 +960,29 @@ footer {
 }
 .btt-button {
 	position: fixed;
-	bottom: 5rem;
+	bottom: 1rem;
 	right: 0;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background-color: $background-green;
-	border-radius: 0.5rem;
+	background-color: #c036e9;
+	border-radius: 50%;
 	padding: 0.5rem;
 	text-decoration: none;
 	transition: 0.2s ease-out;
 	box-shadow: var(--b-shadow);
 	.span {
-		fill: $color_brand;
+		fill: $color_white;
 		transition: 0.2s ease-out;
 	}
 	&:hover {
-		background-color: #74c974;
+		background-color: #9410bb;
 		box-shadow: none;
 		.span {
 			transform: translateY(-4px);
 		}
 	}
 	&::after {
-		background-color: $background-green;
 		box-shadow: var(--b-shadow);
 		.span {
 			transform: translateY(0);
@@ -1345,7 +1294,7 @@ footer {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto;
 		grid-gap: 1em;
-		background-color: var(--white-bkg);
+		background-color: $color_white;
 		border-radius: 8px;
 		.prototype-container {
 			display: flex;
@@ -1359,7 +1308,7 @@ footer {
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: auto;
 		grid-gap: 1em;
-		background-color: var(--white-bkg);
+		background-color: $color_white;
 		border-radius: 8px;
 		.prototype-container {
 			display: flex;
@@ -1373,7 +1322,7 @@ footer {
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: auto;
 		grid-gap: 1em;
-		background-color: var(--white-bkg);
+		background-color: $color_white;
 		padding: 1em;
 		border-radius: 8px;
 	}
@@ -1382,7 +1331,7 @@ footer {
 		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows: auto;
 		grid-gap: 1em;
-		background-color: var(--white-bkg);
+		background-color: $color_white;
 		padding: 1em;
 		border-radius: 8px;
 	}
@@ -1750,7 +1699,7 @@ footer {
 					width: unset;
 					transition: border-bottom 0.3s ease;
 					&:hover {
-						border-bottom: 1px solid var(--brand-color);
+						border-bottom: 1px solid $color_brand
 					}
 				}
 			}
@@ -1781,7 +1730,7 @@ footer {
 		.primary-button {
 			&:hover {
 				background: #b3e2bb;
-				border-color: $border-color_1;
+				border-color: $color_border-settings_1;
 				box-shadow: none;
 			}
 		}
@@ -1789,7 +1738,7 @@ footer {
 			&:hover {
 				background-color: $background-color_16;
 				color: $color_primary_text;
-				border-color: $border-color_2;
+				border-color: $color_border-settings_2;
 				box-shadow: none;
 			}
 		}
@@ -2062,7 +2011,7 @@ footer {
 			transition: all 10s ease-in-out;
 			a {
 				font-family: inherit;
-				color: var(--primary-text-color);
+				color: $color_primary_text;
 				text-decoration: underline;
 			}
 			&:hover {
@@ -2131,7 +2080,7 @@ footer {
 		background-color: transparent;
 		.image-container {
 			.gallery {
-				background-color: var(--white-bkg);
+				background-color: $color_white;
 				padding: 0.5em;
 				border-radius: var(--br-8);
 				img {
@@ -2144,7 +2093,7 @@ footer {
 
 	.grid-container-4col .image-container .gallery,
 	.grid-container-6col .image-container .gallery {
-		background-color: var(--white-bkg);
+		background-color: $color_white;
 		border: 1px solid #f2fbfe;
 		border-radius: var(--br-8);
 		transition: 0.5s all ease-in-out;
