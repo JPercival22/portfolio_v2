@@ -1,12 +1,7 @@
-@font-face {
-  font-family: SF-Pro;
-  src: url(/assets/fonts/SF-Pro.ttf);
-}
+@import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
 /* Style the tab content */
 :root {
-  --body-bkg: #f0f2f5;
   --yellow_bkg: #fff2ce;
-  --white-bkg: #fff;
   --blue-bkg: #f0f8ff;
   --form-p-text: #666;
   --illuminate-yellow: #fffaa3;
@@ -18,7 +13,6 @@
   --b-shadow: 0 8px 8px 0 rgba(201, 201, 201, 0.5);
   --r-shadow: 8px 0 8px 0 rgba(201, 201, 201, 0.5);
   /* border-styles  */
-  --border: 1px solid #d4d4d4;
   --br-8: 8px;
   --br-16: 16px;
   --br-24: 24px;
@@ -30,137 +24,68 @@
   /* navigation defaults  */
   --navbar-height: 56px;
   --navbar-position: fixed;
-  --body-copy: "SF-Pro", sans-serif;
-  --brand-color: #2c4465;
-  --primary-text-color: #1a1a1a;
-  --h1-mobile: 30px;
-  --h1-desktop: 48px;
-  --h2-mobile: 27px;
-  --h2--desktop: 30px;
 }
 
-html {
-  height: 100%;
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  font-family: var(--body-copy);
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--body-bkg);
-  color: var(--primary-text-color);
-  font-family: var(--body-copy);
+  font-family: "Spartan";
   font-size: 16px;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-
-main {
-  margin: 0 auto;
+  padding: 0;
+  margin: 0;
+  color: #1a1a1a;
 }
 
 h1 {
-  font-family: var(--body-copy);
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 24pt;
-  color: var(--brand-color);
-  text-align: left;
-  letter-spacing: 3pt;
-  margin-top: 0;
-  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 20pt;
+  color: #2c4465;
 }
 
 h2 {
-  font-family: var(--body-copy);
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 24pt;
-  color: var(--brand-color);
-  text-align: left;
-  letter-spacing: 3pt;
-  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 27pt;
+  color: #2c4465;
 }
 
 h3 {
-  font-family: var(--body-copy);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 22pt;
-  color: var(--brand-color);
-  letter-spacing: 3pt;
-  text-transform: capitalize;
-}
-
-h4 {
-  font-family: var(--body-copy);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 0.1pt;
-  color: var(--brand-color);
-  letter-spacing: 1pt;
-  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  line-height: 18pt;
+  color: #2c4465;
 }
 
 p {
-  font-family: var(--body-copy);
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 1px;
-  color: var(--primary-text-color);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 15pt;
+  letter-spacing: 0.55pt;
 }
 
 a {
-  font-family: var(--body-copy);
+  font-size: 1.1rem;
+  color: #2c4465;
+  display: inline;
   text-decoration: none;
 }
 
-section {
-  width: 100%;
-  padding-top: 1em;
-  margin-bottom: 1em;
-}
-
 ul {
-  font-family: var(--body-copy);
-  list-style: disc;
-  margin-left: 16px;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-ul.no-disc {
-  margin-left: 0;
   list-style: none;
-}
-ul li {
-  font-family: var(--body-copy);
-  font-size: 16px;
-}
-ul li .emphasis {
-  font-weight: 700;
-}
-
-ol {
-  font-family: var(--body-copy);
-  margin-left: 16px;
+  margin: 0;
   padding: 0;
-}
-ol li {
-  display: list-item;
-  font-family: var(--body-copy);
-  font-size: 16px;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border: 1px solid gainsboro;
-  border-radius: var(--br-8);
 }
 
 img.logo-sm {
@@ -177,11 +102,11 @@ img.logo-sm {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: var(--border);
+  border: 1px solid #4eca63;
   border-radius: 40px;
   padding: 8px 16px;
   width: -webkit-fill-available;
-  color: var(--primary-text-color);
+  color: #1a1a1a;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 1px;
@@ -196,7 +121,7 @@ img.logo-sm {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: var(--border);
+  border: 1px solid #2c4465;
   border-radius: 40px;
   padding: 8px 16px;
   width: -webkit-fill-available;
@@ -206,8 +131,8 @@ img.logo-sm {
   cursor: pointer;
   transition: linear 0.1s ease-in-out;
   box-shadow: var(--b-shadow);
-  background-color: var(--white-bkg);
-  color: var(--primary-text-color);
+  background-color: #fff;
+  color: #1a1a1a;
 }
 
 /* Top nav and menu  */
@@ -215,12 +140,12 @@ img.logo-sm {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--white-bkg);
+  background-color: #fff;
   transition: background-color 0.3s ease;
   z-index: 100;
 }
 #navbar.scrolled {
-  background-color: var(--white-bkg);
+  background-color: #fff;
   box-shadow: var(--b-shadow);
 }
 #navbar .navbar-container {
@@ -235,15 +160,15 @@ img.logo-sm {
 }
 #navbar .navbar-container .home-link .navbar-logo {
   display: flex;
-  font-family: var(--body-copy);
-  color: var(--brand-color-focus);
+  font-family: "Spartan";
+  color: #2c4465;
   flex-direction: row;
   align-items: center;
 }
 #navbar .navbar-container .home-link .navbar-logo img {
   width: 40px;
   height: auto;
-  background-color: var(--white-bkg);
+  background-color: #fff;
   border-radius: 50%;
   border-color: transparent;
 }
@@ -298,7 +223,7 @@ img.logo-sm {
 }
 #navbar .navbar-container .nav-menu.show .navbar-link a {
   font-family: inherit;
-  color: var(--primary-text-color);
+  color: #1a1a1a;
 }
 
 .page-wrapper {
@@ -317,7 +242,7 @@ img.logo-sm {
 .hero-container {
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #fff;
   padding: 10px;
   padding-top: 2em;
   margin-bottom: 1em;
@@ -359,7 +284,7 @@ img.logo-sm {
 }
 
 .open-sidebar-btn {
-  background-color: var(--brand-color);
+  background-color: #2c4465;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -371,7 +296,7 @@ img.logo-sm {
   border-radius: 24px;
 }
 .open-sidebar-btn .material-symbols-outlined {
-  color: var(--white-bkg);
+  color: #fff;
   font-size: 30px;
 }
 
@@ -386,12 +311,12 @@ img.logo-sm {
   left: 0;
   overflow-x: hidden;
   top: 54px;
-  background-color: var(--white-bkg);
-  border-right: var(--border);
+  background-color: #fff;
+  border-right: 1px solid #d4d4d4;
   box-shadow: var(--r-shadow);
 }
 .mobile-sidebar .close-btn {
-  background-color: var(--brand-color);
+  background-color: #2c4465;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -403,7 +328,7 @@ img.logo-sm {
   border-radius: 24px;
 }
 .mobile-sidebar .close-btn .material-symbols-outlined {
-  color: var(--white-bkg);
+  color: #fff;
   font-size: 30px;
 }
 .mobile-sidebar .header {
@@ -435,7 +360,7 @@ img.logo-sm {
   width: 100%;
 }
 .mobile-sidebar a {
-  color: var(--primary-text-color);
+  color: #1a1a1a;
   text-decoration: none;
   display: block;
   transition: 0.3s;
@@ -459,15 +384,12 @@ img.logo-sm {
 .accordion {
   width: 100%;
   width: 100%;
-  border: 1px solid grey;
+  border: 1px solid #d4d4d4;
 }
 .accordion .accordion-item {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #d4d4d4;
 }
 .accordion .accordion-item .accordion-header {
-  background-color: #f5f5f5;
-  padding: 10px;
-  cursor: pointer;
   background-color: #f5f5f5;
   padding: 10px;
   cursor: pointer;
@@ -546,10 +468,10 @@ img.logo-sm {
   height: auto;
 }
 .research-list li a {
-  color: var(--primary-text-color);
+  color: #1a1a1a;
   font-weight: 500;
   text-decoration: underline;
-  color: var(--brand-color);
+  color: #2c4465;
 }
 .research-list li a:hover {
   text-decoration: none;
@@ -584,7 +506,7 @@ img.logo-sm {
   border: none;
   padding: 10px 20px;
   transition: all 0.5s ease-in-out;
-  font-family: var(--body-copy);
+  font-family: "Spartan";
   font-size: 18px;
   background-color: white;
   border-bottom: 2px solid transparent;
@@ -648,7 +570,7 @@ img.logo-sm {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1em;
-  background-color: var(--white-bkg);
+  background-color: #fff;
   border-radius: 8px;
 }
 .grid-container-1col .image-container,
@@ -668,7 +590,7 @@ img.logo-sm {
 .grid-container-4col .image-container .gallery,
 .grid-container-5col .image-container .gallery,
 .grid-container-6col .image-container .gallery {
-  background-color: var(--white-bkg);
+  background-color: #fff;
   border: 1px solid #f2fbfe;
   border-radius: var(--br-8);
   transition: 0.5s all ease-in-out;
@@ -746,8 +668,8 @@ img.logo-sm {
 .grid-container-5col .image-container .lightbox .lightbox-content img,
 .grid-container-6col .image-container .lightbox .lightbox-content img {
   height: auto;
-  background-color: var(--white-bkg);
-  border-color: var(--brand-color);
+  background-color: #fff;
+  border-color: #2c4465;
 }
 .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_25,
 .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_25,
@@ -863,9 +785,9 @@ img.logo-sm {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--white-bkg);
-  color: var(--primary-text-color);
-  border: 1px solid var(--primary-text-color);
+  background-color: #fff;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
   font-size: 30px;
   width: 42px;
   height: 42px;
@@ -897,7 +819,7 @@ img.logo-sm {
 .grid-container-4col .prototype-container a,
 .grid-container-5col .prototype-container a,
 .grid-container-6col .prototype-container a {
-  color: var(--primary-text-color);
+  color: #1a1a1a;
   text-decoration: underline;
   transition: all ease-in-out 0.5s;
 }
@@ -1008,18 +930,18 @@ img.logo-sm {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--brand-color);
+  border: 1px solid #2c4465;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   transition: all 0.3s ease-in-out;
-  background-color: var(--white-bkg);
+  background-color: #fff;
   box-shadow: var(--b-shadow);
-  color: var(--brand-color);
+  color: #2c4465;
   cursor: pointer;
 }
 .carousel-container .carousel-buttons .controls:hover {
-  background-color: var(--brand-color);
+  background-color: #2c4465;
   color: white;
   box-shadow: none;
 }
@@ -1033,12 +955,12 @@ img.logo-sm {
   height: 10px;
   margin: 0 10px;
   background-color: lightblue;
-  border: 1px solid var(--brand-color);
+  border: 1px solid #2c4465;
   border-radius: 50%;
   cursor: pointer;
 }
 .carousel-container .pagination .active {
-  background-color: var(--brand-color);
+  background-color: #2c4465;
 }
 
 .centered-row {
@@ -1046,7 +968,7 @@ img.logo-sm {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--white-bkg);
+  background-color: #fff;
   border-radius: 8px;
 }
 .centered-row .image-container {
@@ -1058,7 +980,7 @@ img.logo-sm {
 }
 
 .no-background {
-  background-color: var(--white-bkg);
+  background-color: #fff;
 }
 
 .flex-row {
@@ -1107,7 +1029,7 @@ img.logo-sm {
 }
 
 .tertiary-link {
-  color: var(--body-copy);
+  color: "Spartan";
   font-size: 16px;
   text-decoration: underline;
 }
@@ -1116,7 +1038,7 @@ img.logo-sm {
 }
 
 footer {
-  background-color: var(--white-bkg);
+  background-color: #fff;
 }
 footer .footer-container {
   display: flex;
@@ -1153,31 +1075,30 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
 
 .btt-button {
   position: fixed;
-  bottom: 5rem;
+  bottom: 1rem;
   right: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--pale-green);
-  border-radius: 0.5rem;
+  background-color: #c036e9;
+  border-radius: 50%;
   padding: 0.5rem;
   text-decoration: none;
   transition: 0.2s ease-out;
   box-shadow: var(--b-shadow);
 }
 .btt-button .span {
-  fill: var(--brand-color);
+  fill: #fff;
   transition: 0.2s ease-out;
 }
 .btt-button:hover {
-  background-color: #74c974;
+  background-color: #9410bb;
   box-shadow: none;
 }
 .btt-button:hover .span {
   transform: translateY(-4px);
 }
 .btt-button::after {
-  background-color: var(--pale-green);
   box-shadow: var(--b-shadow);
 }
 .btt-button::after .span {
@@ -1189,7 +1110,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: var(--white-bkg);
+  background-color: #fff;
   padding: 10px;
   border-radius: var(--br-8);
   margin-bottom: 1em;
@@ -1388,7 +1309,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1em;
-    background-color: var(--white-bkg);
+    background-color: #fff;
     border-radius: 8px;
   }
   .grid-container-1col .image-container,
@@ -1408,7 +1329,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
   .grid-container-4col .image-container .gallery,
   .grid-container-5col .image-container .gallery,
   .grid-container-6col .image-container .gallery {
-    background-color: var(--white-bkg);
+    background-color: #fff;
     border: 1px solid #f2fbfe;
     border-radius: var(--br-8);
     transition: 0.5s all ease-in-out;
@@ -1598,7 +1519,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-gap: 1em;
-    background-color: var(--white-bkg);
+    background-color: #fff;
     border-radius: 8px;
   }
   .grid-container-2col .prototype-container {
@@ -1612,7 +1533,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-gap: 1em;
-    background-color: var(--white-bkg);
+    background-color: #fff;
     border-radius: 8px;
   }
   .grid-container-3col .prototype-container {
@@ -1626,7 +1547,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-gap: 1em;
-    background-color: var(--white-bkg);
+    background-color: #fff;
     padding: 1em;
     border-radius: 8px;
   }
@@ -1635,7 +1556,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-gap: 1em;
-    background-color: var(--white-bkg);
+    background-color: #fff;
     padding: 1em;
     border-radius: 8px;
   }
@@ -1651,7 +1572,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     justify-content: space-evenly;
   }
   .grid-container-6col.no-background {
-    background-color: var(--white-bkg);
+    background-color: #fff;
   }
   .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_25,
   .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_25,
@@ -2024,7 +1945,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--white-bkg);
+    background-color: #fff;
   }
   .tab-container .tab-contents .tab-module .carousel-header {
     display: flex;
@@ -2156,7 +2077,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     transition: border-bottom 0.3s ease;
   }
   #navbar .navbar-container .nav-menu a:hover {
-    border-bottom: 1px solid var(--brand-color);
+    border-bottom: 1px solid #2c4465;
   }
   .open-sidebar-btn {
     cursor: pointer;
@@ -2186,7 +2107,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
   }
   .hero-container .secondary-button:hover {
     background-color: #dfedff;
-    color: var(--primary-text-color);
+    color: #1a1a1a;
     border-color: #1a1a1a;
     box-shadow: none;
   }
@@ -2413,7 +2334,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     width: 100%;
   }
   .skills-section .centered-row .flex-row .right-col .flex-row .col .tertiary-link {
-    color: var(--brand-color);
+    color: #2c4465;
     font-weight: 700;
     text-decoration: underline;
     border: none;
@@ -2535,7 +2456,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1em;
-    background-color: var(--white-bkg);
+    background-color: #fff;
     padding: 1em;
     border-radius: 8px;
   }
@@ -2544,7 +2465,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     grid-template-columns: 40% auto;
     grid-template-rows: auto;
     grid-gap: 1em;
-    background-color: var(--white-bkg);
+    background-color: #fff;
     padding: 1em;
     border-radius: 8px;
     width: 100%;
@@ -2561,7 +2482,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
   }
   .grid-container-2col .prototype-container a {
     font-family: inherit;
-    color: var(--primary-text-color);
+    color: #1a1a1a;
     text-decoration: underline;
   }
   .grid-container-2col .prototype-container:hover {
@@ -2675,7 +2596,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
     background-color: transparent;
   }
   .no-background .image-container .gallery {
-    background-color: var(--white-bkg);
+    background-color: #fff;
     padding: 0.5em;
     border-radius: var(--br-8);
   }
@@ -2685,7 +2606,7 @@ footer .footer-container .footer-social-icon a .material-symbols-outlined {
   }
   .grid-container-4col .image-container .gallery,
   .grid-container-6col .image-container .gallery {
-    background-color: var(--white-bkg);
+    background-color: #fff;
     border: 1px solid #f2fbfe;
     border-radius: var(--br-8);
     transition: 0.5s all ease-in-out;
