@@ -177,7 +177,8 @@ img {
   margin-left: 10px;
   color: var(--white-bkg);
 }
-#navbar .navbar-container .home-link .navbar-logo .logo-container .logo-name, #navbar .navbar-container .home-link .navbar-logo .logo-container .logo-title {
+#navbar .navbar-container .home-link .navbar-logo .logo-container .logo-name,
+#navbar .navbar-container .home-link .navbar-logo .logo-container .logo-title {
   font-size: 16px;
   line-height: 16pt;
 }
@@ -205,7 +206,7 @@ img {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #30A7BF;
+  background-color: #30a7bf;
   margin: 0;
 }
 #navbar .navbar-container .nav-menu.show .navbar-link {
@@ -237,7 +238,7 @@ img {
   width: 100vw;
 }
 .p-0 .hero.index-banner {
-  background: url(/assets/images/index-hero-banner_md.webp) no-repeat top right;
+  background: url(/assets/images/index-hero-banner_sm.svg) no-repeat top right;
 }
 .p-0 .hero .hero-content {
   padding: 20px;
@@ -761,10 +762,13 @@ img {
     justify-content: flex-start;
     gap: 1em;
   }
-  .p-0 .hero .hero-content {
+  .p-0 .hero.index-banner {
+    background: url(/assets/images/index-hero-banner_md.svg);
+  }
+  .p-0 .hero.index-banner .hero-content {
     width: 100vw;
   }
-  .p-0 .hero .hero-content h1 {
+  .p-0 .hero.index-banner .hero-content h1 {
     font-size: 4em;
   }
   .wrapper .editorial-footer {
@@ -919,6 +923,9 @@ img {
   }
   #navbar .navbar-container .nav-menu a:hover {
     border-bottom: 1px solid var(--brand-color);
+  }
+  .p-0 .hero.index-banner {
+    background: url(/assets/images/index-hero-banner_lg.svg);
   }
   .primary-button:hover {
     background: #b3e2bb;

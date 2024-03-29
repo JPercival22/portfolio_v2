@@ -193,7 +193,7 @@ img {
     box-shadow: var(--b-shadow);
     z-index: 100;
     .navbar-container .home-link .navbar-logo .logo-container,
-    .navbar-container .menu-toggle .icon-bar { 
+    .navbar-container .menu-toggle .icon-bar {
       color: $color_brand;
       fill: $color_brand;
     }
@@ -225,7 +225,8 @@ img {
         margin-left: 10px;
         color: $color_white;
         // display: none;
-        .logo-name, .logo-title {
+        .logo-name,
+        .logo-title {
           font-size: 16px;
           line-height: 16pt;
         }
@@ -254,7 +255,7 @@ img {
         align-items: center;
         width: 100vw;
         height: 100vh;
-        background-color: #30A7BF;
+        background-color: #30a7bf;
         margin: 0;
         .navbar-link {
           width: 100%;
@@ -263,9 +264,9 @@ img {
             justify-content: center;
             align-items: center;
             width: inherit;
-          padding-top: 1em;
-          padding-bottom: 1em;
-          font-size: 20px;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            font-size: 20px;
             font-family: inherit;
             color: $color_white;
           }
@@ -288,7 +289,7 @@ img {
     height: 80vh;
     width: 100vw;
     &.index-banner {
-      background: url(/assets/images/index-hero-banner_md.webp) no-repeat top right;
+      background: url(/assets/images/index-hero-banner_sm.svg) no-repeat top right;
     }
     .hero-content {
       padding: 20px;
@@ -829,10 +830,15 @@ img {
     gap: 1em;
   }
 
-  .p-0 .hero .hero-content {
-    width: 100vw;
-    h1 {
-      font-size: 4em;
+  .p-0 .hero {
+    &.index-banner {
+      background: url(/assets/images/index-hero-banner_md.svg);
+      .hero-content {
+        width: 100vw;
+        h1 {
+          font-size: 4em;
+        }
+      }
     }
   }
   //index-hero
@@ -1015,6 +1021,12 @@ img {
     }
   }
 
+  .p-0 .hero {
+    &.index-banner {
+      background: url(/assets/images/index-hero-banner_lg.svg);
+    }
+  }
+
   .primary-button:hover {
     background: #b3e2bb;
     border-color: #4f9985;
@@ -1034,7 +1046,6 @@ img {
   }
 
   /* index page styles  */
-
 
   .footer-container .footer-social-icon {
     width: 80%;
