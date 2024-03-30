@@ -12,6 +12,19 @@
   <title>Home - J Percival</title>
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
   <link rel="preload" href="/styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/images/hero-images/index/index-hero-banner_sm.svg" as="image"
+    media="(max-width: 766px)">
+
+  <!-- Preload hero image for medium devices -->
+  <link rel="preload" href="assets/images/hero-images/index/index-hero-banner_md.svg" as="image"
+    media="(min-width: 767px) and (max-width: 1023px)">
+
+  <!-- Preload hero image for large devices -->
+  <link rel="preload" href="assets/images/hero-images/index/index-hero-banner_lg.svg" as="image"
+    media="(min-width: 1024px)">
+  <!--preload typeface -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
@@ -60,53 +73,59 @@
         </div>
       </div>
     </section>
-  
 
-    <section id="btt-anchor" aria-label="Portfolio of recent projects">
-      <div class="wrapper">
-        <div class="headline">
-          <h1>Hi, I'm <span class="highlight">Joe</span>.</h1>
-          <h1>I
-            <span class="outline green">Research</span>,
-            <span class="outline pink jitter">Design</span>,
-            <span class="outline blue">Develop</span> &amp;
-            <span class="outline orange">Test.</span>
-          </h1>
+    <section>
+      <div class="research-qoute">
+        <p class="qoute-text">
+          “If you think that design is expensive, then you should look at the cost of bad design.”
+          <br>
+          <sub class="signature">- Dr. Ralf Speth. CEO, Jaguar Land Rover.</sub>
+        </p>
+      </div>
+    </section>
+
+    <section id="btt-anchor">
+      <div class="editorial flex-container dynamic-row transparent">
+        <div class="profile-image"></div>
+        <div class="expanded-headline">Hi, I'm <span class="highlight-text">Joseph Percival</span>,
+          Senior UX &amp; UI Designer based in St. Helens, Merseyside (UK).
         </div>
-        <div class="image-container">
-          <div class="profile-image"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="editorial">
+        <div class="text-content">
+          <p>
+            I'm a professional UX &amp; UI Designer with a strong Front End Development background and graduated with a 1st class BSc (Hons) degree in Web Design &amp; Development form Edge Hill University (UK), in 2019. I create
+            user-centric
+            digital experiences to drive engagement and business growth. With over 5 years of experience, I've
+            collaborated with diverse clients, including renowned brands like THG, where I designed and developed User
+            Friendly E-Commerce platform for Calvin Klein, Adidas and L'Oreal to name a few. In addition to providing my expertise 
+            to Synalogik's platform of which the UK governments Defense utilize and providing a Pro-Bono Design and development service to a charity organisation.
+            Design is there to help users think less when using a web platform, so designers should have this as core human foundation.  
+          </p>
+          <p>
+            My approach revolves around prioritizing Accessibility, user insights and
+            compelling narratives. I thrive in collaborative environments, where I can contribute to
+            shaping and refining the User Experience, ensuring that people engage with and relish the
+            digital products I help create. I take pride in my ability to generate and deliver impactful
+            ideas.
+          </p>
         </div>
 
-        <div class="editorial">
-          <div class="text-content">
-            <p>
-              I'm a passionate UX &amp; UI Designer with a strong Front End Development background. I create
-              user-centric
-              digital experiences to drive engagement and business growth. With over 5 years of experience, I've
-              collaborated with diverse clients, including renowned brands like THG, where I designed and developed User
-              Friendly E-Commerce platform for Calvin Klein, Adidas and L'Oreal to name a few.
-            </p>
-            <p>
-              My approach revolves around prioritizing Accessibility, user insights and
-              compelling narratives. I thrive in collaborative environments, where I can contribute to
-              shaping and refining the User Experience, ensuring that people engage with and relish the
-              digital products I help create. I take pride in my ability to generate and deliver impactful
-              ideas.
-            </p>
-          </div>
+      </div>
 
-        </div>
-        <div class="editorial-footer">
+      <div class="editorial-footer">
 
-          <a class="primary-button" href="/contact-form.html" aria-label="button link to contact page"
-            title="Please click this button if you would like to set up a chat over a project.">
-            Lets Talk
-          </a>
-          <a class="secondary-button" href="/about-me.html" aria-label="button link to about page"
-            title="Please click this button if you would like to view my experience and skills.">
-            About Me
-          </a>
-        </div>
+        <a class="primary-button" href="/contact-form.html" aria-label="button link to contact page"
+          title="Please click this button if you would like to set up a chat over a project.">
+          Lets Talk
+        </a>
+        <a class="secondary-button" href="/about-me.html" aria-label="button link to about page"
+          title="Please click this button if you would like to view my experience and skills.">
+          About Me
+        </a>
       </div>
     </section>
 
