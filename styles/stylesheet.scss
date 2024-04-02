@@ -186,12 +186,21 @@ section {
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: #4fbdd3;
   transition: background-color 0.3s ease;
   &.scrolled {
     background-color: var(--white-bkg);
     box-shadow: var(--b-shadow);
     z-index: 100;
+    &.logo-container {
+      // display: flex;
+      // flex-direction: column;
+      // margin-left: 10px;
+      // font-family: $font-family;
+      // color: #272727;
+      // font-size: 16px;
+      // line-height: 16pt;
+      opacity: 1;
+    }
     .home-link .navbar-logo .logo-container,
     .navbar-container .nav-menu a {
       color: $color_brand;
@@ -201,11 +210,12 @@ section {
     }
   }
   .navbar-container {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 95%;
     height: 76px;
+    margin: 0 auto;
     font-family: $font-family;
     .home-link .navbar-logo {
       display: flex;
@@ -226,6 +236,8 @@ section {
         color: #272727;
         font-size: 16px;
         line-height: 16pt;
+        opacity: 0;
+        transition: all .5s ease-in-out;
       }
     }
     .menu-toggle {
@@ -1118,7 +1130,6 @@ section {
   /* index styles  */
 
   .wrapper {
-    width: 100%;
     margin-bottom: 2em;
     .editorial-footer {
       width: 30%;
@@ -1193,7 +1204,9 @@ section {
   }
 }
 
+
 @media only screen and (min-width: 1800px) {
+  section {width: 85%;}
   #navbar .navbar-container {
     margin: 0 138px;
     width: 88%;

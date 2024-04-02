@@ -134,13 +134,15 @@ section.p-0 {
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: #4fbdd3;
   transition: background-color 0.3s ease;
 }
 #navbar.scrolled {
   background-color: var(--white-bkg);
   box-shadow: var(--b-shadow);
   z-index: 100;
+}
+#navbar.scrolled.logo-container {
+  opacity: 1;
 }
 #navbar.scrolled .home-link .navbar-logo .logo-container,
 #navbar.scrolled .navbar-container .nav-menu a {
@@ -150,11 +152,12 @@ section.p-0 {
   fill: var(--brand-color);
 }
 #navbar .navbar-container {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 95%;
   height: 76px;
+  margin: 0 auto;
   font-family: "Spartan";
 }
 #navbar .navbar-container .home-link .navbar-logo {
@@ -177,6 +180,8 @@ section.p-0 {
   color: #272727;
   font-size: 16px;
   line-height: 16pt;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 #navbar .navbar-container .menu-toggle {
   background: none;
@@ -1021,7 +1026,6 @@ section.p-0 {
 @media only screen and (min-width: 1400px) {
   /* index styles  */
   .wrapper {
-    width: 100%;
     margin-bottom: 2em;
   }
   .wrapper .editorial-footer {
@@ -1085,6 +1089,9 @@ section.p-0 {
   }
 }
 @media only screen and (min-width: 1800px) {
+  section {
+    width: 85%;
+  }
   #navbar .navbar-container {
     margin: 0 138px;
     width: 88%;
