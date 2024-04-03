@@ -18,7 +18,7 @@ function addMainFunctionality() {
   customNavigationHandleScroll();
   initFloatingLabels();
   initializeTabModules();
-  preloadWebpImage();
+  // preloadWebpImage();
   initLightboxFunctionality();
   initCarousels(); // Add initialization for carousels
   handleDynamicImports();
@@ -55,10 +55,10 @@ function initCarousels() {
   });
 }
 // Preload a webp image
-const preloadWebpImage = () => {
-  const image = new Image();
-  image.src = '/assets/images/contact-page-bkg.webp';
-};
+// const preloadWebpImage = () => {
+//   const image = new Image();
+//   image.src = '/assets/images/contact-page-bkg.webp';
+// };
 
 // Handle dynamic imports
 const handleDynamicImports = async () => {

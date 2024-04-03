@@ -21,7 +21,6 @@ $color_border-settings-primary: 1px solid #4eca63;
 $color_primary-btn-bkg: #bbefc4;
 $color_focus: #7fffd4;
 
-$color_brand: var(--brand-color);
 $color_primary_text: var(--primary-text-color);
 $color_brand_focus: var(--brand-color-focus);
 $color_white: var(--white-bkg);
@@ -48,6 +47,9 @@ $background-color_23: transparent;
 $border-color_1: #4f9985;
 $border-color_2: #1a1a1a;
 
+// box shadow
+$b-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
+$br-shadow: 3px 10px 10px 0px rgba(201, 201, 201, 0.5);
 /* Style the tab content */
 :root {
   // themes
@@ -62,8 +64,7 @@ $border-color_2: #1a1a1a;
   --pale-blue: #e8f8ff;
   --light-orange: #ffd992;
   /* box shadow styles  */
-  --b-shadow: 0 8px 8px 0 rgba(201, 201, 201, 0.5);
-  --r-shadow: 8px 0 8px 0 rgba(201, 201, 201, 0.5);
+
   /* border-styles  */
   --border: 1px solid #d4d4d4;
   --br-8: 8px;
@@ -124,6 +125,14 @@ h3 {
   color: $color_brand;
 }
 
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  line-height: 18pt;
+  color: $color_brand;
+}
+
 p {
   font-size: 1rem;
   font-weight: 300;
@@ -134,7 +143,6 @@ p {
 a {
   font-size: 1.1rem;
   color: $color_brand;
-  display: inline;
   text-decoration: none;
 }
 
@@ -175,7 +183,7 @@ img {
 }
 
 section {
-  margin: 0 10px;
+  margin: 10px;
   &.p-0 {
     margin: 0;
   }
@@ -189,7 +197,7 @@ section {
   transition: background-color 0.3s ease;
   &.scrolled {
     background-color: var(--white-bkg);
-    box-shadow: var(--b-shadow);
+    box-shadow: $b-shadow;
     z-index: 100;
     &.logo-container {
       // display: flex;
@@ -237,7 +245,7 @@ section {
         font-size: 16px;
         line-height: 16pt;
         opacity: 0;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
       }
     }
     .menu-toggle {
@@ -413,8 +421,13 @@ section {
 
 .editorial {
   background-color: $color_white;
-  padding: 1em;
+  padding: 10px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   &.transparent {
     background-color: transparent;
   }
@@ -439,8 +452,16 @@ section {
       flex-direction: column;
     }
   }
+  .editorial-footer {
+    display: inherit;
+    flex-direction: inherit;
+    gap: 1em;
+    width: 100%;
+    a {
+      font-size: 16px;
+    }
+  }
 }
-
 
 .tabs {
   display: flex;
@@ -492,33 +513,43 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: var(--border);
+  border: $color_border-settings-primary;
   border-radius: 50px;
   padding: 8px 16px;
   font-size: 14px;
-  color: var(--primary-text-color);
+  color: $color_primary_text;
   line-height: 30px;
   letter-spacing: 1px;
   text-transform: capitalize;
   cursor: pointer;
-  transition: linear 0.1s ease-in-out;
-  box-shadow: var(--br-shadow);
+  transition: all 0.5s ease-in-out;
+  box-shadow: $br-shadow;
   margin-bottom: 1em;
 }
 
 .primary-button {
-  background-color: #bbefc4;
+  background-color: $color_brand;
+  border-color: $color_brand;
+  color: $color_white;
+  &:hover {
+    background: #4f73a4;
+    box-shadow: none;
+  }
 }
-
 .secondary-button {
-  background-color: var(--white-bkg);
-  color: var(--primary-text-color);
+  background-color: #0a7d94;
+  border-color: #0a7d94;
+  color: $color_white;
+  &:hover {
+    background-color: #4fbdd2;
+    box-shadow: none;
+  }
 }
 
 .tertiary-btn {
   font-weight: bold;
-  border-bottom: 1px solid var(--brand-color);
-  color: var(--brand-color);
+  border-bottom: $color_border-settings-grey;
+  color: $color_brand;
 }
 
 /* index page styles  */
@@ -538,11 +569,18 @@ section {
   font-weight: 600;
   margin: 0;
   .highlight-text {
-    color: #4fbdd2;
+    color: #0a7d94;
   }
 }
 
-.wrapper {
+.career-history-banner {
+  background: url(/assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
+  background-size: contain;
+  height: 1100px;
+  width: 300px;
+}
+
+.flex-container {
   display: flex;
   flex-direction: column;
   background-color: var(--white-bkg);
@@ -552,6 +590,10 @@ section {
   .wide-card {
     display: inherit;
     flex-direction: column;
+    border-bottom: $color_border-settings-grey;
+    &.no-border {
+      border: none;
+    }
     .card-header {
       display: inherit;
       flex-direction: column;
@@ -569,17 +611,11 @@ section {
     .card-body {
       display: flex;
       flex-direction: column-reverse;
-      .image-container {
-        display: inherit;
-        img {
-          width: 100%;
-          height: auto;
-          border-radius: var(--br-8);
-        }
-      }
+
       .card-editorial {
         display: inherit;
         flex-direction: column;
+        flex: 70%;
         a {
           font-weight: 700;
           text-decoration: underline;
@@ -596,7 +632,29 @@ section {
           display: inline;
         }
       }
-
+      .image-container {
+        flex: auto;
+        width: 100%;
+        max-height: 300px;
+        border-radius: var(--br-8);
+        box-shadow: $br-shadow;
+        &.come-together-banner {
+          background: url(/assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
+          width: 100%;
+          height: 300px;
+        }
+        &.syn-banner {
+          background: url(/assets/images/hero-images/index/syn-banner.webp) no-repeat center;
+          border-radius: var(--br-8);
+          width: 100%;
+          height: 300px;
+        }
+        &.just-speak-banner {
+          background: url(/assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
+          width: 100%;
+          height: 300px;
+        }
+      }
       .button-row {
         width: 100%;
         a {
@@ -830,33 +888,43 @@ section {
   display: flex;
   flex-direction: column;
 }
-
-.thankyou-footer span {
+.italic {
   font-style: italic;
-  color: var(--brand-color);
 }
 
 .footer-container {
+  padding: 10px;
+  padding-bottom: 0;
+  background-color: $color_white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   .footer-social-icon {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    a .pdf-icon {
-      font-size: 40px;
+    a {
+      width: 40px;
+      height: 40px;
+      &.logo {
+        background: url(/assets/images/jp-LOGO-mini.svg) no-repeat center;
+        background-size: contain;
+      }
     }
   }
   .copy-panel {
-    display: inherit;
-    p {
-      font-size: 14px;
-      line-height: 0;
-    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    color: #0a0a0a;
+    padding: 10px;
+    padding-bottom: 0;
+    width: 100vw;
   }
 }
 
@@ -904,23 +972,25 @@ section {
   }
 
   .editorial {
-    &.dynamic-row {flex-direction: row; align-items: center; justify-content:center; gap:1em;
-      .profile-image {flex:90%;}
-    }
-  }
-  .wrapper {
-    .editorial-footer {
-      display: flex;
+    &.dynamic-row {
       flex-direction: row;
-      justify-content: flex-start;
       align-items: center;
+      justify-content: center;
       gap: 1em;
-      width: 50%;
-      a {
-        font-size: 16px;
-        width: 100%;
+      .profile-image {
+        flex: 90%;
       }
     }
+  }
+
+  .career-history-banner {
+    background: url(/assets/images/hero-images/index/career-path_lg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-height: 150px;
+    width: 100%;
+  }
+  .flex-container {
     .wide-card {
       display: flex;
       .card-header {
@@ -1100,19 +1170,6 @@ section {
     }
   }
 
-  .primary-button:hover {
-    background: #b3e2bb;
-    border-color: #4f9985;
-    box-shadow: none;
-  }
-
-  .secondary-button:hover {
-    background-color: #dfedff;
-    color: #1a1a1a;
-    border-color: #1a1a1a;
-    box-shadow: none;
-  }
-
   .page-boundary .centered-row {
     max-width: 80%;
     align-items: center;
@@ -1204,9 +1261,10 @@ section {
   }
 }
 
-
 @media only screen and (min-width: 1800px) {
-  section {width: 85%;}
+  section {
+    width: 85%;
+  }
   #navbar .navbar-container {
     margin: 0 138px;
     width: 88%;
