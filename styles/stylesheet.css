@@ -580,17 +580,19 @@ section.p-0 {
 }
 .flex-container .wide-card .card-body .image-container.come-together-banner {
   background: url(/assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
+  background-size: cover;
   width: 100%;
   height: 300px;
 }
 .flex-container .wide-card .card-body .image-container.syn-banner {
   background: url(/assets/images/hero-images/index/syn-banner.webp) no-repeat center;
-  border-radius: var(--br-8);
+  background-size: contain;
   width: 100%;
   height: 300px;
 }
 .flex-container .wide-card .card-body .image-container.just-speak-banner {
   background: url(/assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
+  background-size: cover;
   width: 100%;
   height: 300px;
 }
@@ -858,6 +860,9 @@ section.p-0 {
   padding: 10px;
   padding-bottom: 0;
   width: 100vw;
+}
+.footer-container .copy-panel p {
+  margin: 0;
 }
 
 @media only screen and (min-width: 516px) {
