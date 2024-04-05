@@ -217,9 +217,6 @@ section.p-0 {
   height: 50vh;
   width: 100vw;
 }
-.p-0 .hero.index-banner {
-  background: url(/assets/images/hero-images/index/index-hero-banner_sm.svg) no-repeat top right;
-}
 .p-0 .hero .hero-content {
   padding: 20px;
   border-radius: 16px;
@@ -844,11 +841,6 @@ section.p-0 {
   .p-0 .hero {
     height: 90vh;
   }
-  .p-0 .hero.index-banner {
-    background: url(/assets/images/hero-images/index/index-hero-banner_md.svg);
-    background-position: center;
-    background-size: contain;
-  }
   .p-0 .hero.index-banner .hero-content h1 {
     font-size: 4em;
     font-weight: bold;
@@ -870,14 +862,14 @@ section.p-0 {
     background: url(/assets/images/hero-images/index/career-path_lg.svg) center;
     background-size: contain;
     background-repeat: no-repeat;
-    max-height: 250px;
+    max-height: 350px;
     width: 100%;
   }
   .banner-section .process-banner {
     background: url(/assets/images/hero-images/index/process-banner_lg.svg) center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 200px;
+    height: 350px;
     width: 100%;
   }
   .flex-container .wide-card {
@@ -1036,11 +1028,6 @@ section.p-0 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .p-0 .hero.index-banner {
-    background: url(/assets/images/hero-images/index/index-hero-banner_lg.svg) no-repeat;
-    background-size: contain;
-    max-width: 1000px;
   }
   .page-boundary .centered-row {
     max-width: 80%;

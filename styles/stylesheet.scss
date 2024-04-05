@@ -246,9 +246,6 @@ section {
     align-items: center;
     height: 50vh;
     width: 100vw;
-    &.index-banner {
-      background: url(/assets/images/hero-images/index/index-hero-banner_sm.svg) no-repeat top right;
-    }
     .hero-content {
       padding: 20px;
       border-radius: 16px;
@@ -883,16 +880,11 @@ section {
     background-color: #4fbdd2;
     .hero {
       height: 90vh;
-      &.index-banner {
-        background: url(/assets/images/hero-images/index/index-hero-banner_md.svg);
-        background-position: center;
-        background-size: contain;
-        .hero-content {
-          h1 {
-            font-size: 4em;
-            font-weight: bold;
-            color: #4e4e4e;
-          }
+      &.index-banner .hero-content {
+        h1 {
+          font-size: 4em;
+          font-weight: bold;
+          color: #4e4e4e;
         }
       }
     }
@@ -915,7 +907,7 @@ section {
     background: url(/assets/images/hero-images/index/career-path_lg.svg) center;
     background-size: contain;
     background-repeat: no-repeat;
-    max-height: 250px;
+    max-height: 350px;
     width: 100%;
   }
 
@@ -924,7 +916,7 @@ section {
       background: url(/assets/images/hero-images/index/process-banner_lg.svg) center;
       background-size: contain;
       background-repeat: no-repeat;
-      height: 200px;
+      height: 350px;
       width: 100%;
     }
   }
@@ -1108,13 +1100,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .hero {
-      &.index-banner {
-        background: url(/assets/images/hero-images/index/index-hero-banner_lg.svg) no-repeat;
-        background-size: contain;
-        max-width: 1000px;
-      }
-    }
   }
   .page-boundary .centered-row {
     max-width: 80%;
