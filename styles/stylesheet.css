@@ -210,6 +210,9 @@ section.p-0 {
   font-family: inherit;
   color: #fff;
 }
+#navbar .navbar-container .nav-menu.show .navbar-link a.active {
+  border-bottom: 1px solid #d4d4d4;
+}
 
 .p-0 {
   margin-top: 75px;
@@ -545,6 +548,15 @@ section.p-0 {
 }
 
 /* contact page styles  */
+.phone-icon {
+  background-image: url(/assets/images/iconography/phone-icon.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
 .contact-page-container {
   display: flex;
   flex-direction: column;
@@ -951,6 +963,9 @@ section.p-0 {
     margin: 0;
     padding: 1em 0 1em 1em;
     transition: border-bottom 0.3s ease;
+  }
+  #navbar .navbar-container .nav-menu a.active {
+    border-bottom: 1px solid #d4d4d4;
   }
   #navbar .navbar-container .nav-menu a:hover {
     border-bottom: 1px solid #4e4e4e;
