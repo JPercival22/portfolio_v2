@@ -4,7 +4,10 @@
 $font-family: "Spartan";
 
 // color palette
-
+$color_base-bkg: #30a7bf;
+$color_base-bkg-dark: darken($color_base-bkg, 10%);
+$color_base-bkg-light: #dcfbff;
+$color_base-bkg-lighter: #edfdff;
 // grey scale
 $color_white: #fff;
 $color_main-bkg: #f0f2f5;
@@ -46,6 +49,10 @@ body {
 }
 main {
   background-color: $color_main-bkg;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 1em;
 }
 h1 {
   font-size: 1.6rem;
@@ -108,6 +115,7 @@ ul {
   li {
     font-family: $font-family;
     font-size: 16px;
+    line-height: 30px;
     color: $color_primary_text;
     &.emphasis {
       font-weight: 700;
@@ -131,6 +139,8 @@ img {
 }
 
 section {
+  display: flex;
+  flex-direction: column;
   margin: 10px;
   &.p-0 {
     margin: 0;
@@ -214,7 +224,7 @@ section {
         align-items: center;
         width: 100vw;
         height: 100vh;
-        background-color: #30a7bf;
+        background-color: $color_base-bkg;
         margin: 0;
         .navbar-link {
           width: 100%;
@@ -312,53 +322,6 @@ section {
   margin: 2em 0;
 }
 
-.table {
-  display: flex;
-  flex-flow: column nowrap;
-  font-size: 0.8rem;
-  margin: 0.5rem;
-  line-height: 1.5;
-  border-bottom: 1px solid #d0d0d0;
-  flex: 1 1 auto;
-}
-
-.th {
-  display: none;
-  font-weight: 700;
-  background-color: background_theader;
-}
-
-.th > .td {
-  white-space: normal;
-  justify-content: flex-start;
-}
-
-.tr {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-}
-
-.content .td:nth-child(even) {
-  background-color: $background-color_blue;
-  width: 92%;
-}
-
-.td {
-  display: flex;
-  flex-flow: row nowrap;
-  flex-grow: 1;
-  flex-basis: 0;
-  padding: 6px;
-  word-break: break-word;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0px;
-  white-space: nowrap;
-  border-bottom: 1px solid #d0d0d0;
-  padding: 12px;
-}
-
 .editorial {
   background-color: $color_white;
   padding: 10px;
@@ -392,13 +355,26 @@ section {
       flex-direction: column;
     }
   }
-  .editorial-footer {
-    display: inherit;
-    flex-direction: inherit;
+  .button-container {
+    display: flex;
+    flex-direction: column;
     gap: 1em;
     width: 100%;
     a {
       font-size: 16px;
+    }
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Initially, one column for small devices */
+    gap: 20px;
+    .grid-item {
+      border-radius: $brad-8;
+      padding: 8px;
+      background-color: $color_base-bkg-light;
+      &:nth-child(odd) {
+        background-color: $color_base-bkg-lighter;
+      }
     }
   }
 }
@@ -496,11 +472,10 @@ section {
   display: flex;
   flex-direction: column;
   background-color: $color_white;
-  padding: 10px;
   border-radius: $brad-8;
   // portfolio
   .wide-card {
-    display: inherit;
+    display: flex;
     flex-direction: column;
     border-bottom: $color_border-settings-grey;
     padding: 1em 0;
@@ -577,57 +552,33 @@ section {
       }
     }
   }
-  // skills
-  .highlighted-section {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background-color: $background-color_blue;
-    border-radius: 8px;
-    padding: 0 12px 12px 12px;
-    .column {
-      display: inherit;
-    }
-  }
-  .experience-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    .left {
-      width: 100%;
-    }
-    .right {
-      width: 100%;
-      .button-container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        width: -webkit-fill-available;
-      }
-    }
-  }
-  .experience-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    .experience-body {
-      display: flex;
-      flex-direction: column;
-      border-bottom: 1px solid gainsboro;
-      margin-bottom: 1em;
-      .experience-duration {
-        flex: 0 0 100%;
-      }
-      .experience-details {
-        flex: 0 0 100%;
-        padding-left: 0;
-      }
-    }
+}
+
+// about me styles
+.experience-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
+  margin-bottom: 2em;
+}
+
+.experience-body {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: $color_base-bkg-light;
+  &:nth-child(odd) {
+    background-color: $color_base-bkg-lighter;
   }
 }
 
+.experience-duration {
+  font-weight: bold;
+}
+
+.experience-details {
+  margin-top: 10px;
+}
 /* contact page styles  */
 .contact-page-container {
   display: flex;
@@ -807,8 +758,7 @@ section {
 }
 
 .footer-container {
-  padding: 1em;
-  padding-bottom: 0;
+  padding: 0 1em;
   background-color: $color_white;
   display: flex;
   flex-direction: column;
@@ -952,25 +902,11 @@ section {
         display: flex;
       }
     }
-    .experience-header {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      .left {
-        width: 70%;
-      }
-      .right {
-        width: 20%;
-        .button-container {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-        }
-      }
-    }
   }
-
+// about me styles 
+.editorial .grid-container {
+  grid-template-columns: repeat(2, 1fr);
+}
   /* contact page styles  */
   .contact-page-container .contact-details-container {
     display: flex;
@@ -1025,18 +961,15 @@ section {
         }
       }
     }
-    .experience-wrapper .editorial-body {
-      flex-direction: row;
-      .experience-duration {
-        flex: 0 0 19%;
-      }
-      .experience-details {
-        flex: 0 0 81%;
-      }
-    }
   }
   /* about page styles */
-
+  .editorial .button-container {
+    flex-direction: row;
+    .primary-button,
+    .secondary-button {
+      width: 50%;
+    }
+  }
   /* contact page styles  */
 
   /* thankyou styles  */
@@ -1105,7 +1038,12 @@ section {
     max-width: 80%;
     align-items: center;
   }
-
+  .editorial .button-container {
+    .primary-button,
+    .secondary-button {
+      width: 20%;
+    }
+  }
   /* index page styles  */
   .banner-section {
     margin-top: 1em;
@@ -1113,6 +1051,31 @@ section {
   }
   .flex-container .wide-card .card-body .image-container {
     flex: 30%;
+  }
+
+  // about me styles
+  .editorial .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .flex-container {
+    &.row {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      gap: 3em;
+      .left {
+        display: flex;
+        flex: 90%;
+      }
+      .right {
+        display: flex;
+        flex: 10%;
+        .primary-button {
+          width: 100px;
+        }
+      }
+    }
   }
   // footer-styles
   .footer-container .footer-social-icon {
@@ -1138,67 +1101,9 @@ section {
     flex: 25%;
   }
   /* about page  */
-
-  .skills-section,
-  .experience-container {
-    width: 100%;
-  }
-
-  .experience-body {
-    display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    gap: 1em;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-
-  .experience-duration {
-    display: flex;
-    justify-content: flex-start;
-    width: 19%;
-    margin-right: 8px;
-  }
-
-  .experience-body .experience-container {
-    display: flex;
-    justify-content: flex-end;
-    width: auto;
-  }
-
-  .skills-section,
-  .experience-container {
-    // width: 100%;
-    background-color: $color_white;
-    padding: 1em;
-    border-radius: $brad-16;
-    margin-bottom: 2em;
-  }
-  .experience-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .experience-body {
-    display: flex;
-    margin-bottom: 10px;
-
-    .experience-duration {
-      flex: 0 0 20%;
-    }
-
-    .experience-container {
-      flex: 0 0 80%;
-      padding-left: 20px;
-    }
+  .editorial .button-container .primary-button,
+  .editorial .button-container .secondary-button {
+    width: 10%;
   }
 }
 
@@ -1224,9 +1129,7 @@ section {
     }
   }
   // skills
-  .experience-header .right .button-container a {
-    width: 120px;
-  }
+
   .footer-container .footer-social-icon {
     justify-content: space-evenly;
   }
