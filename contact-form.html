@@ -3,70 +3,103 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="UX Portfolio for Joseph Percival">
-  <meta name="keywords" content="HTML, CSS, JavaScript, User Experience Design, UI, UX, UX Portfolio, Contact Details">
-  <meta name="author" content="Joseph Percival">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - J Percival</title>
+  <meta name="description"
+    content="Explore innovative UX design projects and solutions tailored to enhance user experiences. Discover a diverse portfolio showcasing user-centric design principles, usability enhancements, and interactive prototypes. Elevate your digital experiences with insights from a seasoned UX designer passionate about crafting intuitive interfaces.">
+  <title>Contact Us - J Percival</title>
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="/styles/stylesheet.css">
-  <link rel="preload" as="image" href="/assets/images/contact-page-bkg.webp" type="image/webp">
-
+  <link rel="preload" href="/styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/images/hero-images/index/index-hero-banner_sm.svg" as="image"
+    media="(max-width: 766px)">
+  <link rel="preload" href="assets/images/hero-images/index/index-hero-banner_md.svg" as="image"
+    media="(min-width: 767px) and (max-width: 1023px)">
+  <link rel="preload" href="assets/images/hero-images/index/index-hero-banner_lg.svg" as="image"
+    media="(min-width: 1024px)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
-  <nav id="navbar">
-    <div class="navbar-container">
+  <header id="navbar">
+    <nav class="navbar-container">
       <div class="home-link">
-        <a href="/index.html" class="navbar-logo" alt="">
+        <a href="/index.html" class="navbar-logo" aria-label="Home">
           <img src="assets/images/jp-LOGO.svg" width="40" height="40" alt="company logo">
-          <div class="logo-container" title="Authors name and profession">
+          <div class="logo-container">
             <div class="logo-name">Joseph Percival</div>
             <div class="logo-title">UX &amp; UI DESIGNER</div>
           </div>
         </a>
       </div>
 
-      <button type="button" class="menu-toggle" aria-label="main navigation menu button">
-
-        <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+      <button type="button" class="menu-toggle" aria-label="main navigation menu button" aria-expanded="false"
+        aria-controls="navMenu">
+        <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="42" viewBox="0 -960 960 960" width="42">
           <path
             d="M150-240q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-300h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-240H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-510h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-450H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-720h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-660H150Z" />
         </svg>
-
       </button>
+
       <ul id="navMenu" class="nav-menu">
         <li class="navbar-link navbar-item">
-          <a href="/index.html" title="Link to the Home Page">Home</a>
+          <a href="#caseStudies" title="Link to the Home Page">Case Studies</a>
         </li>
         <li class="navbar-link navbar-item">
           <a href="/about-me.html" title="Link to the About Us page">About Me</a>
         </li>
         <li class="navbar-link navbar-item">
-          <a href="/contact-form.html" title="Link to the Contact Us page">Contact Me</a>
+          <a href="/contact-form.html" class="active" title="Link to the Contact Us page">Contact Me</a>
         </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </header>
+
   <main>
-    <section id="btt-anchor">
-      <div class="wrapper">
-        <div class="hero-header">
-          <h1>Say Hello.</h1>
-        </div>
-        <div class="hero-editorial">
-          <div class="hero-text-content">
-            <p>
-              Are you interested in connecting? Please fill the form below to send me a message and I’ll get in touch
-              with you
-              within 24 hours.
-              Alternatively you can contact me several other ways using the links
-              in the <a class="tertiary-btn" href="#contact-details"> Contact Me </a>section below. </p>
-            <p>Thankyou.</p>
+    <section class="p-0">
+      <div class="hero index-banner" style="background: url(/assets/images/hero-images/index/index-hero-banner_sm.svg) no-repeat top right;
+        @media screen and (min-width: 768px) {
+        background: url(/assets/images/hero-images/index/index-hero-banner_md.svg);
+        background-position: center;
+        background-size: contain;
+        }
+        @media only screen and (min-width: 1200px) {
+        background: url(/assets/images/hero-images/index/index-hero-banner_lg.svg) no-repeat;
+        background-size: contain;
+        max-width: 1000px;
+        }">
+        <div class="hero-content">
+          <div class="name-container">
+            <p>JOSEPH PERCIVAL</p>
           </div>
+          <h1>UX &amp; UI DESIGN <br>PORTFOLIO</h1>
         </div>
       </div>
     </section>
+
+    <section>
+      <div class="research-qoute">
+        <p class="qoute-text">
+          “If you think that design is expensive, then you should look at the cost of bad design.”
+          <br>
+          <sub class="signature">- Dr. Ralf Speth. CEO, Jaguar Land Rover.</sub>
+        </p>
+      </div>
+    </section>
+
+    <section id="btt-anchor">
+      <div class="editorial">
+        <div class="text-content">
+          <h1>Say Hello.</h1>
+          <p>
+            Are you interested in connecting? Please fill the form below to send me a message and I’ll get in touch
+            with you
+            within 24 hours.
+            Alternatively you can contact me several other ways using the links  below. </p>
+          <p>Thankyou.</p>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="wrapper">
         <div class="contact-page-container">
@@ -120,18 +153,16 @@
             <div id="contact-details" class="contact-card-container">
               <div class="header">
                 <h2>
-                  Contact Me
+                 Let's get in touch.
                 </h2>
               </div>
               <div class="body">
 
-                <p>I am open to any suggestions or just to have a chat.</p>
-
+                <p>Feel free to send me a message, I typically reply within 2 hours of receiving it.</p>
+                <p>Alternatively you contact me by using the links below or use my Linked In Link below too. </p>
                 <div class="contact-links">
                   <a href="mailto:josephmpercival@gmail.com">
-                    <span class="material-symbols-rounded">
-                      send
-                    </span>
+                      <img src="/assets/images/iconography/mail-icon.svg" width="100" height="100" alt="">
                     <div class="tertiary-link">
                       <span class="title">Email:</span>
                       <span class="link-text">joseph.m.percival@gmail.com</span>
@@ -140,10 +171,8 @@
                   <!-- </li>
                   <li> -->
                   <a href="tel:07709718757">
-                    <span class="material-symbols-rounded">
-                      call
-                    </span>
-
+                    <div class="phone-icon"></div>
+                    
                     <div class="tertiary-link">
                       <span class="title">Phone:</span>
                       <span class="link-text">07709718757</span>
@@ -152,9 +181,7 @@
                   <!-- </li>
                   <li> -->
                   <a href="/index.html">
-                    <span class="material-symbols-rounded">
-                      globe
-                    </span>
+                    <img src="/assets/images/iconography/home-icon.svg" width="100" height="100" alt="">
                     <div class="tertiary-link">
                       <span class="title">Website:</span>
                       <span class="link-text">josephmpercival.co.uk</span>
@@ -172,40 +199,45 @@
         </div>
       </div>
     </section>
-    <footer>
-      <div class="footer-container">
-        <div class="footer-social-icon">
-          <a href="/index.html" class="logo">
-            <img src="assets/images/jp-LOGO.svg" width="20" height="20" alt="Return to Home page button">
-          </a>
-          <a href="https://www.linkedin.com/in/joseph-percival" title="Click this link to see my Linked In my account"
-            aria-label="linked in button link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#007bb6" height="40" viewBox="0 -960 960 960" width="40">
-              <path
-                d="M188-212q-23.85 0-39.925-16.075Q132-244.15 132-268v-424q0-23.85 16.075-39.925Q164.15-748 188-748h584q23.85 0 39.925 16.075Q828-715.85 828-692v424q0 23.85-16.075 39.925Q795.85-212 772-212H188Zm616-495.334L496.333-501q-4 2-8 3.5T480-496q-4.333 0-8.333-1.5t-7.334-3.5L156-707.334V-268q0 14 9 23t23 9h584q14 0 23-9t9-23v-439.334ZM480-520.667 787.333-724h-614L480-520.667ZM156-707.334v8-20.678 1.451V-724v5-2.109 21.775-8V-236v-471.334Z" />
-            </svg>
-          </a>
-          <a href="https://github.com/JPercival22" title="Click this link to see my Version Control"
-            aria-label="git hub button link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#000" width="40" height="40" viewBox="0 0 999.937 999.937">
-              <path
-                d="M0 499.968c0-138.012 48.825-255.843 146.476-353.493C244.125 48.825 361.956 0 499.969 0 637.98 0 755.811 48.825 853.462 146.475c97.649 97.65 146.475 215.481 146.475 353.493s-48.825 255.843-146.475 353.493c-97.65 97.65-215.481 146.476-353.493 146.476-138.013 0-255.844-48.825-353.493-146.476C48.825 755.812 0 637.979 0 499.968zm54.684 0c0 122.389 43.617 227.199 130.851 314.434 87.234 87.233 192.045 130.851 314.434 130.851 122.388 0 227.199-43.617 314.433-130.851 87.234-87.234 130.851-192.045 130.851-314.434 0-122.388-43.616-227.199-130.851-314.433C727.168 98.301 622.356 54.684 499.969 54.684c-122.389 0-227.199 43.617-314.434 130.851C98.301 272.769 54.684 377.58 54.684 499.968zm140.617 107.415c-2.604-2.604-2.604-5.208 0-7.812 5.207-5.208 11.718-7.161 19.529-5.859 7.812 1.302 12.369 2.604 13.671 3.906 9.114 3.906 19.205 12.694 30.271 26.366 11.066 13.671 19.855 23.11 26.366 28.318 31.248 26.04 63.146 27.993 95.696 5.859 2.604-9.114 6.836-16.926 12.694-23.437 5.858-6.51 11.393-11.066 16.601-13.671 5.209-2.604 14.323-6.51 27.343-11.718-42.967-3.906-77.795-11.393-104.486-22.46s-47.849-25.063-63.473-41.989c-20.832-23.436-33.527-54.033-38.084-91.791-4.558-37.758-1.628-72.261 8.789-103.509 7.812-19.53 18.879-37.106 33.2-52.731-10.416-32.55-8.463-69.657 5.859-111.321 41.664 2.604 79.422 16.926 113.274 42.966 65.1-16.926 132.804-17.577 203.111-1.953 9.114-6.51 23.111-14.647 41.989-24.413 18.879-9.765 42.641-15.299 71.285-16.601 5.208 14.322 8.789 31.248 10.742 50.778s.977 37.758-2.929 54.684c29.945 31.248 45.569 72.912 46.871 124.992 0 41.664-7.16 76.167-21.482 103.509s-39.711 50.127-76.167 68.354c-24.738 11.719-57.288 18.879-97.65 21.483 18.229 9.114 31.574 18.554 40.037 28.319 8.464 9.765 13.997 25.063 16.602 45.895v61.521l1.952 59.566c3.906 6.511 8.464 12.044 13.672 16.602 5.208 4.557 9.765 7.812 13.671 9.765 3.905 1.953 5.208 4.883 3.905 8.789-1.302 3.906-6.51 5.859-15.623 5.859-22.135 0-39.711-7.812-52.731-23.437-3.906-6.51-5.859-14.321-5.859-23.436v-93.744c0-10.416-2.604-17.903-7.812-22.46-5.208-4.558-10.416-7.487-15.624-8.789v123.039c0 22.134 2.604 36.456 7.812 42.966s8.463 13.021 9.766 19.53c1.302 1.302.325 2.278-2.93 2.929-3.254.65-8.788-.325-16.601-2.929-16.926-3.906-28.644-12.695-35.154-26.366-6.51-13.671-9.765-28.319-9.765-43.943V667.926H488.25v121.086c0 15.624-3.256 30.598-9.766 44.919-9.113 18.229-26.04 27.993-50.777 29.295-3.906-1.302-5.859-2.604-5.859-3.905 1.302-1.303 5.208-7.812 11.718-19.53 1.302-2.604 2.93-7.812 4.883-15.624 1.954-7.812 2.93-16.926 2.93-27.342v-123.04c-5.208 1.302-10.091 4.231-14.648 8.789s-6.836 12.044-6.836 22.46v93.744c0 9.113-1.953 16.926-5.859 23.436-11.718 15.624-29.295 23.437-52.73 23.437-9.114 0-14.322-1.953-15.624-5.859-1.303-2.604-.977-4.883.977-6.836s4.883-4.232 8.789-6.836c3.906-2.604 6.51-4.558 7.812-5.859 5.208-3.906 9.113-9.114 11.718-15.624 3.906-5.208 4.882-18.879 2.929-41.013s-2.279-36.456-.977-42.966c-33.853 11.718-68.355 5.858-103.51-17.577-10.416-10.416-20.832-25.39-31.248-44.919-7.812-14.323-23.436-31.249-46.871-50.779z" />
-            </svg>
-          </a>
-          <a href="assets/documents/CV2023.pdf" target="_blank" title="Click this link to view my CV"
-            aria-label="CV PDF button link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#007bb6" height="40" viewBox="0 -960 960 960" width="40">
-              <path
-                d="M363.333-540.667h54q11.617 0 19.475-7.858 7.859-7.858 7.859-19.475v-54q0-11.617-7.859-19.475-7.858-7.858-19.475-7.858h-67.647q-5.02 0-9.353 4.2t-4.333 9.86v161.213q0 5.66 4.2 9.86 4.2 4.2 9.8 4.2 5.866 0 9.6-4.2 3.733-4.2 3.733-9.8v-66.667Zm0-27.333v-54h54v54h-54ZM564-460q11.9 0 19.617-8.141 7.716-8.142 7.716-19.192V-622q0-11.617-7.716-19.475-7.717-7.858-19.617-7.858h-62.981q-5.019 0-9.352 4.2-4.334 4.2-4.334 9.86v161.213q0 5.66 4.2 9.86 4.2 4.2 9.8 4.2H564Zm-49.333-27.333V-622H564v134.667h-49.333Zm158-53.334h48.666q5.867 0 9.6-4.2 3.734-4.2 3.734-9.8 0-5.866-3.734-9.599-3.733-3.734-9.6-3.734h-48.666v-54h48.666q5.867 0 9.6-4.333 3.734-4.334 3.734-9.334 0-5.266-3.734-9.466-3.733-4.2-9.6-4.2h-62q-5.6 0-9.8 4.2-4.2 4.2-4.2 9.86v161.213q0 5.66 4.2 9.86 4.2 4.2 9.8 4.2 5.867 0 9.6-4.2 3.734-4.2 3.734-9.8v-66.667ZM314-284q-23.85 0-39.925-16.075Q258-316.15 258-340v-432q0-23.85 16.075-39.925Q290.15-828 314-828h432q23.85 0 39.925 16.075Q802-795.85 802-772v432q0 23.85-16.075 39.925Q769.85-284 746-284H314Zm0-24h432q12 0 22-10t10-22v-432q0-12-10-22t-22-10H314q-12 0-22 10t-10 22v432q0 12 10 22t22 10ZM214-184q-23.85 0-39.925-16.075Q158-216.15 158-240v-444q0-5.1 3.497-8.55 3.497-3.45 8.667-3.45 5.169 0 8.503 3.45Q182-689.1 182-684v444q0 12 10 22t22 10h444q5.1 0 8.55 3.497 3.45 3.497 3.45 8.667 0 5.169-3.45 8.503Q663.1-184 658-184H214Zm68-620v496-496Z" />
-            </svg>
-          </a>
-        </div>
-        <small>&copy; Copyright 2023 Joseph M Percival</small>
-      </div>
-    </footer>
+
   </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-social-icon">
+        <a href="/index.html" class="logo" aria-label="Home"></a>
+        <a href="https://www.linkedin.com/in/joseph-percival" title="Click this link to see my Linked In my account"
+          aria-label="linked in button link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#007bb6" height="40" viewBox="0 -960 960 960" width="40">
+            <path
+              d="M188-212q-23.85 0-39.925-16.075Q132-244.15 132-268v-424q0-23.85 16.075-39.925Q164.15-748 188-748h584q23.85 0 39.925 16.075Q828-715.85 828-692v424q0 23.85-16.075 39.925Q795.85-212 772-212H188Zm616-495.334L496.333-501q-4 2-8 3.5T480-496q-4.333 0-8.333-1.5t-7.334-3.5L156-707.334V-268q0 14 9 23t23 9h584q14 0 23-9t9-23v-439.334ZM480-520.667 787.333-724h-614L480-520.667ZM156-707.334v8-20.678 1.451V-724v5-2.109 21.775-8V-236v-471.334Z" />
+          </svg>
+        </a>
+        <a href="https://github.com/JPercival22" title="Click this link to see my Version Control"
+          aria-label="git hub button link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#000" width="40" height="40" viewBox="0 0 999.937 999.937">
+            <path
+              d="M0 499.968c0-138.012 48.825-255.843 146.476-353.493C244.125 48.825 361.956 0 499.969 0 637.98 0 755.811 48.825 853.462 146.475c97.649 97.65 146.475 215.481 146.475 353.493s-48.825 255.843-146.475 353.493c-97.65 97.65-215.481 146.476-353.493 146.476-138.013 0-255.844-48.825-353.493-146.476C48.825 755.812 0 637.979 0 499.968zm54.684 0c0 122.389 43.617 227.199 130.851 314.434 87.234 87.233 192.045 130.851 314.434 130.851 122.388 0 227.199-43.617 314.433-130.851 87.234-87.234 130.851-192.045 130.851-314.434 0-122.388-43.616-227.199-130.851-314.433C727.168 98.301 622.356 54.684 499.969 54.684c-122.389 0-227.199 43.617-314.434 130.851C98.301 272.769 54.684 377.58 54.684 499.968zm140.617 107.415c-2.604-2.604-2.604-5.208 0-7.812 5.207-5.208 11.718-7.161 19.529-5.859 7.812 1.302 12.369 2.604 13.671 3.906 9.114 3.906 19.205 12.694 30.271 26.366 11.066 13.671 19.855 23.11 26.366 28.318 31.248 26.04 63.146 27.993 95.696 5.859 2.604-9.114 6.836-16.926 12.694-23.437 5.858-6.51 11.393-11.066 16.601-13.671 5.209-2.604 14.323-6.51 27.343-11.718-42.967-3.906-77.795-11.393-104.486-22.46s-47.849-25.063-63.473-41.989c-20.832-23.436-33.527-54.033-38.084-91.791-4.558-37.758-1.628-72.261 8.789-103.509 7.812-19.53 18.879-37.106 33.2-52.731-10.416-32.55-8.463-69.657 5.859-111.321 41.664 2.604 79.422 16.926 113.274 42.966 65.1-16.926 132.804-17.577 203.111-1.953 9.114-6.51 23.111-14.647 41.989-24.413 18.879-9.765 42.641-15.299 71.285-16.601 5.208 14.322 8.789 31.248 10.742 50.778s.977 37.758-2.929 54.684c29.945 31.248 45.569 72.912 46.871 124.992 0 41.664-7.16 76.167-21.482 103.509s-39.711 50.127-76.167 68.354c-24.738 11.719-57.288 18.879-97.65 21.483 18.229 9.114 31.574 18.554 40.037 28.319 8.464 9.765 13.997 25.063 16.602 45.895v61.521l1.952 59.566c3.906 6.511 8.464 12.044 13.672 16.602 5.208 4.557 9.765 7.812 13.671 9.765 3.905 1.953 5.208 4.883 3.905 8.789-1.302 3.906-6.51 5.859-15.623 5.859-22.135 0-39.711-7.812-52.731-23.437-3.906-6.51-5.859-14.321-5.859-23.436v-93.744c0-10.416-2.604-17.903-7.812-22.46-5.208-4.558-10.416-7.487-15.624-8.789v123.039c0 22.134 2.604 36.456 7.812 42.966s8.463 13.021 9.766 19.53c1.302 1.302.325 2.278-2.93 2.929-3.254.65-8.788-.325-16.601-2.929-16.926-3.906-28.644-12.695-35.154-26.366-6.51-13.671-9.765-28.319-9.765-43.943V667.926H488.25v121.086c0 15.624-3.256 30.598-9.766 44.919-9.113 18.229-26.04 27.993-50.777 29.295-3.906-1.302-5.859-2.604-5.859-3.905 1.302-1.303 5.208-7.812 11.718-19.53 1.302-2.604 2.93-7.812 4.883-15.624 1.954-7.812 2.93-16.926 2.93-27.342v-123.04c-5.208 1.302-10.091 4.231-14.648 8.789s-6.836 12.044-6.836 22.46v93.744c0 9.113-1.953 16.926-5.859 23.436-11.718 15.624-29.295 23.437-52.73 23.437-9.114 0-14.322-1.953-15.624-5.859-1.303-2.604-.977-4.883.977-6.836s4.883-4.232 8.789-6.836c3.906-2.604 6.51-4.558 7.812-5.859 5.208-3.906 9.113-9.114 11.718-15.624 3.906-5.208 4.882-18.879 2.929-41.013s-2.279-36.456-.977-42.966c-33.853 11.718-68.355 5.858-103.51-17.577-10.416-10.416-20.832-25.39-31.248-44.919-7.812-14.323-23.436-31.249-46.871-50.779z" />
+          </svg>
+        </a>
+
+        <span role="link" tab-index="0" href="assets/documents/CV2023.pdf" target="_blank" aria-abel="View my CV (PDF)"
+          title="Click this link to view my CV (PDF)">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#007bb6" height="40" viewBox="0 -960 960 960" width="40">
+            <path
+              d="M363.333-540.667h54q11.617 0 19.475-7.858 7.859-7.858 7.859-19.475v-54q0-11.617-7.859-19.475-7.858-7.858-19.475-7.858h-67.647q-5.02 0-9.353 4.2t-4.333 9.86v161.213q0 5.66 4.2 9.86 4.2 4.2 9.8 4.2 5.866 0 9.6-4.2 3.733-4.2 3.733-9.8v-66.667Zm0-27.333v-54h54v54h-54ZM564-460q11.9 0 19.617-8.141 7.716-8.142 7.716-19.192V-622q0-11.617-7.716-19.475-7.717-7.858-19.617-7.858h-62.981q-5.019 0-9.352 4.2-4.334 4.2-4.334 9.86v161.213q0 5.66 4.2 9.86 4.2 4.2 9.8 4.2H564Zm-49.333-27.333V-622H564v134.667h-49.333Zm158-53.334h48.666q5.867 0 9.6-4.2 3.734-4.2 3.734-9.8 0-5.866-3.734-9.599-3.733-3.734-9.6-3.734h-48.666v-54h48.666q5.867 0 9.6-4.333 3.734-4.334 3.734-9.334 0-5.266-3.734-9.466-3.733-4.2-9.6-4.2h-62q-5.6 0-9.8 4.2-4.2 4.2-4.2 9.86v161.213q0 5.66 4.2 9.86 4.2 4.2 9.8 4.2 5.867 0 9.6-4.2 3.734-4.2 3.734-9.8v-66.667ZM314-284q-23.85 0-39.925-16.075Q258-316.15 258-340v-432q0-23.85 16.075-39.925Q290.15-828 314-828h432q23.85 0 39.925 16.075Q802-795.85 802-772v432q0 23.85-16.075 39.925Q769.85-284 746-284H314Zm0-24h432q12 0 22-10t10-22v-432q0-12-10-22t-22-10H314q-12 0-22 10t-10 22v432q0 12 10 22t22 10ZM214-184q-23.85 0-39.925-16.075Q158-216.15 158-240v-444q0-5.1 3.497-8.55 3.497-3.45 8.667-3.45 5.169 0 8.503 3.45Q182-689.1 182-684v444q0 12 10 22t22 10h444q5.1 0 8.55 3.497 3.45 3.497 3.45 8.667 0 5.169-3.45 8.503Q663.1-184 658-184H214Zm68-620v496-496Z" />
+          </svg>
+
+        </span>
+      </div>
+      <div class="copy-panel">
+        <p>&copy; 2023 Site by Joseph M Percival</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js" defer></script>
   <script type="module" src="/js/form-floating-labels.mjs" defer></script>
-  <script type="module" src="/js/menuModule.mjs" defer></script>
   <script type="module" src="/js/main.js" defer></script>
 </body>
 

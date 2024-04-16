@@ -238,6 +238,8 @@ section {
             font-size: 20px;
             font-family: inherit;
             color: $color_white;
+            
+            &.active {border-bottom: $color_border-settings-grey;}
           }
         }
       }
@@ -580,6 +582,9 @@ section {
   margin-top: 10px;
 }
 /* contact page styles  */
+.phone-icon {
+  background-image: url(/assets/images/iconography/phone-icon.png);background-size:contain; background-position: center; background-repeat: no-repeat;width:100px;height:100px;
+}
 .contact-page-container {
   display: flex;
   flex-direction: column;
@@ -1021,6 +1026,7 @@ section {
           margin: 0;
           padding: 1em 0 1em 1em;
           transition: border-bottom 0.3s ease;
+          &.active {border-bottom: $color_border-settings-grey;}
           &:hover {
             border-bottom: 1px solid #4e4e4e;
           }
