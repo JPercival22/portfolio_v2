@@ -87,114 +87,95 @@
     </section>
 
     <section id="btt-anchor">
-      <div class="editorial">
-        <div class="text-content">
-          <h1>Say Hello.</h1>
-          <p>
-            Are you interested in connecting? Please fill the form below to send me a message and I’ll get in touch
-            with you
-            within 24 hours.
-            Alternatively you can contact me several other ways using the links  below. </p>
-          <p>Thankyou.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrapper">
-        <div class="contact-page-container">
-          <div class="contact-details-container">
-            <div class="contact-form-body">
-              <div class="contact-form-header">
-                <h2>Message Me</h2>
+      <div class="form-container">
+        <div class="form">
+          
+          <div class="contact-info">
+            <h3>Let's get in touch</h3>
+            <p>
+              You can contact me using any of the links below or using the form to send me a message.
+            </p>
+            <div class="info-card">
+              <div class="information">
+                <p>Joseph Percival</p>
               </div>
-              <p>Please complete fields marked with *. These are mandatory for the form to send.</p>
-              <div class="input-group">
-
-                <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
-
-                  <input type="hidden" name="_subject" value="New Email From Portfolio">
-
-                  <input type="hidden" name="_next" value="https://portfolio.josephmpercival.co.uk/thank-you.html">
-
-                  <div class="input">
-                    <label for="first_name">Enter your first name *</label>
-                    <input type="text" autocomplete="off" autofocus spellcheck="false" id="first_name"
-                      class="form__input" title="Please enter your first name" aria-label="first name input field"
-                      required />
-                  </div>
-
-                  <div class="input">
-                    <label for="last_name">Enter your last name *</label>
-                    <input type="text" autocomplete="off" autofocus spellcheck="false" id="last_name"
-                      class="form__input" title="Please enter your first name" aria-label="first name input field"
-                      required />
-                  </div>
-
-                  <div class="input">
-                    <label for="email">Enter your E-mail address *</label>
-                    <input type="text" autocomplete="off" autofocus spellcheck="false" id="email" class="form__input"
-                      title="Please enter your first name" aria-label="first name input field" required />
-                  </div>
-                  <div class="input textarea">
-                    <label for="more-detail">Enter more details (optional)</label>
-                    <textarea autocomplete="off" autofocus spellcheck="false" id="more-detail" class="form__input"
-                      title="Enter more details" aria-label="more details input field" required></textarea>
-                  </div>
-
-                  <div class="form-footer">
-                    <input class="submit-button primary-button" type="submit" value="Send Message" />
-                  </div>
-                </form>
-
+              <div class="information">
+                <p>
+                <div class="contact-icon mail-icon"></div>
+                <a class="anchor" href="mailto:josephmpercival@gmail.com">
+                  joseph.m.percival@gmail.com
+                </a>
+                </p>
               </div>
-            </div>
-
-            <div id="contact-details" class="contact-card-container">
-              <div class="header">
-                <h2>
-                 Let's get in touch.
-                </h2>
+              <div class="information">
+                <p>
+                <div class="contact-icon phone-icon"></div>
+                <a class="anchor" href="tel:07709718757">
+                  07709718757
+                </a>
+                </p>
               </div>
-              <div class="body">
-
-                <p>Feel free to send me a message, I typically reply within 2 hours of receiving it.</p>
-                <p>Alternatively you contact me by using the links below or use my Linked In Link below too. </p>
-                <div class="contact-links">
-                  <a href="mailto:josephmpercival@gmail.com">
-                      <img src="/assets/images/iconography/mail-icon.svg" width="100" height="100" alt="">
-                    <div class="tertiary-link">
-                      <span class="title">Email:</span>
-                      <span class="link-text">joseph.m.percival@gmail.com</span>
-                    </div>
+              <div class="information">
+                <p>
+                <div class="contact-icon web-icon"></div>
+                <a class="anchor" href="/index.html">
+                  www.josephmpercival.co.uk
+                </a>
+                </p>
+              </div>
+              <div class="social-media">
+                <p>Connect with us :</p>
+                <div class="social-icons">
+                  <a href="">
+                    Linked In (add Icon)
                   </a>
-                  <!-- </li>
-                  <li> -->
-                  <a href="tel:07709718757">
-                    <div class="phone-icon"></div>
-                    
-                    <div class="tertiary-link">
-                      <span class="title">Phone:</span>
-                      <span class="link-text">07709718757</span>
-                    </div>
-                  </a>
-                  <!-- </li>
-                  <li> -->
-                  <a href="/index.html">
-                    <img src="/assets/images/iconography/home-icon.svg" width="100" height="100" alt="">
-                    <div class="tertiary-link">
-                      <span class="title">Website:</span>
-                      <span class="link-text">josephmpercival.co.uk</span>
-                    </div>
-                  </a>
-                  <!-- </li>
-                </ul> -->
                 </div>
               </div>
-              <div class="footer">
-                <p>Thank you.</p>
-              </div>
             </div>
+          </div>
+
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+
+            <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
+              <input type="hidden" name="_next" value="/thank-you.html">
+              <input type="hidden" name="_subject" value="New Email From Portfolio">
+
+              <h3 class="title">Contact Me</h3>
+              <p class="white-text">Please complete fields marked with *. These are mandatory for the form to send.</p>
+
+              <p class="white-text">
+                Feel free to send us a message, I typically respond within 2 hours.
+              </p>
+              <div class="input-container">
+                <!-- customers name section  -->
+                <input type="text" name="name" id="name" class="input" autocomplete="name" spellcheck="false" required />
+                <label for="name">Name</label>
+                <span>Enter Your Full Name *</span>
+              </div>
+              
+              <div class="input-container">
+                <input type="email" id="email" class="input" name="_replyto" autocomplete="email" autofocus spellcheck="false" required />
+                <label for="email">Email</label>
+                <span>Enter your Email *</span>
+              </div>
+              
+              <div class="input-container">
+                <input type="tel" name="phone" id="phone" class="input" autocomplete="tel" autofocus spellcheck="false"/>
+                <label for="phone">Telephone</label>
+                <span>Enter Your Telephone (Optional)</span>
+              </div>
+              
+              <div class="input-container textarea">
+                <textarea name="message" id="message" class="input" required autofocus spellcheck="true"></textarea>
+                <label for="message">Message</label>
+                <span>Type Your Brief Message</span>
+              </div>
+              
+              <input type="submit" value="Send" class="btn" />
+              
+            </form>
           </div>
         </div>
       </div>
@@ -235,7 +216,27 @@
       </div>
     </div>
   </footer>
+<script>
+  const inputs = document.querySelectorAll(".input");
 
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+
+</script>
   <script type="module" src="/js/main.js" defer></script>
   <script type="module" src="/js/form-floating-labels.mjs" defer></script>
   <script type="module" src="/js/main.js" defer></script>
