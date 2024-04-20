@@ -91,7 +91,7 @@
         <div class="form">
 
           <div class="contact-info">
-            <h3>Let's get in touch</h3>
+            <h2>Let's get in touch</h2>
             <p>
               You can contact me using any of the links below or using the form to send me a message.
             </p>
@@ -99,14 +99,14 @@
               <div class="information">
                 <div class="contact-icon mail-icon"></div>
                 <div class="col">
-                  <p>Web Site:</p>
+                  <p>Email:</p>
                   <a class="anchor" href="mailto:josephmpercival@gmail.com">joseph.m.percival@gmail.com</a>
                 </div>
               </div>
               <div class="information">
                 <div class="contact-icon phone-icon"></div>
                 <div class="col">
-                  <p>Web Site:</p>
+                  <p>Telephone:</p>
                   <a class="anchor" href="tel:07709718757">
                     07709718757
                   </a>
@@ -122,12 +122,12 @@
                 </div>
               </div>
               <div class="social-media">
-                <h4>Connect with me :</h4>
-                <div class="social-icons">
-                  <a href="">
-                    Linked In (add Icon)
-                  </a>
-                </div>
+                <h3 class="subtitle">Connect with me :</h3>
+               
+                  <a href="https://www.linkedin.com/in/joseph-percival/" class="contact-icon linkedIn"
+                  title="Clicking this link will open my Linked In account in a new window."></a>
+                
+                <p class="small-text">Click the icon to visit my Linked In account.</p>
               </div>
             </div>
           </div>
@@ -140,42 +140,37 @@
               <input type="hidden" name="_next" value="/thank-you.html">
               <input type="hidden" name="_subject" value="New Email From Portfolio">
 
-              <h3 class="title">Contact Me</h3>
+              <h2 class="title">Contact Me</h2>
               <p class="white-text">Please complete fields marked with *. These are mandatory for the form to send.
               </p>
 
               <p class="white-text">
-                Feel free to send us a message, I typically respond within 2 hours.
+                Feel free to send me a message, I typically respond within <em>2 hours</em>.
               </p>
-              <div class="input-container">
+              <div class="input-container" title="Please enter your full name here *">
                 <!-- customers name section  -->
-                <input type="text" name="name" id="name" class="input" autocomplete="name" spellcheck="false"
-                  required />
+                <input type="text" name="name" id="name" class="input" autocomplete="name" spellcheck="false" required />
                 <label for="name">Name</label>
-                <span>Enter Your Full Name *</span>
               </div>
 
-              <div class="input-container">
-                <input type="email" id="email" class="input" name="_replyto" autocomplete="email" autofocus
-                  spellcheck="false" required />
+              <div class="input-container" title="Please enter your Email here *">
+                <input type="email" id="email" class="input" name="_replyto" autocomplete="email" autofocus spellcheck="false" required/>
                 <label for="email">Email</label>
-                <span>Enter your Email *</span>
+                
               </div>
 
-              <div class="input-container">
-                <input type="tel" name="phone" id="phone" class="input" autocomplete="tel" autofocus
-                  spellcheck="false" />
+              <div class="input-container" title="Please enter Your telephone number here (Optional)">
+                <input type="tel" name="phone" id="phone" class="input" autocomplete="tel" autofocus spellcheck="false"/>
                 <label for="phone">Telephone</label>
-                <span>Enter Your Telephone (Optional)</span>
+                
               </div>
 
-              <div class="input-container textarea">
+              <div class="input-container textarea" title="Please type your brief message here. *">
                 <textarea name="message" id="message" class="input" required autofocus spellcheck="true"></textarea>
                 <label for="message">Message</label>
-                <span>Type Your Brief Message</span>
               </div>
 
-              <input type="submit" value="Send" class="submit-btn" />
+              <input type="submit" value="Send" class="submit-btn" title="Click this button to send your message, after you have check all other fields. Please allow 2 hours for my reply."/>
 
             </form>
           </div>
@@ -204,7 +199,7 @@
           </svg>
         </a>
 
-        <span role="link" tab-index="0" href="assets/documents/CV2023.pdf" target="_blank" aria-abel="View my CV (PDF)"
+        <span role="link" tab-index="0" href="assets/documents/CV2023.pdf" target="_blank" aria-label="View my CV (PDF)"
           title="Click this link to view my CV (PDF)">
           <svg xmlns="http://www.w3.org/2000/svg" fill="#007bb6" height="40" viewBox="0 -960 960 960" width="40">
             <path
