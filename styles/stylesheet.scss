@@ -617,7 +617,7 @@ section {
 }
 
 .contact-form {
-  background-color: #961EE1;
+  background-color: #961ee1;
   position: relative;
 }
 
@@ -646,7 +646,7 @@ section {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #961EE1;
+  background-color: #961ee1;
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -717,7 +717,7 @@ textarea.input {
   background-color: #fff;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
-  color: #961EE1;
+  color: #961ee1;
   line-height: 1;
   border-radius: 5px;
   outline: none;
@@ -750,7 +750,7 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 15px;
-  background-color:  #961EE1;
+  background-color: #961ee1;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -775,11 +775,13 @@ textarea.input {
   width: 50%;
   opacity: 1;
 }
-.input-container{position:relative;}
+.input-container {
+  position: relative;
+}
 .input:focus {
   background-color: #ffffffb2;
   color: $color_primary_text;
-  box-shadow: 0 0 5px 0 #6b9fff; 
+  box-shadow: 0 0 5px 0 #6b9fff;
 }
 
 .contact-info {
@@ -972,6 +974,48 @@ textarea.input {
       font-size: 14px;
     }
   }
+}
+
+.bttt-btn {
+  opacity: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 9px 20px 0px #777777;
+  transition: opacity 0.5s ease;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  &:hover {
+    background-color: #0056b3;
+    box-shadow: none;
+  }
+}
+.bttt-btn svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+}
+.bttt-btn:hover svg {
+  stroke: #4fbdd2; /* Change stroke color on hover */
+  transform: translateY(-5px); /* Move the SVG upward on hover */
+}
+
+.scrolled {
+  opacity: 1;
+  /* Show the button when scrolled */
 }
 
 @media only screen and (min-width: 576px) {
