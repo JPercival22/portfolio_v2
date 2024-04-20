@@ -89,7 +89,7 @@
     <section id="btt-anchor">
       <div class="form-container">
         <div class="form">
-          
+
           <div class="contact-info">
             <h3>Let's get in touch</h3>
             <p>
@@ -97,34 +97,32 @@
             </p>
             <div class="info-card">
               <div class="information">
-                <p>Joseph Percival</p>
-              </div>
-              <div class="information">
-                <p>
                 <div class="contact-icon mail-icon"></div>
-                <a class="anchor" href="mailto:josephmpercival@gmail.com">
-                  joseph.m.percival@gmail.com
-                </a>
-                </p>
+                <div class="col">
+                  <p>Web Site:</p>
+                  <a class="anchor" href="mailto:josephmpercival@gmail.com">joseph.m.percival@gmail.com</a>
+                </div>
               </div>
               <div class="information">
-                <p>
                 <div class="contact-icon phone-icon"></div>
-                <a class="anchor" href="tel:07709718757">
-                  07709718757
-                </a>
-                </p>
+                <div class="col">
+                  <p>Web Site:</p>
+                  <a class="anchor" href="tel:07709718757">
+                    07709718757
+                  </a>
+                </div>
               </div>
               <div class="information">
-                <p>
                 <div class="contact-icon web-icon"></div>
-                <a class="anchor" href="/index.html">
-                  www.josephmpercival.co.uk
-                </a>
-                </p>
+                <div class="col">
+                  <p>Web Site:</p>
+                  <a class="anchor" href="/index.html">
+                    www.josephmpercival.co.uk
+                  </a>
+                </div>
               </div>
               <div class="social-media">
-                <p>Connect with us :</p>
+                <h4>Connect with me :</h4>
                 <div class="social-icons">
                   <a href="">
                     Linked In (add Icon)
@@ -143,38 +141,42 @@
               <input type="hidden" name="_subject" value="New Email From Portfolio">
 
               <h3 class="title">Contact Me</h3>
-              <p class="white-text">Please complete fields marked with *. These are mandatory for the form to send.</p>
+              <p class="white-text">Please complete fields marked with *. These are mandatory for the form to send.
+              </p>
 
               <p class="white-text">
                 Feel free to send us a message, I typically respond within 2 hours.
               </p>
               <div class="input-container">
                 <!-- customers name section  -->
-                <input type="text" name="name" id="name" class="input" autocomplete="name" spellcheck="false" required />
+                <input type="text" name="name" id="name" class="input" autocomplete="name" spellcheck="false"
+                  required />
                 <label for="name">Name</label>
                 <span>Enter Your Full Name *</span>
               </div>
-              
+
               <div class="input-container">
-                <input type="email" id="email" class="input" name="_replyto" autocomplete="email" autofocus spellcheck="false" required />
+                <input type="email" id="email" class="input" name="_replyto" autocomplete="email" autofocus
+                  spellcheck="false" required />
                 <label for="email">Email</label>
                 <span>Enter your Email *</span>
               </div>
-              
+
               <div class="input-container">
-                <input type="tel" name="phone" id="phone" class="input" autocomplete="tel" autofocus spellcheck="false"/>
+                <input type="tel" name="phone" id="phone" class="input" autocomplete="tel" autofocus
+                  spellcheck="false" />
                 <label for="phone">Telephone</label>
                 <span>Enter Your Telephone (Optional)</span>
               </div>
-              
+
               <div class="input-container textarea">
                 <textarea name="message" id="message" class="input" required autofocus spellcheck="true"></textarea>
                 <label for="message">Message</label>
                 <span>Type Your Brief Message</span>
               </div>
-              
-              <input type="submit" value="Send" class="btn" />
-              
+
+              <input type="submit" value="Send" class="submit-btn" />
+
             </form>
           </div>
         </div>
@@ -216,27 +218,27 @@
       </div>
     </div>
   </footer>
-<script>
-  const inputs = document.querySelectorAll(".input");
+  <script>
+    const inputs = document.querySelectorAll(".input");
 
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
+    function focusFunc() {
+      let parent = this.parentNode;
+      parent.classList.add("focus");
+    }
 
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
+    function blurFunc() {
+      let parent = this.parentNode;
+      if (this.value == "") {
+        parent.classList.remove("focus");
+      }
+    }
 
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
-});
+    inputs.forEach((input) => {
+      input.addEventListener("focus", focusFunc);
+      input.addEventListener("blur", blurFunc);
+    });
 
-</script>
+  </script>
   <script type="module" src="/js/main.js" defer></script>
   <script type="module" src="/js/form-floating-labels.mjs" defer></script>
   <script type="module" src="/js/main.js" defer></script>
