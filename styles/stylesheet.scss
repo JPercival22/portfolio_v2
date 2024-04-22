@@ -36,6 +36,81 @@ $brad-4: 4px;
 $brad-8: 8px;
 $brad-16: 16px;
 
+// mixins 
+@mixin apply-flex-styles($flex-styles) {
+  @each $property, $value in $flex-styles {
+    #{$property}: $value;
+  }
+}
+// flex-col 
+$flex-col-center: (
+  display: flex,
+  flex-direction: column,
+  align-items: center,
+  justify-content: center
+);
+$flex-col-center-start: (
+  display: flex,
+  flex-direction: column,
+  align-items: flex-start,
+  justify-content: center
+);
+$flex-col-center-end: (
+  display: flex,
+  flex-direction: column,
+  align-items: flex-end,
+  justify-content: center
+);
+$flex-col-center-space_around: (
+  display: flex,
+  flex-direction: column,
+  align-items: space-around,
+  justify-content: center
+);
+$flex-col-center-space_between: (
+  display: flex,
+  flex-direction: column,
+  align-items: space-between,
+  justify-content: center
+);
+$flex-col-start-start: (
+  display: flex,
+  flex-direction: column,
+  align-items: start,
+  justify-content: start
+);
+// flex row 
+$flex-row-center: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: center
+);
+$flex-row-center-space_evenly: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: space-evenly
+);
+$flex-row-center-space_between: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: space-between
+);
+$flex-row-center-end: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: flex-end
+);
+$flex-row-center-start: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: flex-start
+);
+
 html,
 body {
   max-width: 100%;
@@ -50,8 +125,7 @@ body {
 
 main {
   background-color: $color_main-bkg;
-  display: flex;
-  flex-direction: column;
+  @include apply-flex-styles($flex-col-center);
   gap: 1em;
   padding-bottom: 1em;
 }
@@ -106,8 +180,7 @@ ul {
   list-style: disc;
   margin-left: 16px;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  @include apply-flex-styles($flex-col-center);
   gap: 10px;
   &.no-disc {
     margin-left: 0;
@@ -140,8 +213,7 @@ img {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
+  @include apply-flex-styles($flex-col-center);
   margin: 10px;
   &.p-0 {
     margin: 0;
@@ -172,17 +244,13 @@ section {
     }
   }
   .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include apply-flex-styles($flex-row-center-space_between);
     width: 95%;
     height: 76px;
     margin: 0 auto;
     font-family: $font-family;
     .home-link .navbar-logo {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+      @include apply-flex-styles($flex-row-center);
       padding: 10px 0;
       img {
         width: 60px;
@@ -191,8 +259,7 @@ section {
         border-radius: 50%;
       }
       .logo-container {
-        display: flex;
-        flex-direction: column;
+        @include apply-flex-styles($flex-col-center);
         margin-left: 10px;
         font-family: $font-family;
         color: #272727;
@@ -219,10 +286,7 @@ section {
         position: fixed;
         top: 75px;
         left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include apply-flex-styles($flex-col-center);
         width: 100vw;
         height: 100vh;
         background-color: $color_base-bkg;
@@ -230,9 +294,7 @@ section {
         .navbar-link {
           width: 100%;
           a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include apply-flex-styles($flex-col-center);
             width: inherit;
             padding-top: 1em;
             padding-bottom: 1em;
@@ -255,19 +317,13 @@ section {
   padding: 0;
   width: 100vw;
   .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include apply-flex-styles($flex-col-center);
     height: 50vh;
     width: 100vw;
     .hero-content {
       padding: 20px;
       border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
+      @include apply-flex-styles($flex-col-center-start);
       gap: 0.5em;
       max-width: calc(100vw - 20%);
       .name-container {
@@ -295,20 +351,14 @@ section {
 // generic layout styles
 
 .research-qoute {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include apply-flex-styles($flex-col-center);
   padding: 0 10px;
   .qoute-text {
     font-size: 1.3rem;
     line-height: 27pt;
     font-style: italic;
     .signature {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
+      @include apply-flex-styles($flex-row-center-end);
       width: 100%;
       font-size: 1rem;
       margin-right: 2em;
@@ -318,10 +368,7 @@ section {
 }
 
 .centered-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @include apply-flex-styles($flex-row-center);
   margin: 2em 0;
 }
 
@@ -329,19 +376,13 @@ section {
   background-color: $color_white;
   padding: 10px;
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include apply-flex-styles($flex-col-center);
   gap: 10px;
   &.transparent {
     background-color: transparent;
   }
   &.flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include apply-flex-styles($flex-col-center);
     &.align-start {
       align-items: flex-start;
     }
@@ -359,8 +400,7 @@ section {
     }
   }
   .button-container {
-    display: flex;
-    flex-direction: column;
+    @include apply-flex-styles($flex-col-center);
     gap: 1em;
     width: 100%;
     a {
@@ -385,9 +425,7 @@ section {
 /* end of top bar  */
 .primary-button,
 .secondary-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include apply-flex-styles($flex-col-center);
   border: $color_border-settings-primary;
   border-radius: 50px;
   padding: 8px 16px;
@@ -458,10 +496,7 @@ section {
 .banner-section {
   background-color: $color_white;
   padding: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include apply-flex-styles($flex-col-center);
   border-radius: $brad-8;
   .process-banner {
     background: url(/assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
@@ -472,14 +507,12 @@ section {
 }
 
 .flex-container {
-  display: flex;
-  flex-direction: column;
+  @include apply-flex-styles($flex-col-center);
   background-color: $color_white;
   border-radius: $brad-8;
   // portfolio
   .wide-card {
-    display: flex;
-    flex-direction: column;
+    @include apply-flex-styles($flex-col-center);
     border-bottom: $color_border-settings-grey;
     padding: 1em 0;
     &.no-border {
@@ -666,10 +699,7 @@ form {
 .input-container {
   position: relative;
   margin: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include apply-flex-styles($flex-col-center);
   width: -webkit-fill-available;
 }
 
@@ -786,9 +816,7 @@ textarea.input {
 }
 
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @include apply-flex-styles($flex-col-center-start);
   justify-content: space-evenly;
   width: 90%;
   padding: 10px;
@@ -797,10 +825,7 @@ textarea.input {
   }
 }
 .info-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  @include apply-flex-styles($flex-col-center-start);
   gap: 10px;
 }
 .text {
@@ -809,16 +834,10 @@ textarea.input {
 }
 
 .information {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @include apply-flex-styles($flex-row-center);
   gap: 10px;
   .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    @include apply-flex-styles($flex-col-center-start);
     p {
       margin: 0;
       padding: 0;
@@ -906,32 +925,24 @@ textarea.input {
 /* thank you styles  */
 
 .thank-you-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include apply-flex-styles($flex-col-center);
   border: $color_border-settings-grey;
-  border-radius: 8px;
-  background-color: var(--white-bkg) fff;
+  border-radius: $brad-8;
+  background-color: $color_white;
   padding: 8px;
   margin: 0 auto;
 }
 
 .thankyou-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include apply-flex-styles($flex-row-center);
 }
 
 .thankyou-body {
-  display: flex;
-  flex-direction: row;
+  @include apply-flex-styles($flex-row-center);
 }
 
 .thankyou-footer {
-  display: flex;
-  flex-direction: column;
+  @include apply-flex-styles($flex-col-center);
 }
 .italic {
   font-style: italic;
@@ -945,10 +956,7 @@ textarea.input {
 .open-sidebar-btn {
 	background-color: $color_brand;
 	cursor: pointer;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  @include apply-flex-styles($flex-col-center);
 	border: none;
 	width: 34px;
 	height: 34px;
@@ -975,10 +983,7 @@ textarea.input {
 	.close-btn {
 		background-color: $color_brand;
 		cursor: pointer;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+    @include apply-flex-styles($flex-col-center);
 		border: none;
 		width: 34px;
 		height: 34px;
@@ -989,31 +994,20 @@ textarea.input {
 		}
 	}
 	.header {
-		display: flex;
-		flex-direction: row;
+    @include apply-flex-styles($flex-row-center-space_between);
 		flex-wrap: nowrap;
-		align-content: center;
-		justify-content: space-between;
-		align-items: center;
 	}
 	ul {
 		list-style-type: none;
 		padding: 0;
 		margin: 0 1em;
-		display: flex;
-		flex-direction: column;
+    @include apply-flex-styles($flex-col-center-start);
 		flex-wrap: nowrap;
-		align-content: flex-start;
-		justify-content: center;
-		align-items: flex-start;
 		gap: 1em;
 	}
 	li {
-		display: flex;
-		flex-direction: row;
+    @include apply-flex-styles($flex-row-center-start);
 		flex-wrap: nowrap;
-		justify-content: flex-start;
-		align-items: center;
 		width: 100%;
 	}
 	a {
@@ -1021,10 +1015,8 @@ textarea.input {
 		text-decoration: none;
 		display: block;
 		transition: 0.3s;
-		display: flex;
-		flex-direction: row;
+    @include apply-flex-styles($flex-row-center);
 		flex-wrap: nowrap;
-		align-items: center;
 		.nav-item {
 			margin-left: 10px;
 			fill: #404040;
@@ -1049,10 +1041,7 @@ textarea.input {
 			background-color: #f5f5f5;
 			padding: 10px;
 			cursor: pointer;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
+      @include apply-flex-styles($flex-row-center-space_between);
 			&:hover {
 				background-color: #e0e0e0;
 			}
@@ -1092,17 +1081,13 @@ textarea.input {
 	}
 }
 .research-list {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+  @include apply-flex-styles($flex-col-center-start);
 	gap: 10px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	li {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
+    @include apply-flex-styles($flex-row-center);
 		gap: 10px;
 		.logo-sm {
 			width: 40px;
@@ -1120,10 +1105,7 @@ textarea.input {
 	}
 }
 .two-button-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
+  @include apply-flex-styles($flex-col-center-space_around);
 	width: -webkit-fill-available;
 	gap: 1em;
 }
@@ -1133,22 +1115,18 @@ textarea.input {
 	display: flex;
 	flex-direction: column;
 	.tab-buttons {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
+		@include apply-flex-styles($flex-row-center-start);
 		background-color: $background-color_blue;
-		border-top-right-radius: 8px;
+		border-top-right-radius: $brad-8;
 		.tab-button {
 			cursor: pointer;
-			display: flex;
-			align-items: center;
-			justify-content: flex-start;
+			@include apply-flex-styles($flex-col-center-start);
 			border: none;
 			padding: 10px 20px;
 			transition: all 0.5s ease-in-out;
 			font-family: $font-family;
 			font-size: 18px;
-			background-color: white;
+			background-color: $color_white;
 			border-bottom: 2px solid transparent;
 			color: #525252;
 			&.active {
@@ -1257,10 +1235,7 @@ textarea.input {
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
+				@include apply-flex-styles($flex-col-center);
 				background-color: #fff;
 				padding: 1em;
 				border-radius: $brad-8;
@@ -1383,10 +1358,7 @@ textarea.input {
 			height: auto;
 			background-size: cover;
 			.gallery {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
+				@include apply-flex-styles($flex-col-center);
 				width: -webkit-fill-available;
 				margin: 0;
 				img {
@@ -1408,22 +1380,16 @@ textarea.input {
 		top: 50%;
 		transform: translateY(-246%);
 		width: -webkit-fill-available;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
+		@include apply-flex-styles($flex-row-center-space_between);
 		.controls {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
+			@include apply-flex-styles($flex-col-center);
 			border: 1px solid $color_brand;
 			border-radius: 50%;
 			width: 50px;
 			height: 50px;
 			transition: all 0.3s ease-in-out;
 			background-color: $color_white;
-			box-shadow: var(--b-shadow);
+			box-shadow: $b-shadow;
 			color: $color_brand;
 			cursor: pointer;
 			&:hover {
@@ -1456,15 +1422,9 @@ textarea.input {
 .footer-container {
   padding: 0 1em;
   background-color: $color_white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  @include apply-flex-styles($flex-row-center-space_between);
   .footer-social-icon {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    @include apply-flex-styles($flex-row-center-space_between);
     width: 100%;
     padding: 10px 0;
     a {
@@ -1477,10 +1437,7 @@ textarea.input {
     }
   }
   .copy-panel {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include apply-flex-styles($flex-row-center);
     background-color: $background_copy;
     color: #0a0a0a;
     padding: 10px;
@@ -1598,11 +1555,9 @@ textarea.input {
 	}
 
 	.flex-row {
-		display: flex;
-		flex-direction: row;
+    @include apply-flex-styles($flex-row-center-start);
+    align-items: start;
 		flex-wrap: nowrap;
-		justify-content: space-between;
-		align-items: flex-start;
 		width: 100%;
 		gap: 3em;
 		margin-bottom: 1em;
@@ -1612,25 +1567,17 @@ textarea.input {
 		border: none;
 	}
 	.flex-col {
-		display: flex;
-		flex-direction: column;
 		flex-wrap: nowrap;
-		align-content: space-around;
-		justify-content: center;
-		align-items: flex-start;
+    @include apply-flex-styles($flex-col-center-start);
 	}
 	.left-col {
-		display: flex;
-		flex-direction: row;
+    @include apply-flex-styles($flex-row-center-space_between);
 		flex-wrap: nowrap;
-		justify-content: space-between;
 		align-items: flex-start;
 	}
 	.right-col {
-		display: flex;
-		flex-direction: row;
+    @include apply-flex-styles($flex-row-center-space_between);
 		flex-wrap: nowrap;
-		justify-content: space-between;
 		align-items: flex-start;
 		width: 50%;
 	}
@@ -1645,7 +1592,7 @@ textarea.input {
 		grid-template-columns: 1fr;
 		grid-gap: 1em;
 		background-color: $color_white;
-		border-radius: 8px;
+		border-radius: $brad-8;
 		.image-container {
 			display: flex;
 			flex-direction: column;
@@ -1741,8 +1688,7 @@ textarea.input {
 /* Start of Responsive Navigation Shift  */
 @media screen and (min-width: 768px) {
   .button-container {
-    flex-direction: row;
-    justify-content: flex-start;
+    @include apply-flex-styles($flex-row-center-start);
     gap: 1em;
   }
 
@@ -1761,9 +1707,7 @@ textarea.input {
   .editorial {
     padding: 1em;
     &.dynamic-row {
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      @include apply-flex-styles($flex-row-center);
       gap: 1em;
       .profile-image {
         flex: 90%;
@@ -1795,19 +1739,13 @@ textarea.input {
       .card-header {
         display: flex;
         .inline-decorated-list {
-          display: flex;
           width: -webkit-fill-available;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
+          @include apply-flex-styles($flex-row-center-start);
           gap: 4em;
         }
       }
       .card-body {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
+        @include apply-flex-styles($flex-row-center-start);
         gap: 1em;
         .card-editorial {
           flex: 90%;
@@ -1900,10 +1838,7 @@ textarea.input {
 		background-color: $color_white;
 		border-radius: $brad-8;
 		.prototype-container {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: center;
+      @include apply-flex-styles($flex-col-center-start);
 		}
 	}
 	.grid-container-3col {
@@ -1914,10 +1849,7 @@ textarea.input {
 		background-color: $color_white;
 		border-radius: $brad-8;
 		.prototype-container {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: center;
+      @include apply-flex-styles($flex-col-center-start);
 		}
 	}
 	.grid-container-4col {
@@ -2224,9 +2156,7 @@ textarea.input {
 		}
 	}
 	.tab-container .tab-contents .tab-module {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
+    @include apply-flex-styles($flex-col-center-start);
 		background-color: $color_white;
 		.carousel-header {
 			display: flex;
@@ -2239,9 +2169,7 @@ textarea.input {
 					padding: 20px 0 20px 0;
 					.headline {
 						width: 100%;
-						display: flex;
-						flex-direction: row;
-						justify-content: flex-start;
+            @include apply-flex-styles($flex-row-center-start);
 					}
 				}
 			}
@@ -2285,10 +2213,7 @@ textarea.input {
 			}
 		}
 		.gallery {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
+      @include apply-flex-styles($flex-col-center);
 			border-radius: $brad-8;
 			margin: 0;
 			width: -webkit-fill-available;
@@ -2308,9 +2233,7 @@ textarea.input {
 			}
 			figcaption {
 				width: 100%;
-				display: flex;
-				flex-direction: row;
-				justify-self: flex-start;
+        @include apply-flex-styles($flex-row-center-start);
 			}
 		}
 		.carousel-container {
@@ -2332,10 +2255,7 @@ textarea.input {
   }
 
   #navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include apply-flex-styles($flex-row-center-space_between);
     .navbar-container {
       width: 90%;
       margin: 0 auto;
@@ -2343,10 +2263,7 @@ textarea.input {
         display: none;
       }
       .nav-menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
+        @include apply-flex-styles($flex-row-center-space_evenly);
         gap: 1em;
         a {
           color: #3f3f3f;
@@ -2365,10 +2282,7 @@ textarea.input {
     }
   }
   .p-0 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include apply-flex-styles($flex-col-center);
   }
   .page-boundary .centered-row {
     max-width: 80%;
@@ -2384,6 +2298,7 @@ textarea.input {
   .banner-section {
     margin-top: 1em;
     margin-bottom: 1em;
+    width: -webkit-fill-available;
   }
   .flex-container .wide-card .card-body .image-container {
     flex: 30%;
@@ -2395,9 +2310,7 @@ textarea.input {
   }
   .flex-container {
     &.row {
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      @include apply-flex-styles($flex-row-center);
       width: 30%;
       gap: 3em;
       .left {
@@ -2425,8 +2338,7 @@ textarea.input {
 	.hero-container {
 		padding: 1em;
 		.two-button-container {
-			display: flex;
-			flex-direction: row;
+      @include apply-flex-styles($flex-col-center-end);
 			width: 100%;
 			justify-content: flex-end;
 			gap: 1em;
@@ -2451,9 +2363,7 @@ textarea.input {
 			}
 		}
 		.bullet-list-row {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-evenly;
+      @include apply-flex-styles($flex-row-center-space_evenly);
 			list-style: none;
 		}
 	}
@@ -2603,11 +2513,8 @@ textarea.input {
 
   // case study styles
   .sideBar {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
-		border-radius: var(--br-8);
+    @include apply-flex-styles($flex-col-start-start);
+		border-radius: $brad-8;
 		.sideBar-content {
 			ul {
 				list-style-type: none;
@@ -2618,21 +2525,16 @@ textarea.input {
 				align-items: baseline;
 				gap: 0.5em;
 				.side-bar-list-item {
-					display: flex;
-					flex-direction: row;
+          @include apply-flex-styles($flex-row-center-start);
 					flex-wrap: nowrap;
-					justify-content: flex-start;
-					align-items: center;
 					width: 100%;
 					a {
 						color: #404040;
 						text-decoration: none;
 						display: block;
 						transition: 0.3s;
-						display: flex;
-						flex-direction: row;
+            @include apply-flex-styles($flex-row-center);
 						flex-wrap: nowrap;
-						align-items: center;
 						width: 100%;
 						padding: 10px;
 						.side-bar-icon svg {
@@ -2646,9 +2548,7 @@ textarea.input {
 
 	.page-wrapper {
 		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
+    @include apply-flex-styles($flex-row-center-start);
 		gap: 1em;
 		margin: 0 auto;
 		position: relative;
@@ -2663,13 +2563,10 @@ textarea.input {
 	}
 	article {
 		width: 23%;
-		background-color: white;
-		border-radius: var(--br-8);
+		background-color: $color_white;
+		border-radius: $brad-8;
 		.sideBar {
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: flex-start;
+      @include apply-flex-styles($flex-col-start-start);
 			width: 100%;
 			position: inherit;
 			.sideBar-content {
@@ -2688,16 +2585,14 @@ textarea.input {
 	}
 	.main-content {
 		width: 80%;
-		display: flex;
-		flex-direction: column;
+    @include apply-flex-styles($flex-col-center);
 		gap: 2em;
 	}
 
 	section {
 		width: 100%;
 		margin: unset;
-		display: flex;
-		flex-direction: column;
+    @include apply-flex-styles($flex-col-center);
 		padding-top: 0;
 		border-radius: $brad-8;
 	}
@@ -2720,10 +2615,7 @@ textarea.input {
 		border-radius: $brad-8;
 		width: 100%;
 		.prototype-container {
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: flex-start;
+      @include apply-flex-styles($flex-col-start-start);
 			width: 360px;
 			height: auto;
 			cursor: pointer;
@@ -2831,17 +2723,11 @@ textarea.input {
 	}
 
 	.tab-container {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: center;
+    @include apply-flex-styles($flex-col-center-start);
 		border: 1px solid gainsboro;
 		border-radius: $brad-8;
 		.tab-buttons {
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-start;
-			align-items: center;
+      @include apply-flex-styles($flex-row-center-start);
 			width: 100%;
 			background-color: aliceblue;
 			button {
@@ -2887,10 +2773,8 @@ textarea.input {
 		margin: unset;
 	}
 	.bullet-list-row {
-		display: flex;
-		justify-content: space-between;
+    @include apply-flex-styles($flex-row-center-space_between);
 		align-items: flex-start;
-		flex-direction: row;
 		gap: 0.3em;
 		margin: 0;
 		padding-top: 1em;
@@ -2900,10 +2784,8 @@ textarea.input {
 		}
 	}
 	.bullet-list-col {
-		display: flex;
-		justify-content: space-between;
+    @include apply-flex-styles($flex-col-center-space_between);
 		align-items: flex-start;
-		flex-direction: column;
 		gap: 0.3em;
 		margin-left: 1em;
 		list-style: disc;
@@ -2924,8 +2806,7 @@ textarea.input {
 			width: 100%;
 			height: 150px;
 			.editorial-headline {
-				display: flex;
-				flex-direction: column;
+        @include apply-flex-styles($flex-col-center);
 			}
 			.primary-banner {
 				border-radius: 30px;
