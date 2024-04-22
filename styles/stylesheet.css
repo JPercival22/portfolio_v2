@@ -15,6 +15,8 @@ main {
   background-color: #f0f2f5;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1em;
   padding-bottom: 1em;
 }
@@ -71,6 +73,8 @@ ul {
   padding: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 ul.no-disc {
@@ -106,6 +110,8 @@ img {
 section {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 10px;
 }
 section.p-0 {
@@ -138,8 +144,9 @@ section.p-0 {
 }
 #navbar .navbar-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   width: 95%;
   height: 76px;
   margin: 0 auto;
@@ -149,6 +156,7 @@ section.p-0 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 10px 0;
 }
 #navbar .navbar-container .home-link .navbar-logo img {
@@ -160,6 +168,8 @@ section.p-0 {
 #navbar .navbar-container .home-link .navbar-logo .logo-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-left: 10px;
   font-family: "Poppins";
   color: #272727;
@@ -188,8 +198,8 @@ section.p-0 {
   left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   background-color: #30a7bf;
@@ -200,8 +210,9 @@ section.p-0 {
 }
 #navbar .navbar-container .nav-menu.show .navbar-link a {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: inherit;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -221,8 +232,8 @@ section.p-0 {
 .p-0 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 50vh;
   width: 100vw;
 }
@@ -270,8 +281,8 @@ section.p-0 {
 .research-qoute .qoute-text .signature {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
   width: 100%;
   font-size: 1rem;
   margin-right: 2em;
@@ -302,8 +313,8 @@ section.p-0 {
 .editorial.flex-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 .editorial.flex-container.align-start {
   align-items: flex-start;
@@ -323,6 +334,8 @@ section.p-0 {
 .editorial .button-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1em;
   width: 100%;
 }
@@ -347,6 +360,7 @@ section.p-0 {
 .primary-button,
 .secondary-button {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid #4eca63;
@@ -437,12 +451,16 @@ section.p-0 {
 .flex-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #fff;
   border-radius: 8px;
 }
 .flex-container .wide-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid #d4d4d4;
   padding: 1em 0;
 }
@@ -752,6 +770,7 @@ textarea.input {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   justify-content: space-evenly;
   width: 90%;
   padding: 10px;
@@ -763,8 +782,8 @@ textarea.input {
 .info-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -783,8 +802,8 @@ textarea.input {
 .information .col {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
+  justify-content: center;
 }
 .information .col p {
   margin: 0;
@@ -866,7 +885,7 @@ textarea.input {
   justify-content: center;
   border: 1px solid #d4d4d4;
   border-radius: 8px;
-  background-color: var(--white-bkg) fff;
+  background-color: #fff;
   padding: 8px;
   margin: 0 auto;
 }
@@ -874,18 +893,22 @@ textarea.input {
 .thankyou-title {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .thankyou-body {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .thankyou-footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .italic {
@@ -903,8 +926,8 @@ textarea.input {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   border: none;
   width: 34px;
   height: 34px;
@@ -935,8 +958,8 @@ textarea.input {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   border: none;
   width: 34px;
   height: 34px;
@@ -949,10 +972,9 @@ textarea.input {
 .mobile-sidebar .header {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 .mobile-sidebar ul {
   list-style-type: none;
@@ -960,18 +982,17 @@ textarea.input {
   margin: 0 1em;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-  justify-content: center;
   align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
   gap: 1em;
 }
 .mobile-sidebar li {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
   width: 100%;
 }
 .mobile-sidebar a {
@@ -981,8 +1002,9 @@ textarea.input {
   transition: 0.3s;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 .mobile-sidebar a .nav-item {
   margin-left: 10px;
@@ -1052,6 +1074,7 @@ textarea.input {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   gap: 10px;
   list-style: none;
   margin: 0;
@@ -1061,6 +1084,7 @@ textarea.input {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 .research-list li .logo-sm {
@@ -1080,8 +1104,8 @@ textarea.input {
 .two-button-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  align-items: space-around;
+  justify-content: center;
   width: -webkit-fill-available;
   gap: 1em;
 }
@@ -1094,21 +1118,23 @@ textarea.input {
 .tab-container .tab-buttons {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   background-color: #f0f8ff;
   border-top-right-radius: 8px;
 }
 .tab-container .tab-buttons .tab-button {
   cursor: pointer;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   border: none;
   padding: 10px 20px;
   transition: all 0.5s ease-in-out;
   font-family: "Poppins";
   font-size: 18px;
-  background-color: white;
+  background-color: #fff;
   border-bottom: 2px solid transparent;
   color: #525252;
 }
@@ -1252,8 +1278,8 @@ textarea.input {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background-color: #fff;
   padding: 1em;
   border-radius: 8px;
@@ -1497,8 +1523,8 @@ textarea.input {
 .carousel-container .carousel-track .carousel-slide .gallery {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: -webkit-fill-available;
   margin: 0;
 }
@@ -1520,8 +1546,8 @@ textarea.input {
   width: -webkit-fill-available;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .carousel-container .carousel-buttons .controls {
   display: flex;
@@ -1534,7 +1560,7 @@ textarea.input {
   height: 50px;
   transition: all 0.3s ease-in-out;
   background-color: #fff;
-  box-shadow: var(--b-shadow);
+  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
   color: #2c4465;
   cursor: pointer;
 }
@@ -1565,7 +1591,7 @@ textarea.input {
   padding: 0 1em;
   background-color: #fff;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
@@ -1752,9 +1778,10 @@ textarea.input {
   .flex-row {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    align-items: start;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
     width: 100%;
     gap: 3em;
     margin-bottom: 1em;
@@ -1764,25 +1791,26 @@ textarea.input {
     border: none;
   }
   .flex-col {
+    flex-wrap: nowrap;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: space-around;
-    justify-content: center;
     align-items: flex-start;
+    justify-content: center;
   }
   .left-col {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
     align-items: flex-start;
   }
   .right-col {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
     align-items: flex-start;
     width: 50%;
   }
@@ -1958,7 +1986,9 @@ textarea.input {
 /* Start of Responsive Navigation Shift  */
 @media screen and (min-width: 768px) {
   .button-container {
+    display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
     gap: 1em;
   }
@@ -1975,6 +2005,7 @@ textarea.input {
     padding: 1em;
   }
   .editorial.dynamic-row {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -2005,18 +2036,18 @@ textarea.input {
     display: flex;
   }
   .flex-container .wide-card .card-header .inline-decorated-list {
-    display: flex;
     width: -webkit-fill-available;
+    display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
     gap: 4em;
   }
   .flex-container .wide-card .card-body {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
     gap: 1em;
   }
   .flex-container .wide-card .card-body .card-editorial {
@@ -2574,6 +2605,7 @@ textarea.input {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     background-color: #fff;
   }
   .tab-container .tab-contents .tab-module .carousel-header {
@@ -2592,6 +2624,7 @@ textarea.input {
     width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
   }
   .tab-container .tab-contents .tab-module .carousel-header .flex-col-right {
@@ -2659,7 +2692,8 @@ textarea.input {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-self: flex-start;
+    align-items: center;
+    justify-content: flex-start;
   }
   .tab-container .tab-contents .tab-module .carousel-container {
     width: -webkit-fill-available;
@@ -2678,8 +2712,8 @@ textarea.input {
   #navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
   #navbar .navbar-container {
     width: 90%;
@@ -2691,8 +2725,8 @@ textarea.input {
   #navbar .navbar-container .nav-menu {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-evenly;
     gap: 1em;
   }
   #navbar .navbar-container .nav-menu a {
@@ -2711,8 +2745,8 @@ textarea.input {
   .p-0 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
   .page-boundary .centered-row {
     max-width: 80%;
@@ -2726,6 +2760,7 @@ textarea.input {
   .banner-section {
     margin-top: 1em;
     margin-bottom: 1em;
+    width: -webkit-fill-available;
   }
   .flex-container .wide-card .card-body .image-container {
     flex: 30%;
@@ -2734,6 +2769,7 @@ textarea.input {
     grid-template-columns: repeat(4, 1fr);
   }
   .flex-container.row {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -2763,7 +2799,9 @@ textarea.input {
   }
   .hero-container .two-button-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
     width: 100%;
     justify-content: flex-end;
     gap: 1em;
@@ -2786,6 +2824,7 @@ textarea.input {
   .hero-container .bullet-list-row {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
     list-style: none;
   }
@@ -3042,9 +3081,9 @@ textarea.input {
   .sideBar {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-radius: var(--br-8);
+    align-items: start;
+    justify-content: start;
+    border-radius: 8px;
   }
   .sideBar .sideBar-content ul {
     list-style-type: none;
@@ -3058,9 +3097,9 @@ textarea.input {
   .sideBar .sideBar-content ul .side-bar-list-item {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
     width: 100%;
   }
   .sideBar .sideBar-content ul .side-bar-list-item a {
@@ -3070,8 +3109,9 @@ textarea.input {
     transition: 0.3s;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
     width: 100%;
     padding: 10px;
   }
@@ -3082,6 +3122,7 @@ textarea.input {
     width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
     gap: 1em;
     margin: 0 auto;
@@ -3097,14 +3138,14 @@ textarea.input {
   }
   article {
     width: 23%;
-    background-color: white;
-    border-radius: var(--br-8);
+    background-color: #fff;
+    border-radius: 8px;
   }
   article .sideBar {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-items: start;
+    justify-content: start;
     width: 100%;
     position: inherit;
   }
@@ -3124,6 +3165,8 @@ textarea.input {
     width: 80%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 2em;
   }
   section {
@@ -3131,6 +3174,8 @@ textarea.input {
     margin: unset;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding-top: 0;
     border-radius: 8px;
   }
@@ -3155,8 +3200,8 @@ textarea.input {
   .grid-container-2col .prototype-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-items: start;
+    justify-content: start;
     width: 360px;
     height: auto;
     cursor: pointer;
@@ -3317,8 +3362,8 @@ textarea.input {
   .tab-container .tab-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
     width: 100%;
     background-color: aliceblue;
   }
@@ -3360,9 +3405,10 @@ textarea.input {
   }
   .bullet-list-row {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     align-items: flex-start;
-    flex-direction: row;
     gap: 0.3em;
     margin: 0;
     padding-top: 1em;
@@ -3373,9 +3419,10 @@ textarea.input {
   }
   .bullet-list-col {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    align-items: flex-start;
     gap: 0.3em;
     margin-left: 1em;
     list-style: disc;
@@ -3396,6 +3443,8 @@ textarea.input {
   .editorial .header_2-col-banner-right .editorial-headline {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .editorial .header_2-col-banner-right .primary-banner {
     border-radius: 30px;
