@@ -19,6 +19,7 @@ main {
   justify-content: center;
   gap: 1em;
   padding-bottom: 1em;
+  position: relative;
 }
 
 h1 {
@@ -117,6 +118,7 @@ section {
   align-items: center;
   justify-content: center;
   max-width: calc(100vw - 20px);
+  margin: 0 auto;
 }
 section.p-0 {
   margin-top: 70px;
@@ -141,7 +143,7 @@ section.p-0 {
 }
 #navbar.scrolled {
   background-color: #fff;
-  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
+  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.9);
   z-index: 100;
 }
 #navbar.scrolled.logo-container {
@@ -351,6 +353,7 @@ section.p-0 {
   align-items: flex-start;
   justify-content: center;
   gap: 10px;
+  width: 90vw;
 }
 .editorial.transparent {
   background-color: transparent;
@@ -418,7 +421,7 @@ section.p-0 {
   text-transform: capitalize;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
+  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.9);
   margin-bottom: 1em;
 }
 
@@ -990,7 +993,7 @@ textarea.input {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
+  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.9);
 }
 .contents .open-sidebar-btn .material-symbols-outlined {
   color: #fff;
@@ -1010,7 +1013,7 @@ textarea.input {
   top: 76px;
   background-color: #fff;
   border-right: 1px solid #d4d4d4;
-  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
+  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.9);
   transition: all 0.5s ease-in-out;
 }
 .mobile-sidebar .close-btn {
@@ -1290,7 +1293,7 @@ textarea.input {
   border-radius: 8px;
   transition: 0.5s all ease-in-out;
   padding: 0.5em;
-  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
+  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.9);
   margin: 0;
 }
 .grid-container-1col .image-container .gallery:hover,
@@ -1477,7 +1480,7 @@ textarea.input {
   width: 42px;
   height: 42px;
   border-radius: 50px;
-  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
+  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.9);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
@@ -1575,34 +1578,32 @@ textarea.input {
 .carousel-container {
   position: relative;
   overflow: hidden;
-  width: -webkit-fill-available;
+  width: 100%;
   height: auto;
   margin: auto;
 }
 .carousel-container .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  transform: translateX(0%);
 }
 .carousel-container .carousel-track .carousel-slide {
-  min-width: 100%;
+  width: 100%;
   height: auto;
-  background-size: cover;
+  background-size: contain;
 }
 .carousel-container .carousel-track .carousel-slide figure {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: -webkit-fill-available;
-  margin: 0;
+  width: 100%;
+  margin: 0 auto;
 }
 .carousel-container .carousel-track .carousel-slide figure img {
   width: -webkit-fill-available;
   height: auto;
   border: none;
-}
-.carousel-container .carousel-track .carousel-slide figure img.lg {
-  width: 100vw;
 }
 .carousel-container .carousel-track .carousel-slide figure figcaption {
   display: flex;
@@ -1625,7 +1626,7 @@ textarea.input {
   height: 50px;
   transition: all 0.3s ease-in-out;
   background-color: #fff;
-  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
+  box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.9);
   color: #2c4465;
   cursor: pointer;
 }
@@ -1828,7 +1829,7 @@ textarea.input {
 }
 @media only screen and (min-width: 425px) {
   main {
-    top: 63px;
+    top: 76px;
     margin-bottom: 1em;
   }
   .home-link {
@@ -1914,7 +1915,7 @@ textarea.input {
     border-radius: 8px;
     transition: 0.5s all ease-in-out;
     padding: 0.5em;
-    box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
+    box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.9);
     margin: 10px;
   }
   .grid-container-1col .image-container .gallery:first-child,
@@ -2058,8 +2059,30 @@ textarea.input {
     justify-content: flex-start;
     gap: 1em;
   }
+  .page-wrapper {
+    top: 0;
+  }
   .p-0 {
     background-color: #4fbdd2;
+  }
+  .p-0.case-study-settings {
+    background-color: transparent;
+    margin: 0 auto;
+    max-height: 74vh;
+  }
+  .p-0.case-study-settings .hero {
+    justify-content: flex-start;
+  }
+  .p-0.case-study-settings .hero .case-study-settings .bullet-list-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .p-0.case-study-settings .hero .case-study-settings .bullet-list-row li {
+    border-left: 1px solid #d4d4d4;
+    list-style: none;
+    padding-left: 10px;
   }
   .p-0 .hero {
     height: 90vh;
@@ -2415,6 +2438,9 @@ textarea.input {
   .p-0 .hero .hero-content {
     border: 1px solid gainsboro;
   }
+  .p-0 .hero .hero-content.case-study-settings {
+    border: none;
+  }
   .wrapper .hero-editorial {
     flex-direction: row;
   }
@@ -2464,6 +2490,22 @@ textarea.input {
 @media only screen and (min-width: 1024px) {
   .body {
     margin: var(--side-margins-992px);
+  }
+  .tooltip {
+    visibility: hidden; /* Initially hide the tooltip */
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    width: 110px;
+    box-shadow: 3px 10px 10px 0px rgba(201, 201, 201, 0.9);
+  }
+  .open-sidebar-btn:hover + .tooltip {
+    visibility: visible; /* Show the tooltip when button is hovered */
   }
   .sidebar-open {
     width: 30%;
@@ -2741,9 +2783,6 @@ textarea.input {
     width: -webkit-fill-available;
   }
   .tab-container .tab-contents .tab-module .gallery .lg {
-    width: 800px;
-    height: auto;
-    border-radius: 8px;
     margin-bottom: 0.8em;
   }
   .tab-container .tab-contents .tab-module .gallery .sm {
@@ -2765,8 +2804,8 @@ textarea.input {
     width: -webkit-fill-available;
     height: auto;
   }
-  .tab-container .tab-contents .tab-module .carousel-container .carousel-track .carousel-slide .gallery .lg {
-    width: 90%;
+  .tab-container .tab-contents .tab-module .carousel-container .carousel-track .carousel-track .carousel-slide .gallery .lg {
+    width: 100%;
     height: auto;
   }
 }
@@ -3387,7 +3426,7 @@ textarea.input {
     transition: 0.5s all ease-in-out;
     padding: 0.5em;
     cursor: zoom-in;
-    box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
+    box-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.9);
   }
   .grid-container-4col .image-container .gallery img,
   .grid-container-6col .image-container .gallery img {

@@ -72,13 +72,16 @@ async function addMainFunctionality () {
     handleDynamicImports()
 
     // Call initCarousel function with appropriate parameters
-    initCarousel(
-      'carousel-0',
-      'carouselTrack_0',
-      'prevButton_0',
-      'nextButton_0',
-      'pagination_0'
-    )
+    // Dynamically import and call initCarousel function for each carousel
+    const carousels = document.querySelectorAll('[data-carousel]')
+    carousels.forEach((carousel, index) => {
+      const carouselId = carousel.dataset.carousel
+      const carouselTrackId = `carouselTrack_${index}`
+      const prevButtonId = `prevButton_${index}`
+      const nextButtonId = `nextButton_${index}`
+      const paginationId = `pagination_${index}`
+      initCarousel(carouselId, carouselTrackId, prevButtonId, nextButtonId, paginationId)
+    })
   } catch (error) {
     console.error('Error adding main functionality:', error)
   }
