@@ -25,8 +25,8 @@ $background-color_teal: #4fbdd2;
 $background-color_yellow: #fff2ce;
 
 // box shadow
-$b-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.5);
-$br-shadow: 3px 10px 10px 0px rgba(201, 201, 201, 0.5);
+$b-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.9);
+$br-shadow: 3px 10px 10px 0px rgba(201, 201, 201, 0.9);
 
 // border-settings
 $color_border-settings-grey: 1px solid #d4d4d4;
@@ -128,6 +128,7 @@ main {
   @include apply-flex-styles($flex-col-center);
   gap: 1em;
   padding-bottom: 1em;
+  position: relative;
 }
 
 h1 {
@@ -216,8 +217,8 @@ img {
 section {
   @include apply-flex-styles($flex-col-center);
   max-width: calc(100vw - 20px);
+  margin: 0 auto;
   &.p-0 {
-    // margin: 0;
     margin-top: 70px;
   }
 }
@@ -365,7 +366,7 @@ section {
           background-repeat: no-repeat;
           background-position: center;
           width: 100%;
-          height: 300px; 
+          height: 300px;
         }
       }
     }
@@ -408,6 +409,7 @@ section {
   border-radius: 8px;
   @include apply-flex-styles($flex-col-center-start);
   gap: 10px;
+  width: 90vw;
   &.transparent {
     background-color: transparent;
   }
@@ -1388,27 +1390,26 @@ textarea.input {
 .carousel-container {
   position: relative;
   overflow: hidden;
-  width: -webkit-fill-available;
+  width: 100%;
   height: auto;
   margin: auto;
+
   .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    transform: translateX(0%);
     .carousel-slide {
-      min-width: 100%;
+      width: 100%;
       height: auto;
-      background-size: cover;
+      background-size: contain;
       figure {
         @include apply-flex-styles($flex-col-center);
-        width: -webkit-fill-available;
-        margin: 0;
+        width: 100%;
+        margin: 0 auto;
         img {
           width: -webkit-fill-available;
           height: auto;
           border: none;
-          &.lg {
-            width: 100vw;
-          }
         }
         figcaption {
           display: flex;
@@ -1579,7 +1580,7 @@ textarea.input {
 }
 @media only screen and (min-width: 425px) {
   main {
-    top: 63px;
+    top: 76px;
     margin-bottom: 1em;
   }
   .home-link {
@@ -1730,9 +1731,30 @@ textarea.input {
     @include apply-flex-styles($flex-row-center-start);
     gap: 1em;
   }
-
+  .page-wrapper {
+    top: 0;
+  }
   .p-0 {
     background-color: #4fbdd2;
+    &.case-study-settings {
+      background-color: transparent;
+      margin: 0 auto;
+      max-height: 74vh;
+      .hero {
+        justify-content: flex-start;
+        .case-study-settings .bullet-list-row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+          li {
+            border-left: $color_border-settings-grey;
+            list-style: none;
+            padding-left: 10px;
+          }
+        }
+      }
+    }
     .hero {
       height: 90vh;
       &.index-banner .hero-content {
@@ -2026,6 +2048,7 @@ textarea.input {
   /* index-styles  */
   .p-0 .hero .hero-content {
     border: 1px solid gainsboro;
+    &.case-study-settings {border: none;}
   }
   .wrapper {
     .hero-editorial {
@@ -2072,6 +2095,8 @@ textarea.input {
     width: 40%;
   }
 
+  // case study styles 
+
   footer .footer-container .footer-details {
     padding: 2.2em;
   }
@@ -2090,6 +2115,25 @@ textarea.input {
 @media only screen and (min-width: 1024px) {
   .body {
     margin: var(--side-margins-992px);
+  }
+
+  
+  .tooltip {
+    visibility: hidden; /* Initially hide the tooltip */
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    width: 110px;
+    box-shadow: $br-shadow;
+  }
+  
+  .open-sidebar-btn:hover + .tooltip {
+    visibility: visible; /* Show the tooltip when button is hovered */
   }
   .sidebar-open {
     width: 30%;
@@ -2253,15 +2297,13 @@ textarea.input {
         }
       }
     }
+
     .gallery {
       @include apply-flex-styles($flex-col-center);
       border-radius: $brad-8;
       margin: 0;
       width: -webkit-fill-available;
       .lg {
-        width: 800px;
-        height: auto;
-        border-radius: $brad-8;
         margin-bottom: 0.8em;
       }
       .sm {
@@ -2280,8 +2322,9 @@ textarea.input {
     .carousel-container {
       width: -webkit-fill-available;
       height: auto;
-      .carousel-track .carousel-slide .gallery .lg {
-        width: 90%;
+    
+      .carousel-track .carousel-track .carousel-slide .gallery .lg {
+        width: 100%;
         height: auto;
       }
     }
