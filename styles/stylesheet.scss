@@ -25,9 +25,9 @@ $background-color_teal: #4fbdd2;
 $background-color_yellow: #fff2ce;
 
 // box shadow
-$b-shadow: 0px 12px 16px 0px rgba(201, 201, 201, 0.9);
-$br-shadow: 3px 10px 10px 0px rgba(201, 201, 201, 0.9);
-
+$b-shadow: 0px 0px 8px 0px rgba(201, 201, 201, 0.9);
+$br-shadow: 4px 4px 4px 0px rgba(201, 201, 201, 0.9);
+$top-shadow: 1px -5px 5px 0px rgba(201, 201, 201, 0.6);
 // border-settings
 $color_border-settings-grey: 1px solid #d4d4d4;
 $color_border-settings-primary: 1px solid #4eca63;
@@ -125,10 +125,8 @@ body {
 
 main {
   background-color: $color_main-bkg;
-  @include apply-flex-styles($flex-col-center);
-  gap: 1em;
   padding-bottom: 1em;
-  position: relative;
+  margin-top: 76px;
 }
 
 h1 {
@@ -215,40 +213,26 @@ img {
 }
 
 section {
-  @include apply-flex-styles($flex-col-center);
-  max-width: calc(100vw - 20px);
+  @include apply-flex-styles($flex-col-center-start);
   margin: 0 auto;
-  &.p-0 {
-    margin-top: 70px;
-  }
 }
 
 .main-content {
   @include apply-flex-styles($flex-col-center-start);
   gap: 1em;
   width: 100%;
+  margin-top: 3em;
 }
 /* Top nav and menu  */
-#navbar {
+.navbar {
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: $background-color_teal;
-  transition: background-color 0.3s ease;
+  background-color: $color_white;
+  transition: box-shadow 0.3s ease;
+  z-index: 100;
   &.scrolled {
-    background-color: $color_white;
     box-shadow: $b-shadow;
-    z-index: 100;
-    &.logo-container {
-      opacity: 1;
-    }
-    .home-link .navbar-logo .logo-container,
-    .navbar-container .nav-menu a {
-      color: $color_brand;
-    }
-    .navbar-container .menu-toggle .icon-bar {
-      fill: $color_brand;
-    }
   }
   .navbar-container {
     @include apply-flex-styles($flex-row-center-space_between);
@@ -256,24 +240,25 @@ section {
     height: 76px;
     margin: 0 auto;
     font-family: $font-family;
-    .home-link .navbar-logo {
-      @include apply-flex-styles($flex-row-center);
-      padding: 10px 0;
-      img {
-        width: 60px;
-        height: 60px;
-        background-color: $color_white;
-        border-radius: 50%;
-      }
-      .logo-container {
-        @include apply-flex-styles($flex-col-center);
-        margin-left: 10px;
-        font-family: $font-family;
-        color: #272727;
-        font-size: 16px;
-        line-height: 16pt;
-        opacity: 0;
-        transition: all 0.5s ease-in-out;
+    .home-link {
+      width: auto;
+      .navbar-logo {
+        @include apply-flex-styles($flex-row-center);
+        padding: 10px 0;
+        img {
+          width: 60px;
+          height: 60px;
+          background-color: $color_white;
+          border-radius: 50%;
+        }
+        .logo-container {
+          @include apply-flex-styles($flex-col-center-start);
+          margin-left: 10px;
+          font-family: $font-family;
+          color: $color_primary_text;
+          font-size: 16px;
+          line-height: 16pt;
+        }
       }
     }
     .menu-toggle {
@@ -317,7 +302,17 @@ section {
       }
     }
   }
+  .logo-container {
+    opacity: 1;
+  }
+  .home-link .navbar-logo .logo-container,
+  .navbar-container .nav-menu a,
+  .navbar-container .menu-toggle .icon-bar {
+    color: $color_brand;
+    fill: $color_brand;
+  }
 }
+
 // hero section styling
 .p-0 {
   @include apply-flex-styles($flex-col-center);
@@ -410,6 +405,38 @@ section {
   @include apply-flex-styles($flex-col-center-start);
   gap: 10px;
   width: 90vw;
+  .hero {
+    width: inherit;
+    .case-study-settings {
+      @include apply-flex-styles($flex-col-center-start);
+      .two-button-container {
+        @include apply-flex-styles($flex-row-center);
+        gap: 1em;
+        width: -webkit-fill-available;
+        a {
+          width: -webkit-fill-available;
+          height: 38px;
+        }
+      }
+      .bullet-list-row {
+        @include apply-flex-styles($flex-col-center-start);
+        width: -webkit-fill-available;
+        list-style: none;
+      }
+      .image-container {
+        width: -webkit-fill-available;
+        background-color: transparent;
+        .syn-banner {
+          background-image: url(/assets/images/hero-images/index/syn-banner.webp);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 100%;
+          height: 300px;
+        }
+      }
+    }
+  }
   &.transparent {
     background-color: transparent;
   }
@@ -985,15 +1012,13 @@ textarea.input {
 .page-wrapper {
   @include apply-flex-styles($flex-row-center-start);
   margin: 0 auto;
-  position: relative;
-  top: 76px;
-  margin-bottom: 5em;
 }
 .contents {
   position: fixed;
   top: 84px;
   left: 10px;
   z-index: 1;
+  @include apply-flex-styles($flex-row-center);
   .open-sidebar-btn {
     background-color: $color_brand;
     cursor: pointer;
@@ -1007,6 +1032,13 @@ textarea.input {
       color: $color_white;
       font-size: 30px;
     }
+  }
+  .tooltip {
+    @include apply-flex-styles($flex-col-center);
+    background-color: white;
+    padding: 6px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: $b-shadow;
   }
 }
 .sideBar {
@@ -1165,8 +1197,6 @@ textarea.input {
   flex-direction: column;
   .tab-buttons {
     @include apply-flex-styles($flex-row-center-start);
-    background-color: $background-color_blue;
-    border-top-right-radius: $brad-8;
     .tab-button {
       cursor: pointer;
       @include apply-flex-styles($flex-col-center-start);
@@ -1174,14 +1204,16 @@ textarea.input {
       padding: 10px 20px;
       transition: all 0.5s ease-in-out;
       font-family: $font-family;
-      font-size: 18px;
-      background-color: $color_white;
-      border-bottom: 2px solid transparent;
-      color: #525252;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #edfdff;
+      border: $color_border-settings-grey;
+      border-bottom: 2px solid gainsboro;
+      border-radius: 8px 8px 0 0;
+      color: $color_primary_text;
       &.active {
-        background-color: $background-color_teal;
-        border-bottom: 2px solid #b7d1c8;
-        color: #000;
+        background-color: $color_white;
+        border-bottom: 2px solid #96e1eb;
       }
     }
   }
@@ -1197,7 +1229,6 @@ textarea.input {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: flex-start;
-        margin-bottom: 1em;
         .no-border {
           border: none;
         }
@@ -1251,15 +1282,21 @@ textarea.input {
       background-color: $color_white;
       border: 1px solid #f2fbfe;
       border-radius: $brad-8;
-      transition: 0.5s all ease-in-out;
+      transition: border-color 0.5s ease-in-out;
       padding: 0.5em;
       box-shadow: $b-shadow;
       margin: 0;
       &:hover {
-        filter: opacity(1) saturate(1.3);
         border-color: #8fbadf;
+        box-shadow: none;
       }
-
+      figcaption {
+        font-size: 12px;
+        line-height: 11px;
+        margin: 0;
+        margin-top: 10px;
+        color: $color_primary_text;
+      }
       img {
         width: 100%;
         height: auto;
@@ -1280,15 +1317,16 @@ textarea.input {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        @include apply-flex-styles($flex-col-center);
+        @include apply-flex-styles($flex-col-center-start);
         background-color: #fff;
         padding: 1em;
         border-radius: $brad-8;
+        max-height: 95vh;
         cursor: context-menu;
         img {
           height: auto;
           background-color: $color_white;
-          border-color: $background-color_blue;
+          border: $color_border-settings-grey;
           &.lightbox-image_25 {
             width: 25vw;
           }
@@ -1298,9 +1336,9 @@ textarea.input {
           &.lightbox-image_35 {
             width: 35vw;
           }
-          &.lightbox-image_40 {
-            width: 40vw;
-          }
+          // &.lightbox-image_40 {
+          //   width: 40vw;
+          // }
           &.lightbox-image_45 {
             width: 45vw;
           }
@@ -1316,37 +1354,40 @@ textarea.input {
           &.lightbox-image_65 {
             width: 65vw;
           }
+          &.lightbox-image_100,
+          &.lightbox-image_100-vW,
           &.lightbox-image_70 {
             width: 88vw;
           }
-          &.lightbox-image_100,
-          &.lightbox-image_100-vW {
-            width: 97vw;
-          }
         }
         p {
-          font-size: 14px;
-          line-height: 14px;
-          letter-spacing: 0.5px;
-          padding-left: 10px;
-          margin-bottom: 0;
+          font-size: 12px;
+          line-height: 11px;
+          margin: 0;
+          margin-top: 10px;
         }
-        .close-btn {
-          position: absolute;
-          top: 0;
-          right: 0;
-          background-color: $color_white;
-          color: $color_primary_text;
-          border: 1px solid $color_primary_text;
-          font-size: 30px;
-          width: 42px;
-          height: 42px;
-          border-radius: 50px;
-          box-shadow: $b-shadow;
-          cursor: pointer;
-          transition: all 0.5s ease-in-out;
-          &:hover {
-            background-color: gainsboro;
+        .header {
+          width: 100%;
+          @include apply-flex-styles($flex-row-center-space_between);
+          max-height: 40px;
+          h4 {
+            font-size: 1.1rem;
+            margin: 0;
+            display: inherit;
+            flex: 0 0 80%;
+          }
+          .close-btn {
+            flex: 1;
+            background-color: $color_white;
+            color: $color_primary_text;
+            border: none;
+            font-size: 30px;
+            text-align: right;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+              background-color: gainsboro;
+            }
           }
         }
       }
@@ -1458,40 +1499,39 @@ textarea.input {
   }
 }
 // footer styles
-
-.footer-container {
-  padding: 0 1em;
+.footer {
   background-color: $color_white;
-  @include apply-flex-styles($flex-col-center);
-  .footer-social-icon {
-    @include apply-flex-styles($flex-row-center-space_between);
-    width: 100%;
-    padding: 10px 0;
-    a {
-      width: 40px;
-      height: 40px;
-      &.logo {
-        background: url(/assets/images/jp-LOGO-mini.svg) no-repeat center;
-        background-size: contain;
+  color: $color_primary_text;
+  .footer-container {
+    @include apply-flex-styles($flex-col-center);
+    .footer-social-icon {
+      @include apply-flex-styles($flex-row-center-space_between);
+      padding: 1em;
+      width: 90%;
+      a {
+        width: 40px;
+        height: 40px;
+        &.logo {
+          background: url(/assets/images/jp-LOGO-mini.svg) no-repeat center;
+          background-size: contain;
+        }
       }
     }
-  }
-  .copy-panel {
-    @include apply-flex-styles($flex-row-center);
-    background-color: $background_copy;
-    color: #0a0a0a;
-    padding: 10px;
-    padding-bottom: 0;
-    width: 100vw;
-    p {
-      margin: 0;
-      font-size: 14px;
+    .copy-panel {
+      @include apply-flex-styles($flex-row-center);
+      background-color: $background_copy;
+      color: #0a0a0a;
+      padding: 1em;
+      width: 100vw;
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
     }
   }
 }
 
 .bttt-btn {
-  opacity: 0;
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -1570,7 +1610,7 @@ textarea.input {
             &.lightbox-image_70,
             &.lightbox-image_100,
             &.lightbox-image_100-vW {
-              width: 97vw;
+              width: 80vw;
             }
           }
         }
@@ -1579,10 +1619,6 @@ textarea.input {
   }
 }
 @media only screen and (min-width: 425px) {
-  main {
-    top: 76px;
-    margin-bottom: 1em;
-  }
   .home-link {
     padding-left: 20px;
   }
@@ -1633,6 +1669,7 @@ textarea.input {
     grid-gap: 1em;
     background-color: $color_white;
     border-radius: $brad-8;
+    width: 100%;
     .image-container {
       display: flex;
       flex-direction: column;
@@ -1736,25 +1773,6 @@ textarea.input {
   }
   .p-0 {
     background-color: #4fbdd2;
-    &.case-study-settings {
-      background-color: transparent;
-      margin: 0 auto;
-      max-height: 74vh;
-      .hero {
-        justify-content: flex-start;
-        .case-study-settings .bullet-list-row {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          align-items: center;
-          li {
-            border-left: $color_border-settings-grey;
-            list-style: none;
-            padding-left: 10px;
-          }
-        }
-      }
-    }
     .hero {
       height: 90vh;
       &.index-banner .hero-content {
@@ -1767,6 +1785,34 @@ textarea.input {
 
   .editorial {
     padding: 1em;
+    .hero .case-study-settings {
+      background-color: transparent;
+      margin: 0 auto;
+      max-height: 74vh;
+      .two-button-container {
+        a {
+          width: 50%;
+          height: inherit;
+        }
+      }
+      .bullet-list-row {
+        @include apply-flex-styles($flex-row-center);
+        li {
+          border-left: $color_border-settings-grey;
+          padding-left: 10px;
+        }
+      }
+      .image-container {
+        padding: 10px;
+        background-color: gainsboro;
+        border-radius: $brad-8;
+        .syn-banner {
+          background-image: url(/assets/images/Case-Studies/CS2/main-banner.webp);
+          background-size: cover;
+        }
+      }
+    }
+
     &.dynamic-row {
       @include apply-flex-styles($flex-row-center);
       gap: 1em;
@@ -1848,17 +1894,6 @@ textarea.input {
     display: flex;
   }
 
-  .two-button-container {
-    flex-direction: row;
-    gap: 1em;
-    max-height: 42px;
-    width: 50%;
-    .primary-button,
-    .secondary-button {
-      width: 50%;
-      height: inherit;
-    }
-  }
   .col-2 {
     display: flex;
     flex-direction: row;
@@ -2048,7 +2083,9 @@ textarea.input {
   /* index-styles  */
   .p-0 .hero .hero-content {
     border: 1px solid gainsboro;
-    &.case-study-settings {border: none;}
+    &.case-study-settings {
+      border: none;
+    }
   }
   .wrapper {
     .hero-editorial {
@@ -2095,20 +2132,9 @@ textarea.input {
     width: 40%;
   }
 
-  // case study styles 
-
-  footer .footer-container .footer-details {
-    padding: 2.2em;
-  }
-
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-name {
-    letter-spacing: 5.2pt;
-    font-size: 1.8rem;
-  }
-
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-title {
-    font-size: 1.2rem;
-    letter-spacing: 2pt;
+  // case study styles
+  .contents {
+    left: 2em;
   }
 }
 
@@ -2117,24 +2143,6 @@ textarea.input {
     margin: var(--side-margins-992px);
   }
 
-  
-  .tooltip {
-    visibility: hidden; /* Initially hide the tooltip */
-    position: absolute;
-    top: 50%;
-    left: 110%;
-    transform: translateY(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 8px;
-    width: 110px;
-    box-shadow: $br-shadow;
-  }
-  
-  .open-sidebar-btn:hover + .tooltip {
-    visibility: visible; /* Show the tooltip when button is hovered */
-  }
   .sidebar-open {
     width: 30%;
   }
@@ -2144,12 +2152,18 @@ textarea.input {
   .tab-container.hide-sm {
     display: flex;
   }
-  .two-button-container {
-    width: 50%;
+  .editorial .hero .case-study-settings {
+    .two-button-container {
+      width: 50%;
+    }
+    .bullet-list-row {
+      margin: 1em 0;
+    }
+    .image-container .syn-banner {
+      height: 45vh;
+    }
   }
-  .editorial {
-    padding: 2em;
-  }
+
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2322,7 +2336,7 @@ textarea.input {
     .carousel-container {
       width: -webkit-fill-available;
       height: auto;
-    
+
       .carousel-track .carousel-track .carousel-slide .gallery .lg {
         width: 100%;
         height: auto;
@@ -2332,18 +2346,15 @@ textarea.input {
 }
 
 @media only screen and (min-width: 1200px) {
-  section {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  #navbar {
+  .navbar {
     @include apply-flex-styles($flex-row-center-space_between);
     .navbar-container {
       width: 90%;
-      margin: 0 auto;
       .menu-toggle {
         display: none;
+      }
+      .home-link {
+        padding-left: 0;
       }
       .nav-menu {
         @include apply-flex-styles($flex-row-center-space_evenly);
@@ -2367,6 +2378,7 @@ textarea.input {
   .p-0 {
     @include apply-flex-styles($flex-col-center);
   }
+
   .page-boundary .centered-row {
     max-width: 80%;
     align-items: center;
@@ -2450,16 +2462,9 @@ textarea.input {
       list-style: none;
     }
   }
-
-  .contents {
-    top: 70px;
-    left: 20px;
-  }
-
-  .main-content {
-    width: 90%;
-    margin: 0 auto;
-  }
+  .editorial .hero .case-study-settings .image-container .syn-banner {
+    height: 48vh;
+}
 
   .grid-container-1col,
   .grid-container-2col,
@@ -2565,11 +2570,7 @@ textarea.input {
       }
     }
   }
-  // footer-styles
-  .footer-container .footer-social-icon {
-    width: 80%;
-    margin: 0 auto;
-  }
+
 }
 /*Large Desktop viewport styles */
 @media only screen and (min-width: 1400px) {
@@ -2595,74 +2596,8 @@ textarea.input {
   }
 
   // case study styles
-  .sideBar {
-    @include apply-flex-styles($flex-col-start-start);
-    border-radius: $brad-8;
-    .sideBar-content {
-      ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0 1em;
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
-        gap: 0.5em;
-        .side-bar-list-item {
-          @include apply-flex-styles($flex-row-center-start);
-          flex-wrap: nowrap;
-          width: 100%;
-          a {
-            color: #404040;
-            text-decoration: none;
-            display: block;
-            transition: 0.3s;
-            @include apply-flex-styles($flex-row-center);
-            flex-wrap: nowrap;
-            width: 100%;
-            padding: 10px;
-            .side-bar-icon svg {
-              fill: #404040;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  article {
-    width: 23%;
-    background-color: $color_white;
-    border-radius: $brad-8;
-    .sideBar {
-      @include apply-flex-styles($flex-col-start-start);
-      width: 100%;
-      position: inherit;
-      .sideBar-content {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
-        ul {
-          gap: 0.5em;
-          .side-bar-list-item {
-            height: 50px;
-          }
-        }
-      }
-    }
-  }
-  .main-content {
-    width: 80%;
-    @include apply-flex-styles($flex-col-center);
-    gap: 2em;
-  }
-
-  section {
-    width: 100%;
-    margin: unset;
-    @include apply-flex-styles($flex-col-center);
-    padding-top: 0;
-    border-radius: $brad-8;
+  .contents {
+    display: none;
   }
 
   .grid-container-1col {
@@ -2678,13 +2613,10 @@ textarea.input {
     grid-template-columns: 40% auto;
     grid-template-rows: auto;
     grid-gap: 1em;
-    background-color: $color_white;
     padding: 1em;
     border-radius: $brad-8;
-    width: 100%;
     .prototype-container {
       @include apply-flex-styles($flex-col-start-start);
-      width: 360px;
       height: auto;
       cursor: pointer;
       transition: all 10s ease-in-out;
@@ -2821,46 +2753,6 @@ textarea.input {
   .mobile-sidebar {
     display: none;
   }
-  .hero-container {
-    padding: 2em;
-    .two-button-container {
-      .primary-button {
-        width: 15%;
-      }
-      .secondary-button {
-        width: 15%;
-      }
-      justify-content: flex-end;
-    }
-    .bullet-list-row {
-      list-style: none;
-    }
-  }
-  .main-content {
-    width: 74%;
-    margin: unset;
-  }
-  .bullet-list-row {
-    @include apply-flex-styles($flex-row-center-space_between);
-    align-items: flex-start;
-    gap: 0.3em;
-    margin: 0;
-    padding-top: 1em;
-    li {
-      font-size: 16px;
-      color: $color_primary_text;
-    }
-  }
-  .bullet-list-col {
-    @include apply-flex-styles($flex-col-center-space_between);
-    align-items: flex-start;
-    gap: 0.3em;
-    margin-left: 1em;
-    list-style: disc;
-    li {
-      font-size: 16px;
-    }
-  }
 
   .carousel-container {
     width: -webkit-fill-available;
@@ -2897,13 +2789,131 @@ textarea.input {
       padding: 0;
     }
   }
+  .hero-container {
+    padding: 2em;
+    .two-button-container {
+      .primary-button {
+        width: 15%;
+      }
+      .secondary-button {
+        width: 15%;
+      }
+      justify-content: flex-end;
+    }
+    .bullet-list-row {
+      list-style: none;
+    }
+  }
+  main {
+    padding: 1em 0;
+  }
+  .page-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90vw;
+    margin: 0 auto;
+    article {
+      display: flex;
+      flex: 0 0 26%;
+      .sideBar {
+        background-color: $color_white;
+        border-radius: $brad-8;
+        height: calc(100vh - 13em);
+        @include apply-flex-styles($flex-col-start-start);
+        position: fixed;
+        .sideBar-content {
+          display: flex;
+          flex-direction: column;
+          align-items: baseline;
+          ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            gap: 0.5em;
+            .side-bar-list-item {
+              flex-wrap: nowrap;
+              width: 100%;
+              height: 50px;
+              a {
+                color: #404040;
+                text-decoration: none;
+                transition: 0.3s;
+                @include apply-flex-styles($flex-row-center-start);
+                flex-wrap: nowrap;
+                width: 100%;
+                padding: 10px;
+                .side-bar-icon svg {
+                  fill: #404040;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .main-content {
+      max-width: 70%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      section {
+        max-width: 64vw;
+      }
+      .editorial {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: $color_white;
+        .hero {
+          width: inherit;
+          .case-study-settings {
+            @include apply-flex-styles($flex-col-start-start);
+            .bullet-list-row {
+              @include apply-flex-styles($flex-row-center-space_evenly);
+              gap: 0.3em;
+              margin: 0;
+              padding: 1em 0;
+              list-style-type: none;
+              li {
+                border-left: $color_border-settings-grey;
+                padding: 10px;
+              }
+            }
+            .image-container .syn-banner {
+              height: 420px;
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bullet-list-col {
+    @include apply-flex-styles($flex-col-center-space_between);
+    align-items: flex-start;
+    gap: 0.3em;
+    margin-left: 1em;
+    list-style: disc;
+    li {
+      font-size: 16px;
+    }
+  }
 }
 
 @media only screen and (min-width: 1800px) {
   section {
     width: 85%;
   }
-  #navbar .navbar-container {
+  .navbar .navbar-container {
     margin: 0 138px;
     width: 88%;
   }
