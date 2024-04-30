@@ -1,21 +1,19 @@
 // navigation.mjs
-const navbar = document.getElementById('navbar');
-const logoContainer = document.querySelector('.logo-container');
+const navbar = document.getElementById('navBar');
 
 function handleScroll() {
-  window.addEventListener('scroll', function() {
+  function updateNavbarStyle() {
     if (window.scrollY > 0) {
       navbar.classList.add('scrolled');
-      if (logoContainer) {
-        logoContainer.style.opacity = 1;
-      }
     } else {
       navbar.classList.remove('scrolled');
-      if (logoContainer) {
-        logoContainer.style.opacity = 0;
-      }
     }
-  });
+  }
+
+  // Initial update on page load
+  updateNavbarStyle();
+
+  window.addEventListener('scroll', updateNavbarStyle);
 }
 
 export { handleScroll };

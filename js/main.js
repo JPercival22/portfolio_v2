@@ -44,6 +44,7 @@ async function addMainFunctionality () {
     const { handleScroll } = await import('./navigationModule.mjs')
     handleScroll()
 
+
     // Dynamically import and call initializeTabModules function
     const { initializeTabModules } = await import('./tabModule.mjs')
     initializeTabModules()
@@ -63,7 +64,7 @@ async function addMainFunctionality () {
     // call form dynamic fields functionality
     const { initializeFormFunctionality } = await import('./formModule.mjs')
     initializeFormFunctionality()
-    
+
     // Dynamically import and call initializeAccordion function
     const { initAccordion } = await import('./accordion.mjs')
     initAccordion()
@@ -80,7 +81,13 @@ async function addMainFunctionality () {
       const prevButtonId = `prevButton_${index}`
       const nextButtonId = `nextButton_${index}`
       const paginationId = `pagination_${index}`
-      initCarousel(carouselId, carouselTrackId, prevButtonId, nextButtonId, paginationId)
+      initCarousel(
+        carouselId,
+        carouselTrackId,
+        prevButtonId,
+        nextButtonId,
+        paginationId
+      )
     })
   } catch (error) {
     console.error('Error adding main functionality:', error)
