@@ -1205,6 +1205,7 @@ textarea.input {
   grid-gap: 1em;
   background-color: $color_white;
   border-radius: 8px;
+  margin-top: 1em;
   .image-container {
     display: flex;
     flex-direction: column;
@@ -1264,54 +1265,8 @@ textarea.input {
           &.tall {
             width:74%;
           }
-          &.taller {
-            width: 20%;
-          }
-          // &.lightbox-image_25,
-          // {
-          //   width: 25vw;
-          // }
-          // &.lightbox-image_30, 
-          // {
-          //   width: 30vw;
-          // }
-          // &.lightbox-image_35,
-          // {
-          //   width: 35vw;
-          // }
-          // &.lightbox-image_38, 
-          // {
-          //   width: 38vw;
-          // }
-          // &.lightbox-image_45,
-          // {
-          //   width: 45vw;
-          // }
-          // &.lightbox-image_50,
-          // {
-          //   width: 50vw;
-          // }
-          // &.lightbox-image_55,
-          // {
-          //   width: 55vw;
-          // }
-          // &.lightbox-image_60,
-          // {
-          //   width: 60vw;
-          // }
-          // &.lightbox-image_65,
-          // {
-            // width: 65vw;
-          // }
-          // &.lightbox-image_90, 
-          // {
-            // width: 90vw;
-          // }
-          // &.lightbox-image_100,
-          // &.lightbox-image_100-vW,
-          &.lightbox-image {
-            width: 100%;
-          }
+          &.width-30 {width:30%;}
+          &.width-20 {width: 20%;}
         }
         p {
           font-size: 12px;
@@ -1322,7 +1277,7 @@ textarea.input {
         .header {
           width: 100%;
           @include apply-flex-styles($flex-row-center-space_between);
-          max-height: 40px;
+          margin-bottom: 10px;
           h4 {
             font-size: 1.1rem;
             margin: 0;

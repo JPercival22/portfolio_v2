@@ -1233,6 +1233,7 @@ textarea.input {
   grid-gap: 1em;
   background-color: #fff;
   border-radius: 8px;
+  margin-top: 1em;
 }
 .grid-container-1col .image-container,
 .grid-container-2col .image-container,
@@ -1352,21 +1353,21 @@ textarea.input {
 .grid-container-6col .image-container .lightbox .lightbox-content img.tall {
   width: 74%;
 }
-.grid-container-1col .image-container .lightbox .lightbox-content img.taller,
-.grid-container-2col .image-container .lightbox .lightbox-content img.taller,
-.grid-container-3col .image-container .lightbox .lightbox-content img.taller,
-.grid-container-4col .image-container .lightbox .lightbox-content img.taller,
-.grid-container-5col .image-container .lightbox .lightbox-content img.taller,
-.grid-container-6col .image-container .lightbox .lightbox-content img.taller {
-  width: 20%;
+.grid-container-1col .image-container .lightbox .lightbox-content img.width-30,
+.grid-container-2col .image-container .lightbox .lightbox-content img.width-30,
+.grid-container-3col .image-container .lightbox .lightbox-content img.width-30,
+.grid-container-4col .image-container .lightbox .lightbox-content img.width-30,
+.grid-container-5col .image-container .lightbox .lightbox-content img.width-30,
+.grid-container-6col .image-container .lightbox .lightbox-content img.width-30 {
+  width: 30%;
 }
-.grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image,
-.grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image,
-.grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image,
-.grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image,
-.grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image,
-.grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image {
-  width: 100%;
+.grid-container-1col .image-container .lightbox .lightbox-content img.width-20,
+.grid-container-2col .image-container .lightbox .lightbox-content img.width-20,
+.grid-container-3col .image-container .lightbox .lightbox-content img.width-20,
+.grid-container-4col .image-container .lightbox .lightbox-content img.width-20,
+.grid-container-5col .image-container .lightbox .lightbox-content img.width-20,
+.grid-container-6col .image-container .lightbox .lightbox-content img.width-20 {
+  width: 20%;
 }
 .grid-container-1col .image-container .lightbox .lightbox-content p,
 .grid-container-2col .image-container .lightbox .lightbox-content p,
@@ -1390,7 +1391,7 @@ textarea.input {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  max-height: 40px;
+  margin-bottom: 10px;
 }
 .grid-container-1col .image-container .lightbox .lightbox-content .header h4,
 .grid-container-2col .image-container .lightbox .lightbox-content .header h4,
