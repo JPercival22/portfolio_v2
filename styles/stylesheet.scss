@@ -1532,54 +1532,7 @@ textarea.input {
   opacity: 1;
   /* Show the button when scrolled */
 }
-@media only screen and (min-width: 375px) {
-  .grid-container-1col,
-  .grid-container-2col,
-  .grid-container-3col,
-  .grid-container-4col,
-  .grid-container-5col,
-  .grid-container-6col {
-    .image-container {
-      .lightbox {
-        .lightbox-content {
-          img {
-            &.lightbox-image_25 {
-              width: 25vw;
-            }
-            &.lightbox-image_30 {
-              width: 30vw;
-            }
-            &.lightbox-image_35 {
-              width: 32vw;
-            }
-            &.lightbox-image_40 {
-              width: 36vw;
-            }
-            &.lightbox-image_45,
-            &.lightbox-image_50 {
-              width: 40vw;
-            }
-            &.lightbox-image_55 {
-              width: 46vw;
-            }
-            &.lightbox-image_60 {
-              width: 50vw;
-            }
-            &.lightbox-image_65 {
-              width: 65vw;
-            }
-            &.lightbox-image_70 {
-              width: 90%;
-            }
-            &.lightbox-image_100 {
-              width: 90vw;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+
 @media only screen and (min-width: 425px) {
   .home-link {
     padding-left: 20px;
@@ -1857,67 +1810,7 @@ textarea.input {
       background-color: $color_white;
     }
   }
-  .grid-container-1col,
-  .grid-container-2col,
-  .grid-container-3col,
-  .grid-container-4col,
-  .grid-container-5col,
-  .grid-container-6col {
-    .image-container {
-      .lightbox {
-        .lightbox-content {
-          img {
-            &.lightbox-image_25 {
-              width: 11vw;
-            }
-            &.lightbox-image_30 {
-              width: 13vw;
-            }
-            &.lightbox-image_35 {
-              width: 15vw;
-            }
-            &.lightbox-image_40 {
-              width: 16vw;
-            }
-            &.lightbox-image_45 {
-              width: 18vw;
-            }
-            &.lightbox-image_50 {
-              width: 20vw;
-            }
-            &.lightbox-image_55 {
-              width: 46vw;
-            }
-            &.lightbox-image_55a {
-              width: 15vw;
-            }
-            &.lightbox-image_60 {
-              width: 60vw;
-            }
-            &.lightbox-image_60a {
-              width: 24vw;
-            }
-            &.lightbox-image_61 {
-              width: 36vw;
-            }
-            &.lightbox-image_65 {
-              width: 26vw;
-            }
-            &.lightbox-image-50 {
-              width: 50vw;
-            }
-            &.lightbox-image_70 {
-              width: 70vw;
-            }
-            &.lightbox-image_100,
-            &.lightbox-image_100-vW {
-              width: 60vw;
-            }
-          }
-        }
-      }
-    }
-  }
+
   .editorial .skills-section .centered-row .flex-row {
     flex-direction: row;
     .right-col .flex-row .col {
@@ -2055,75 +1948,14 @@ textarea.input {
     .image-container {
       .lightbox {
         .lightbox-content {
+          &.w-30 {width: 30%;}
+          &.w-50 {width: 50%;}
           img {
-            &.lightbox-image_20 {
-              width: 6vw;
-            }
-            &.lightbox-image_21 {
-              width: 8vw;
-            }
-            &.lightbox-image_25 {
-              width: 9vw;
-            }
-            &.lightbox-image_27 {
-              width: 27vw;
-            }
-            &.lightbox-image_30 {
-              width: 10vw;
-            }
-            &.lightbox-image_35 {
-              width: 12vw;
-            }
-            &.lightbox-image_37 {
-              width: 37vw;
-            }
-            &.lightbox-image_40 {
-              width: 14vw;
-            }
-            &.lightbox-image_45 {
-              width: 16vw;
-            }
-            &.lightbox-image_50 {
-              width: 15vw;
-            }
-            &.lightbox-image_50-24 {
-              width: 24vw;
-            }
-            &.lightbox-image_50-35 {
-              width: 35vw;
-            }
-            &.lightbox-image_50a {
-              width: 30vw;
-            }
-            &.lightbox-image_50b {
-              width: 40vw;
-            }
-            &.lightbox-image_55 {
-              width: 45vw;
-            }
-            &.lightbox-image_60 {
-              width: 44vw;
-            }
-            &.lightbox-image_60a {
-              width: 24vw;
-            }
-            &.lightbox-image_65 {
-              width: 20vw;
-            }
-            &.lightbox-image_67 {
-              width: 57vw;
-            }
-            &.lightbox-image_70 {
-              width: 60vw;
-            }
-            &.lightbox-image_75 {
-              width: 65vw;
-            }
-
-            &.lightbox-image_100,
-            &.lightbox-image_100-vW {
-              width: 97vw;
-            }
+            &.width-20 {width: 18%;}
+            &.width-25 {width: 25%;}
+            &.width-30 {width: 30%;}
+            &.width-70 {width: 70%;}
+            &.width-80 {width: 80%;}
           }
         }
       }
@@ -2279,15 +2111,6 @@ textarea.input {
       @include apply-flex-styles($flex-row-center-start);
     }
   }
-  // .carousel-container {
-  // width: -webkit-fill-available;
-  // height: auto;
-
-  // .carousel-track .carousel-track .carousel-slide .gallery .lg {
-  // width: 100%;
-  // height: auto;
-  // }
-  // }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -2417,83 +2240,11 @@ textarea.input {
     .image-container {
       .lightbox {
         .lightbox-content {
+          &.w-20b {width: 20%;}
+          &.w-25b {width: 25%;}
+          &.w-40b {width: 40%;}
           img {
-            &.lightbox-image_20 {
-              width: 5vw;
-            }
-            &.lightbox-image_21 {
-              width: 8vw;
-            }
-            &.lightbox-image_21-b {
-              width: 7vw;
-            }
-            &.lightbox-image_25 {
-              width: 7vw;
-            }
-            &.lightbox-image_25-7 {
-              width: 8vw;
-            }
-            &.lightbox-image_27 {
-              width: 22vw;
-            }
-            &.lightbox-image_30 {
-              width: 8vw;
-            }
-            &.lightbox-image_35 {
-              width: 10vw;
-            }
-            &.lightbox-image_35-b {
-              width: 6vw;
-            }
-            &.lightbox-image_37 {
-              width: 30vw;
-            }
-            &.lightbox-image_40 {
-              width: 14vw;
-            }
-            &.lightbox-image_45 {
-              width: 16vw;
-            }
-            &.lightbox-image_50 {
-              width: 15vw;
-            }
-            &.lightbox-image_50-24 {
-              width: 20vw;
-            }
-            &.lightbox-image_50-35 {
-              width: 28vw;
-            }
-            &.lightbox-image_50a {
-              width: 22vw;
-            }
-            &.lightbox-image_50b {
-              width: 34vw;
-            }
-            &.lightbox-image_55 {
-              width: 37vw;
-            }
-            &.lightbox-image_60 {
-              width: 36vw;
-            }
-            &.lightbox-image_60a {
-              width: 21vw;
-            }
-            &.lightbox-image_65 {
-              width: 20vw;
-            }
-            &.lightbox-image_67 {
-              width: 47vw;
-            }
-            &.lightbox-image_70 {
-              width: 47vw;
-            }
-            &.lightbox-image_75 {
-              width: 52vw;
-            }
-            &.lightbox-image_100,
-            &.lightbox-image_100-vW {
-              width: 97vw;
-            }
+            &.width-90 {width: 90%;}
           }
         }
       }
