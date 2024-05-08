@@ -178,7 +178,7 @@ ul {
   list-style: disc;
   margin-left: 16px;
   padding: 0;
-  @include apply-flex-styles($flex-col-center);
+  @include apply-flex-styles($flex-col-center-start);
   gap: 10px;
   &.no-disc {
     margin-left: 0;
@@ -2255,7 +2255,6 @@ textarea.input {
     width: 100%;
     .flex-row .right-col .flex-row .col .tertiary-link {
       color: $color_brand;
-      font-weight: 700;
       text-decoration: underline;
       border: none;
       &:hover {
@@ -2292,13 +2291,20 @@ textarea.input {
     display: none;
   }
 
+  .skills-section .centered-row {align-items: flex-start;
+    .flex-row {border: none;}
+  }
+
   .grid-container-2col {
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 49% auto;
     grid-template-rows: auto;
     grid-gap: 1em;
     padding: 1em;
-    border-radius: $brad-8;
+    .item{
+      @include apply-flex-styles($flex-col-start-start);
+      gap: 1em;
+    }
     .prototype-container {
       @include apply-flex-styles($flex-col-start-start);
       height: auto;
@@ -2324,53 +2330,22 @@ textarea.input {
     .image-container {
       .lightbox {
         .lightbox-content {
+          &.tall {width: 10%;}
+          &.w-15d {width: 15%;}
+          &.w-25d {width: 25%;}
+          &.w-30d {width: 30%;}
+          &.w-34d {width: 34%;}
+          &.w-40d {width: 40%;}
+          &.w-70d {width: 70%;}
+          &.w-75d {width: 75%;}
           img {
-            &.lightbox-image_25 {
-              width: 7vw;
-            }
-            &.lightbox-image_30 {
-              width: 8vw;
-            }
-            &.lightbox-image_35 {
-              width: 9vw;
-            }
-            &.lightbox-image_40 {
-              width: 10vw;
-            }
-            &.lightbox-image_45 {
-              width: 11vw;
-            }
-            &.lightbox-image_50 {
-              width: 12vw;
-            }
-            &.lightbox-image_55 {
-              width: 13vw;
-            }
-            &.lightbox-image_60 {
-              width: 25vw;
-            }
-            &.desktop_60 {
-              width: 14vw;
-            }
-            &.lightbox-image_65 {
-              width: 15vw;
-            }
-            &.lightbox-image_70 {
-              width: 34vw;
-            }
-            &.lightbox-image_100-vW {
-              width: 90vw;
-            }
-
-            &.lightbox-image_100 {
-              width: 60vw;
-            }
+            &.width-100b {width: 100%;}
           }
         }
       }
     }
   }
-
+  
   .no-background {
     background-color: transparent;
     .image-container {
@@ -2643,96 +2618,22 @@ textarea.input {
     .image-container {
       .lightbox {
         .lightbox-content {
+          &.tall {width: 7%;}
+          &.w-25d {width: 20%;}
+          &.w-15d, &.w-15e {width: 15%;}
+          
+          &.w-30d, &.w-40d {width: 25%;}
+          &.w-34d {width: 28%;}
+          
+          &.w-70d, &.w-75d {width: 60%;}
           img {
-            &.lightbox-image_20 {
-              width: 3vw;
-            }
-            &.lightbox-image_25,
-            &.lightbox-image_21-b {
-              width: 5vw;
-            }
-            &.lightbox-image_27 {
-              width: 15vw;
-            }
-            &.lightbox-image_30 {
-              width: 5vw;
-            }
-            &.lightbox-image_35 {
-              width: 7vw;
-            }
-            &.lightbox-image_35-b {
-              width: 4vw;
-            }
-            &.lightbox-image_37 {
-              width: 20vw;
-            }
-            &.lightbox-image_40 {
-              width: 10vw;
-            }
-            &.lightbox-image_40b {
-              width: 7vw;
-            }
-            &.lightbox-image_45 {
-              width: 11vw;
-            }
-
-            &.lightbox-image_50 {
-              width: 12vw;
-            }
-            &.lightbox-image_50a {
-              width: 16vw;
-            }
-            &.lightbox-image_55 {
-              width: 13vw;
-            }
-            &.lightbox-image_55-25 {
-              width: 25vw;
-            }
-            &.lightbox-image_50-24 {
-              width: 25vw;
-            }
-            &.lightbox-image_50-35 {
-              width: 19vw;
-            }
-            &.lightbox-image_45b {
-              width: 8vw;
-            }
-            &.lightbox-image_55a {
-              width: 6vw;
-            }
-            &.lightbox-image_50b {
-              width: 22vw;
-            }
-            &.lightbox-image_60 {
-              width: 25vw;
-            }
-            &.lightbox-image_60a {
-              width: 10vw;
-            }
-            &.desktop_60 {
-              width: 14vw;
-            }
-            &.lightbox-image_65 {
-              width: 15vw;
-            }
-            &.lightbox-image_67 {
-              width: 30vw;
-            }
-            &.lightbox-image_70 {
-              width: 34vw;
-            }
-            &.lightbox-image_100-vW {
-              width: 90vw;
-            }
-
-            &.lightbox-image_100 {
-              width: 60vw;
-            }
+            &.width-100b {width: 100%;}
           }
         }
       }
     }
   }
+  
   // footer
   .footer-container .footer-social-icon {
     justify-content: space-evenly;
