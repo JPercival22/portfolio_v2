@@ -68,7 +68,7 @@ ul {
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 10px;
 }
@@ -2490,7 +2490,6 @@ textarea.input {
   }
   .skills-section .centered-row .flex-row .right-col .flex-row .col .tertiary-link {
     color: #2c4465;
-    font-weight: 700;
     text-decoration: underline;
     border: none;
   }
@@ -2521,13 +2520,25 @@ textarea.input {
   .contents {
     display: none;
   }
+  .skills-section .centered-row {
+    align-items: flex-start;
+  }
+  .skills-section .centered-row .flex-row {
+    border: none;
+  }
   .grid-container-2col {
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 49% auto;
     grid-template-rows: auto;
     grid-gap: 1em;
     padding: 1em;
-    border-radius: 8px;
+  }
+  .grid-container-2col .item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1em;
   }
   .grid-container-2col .prototype-container {
     display: flex;
@@ -2546,109 +2557,77 @@ textarea.input {
   .grid-container-2col .prototype-container:hover {
     text-decoration: none;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_25,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_25,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_25,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_25,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_25,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_25 {
-    width: 7vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.tall,
+  .grid-container-2col .image-container .lightbox .lightbox-content.tall,
+  .grid-container-3col .image-container .lightbox .lightbox-content.tall,
+  .grid-container-4col .image-container .lightbox .lightbox-content.tall,
+  .grid-container-5col .image-container .lightbox .lightbox-content.tall,
+  .grid-container-6col .image-container .lightbox .lightbox-content.tall {
+    width: 10%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_30,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_30,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_30,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_30,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_30,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_30 {
-    width: 8vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-15d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-15d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-15d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-15d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-15d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-15d {
+    width: 15%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_35,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_35,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_35,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_35,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_35,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_35 {
-    width: 9vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-25d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-25d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-25d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-25d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-25d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-25d {
+    width: 25%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_40,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_40,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_40,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_40,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_40,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_40 {
-    width: 10vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-30d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-30d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-30d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-30d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-30d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-30d {
+    width: 30%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_45,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_45,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_45,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_45,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_45,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_45 {
-    width: 11vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-34d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-34d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-34d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-34d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-34d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-34d {
+    width: 34%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_50,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_50,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_50,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_50,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_50,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_50 {
-    width: 12vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-40d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-40d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-40d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-40d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-40d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-40d {
+    width: 40%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_55,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_55,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_55,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_55,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_55,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_55 {
-    width: 13vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-70d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-70d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-70d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-70d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-70d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-70d {
+    width: 70%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_60,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_60,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_60,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_60,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_60,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_60 {
-    width: 25vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-75d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-75d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-75d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-75d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-75d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-75d {
+    width: 75%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.desktop_60,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.desktop_60,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.desktop_60,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.desktop_60,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.desktop_60,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.desktop_60 {
-    width: 14vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_65,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_65,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_65,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_65,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_65,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_65 {
-    width: 15vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_70,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_70,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_70,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_70,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_70,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_70 {
-    width: 34vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW {
-    width: 90vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_100,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_100,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_100,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_100,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_100,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_100 {
-    width: 60vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content img.width-100b,
+  .grid-container-2col .image-container .lightbox .lightbox-content img.width-100b,
+  .grid-container-3col .image-container .lightbox .lightbox-content img.width-100b,
+  .grid-container-4col .image-container .lightbox .lightbox-content img.width-100b,
+  .grid-container-5col .image-container .lightbox .lightbox-content img.width-100b,
+  .grid-container-6col .image-container .lightbox .lightbox-content img.width-100b {
+    width: 100%;
   }
   .no-background {
     background-color: transparent;
@@ -2909,226 +2888,76 @@ textarea.input {
   .page-wrapper .main-content .editorial .tab-container.hide-sm .tab-contents .tab-module .carousel-container .carousel-buttons {
     margin: 1em 0;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_20,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_20,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_20,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_20,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_20,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_20 {
-    width: 3vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.tall,
+  .grid-container-2col .image-container .lightbox .lightbox-content.tall,
+  .grid-container-3col .image-container .lightbox .lightbox-content.tall,
+  .grid-container-4col .image-container .lightbox .lightbox-content.tall,
+  .grid-container-5col .image-container .lightbox .lightbox-content.tall,
+  .grid-container-6col .image-container .lightbox .lightbox-content.tall {
+    width: 7%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_25, .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_21-b,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_25,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_21-b,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_25,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_21-b,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_25,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_21-b,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_25,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_21-b,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_25,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_21-b {
-    width: 5vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-25d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-25d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-25d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-25d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-25d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-25d {
+    width: 20%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_27,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_27,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_27,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_27,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_27,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_27 {
-    width: 15vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-15d, .grid-container-1col .image-container .lightbox .lightbox-content.w-15e,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-15d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-15e,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-15d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-15e,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-15d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-15e,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-15d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-15e,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-15d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-15e {
+    width: 15%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_30,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_30,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_30,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_30,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_30,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_30 {
-    width: 5vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-30d, .grid-container-1col .image-container .lightbox .lightbox-content.w-40d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-30d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-40d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-30d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-40d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-30d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-40d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-30d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-40d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-30d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-40d {
+    width: 25%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_35,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_35,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_35,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_35,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_35,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_35 {
-    width: 7vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-34d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-34d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-34d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-34d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-34d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-34d {
+    width: 28%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_35-b,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_35-b,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_35-b,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_35-b,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_35-b,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_35-b {
-    width: 4vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content.w-70d, .grid-container-1col .image-container .lightbox .lightbox-content.w-75d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-70d,
+  .grid-container-2col .image-container .lightbox .lightbox-content.w-75d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-70d,
+  .grid-container-3col .image-container .lightbox .lightbox-content.w-75d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-70d,
+  .grid-container-4col .image-container .lightbox .lightbox-content.w-75d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-70d,
+  .grid-container-5col .image-container .lightbox .lightbox-content.w-75d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-70d,
+  .grid-container-6col .image-container .lightbox .lightbox-content.w-75d {
+    width: 60%;
   }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_37,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_37,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_37,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_37,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_37,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_37 {
-    width: 20vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_40,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_40,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_40,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_40,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_40,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_40 {
-    width: 10vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_40b,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_40b,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_40b,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_40b,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_40b,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_40b {
-    width: 7vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_45,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_45,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_45,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_45,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_45,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_45 {
-    width: 11vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_50,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_50,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_50,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_50,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_50,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_50 {
-    width: 12vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_50a,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_50a,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_50a,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_50a,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_50a,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_50a {
-    width: 16vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_55,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_55,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_55,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_55,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_55,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_55 {
-    width: 13vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_55-25,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_55-25,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_55-25,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_55-25,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_55-25,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_55-25 {
-    width: 25vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_50-24,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_50-24,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_50-24,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_50-24,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_50-24,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_50-24 {
-    width: 25vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_50-35,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_50-35,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_50-35,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_50-35,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_50-35,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_50-35 {
-    width: 19vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_45b,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_45b,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_45b,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_45b,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_45b,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_45b {
-    width: 8vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_55a,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_55a,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_55a,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_55a,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_55a,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_55a {
-    width: 6vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_50b,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_50b,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_50b,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_50b,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_50b,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_50b {
-    width: 22vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_60,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_60,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_60,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_60,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_60,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_60 {
-    width: 25vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_60a,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_60a,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_60a,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_60a,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_60a,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_60a {
-    width: 10vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.desktop_60,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.desktop_60,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.desktop_60,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.desktop_60,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.desktop_60,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.desktop_60 {
-    width: 14vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_65,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_65,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_65,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_65,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_65,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_65 {
-    width: 15vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_67,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_67,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_67,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_67,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_67,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_67 {
-    width: 30vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_70,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_70,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_70,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_70,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_70,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_70 {
-    width: 34vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_100-vW {
-    width: 90vw;
-  }
-  .grid-container-1col .image-container .lightbox .lightbox-content img.lightbox-image_100,
-  .grid-container-2col .image-container .lightbox .lightbox-content img.lightbox-image_100,
-  .grid-container-3col .image-container .lightbox .lightbox-content img.lightbox-image_100,
-  .grid-container-4col .image-container .lightbox .lightbox-content img.lightbox-image_100,
-  .grid-container-5col .image-container .lightbox .lightbox-content img.lightbox-image_100,
-  .grid-container-6col .image-container .lightbox .lightbox-content img.lightbox-image_100 {
-    width: 60vw;
+  .grid-container-1col .image-container .lightbox .lightbox-content img.width-100b,
+  .grid-container-2col .image-container .lightbox .lightbox-content img.width-100b,
+  .grid-container-3col .image-container .lightbox .lightbox-content img.width-100b,
+  .grid-container-4col .image-container .lightbox .lightbox-content img.width-100b,
+  .grid-container-5col .image-container .lightbox .lightbox-content img.width-100b,
+  .grid-container-6col .image-container .lightbox .lightbox-content img.width-100b {
+    width: 100%;
   }
   .footer-container .footer-social-icon {
     justify-content: space-evenly;
