@@ -2682,7 +2682,7 @@ textarea.input {
     display: none;
   }
   .carousel-container {
-    width: -webkit-fill-available;
+    width: 90%;
     height: 96vh;
   }
   .carousel-container .pagination {
