@@ -1246,6 +1246,14 @@ textarea.input {
   margin: 0;
   padding: 0;
 }
+.grid-container-1col .image-container.lightbox-img-trigger,
+.grid-container-2col .image-container.lightbox-img-trigger,
+.grid-container-3col .image-container.lightbox-img-trigger,
+.grid-container-4col .image-container.lightbox-img-trigger,
+.grid-container-5col .image-container.lightbox-img-trigger,
+.grid-container-6col .image-container.lightbox-img-trigger {
+  cursor: zoom-in;
+}
 .grid-container-1col .image-container .gallery,
 .grid-container-2col .image-container .gallery,
 .grid-container-3col .image-container .gallery,
@@ -2682,8 +2690,7 @@ textarea.input {
     display: none;
   }
   .carousel-container {
-    width: -webkit-fill-available;
-    height: 96vh;
+    width: 90%;
   }
   .carousel-container .pagination {
     grid-template-columns: repeat(6, 40px);
@@ -2881,12 +2888,6 @@ textarea.input {
   }
   .page-wrapper .main-content .editorial .hero .case-study-settings .bullet-list-row li {
     font-size: 20px;
-  }
-  .page-wrapper .main-content .editorial .tab-container.hide-sm .tab-contents .tab-module .carousel-container {
-    height: 110vh;
-  }
-  .page-wrapper .main-content .editorial .tab-container.hide-sm .tab-contents .tab-module .carousel-container .carousel-buttons {
-    margin: 1em 0;
   }
   .grid-container-1col .image-container .lightbox .lightbox-content.tall,
   .grid-container-2col .image-container .lightbox .lightbox-content.tall,
