@@ -1824,42 +1824,14 @@ textarea.input {
   .editorial {
     padding: 1em;
   }
-  .editorial .hero .case-study-settings {
-    background-color: transparent;
-    margin: 0 auto;
-    max-height: 74vh;
-  }
-  .editorial .hero .case-study-settings .two-button-container a {
-    width: 50%;
-    height: inherit;
-  }
-  .editorial .hero .case-study-settings .bullet-list-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .editorial .hero .case-study-settings .bullet-list-row li {
-    border-left: 1px solid #d4d4d4;
-    padding-left: 10px;
-  }
-  .editorial .hero .case-study-settings .image-container {
-    padding: 10px;
-    background-color: gainsboro;
-    border-radius: 8px;
-  }
-  .editorial .hero .case-study-settings .image-container .syn-banner {
-    background-image: url(/assets/images/Case-Studies/CS2/main-banner.webp);
-    background-size: contain;
-  }
-  .editorial.dynamic-row {
+  .hero .editorial.dynamic-row {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 1em;
   }
-  .editorial.dynamic-row .profile-image {
+  .hero .editorial.dynamic-row .profile-image {
     flex: 90%;
   }
   .career-history-banner {
@@ -1919,6 +1891,18 @@ textarea.input {
   }
   .thankyou-footer {
     align-items: center;
+  }
+  .editorial .hero .case-study-settings .image-container {
+    padding: 10px;
+    background-color: gainsboro;
+    border-radius: 8px;
+  }
+  .editorial .hero .case-study-settings .image-container .syn-banner {
+    background-image: url(/assets/images/Case-Studies/CS2/main-banner.webp);
+    background-size: contain;
+  }
+  .editorial .hero .case-study-settings .image-container .guitar-banner {
+    background-image: url(/assets/images/Case-Studies/CS1/banners/CS1-lg-device-demo.webp);
   }
   .sidebar-open {
     width: 40%;
@@ -2109,11 +2093,27 @@ textarea.input {
   .accordion {
     display: none;
   }
+  .editorial .hero .case-study-settings {
+    background-color: transparent;
+    margin: 0 auto;
+  }
   .editorial .hero .case-study-settings .two-button-container {
     width: 50%;
   }
+  .editorial .hero .case-study-settings .two-button-container a {
+    width: 50%;
+    height: inherit;
+  }
   .editorial .hero .case-study-settings .bullet-list-row {
     margin: 1em 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .editorial .hero .case-study-settings .bullet-list-row li {
+    border-left: 1px solid #d4d4d4;
+    padding-left: 10px;
   }
   .editorial .hero .case-study-settings .image-container .syn-banner {
     height: 450px;
