@@ -1,6 +1,7 @@
 // lightboxModule.mjs
 
 const openLightbox = (imageSrc, imageAlt, lightbox) => {
+  if (window.innerWidth >= 768) {
   const lightboxImage = lightbox.querySelector('img');
   lightboxImage.src = imageSrc;
   lightboxImage.alt = imageAlt;
@@ -8,6 +9,7 @@ const openLightbox = (imageSrc, imageAlt, lightbox) => {
 
   // Attach close button click event listener using event delegation
   document.addEventListener('click', handleDocumentClick);
+  }
 };
 
 const handleDocumentClick = (event) => {

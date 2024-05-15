@@ -1193,7 +1193,19 @@ textarea.input {
   width: -webkit-fill-available;
   margin-top: 1em;
 }
-
+.editorial .skills-section .centered-row  {
+  @include apply-flex-styles($flex-col-center-start);
+  .flex-row {
+    flex-direction: row;
+    border: none;
+    .right-col .no-border .col {
+      @include apply-flex-styles($flex-col-center-start);
+    .tertiary-link {text-decoration: underline;
+    &:hover{text-decoration: none;}
+    }
+    }
+  }
+}
 .grid-container-1col,
 .grid-container-2col,
 .grid-container-3col,
@@ -1236,77 +1248,6 @@ textarea.input {
       img {
         width: 100%;
         height: auto;
-      }
-    }
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #00000075;
-      z-index: 9999;
-      cursor: zoom-out;
-      .lightbox-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        @include apply-flex-styles($flex-col-center-start);
-        background-color: #fff;
-        padding: 10px;
-        border-radius: $brad-8;
-        width: 90%;
-        cursor: context-menu;
-        &.tall {
-          width: 44%;
-        }
-        img {
-          height: auto;
-          background-color: $color_white;
-          border: $color_border-settings-grey;
-          align-self: center;
-          &.tall {
-            width: 74%;
-          }
-          &.width-30 {
-            width: 30%;
-          }
-          &.width-20 {
-            width: 20%;
-          }
-        }
-        p {
-          font-size: 12px;
-          line-height: 11px;
-          margin: 0;
-          margin-top: 10px;
-        }
-        .header {
-          width: 100%;
-          @include apply-flex-styles($flex-row-center-space_between);
-          margin-bottom: 10px;
-          h4 {
-            font-size: 1.1rem;
-            margin: 0;
-            display: inherit;
-            flex: 0 0 85%;
-          }
-          .close-btn {
-            flex: 1;
-            background-color: $color_white;
-            color: $color_primary_text;
-            border: none;
-            font-size: 30px;
-            text-align: right;
-            cursor: pointer;
-            transition: all 0.5s ease-in-out;
-            &:hover {
-              background-color: gainsboro;
-            }
-          }
-        }
       }
     }
   }
@@ -1532,8 +1473,8 @@ textarea.input {
     stroke-linejoin: round;
     transition: transform 0.3s ease;
     &:hover {
-      stroke: #4fbdd2; /* Change stroke color on hover */
-      transform: translateY(-5px); /* Move the SVG upward on hover */
+      stroke: #4fbdd2;
+      transform: translateY(-5px);
     }
   }
 }
@@ -1701,21 +1642,6 @@ textarea.input {
   // case study styles
   .editorial {
     .hero .case-study-settings {
-      // background-color: transparent;
-      // margin: 0 auto;
-      // .two-button-container {
-      // a {
-      // width: 50%;
-      // height: inherit;
-      // }
-      // }
-      // .bullet-list-row {
-      // @include apply-flex-styles($flex-row-center);
-      // li {
-      // border-left: $color_border-settings-grey;
-      // padding-left: 10px;
-      // }
-      // }
       .image-container {
         padding: 10px;
         background-color: gainsboro;
@@ -1825,13 +1751,7 @@ textarea.input {
     }
   }
 
-  .editorial .skills-section .centered-row .flex-row {
-    flex-direction: row;
-    .right-col .flex-row .col {
-      display: flex;
-      flex-direction: column;
-    }
-  }
+
   .banner-container {
     display: grid;
     grid-template-columns: 1fr 1fr; // Two equal columns
@@ -1857,6 +1777,123 @@ textarea.input {
       }
     }
   }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000075;
+    z-index: 9999;
+    cursor: zoom-out;
+    .lightbox-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include apply-flex-styles($flex-col-center-start);
+      background-color: #fff;
+      padding: 10px;
+      border-radius: $brad-8;
+      width: 90%;
+      cursor: context-menu;
+      &.w-15 {
+        max-width: 15%;
+      }
+      &.w-20 {
+        max-width: 20%;
+      }
+      &.w-25 {
+        max-width: 25%;
+      }
+      &.w-30 {
+        max-width: 30%;
+      }
+      &.w-35 {
+        max-width: 35%;
+      }
+      &.w-40 {
+        max-width: 40%;
+      }
+      &.w-45 {
+        max-width: 45%;
+      }
+      &.w-55 {
+        max-width: 55%;
+      }
+      &.w-50 {
+        max-width: 50%;
+      }
+      &.w-60 {
+        max-width: 60%;
+      }
+      &.w-65 {
+        max-width: 65%;
+      }
+      &.w-70 {
+        max-width: 70%;
+      }
+      &.w-75 {
+        max-width: 75%;
+      }
+      img {
+        background-color: $color_white;
+        border: $color_border-settings-grey;
+        align-self: center;
+        &.width-90 {
+          width: 90%;
+        }
+        &.width-80 {
+          width: 80%;
+        }
+        &.width-70 {
+          width: 70%;
+        }
+        &.width-60 {
+          width: 60%;
+        }
+        &.width-50 {
+          width: 50%;
+        }
+        &.width-40 {
+          width: 40%;
+        }
+      }
+      p {
+        font-size: 12px;
+        line-height: 11px;
+        margin: 0;
+        margin-top: 10px;
+      }
+      .header {
+        width: 100%;
+        @include apply-flex-styles($flex-row-center-space_between);
+        margin-bottom: 10px;
+        h4 {
+          font-size: 16px;
+          margin: 0;
+          display: inherit;
+          flex: 0 0 75%;
+        }
+        .close-btn {
+          flex: 1;
+          background-color: $color_white;
+          color: $color_primary_text;
+          border: none;
+          font-size: 30px;
+          text-align: right;
+          cursor: pointer;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            background-color: gainsboro;
+          }
+        }
+      }
+    }
+  }
+
   .btt-button {
     bottom: 2rem;
     right: 1rem;
@@ -1920,6 +1957,67 @@ textarea.input {
   .contents {
     left: 2em;
   }
+
+  .lightbox {
+    .lightbox-content {
+      &.w-10a {
+        max-width: 10%;
+      }
+      &.w-15a {
+        max-width: 15%;
+      }
+      &.w-20a {
+        max-width: 20%;
+      }
+      &.w-25a {
+        max-width: 25%;
+      }
+      &.w-30a {
+        max-width: 30%;
+      }
+      &.w-35a {
+        max-width: 35%;
+      }
+      &.w-40a {
+        max-width: 40%;
+      }
+      &.w-45a {
+        max-width: 45%;
+      }
+      &.w-50a {
+        max-width: 50%;
+      }
+      img {
+        &.width-15a {
+          width: 15%;
+        }
+        &.width-25a {
+          width: 25%;
+        }
+        &.width-45a {
+          width: 45%;
+        }
+        &.width-50a {
+          width: 50%;
+        }
+        &.width-60a {
+          width: 60%;
+        }
+        &.width-65a {
+          width: 65%;
+        }
+        &.width-70a {
+          width: 70%;
+        }
+        &.width-75a {
+          width: 75%;
+        }
+        &.width-100a {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1964,43 +2062,6 @@ textarea.input {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
-  }
-
-  .grid-container-1col,
-  .grid-container-2col,
-  .grid-container-3col,
-  .grid-container-4col,
-  .grid-container-5col,
-  .grid-container-6col {
-    .image-container {
-      .lightbox {
-        .lightbox-content {
-          &.w-30 {
-            width: 30%;
-          }
-          &.w-50 {
-            width: 50%;
-          }
-          img {
-            &.width-20 {
-              width: 18%;
-            }
-            &.width-25 {
-              width: 25%;
-            }
-            &.width-30 {
-              width: 30%;
-            }
-            &.width-70 {
-              width: 70%;
-            }
-            &.width-80 {
-              width: 80%;
-            }
-          }
-        }
-      }
-    }
   }
 
   .tab-container.hide-sm {
@@ -2272,34 +2333,6 @@ textarea.input {
     }
   }
 
-  .grid-container-1col,
-  .grid-container-2col,
-  .grid-container-3col,
-  .grid-container-4col,
-  .grid-container-5col,
-  .grid-container-6col {
-    .image-container {
-      .lightbox {
-        .lightbox-content {
-          &.w-20b {
-            width: 20%;
-          }
-          &.w-25b {
-            width: 25%;
-          }
-          &.w-40b {
-            width: 40%;
-          }
-          img {
-            &.width-90 {
-              width: 90%;
-            }
-          }
-        }
-      }
-    }
-  }
-
   .skills-section .centered-row {
     width: 100%;
     .flex-row .right-col .flex-row .col .tertiary-link {
@@ -2369,49 +2402,6 @@ textarea.input {
       }
       &:hover {
         text-decoration: none;
-      }
-    }
-  }
-
-  .grid-container-1col,
-  .grid-container-2col,
-  .grid-container-3col,
-  .grid-container-4col,
-  .grid-container-5col,
-  .grid-container-6col {
-    .image-container {
-      .lightbox {
-        .lightbox-content {
-          &.tall {
-            width: 10%;
-          }
-          &.w-15d {
-            width: 15%;
-          }
-          &.w-25d {
-            width: 25%;
-          }
-          &.w-30d {
-            width: 30%;
-          }
-          &.w-34d {
-            width: 34%;
-          }
-          &.w-40d {
-            width: 40%;
-          }
-          &.w-70d {
-            width: 70%;
-          }
-          &.w-75d {
-            width: 75%;
-          }
-          img {
-            &.width-100b {
-              width: 100%;
-            }
-          }
-        }
       }
     }
   }
@@ -2665,48 +2655,6 @@ textarea.input {
             gap: 1em;
             li {
               font-size: 20px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .grid-container-1col,
-  .grid-container-2col,
-  .grid-container-3col,
-  .grid-container-4col,
-  .grid-container-5col,
-  .grid-container-6col {
-    .image-container {
-      .lightbox {
-        .lightbox-content {
-          &.tall {
-            width: 7%;
-          }
-          &.w-25d {
-            width: 20%;
-          }
-          &.w-15d,
-          &.w-15e {
-            width: 15%;
-          }
-
-          &.w-30d,
-          &.w-40d {
-            width: 25%;
-          }
-          &.w-34d {
-            width: 28%;
-          }
-
-          &.w-70d,
-          &.w-75d {
-            width: 60%;
-          }
-          img {
-            &.width-100b {
-              width: 100%;
             }
           }
         }
