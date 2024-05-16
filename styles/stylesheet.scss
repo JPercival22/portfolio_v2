@@ -1193,16 +1193,19 @@ textarea.input {
   width: -webkit-fill-available;
   margin-top: 1em;
 }
-.editorial .skills-section .centered-row  {
+.editorial .skills-section .centered-row {
   @include apply-flex-styles($flex-col-center-start);
   .flex-row {
     flex-direction: row;
     border: none;
     .right-col .no-border .col {
       @include apply-flex-styles($flex-col-center-start);
-    .tertiary-link {text-decoration: underline;
-    &:hover{text-decoration: none;}
-    }
+      .tertiary-link {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
 }
@@ -1251,7 +1254,10 @@ textarea.input {
       }
     }
   }
-
+  .item {
+    @include apply-flex-styles($flex-col-center-start);
+    gap: 1em;
+  }
   .prototype-container {
     display: flex;
     flex-direction: column;
@@ -1478,7 +1484,9 @@ textarea.input {
     }
   }
 }
-
+.hide-sm {
+  display: none;
+}
 .scrolled {
   opacity: 1;
   /* Show the button when scrolled */
@@ -1550,6 +1558,10 @@ textarea.input {
 
 /* Start of Responsive Navigation Shift  */
 @media screen and (min-width: 768px) {
+  .hide-sm {
+    display: flex;
+  }
+
   .button-container {
     @include apply-flex-styles($flex-row-center-start);
     gap: 1em;
@@ -1751,7 +1763,6 @@ textarea.input {
     }
   }
 
-
   .banner-container {
     display: grid;
     grid-template-columns: 1fr 1fr; // Two equal columns
@@ -1795,7 +1806,7 @@ textarea.input {
       transform: translate(-50%, -50%);
       @include apply-flex-styles($flex-col-center-start);
       background-color: #fff;
-      padding: 10px;
+      padding: 1em;
       border-radius: $brad-8;
       width: 90%;
       cursor: context-menu;
@@ -1838,12 +1849,18 @@ textarea.input {
       &.w-75 {
         max-width: 75%;
       }
+      &.w-80 {
+        max-width: 80%;
+      }
       img {
         background-color: $color_white;
         border: $color_border-settings-grey;
         align-self: center;
         &.width-90 {
           width: 90%;
+        }
+        &.width-85 {
+          width: 85%;
         }
         &.width-80 {
           width: 80%;
@@ -1854,11 +1871,29 @@ textarea.input {
         &.width-60 {
           width: 60%;
         }
+        &.width-55 {
+          width: 55%;
+        }
         &.width-50 {
           width: 50%;
         }
+        &.width-45 {
+          width: 45%;
+        }
         &.width-40 {
           width: 40%;
+        }
+        &.width-35 {
+          width: 35%;
+        }
+        &.width-30 {
+          width: 30%;
+        }
+        &.width-25 {
+          width: 25%;
+        }
+        &.width-20 {
+          width: 20%;
         }
       }
       p {
@@ -1956,67 +1991,6 @@ textarea.input {
   // case study styles
   .contents {
     left: 2em;
-  }
-
-  .lightbox {
-    .lightbox-content {
-      &.w-10a {
-        max-width: 10%;
-      }
-      &.w-15a {
-        max-width: 15%;
-      }
-      &.w-20a {
-        max-width: 20%;
-      }
-      &.w-25a {
-        max-width: 25%;
-      }
-      &.w-30a {
-        max-width: 30%;
-      }
-      &.w-35a {
-        max-width: 35%;
-      }
-      &.w-40a {
-        max-width: 40%;
-      }
-      &.w-45a {
-        max-width: 45%;
-      }
-      &.w-50a {
-        max-width: 50%;
-      }
-      img {
-        &.width-15a {
-          width: 15%;
-        }
-        &.width-25a {
-          width: 25%;
-        }
-        &.width-45a {
-          width: 45%;
-        }
-        &.width-50a {
-          width: 50%;
-        }
-        &.width-60a {
-          width: 60%;
-        }
-        &.width-65a {
-          width: 65%;
-        }
-        &.width-70a {
-          width: 70%;
-        }
-        &.width-75a {
-          width: 75%;
-        }
-        &.width-100a {
-          width: 100%;
-        }
-      }
-    }
   }
 }
 
@@ -2213,9 +2187,65 @@ textarea.input {
       @include apply-flex-styles($flex-row-center-start);
     }
   }
-}
 
+  .lightbox {
+    .lightbox-content {
+      &.w-10a {
+        max-width: 9%;
+      }
+      &.w-15a {
+        max-width: 15%;
+      }
+      &.w-20a {
+        max-width: 20%;
+      }
+      &.w-25a {
+        max-width: 25%;
+      }
+      &.w-30a {
+        max-width: 30%;
+      }
+      &.w-35a {
+        max-width: 35%;
+      }
+      &.w-40a {
+        max-width: 40%;
+      }
+      &.w-70a {
+        max-width: 70%;
+      }
+      img {
+        &.width-15a {
+          width: 15%;
+        }
+        &.width-20a {
+          width: 20%;
+        }
+        &.width-25a {
+          width: 25%;
+        }
+        &.width-30a {
+          width: 30%;
+        }
+        &.width-75a {
+          width: 75%;
+        }
+        &.width-100a {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 @media only screen and (min-width: 1200px) {
+  .lightbox {
+    .lightbox-content {
+      &.w-10a_b {
+        max-width: 8%;
+      }
+    }
+  }
+
   .navbar {
     @include apply-flex-styles($flex-row-center-space_between);
     .navbar-container {
@@ -2611,6 +2641,56 @@ textarea.input {
     list-style: disc;
     li {
       font-size: 16px;
+    }
+  }
+
+  .lightbox {
+    .lightbox-content {
+      &.w-10b {
+        max-width: 10%;
+      }
+      &.w-15b {
+        max-width: 15%;
+      }
+      &.w-20b {
+        max-width: 20%;
+      }
+      &.w-25b {
+        max-width: 25%;
+      }
+      &.w-30b {
+        max-width: 30%;
+      }
+      &.w-60c {
+        max-width: 60%;
+      }
+
+      img {
+        &.width-30b {
+          width: 30%;
+        }
+        &.width-35b {
+          width: 35%;
+        }
+        &.width-40b {
+          width: 40%;
+        }
+        &.width-45b {
+          width: 45%;
+        }
+        &.width-50b {
+          width: 50%;
+        }
+        &.width-55b {
+          width: 55%;
+        }
+        &.width-70b {
+          width: 70%;
+        }
+        &.width-80b {
+          width: 80%;
+        }
+      }
     }
   }
 }
