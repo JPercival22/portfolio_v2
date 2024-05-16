@@ -2190,8 +2190,38 @@ textarea.input {
       }
     }
   }
+  .skills-section {width: -webkit-fill-available;
+    .centered-row .flex-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      width: -webkit-fill-available;
+      gap: 10em;
+      border-bottom: none;
+      .left-col {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 50%;
+    &.width_50{width:50%;}
+      }
+      .right-col {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 50%;
+        .flex-row {
+          justify-content: flex-start;
+        }
+      }
+  }
 }
 
+}
 @media only screen and (min-width: 1200px) {
   .navbar {
     @include apply-flex-styles($flex-row-center-space_between);
