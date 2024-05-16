@@ -1810,6 +1810,9 @@ textarea.input {
       border-radius: $brad-8;
       width: 90%;
       cursor: context-menu;
+      &.w-10 {
+        max-width: 10%;
+      }
       &.w-15 {
         max-width: 15%;
       }
@@ -1851,6 +1854,10 @@ textarea.input {
       }
       &.w-80 {
         max-width: 80%;
+      }
+      // c 
+      &.w-85 {
+        max-width: 85%;
       }
       img {
         background-color: $color_white;
@@ -2140,6 +2147,9 @@ textarea.input {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
+    margin: 0;
+    border: 1px solid lightgray;
+    border-radius: 6px;
     .no-border {
       border: none;
     }
@@ -2165,12 +2175,6 @@ textarea.input {
         border-radius: 5px;
       }
     }
-  }
-  .gallery {
-    @include apply-flex-styles($flex-col-center);
-    border-radius: $brad-8;
-    margin: 0;
-    width: -webkit-fill-available;
     .lg {
       margin-bottom: 0.8em;
     }
@@ -2182,17 +2186,33 @@ textarea.input {
       width: 110px;
       height: 400px;
     }
-    figcaption {
-      width: 100%;
-      @include apply-flex-styles($flex-row-center-start);
+    &.p10 {
+      padding: 10px;
     }
+    figcaption {
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 10px;
+    }
+  }
+  .start_even {
+    align-items: start;
+    justify-content: space-evenly;
   }
 
   .lightbox {
     .lightbox-content {
+      // c
+      &.w-6a {
+        max-width: 6%;
+      }
+      &.w-8a {
+        max-width: 8%;
+      }
       &.w-10a {
         max-width: 9%;
       }
+      // c
       &.w-15a {
         max-width: 15%;
       }
@@ -2211,6 +2231,10 @@ textarea.input {
       &.w-40a {
         max-width: 40%;
       }
+      // c 
+      &.w-60a {
+        max-width: 60%;
+      }
       &.w-70a {
         max-width: 70%;
       }
@@ -2227,8 +2251,16 @@ textarea.input {
         &.width-30a {
           width: 30%;
         }
+        // c
+        &.width-60a {
+          width: 60%;
+        }
         &.width-75a {
           width: 75%;
+        }
+        // c
+        &.width-90a {
+          width: 90%;
         }
         &.width-100a {
           width: 100%;
@@ -2238,14 +2270,6 @@ textarea.input {
   }
 }
 @media only screen and (min-width: 1200px) {
-  .lightbox {
-    .lightbox-content {
-      &.w-10a_b {
-        max-width: 8%;
-      }
-    }
-  }
-
   .navbar {
     @include apply-flex-styles($flex-row-center-space_between);
     .navbar-container {
@@ -2646,6 +2670,9 @@ textarea.input {
 
   .lightbox {
     .lightbox-content {
+      &.w-6b {
+        max-width: 6%;
+      }
       &.w-10b {
         max-width: 10%;
       }
@@ -2660,6 +2687,14 @@ textarea.input {
       }
       &.w-30b {
         max-width: 30%;
+      }
+      // c 
+      &.w-40b {
+        max-width: 40%;
+      }
+      // c 
+      &.w-50b {
+        max-width: 50%;
       }
       &.w-60c {
         max-width: 60%;
@@ -2738,6 +2773,14 @@ textarea.input {
             }
           }
         }
+      }
+    }
+  }
+
+  .lightbox {
+    .lightbox-content {
+      &.w-4c {
+        max-width: 4%;
       }
     }
   }

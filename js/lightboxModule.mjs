@@ -2,13 +2,13 @@
 
 const openLightbox = (imageSrc, imageAlt, lightbox) => {
   if (window.innerWidth >= 768) {
-  const lightboxImage = lightbox.querySelector('img');
-  lightboxImage.src = imageSrc;
-  lightboxImage.alt = imageAlt;
-  lightbox.style.display = 'block';
+    const lightboxImage = lightbox.querySelector('img');
+    lightboxImage.src = imageSrc;
+    lightboxImage.alt = imageAlt;
+    lightbox.style.display = 'block';
 
-  // Attach close button click event listener using event delegation
-  document.addEventListener('click', handleDocumentClick);
+    // Attach close button click event listener using event delegation
+    document.addEventListener('click', handleDocumentClick);
   }
 };
 
@@ -29,6 +29,12 @@ const closeLightbox = (lightbox) => {
 };
 
 const initLightboxFunctionality = () => {
+  if (window.innerWidth < 767) {
+    const lightboxes = document.querySelectorAll('.lightbox');
+    lightboxes.forEach(lightbox => lightbox.style.display = 'none');
+    return;
+  }
+
   const figures = document.querySelectorAll('.gallery[data-index]');
 
   figures.forEach((figure) => {
