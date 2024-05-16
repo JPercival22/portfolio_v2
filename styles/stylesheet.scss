@@ -374,6 +374,7 @@ section {
 .centered-row {
   @include apply-flex-styles($flex-row-center);
   margin: 2em 0;
+  width: 100%;
   .image-container {
     @include apply-flex-styles($flex-col-center);
     .gallery {
@@ -1678,7 +1679,105 @@ textarea.input {
   .lg-cs-hero {
     display: flex;
   }
-
+  .sm-accordion {
+    display: none;
+  }
+  .tab-container.hide-sm {
+    display: flex;
+    width: 100%;
+    .tab-buttons {
+      .tab-button {
+        cursor: pointer;
+        @include apply-flex-styles($flex-col-center-start);
+        padding: 10px 20px;
+        transition: all 0.5s ease-in-out;
+        font-family: $font-family;
+        font-size: 16px;
+        background-color: #edfdff;
+        border: $color_border-settings-grey;
+        border-bottom: 2px solid gainsboro;
+        border-radius: 8px 8px 0 0;
+        color: #484848;
+        &.active {
+          font-weight: bold;
+          color: $color_primary_text;
+          background-color: $color_white;
+          border-bottom: 2px solid #96e1eb;
+        }
+      }
+    }
+    .tab-contents {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      border: 0.5px solid gainsboro;
+      border-radius: 0 0 8px 8px;
+      padding: 8px;
+      .tab-module {
+        @include apply-flex-styles($flex-col-center-start);
+        width: inherit;
+        .carousel-header {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: row;
+          width: -webkit-fill-available;
+          margin-bottom: 1em;
+          .flex-col-left {
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 50%;
+            .headline {
+              margin: 0;
+            }
+          }
+          .flex-col-right {
+            width: 50%;
+            height: 170px;
+            display: flex;
+            justify-content: flex-end;
+            .carousel-banner-1 {
+              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
+              width: 100%;
+              height: 100%;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: right;
+              border-radius: $brad-8;
+            }
+            .carousel-banner-2 {
+              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
+              width: 100%;
+              height: 100%;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: right;
+              border-radius: $brad-8;
+            }
+            .carousel-banner-3 {
+              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
+              width: 100%;
+              height: 100%;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: right;
+              border-radius: $brad-8;
+            }
+            .carousel-banner-4 {
+              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
+              width: 100%;
+              height: 100%;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: right;
+              border-radius: $brad-8;
+            }
+          }
+        }
+      }
+    }
+  }
   .col-2 {
     display: flex;
     flex-direction: row;
@@ -1738,6 +1837,19 @@ textarea.input {
     background-color: $color_white;
     padding: 1em;
     border-radius: $brad-8;
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      margin: 0;
+      border: 1px solid lightgray;
+      border-radius: 6px;
+    }
+    &.start_even {
+      align-items: start;
+      justify-content: space-evenly;
+    }
   }
   .grid-container-5col {
     display: grid;
@@ -1987,103 +2099,6 @@ textarea.input {
     grid-gap: 10px;
   }
 
-  .tab-container.hide-sm {
-    display: flex;
-    width: 100%;
-    .tab-buttons {
-      .tab-button {
-        cursor: pointer;
-        @include apply-flex-styles($flex-col-center-start);
-        padding: 10px 20px;
-        transition: all 0.5s ease-in-out;
-        font-family: $font-family;
-        font-size: 16px;
-        background-color: #edfdff;
-        border: $color_border-settings-grey;
-        border-bottom: 2px solid gainsboro;
-        border-radius: 8px 8px 0 0;
-        color: #484848;
-        &.active {
-          font-weight: bold;
-          color: $color_primary_text;
-          background-color: $color_white;
-          border-bottom: 2px solid #96e1eb;
-        }
-      }
-    }
-    .tab-contents {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      border: 0.5px solid gainsboro;
-      border-radius: 0 0 8px 8px;
-      padding: 8px;
-      .tab-module {
-        @include apply-flex-styles($flex-col-center-start);
-        width: inherit;
-        .carousel-header {
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
-          flex-direction: row;
-          width: -webkit-fill-available;
-          margin-bottom: 1em;
-          .flex-col-left {
-            align-items: flex-start;
-            justify-content: flex-start;
-            width: 50%;
-            .headline {
-              margin: 0;
-            }
-          }
-          .flex-col-right {
-            width: 50%;
-            height: 170px;
-            display: flex;
-            justify-content: flex-end;
-            .carousel-banner-1 {
-              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
-              width: 100%;
-              height: 100%;
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: right;
-              border-radius: $brad-8;
-            }
-            .carousel-banner-2 {
-              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
-              width: 100%;
-              height: 100%;
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: right;
-              border-radius: $brad-8;
-            }
-            .carousel-banner-3 {
-              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
-              width: 100%;
-              height: 100%;
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: right;
-              border-radius: $brad-8;
-            }
-            .carousel-banner-4 {
-              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
-              width: 100%;
-              height: 100%;
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: right;
-              border-radius: $brad-8;
-            }
-          }
-        }
-      }
-    }
-  }
-
   .gallery {
     display: flex;
     flex-direction: column;
@@ -2092,7 +2107,7 @@ textarea.input {
     margin: 0;
     border: 1px solid lightgray;
     border-radius: 6px;
-    .no-border {
+    &.no-border {
       border: none;
     }
     .col {
@@ -2127,6 +2142,14 @@ textarea.input {
     .xsm {
       width: 110px;
       height: 400px;
+    }
+    img {
+      &.wide {
+        width: 100%;
+      }
+      &.no-border {
+        border: none;
+      }
     }
     &.p10 {
       padding: 10px;
