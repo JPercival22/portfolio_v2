@@ -199,6 +199,8 @@ ol {
   font-family: $font-family;
   margin-left: 16px;
   padding: 0;
+  @include apply-flex-styles($flex-col-center-start);
+  gap: 10px;
   li {
     display: list-item;
     font-family: $font-family;
@@ -1562,7 +1564,18 @@ textarea.input {
   .hide-sm {
     display: flex;
   }
-
+  .flex-row {
+    &.space-between {
+      .col {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        .left-align{justify-content: flex-start;}
+        .right-align{justify-content: flex-end;}
+      }
+    }
+  }
   .button-container {
     @include apply-flex-styles($flex-row-center-start);
     gap: 1em;
@@ -2160,6 +2173,19 @@ textarea.input {
       margin-top: 10px;
     }
   }
+  .tab-container.hide-sm .tab-contents .tab-module .carousel-header {
+    .flex-col-left {
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 80%;
+    }
+    .flex-col-right {
+      width: 20%;
+    }
+  }
+  .carousel-container .carousel-track .carousel-slide .gallery {
+    border: none;
+  }
   .start_even {
     align-items: start;
     justify-content: space-evenly;
@@ -2190,11 +2216,11 @@ textarea.input {
       }
     }
   }
-  .skills-section {width: -webkit-fill-available;
+  .skills-section {
+    width: -webkit-fill-available;
     .centered-row .flex-row {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
       align-items: flex-start;
       width: -webkit-fill-available;
       gap: 10em;
@@ -2206,7 +2232,9 @@ textarea.input {
         justify-content: space-between;
         align-items: flex-start;
         width: 50%;
-    &.width_50{width:50%;}
+        &.width_50 {
+          width: 50%;
+        }
       }
       .right-col {
         display: flex;
@@ -2218,9 +2246,8 @@ textarea.input {
           justify-content: flex-start;
         }
       }
+    }
   }
-}
-
 }
 @media only screen and (min-width: 1200px) {
   .navbar {
@@ -2340,8 +2367,42 @@ textarea.input {
     }
   }
 
+  .flex-row {
+    &.space-between {
+      justify-content: space-between;
+      .two-button-container {
+        &.right-align {
+          justify-content: flex-end;
+        }
+        &.left-align {
+          justify-content: flex-start;
+          .tertiary-link {
+            text-decoration: underline;
+            svg {
+              height: 24px; /* Initial height */
+              width: 24px; /* Initial width */
+              fill: #008190; /* Initial fill color */
+              transition: transform 0.5s ease; /* Apply transition only to transform property */
+            }
+
+            &:hover {
+              svg {
+                transform: scale(1.2);
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .skills-section .centered-row {
     width: 100%;
+    .left-col,
+    .left-col.width_50 {
+      width: 90%;
+    }
     .flex-row .right-col .flex-row .col .tertiary-link {
       color: $color_brand;
       text-decoration: underline;
@@ -2541,7 +2602,7 @@ textarea.input {
         background-color: $color_white;
         border-radius: $brad-8;
         display: flex;
-        height: calc(100vh - 14em);
+        height: calc(100vh - 12em);
         width: fit-content;
         position: fixed;
         .sideBar-content {
@@ -2651,7 +2712,7 @@ textarea.input {
   }
 }
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1880px) {
   section {
     width: 65vw;
     margin: unset;
@@ -2660,8 +2721,6 @@ textarea.input {
     margin: 0 138px;
     width: 88%;
   }
-  // index
-
   .wrapper .wide-card .card-body {
     .card-editorial {
       width: 80%;
@@ -2673,41 +2732,45 @@ textarea.input {
       margin-top: 2em;
     }
   }
-  // case studies
   .page-wrapper {
     width: 85vw;
+    display: flex;
     article {
       flex: 0 0 20%;
+      .sideBar {
+        height: calc(100vh - 15em);
+      }
     }
     .main-content {
       flex: 1;
       .editorial {
         max-width: 67vw;
-        .hero .case-study-settings {
+        .hero {
+          width: -webkit-fill-available;
+        }
+        .case-study-settings {
+          .image-container {
+            .guitar-banner {
+              height: 400px;
+            }
+          }
           .two-button-container {
             width: 30%;
-          }
-          .bullet-list-row {
-            gap: 1em;
-            li {
-              font-size: 20px;
-            }
           }
         }
       }
     }
   }
-
-  .lightbox {
-    .lightbox-content {
-      &.w-4c {
-        max-width: 4%;
-      }
-    }
+  .lightbox .lightbox-content.w-4c {
+    max-width: 4%;
   }
-
-  // footer
   .footer-container .footer-social-icon {
     justify-content: space-evenly;
+  }
+}
+
+@media only screen and (min-width: 1919px) {
+  .page-wrapper article .sideBar {
+    height: calc(100vh - 24em);
   }
 }

@@ -94,6 +94,11 @@ ol {
   font-family: "Poppins";
   margin-left: 16px;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
 }
 ol li {
   display: list-item;
@@ -1711,6 +1716,18 @@ textarea.input {
   .hide-sm {
     display: flex;
   }
+  .flex-row.space-between .col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .flex-row.space-between .col .left-align {
+    justify-content: flex-start;
+  }
+  .flex-row.space-between .col .right-align {
+    justify-content: flex-end;
+  }
   .button-container {
     display: flex;
     flex-direction: row;
@@ -2292,6 +2309,17 @@ textarea.input {
     line-height: 14px;
     margin-top: 10px;
   }
+  .tab-container.hide-sm .tab-contents .tab-module .carousel-header .flex-col-left {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+  }
+  .tab-container.hide-sm .tab-contents .tab-module .carousel-header .flex-col-right {
+    width: 20%;
+  }
+  .carousel-container .carousel-track .carousel-slide .gallery {
+    border: none;
+  }
   .start_even {
     align-items: start;
     justify-content: space-evenly;
@@ -2323,7 +2351,6 @@ textarea.input {
   .skills-section .centered-row .flex-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: flex-start;
     width: -webkit-fill-available;
     gap: 10em;
@@ -2473,8 +2500,34 @@ textarea.input {
     justify-content: space-evenly;
     list-style: none;
   }
+  .flex-row.space-between {
+    justify-content: space-between;
+  }
+  .flex-row.space-between .two-button-container.right-align {
+    justify-content: flex-end;
+  }
+  .flex-row.space-between .two-button-container.left-align {
+    justify-content: flex-start;
+  }
+  .flex-row.space-between .two-button-container.left-align .tertiary-link {
+    text-decoration: underline;
+  }
+  .flex-row.space-between .two-button-container.left-align .tertiary-link svg {
+    height: 24px; /* Initial height */
+    width: 24px; /* Initial width */
+    fill: #008190; /* Initial fill color */
+    transition: transform 0.5s ease; /* Apply transition only to transform property */
+  }
+  .flex-row.space-between .two-button-container.left-align .tertiary-link:hover svg {
+    transform: scale(1.2);
+    text-decoration: none;
+  }
   .skills-section .centered-row {
     width: 100%;
+  }
+  .skills-section .centered-row .left-col,
+  .skills-section .centered-row .left-col.width_50 {
+    width: 90%;
   }
   .skills-section .centered-row .flex-row .right-col .flex-row .col .tertiary-link {
     color: #2c4465;
@@ -2668,7 +2721,7 @@ textarea.input {
     background-color: #fff;
     border-radius: 8px;
     display: flex;
-    height: calc(100vh - 14em);
+    height: calc(100vh - 12em);
     width: -moz-fit-content;
     width: fit-content;
     position: fixed;
@@ -2782,7 +2835,7 @@ textarea.input {
     max-width: 50%;
   }
 }
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1880px) {
   section {
     width: 65vw;
     margin: unset;
@@ -2802,9 +2855,13 @@ textarea.input {
   }
   .page-wrapper {
     width: 85vw;
+    display: flex;
   }
   .page-wrapper article {
     flex: 0 0 20%;
+  }
+  .page-wrapper article .sideBar {
+    height: calc(100vh - 15em);
   }
   .page-wrapper .main-content {
     flex: 1;
@@ -2812,19 +2869,24 @@ textarea.input {
   .page-wrapper .main-content .editorial {
     max-width: 67vw;
   }
-  .page-wrapper .main-content .editorial .hero .case-study-settings .two-button-container {
+  .page-wrapper .main-content .editorial .hero {
+    width: -webkit-fill-available;
+  }
+  .page-wrapper .main-content .editorial .case-study-settings .image-container .guitar-banner {
+    height: 400px;
+  }
+  .page-wrapper .main-content .editorial .case-study-settings .two-button-container {
     width: 30%;
-  }
-  .page-wrapper .main-content .editorial .hero .case-study-settings .bullet-list-row {
-    gap: 1em;
-  }
-  .page-wrapper .main-content .editorial .hero .case-study-settings .bullet-list-row li {
-    font-size: 20px;
   }
   .lightbox .lightbox-content.w-4c {
     max-width: 4%;
   }
   .footer-container .footer-social-icon {
     justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 1919px) {
+  .page-wrapper article .sideBar {
+    height: calc(100vh - 24em);
   }
 }/*# sourceMappingURL=stylesheet.css.map */
