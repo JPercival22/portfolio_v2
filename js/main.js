@@ -70,7 +70,7 @@ async function addMainFunctionality () {
     initAccordion()
 
     // Call handleDynamicImports function
-    handleDynamicImports()
+    // handleDynamicImports()
 
     // Call initCarousel function with appropriate parameters
     // Dynamically import and call initCarousel function for each carousel
@@ -95,26 +95,26 @@ async function addMainFunctionality () {
 }
 
 // Define function to handle dynamic imports
-const handleDynamicImports = async () => {
-  try {
+// const handleDynamicImports = async () => {
+//   try {
     // Check if elements that require dynamic imports exist before importing and executing
-    const allImages = document.querySelectorAll('img[data-responsive]')
-    if (allImages.length > 0) {
-      const { setResponsiveImages } = await import(
-        './responsiveImageModule.mjs'
-      )
-      setResponsiveImages()
-    }
+//     const allImages = document.querySelectorAll('img[data-responsive]')
+//     if (allImages.length > 0) {
+//       const { setResponsiveImages } = await import(
+//         './responsiveImageModule.mjs'
+//       )
+//       setResponsiveImages()
+//     }
 
-    const readMoreElement = document.querySelector('.read-more')
-    if (readMoreElement) {
-      const { initReadMore } = await import('./readMore.mjs')
-      initReadMore()
-    }
-  } catch (error) {
-    console.error('Error handling dynamic imports:', error)
-  }
-}
+//     const readMoreElement = document.querySelector('.read-more')
+//     if (readMoreElement) {
+//       const { initReadMore } = await import('./readMore.mjs')
+//       initReadMore()
+//     }
+//   } catch (error) {
+//     console.error('Error handling dynamic imports:', error)
+//   }
+// }
 
 // Add event listener for DOMContentLoaded
 document.addEventListener('DOMContentLoaded', async () => {

@@ -1,5 +1,5 @@
 // Typography
-$font-family: "Poppins";
+$font-family: 'Poppins', sans-serif;
 
 // color palette
 $color_base-bkg: #30a7bf;
@@ -125,14 +125,6 @@ main {
   background-color: $color_main-bkg;
   padding-bottom: 1em;
   margin-top: 76px;
-}
-
-h1 {
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 1;
-  margin-bottom: 0.7rem;
-  color: $color_brand;
 }
 
 h2 {
@@ -377,6 +369,7 @@ section {
   width: 100%;
   .image-container {
     @include apply-flex-styles($flex-col-center);
+    content-visibility: auto;
     .gallery {
       margin: 0;
       img {
@@ -1106,14 +1099,9 @@ textarea.input {
   width: 90%;
   padding: 0 10px;
 }
-.accordion-item:first-child .accordion-header {
-  border-radius: 8px 8px 0 0;
-}
-.accordion-item:last-child > .accordion-header {
-  border-radius: 0 0 8px 8px;
-}
-.accordion {
-  width: 86vw;
+
+.sm-accordion, .accordion {
+  width: 90vw;
   border: $color_border-settings-grey;
   border-radius: $brad-8;
   .accordion-item {
@@ -1123,6 +1111,8 @@ textarea.input {
       padding: 10px;
       cursor: pointer;
       @include apply-flex-styles($flex-row-center-space_between);
+      &.accordion-item:first-child .accordion-header{border-radius: 8px 8px 0 0;}
+      &.accordion-item:last-child > .accordion-header{border-radius: 0 0 8px 8px;}
       &:hover {
         background-color: #e0e0e0;
       }
@@ -1143,15 +1133,17 @@ textarea.input {
         }
       }
     }
+    &.active .accordion-content {
+      display: block;
+    }
+    &:not(.active) .accordion-content {
+      display: none;
+    }
   }
 }
-.accordion-item.active .accordion-content {
-  display: block;
-}
 
-.accordion-item:not(.active) .accordion-content {
-  display: none;
-}
+
+
 .bullet-list-row {
   display: none;
   li {
@@ -1222,6 +1214,14 @@ textarea.input {
   background-color: $color_white;
   border-radius: 8px;
   margin-top: 1em;
+  width: 100%;
+  .marketing-banner {
+    background-image: url(/assets/images/Case-Studies/CS1/banners/marketing-table.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: -webkit-fill-available;
+    height: 200px;
+  }
   .image-container {
     display: flex;
     flex-direction: column;
@@ -1569,8 +1569,12 @@ textarea.input {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        .left-align{justify-content: flex-start;}
-        .right-align{justify-content: flex-end;}
+        .left-align {
+          justify-content: flex-start;
+        }
+        .right-align {
+          justify-content: flex-end;
+        }
       }
     }
   }
@@ -1881,9 +1885,6 @@ textarea.input {
     border-radius: $brad-8;
     align-items: start;
     justify-content: space-evenly;
-    &.no-background {
-      background-color: $color_white;
-    }
   }
 
   .banner-container {
@@ -1898,7 +1899,6 @@ textarea.input {
       align-items: center;
       color: white;
       font-size: 24px;
-
       &.banner-1 {
         background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Results-Banner.svg);
         background-size: contain;
@@ -2472,17 +2472,14 @@ textarea.input {
     }
   }
 
-  .no-background {
-    background-color: transparent;
-    .image-container {
-      .gallery {
-        background-color: $color_white;
-        padding: 0.5em;
-        border-radius: $brad-8;
-        img {
-          width: 100%;
-          height: auto;
-        }
+  .image-container {
+    .gallery {
+      background-color: $color_white;
+      padding: 0.5em;
+      border-radius: $brad-8;
+      img {
+        width: 100%;
+        height: auto;
       }
     }
   }
