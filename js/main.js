@@ -1,4 +1,5 @@
 import { initCarousel } from './carousel.mjs'
+import { lazyLoadImages } from './lazyLoad.mjs'
 
 // Define function to add main functionality
 async function addMainFunctionality () {
@@ -69,8 +70,8 @@ async function addMainFunctionality () {
     const { initAccordion } = await import('./accordion.mjs')
     initAccordion()
 
-    // Call handleDynamicImports function
-    handleDynamicImports()
+    // Dynamically import and call lazyLoadImages function
+    const { lazyLoadImages } = await import('./lazyLoad.mjs');
 
     // Call initCarousel function with appropriate parameters
     // Dynamically import and call initCarousel function for each carousel
@@ -94,34 +95,21 @@ async function addMainFunctionality () {
   }
 }
 
-// Define function to handle dynamic imports
-const handleDynamicImports = async () => {
-  try {
-    // Check if elements that require dynamic imports exist before importing and executing
-    const allImages = document.querySelectorAll('img[data-responsive]')
-    if (allImages.length > 0) {
-      const { setResponsiveImages } = await import(
-        './responsiveImageModule.mjs'
-      )
-      setResponsiveImages()
-    }
-
-    const readMoreElement = document.querySelector('.read-more')
-    if (readMoreElement) {
-      const { initReadMore } = await import('./readMore.mjs')
-      initReadMore()
-    }
-  } catch (error) {
-    console.error('Error handling dynamic imports:', error)
-  }
-}
-
 // Add event listener for DOMContentLoaded
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     // Call addMainFunctionality to add main functionality
-    await addMainFunctionality()
+    await addMainFunctionality();
+    lazyLoadImages();
   } catch (error) {
     console.error('Error on DOMContentLoaded:', error)
   }
-})
+});
+
+// Lazy load background images
+document.addEventListener('lazybeforeunveil', function (e) {
+  var bg = e.target.getAttribute('data-bg');
+  if (bg) {
+    e.target.style.backgroundImage = 'url(' + bg + ')';
+  }
+});
