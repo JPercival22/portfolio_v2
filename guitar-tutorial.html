@@ -15,10 +15,8 @@
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Include Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
+    <link defer href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Preload Material Symbols font (combined) -->
     <link rel="preload"
@@ -93,8 +91,16 @@
         }
 
         .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
-            display: inherit;
+            display: flex;
             width: 50%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            transition: background-color .5s ease-in-out;
+            border-radius: 8px;
+        }
+        .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link:hover {
+            background-color: #aafadf;
         }
 
         .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link svg {
@@ -104,7 +110,7 @@
 
         .hero .case-study-settings .space-between .col .two-button-container.right-align {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
             gap: 0.5em;
@@ -147,6 +153,42 @@
                 background-position: center;
                 width: 100%;
                 height: 300px;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .hero .case-study-settings .space-between .col .two-button-container {
+                width: 50%;
+            }
+
+            .hero .case-study-settings .space-between .col .two-button-container.left-align {
+                justify-content: flex-start;
+            }
+
+            .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
+                align-items: center;
+                justify-content: flex-start;
+                width: 50%;
+            }
+
+            .hero .case-study-settings .space-between .col .two-button-container.right-align {
+                justify-content: flex-end;
+            }
+
+            .hero .case-study-settings .space-between .col .two-button-container.right-align .primary-button,
+            .hero .case-study-settings .space-between .col .two-button-container.right-align .secondary-button {
+                width: 30%;
+            }
+        }
+
+        @media only screen and (min-width: 1900px) {
+            .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
+                width: 30%;
+            }
+
+            .hero .case-study-settings .space-between .col .two-button-container.right-align .primary-button,
+            .hero .case-study-settings .space-between .col .two-button-container.right-align .secondary-button {
+                width: 20%;
             }
         }
     </style>
@@ -2045,9 +2087,11 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/foundation/Foundation-1.svg"
-                                                        alt="An individual using a screen reader to navigate a website, emphasizing the importance of accessibility guidelines for creating an inclusive digital experience for all users." />
-                                                    <figcaption>Accessibility guidelines are crucial for
-                                                        ensuring the inclusivity and usability. </figcaption>
+                                                        width="1052" height="690"
+                                                        alt="An individual using a screen reader to navigate a website, emphasizing the importance of 
+                                                        accessibility guidelines for creating an inclusive digital experience for all users.">
+                                                    <figcaption>Accessibility guidelines ensuring the inclusivity and
+                                                        usability. </figcaption>
                                                 </figure>
                                             </div>
                                             <div class="carousel-slide">
@@ -2055,7 +2099,11 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/foundation/Foundation-2.svg"
-                                                        alt="A graphical representation of colors used in the app, showing the saturated, neutral, and alpha color spectrums. The saturated spectrum contains vibrant, intense colors, while the neutral spectrum features subdued, balanced tones. The alpha spectrum includes transparent or semi-transparent colors. Additionally, the primary colors play a significant role in the app's visual hierarchy and branding." />
+                                                        width="1052" height="690"
+                                                        alt="A graphical representation of colors used in the app, showing the saturated, neutral, and alpha
+                                                         color spectrums. The saturated spectrum contains vibrant, intense colors, while the neutral spectrum
+                                                          features subdued, balanced tones. The alpha spectrum includes transparent or semi-transparent colors.
+                                                           Additionally, the primary colors play a significant role in the app's visual hierarchy and branding.">
                                                     <figcaption>Color spectrums, showcasing the importance of
                                                         saturated, neutral, and alpha colors.</figcaption>
                                                 </figure>
@@ -2066,7 +2114,11 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/foundation/Foundation-3.svg"
-                                                        alt="A visual representation outlining various types of elevations used in the application, including flat, raised, and deep elevations. The flat elevation showcases a minimalistic design with subtle shadows, while the raised elevation features a more pronounced shadow effect to create a sense of depth. The deep elevation presents a distinct shadow and highlights, emphasizing a layered appearance for interactive elements." />
+                                                        width="1052" height="690"
+                                                        alt="A visual representation outlining various types of elevations used in the application, including flat, 
+                                                        raised, and deep elevations. The flat elevation showcases a minimalistic design with subtle shadows, while 
+                                                        the raised elevation features a more pronounced shadow effect to create a sense of depth. The deep elevation 
+                                                        presents a distinct shadow and highlights, emphasizing a layered appearance for interactive elements.">
                                                     <figcaption>Elevation styles, including flat, raised, and deep
                                                         elevations.</figcaption>
                                                 </figure>
@@ -2077,7 +2129,10 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/foundation/Foundation-4.svg"
-                                                        alt="An illustrative portrayal of iconography guidelines within the application, depicting accessibility and usage principles. The icons exemplify adherence to WCAG standards, with distinct visual attributes to ensure accessibility for diverse user groups. Additionally, the usage guidelines emphasize consistency, clarity, and scalability of icons across different interfaces." />
+                                                        width="1052" height="690" alt="An illustrative portrayal of iconography guidelines within the application, depicting accessibility and 
+                                                        usage principles. The icons exemplify adherence to WCAG standards, with distinct visual attributes to ensure 
+                                                        accessibility for diverse user groups. Additionally, the usage guidelines emphasize consistency, clarity, and 
+                                                        scalability of icons across different interfaces.">
                                                     <figcaption>Iconography accessibility considerations
                                                         and usage guidelines.</figcaption>
                                                 </figure>
@@ -2088,7 +2143,10 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/foundation/Foundation-5.svg"
-                                                        alt="A visual representation showcasing logo and brand usage guidelines, emphasizing clarity, consistency, and appropriate application. The imagery illustrates the correct and incorrect usage of the logo across various background colors, sizes, and contexts, ensuring brand integrity and recognition." />
+                                                        width="1052" height="690"
+                                                        alt="A visual representation showcasing logo and brand usage guidelines, emphasizing clarity, consistency,
+                                                         and appropriate application. The imagery illustrates the correct and incorrect usage of the logo across 
+                                                         various background colors, sizes, and contexts, ensuring brand integrity and recognition.">
                                                     <figcaption>Brand awareness guidelines, usage and clearance
                                                         requirements.</figcaption>
                                                 </figure>
@@ -2099,8 +2157,11 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/foundation/Foundation-6.svg"
-                                                        alt="A visual portrayal showcasing brand typography guidelines, featuring the selected font stack for different operating systems and emphasizing proper usage and optimal line lengths. The imagery illustrates the intended typographic aesthetic and highlights the recommended font choices for consistent and legible text across various platforms." />
-                                                    <figcaption>Typography guidelines, brand-consistent font choices for
+                                                        width="1052" height="690" alt="A visual portrayal showcasing brand typography guidelines, featuring the selected font stack for different 
+                                                        operating systems and emphasizing proper usage and optimal line lengths. The imagery illustrates the intended 
+                                                        typographic aesthetic and highlights the recommended font choices for consistent and legible text across various 
+                                                        platforms.">
+                                                    <figcaption>Typography guidelines for
                                                         enhanced readability.</figcaption>
                                                 </figure>
                                             </div>
@@ -2146,7 +2207,8 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/components/Components-1.svg"
-                                                        alt="Visual representation showcasing icon design principles, usage, anatomy, and grid structure." />
+                                                        width="1052" height="690"
+                                                        alt="Visual representation showcasing icon design principles, usage, anatomy, and grid structure.">
                                                     <figcaption>Icon design and grid structure for visual communication.
                                                     </figcaption>
                                                 </figure>
@@ -2157,7 +2219,8 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/components/Components-2.svg"
-                                                        alt="Slide displaying guidelines for icon shapes, style, color, and best practices." />
+                                                        width="1052" height="690"
+                                                        alt="Slide displaying guidelines for icon shapes, style, color, and best practices.">
                                                     <figcaption>Best practices
                                                         for icon shapes, style, and color.
                                                     </figcaption>
@@ -2169,7 +2232,9 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/components/Components-3.svg"
-                                                        alt="Slide depicting button design principles, including usage, guidelines for primary buttons, considerations for sizes and context, and navigation and link CTAs with imagery." />
+                                                        width="1052" height="690"
+                                                        alt="Slide depicting button design principles, including usage, guidelines for primary buttons, 
+                                                        considerations for sizes and context, and navigation and link CTAs with imagery.">
                                                     <figcaption>Primary button guidelines, sizes and context, Navigation
                                                         and CTAs.
                                                     </figcaption>
@@ -2181,8 +2246,9 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/components/Components-4.svg"
-                                                        alt="Slide demonstrating accessibility guidelines for using buttons, including avoiding disabled buttons in general and applying tooltips on disabled buttons." />
-                                                    <figcaption>Accessibility guidelines for button and tooltip usage.
+                                                        width="1052" height="690" alt="Slide demonstrating accessibility guidelines for using buttons, including avoiding disabled buttons 
+                                                        in general and applying tooltips on disabled buttons.">
+                                                    <figcaption>Accessibility guidelines for buttons and tooltip usage.
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -2192,7 +2258,8 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/components/Components-5.svg"
-                                                        alt="Slide featuring best practices for aligning and positioning buttons in UI design." />
+                                                        width="1052" height="690"
+                                                        alt="Slide featuring best practices for aligning and positioning buttons in UI design.">
                                                     <figcaption>Best practices for aligning buttons.
                                                     </figcaption>
                                                 </figure>
@@ -2203,11 +2270,10 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/components/Components-6.svg"
-                                                        alt="Slide providing guidelines for button content, including sentence case and appropriate labeling practices." />
-                                                    <figcaption>Guidelines for button content,best
-                                                        practices for clear and effective button
-                                                        labeling to
-                                                        improve user understanding and engagement.
+                                                        width="1052" height="690"
+                                                        alt="Slide providing guidelines for button content, including sentence case and appropriate labeling practices.">
+                                                    <figcaption>Best practices for button labeling to
+                                                        improve user engagement.
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -2257,7 +2323,9 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/content/Content-1.svg"
-                                                        alt="An image showing guidelines and best practices for inclusive writing, with a focus on considering diverse audiences and inclusive communication." />
+                                                        width="1052" height="690"
+                                                        alt="An image showing guidelines and best practices for inclusive writing, with a 
+                                                        focus on considering diverse audiences and inclusive communication.">
                                                     <figcaption>Inclusive Writing and Best Practice Guidance
                                                     </figcaption>
                                                 </figure>
@@ -2268,7 +2336,9 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/content/Content-2.svg"
-                                                        alt="A slide featuring guidelines for language and grammar, covering abbreviation usage, active voice, bold text, capitalizations, and colons for effective communication." />
+                                                        width="1052" height="690"
+                                                        alt="A slide featuring guidelines for language and grammar, covering abbreviation usage, active voice, 
+                                                        bold text, capitalizations, and colons for effective communication.">
                                                     <figcaption>Language and Grammar Guidelines.
                                                     </figcaption>
                                                 </figure>
@@ -2279,7 +2349,9 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/content/Content-3.svg"
-                                                        alt="A slide illustrating voice and tone principles, emphasizing the importance of consistent brand communication through the use of appropriate language and tone." />
+                                                        width="1052" height="690"
+                                                        alt="A slide illustrating voice and tone principles, emphasizing the importance of consistent brand 
+                                                        communication through the use of appropriate language and tone.">
                                                     <figcaption>Voice and Tone Principle Guidelines
                                                     </figcaption>
                                                 </figure>
@@ -2290,6 +2362,7 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/content/Content-4.svg"
+                                                        width="1052" height="690"
                                                         alt="A slide displaying a table of helpful writing guidelines to facilitate clear and effective communication." />
                                                     <figcaption>Table of Clear Communication Suggestions.
                                                     </figcaption>
@@ -2301,7 +2374,8 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/content/Content-5.svg"
-                                                        alt="A slide presenting writing style guidelines aimed at fostering cohesive and engaging content for the target audience." />
+                                                        width="1052" height="690"
+                                                        alt="A slide presenting writing style guidelines aimed at fostering cohesive and engaging content for the target audience.">
                                                     <figcaption>Cohesive and Engaging Content Guidelines.
                                                     </figcaption>
                                                 </figure>
@@ -2351,7 +2425,9 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/patterns/Patterns-1.svg"
-                                                        alt="Slide explaining First Impression Patterns highlighting design patterns for creating impactful first impressions and prioritizing user benefits in a holistic approach." />
+                                                        width="1052" height="690"
+                                                        alt="Slide explaining First Impression Patterns highlighting design patterns for creating impactful 
+                                                        first impressions and prioritizing user benefits in a holistic approach.">
                                                     <figcaption>User-Centric Design Patterns.
                                                     </figcaption>
                                                 </figure>
@@ -2362,9 +2438,10 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/patterns/Patterns-2.svg"
-                                                        alt="A slide showcasing showcasing design patterns for crafting memorable first impressions and effectively catering to users acquainted with the product. It emphasizes the importance of understanding, supporting, and communicating with the target audience." />
-                                                    <figcaption>Cultivating
-                                                        Design Patterns for New User Experiences. </figcaption>
+                                                        width="1052" height="690" alt="A slide showcasing showcasing design patterns for crafting memorable first impressions and effectively 
+                                                        catering to users acquainted with the product. It emphasizes the importance of understanding, supporting, and 
+                                                        communicating with the target audience.">
+                                                    <figcaption>Design Patterns for New User Experiences. </figcaption>
                                                 </figure>
                                             </div>
 
@@ -2373,8 +2450,10 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/patterns/Patterns-3.svg"
-                                                        alt="IAn informational slide detailing generic form patterns, encompassing field states, styling considerations, and accessibility guidelines for creating inclusive and user-friendly form designs." />
-                                                    <figcaption>Generic form patterns for States, Styling and
+                                                        width="1052" height="690"
+                                                        alt="IAn informational slide detailing generic form patterns, encompassing field states, styling considerations, 
+                                                        and accessibility guidelines for creating inclusive and user-friendly form designs.">
+                                                    <figcaption>Generic patterns for States, Styling and
                                                         Accessibility Guidelines.
                                                     </figcaption>
                                                 </figure>
@@ -2385,10 +2464,10 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/patterns/Patterns-4.svg"
-                                                        alt="A slide showcasing button layouts, emphasizing the importance of visual consistency and intuitive interactions for effective user engagement." />
-                                                    <figcaption>Button layouts ensuring a visual consistency
-                                                        and
-                                                        intuitive progressive disclosures during interactions.
+                                                        width="1052" height="690" alt="A slide showcasing button layouts, emphasizing the importance of visual consistency and intuitive interactions 
+                                                        for effective user engagement.">
+                                                    <figcaption>Button layouts ensuring a visual consistency progressive
+                                                        disclosures.
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -2398,10 +2477,11 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/patterns/Patterns-5.svg"
-                                                        alt="A slide highlighting patterns for long forms, including multi-step processes, progressive disclosures, and best practices for validation behavior to enhance user experience and streamline data entry." />
-                                                    <figcaption>Multi-step,
-                                                        Progressive
-                                                        Disclosure, and Validation Behaviors.</figcaption>
+                                                        width="1052" height="690"
+                                                        alt="A slide highlighting patterns for long forms, including multi-step processes, progressive disclosures, 
+                                                        and best practices for validation behavior to enhance user experience and streamline data entry.">
+                                                    <figcaption>Multi-step, Progressive Disclosure Behaviors.
+                                                    </figcaption>
                                                 </figure>
                                             </div>
 
@@ -2410,10 +2490,11 @@
                                                     <img class="lazyload lg"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/patterns/Patterns-6.svg"
-                                                        alt="A slide presenting design patterns for messages, including advice for inline dialogues, best practices for validation error messages, and effective use of section banners to communicate important information to users." />
-                                                    <figcaption>Inline Dialogues,
-                                                        Validation
-                                                        Errors and Section Banners.</figcaption>
+                                                        width="1052" height="690"
+                                                        alt="A slide presenting design patterns for messages, including advice for inline dialogues, best practices for 
+                                                        validation error messages, and effective use of section banners to communicate important information to users.">
+                                                    <figcaption>Inline Dialogues, Validation Errors Banners.
+                                                    </figcaption>
                                                 </figure>
                                             </div>
                                         </div>
@@ -3202,6 +3283,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/index.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Index page designs for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Home Page Design.</figcaption>
                                         </figure>
@@ -3210,6 +3292,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/modals.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Modal designs for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Modal Designs.
                                             </figcaption>
@@ -3219,6 +3302,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics1.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Basics Lesson 1 page designs for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Basics Lesson 1 Design.</figcaption>
                                         </figure>
@@ -3227,6 +3311,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/basics2.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Basics Lesson 2 page designs for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Basics Lesson 2 Design.</figcaption>
                                         </figure>
@@ -3235,6 +3320,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/strings.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Strings Lesson page designs for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Strings Lesson Design.</figcaption>
                                         </figure>
@@ -3243,6 +3329,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/tuning.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Tuning Lesson page designs for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Tuning Lesson Design.</figcaption>
                                         </figure>
@@ -3251,6 +3338,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets1.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Frets Lesson 1 page designs for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Frets Lesson 1 Design.</figcaption>
                                         </figure>
@@ -3259,6 +3347,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/frets2.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Frets Lesson 2 page designs for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Frets Lesson 2 Design.</figcaption>
                                         </figure>
@@ -3267,6 +3356,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/chords.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Chords Lesson page designs for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Chords Lesson Design.</figcaption>
                                         </figure>
@@ -3275,6 +3365,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/rhythm.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Rhythm Guitar Lesson page designs for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Rhythm Lesson Design.</figcaption>
                                         </figure>
@@ -3283,6 +3374,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead1.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Lead Guitar Lesson 1 page designs for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Lead Lesson 1 Design.</figcaption>
                                         </figure>
@@ -3291,6 +3383,7 @@
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/desktop/lead2.webp"
+                                                width="500" height="820"
                                                 alt="Illustration depicting the Hi Fidelity Lead Guitar Lesson 2 page design for large devices">
                                             <figcaption>Hi-Fi Larger Viewport Lead Lesson 2 Design.</figcaption>
                                         </figure>
