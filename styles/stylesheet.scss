@@ -1,3 +1,4 @@
+
 // Typography
 $font-family: "Poppins", sans-serif;
 
@@ -1635,7 +1636,6 @@ textarea.input {
           background-image: url(/assets/images/Case-Studies/CS2/main-banner.webp);
           background-size: contain;
         }
-       
       }
     }
   }
@@ -2378,6 +2378,8 @@ textarea.input {
   .grid-container-1col .marketing-banner {
     height: 390px;
   }
+
+
 }
 /*Large Desktop viewport styles */
 @media only screen and (min-width: 1400px) {
@@ -2445,7 +2447,7 @@ textarea.input {
   }
   .grid-container-1col {
     width: 97%;
-}
+  }
   .grid-container-4col .image-container .gallery,
   .grid-container-6col .image-container .gallery {
     background-color: $color_white;
@@ -2484,7 +2486,9 @@ textarea.input {
     }
   }
 
-  .research-list li {justify-content: flex-start;}
+  .research-list li {
+    justify-content: flex-start;
+  }
 
   .carousel-container {
     width: 90%;
@@ -2498,7 +2502,7 @@ textarea.input {
       }
     }
   }
-  
+
   .editorial {
     .header_2-col-banner-right {
       display: grid;
