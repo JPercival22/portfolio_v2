@@ -15,8 +15,14 @@
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link defer href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <!-- Preload the font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <!-- Fallback for browsers with JavaScript disabled -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
 
     <!-- Preload Material Symbols font (combined) -->
     <link rel="preload"
@@ -99,6 +105,7 @@
             transition: background-color .5s ease-in-out;
             border-radius: 8px;
         }
+
         .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link:hover {
             background-color: #aafadf;
         }
@@ -746,10 +753,10 @@
                         <div class="centered-row ">
                             <div class="image-container">
                                 <div class="gallery no-border">
-                                    <img class="lazyload"
+                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS1/planning/CS1-Persona-mini.webp"
                                         alt="Created Persona" width="520" height="360">
-                                    <figcaption>Qualitative User Persona</figcaption>
+                                    <p>Qualitative User Persona</p>
                                 </div>
                             </div>
                         </div>
@@ -921,7 +928,7 @@
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                         data-src="/assets/images/Case-Studies/CS1/planning/CS1-TF-minimised.webp"
-                                                        alt="Task Flow Diagram." width="483" height="252" priority>
+                                                        alt="Task Flow Diagram." width="483" height="252">
                                                     <figcaption>Task Flow User Journey.</figcaption>
                                                 </figure>
                                                 <div class="lightbox lightbox_2">
@@ -1154,7 +1161,7 @@
                                         </div>
                                         <img class="width-85 width-100a"
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                            alt="Paper Prototype Design - image section and carousel." />
+                                            alt="Paper Prototype Design - image section and carousel.">
                                         <p>Paper Prototype - Single image and carousel layout design.</p>
                                     </div>
                                 </div>
@@ -1212,7 +1219,7 @@
                                             <button type="button" id="close-btn_7" class="close-btn">&times;</button>
                                         </div>
                                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                            alt="Home Page Large Screen Wire Frame Design." />
+                                            alt="Home Page Large Screen Wire Frame Design.">
                                         <p>Home Page Large Device Wire Frame Design.</p>
                                     </div>
                                 </div>
@@ -2363,7 +2370,7 @@
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/content/Content-4.svg"
                                                         width="1052" height="690"
-                                                        alt="A slide displaying a table of helpful writing guidelines to facilitate clear and effective communication." />
+                                                        alt="A slide displaying a table of helpful writing guidelines to facilitate clear and effective communication.">
                                                     <figcaption>Table of Clear Communication Suggestions.
                                                     </figcaption>
                                                 </figure>
@@ -2375,7 +2382,8 @@
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                                                         data-src="/assets/images/Case-Studies/CS1/carousel-images/content/Content-5.svg"
                                                         width="1052" height="690"
-                                                        alt="A slide presenting writing style guidelines aimed at fostering cohesive and engaging content for the target audience.">
+                                                        alt="A slide presenting writing style guidelines aimed at fostering cohesive and engaging content for the 
+                                                        target audience.">
                                                     <figcaption>Cohesive and Engaging Content Guidelines.
                                                     </figcaption>
                                                 </figure>
@@ -2547,7 +2555,7 @@
                                             <button type="button" id="close-btn_41b" class="close-btn">&times;</button>
                                         </div>
                                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                            alt="Image depicting the Hi Fidelity Design for the Index Page for Desktop Viewports." />
+                                            alt="Image depicting the Hi Fidelity Design for the Index Page for Desktop Viewports.">
                                         <p>Hi-Fi Desktop Design for the Home page.</p>
                                     </div>
                                 </div>
@@ -2570,7 +2578,7 @@
                                         <img class="lazyload "
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                             data-src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                            alt="Image depicting the Hi-Fidelity Modal Designs." />
+                                            alt="Image depicting the Hi-Fidelity Modal Designs.">
                                         <p>Hi-Fi Desktop Modal Designs.</p>
                                     </div>
                                 </div>
@@ -2592,7 +2600,7 @@
                                             <button type="button" id="close-btn_14" class="close-btn">&times;</button>
                                         </div>
                                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                            alt="Image depicting the Hi-Fidelity Designs for the Basics Lesson 1 Page for Desktop Viewports." />
+                                            alt="Image depicting the Hi-Fidelity Designs for the Basics Lesson 1 Page for Desktop Viewports.">
                                         <p>Hi-Fi Desktop Generic Lesson Design.
                                         </p>
                                     </div>
@@ -3416,14 +3424,14 @@
                             <div class="prototype-container no-border">
 
                                 <a href="https://xd.adobe.com/embed/c7dd0076-2049-4255-900b-d5ab3ecc022a-928e/"
-                                    alt="link to interactive prototype">
+                                    aria-label="link to interactive prototype">
                                     <img class="lazyload border"
                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS1/banners/iphone-test-banner.svg"
                                         alt="link to interactive prototype" width="500" height="750"
-                                        title="Please click or tap the image to open in a new window" />
+                                        title="Please click or tap the image to open in a new window">
                                 </a>
-                                <caption>Click to view prototype in a new window.</caption>
+                                <p>Click to view prototype in a new window.</p>
 
                             </div>
                             <div class="editorial-sm">
@@ -3655,7 +3663,7 @@
     </div>
 
     <!-- Defer main.js script to ensure it's loaded after HTML parsing -->
-    <script defer type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
 
     <!-- Defer lazySizes library script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
