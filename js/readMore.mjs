@@ -1,5 +1,6 @@
+// In your module file, e.g., readMoreModule.mjs
 export function initReadMore() {
-  const readMoreLinks = document.querySelectorAll('.read-more');
+  const readMoreButtons = document.querySelectorAll('.read-more');
   const moreContents = document.querySelectorAll('.more-content');
 
   function openReadMoreDefault() {
@@ -9,8 +10,18 @@ export function initReadMore() {
         moreContent.classList.add('show-more');
       });
 
-      readMoreLinks.forEach(readMoreLink => {
-        readMoreLink.style.display = 'none';
+      readMoreButtons.forEach(readMoreButton => {
+        readMoreButton.style.display = 'none';
+      });
+    } else {
+      moreContents.forEach(moreContent => {
+        moreContent.style.display = 'none';
+        moreContent.classList.remove('show-more');
+      });
+
+      readMoreButtons.forEach(readMoreButton => {
+        readMoreButton.style.display = 'inline';
+        readMoreButton.textContent = 'Show more';
       });
     }
   }
@@ -18,12 +29,18 @@ export function initReadMore() {
   document.addEventListener('click', function(event) {
     if (event.target.matches('.read-more')) {
       event.preventDefault();
-      const readMoreLink = event.target;
-      const moreContent = readMoreLink.previousElementSibling;
+      const readMoreButton = event.target;
+      const moreContent = readMoreButton.previousElementSibling.querySelector('.more-content');
 
-      moreContent.style.display = 'inline';
-      readMoreLink.style.display = 'none';
-      moreContent.classList.add('show-more');
+      if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+        moreContent.style.display = 'inline';
+        readMoreButton.textContent = 'Show less';
+        moreContent.classList.add('show-more');
+      } else {
+        moreContent.style.display = 'none';
+        readMoreButton.textContent = 'Show more';
+        moreContent.classList.remove('show-more');
+      }
     }
   });
 
