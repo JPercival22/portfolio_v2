@@ -45,6 +45,9 @@ async function addMainFunctionality () {
     const { handleScroll } = await import('./navigationModule.mjs')
     handleScroll()
 
+    // Dynamically import and call read-more feature function
+    const { initReadMore } = await import('./readMore.mjs');
+    initReadMore();
 
     // Dynamically import and call initializeTabModules function
     const { initializeTabModules } = await import('./tabModule.mjs')
