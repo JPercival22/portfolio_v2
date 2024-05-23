@@ -137,6 +137,7 @@ main {
   background-color: $color_main-bkg;
   padding-bottom: 1em;
   margin-top: 76px;
+  &.p-0 { margin: 0;}
 }
 
 h2 {
@@ -310,9 +311,7 @@ section {
 // hero section styling
 .hero_p-0 {
   @include apply-flex-styles($flex-col-center);
-  margin-top: 75px;
   padding: 0;
-  width: 100vw;
   background-color: #4fbdd2;
   .hero {
     @include apply-flex-styles($flex-col-center);

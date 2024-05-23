@@ -15,6 +15,9 @@ main {
   padding-bottom: 1em;
   margin-top: 76px;
 }
+main.p-0 {
+  margin: 0;
+}
 
 h2 {
   font-weight: 500;
@@ -232,9 +235,7 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 75px;
   padding: 0;
-  width: 100vw;
   background-color: #4fbdd2;
 }
 .hero_p-0 .hero {
