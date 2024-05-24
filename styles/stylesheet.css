@@ -289,7 +289,7 @@ section {
 .flex-col .qoute-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   font-size: 1.1rem;
@@ -1251,7 +1251,7 @@ textarea.input {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   gap: 1em;
 }
@@ -2331,7 +2331,7 @@ textarea.input {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
   }
   .navbar .navbar-container {
@@ -2802,13 +2802,23 @@ textarea.input {
     max-width: 50%;
   }
 }
-@media only screen and (min-width: 1880px) {
-  section {
-    margin: unset;
-  }
+@media only screen and (min-width: 1800px) {
   .navbar .navbar-container {
-    margin: 0 138px;
-    width: 88%;
+    width: 70%;
+  }
+  .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
+    width: 50%;
+  }
+  .page-wrapper article {
+    flex: 0 0 11%;
+  }
+  .page-wrapper {
+    width: 70vw;
+    justify-content: space-evenly;
+    gap: 1em;
+  }
+  .page-wrapper .main-content .editorial {
+    max-width: 75%;
   }
   .wrapper .wide-card .card-body .card-editorial {
     width: 80%;
@@ -2819,43 +2829,10 @@ textarea.input {
   .wrapper .wide-card .card-body .button-row {
     margin-top: 2em;
   }
-  .page-wrapper {
-    width: 85vw;
-    display: flex;
-  }
-  .page-wrapper article {
-    flex: 0 0 20%;
-  }
-  .page-wrapper article .sideBar {
-    height: calc(100vh - 15em);
-  }
-  .page-wrapper .grid-container-1col .marketing-banner {
-    height: 300px;
-  }
-  .page-wrapper .main-content {
-    flex: 1;
-  }
-  .page-wrapper .main-content .editorial {
-    max-width: 67vw;
-  }
-  .page-wrapper .main-content .editorial .hero {
-    width: -webkit-fill-available;
-  }
-  .page-wrapper .main-content .editorial .case-study-settings .image-container .guitar-banner {
-    height: 400px;
-  }
-  .page-wrapper .main-content .editorial .case-study-settings .two-button-container {
-    width: 30%;
-  }
   .lightbox .lightbox-content.w-4c {
     max-width: 4%;
   }
   .footer-container .footer-social-icon {
     justify-content: space-evenly;
-  }
-}
-@media only screen and (min-width: 1919px) {
-  .page-wrapper article .sideBar {
-    height: calc(100vh - 24em);
   }
 }/*# sourceMappingURL=stylesheet.css.map */

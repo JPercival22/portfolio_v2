@@ -351,7 +351,7 @@ section {
   }
 
   .qoute-text {
-    @include apply-flex-styles($flex-col-center-start);
+    @include apply-flex-styles($flex-col-center);
     font-size: 1.1rem;
     line-height: 22pt;
     font-style: italic;
@@ -1157,7 +1157,7 @@ textarea.input {
     }
   }
   .item {
-    @include apply-flex-styles($flex-col-center-start);
+    @include apply-flex-styles($flex-col-start-start);
     gap: 1em;
   }
   .prototype-container {
@@ -2170,7 +2170,7 @@ textarea.input {
 }
 @media only screen and (min-width: 1200px) {
   .navbar {
-    @include apply-flex-styles($flex-row-center-space_between);
+    @include apply-flex-styles($flex-row-center-space_evenly);
     .navbar-container {
       width: 90%;
       .menu-toggle {
@@ -2633,14 +2633,18 @@ textarea.input {
   }
 }
 
-@media only screen and (min-width: 1880px) {
-  section {
-    margin: unset;
-  }
+@media only screen and (min-width: 1800px) {
   .navbar .navbar-container {
-    margin: 0 138px;
-    width: 88%;
-  }
+    width: 70%;
+}
+  .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
+    width: 50%;
+}
+.page-wrapper article {flex: 0 0 11%;}
+.page-wrapper {width:70vw;justify-content: space-evenly;gap:1em;}
+// .page-wrapper .main-content {width: 75%;}
+.page-wrapper .main-content .editorial {max-width: 75%;}
+  
   .wrapper .wide-card .card-body {
     .card-editorial {
       width: 80%;
@@ -2652,38 +2656,38 @@ textarea.input {
       margin-top: 2em;
     }
   }
-  .page-wrapper {
-    width: 85vw;
-    display: flex;
-    article {
-      flex: 0 0 20%;
-      .sideBar {
-        height: calc(100vh - 15em);
-      }
-    }
-    .grid-container-1col .marketing-banner {
-      height: 300px;
-    }
-    .main-content {
-      flex: 1;
-      .editorial {
-        max-width: 67vw;
-        .hero {
-          width: -webkit-fill-available;
-        }
-        .case-study-settings {
-          .image-container {
-            .guitar-banner {
-              height: 400px;
-            }
-          }
-          .two-button-container {
-            width: 30%;
-          }
-        }
-      }
-    }
-  }
+  // .page-wrapper {
+  //   width: 85vw;
+  //   display: flex;
+  //   article {
+  //     flex: 0 0 20%;
+  //     .sideBar {
+  //       height: calc(100vh - 15em);
+  //     }
+  //   }
+  //   .grid-container-1col .marketing-banner {
+  //     height: 300px;
+  //   }
+  //   .main-content {
+  //     flex: 1;
+  //     .editorial {
+  //       max-width: 67vw;
+  //       .hero {
+  //         width: -webkit-fill-available;
+  //       }
+  //       .case-study-settings {
+  //         .image-container {
+  //           .guitar-banner {
+  //             height: 400px;
+  //           }
+  //         }
+  //         .two-button-container {
+  //           width: 30%;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
   .lightbox .lightbox-content.w-4c {
     max-width: 4%;
   }
@@ -2692,8 +2696,8 @@ textarea.input {
   }
 }
 
-@media only screen and (min-width: 1919px) {
-  .page-wrapper article .sideBar {
-    height: calc(100vh - 24em);
-  }
-}
+// @media only screen and (min-width: 1919px) {
+//   .page-wrapper article .sideBar {
+//     height: calc(100vh - 24em);
+//   }
+// }
