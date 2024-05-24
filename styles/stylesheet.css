@@ -2809,13 +2809,13 @@ textarea.input {
   .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
     width: 50%;
   }
-  .page-wrapper article {
-    flex: 0 0 11%;
-  }
   .page-wrapper {
     width: 70vw;
     justify-content: space-evenly;
     gap: 1em;
+  }
+  .page-wrapper article {
+    flex: 0 0 11%;
   }
   .page-wrapper .main-content .editorial {
     max-width: 75%;
