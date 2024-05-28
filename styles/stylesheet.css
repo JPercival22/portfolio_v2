@@ -52,7 +52,7 @@ a {
 
 ul {
   font-family: "Poppins", sans-serif;
-  list-style: disc;
+  list-style: none;
   margin-left: 16px;
   padding: 0;
   display: flex;
@@ -286,6 +286,9 @@ section {
 .flex-col.gap-1 {
   gap: 1em;
 }
+.flex-col.mt-10 {
+  margin-top: 1em;
+}
 .flex-col .qoute-text {
   display: flex;
   flex-direction: column;
@@ -514,19 +517,35 @@ section {
   grid-gap: 2em;
   margin-bottom: 2em;
 }
-
-.experience-body {
+.experience-wrapper .experience-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
   background-color: #dcfbff;
 }
-
-.experience-duration {
+.experience-wrapper .experience-body .experience-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+.experience-wrapper .experience-body .experience-header h3 {
+  margin: 0;
+}
+.experience-wrapper .experience-body .experience-header h4 {
+  margin-top: 0;
+  line-height: 1.5;
+}
+.experience-wrapper .experience-body .experience-duration {
   font-weight: bold;
 }
-
-.experience-details {
+.experience-wrapper .experience-body .experience-details {
   margin-top: 10px;
 }
 
@@ -565,13 +584,13 @@ section {
 }
 
 .contact-form {
-  background-color: #961ee1;
+  background-color: #4fbdd2;
   position: relative;
 }
 
 .circle {
   border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, #490970);
+  background: linear-gradient(135deg, transparent 20%, #235761);
   position: absolute;
 }
 
@@ -594,7 +613,7 @@ section {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #961ee1;
+  background-color: #3391a3;
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -666,7 +685,7 @@ textarea.input {
   background-color: #fff;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
-  color: #961ee1;
+  color: #3391a3;
   line-height: 1;
   border-radius: 5px;
   outline: none;
@@ -1595,6 +1614,9 @@ textarea.input {
     margin-bottom: 1em;
     border-bottom: 1px solid lightgray;
   }
+  .flex-row.center {
+    align-items: center;
+  }
   .no-border {
     border: none;
   }
@@ -1653,13 +1675,32 @@ textarea.input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    gap: 1em;
   }
   .flex-row.space-between .col .left-align {
+    display: inherit;
     justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+  }
+  .flex-row.space-between .col .left-align .m-0 {
+    margin: 0;
+  }
+  .flex-row.space-between .col .left-align .tertiary-link svg {
+    width: 45px;
   }
   .flex-row.space-between .col .right-align {
+    display: inherit;
     justify-content: flex-end;
+    width: 46%;
+  }
+  .flex-row.space-between .col .right-align .primary-button {
+    width: 25%;
+  }
+  .flex-row.space-between .col .right-align .primary-button.m-0 {
+    margin: 0;
   }
   .button-container {
     display: flex;
@@ -2134,6 +2175,9 @@ textarea.input {
   .body {
     margin: var(--side-margins-992px);
   }
+  .editorial {
+    padding: 1em;
+  }
   .editorial.profile-section {
     display: flex;
     flex-direction: row;
@@ -2193,6 +2237,9 @@ textarea.input {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
+  }
+  .grid-container.rows-1 {
+    grid-template-rows: 1fr;
   }
   .gallery {
     display: flex;
@@ -2508,9 +2555,6 @@ textarea.input {
   .mobile-sidebar {
     display: none;
   }
-  .main_p-0 {
-    padding: 0;
-  }
   .editorial.profile-section .profile-image {
     flex: 10%;
   }
@@ -2525,6 +2569,18 @@ textarea.input {
   .editorial .button-container .primary-button,
   .editorial .button-container .secondary-button {
     width: 10%;
+  }
+  .editorial .grid-container.rows-1 {
+    gap: 0;
+  }
+  .editorial .grid-container.rows-1 .grid-item {
+    width: 90%;
+  }
+  .editorial .grid-container.rows-1 .grid-item ul {
+    margin-left: 0;
+  }
+  .experience-wrapper {
+    width: 99%;
   }
   .contents {
     display: none;
@@ -2806,8 +2862,24 @@ textarea.input {
   .navbar .navbar-container {
     width: 70%;
   }
+  .hero_p-0 .hero {
+    width: 70%;
+    height: 100vh;
+  }
+  .hero_p-0 .hero .hero-content {
+    width: 90%;
+  }
+  .p-0 .flex-col section {
+    max-width: 70vw;
+  }
+  .p-0 .flex-col section .editorial {
+    width: 100%;
+  }
   .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
     width: 50%;
+  }
+  .editorial .grid-container.rows-1 {
+    gap: 4em;
   }
   .page-wrapper {
     width: 70vw;
