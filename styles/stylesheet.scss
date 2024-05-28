@@ -175,7 +175,7 @@ a {
 
 ul {
   font-family: $font-family;
-  list-style: disc;
+  list-style: none;
   margin-left: 16px;
   padding: 0;
   @include apply-flex-styles($flex-col-center-start);
@@ -351,7 +351,9 @@ section {
   &.gap-1 {
     gap: 1em;
   }
-
+  &.mt-10 {
+    margin-top: 1em;
+  }
   .qoute-text {
     @include apply-flex-styles($flex-col-center);
     font-size: 1.1rem;
@@ -559,21 +561,33 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2em;
   margin-bottom: 2em;
-}
-
-.experience-body {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-  background-color: $color_base-bkg-light;
-}
-
-.experience-duration {
-  font-weight: bold;
-}
-
-.experience-details {
-  margin-top: 10px;
+  .experience-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: $color_base-bkg-light;
+    .experience-header {
+      @include apply-flex-styles($flex-col-start-start);
+      gap: 10px;
+      h3 {
+        margin: 0;
+      }
+      h4 {
+        margin-top: 0;
+        line-height: 1.5;
+      }
+    }
+    .experience-duration {
+      font-weight: bold;
+    }
+    .experience-details {
+      margin-top: 10px;
+    }
+  }
 }
 /* contact page styles  */
 
@@ -611,13 +625,13 @@ section {
 }
 
 .contact-form {
-  background-color: #961ee1;
+  background-color: #4fbdd2;
   position: relative;
 }
 
 .circle {
   border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, #490970);
+  background: linear-gradient(135deg, transparent 20%, #235761);
   position: absolute;
 }
 
@@ -640,7 +654,7 @@ section {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #961ee1;
+  background-color:#3391a3;
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -708,7 +722,7 @@ textarea.input {
   background-color: #fff;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
-  color: #961ee1;
+  color:#3391a3;
   line-height: 1;
   border-radius: 5px;
   outline: none;
@@ -1416,6 +1430,9 @@ textarea.input {
     gap: 3em;
     margin-bottom: 1em;
     border-bottom: 1px solid lightgray;
+    &.center {
+      align-items: center;
+    }
   }
   .no-border {
     border: none;
@@ -1474,12 +1491,31 @@ textarea.input {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
+        gap: 1em;
         .left-align {
+          display: inherit;
           justify-content: flex-start;
+          align-items: center;
+          width: 40%;
+          .m-0 {
+            margin: 0;
+          }
+          .tertiary-link svg {
+            width: 45px;
+          }
         }
         .right-align {
+          display: inherit;
           justify-content: flex-end;
+          width: 46%;
+          .primary-button {
+            width: 25%;
+            &.m-0 {
+              margin: 0;
+            }
+          }
         }
       }
     }
@@ -1967,6 +2003,7 @@ textarea.input {
   }
 
   .editorial {
+    padding: 1em;
     &.profile-section {
       @include apply-flex-styles($flex-row-center);
       width: 90%;
@@ -2027,8 +2064,10 @@ textarea.input {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
+    &.rows-1 {
+      grid-template-rows: 1fr;
+    }
   }
-
   .gallery {
     display: flex;
     flex-direction: column;
@@ -2352,9 +2391,7 @@ textarea.input {
   .mobile-sidebar {
     display: none;
   }
-  .main_p-0 {
-    padding: 0;
-  }
+
   .editorial.profile-section .profile-image {
     flex: 10%;
   }
@@ -2374,6 +2411,19 @@ textarea.input {
     width: 10%;
   }
 
+  .editorial .grid-container {
+    &.rows-1 {
+      gap: 0;
+      .grid-item {
+        width: 90%;
+        ul {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .experience-wrapper {width: 99%;}
   // case study styles
   .contents {
     display: none;
@@ -2511,6 +2561,7 @@ textarea.input {
   main {
     padding: 1em 0;
   }
+
   .page-wrapper {
     display: flex;
     align-items: flex-start;
@@ -2638,9 +2689,31 @@ textarea.input {
   .navbar .navbar-container {
     width: 70%;
   }
+  .hero_p-0 .hero {
+    width: 70%;
+    height: 100vh;
+    .hero-content {
+      width: 90%;
+    }
+  }
+
+  .p-0 .flex-col section {
+    max-width: 70vw;
+    .editorial {
+      width: 100%;
+    }
+  }
   .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
     width: 50%;
   }
+
+  .editorial .grid-container {
+    &.rows-1 {
+      gap: 4em;
+    }
+  }
+
+  // case study
   .page-wrapper {
     width: 70vw;
     justify-content: space-evenly;
