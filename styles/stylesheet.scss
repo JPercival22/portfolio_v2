@@ -356,10 +356,11 @@ section {
   }
   .qoute-text {
     @include apply-flex-styles($flex-col-center);
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     line-height: 22pt;
     font-style: italic;
     .signature {
+      @include apply-flex-styles($flex-col-center-end);
       font-size: 1rem;
     }
   }
@@ -617,9 +618,6 @@ section {
 }
 
 .form {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -1984,7 +1982,6 @@ textarea.input {
   .form,
   .contact-form {
     padding: 2em;
-    border-radius: $brad-8;
   }
   /* thankyou styles  */
   .thank-you-container {

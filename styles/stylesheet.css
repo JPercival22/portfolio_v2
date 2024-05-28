@@ -295,11 +295,16 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   line-height: 22pt;
   font-style: italic;
 }
 .flex-col .qoute-text .signature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
   font-size: 1rem;
 }
 .flex-col .profile-image {
@@ -576,9 +581,6 @@ section {
 }
 
 .form {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -2161,7 +2163,6 @@ textarea.input {
   .form,
   .contact-form {
     padding: 2em;
-    border-radius: 8px;
   }
   /* thankyou styles  */
   .thank-you-container {
