@@ -311,9 +311,10 @@ section {
 }
 
 // hero section styling
-.hero_p-0 {
+.hero_p-60 {
   @include apply-flex-styles($flex-col-center);
   padding: 0;
+  padding-top: 60px;
   background-color: #4fbdd2;
   .hero {
     @include apply-flex-styles($flex-col-center);
@@ -623,13 +624,14 @@ section {
 }
 
 .contact-form {
-  background-color: #4fbdd2;
+  background-color: #30618b;
+  border-radius: $brad-8;
   position: relative;
 }
 
 .circle {
   border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, #235761);
+  background: linear-gradient(120deg, transparent 20%, #0D3157);
   position: absolute;
 }
 
@@ -652,8 +654,8 @@ section {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color:#3391a3;
-  transform: rotate(45deg);
+  background: linear-gradient(120deg, transparent 20%, #0D3157);
+  transform: rotate(316deg);
   top: 50px;
   left: -13px;
 }
@@ -719,8 +721,9 @@ textarea.input {
   padding: 0.6rem 1.3rem;
   background-color: #fff;
   border: 2px solid #fafafa;
-  font-size: 0.95rem;
-  color:#3391a3;
+  font-family: $font-family;
+  font-size: 1.1rem;
+  color:#0d3150;
   line-height: 1;
   border-radius: 5px;
   outline: none;
@@ -729,7 +732,7 @@ textarea.input {
   margin: 0;
   width: 100%;
   &:hover {
-    background-color: #008190;
+    background-color:#306491;
     color: #fff;
   }
 }
@@ -815,7 +818,7 @@ textarea.input {
       padding: 0;
     }
     .anchor {
-      color: #961ee1;
+      color: #0D3157;
       font-size: 1rem;
       text-decoration: underline;
       transition: all 0.5s ease-in-out;
@@ -1524,7 +1527,8 @@ textarea.input {
   }
 
   .p-0 .hero {
-    height: 90vh;
+    height: 80vh;
+    width: auto;
     &.index-banner .hero-content {
       h1 {
         font-size: 4em;
