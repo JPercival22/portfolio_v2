@@ -1,13 +1,14 @@
-// navigation.mjs
-const navbar = document.getElementById('navBar');
+const navbars = document.querySelectorAll('.navbar');
 
 function handleScroll() {
   function updateNavbarStyle() {
-    if (window.scrollY > 0) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    navbars.forEach(navbar => {
+      if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
   }
 
   // Initial update on page load
