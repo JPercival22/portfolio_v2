@@ -1094,13 +1094,13 @@ textarea.input {
   }
 }
 .research-list {
-  @include apply-flex-styles($flex-col-center-start);
+  @include apply-flex-styles($flex-col-start-start);
   gap: 10px;
   list-style: none;
   margin: 0;
   padding: 0;
   li {
-    @include apply-flex-styles($flex-row-center);
+    @include apply-flex-styles($flex-row-center-start);
     gap: 10px;
     .logo-sm {
       width: 40px;
@@ -1960,7 +1960,7 @@ textarea.input {
       .two-button-container {
         width: 50%;
         a {
-          width: 50%;
+          width: 30%;
           height: inherit;
         }
       }

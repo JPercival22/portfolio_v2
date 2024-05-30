@@ -122,7 +122,11 @@
             align-items: center;
             justify-content: center;
             gap: 0.5em;
-            width: -webkit-fill-available;
+            width: 100%;
+        }
+
+        .hero .case-study-settings .space-between .col .two-button-container.right-align a {
+            width:40%;
         }
 
         .hero .case-study-settings .bullet-list-row {
@@ -152,6 +156,7 @@
         @media only screen and (min-width: 768px) {
             .hero .case-study-settings .space-between .col .two-button-container.right-align {
                 flex-direction: row;
+                justify-content: flex-end;
             }
 
             .editorial .hero .case-study-settings .image-container .syn-banner {
@@ -203,42 +208,6 @@
 </head>
 
 <body>
-    <header id="navBar" class="navbar">
-        <nav class="navbar-container">
-            <div class="home-link">
-                <a href="/index.html" class="navbar-logo" aria-label="Home">
-                    <img src="assets/images/jp-LOGO.svg" width="40" height="40" alt="company logo">
-                    <div class="logo-container">
-                        <div class="logo-name">Joseph Percival</div>
-                        <div class="logo-title">UX &amp; UI DESIGNER</div>
-                    </div>
-                </a>
-            </div>
-
-            <button type="button" class="menu-toggle" aria-label="main navigation menu button" aria-expanded="false"
-                aria-controls="navMenu">
-                <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="42" viewBox="0 -960 960 960"
-                    width="42">
-                    <path
-                        d="M150-240q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-300h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-240H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-510h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-450H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-720h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-660H150Z" />
-                </svg>
-            </button>
-
-            <ul id="navMenu" class="nav-menu">
-                <li class="navbar-link navbar-item">
-                    <a href="index.html" title="Link to the Home Page">Case Studies</a>
-                </li>
-                <li class="navbar-link navbar-item">
-                    <a href="/about-me.html" title="Link to the About Us page">About Me</a>
-                </li>
-                <li class="navbar-link navbar-item">
-                    <a href="/contact-form.html" title="Link to the Contact Us page">Contact Me</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-
     <header class="navbar">
         <nav class="navbar-container">
             <div class="home-link">
@@ -251,8 +220,7 @@
                 </a>
             </div>
 
-            <button type="button" class="menu-toggle" aria-label="main navigation menu button" aria-expanded="false"
-                aria-controls="navMenu">
+            <button type="button" class="menu-toggle" aria-label="main navigation menu button" aria-expanded="false">
                 <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="42" viewBox="0 -960 960 960"
                     width="42">
                     <path
@@ -588,7 +556,7 @@
                                         <a id="backButton" class="secondary-button" href="/index.html"
                                             aria-label="button link to home page"
                                             title="Please click this button if you would like to see all projects.">
-                                            View Projects
+                                            Projects
                                         </a>
                                         <a id="forwardButton" class="primary-button" href="/come-together.html"
                                             aria-label="button link to go to the next project"
@@ -961,7 +929,7 @@
                             an intuitive user task flow design, compelling experiences can be crafted to captivate
                             the audience and keep them highly engaged.
                         </p>
-                        <aside>
+                        <aside title="Task and User Flow Tabular Views">
                             <div class="tab-container" id="tabContainer2">
                                 <div class="tab-buttons">
                                     <button type="button" class="tab-button active" data-target="tab1">Task
@@ -1364,7 +1332,7 @@
                             designs embody the culmination of research conducted in preceding phases, aimed at
                             capturing and communicating the user-centric insights and requirements identified during
                             the research process.</p>
-                        <aside>
+                        <aside title="Low Fidelity Designs Tabular Views">
                             <div class="tab-container" id="tabContainer3">
                                 <div class="tab-buttons">
                                     <button type="button" class="tab-button active" data-target="tab1">Main
