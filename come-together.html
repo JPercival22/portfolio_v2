@@ -6,16 +6,200 @@
     <meta name="keywords" content="HTML5, CSS3, JavaScript">
     <meta name="description" content="UX Portfolio for Joseph Percival">
     <meta name="keywords"
-        content="HTML, CSS, JavaScript, User Experience Design, UI, UX, UX Testing, Speech Recognition, Guitar Tutorial">
+        content="HTML, CSS, JavaScript, User Experience Design, UI, UX, UX Testing, Pro-Bono, Charity Website">
     <meta name="author" content="Joseph Percival">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study 3</title>
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload the font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <!-- Fallback for browsers with JavaScript disabled -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- Preload Material Symbols font (combined) -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    </noscript>
+
+    <style>
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 1;
+            margin-bottom: 0.7rem;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 15pt;
+            letter-spacing: 0.55pt;
+            margin: 0;
+        }
+
+        .editorial {
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+            gap: 10px;
+            width: 90vw;
+        }
+
+        .hero .case-study-settings {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .hero .case-study-settings .space-between {
+            display: grid;
+            grid-template-columns: 2fr;
+            grid-template-rows: auto;
+            justify-items: stretch;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero .case-study-settings .space-between .col {
+            width: 100%;
+        }
+
+        .hero .case-study-settings .space-between .col .two-button-container.left-align {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            width: -webkit-fill-available;
+        }
+
+        .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
+            display: flex;
+            width: 50%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            transition: background-color .5s ease-in-out;
+            border-radius: 8px;
+        }
+
+        .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link:hover {
+            background-color: #aafadf;
+        }
+
+        .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link svg {
+            width: 50px;
+            height: auto;
+        }
+
+        .hero .case-study-settings .space-between .col .two-button-container.right-align {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            width: -webkit-fill-available;
+        }
+
+        .hero .case-study-settings .bullet-list-row {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+            width: -webkit-fill-available;
+            list-style: none;
+        }
+
+        .hero .case-study-settings .image-container {
+            width: -webkit-fill-available;
+            background-color: transparent;
+        }
+
+        .editorial .hero .case-study-settings .image-container .guitar-banner {
+            background-image: url(/assets/images/Case-Studies/CS1/banners/CS1-sm-device-demo.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 300px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .hero .case-study-settings .space-between .col .two-button-container.right-align {
+                flex-direction: row;
+            }
+
+            .editorial .hero .case-study-settings .image-container .guitar-banner {
+                background-image: url(/assets/images/Case-Studies/CS1/banners/CS1-lg-device-demo.webp);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .hero .case-study-settings .space-between .col .two-button-container {
+                width: 50%;
+            }
+
+            .hero .case-study-settings .space-between .col .two-button-container.left-align {
+                justify-content: flex-start;
+            }
+
+            .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
+                align-items: center;
+                justify-content: flex-start;
+                width: 50%;
+            }
+
+            .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link .vector {
+                width: 40px;
+            }
+
+            .hero .case-study-settings .space-between .col .two-button-container.right-align {
+                justify-content: flex-end;
+            }
+
+            .hero .case-study-settings .space-between .col .two-button-container.right-align .primary-button,
+            .hero .case-study-settings .space-between .col .two-button-container.right-align .secondary-button {
+                width: 120px;
+                height: 24px;
+            }
+        }
+    </style>
+
+    <!-- Preload main stylesheet -->
     <link rel="preload" href="/styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <noscript>
+        <link rel="stylesheet" href="/styles/stylesheet.css">
+    </noscript>
 </head>
 
 <body>
