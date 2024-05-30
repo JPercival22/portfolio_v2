@@ -1140,7 +1140,7 @@ textarea.input {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   gap: 10px;
   list-style: none;
@@ -1151,7 +1151,7 @@ textarea.input {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   gap: 10px;
 }
@@ -2127,7 +2127,7 @@ textarea.input {
     width: 50%;
   }
   .editorial .hero .case-study-settings .two-button-container a {
-    width: 50%;
+    width: 30%;
     height: inherit;
   }
   .editorial .hero .case-study-settings .bullet-list-row {
