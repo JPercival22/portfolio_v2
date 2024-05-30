@@ -11,32 +11,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study 2</title>
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-
+    
+    <!-- Preload the primary banner image -->
+  <link rel="preload" href="/assets/images/Case-Studies/CS2/syn-banner.webp" as="image">
+  <link rel="preload" href="/assets/images/Case-Studies/CS2/main-banner.webp" as="image">
+    
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Preload the font -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <noscript>
         <!-- Fallback for browsers with JavaScript disabled -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
             rel="stylesheet">
     </noscript>
 
-    <!-- Preload Material Symbols font (combined) -->
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-        media="print" onload="this.media='all'">
+    <!-- Load Material Symbols font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+        rel="stylesheet">
     <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+            rel="stylesheet">
     </noscript>
-
     <style>
         h1 {
             font-family: 'Poppins', sans-serif;
@@ -140,8 +140,8 @@
             background-color: transparent;
         }
 
-        .editorial .hero .case-study-settings .image-container .guitar-banner {
-            background-image: url(/assets/images/Case-Studies/CS2/banners/CS2-sm-device-demo.svg);
+        .editorial .hero .case-study-settings .image-container .syn-banner {
+            background-image: url(/assets/images/Case-Studies/CS2/syn-banner.webp);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -154,8 +154,8 @@
                 flex-direction: row;
             }
 
-            .editorial .hero .case-study-settings .image-container .guitar-banner {
-                background-image: url(/assets/images/Case-Studies/CS2/banners/CS2-lg-device-demo.webp);
+            .editorial .hero .case-study-settings .image-container .syn-banner {
+                background-image: url(/assets/images/Case-Studies/CS2/main-banner.webp);
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -194,6 +194,7 @@
             }
         }
     </style>
+
     <!-- Preload main stylesheet -->
     <link rel="preload" href="/styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -225,7 +226,7 @@
 
             <ul id="navMenu" class="nav-menu">
                 <li class="navbar-link navbar-item">
-                    <a href="/index.html" title="Link to the Home Page">Case Studies</a>
+                    <a href="index.html" title="Link to the Home Page">Case Studies</a>
                 </li>
                 <li class="navbar-link navbar-item">
                     <a href="/about-me.html" title="Link to the About Us page">About Me</a>
@@ -261,7 +262,7 @@
 
             <ul class="nav-menu">
                 <li class="navbar-link navbar-item">
-                    <a href="#caseStudies" title="Link to the Home Page">Case Studies</a>
+                    <a href="/index.html" title="Link to the Home Page">Case Studies</a>
                 </li>
                 <li class="navbar-link navbar-item">
                     <a href="/about-me.html" title="Link to the About Us page">About Me</a>
@@ -796,7 +797,7 @@
                                 <div class="gallery no-border">
                                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS2/planning/persona.svg"
-                                        alt="Created Persona">
+                                        alt="Created Persona" width="936" height="714">
                                     <p>Qualitative User Persona</p>
                                 </div>
                             </div>
@@ -1237,7 +1238,8 @@
                                 <figure class="gallery" data-index="8">
                                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS2/Low-Fi/Product-Description.jpg"
-                                        alt="Paper Prototype - Product Description Page Wire Frame Design.">
+                                        alt="Paper Prototype - Product Description Page Wire Frame Design." width="204"
+                                        height="290">
                                     <figcaption>Paper Prototype - Description Page Wire Frame Design.</figcaption>
                                 </figure>
                                 <div class="lightbox lightbox_8">
@@ -1257,7 +1259,8 @@
                                 <figure class="gallery" data-index="9">
                                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS2/Low-Fi/Basket-Modal.jpg"
-                                        alt="Paper Prototype Design - Basket Modal Initial Layout Wire Frame Design.">
+                                        alt="Paper Prototype Design - Basket Modal Initial Layout Wire Frame Design."
+                                        width="204" height="295">
                                     <figcaption>Paper Prototype Design - Basket Modal Wire Frame Design.
                                     </figcaption>
                                 </figure>
@@ -1278,7 +1281,8 @@
                                 <figure class="gallery" data-index="10">
                                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS2/Low-Fi/Basket-Page.jpg"
-                                        alt="Paper Prototype Design - Basket Page Initial Layout Design.">
+                                        alt="Paper Prototype Design - Basket Page Initial Layout Design." width="204"
+                                        height="282">
                                     <figcaption>Paper Prototype Design - Basket Page Wire Frame Design.</figcaption>
                                 </figure>
                                 <div class="lightbox lightbox_10">
@@ -1298,7 +1302,8 @@
                                 <figure class="gallery" data-index="11">
                                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS2/Low-Fi/Card-Ideation.jpg"
-                                        alt="Paper Prototype - Product Card Initial Layout Wire Frame Design.">
+                                        alt="Paper Prototype - Product Card Initial Layout Wire Frame Design."
+                                        width="204" height="290">
                                     <figcaption>Paper Prototype - Product Card Design.</figcaption>
                                 </figure>
                                 <div class="lightbox lightbox_11">
@@ -1318,7 +1323,7 @@
                                 <figure class="gallery" data-index="12">
                                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS2/Low-Fi/top-nav&footer.webp"
-                                        alt="Paper Prototype - Ergonomic Reach Design.">
+                                        alt="Paper Prototype - Ergonomic Reach Design." width="204" height="150">
                                     <figcaption>Paper Prototype - Ergonomic Reach Design.</figcaption>
                                 </figure>
                                 <div class="lightbox lightbox_12">
@@ -1377,54 +1382,31 @@
                                         </p>
                                         <p class="hide-sm">Please feel free to click on any image to enlarge them.
                                         </p>
-                                        <div class="grid-container-3col">
-                                            <div class="image-container lightbox-img-trigger">
-                                                <figure class="gallery" data-index="13">
+                                        <div class="grid-container-4col">
+                                            <div class="image-container">
+                                                <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                         data-src="/assets/images/Case-Studies/CS2/Wireframes/Index.webp"
-                                                        alt="Low Fidelity Design - Home Page Layout.">
+                                                        alt="Low Fidelity Design - Home Page Layout." width="204"
+                                                        height="1110">
                                                     <figcaption>Lo-Fi Home Design.</figcaption>
                                                 </figure>
-
-                                                <div class="lightbox lightbox_13">
-                                                    <div class="lightbox-content w-40 w-30a w-20b">
-                                                        <div class="header">
-                                                            <h4>Home Page</h4>
-                                                            <button type="button" id="close-btn_13"
-                                                                class="close-btn">&times;</button>
-                                                        </div>
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                            alt="Low Fidelity Design - Home Page Layout.">
-                                                        <p>Lo-Fi Home Design.</p>
-                                                    </div>
-                                                </div>
                                             </div>
 
-                                            <div class="image-container lightbox-img-trigger">
-                                                <figure class="gallery" data-index="14">
+                                            <div class="image-container">
+                                                <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                         data-src="/assets/images/Case-Studies/CS2/Wireframes/Product-List.webp"
-                                                        alt="Low Fidelity Design - Product List Page.">
+                                                        alt="Low Fidelity Design - Product List Page." width="204"
+                                                        height="1155">
                                                     <figcaption>Lo-Fi Product List Design.</figcaption>
                                                 </figure>
-                                                <div class="lightbox lightbox_14">
-                                                    <div class="lightbox-content">
-                                                        <div class="header">
-                                                            <h4>Prod List</h4>
-                                                            <button type="button" id="close-btn_14"
-                                                                class="close-btn">&times;</button>
-                                                        </div>
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                            alt="Low Fidelity Design - Product List Page.">
-                                                        <p>Lo-Fi Product List Design.</p>
-                                                    </div>
-                                                </div>
                                             </div>
 
-                                            <div class="image-container lightbox-img-trigger">
-                                                <figure class="gallery" data-index="15">
+                                            <div class="image-container">
+                                                <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                         data-src="/assets/images/Case-Studies/CS2/Wireframes/Prod-Desc.webp"
@@ -1432,23 +1414,10 @@
                                                         width="501" height="1165">
                                                     <figcaption>Lo-Fi Product Description Design.</figcaption>
                                                 </figure>
-
-                                                <div class="lightbox lightbox_15">
-                                                    <div class="lightbox-content w-25 w-20a w-15b">
-                                                        <div class="header">
-                                                            <h4>Product Description</h4>
-                                                            <button type="button" id="close-btn_15"
-                                                                class="close-btn">&times;</button>
-                                                        </div>
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                            alt="Low Fidelity Design - Product Description Page.">
-                                                        <p>Lo-Fi Product Description Design.</p>
-                                                    </div>
-                                                </div>
                                             </div>
 
-                                            <div class="image-container lightbox-img-trigger">
-                                                <figure class="gallery" data-index="16">
+                                            <div class="image-container">
+                                                <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                         data-src="/assets/images/Case-Studies/CS2/Wireframes/basket-modal.webp"
@@ -1456,23 +1425,10 @@
                                                         height="1165">
                                                     <figcaption>Lo-Fi Basket Modal Design.</figcaption>
                                                 </figure>
-
-                                                <div class="lightbox lightbox_16">
-                                                    <div class="lightbox-content w-25 w-20a w-15b">
-                                                        <div class="header">
-                                                            <h4>Basket Modal</h4>
-                                                            <button type="button" id="close-btn_16"
-                                                                class="close-btn">&times;</button>
-                                                        </div>
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                            alt="Low Fidelity Design - Basket Modal Overlay.">
-                                                        <p>Lo-Fi Basket Modal Design.</p>
-                                                    </div>
-                                                </div>
                                             </div>
 
-                                            <div class="image-container lightbox-img-trigger">
-                                                <figure class="gallery" data-index="17">
+                                            <div class="image-container">
+                                                <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                         data-src="/assets/images/Case-Studies/CS2/Wireframes/Basket.webp"
@@ -1480,22 +1436,10 @@
                                                         height="1165">
                                                     <figcaption>Lo-Fi Basket Design.</figcaption>
                                                 </figure>
-                                                <div class="lightbox lightbox_17">
-                                                    <div class="lightbox-content">
-                                                        <div class="header">
-                                                            <h4>Basket Page</h4>
-                                                            <button type="button" id="close-btn_17"
-                                                                class="close-btn">&times;</button>
-                                                        </div>
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                            alt="Low Fidelity - Basket Page Design.">
-                                                        <p>Lo-Fi Basket Page Design.</p>
-                                                    </div>
-                                                </div>
                                             </div>
 
-                                            <div class="image-container lightbox-img-trigger">
-                                                <figure class="gallery" data-index="18">
+                                            <div class="image-container">
+                                                <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                         data-src="/assets/images/Case-Studies/CS2/Wireframes/Menu.webp"
@@ -1503,19 +1447,6 @@
                                                         height="1165">
                                                     <figcaption>Lo-Fi Main Menu Design.</figcaption>
                                                 </figure>
-
-                                                <div class="lightbox lightbox_18">
-                                                    <div class="lightbox-content w-25 w-20a w-15b">
-                                                        <div class="header">
-                                                            <h4>Main Menu</h4>
-                                                            <button type="button" id="close-btn_18"
-                                                                class="close-btn">&times;</button>
-                                                        </div>
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                            alt="Low Fidelity - Main Menu Design.">
-                                                        <p>Lo-Fi Main Menu Design.</p>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1563,7 +1494,7 @@
                                                     </figcaption>
                                                 </figure>
                                                 <div class="lightbox lightbox_20">
-                                                    <div class="lightbox-content">
+                                                    <div class="lightbox-content w-25 w-20a w-15b">
                                                         <div class="header">
                                                             <h4>User Menu</h4>
                                                             <button type="button" id="close-btn_20"
@@ -1587,7 +1518,7 @@
                                                 </figure>
 
                                                 <div class="lightbox lightbox_21">
-                                                    <div class="lightbox-content w-10 w-8a w-6b w-4c">
+                                                    <div class="lightbox-content w-25 w-20a w-15b">
                                                         <div class="header">
                                                             <h4>Empty Basket</h4>
                                                             <button type="button" id="close-btn_21"
@@ -1611,7 +1542,7 @@
                                                 </figure>
 
                                                 <div class="lightbox lightbox_22">
-                                                    <div class="lightbox-content w-10 w-8a w-6b w-4c">
+                                                    <div class="lightbox-content w-25 w-20a w-15b">
                                                         <div class="header">
                                                             <h4>Fly-Out Basket</h4>
                                                             <button type="button" id="close-btn_22"
@@ -1657,74 +1588,78 @@
                                     <div class="headline">
                                         <h4>Home Page Task Flow Paths</h4>
                                     </div>
+                                    <div class="accordion-toggle">
+                                        <span class="material-symbols-outlined">
+                                            expand_more
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="accordion-toggle">
-                                    <span class="material-symbols-outlined">
-                                        expand_more
-                                    </span>
+                                <div class="accordion-content grid-container-1col">
+                                    <figure class="gallery">
+                                        <img class="lazyload no-border"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                            data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-Index-WF.svg"
+                                            alt="Identified Task Flow Priorities for the selected Index Page design"
+                                            width="520" height="740">
+                                        <figcaption>Identified TF paths for the Home Page Usage.</figcaption>
+                                    </figure>
                                 </div>
-                            </div>
-                            <div class="accordion-content grid-container-1col">
-                                <figure class="gallery">
-                                    <img class="lazyload no-border"
-                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-Index-WF.svg"
-                                        alt="Identified Task Flow Priorities for the selected Home Page design."
-                                        width="520" height="740">
-                                    <figcaption>Identified TF paths for the Home Page Usage.</figcaption>
-                                </figure>
                             </div>
 
                             <div class="accordion-item">
                                 <div class="accordion-header">
                                     <div class="headline">
-                                        <h4>Product List Task Flow Paths</h4>
+                                        <h4>Product List Page Task Flow Paths</h4>
+                                    </div>
+                                    <div class="accordion-toggle">
+                                        <span class="material-symbols-outlined">
+                                            expand_more
+                                        </span>
                                     </div>
                                 </div>
-                                <div class="accordion-toggle">
-                                    <span class="material-symbols-outlined">
-                                        expand_more
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="accordion-content grid-container-1col">
-                                <figure class="gallery">
-                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-productList-WF.svg"
-                                        alt="Identified Task Flow Priorities for the selected Product List design."
-                                        width="521" height="740">
-                                    <figcaption>Identified TF paths for the Product List design.</figcaption>
-                                </figure>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <div class="headline">
-                                    <h4>Product Description Task Flow Paths</h4>
-                                </div>
-                                <div class="accordion-toggle">
-                                    <span class="material-symbols-outlined">
-                                        expand_more
-                                    </span>
+                                <div class="accordion-content grid-container-1col">
+                                    <figure class="gallery">
+                                        <img class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                            data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-productList-WF.svg"
+                                            alt="Identified Task Flow Priorities for the Product List Page Designs."
+                                            width="521" height="740">
+                                        <figcaption>Identified TF paths for the Product List Page.
+                                        </figcaption>
+                                    </figure>
                                 </div>
                             </div>
 
-                            <div class="accordion-content grid-container-1col">
-                                <figure class="gallery">
-                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-prodDesc-WF.svg"
-                                        alt="Identified Task Flow Priorities for the selected Product Description design."
-                                        width="521" height="740">
-                                    <figcaption>Identified TF paths for the Product Description Page.</figcaption>
-                                </figure>
-                            </div>
-                        </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <div class="headline">
+                                        <h4>Product Description Page Task Flow Paths</h4>
+                                    </div>
+                                    <div class="accordion-toggle">
+                                        <span class="material-symbols-outlined">
+                                            expand_more
+                                        </span>
+                                    </div>
+                                </div>
 
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <div class="headline">
-                                    <h4>Basket Page Task Flow Paths</h4>
+                                <div class="accordion-content grid-container-1col">
+                                    <figure class="gallery">
+                                        <img class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                            data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-prodDesc-WF.svg"
+                                            alt="Identified Task Flow Priorities for Product Description Page."
+                                            width="521" height="740">
+                                        <figcaption>Identified TF paths for the Product Description Page.
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <div class="headline">
+                                        <h4>Basket Page Task Flow Paths</h4>
+                                    </div>
                                     <div class="accordion-toggle">
                                         <span class="material-symbols-outlined">
                                             expand_more
@@ -1737,93 +1672,97 @@
                                         <img class="lazyload"
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                             data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhance-Flow-Basket.svg"
-                                            alt="Identified Task Flow Priorities for the selected Basket Layout design."
+                                            alt="Identified Task Flow Priorities for the selected Basket Page design."
                                             width="521" height="740">
-                                        <figcaption>Identified TF paths for the Basket design.</figcaption>
+                                        <figcaption>Identified TF paths for the Basket Page design.</figcaption>
                                     </figure>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- end of mobile accordion  -->
-                    <div class="tab-container hide-sm " id="tabContainer4">
-                        <div class="tab-buttons">
-                            <button type="button" class="tab-button active" data-target="tab1">Index Page</button>
-                            <button type="button" class="tab-button" data-target="tab2">Product List</button>
-                            <button type="button" class="tab-button" data-target="tab3">Product Description</button>
-                            <button type="button" class="tab-button" data-target="tab4">Basket</button>
-                        </div>
-                        <div class="tab-contents">
-                            <div id="tabContent7" class="tab-module" data-title="Tab 1">
-                                <h3>Index Page</h3>
-                                <p>These designs encapsulate the core pages of the application, meticulously
-                                    catering to all business requirements. The primary emphasis is placed on
-                                    ensuring that the design adeptly fulfills the needs and objectives of both
-                                    the business and end users, culminating in a comprehensive and
-                                    purpose-driven user experience.</p>
-                                <figure class="gallery no-border">
-                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-Index-WF.svg"
-                                        alt="Index page enhanced task flow dissection">
-                                    <figcaption>Enhanced Task Flow Identifications for the Index Page.
-                                    </figcaption>
-                                </figure>
+                        <!-- end of mobile accordion  -->
+                        <div class="tab-container hide-sm " id="tabContainer4">
+                            <div class="tab-buttons">
+                                <button type="button" class="tab-button active" data-target="tab1">Index Page</button>
+                                <button type="button" class="tab-button" data-target="tab2">Product List</button>
+                                <button type="button" class="tab-button" data-target="tab3">Product Description</button>
+                                <button type="button" class="tab-button" data-target="tab4">Basket</button>
                             </div>
+                            <div class="tab-contents">
+                                <div id="tabContent7" class="tab-module" data-title="Tab 1">
+                                    <h3>Index Page</h3>
+                                    <p>These designs encapsulate the core pages of the application, meticulously
+                                        catering to all business requirements. The primary emphasis is placed on
+                                        ensuring that the design adeptly fulfills the needs and objectives of both
+                                        the business and end users, culminating in a comprehensive and
+                                        purpose-driven user experience.</p>
+                                    <figure class="gallery no-border">
+                                        <img class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                            data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-Index-WF.svg"
+                                            alt="Index page enhanced task flow dissection" width="902" height="1290">
+                                        <figcaption>Enhanced Task Flow Identifications for the Index Page.
+                                        </figcaption>
+                                    </figure>
+                                </div>
 
-                            <div id="tabContent8" class="tab-module" data-title="Tab 2">
-                                <h3>Product List Page</h3>
-                                <p>These designs represent the core pages of the application, meticulously
-                                    addressing all business requirements. The primary focus is on ensuring that
-                                    the design adeptly meets the needs and objectives of both the business and
-                                    the end users, resulting in a comprehensive and purposeful user experience.
-                                </p>
-                                <figure class="gallery no-border">
-                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-productList-WF.svg"
-                                        alt="Index page enhanced task flow dissection" width="902" height="1290">
-                                    <figcaption>Enhanced Task Flow Identifications on the Product List Page.
-                                    </figcaption>
-                                </figure>
-                            </div>
+                                <div id="tabContent8" class="tab-module" data-title="Tab 2">
+                                    <h3>Product List Page</h3>
+                                    <p>These designs represent the core pages of the application, meticulously
+                                        addressing all business requirements. The primary focus is on ensuring that
+                                        the design adeptly meets the needs and objectives of both the business and
+                                        the end users, resulting in a comprehensive and purposeful user experience.
+                                    </p>
+                                    <figure class="gallery no-border">
+                                        <img class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                            data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-productList-WF.svg"
+                                            alt="Index page enhanced task flow dissection" width="902" height="1290">
+                                        <figcaption>Enhanced Task Flow Identifications on the Product List Page.
+                                        </figcaption>
+                                    </figure>
+                                </div>
 
-                            <div id="tabContent9" class="tab-module" data-title="Tab 3">
-                                <h3>Product Description Page</h3>
-                                <p>This design embodies the key elements of the application's product
-                                    description page, addressing all pertinent business requirements. The
-                                    primary focus is on ensuring that the design effectively meets the needs and
-                                    goals of both the business and the end users, resulting in a comprehensive
-                                    and purposeful user experience for this specific page.</p>
-                                <figure class="gallery no-border">
-                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-prodDesc-WF.svg"
-                                        alt="Index page enhanced task flow dissection" width="902" height="1290">
-                                    <figcaption>Enhanced Task Flow Identifications on the Product Description
-                                        Page.
-                                    </figcaption>
-                                </figure>
-                            </div>
+                                <div id="tabContent9" class="tab-module" data-title="Tab 3">
+                                    <h3>Product Description Page</h3>
+                                    <p>This design embodies the key elements of the application's product
+                                        description page, addressing all pertinent business requirements. The
+                                        primary focus is on ensuring that the design effectively meets the needs and
+                                        goals of both the business and the end users, resulting in a comprehensive
+                                        and purposeful user experience for this specific page.</p>
+                                    <figure class="gallery no-border">
+                                        <img class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                            data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhanced-prodDesc-WF.svg"
+                                            alt="Index page enhanced task flow dissection" width="902" height="1290">
+                                        <figcaption>Enhanced Task Flow Identifications on the Product Description
+                                            Page.
+                                        </figcaption>
+                                    </figure>
+                                </div>
 
-                            <div id="tabContent10" class="tab-module" data-title="Tab 4">
-                                <h3>Basket Page</h3>
-                                <p>The usage and inclusion areas of significance in a Basket page for an iOS app
-                                    are strategically designed to streamline the purchasing process and ensure a
-                                    seamless user experience. Key elements and features include:</p>
-                                <ul>
-                                    <li>Product Visualisation</li>
-                                    <li>Quantity Management</li>
-                                    <li>Pricing Summary</li>
-                                    <li>Discount Notifications and Code Input</li>
-                                    <li>Prominent Calls to Action (CTA) Ensuring a Secure Checkout</li>
-                                </ul>
-                                <p>These elements collectively contribute to a streamlined shopping experience,
-                                    enhancing the overall user journey.</p>
-                                <figure class="gallery no-border">
-                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhance-Flow-Basket.svg"
-                                        alt="Index page enhanced task flow dissection" width="902" height="1290">
-                                    <figcaption>Enhanced Task Flow Identifications of the Basket Page.
-                                    </figcaption>
-                                </figure>
+                                <div id="tabContent10" class="tab-module" data-title="Tab 4">
+                                    <h3>Basket Page</h3>
+                                    <p>The usage and inclusion areas of significance in a Basket page for an iOS app
+                                        are strategically designed to streamline the purchasing process and ensure a
+                                        seamless user experience. Key elements and features include:</p>
+                                    <ul>
+                                        <li>Product Visualisation</li>
+                                        <li>Quantity Management</li>
+                                        <li>Pricing Summary</li>
+                                        <li>Discount Notifications and Code Input</li>
+                                        <li>Prominent Calls to Action (CTA) Ensuring a Secure Checkout</li>
+                                    </ul>
+                                    <p>These elements collectively contribute to a streamlined shopping experience,
+                                        enhancing the overall user journey.</p>
+                                    <figure class="gallery no-border">
+                                        <img class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                            data-src="/assets/images/Case-Studies/CS2/Enhanced/Low-Fi/Enhance-Flow-Basket.svg"
+                                            alt="Index page enhanced task flow dissection" width="902" height="1290">
+                                        <figcaption>Enhanced Task Flow Identifications of the Basket Page.
+                                        </figcaption>
+                                    </figure>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2762,112 +2701,52 @@
                         <p>Please free to click any image to expand.</p>
                         <div class="grid-container-5col">
 
-                            <div class="image-container lightbox-img-trigger">
-                                <figure class="gallery" data-index="23">
+                            <div class="image-container">
+                                <figure class="gallery">
                                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS2/Hi-Fi/Hi-Fi-TF-Index.svg"
                                         alt="Image depicting the Hi Fidelity Design for the Index Page." width="500"
                                         height="820">
                                     <figcaption>Hi-Fi Index page design. </figcaption>
                                 </figure>
-
-                                <div class="lightbox lightbox_23">
-                                    <div class="lightbox-content w-30 w-25a w-20b">
-                                        <div class="header">
-                                            <h4>Home Page</h4>
-                                            <button type="button" id="close-btn_23" class="close-btn">&times;</button>
-                                        </div>
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                            alt="Low Fidelity Home Page Design.">
-                                        <p>Hi-Fi Index page design.</p>
-                                    </div>
-                                </div>
                             </div>
 
-                            <div class="image-container lightbox-img-trigger">
-                                <figure class="gallery" data-index="24">
+                            <div class="image-container">
+                                <figure class="gallery">
                                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS2/Hi-Fi/Hi-Fi-TF-Product-List.svg"
                                         alt="Image depicting the Hi-Fidelity Product List Page." width="500"
                                         height="570">
                                     <figcaption>Hi-Fi Product List page design.</figcaption>
                                 </figure>
-
-                                <div class="lightbox lightbox_24">
-                                    <div class="lightbox-content w-45 w-35a w-25b">
-                                        <div class="header">
-                                            <h4>Hi-Fi Product List</h4>
-                                            <button type="button" id="close-btn_24" class="close-btn">&times;</button>
-                                        </div>
-                                        <img class="lazyload "
-                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                            alt="Low Fidelity - Main Menu Design.">
-                                        <p>Hi-Fi Product List page design.</p>
-                                    </div>
-                                </div>
                             </div>
 
-                            <div class="image-container lightbox-img-trigger">
-                                <figure class="gallery" data-index="25">
+                            <div class="image-container">
+                                <figure class="gallery">
                                     <img class="lazyload " src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS2/Hi-Fi/Hi-Fi-TF-Prod-Desc.svg"
                                         alt="Hi Fi Product Description Page Design." width="500" height="735">
                                     <figcaption>Hi-Fi Product Description page design.</figcaption>
                                 </figure>
-
-                                <div class="lightbox lightbox_25">
-                                    <div class="lightbox-content w-40 w-30a w-20b">
-                                        <div class="header">
-                                            <h4>Product Description Page</h4>
-                                            <button type="button" id="close-btn_25" class="close-btn">&times;</button>
-                                        </div>
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                            alt="Image depicting the Hi-Fi Product Description page design.">
-                                        <p>Hi-Fi Product Description page design.</p>
-                                    </div>
-                                </div>
                             </div>
 
-                            <div class="image-container lightbox-img-trigger">
-                                <figure class="gallery" data-index="26">
+                            <div class="image-container">
+                                <figure class="gallery">
                                     <img class="lazyload " src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS2/Hi-Fi/Hi-Fi-TF-Modal.svg"
                                         alt="Image depicting the Hi-Fi Basket Modal design." width="500" height="735">
                                     <figcaption>Hi-Fi Basket Modal design.</figcaption>
                                 </figure>
-
-                                <div class="lightbox lightbox_26">
-                                    <div class="lightbox-content w-40 w-30a w-20b">
-                                        <div class="header">
-                                            <h4>Basket Modal.</h4>
-                                            <button type="button" id="close-btn_26" class="close-btn">&times;</button>
-                                        </div>
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                            alt="Image depicting the Hi-Fidelity Designs for the Basket Modal.">
-                                        <p>Hi-Fi Basket Modal design.</p>
-                                    </div>
-                                </div>
                             </div>
 
-                            <div class="image-container lightbox-img-trigger">
-                                <figure class="gallery" data-index="27">
+                            <div class="image-container">
+                                <figure class="gallery">
                                     <img class="lazyload " src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                         data-src="/assets/images/Case-Studies/CS2/Hi-Fi/Hi-Fi-TF-Basket.svg"
-                                        alt="Image depicting the Hi-Fidelity Design for the Basket Page.">
+                                        alt="Image depicting the Hi-Fidelity Design for the Basket Page." width="500"
+                                        height="735">
                                     <figcaption>Basket page.</figcaption>
                                 </figure>
-
-                                <div class="lightbox lightbox_27">
-                                    <div class="lightbox-content w-40 w-30a w-20b">
-                                        <div class="header">
-                                            <h4>Hi-Fi Desktop Generic Page Design.</h4>
-                                            <button type="button" id="close-btn_27" class="close-btn">&times;</button>
-                                        </div>
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                            alt="Image depicting the Hi-Fidelity Designs Basket Page Design.">
-                                        <p>Hi-Fi Design for the Basket Page.</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -2946,12 +2825,14 @@
                         <p>Ensuring the usability and effectiveness of our designs through user experience
                             testing, helped position us for the best possible UX before moving into
                             development.</p>
-
-                        <div class="primary-banner">
-                            <div class="sus"></div>
+                        <div class="split-header">
+                            <div class="title">
+                                <h3>System Usability Scale (SUS)</h3>
+                            </div>
+                            <div class="sus-banner"></div>
                         </div>
 
-                        <h3>System Usability Scale (SUS)</h3>
+
                         <p>Usability testing is a critical process for evaluating the effectiveness and
                             efficiency of a product's user interface. The System Usability Scale (SUS) is a
                             widely used and reliable tool for measuring system usability. It comprises a 10-item
@@ -2997,12 +2878,13 @@
                                 </figure>
 
                                 <div class="lightbox lightbox_28">
-                                    <div class="lightbox-content w-40 w-30a w-20b">
+                                    <div class="lightbox-content w-40 w-30a w-60b">
                                         <div class="header">
                                             <h4>SUS Scoring.</h4>
                                             <button type="button" id="close-btn_28" class="close-btn">&times;</button>
                                         </div>
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                        <img class="no-border"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                             alt="SUS scoring.">
                                         <p>System Usability Scale (SUS) Score Results.</p>
                                     </div>
@@ -3019,14 +2901,15 @@
                                 </figure>
 
                                 <div class="lightbox lightbox_29">
-                                    <div class="lightbox-content w-40 w-30a w-20b">
+                                    <div class="lightbox-content w-40 w-30a w-60b">
                                         <div class="header">
-                                            <h4>Hi-Fi Desktop Generic Page Design.</h4>
+                                            <h4>SUS Response Survey.</h4>
                                             <button type="button" id="close-btn_29" class="close-btn">&times;</button>
                                         </div>
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                        <img class="no-border"
+                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                             alt="Corresponding Likert scale responses, explanation of SUS calculation.">
-                                        <p>System Usability Scale (SUS) Calculation and Scores.</p>
+                                        <p>System Usability Scale (SUS) Response Survey.</p>
                                     </div>
                                 </div>
                             </div>
