@@ -118,7 +118,7 @@
 
         .hero .case-study-settings .space-between .col .two-button-container.right-align {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 0.5em;
@@ -152,6 +152,11 @@
         @media only screen and (min-width: 768px) {
             .hero .case-study-settings .space-between .col .two-button-container.right-align {
                 flex-direction: row;
+                justify-content: flex-end;
+            }
+
+            .hero .case-study-settings .space-between .col .two-button-container.right-align a {
+                width: 40%;
             }
 
             .editorial .hero .case-study-settings .image-container .guitar-banner {
@@ -551,7 +556,7 @@
                                         <a id="backButton" class="secondary-button" href="/index.html"
                                             aria-label="button link to home page"
                                             title="Please click this button if you would like to see all projects.">
-                                            View Projects
+                                            Projects
                                         </a>
                                         <a id="forwardButton" class="primary-button" href="/come-together.html"
                                             aria-label="button link to go to the next project"
