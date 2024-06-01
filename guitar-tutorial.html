@@ -13,20 +13,22 @@
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
     <!-- Preload the primary banner image -->
-    <link rel="preload" href="/assets/images/Case-Studies/CS2/syn-banner.webp" as="image">
-    <link rel="preload" href="/assets/images/Case-Studies/CS2/main-banner.webp" as="image">
+    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/CS1-lg-device-demo.webp" as="image">
+    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/just-speak-sm.webp" as="image">
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Load Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Preload Google Fonts stylesheet -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <!-- Fallback for browsers with JavaScript disabled -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
             rel="stylesheet">
     </noscript>
+
 
     <!-- Load Material Symbols font -->
     <link
@@ -38,12 +40,16 @@
             rel="stylesheet">
     </noscript>
     <style>
+        :root {
+            --bg-mobile: url(/assets/images/Case-Studies/CS1/banners/just-speak-sm.webp);
+            --bg-other: url(/assets/images/Case-Studies/CS1/banners/CS1-lg-device-demo.webp);
+        }
+
         h1 {
-            font-family: 'Poppins', sans-serif;
             font-weight: 500;
-            font-size: 2rem;
+            font-size: 1.5rem;
             line-height: 1;
-            margin-bottom: 0.7rem;
+            margin: 0;
         }
 
         p {
@@ -105,10 +111,12 @@
             justify-content: center;
             transition: background-color .5s ease-in-out;
             border-radius: 8px;
+            text-decoration: underline;
         }
 
         .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link:hover {
             background-color: #aafadf;
+            text-decoration: none;
         }
 
         .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link svg {
@@ -137,16 +145,17 @@
 
         .hero .case-study-settings .image-container {
             width: -webkit-fill-available;
-            background-color: transparent;
+            height: 600px;
+
         }
 
-        .editorial .hero .case-study-settings .image-container .guitar-banner {
-            background-image: url(/assets/images/Case-Studies/CS1/banners/CS1-sm-device-demo.svg);
-            background-size: contain;
+        .guitar-banner {
+            background-image: var(--bg-mobile);
+            height: 600px;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            width: 100%;
-            height: 300px;
+            background-color: transparent;
         }
 
         @media only screen and (min-width: 768px) {
@@ -159,14 +168,12 @@
                 width: 40%;
             }
 
-            .editorial .hero .case-study-settings .image-container .guitar-banner {
-                background-image: url(/assets/images/Case-Studies/CS1/banners/CS1-lg-device-demo.webp);
+            .guitar-banner {
+                background-image: var(--bg-other);
+                aspect-ratio: 16/9;
                 background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                width: 100%;
-                height: 300px;
             }
+
         }
 
         @media only screen and (min-width: 1200px) {
@@ -198,6 +205,16 @@
                 height: 24px;
             }
         }
+
+        .lazyblurry {
+            filter: blur(10px);
+            /* Example of a blur effect */
+        }
+
+        /* When the image is loaded, remove the blur effect */
+        .lazyloaded {
+            filter: none;
+        }
     </style>
 
     <!-- Preload main stylesheet -->
@@ -205,6 +222,9 @@
     <noscript>
         <link rel="stylesheet" href="/styles/stylesheet.css">
     </noscript>
+
+    <!-- Defer lazySizes library script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" defer></script>
 </head>
 
 <body>
@@ -553,11 +573,7 @@
                                         </a>
                                     </div>
                                     <div class="two-button-container right-align">
-                                        <a id="backButton" class="secondary-button" href="/index.html"
-                                            aria-label="button link to home page"
-                                            title="Please click this button if you would like to see all projects.">
-                                            Projects
-                                        </a>
+                                       
                                         <a id="forwardButton" class="primary-button" href="/come-together.html"
                                             aria-label="button link to go to the next project"
                                             title="Please click this button if you would like to view the next project.">
@@ -566,7 +582,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <ul class="bullet-list-row">
+                            <div class="image-container">
+                                <div class="primary-banner guitar-banner lazyload lazyblurry"></div>
+                            </div>
+                            <ul class="hide-sm">
                                 <li>Branding Creator</li>
                                 <li>UX Research</li>
                                 <li>UX &amp; UI Designer</li>
@@ -574,21 +593,13 @@
                                 <li>User Testing Facilitator</li>
                                 <li>Front End Developer</li>
                             </ul>
-                            <div class="image-container">
-                                <div class="primary-banner guitar-banner lazyload"></div>
-                                <script>document.addEventListener('lazybeforeunveil', function (e) {
-                                        var bg = e.target.getAttribute('data-bg');
-                                        if (bg) {
-                                            e.target.style.backgroundImage = 'url(' + bg + ')';
-                                        }
-                                    });</script>
-                            </div>
+
                         </div>
                     </div>
                 </section>
 
                 <div id="introduction"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Project Introduction</h2>
                         <div class="grid-container-2col">
@@ -640,7 +651,7 @@
 
                 <div id="research"></div>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
 
                         <h2>Research</h2>
@@ -660,7 +671,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Research 1.1: Competitive Analysis and Market Research</h2>
                         <h3>Understanding the Industry Landscape</h3>
@@ -687,7 +698,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Research 1.2: User Interviews &amp; Surveys</h2>
                         <h3>Understanding User Expectations</h3>
@@ -755,7 +766,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Research 1.3: User Persona Development</h2>
                         <h3>Leveraging Research Insights for Effective User Understanding</h3>
@@ -783,7 +794,7 @@
                 </section>
 
                 <div id="ideation"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Strategy Ideation for Elevating the User Experience</h2>
 
@@ -854,7 +865,7 @@
                 </section>
 
                 <div id="architecture"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Information Architecture</h2>
                         <h2>Information Architecture</h2>
@@ -931,7 +942,7 @@
                 </section>
 
                 <div id="interaction"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Interaction Design 1.1</h2>
                         <h3>Task Flow and User Maps</h3>
@@ -1039,7 +1050,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Interaction Design 1.2</h2>
                         <h3>Speech Recognition Technology Analysis</h3>
@@ -1125,7 +1136,7 @@
 
 
                 <div id="early-designs"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Low Fidelity Designs 1.1</h2>
                         <h3>Rapid Prototyping</h3>
@@ -1240,7 +1251,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Low-Fidelity Designs 1.2</h2>
                         <h3>Responsive Wireframes</h3>
@@ -1322,7 +1333,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Low-Fidelity Designs 1.3(a)</h2>
                         <h3>Enhancing Task Flow Wireframes</h3>
@@ -1539,7 +1550,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Low-Fidelity Designs 1.3(b)</h2>
                         <h3>A/B Testing</h3>
@@ -1633,7 +1644,7 @@
                 </section>
 
                 <div id="hiFidelityDesigns"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Hi Fidelity Design 1.1</h2>
                         <h3>Creating a Strong Design System for Consistent User Experiences.</h3>
@@ -2539,7 +2550,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Hi Fidelity Design 1.2</h2>
                         <h3>Task Flow</h3>
@@ -2620,7 +2631,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Hi-Fidelity Designs 1.3</h2>
                         <h3>Responsive Design</h3>
@@ -3417,7 +3428,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Hi-Fidelity Designs 1.4</h2>
                         <h3>Interactive Prototype</h3>
@@ -3473,7 +3484,7 @@
                 </section>
 
                 <div id="ux-testing"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Usability Testing</h2>
                         <p>
@@ -3591,9 +3602,9 @@
                         </div>
                     </div>
                 </section>
-                
+
                 <div id="conclusion"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <div>
                             <h2>After Thoughts</h2>
@@ -3643,7 +3654,7 @@
                 </section>
 
                 <div id="project-information"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <div class="skills-section">
                             <h1>Project Information</h1>
@@ -3728,7 +3739,7 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer lazyload lazyblurry">
         <div class="footer-container">
             <div class="footer-social-icon">
                 <a href="/index.html" class="logo" aria-label="Home"></a>
@@ -3766,9 +3777,6 @@
 
     <!-- Defer main.js script to ensure it's loaded after HTML parsing -->
     <script type="module" src="/js/main.js"></script>
-
-    <!-- Defer lazySizes library script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
 
 </body>
 
