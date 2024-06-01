@@ -160,7 +160,7 @@ h3 {
 
 h4 {
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-display: block;
   line-height: 1;
   margin-bottom: 0.7rem;
@@ -518,7 +518,7 @@ section {
       background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
       background-size: contain;
       background-repeat: no-repeat;
-      width:250px;
+      width: 250px;
       height: 150px;
     }
   }
@@ -566,6 +566,13 @@ section {
   font-weight: bold;
   border-bottom: $color_border-settings-grey;
   color: $color_brand;
+}
+
+.text-link {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 /* index page styles  */
@@ -2521,6 +2528,7 @@ textarea.input {
     }
     .tab-contents {
       @include apply-flex-styles($flex-col-center-start);
+      width: initial;
       .tab-module {
         border-radius: 0 0 8px 8px;
         width: fit-content;
@@ -2588,7 +2596,7 @@ textarea.input {
         background-color: $color_white;
         border-radius: $brad-8;
         display: flex;
-        height: calc(100vh - 22em);
+        height: calc(100vh - 19em);
         width: fit-content;
         position: fixed;
         .sideBar-content {

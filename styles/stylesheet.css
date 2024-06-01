@@ -37,7 +37,7 @@ h3 {
 
 h4 {
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-display: block;
   line-height: 1;
   margin-bottom: 0.7rem;
@@ -531,6 +531,13 @@ section {
   font-weight: bold;
   border-bottom: 1px solid #d4d4d4;
   color: #2c4465;
+}
+
+.text-link {
+  text-decoration: underline;
+}
+.text-link:hover {
+  text-decoration: none;
 }
 
 /* index page styles  */
@@ -2676,6 +2683,7 @@ textarea.input {
     align-items: flex-start;
     justify-content: center;
     width: 100%;
+    width: initial;
   }
   .tab-container .tab-contents .tab-module {
     border-radius: 0 0 8px 8px;
@@ -2738,7 +2746,7 @@ textarea.input {
     background-color: #fff;
     border-radius: 8px;
     display: flex;
-    height: calc(100vh - 22em);
+    height: calc(100vh - 19em);
     width: -moz-fit-content;
     width: fit-content;
     position: fixed;
