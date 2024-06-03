@@ -1619,10 +1619,10 @@ textarea.input {
 
   // case study styles
   .editorial {
-    .hero .case-study-settings {
+    .hero {display: inherit; width: 100%;}.case-study-settings {
       .image-container {
         padding: 10px;
-        background-color: gainsboro;
+        background-color: transparent;
         border-radius: $brad-8;
         .syn-banner {
           background-image: url(/assets/images/Case-Studies/CS2/main-banner.webp);

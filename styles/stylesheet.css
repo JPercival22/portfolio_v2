@@ -1793,12 +1793,16 @@ textarea.input {
   .thankyou-footer {
     align-items: center;
   }
-  .editorial .hero .case-study-settings .image-container {
+  .editorial .hero {
+    display: inherit;
+    width: 100%;
+  }
+  .editorial .case-study-settings .image-container {
     padding: 10px;
-    background-color: gainsboro;
+    background-color: transparent;
     border-radius: 8px;
   }
-  .editorial .hero .case-study-settings .image-container .syn-banner {
+  .editorial .case-study-settings .image-container .syn-banner {
     background-image: url(/assets/images/Case-Studies/CS2/main-banner.webp);
     background-size: contain;
   }
