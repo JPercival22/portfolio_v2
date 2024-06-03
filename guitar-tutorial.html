@@ -13,8 +13,9 @@
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
     <!-- Preload the primary banner image -->
-    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/CS1-lg-device-demo.webp" as="image">
-    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/just-speak-sm.webp" as="image">
+    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_lg.webp" as="image">
+    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_md.webp" as="image">
+    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_sm.webp" as="image">
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,8 +42,9 @@
     </noscript>
     <style>
         :root {
-            --bg-mobile: url(/assets/images/Case-Studies/CS1/banners/just-speak-sm.webp);
-            --bg-other: url(/assets/images/Case-Studies/CS1/banners/CS1-lg-device-demo.webp);
+            --bg-sm: url(/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_sm.webp);
+            --bg-md: url(/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_md.webp);
+            --bg-lg: url(/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_lg.webp);
         }
 
         h1 {
@@ -150,7 +152,8 @@
         }
 
         .guitar-banner {
-            background-image: var(--bg-mobile);
+            background-image: var(--bg-sm);
+            border-radius: 8px;
             height: 600px;
             background-size: cover;
             background-repeat: no-repeat;
@@ -169,8 +172,9 @@
             }
 
             .guitar-banner {
-                background-image: var(--bg-other);
-                aspect-ratio: 16/9;
+                background-image: var(--bg-md);
+                border-radius: 8px;
+                /* aspect-ratio: 16/9; */
                 background-size: contain;
             }
 
@@ -203,6 +207,13 @@
             .hero .case-study-settings .space-between .col .two-button-container.right-align .secondary-button {
                 width: 120px;
                 height: 24px;
+            }
+
+            .guitar-banner {
+                background-image: var(--bg-lg);
+                border-radius: 8px;
+                aspect-ratio: 16/9;
+                background-size: contain;
             }
         }
 
@@ -573,7 +584,7 @@
                                         </a>
                                     </div>
                                     <div class="two-button-container right-align">
-                                       
+
                                         <a id="forwardButton" class="primary-button" href="/come-together.html"
                                             aria-label="button link to go to the next project"
                                             title="Please click this button if you would like to view the next project.">
@@ -3452,10 +3463,9 @@
                                     aria-label="link to interactive prototype">
                                     <img class="lazyload border"
                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS1/banners/iphone-test-banner.svg"
+                                        data-src="/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_sm.webp"
                                         alt="link to interactive prototype" width="500" height="750"
                                         title="Please click or tap the image to open in a new window">
-
                                     <p>Click to view prototype in a new window.</p>
                                 </a>
                             </div>
