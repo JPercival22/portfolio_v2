@@ -1321,6 +1321,7 @@ textarea.input {
 .grid-container-6col .prototype-container a:hover {
   text-decoration: none;
   filter: brightness(0.9);
+  border: 1px solid red;
 }
 .grid-container-1col .prototype-container a .border,
 .grid-container-2col .prototype-container a .border,
@@ -2641,12 +2642,16 @@ textarea.input {
     width: 100%;
     height: auto;
     cursor: pointer;
-    transition: all 10s ease-in-out;
+    transition: all 1s ease-in-out;
+    border-radius: 8px;
   }
   .grid-container-2col .prototype-container a {
     font-family: inherit;
     color: #1a1a1a;
     text-decoration: underline;
+  }
+  .grid-container-2col .prototype-container a:hover {
+    border: 1px solid #4fbdd2;
   }
   .grid-container-2col .prototype-container:hover {
     text-decoration: none;
