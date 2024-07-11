@@ -1205,6 +1205,7 @@ textarea.input {
       &:hover {
         text-decoration: none;
         filter: brightness(0.9);
+        border: 1px solid red;
       }
       .border {
         border: 20px solid #1a1a1a;
@@ -2477,11 +2478,15 @@ textarea.input {
       @include apply-flex-styles($flex-col-start-start);
       height: auto;
       cursor: pointer;
-      transition: all 10s ease-in-out;
+      transition: all 1s ease-in-out;
+      border-radius: $brad-8;
       a {
         font-family: inherit;
         color: $color_primary_text;
         text-decoration: underline;
+        &:hover {
+          border: 1px solid $background-color_teal;
+        }
       }
       &:hover {
         text-decoration: none;
