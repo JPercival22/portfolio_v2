@@ -368,9 +368,12 @@ section {
   .profile-image {
     width: 200px;
     height: 200px;
-    background: red;
+    background-image: url(/assets/images/me-min.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffec;
     border-radius: 100%;
-    align-self: center;
   }
   .expanded-headline {
     text-align: left;
