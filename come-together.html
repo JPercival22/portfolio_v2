@@ -12,11 +12,16 @@
     <title>Case Study 3</title>
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
+    <!-- Preload the primary banner image -->
+    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_lg.webp" as="image">
+    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_md.webp" as="image">
+    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_sm.webp" as="image">
+
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Preload the font -->
+    <!-- Preload Google Fonts stylesheet -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -25,25 +30,28 @@
             rel="stylesheet">
     </noscript>
 
-    <!-- Preload Material Symbols font (combined) -->
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-        media="print" onload="this.media='all'">
+    <!-- Load Material Symbols font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+        rel="stylesheet">
     <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+            rel="stylesheet">
     </noscript>
 
     <style>
+        :root {
+            --bg-sm: url(/assets/images/Case-Studies/CS3/Banners/CS3-primary-banner_sm.webp);
+            --bg-md: url(/assets/images/Case-Studies/CS3/Banners/CS3-primary-banner_md.webp);
+            --bg-lg: url(/assets/images/Case-Studies/CS3/Banners/CS3-primary-banner_lg.webp);
+        }
+
         h1 {
-            font-family: 'Poppins', sans-serif;
             font-weight: 500;
-            font-size: 2rem;
+            font-size: 1.5rem;
             line-height: 1;
-            margin-bottom: 0.7rem;
+            margin: 0;
         }
 
         p {
@@ -105,10 +113,12 @@
             justify-content: center;
             transition: background-color .5s ease-in-out;
             border-radius: 8px;
+            text-decoration: underline;
         }
 
         .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link:hover {
             background-color: #aafadf;
+            text-decoration: none;
         }
 
         .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link svg {
@@ -140,13 +150,14 @@
             background-color: transparent;
         }
 
-        .editorial .hero .case-study-settings .image-container .come-together-banner {
-            background-image: url(/assets/images/hero-images/index/come-together-banner.webp);
-            background-size: contain;
+        .come-together-banner {
+            background-image: var(--bg-sm);
+            border-radius: 8px;
+            height: 600px;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            width: 100%;
-            height: 300px;
+            background-color: transparent;
         }
 
         @media only screen and (min-width: 768px) {
@@ -157,6 +168,12 @@
 
             .hero .case-study-settings .space-between .col .two-button-container.right-align a {
                 width: 40%;
+            }
+
+            .come-together-banner {
+                background-image: var(--bg-md);
+                background-size: contain;
+                border-radius: 8px;
             }
         }
 
@@ -188,6 +205,22 @@
                 width: 120px;
                 height: 24px;
             }
+
+            .come-together-banner {
+                background-image: var(--bg-lg);
+                aspect-ratio: 16/9;
+                background-size: contain;
+                border-radius: 8px;
+            }
+        }
+
+
+        .lazyblurry {
+            filter: blur(10px);
+        }
+
+        .lazyloaded {
+            filter: none;
         }
     </style>
 
@@ -196,6 +229,9 @@
     <noscript>
         <link rel="stylesheet" href="/styles/stylesheet.css">
     </noscript>
+
+    <!-- Defer lazySizes library script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" defer></script>
 </head>
 
 
@@ -545,7 +581,7 @@
                                         </a>
                                     </div>
                                     <div class="two-button-container right-align">
-                                       
+
                                         <a id="forwardButton" class="primary-button" href="/syn-ios-app.html"
                                             aria-label="button link to go to the next project"
                                             title="Please click this button if you would like to view the next project.">
@@ -563,20 +599,14 @@
                                 <li>Web Master</li>
                             </ul>
                             <div class="image-container">
-                                <div class="primary-banner come-together-banner lazyload"></div>
-                                <script>document.addEventListener('lazybeforeunveil', function (e) {
-                                        var bg = e.target.getAttribute('data-bg');
-                                        if (bg) {
-                                            e.target.style.backgroundImage = 'url(' + bg + ')';
-                                        }
-                                    });</script>
+                                <div class="primary-banner come-together-banner lazyload lazyblurry"></div>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <div id="introduction"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Project Introduction</h2>
                         <div class="grid-container-2col">
@@ -636,8 +666,10 @@
                 </section>
 
                 <div id="research"></div>
-                <section>
+
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
+
                         <h2>Research</h2>
                         <h3>Introduction</h3>
                         <p>
@@ -660,7 +692,8 @@
                             to integrate a video streaming service as part of the website's design.</p>
                     </div>
                 </section>
-                <section>
+
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Research 1.1: Market Research &amp; Competitive Analysis</h2>
                         <h3>Understanding the Industry Landscape</h3>
@@ -695,7 +728,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Research 1.2: User Interviews &amp; Surveys</h2>
                         <h3>Understanding User Expectations</h3>
@@ -737,14 +770,15 @@
                             </div>
                         </div>
                         <h3>Insights from User Research: Key Findings and Analysis</h3>
-                        <h4>Visuals:</h4>
+                        <h4>Visuals</h4>
                         <p>Participants exhibited notable enthusiasm for the inclusion of a
                             video streaming service, emphasizing their eagerness to engage with this feature. Leveraging
                             such captivating visual elements is poised to enhance the overall user experience, fostering
                             increased engagement and usability.</p>
 
-                        <h4>Key Information:</h4>
-                        <p>Participants underscored the significance of several factors, including the use of clear and
+                        <h4>Key Information</h4>
+                        <p>Participants expressed particular enthusiasm on the significance of several factors,
+                            including the use of clear and
                             concise language, the prominence of rich content and media in relevant sections, all while
                             ensuring users are not overwhelmed by excessive information. There was a collective
                             frustration expressed towards existing platforms that seemingly rely on inducing user guilt,
@@ -754,7 +788,7 @@
                             comprehensively to diverse audiences while delivering a smooth and straightforward
                             experience.</p>
 
-                        <h4>Overview:</h4>
+                        <h4>Overview</h4>
                         <p>These key findings provide a robust foundation for prioritizing enhancements and refining the
                             application to meet user needs and expectations. By incorporating these invaluable insights,
                             the design team confidently made informed decisions aimed at elevating the user
@@ -763,7 +797,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Research 1.3: User Persona Development</h2>
                         <h3>Leveraging Research Insights for Effective User Understanding</h3>
@@ -781,7 +815,7 @@
                             <div class="image-container">
                                 <div class="gallery no-border">
                                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS1/planning/CS1-Persona-mini.webp"
+                                        data-src="/assets/images/Case-Studies/CS3/Banners/persona-come-together.webp"
                                         alt="Created Persona" width="936" height="714">
                                     <p>Qualitative User Persona</p>
                                 </div>
@@ -791,7 +825,7 @@
                 </section>
 
                 <div id="ideation"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
 
                         <h2>Strategy Ideation for Elevating the User Experience</h2>
@@ -854,7 +888,7 @@
                 </section>
 
                 <div id="architecture"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Information Architecture</h2>
                         <h3>Enhancing User Experience</h3>
@@ -878,7 +912,8 @@
                             <div class="tab-container" id="tabContainer1">
                                 <div class="tab-buttons">
                                     <button type="button" class="tab-button active" data-target="tab1">Site Map</button>
-                                    <button type="button" class="tab-button" data-target="tab2">System Navigation Map</button>
+                                    <button type="button" class="tab-button" data-target="tab2">System Navigation
+                                        Map</button>
                                 </div>
                                 <div class="tab-contents">
                                     <div id="tabContent30" class="tab-module" data-title="Tab 1">
@@ -897,8 +932,7 @@
                                                     <img class="lazyload no-border"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                         data-src="/assets/images/Case-Studies/CS1/planning/site-map.svg"
-                                                        alt="Information Architecture and Hierarchy Design" 
-                                                        width="503"
+                                                        alt="Information Architecture and Hierarchy Design" width="503"
                                                         height="260">
                                                     <figcaption>Site Map IA Design</figcaption>
                                                 </figure>
@@ -920,9 +954,7 @@
                                                     <img class="lazyload no-border"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                         data-src="/assets/images/Case-Studies/CS1/planning/site-navigation.svg"
-                                                        alt="Navigation System IA Design" 
-                                                        width="503" 
-                                                        height="260">
+                                                        alt="Navigation System IA Design" width="503" height="260">
                                                     <figcaption>Navigation System Design</figcaption>
                                                 </figure>
                                             </div>
@@ -935,7 +967,7 @@
                 </section>
 
                 <div id="interaction"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Interaction Design 1.1</h2>
                         <h3>Task and User Flow Maps</h3>
@@ -1045,7 +1077,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Interaction Design 1.2</h2>
                         <h3>Front-End Technology Analysis</h3>
@@ -1064,7 +1096,7 @@
                 </section>
 
                 <div id="early-designs"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Low-Fidelity Designs 1.1</h2>
                         <h3>Rapid Prototyping</h3>
@@ -1277,7 +1309,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Low-Fidelity Designs 1.2</h2>
                         <h3>Responsive Wireframes</h3>
@@ -1294,14 +1326,13 @@
                         <aside title="Low Fidelity Designs Tabular Views">
                             <div class="tab-container" id="tabContainer3">
                                 <div class="tab-buttons">
-                                    <button type="button" class="tab-button active" data-target="tab1">Main
-                                        Pages</button>
-                                    <button type="button" class="tab-button" data-target="tab2">Top Bar
-                                        Components</button>
+                                    <button type="button" class="tab-button active" data-target="tab1">Mobile</button>
+                                    <button type="button" class="tab-button" data-target="tab2">Tablet</button>
+                                    <button type="button" class="tab-button" data-target="tab3">Desktop</button>
                                 </div>
                                 <div class="tab-contents">
                                     <div id="tabContent5" class="tab-module" data-title="Tab 1">
-                                        <h3>Main Pages</h3>
+                                        <h3>Mobile Viewport</h3>
                                         <p>The main pages embody a comprehensive approach, addressing all business
                                             and user requirements within the application. The focus is centered on
                                             effectively meeting the needs and goals of both the business and the end
@@ -1314,10 +1345,10 @@
                                                 <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                        data-src="/assets/images/Case-Studies/CS2/Wireframes/Index.webp"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/mobile/Index.webp"
                                                         alt="Low Fidelity Design - Home Page Layout." width="204"
                                                         height="1110">
-                                                    <figcaption>Lo-Fi Home Design.</figcaption>
+                                                    <figcaption>Low-Fi Home Design.</figcaption>
                                                 </figure>
                                             </div>
 
@@ -1325,10 +1356,10 @@
                                                 <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                        data-src="/assets/images/Case-Studies/CS2/Wireframes/Product-List.webp"
-                                                        alt="Low Fidelity Design - Product List Page." width="204"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/mobile/Nav.webp"
+                                                        alt="Low Fidelity Design - Mobile Navigation." width="204"
                                                         height="1155">
-                                                    <figcaption>Lo-Fi Product List Design.</figcaption>
+                                                    <figcaption>Low-Fi Mobile Navigation Design.</figcaption>
                                                 </figure>
                                             </div>
 
@@ -1336,21 +1367,10 @@
                                                 <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                        data-src="/assets/images/Case-Studies/CS2/Wireframes/Prod-Desc.webp"
-                                                        alt="Low Fidelity Design - Product Description Page."
-                                                        width="501" height="1165">
-                                                    <figcaption>Lo-Fi Product Description Design.</figcaption>
-                                                </figure>
-                                            </div>
-
-                                            <div class="image-container">
-                                                <figure class="gallery">
-                                                    <img class="lazyload"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                        data-src="/assets/images/Case-Studies/CS2/Wireframes/basket-modal.webp"
-                                                        alt="Low Fidelity Design - Basket Modal Overlay." width="501"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/mobile/About-Us.webp"
+                                                        alt="Low Fidelity Design - About Us Page." width="501"
                                                         height="1165">
-                                                    <figcaption>Lo-Fi Basket Modal Design.</figcaption>
+                                                    <figcaption>Low-Fi About Us Design.</figcaption>
                                                 </figure>
                                             </div>
 
@@ -1358,10 +1378,10 @@
                                                 <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                        data-src="/assets/images/Case-Studies/CS2/Wireframes/Basket.webp"
-                                                        alt="Low Fidelity Design - Basket Page." width="501"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/mobile/Services.webp"
+                                                        alt="Low Fidelity Design - Services Page." width="501"
                                                         height="1165">
-                                                    <figcaption>Lo-Fi Basket Design.</figcaption>
+                                                    <figcaption>Low-Fi Services Design.</figcaption>
                                                 </figure>
                                             </div>
 
@@ -1369,117 +1389,262 @@
                                                 <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                        data-src="/assets/images/Case-Studies/CS2/Wireframes/Menu.webp"
-                                                        alt="Low Fidelity Design - Main Menu." width="501"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/mobile/Events.webp"
+                                                        alt="Low Fidelity Design - Events Page." width="501"
                                                         height="1165">
-                                                    <figcaption>Lo-Fi Main Menu Design.</figcaption>
+                                                    <figcaption>Low-Fi Events Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/mobile/Volunteering.webp"
+                                                        alt="Low Fidelity Design - Volunteering page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Volunteering Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/mobile/Podcast.webp"
+                                                        alt="Low Fidelity Design - Podcast page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Podcast Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/mobile/Support.webp"
+                                                        alt="Low Fidelity Design - Support page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Support Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/mobile/Thank-You.webp"
+                                                        alt="Low Fidelity Design - Thank You page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Thank You Design.</figcaption>
                                                 </figure>
                                             </div>
                                         </div>
                                     </div>
                                     <div id="tabContent6" class="tab-module" data-title="Tab 2">
-                                        <h3>Top Bar Interactive Designs</h3>
-                                        <p>Constructed upon user research insights, the top bar designs are
-                                            meticulously curated to integrate purposeful iconography, signifying
-                                            links to key user-centric pages, complemented by unobtrusive interactive
-                                            overlays. The deliberate use of relevant iconography and subtle
-                                            interactive elements is geared towards augmenting user comprehension and
-                                            interaction with the application's pivotal features.</p>
+                                        <h3>Tablet Viewports</h3>
+                                        <p>The main pages embody a comprehensive approach, addressing all business
+                                            and user requirements within the application. The focus is centered on
+                                            effectively meeting the needs and goals of both the business and the end
+                                            users, culminating in a purposeful and comprehensive user experience.
+                                        </p>
                                         <p class="hide-sm">Please feel free to click on any image to enlarge them.</p>
                                         <div class="grid-container-4col">
-                                            <div class="image-container lightbox-img-trigger">
-                                                <figure class="gallery" data-index="19">
+                                            <div class="image-container">
+                                                <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                        data-src="/assets/images/Case-Studies/CS2/Wireframes/Search-Open.webp"
-                                                        alt="Low Fidelity Design - Global Search Component.">
-                                                    <figcaption>Lo-Fi Global Search Design.</figcaption>
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/tablet/Index.webp"
+                                                        alt="Low Fidelity Design - Index page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Index Design.</figcaption>
                                                 </figure>
-
-                                                <div class="lightbox lightbox_19">
-                                                    <div class="lightbox-content w-25 w-20a w-15b">
-                                                        <div class="header">
-                                                            <h4>Global Search Bar</h4>
-                                                            <button type="button" id="close-btn_19"
-                                                                class="close-btn">&times;</button>
-                                                        </div>
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                            alt="Low Fidelity - Main Menu Design.">
-                                                        <p>Lo-Fi Global Search Design.</p>
-                                                    </div>
-                                                </div>
                                             </div>
 
-                                            <div class="image-container lightbox-img-trigger">
-                                                <figure class="gallery" data-index="20">
+                                            <div class="image-container">
+                                                <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                        data-src="/assets/images/Case-Studies/CS2/Wireframes/User-Menu.webp"
-                                                        alt="Low Fidelity Design - User Menu Component." width="501"
-                                                        height="2846">
-                                                    <figcaption>Lo-Fi User Menu Design.
-                                                    </figcaption>
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/tablet/Nav.webp"
+                                                        alt="Low Fidelity Design - Navigation." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Navigation Design.</figcaption>
                                                 </figure>
-                                                <div class="lightbox lightbox_20">
-                                                    <div class="lightbox-content w-25 w-20a w-15b">
-                                                        <div class="header">
-                                                            <h4>User Menu</h4>
-                                                            <button type="button" id="close-btn_20"
-                                                                class="close-btn">&times;</button>
-                                                        </div>
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                            alt="Low Fidelity - User Menu Design.">
-                                                        <p>Lo-Fi User Menu Design.</p>
-                                                    </div>
-                                                </div>
                                             </div>
 
-                                            <div class="image-container lightbox-img-trigger">
-                                                <figure class="gallery" data-index="21">
+                                            <div class="image-container">
+                                                <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                        data-src="/assets/images/Case-Studies/CS2/Wireframes/Basket-empty.webp"
-                                                        alt="Low Fidelity Design - Empty Basket Component." width="501"
-                                                        height="2846">
-                                                    <figcaption>Lo-Fi Empty Basket Design.</figcaption>
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/tablet/About.webp"
+                                                        alt="Low Fidelity Design - About Us Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi About Us Design.</figcaption>
                                                 </figure>
-
-                                                <div class="lightbox lightbox_21">
-                                                    <div class="lightbox-content w-25 w-20a w-15b">
-                                                        <div class="header">
-                                                            <h4>Empty Basket</h4>
-                                                            <button type="button" id="close-btn_21"
-                                                                class="close-btn">&times;</button>
-                                                        </div>
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                            alt="Low Fidelity - Empty Basket Design.">
-                                                        <p>Lo-Fi Empty Basket Design.</p>
-                                                    </div>
-                                                </div>
                                             </div>
 
-                                            <div class="image-container lightbox-img-trigger">
-                                                <figure class="gallery" data-index="22">
+                                            <div class="image-container">
+                                                <figure class="gallery">
                                                     <img class="lazyload"
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                        data-src="/assets/images/Case-Studies/CS2/Wireframes/Basket-orders.webp"
-                                                        alt="Low Fidelity Design - Items in Basket Component."
-                                                        width="501" height="2846">
-                                                    <figcaption>Lo-Fi Fly Out Basket Design.</figcaption>
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/tablet/Services.webp"
+                                                        alt="Low Fidelity Design - Services Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Services Design.</figcaption>
                                                 </figure>
+                                            </div>
 
-                                                <div class="lightbox lightbox_22">
-                                                    <div class="lightbox-content w-25 w-20a w-15b">
-                                                        <div class="header">
-                                                            <h4>Fly-Out Basket</h4>
-                                                            <button type="button" id="close-btn_22"
-                                                                class="close-btn">&times;</button>
-                                                        </div>
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                            alt="Low Fidelity - Items in Basket Design.">
-                                                        <p>Lo-Fi Fly Out Basket Design.</p>
-                                                    </div>
-                                                </div>
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/tablet/Events.webp"
+                                                        alt="Low Fidelity Design - Events PAge." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Events Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/tablet/Volunteer.webp"
+                                                        alt="Low Fidelity Design - Volunteer Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Volunteer Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/tablet/Podcast.webp"
+                                                        alt="Low Fidelity Design - Podcast Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Podcast Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/tablet/Support.webp"
+                                                        alt="Low Fidelity Design - Support Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Support Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/tablet/Thank-You.webp"
+                                                        alt="Low Fidelity Design - Thank You Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Thank You Design.</figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tabContent7" class="tab-module" data-title="Tab 3">
+                                        <h3>Desktop Viewports</h3>
+                                        <p>The main pages embody a comprehensive approach, addressing all business
+                                            and user requirements within the application. The focus is centered on
+                                            effectively meeting the needs and goals of both the business and the end
+                                            users, culminating in a purposeful and comprehensive user experience.
+                                        </p>
+                                        <p class="hide-sm">Please feel free to click on any image to enlarge them.</p>
+                                        <div class="grid-container-4col">
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/desktop/Index.webp"
+                                                        alt="Low Fidelity Design - Index page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Home Page Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/desktop/About-Us.webp"
+                                                        alt="Low Fidelity Design - About Us Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi About Us Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/desktop/Services.webp"
+                                                        alt="Low Fidelity Design - Services Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Services Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/desktop/Events.webp"
+                                                        alt="Low Fidelity Design - Events PAge." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Events Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/desktop/Volunteer.webp"
+                                                        alt="Low Fidelity Design - Volunteer Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Volunteer Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/desktop/Podcast.webp"
+                                                        alt="Low Fidelity Design - Podcast Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Podcast Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/desktop/Support.webp"
+                                                        alt="Low Fidelity Design - Support Us Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Support Us Design.</figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="image-container">
+                                                <figure class="gallery">
+                                                    <img class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                        data-src="/assets/images/Case-Studies/CS3/lo-fi/desktop/Thank-You.webp"
+                                                        alt="Low Fidelity Design - Thank You Page." width="501"
+                                                        height="1165">
+                                                    <figcaption>Low-Fi Thank You Design.</figcaption>
+                                                </figure>
                                             </div>
                                         </div>
                                     </div>
@@ -1489,7 +1654,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Low-Fidelity Designs 1.3</h2>
                         <h3>Enhancing Task Flow Wireframes</h3>
@@ -1606,12 +1771,12 @@
                         <div class="tab-container hide-sm " id="tabContainer4">
                             <div class="tab-buttons">
                                 <button type="button" class="tab-button active" data-target="tab1">Index Page</button>
-                                <button type="button" class="tab-button" data-target="tab2">Product List</button>
-                                <button type="button" class="tab-button" data-target="tab3">Product Description</button>
-                                <button type="button" class="tab-button" data-target="tab4">Basket</button>
+                                <button type="button" class="tab-button" data-target="tab2">About Us</button>
+                                <button type="button" class="tab-button" data-target="tab3">Podcast</button>
+                                <button type="button" class="tab-button" data-target="tab4">Volunteer</button>
                             </div>
                             <div class="tab-contents">
-                                <div id="tabContent7" class="tab-module" data-title="Tab 1">
+                                <div id="tabContent8" class="tab-module" data-title="Tab 1">
                                     <h3>Index Page</h3>
                                     <p>These designs encapsulate the core pages of the application, meticulously
                                         catering to all business requirements. The primary emphasis is placed on
@@ -1628,8 +1793,8 @@
                                     </figure>
                                 </div>
 
-                                <div id="tabContent8" class="tab-module" data-title="Tab 2">
-                                    <h3>Product List Page</h3>
+                                <div id="tabContent9" class="tab-module" data-title="Tab 2">
+                                    <h3>About Us Page</h3>
                                     <p>These designs represent the core pages of the application, meticulously
                                         addressing all business requirements. The primary focus is on ensuring that
                                         the design adeptly meets the needs and objectives of both the business and
@@ -1645,8 +1810,8 @@
                                     </figure>
                                 </div>
 
-                                <div id="tabContent9" class="tab-module" data-title="Tab 3">
-                                    <h3>Product Description Page</h3>
+                                <div id="tabContent10" class="tab-module" data-title="Tab 3">
+                                    <h3>Podcast Page</h3>
                                     <p>This design embodies the key elements of the application's product
                                         description page, addressing all pertinent business requirements. The
                                         primary focus is on ensuring that the design effectively meets the needs and
@@ -1663,8 +1828,8 @@
                                     </figure>
                                 </div>
 
-                                <div id="tabContent10" class="tab-module" data-title="Tab 4">
-                                    <h3>Basket Page</h3>
+                                <div id="tabContent11" class="tab-module" data-title="Tab 4">
+                                    <h3>Volunteer Page</h3>
                                     <p>The usage and inclusion areas of significance in a Basket page for an iOS app
                                         are strategically designed to streamline the purchasing process and ensure a
                                         seamless user experience. Key elements and features include:</p>
@@ -1692,7 +1857,7 @@
                 </section>
 
                 <div id="hiFidelityDesigns"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Hi Fidelity Design 1.1</h2>
                         <h3>Creating a Strong Design System for Consistent User Experiences.</h3>
@@ -2173,7 +2338,7 @@
                                 <button type="button" class="tab-button" data-target="tab4">Patterns</button>
                             </div>
                             <div class="tab-contents">
-                                <div id="tabContent11" class="tab-module" data-title="Tab 1">
+                                <div id="tabContent12" class="tab-module" data-title="Tab 1">
                                     <div class="carousel-header">
                                         <div class="flex-col-left">
                                             <h3 class="headline">Foundation</h3>
@@ -2280,7 +2445,7 @@
                                     </div>
                                 </div>
 
-                                <div id="tabContent12" class="tab-module" data-title="Tab 2">
+                                <div id="tabContent13" class="tab-module" data-title="Tab 2">
                                     <div class="carousel-header">
                                         <div class="flex-col-left">
                                             <div class="carousel-editorial">
@@ -2395,7 +2560,7 @@
                                     <!-- end of slider  -->
                                 </div>
 
-                                <div id="tabContent16" class="tab-module" data-title="Tab 3">
+                                <div id="tabContent14" class="tab-module" data-title="Tab 3">
                                     <div class="carousel-header">
                                         <div class="flex-col-left">
                                             <div class="carousel-editorial">
@@ -2495,7 +2660,7 @@
                                     <!-- end of slider  -->
                                 </div>
 
-                                <div id="tabContent17" class="tab-module" data-title="Tab 4">
+                                <div id="tabContent15" class="tab-module" data-title="Tab 4">
                                     <div class="carousel-header">
                                         <div class="flex-col-left">
                                             <div class="carousel-editorial">
@@ -2613,7 +2778,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Hi Fidelity Design 1.2</h2>
                         <h3>Task Flow</h3>
@@ -2621,15 +2786,13 @@
                             in the task flow. These designs adhere to both user and business requirements for the
                             Home, Services, Events, Podcast Media page. The
                             designs were created and prototyped using Figma and Photoshop.</p>
-                        <p>Please feel free to click on any mage to expand it.</p>
                         <div class="grid-container-5col">
 
                             <div class="image-container">
                                 <figure class="gallery">
                                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Hi-Fi/Hi-Fi-TF-Index.svg"
-                                        alt="Image depicting the Hi Fidelity Design for the Index Page." 
-                                        width="500"
+                                        data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Index.webp"
+                                        alt="Image depicting the Hi Fidelity Design for the Index Page." width="500"
                                         height="820">
                                     <figcaption>Hi-Fi Index page design. </figcaption>
                                 </figure>
@@ -2638,51 +2801,73 @@
                             <div class="image-container">
                                 <figure class="gallery">
                                     <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Hi-Fi/Hi-Fi-TF-Product-List.svg"
-                                        alt="Image depicting the Hi-Fidelity Product List Page." width="500"
+                                        data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Nav.webp"
+                                        alt="Image depicting the Hi-Fidelity Navigation Design." width="500"
                                         height="570">
-                                    <figcaption>Hi-Fi Product List page design.</figcaption>
+                                    <figcaption>Hi-Fi Navigation Design.</figcaption>
                                 </figure>
                             </div>
 
                             <div class="image-container">
                                 <figure class="gallery">
                                     <img class="lazyload " src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Hi-Fi/Hi-Fi-TF-Prod-Desc.svg"
-                                        alt="Hi Fi Product Description Page Design." width="500" height="735">
-                                    <figcaption>Hi-Fi Product Description page design.</figcaption>
+                                        data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/About-Us.webp"
+                                        alt="Hi Fi About Us Page Design." width="500" height="735">
+                                    <figcaption>Hi-Fi About Us page design.</figcaption>
                                 </figure>
                             </div>
 
                             <div class="image-container">
                                 <figure class="gallery">
                                     <img class="lazyload " src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Hi-Fi/Hi-Fi-TF-Modal.svg"
-                                        alt="Image depicting the Hi-Fi Basket Modal design." width="500" height="735">
-                                    <figcaption>Hi-Fi Basket Modal design.</figcaption>
+                                        data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Services.webp"
+                                        alt="Image depicting the Hi-Fi Services design." width="500" height="735">
+                                    <figcaption>Hi-Fi Services Page design.</figcaption>
                                 </figure>
                             </div>
 
                             <div class="image-container">
                                 <figure class="gallery">
                                     <img class="lazyload " src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                        data-src="/assets/images/Case-Studies/CS2/Hi-Fi/Hi-Fi-TF-Basket.svg"
-                                        alt="Image depicting the Hi-Fidelity Design for the Basket Page." width="500"
-                                        height="735">
-                                    <figcaption>Basket page.</figcaption>
+                                        data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Volunteering.webp"
+                                        alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
+                                        width="500" height="735">
+                                    <figcaption>Hi-Fi Volunteering Page design.</figcaption>
                                 </figure>
                             </div>
                         </div>
                     </div>
                 </section>
 
-
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Hi-Fidelity Designs 1.3</h2>
                         <h3>Responsive Design</h3>
-                        <p>After creating the Information Architecture for the main customer facing screens, I
-                            designed the following responsive Hi-Fidelity designs.</p>
+                        <p>
+                            After establishing the Information Architecture and defining Task and User Flows for the
+                            primary customer-facing screens, the focus shifted to crafting the site's responsive
+                            Hi-Fidelity (Hi-Fi) designs. These designs represent the culmination of meticulous planning
+                            and user-centric considerations, aimed at delivering an optimal experience across various
+                            devices and screen sizes.
+                        </p>
+                        <p>
+                            The responsive nature of these designs ensures users can seamlessly interact with the
+                            website regardless of the device they are using. Prioritizing responsiveness helps maintain
+                            consistency in design elements, functionality, and overall user experience across different
+                            platforms.
+                        </p>
+                        <p>
+                            Each aspect of the design—from layout to typography to interactive elements—is thoughtfully
+                            crafted to adapt fluidly to different screen sizes. This approach not only enhances
+                            usability but also reflects a commitment to inclusivity, catering to the diverse needs and
+                            preferences of the user base.
+                        </p>
+                        <p>
+                            These Hi-Fidelity designs serve as a visual representation of the extensive research,
+                            iterative prototyping, and user feedback, embodying the essence of user-centered design
+                            principles. They elevate the application's interface to new heights of accessibility,
+                            engagement, and user satisfaction.
+                        </p>
                         <!-- accordion for mobile viewports  -->
                         <div class="accordion">
                             <div class="accordion-item active">
@@ -2696,67 +2881,107 @@
                                         </span>
                                     </div>
                                 </div>
+
                                 <div class="accordion-content">
-                                    <h3>Mobile to Small Tablet Viewports</h3>
-                                    <p>These designs encapsulate the core pages of the application, meticulously
-                                        catering to all business requirements. The primary emphasis is placed on
-                                        ensuring that the design adeptly fulfills the needs and objectives of both
-                                        the business and end users, culminating in a comprehensive and
-                                        purpose-driven user experience.</p>
+                                    <p>These designs are crafted to encompass the essential pages of the application,
+                                        with meticulous attention to detail. Our primary focus is on ensuring that these
+                                        designs effectively meet the requirements of both the business and end-users,
+                                        delivering a comprehensive and purpose-driven user experience tailored
+                                        specifically for small devices. Those being &le; 767px in width for
+                                        Mobile devices &le; 768px to 991px in width for Small Tablet devices.
+                                        </p>
                                     <div class="grid-container-6col no-background">
+
                                         <div class="image-container">
                                             <figure class="gallery">
                                                 <img class="lazyload"
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Index.webp"
                                                     alt="Image depicting the Hi Fidelity Design for the Index Page."
                                                     width="500" height="820">
                                                 <figcaption>Hi-Fi Index page design. </figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
                                                 <img class="lazyload"
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Nav.webp"
+                                                    alt="Image depicting the Hi-Fidelity Navigation Design." width="500"
+                                                    height="570">
+                                                <figcaption>Hi-Fi Navigation Design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/About-Us.webp"
+                                                    alt="Hi Fi About Us Page Design." width="500" height="735">
+                                                <figcaption>Hi-Fi About Us page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Services.webp"
+                                                    alt="Image depicting the Hi-Fi Services design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Services Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Events.webp"
+                                                    alt="Image depicting the Hi-Fi Events design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Events Page design.</figcaption>
+                                            </figure>
+                                        </div>
+
+                                        <div class="image-container">
+                                            <figure class="gallery">
+                                                <img class="lazyload "
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Volunteering.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Volunteering Page design.</figcaption>
+                                            </figure>
+                                        </div>
+
+                                        <div class="image-container">
+                                            <figure class="gallery">
+                                                <img class="lazyload "
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Podcast.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Podcast Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Podcast Page design.</figcaption>
+                                            </figure>
+                                        </div>
+
+                                        <div class="image-container">
+                                            <figure class="gallery">
+                                                <img class="lazyload "
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Thank-You.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Thank You Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Thank You Page design.</figcaption>
                                             </figure>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="accordion-item">
                                 <div class="accordion-header">
                                     <div class="headline">
@@ -2769,70 +2994,99 @@
                                     </div>
                                 </div>
                                 <div class="accordion-content">
-                                    <p>These designs encapsulate the core pages of the application, meticulously
-                                        catering to all business requirements. The primary emphasis is placed on
-                                        ensuring that the design adeptly fulfills the needs and objectives of both
-                                        the business and end users, culminating in a comprehensive and
-                                        purpose-driven user experience.</p>
+                                    <p>These designs are crafted to encompass the essential pages of the application,
+                                        with meticulous attention to detail. Our primary focus is on ensuring that these
+                                        designs effectively meet the requirements of both the business and end-users,
+                                        delivering a comprehensive and purpose-driven user experience tailored
+                                        specifically for small devices. Those being &le; 767px in width for
+                                        Mobile devices &le; 768px to 991px in width for Small Tablet devices.
+                                    </p>
                                     <div class="grid-container-6col no-background">
+
                                         <div class="image-container">
                                             <figure class="gallery">
                                                 <img class="lazyload"
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Index.webp"
                                                     alt="Image depicting the Hi Fidelity Design for the Index Page."
                                                     width="500" height="820">
                                                 <figcaption>Hi-Fi Index page design. </figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
                                                 <img class="lazyload"
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Nav.webp"
+                                                    alt="Image depicting the Hi-Fidelity Navigation Design." width="500"
+                                                    height="570">
+                                                <figcaption>Hi-Fi Navigation Design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/About-Us.webp"
+                                                    alt="Hi Fi About Us Page Design." width="500" height="735">
+                                                <figcaption>Hi-Fi About Us page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Services.webp"
+                                                    alt="Image depicting the Hi-Fi Services design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Services Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Events.webp"
+                                                    alt="Image depicting the Hi-Fi Events design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Events Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Volunteering.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Volunteering Page design.</figcaption>
+                                            </figure>
+                                        </div>
+
+                                        <div class="image-container">
+                                            <figure class="gallery">
+                                                <img class="lazyload "
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Podcast.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Podcast Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Podcast Page design.</figcaption>
+                                            </figure>
+                                        </div>
+
+                                        <div class="image-container">
+                                            <figure class="gallery">
+                                                <img class="lazyload "
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Thank-You.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Thank You Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Thank You Page design.</figcaption>
                                             </figure>
                                         </div>
 
@@ -2852,83 +3106,93 @@
 
                                 </div>
                                 <div class="accordion-content">
-                                    <p>These designs encapsulate the core pages of the application, meticulously
-                                        catering to all business requirements. The primary emphasis is placed on
-                                        ensuring that the design adeptly fulfills the needs and objectives of
-                                        both the business and end users, culminating in a comprehensive and
-                                        purpose-driven user experience. Below are the Hi-Fi Designs for Large
-                                        Laptops and Desktop viewports (equal to and greater than 1200px).</p>
+                                    <p>
+                                        These designs are optimized for large devices, providing an expansive and
+                                        immersive user experience
+                                        on desktop monitors &le;1200px and above in width and &le; 1600px for larger
+                                        displays.
+                                        With ample screen real estate, these designs can
+                                        incorporate more complex layouts and features while maintaining usability and
+                                        clarity.
+                                    </p>
                                     <div class="grid-container-6col no-background">
+
                                         <div class="image-container">
                                             <figure class="gallery">
                                                 <img class="lazyload"
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Index.webp"
                                                     alt="Image depicting the Hi Fidelity Design for the Index Page."
                                                     width="500" height="820">
                                                 <figcaption>Hi-Fi Index page design. </figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/About-Us.webp"
+                                                    alt="Hi Fi About Us Page Design." width="500" height="735">
+                                                <figcaption>Hi-Fi About Us page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Services.webp"
+                                                    alt="Image depicting the Hi-Fi Services design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Services Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Events.webp"
+                                                    alt="Image depicting the Hi-Fi Events design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Events Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Volunteering.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Volunteering Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Podcast.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Podcast Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Podcast Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Thank-You.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Thank You Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Thank You Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -2943,71 +3207,99 @@
                             <div class="tab-contents">
                                 <div id="tabContent27" class="tab-module" data-title="Tab 1">
                                     <h3>Mobile to Small Tablet Viewports</h3>
-                                    <p>These designs encapsulate the core pages of the application, meticulously
-                                        catering to all business requirements. The primary emphasis is placed on
-                                        ensuring that the design adeptly fulfills the needs and objectives of both
-                                        the business and end users, culminating in a comprehensive and
-                                        purpose-driven user experience.</p>
-                                    <p>Please feel free to click on any image to expand.</p>
+                                    <p>These designs are crafted to encompass the essential pages of the application,
+                                        with meticulous attention to detail. Our primary focus is on ensuring that these
+                                        designs effectively meet the requirements of both the business and end-users,
+                                        delivering a comprehensive and purpose-driven user experience tailored
+                                        specifically for small devices. Those being &le; 767px in width for
+                                        Mobile devices &le; 768px to 991px in width for Small Tablet devices.
+                                    </p>
                                     <div class="grid-container-6col no-background">
+
                                         <div class="image-container">
                                             <figure class="gallery">
                                                 <img class="lazyload"
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Index.webp"
                                                     alt="Image depicting the Hi Fidelity Design for the Index Page."
                                                     width="500" height="820">
                                                 <figcaption>Hi-Fi Index page design. </figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
                                                 <img class="lazyload"
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Nav.webp"
+                                                    alt="Image depicting the Hi-Fidelity Navigation Design." width="500"
+                                                    height="570">
+                                                <figcaption>Hi-Fi Navigation Design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/About-Us.webp"
+                                                    alt="Hi Fi About Us Page Design." width="500" height="735">
+                                                <figcaption>Hi-Fi About Us page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Services.webp"
+                                                    alt="Image depicting the Hi-Fi Services design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Services Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Events.webp"
+                                                    alt="Image depicting the Hi-Fi Events design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Events Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Volunteering.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Volunteering Page design.</figcaption>
+                                            </figure>
+                                        </div>
+
+                                        <div class="image-container">
+                                            <figure class="gallery">
+                                                <img class="lazyload "
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Podcast.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Podcast Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Podcast Page design.</figcaption>
+                                            </figure>
+                                        </div>
+
+                                        <div class="image-container">
+                                            <figure class="gallery">
+                                                <img class="lazyload "
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/mobile/Thank-You.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Thank You Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Thank You Page design.</figcaption>
                                             </figure>
                                         </div>
 
@@ -3016,102 +3308,122 @@
 
                                 <div id="tabContent28" class="tab-module" data-title="Tab 2">
                                     <h3>Tablet to Small Laptop Viewports</h3>
-                                    <p>These designs encapsulate the core pages of the application, meticulously
-                                        catering to all business requirements. The primary emphasis is placed on
-                                        ensuring that the design adeptly fulfills the needs and objectives of both
-                                        the business and end users, culminating in a comprehensive and
-                                        purpose-driven user experience.</p>
-                                    <p>Please feel free to click on any image to expand.</p>
-                                    <div class="grid-container-6col no-background">
+                                    <p>These designs are crafted to encompass the essential pages of the application,
+                                        with meticulous attention to detail. Our primary focus is on ensuring that these
+                                        designs effectively meet the requirements of both the business and end-users,
+                                        delivering a comprehensive and purpose-driven user experience tailored
+                                        specifically for small devices. Those being &le; 767px in width for
+                                        Mobile devices &le; 768px to 991px in width for Small Tablet devices.
+                                    </p>
+                                    <div class="grid-container-4col no-background">
+
                                         <div class="image-container">
                                             <figure class="gallery">
                                                 <img class="lazyload"
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Index.webp"
                                                     alt="Image depicting the Hi Fidelity Design for the Index Page."
                                                     width="500" height="820">
                                                 <figcaption>Hi-Fi Index page design. </figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
                                                 <img class="lazyload"
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Nav.webp"
+                                                    alt="Image depicting the Hi-Fidelity Navigation Design." width="500"
+                                                    height="570">
+                                                <figcaption>Hi-Fi Navigation Design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/About-Us.webp"
+                                                    alt="Hi Fi About Us Page Design." width="500" height="735">
+                                                <figcaption>Hi-Fi About Us page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Services.webp"
+                                                    alt="Image depicting the Hi-Fi Services design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Services Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Events.webp"
+                                                    alt="Image depicting the Hi-Fi Events design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Events Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Volunteer.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Volunteering Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Podcast.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Podcast Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Podcast Page design.</figcaption>
+                                            </figure>
+                                        </div>
+
+                                        <div class="image-container">
+                                            <figure class="gallery">
+                                                <img class="lazyload "
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/tablet/Thank-You.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Thank You Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Thank You Page design.</figcaption>
                                             </figure>
                                         </div>
 
                                     </div>
-
                                 </div>
                                 <div id="tabContent29" class="tab-module" data-title="Tab 3">
                                     <h3>Laptop and Large Device Viewports</h3>
-                                    <p>These designs encapsulate the core pages of the application, meticulously
-                                        catering to all business requirements. The primary emphasis is placed on
-                                        ensuring that the design adeptly fulfills the needs and objectives of
-                                        both the business and end users, culminating in a comprehensive and
-                                        purpose-driven user experience. Below are the Hi-Fi Designs for Large
-                                        Laptops and Desktop viewports (equal to and greater than 1200px).</p>
-                                    <p>Please feel free to click on any image to expand.</p>
-                                    <div class="grid-container-6col no-background">
+                                    <p>
+                                        These designs are optimized for large devices, providing an expansive and
+                                        immersive user experience
+                                        on desktop monitors &le;1200px and above in width and &le; 1600px for larger
+                                        displays.
+                                        With ample screen real estate, these designs can
+                                        incorporate more complex layouts and features while maintaining usability and
+                                        clarity.
+                                    </p>
+                                    <div class="grid-container-3col no-background">
+
                                         <div class="image-container">
                                             <figure class="gallery">
                                                 <img class="lazyload"
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Index.webp"
                                                     alt="Image depicting the Hi Fidelity Design for the Index Page."
                                                     width="500" height="820">
                                                 <figcaption>Hi-Fi Index page design. </figcaption>
@@ -3120,62 +3432,66 @@
 
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/About-Us.webp"
+                                                    alt="Hi Fi About Us Page Design." width="500" height="735">
+                                                <figcaption>Hi-Fi About Us page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Services.webp"
+                                                    alt="Image depicting the Hi-Fi Services design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Services Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Events.webp"
+                                                    alt="Image depicting the Hi-Fi Events design." width="500"
+                                                    height="735">
+                                                <figcaption>Hi-Fi Events Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Volunteer.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Volunteering Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Podcast.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Podcast Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Podcast Page design.</figcaption>
                                             </figure>
                                         </div>
+
                                         <div class="image-container">
                                             <figure class="gallery">
-                                                <img class="lazyload"
+                                                <img class="lazyload "
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                                                    data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/index.webp"
-                                                    alt="Image depicting the Hi Fidelity Design for the Index Page."
-                                                    width="500" height="820">
-                                                <figcaption>Hi-Fi Index page design. </figcaption>
+                                                    data-src="/assets/images/Case-Studies/CS3/hi-fi/desktop/Thank-You.webp"
+                                                    alt="Image depicting the Hi-Fidelity Design for the Thank You Page."
+                                                    width="500" height="735">
+                                                <figcaption>Hi-Fi Thank You Page design.</figcaption>
                                             </figure>
                                         </div>
 
@@ -3186,7 +3502,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Hi-Fidelity Designs 1.4</h2>
                         <h3>Interactive Prototype</h3>
@@ -3267,7 +3583,7 @@
                 </section>
 
                 <div id="ux-testing"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Usability Testing</h2>
                         <p>Ensuring the usability and effectiveness of our designs through user experience
@@ -3367,7 +3683,7 @@
 
                 <div id="conclusion"></div>
 
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h1>After Thoughts</h1>
                         <p>
@@ -3396,7 +3712,7 @@
                 </section>
 
                 <div id="project-information"></div>
-                <section>
+                <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <div class="skills-section">
                             <h1>Project Information</h1>
@@ -3406,11 +3722,11 @@
                                         <div class="flex-row no-border">
                                             <div class="col">
                                                 <h2>Client</h2>
-                                                <p>Synalogik Innovative Solutions Ltd</p>
+                                                <p>Come Together Hub Ltd</p>
                                             </div>
                                             <div class="col">
                                                 <h3>Date</h3>
-                                                <p>2023</p>
+                                                <p>2024</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3418,11 +3734,10 @@
                                         <div class="flex-row no-border">
                                             <div class="col">
                                                 <h2>Visit</h2>
-                                                <p>Below is a link to a design replication of this application.
-                                                    Slightly altered to adhere to Conflict Of Interest guidelines.
+                                                <p>Below is a link to HI-Fi design specifications.
                                                 </p>
                                                 <a class="tertiary-link"
-                                                    href="https://www.figma.com/proto/YXxgseFH7TkQnjgEBzWuKL/e-commerce?page-id=0%3A1&type=design&node-id=726-16154&viewport=-57%2C-206%2C0.17&t=u49On43pBk1RXzB8-1&scaling=scale-down&starting-point-node-id=726%3A16108&mode=design"
+                                                    href="https://www.figma.com/proto/Hyvo3r7FVLTfjR4QXwqdqX/Come-Together?page-id=574%3A1001&node-id=574-1738&viewport=639%2C546%2C0.13&t=8EqpEkTncz0l6SXy-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=574%3A1738&share=1"
                                                     target="_blank">
                                                     Click to see designs in new window.</a>
                                             </div>
@@ -3432,30 +3747,29 @@
 
                                 <div class="flex-row no-border">
                                     <div class="left-col width_50">
-                                        <div class="flex-col">
-                                            <div class="col">
-                                                <h2>My Role</h2>
-                                                <p>Discovery &amp; requirements gathering.</p>
-                                                <p>Market Research and Competitor Analysis.</p>
-                                                <p>User Interviews and Desk Researcher.</p>
-                                                <p>User Journey Analyst and Coordinator.</p>
-                                                <p>Front End Framework Researcher.</p>
-                                                <p>Lead UX Designer.</p>
-                                                <p>Lead UI Designer.</p>
-                                                <p>Lead Usability Testing Facilitator and Validator.</p>
-                                            </div>
+                                        <div class="col">
+                                            <h2>My Role</h2>
+                                            <ul>
+                                                <li>UX Researcher and Analysis Lead</li>
+                                                <li>Lead UX &amp; UI Designer</li>
+                                                <li>Design System Creator</li>
+                                                <li>Low &amp; High Fidelity Designer</li>
+                                                <li>UI Kit Designer</li>
+                                                <li>User Testing Facilitator</li>
+                                                <li>Web Master and Developer</li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="right-col">
-                                        <div class="flex-row no-border">
-                                            <div class="col">
-                                                <h2>Design Tools</h2>
-                                                <p>Figma.</p>
-                                                <p>Photoshop.</p>
-                                                <p>Microsoft Teams.</p>
-                                                <p>Survey Monkey.</p>
-                                                <p>MeasuringU's SUPR-Q.</p>
-                                            </div>
+                                    <div class="right-col width_50">
+                                        <div class="col">
+                                            <h2>Design Tools</h2>
+                                            <ul>
+                                                <li>Figma.</li>
+                                                <li>Photoshop.</li>
+                                                <li>Microsoft Teams.</li>
+                                                <li>Survey Monkey.</li>
+                                                <li>MeasuringU's SUPR-Q.</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
