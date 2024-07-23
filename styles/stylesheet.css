@@ -1323,8 +1323,7 @@ textarea.input {
 .grid-container-5col .prototype-container a:hover,
 .grid-container-6col .prototype-container a:hover {
   text-decoration: none;
-  filter: brightness(0.9);
-  border: 1px solid red;
+  filter: brightness(0.8);
 }
 .grid-container-1col .prototype-container a .border,
 .grid-container-2col .prototype-container a .border,
@@ -1332,8 +1331,7 @@ textarea.input {
 .grid-container-4col .prototype-container a .border,
 .grid-container-5col .prototype-container a .border,
 .grid-container-6col .prototype-container a .border {
-  border: 20px solid #1a1a1a;
-  border: 20px;
+  border-radius: 20px;
 }
 .grid-container-1col .prototype-container a .no-border,
 .grid-container-2col .prototype-container a .no-border,
@@ -2652,9 +2650,6 @@ textarea.input {
     font-family: inherit;
     color: #1a1a1a;
     text-decoration: underline;
-  }
-  .grid-container-2col .prototype-container a:hover {
-    border: 1px solid #4fbdd2;
   }
   .grid-container-2col .prototype-container:hover {
     text-decoration: none;
