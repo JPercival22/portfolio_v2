@@ -185,6 +185,11 @@ ul {
     list-style: none;
     @include apply-flex-styles($flex-col-center-start);
   }
+  &.mt-0{margin-top: 0;}
+  &.disc {
+    margin-left: 16px;
+    list-style: disc;
+  }
   li {
     font-family: $font-family;
     font-size: 16px;
