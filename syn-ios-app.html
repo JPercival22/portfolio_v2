@@ -532,14 +532,6 @@
                             <div class="flex-row space-between no-border">
                                 <div class="col">
                                     <div class="two-button-container left-align">
-                                        <a class="tertiary-link" href="https://just-speak-guitar-lessons.github.io/"
-                                            target="_blank" title="Click to see the live website used during testing.">
-                                            <svg class="vector" xmlns="http://www.w3.org/2000/svg" height="24px"
-                                                viewBox="0 -960 960 960" width="24px" fill="#008190">
-                                                <path
-                                                    d="M80-480v-80h120v80H80Zm136 222-56-58 84-84 58 56-86 86Zm28-382-84-84 56-58 86 86-58 56Zm476 480L530-350l-50 150-120-400 400 120-148 52 188 188-80 80ZM400-720v-120h80v120h-80Zm236 80-58-56 86-86 56 56-84 86Z" />
-                                            </svg>
-                                            Visit Website.</a>
 
                                         <a class="tertiary-link"
                                             href="https://xd.adobe.com/embed/c7dd0076-2049-4255-900b-d5ab3ecc022a-928e/"
@@ -553,11 +545,6 @@
                                         </a>
                                     </div>
                                     <div class="two-button-container right-align">
-                                        <a id="backButton" class="secondary-button" href="/index.html"
-                                            aria-label="button link to home page"
-                                            title="Please click this button if you would like to see all projects.">
-                                            Projects
-                                        </a>
                                         <a id="forwardButton" class="primary-button" href="/guitar-tutorial.html"
                                             aria-label="button link to go to the next project"
                                             title="Please click this button if you would like to view the next project.">
@@ -575,13 +562,15 @@
                                 <li>Framework Analyst</li>
                             </ul>
                             <div class="image-container">
-                                <div class="primary-banner syn-banner lazyload"></div>
-                                <script>document.addEventListener('lazybeforeunveil', function (e) {
+                                <div class="primary-banner syn-banner lazyload lazyblurry"></div>
+                                <script>
+                                    document.addEventListener('lazybeforeunveil', function (e) {
                                         var bg = e.target.getAttribute('data-bg');
                                         if (bg) {
                                             e.target.style.backgroundImage = 'url(' + bg + ')';
                                         }
-                                    });</script>
+                                    });
+                                </script>
                             </div>
                         </div>
                     </div>

@@ -9,7 +9,7 @@
         content="HTML, CSS, JavaScript, User Experience Design, UI, UX, UX Testing, Pro-Bono, Charity Website">
     <meta name="author" content="Joseph Percival">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study 3</title>
+    <title>Case Study 1</title>
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
     <!-- Preload the primary banner image -->
@@ -556,7 +556,7 @@
                 <section class="editorial">
                     <div class="hero">
                         <div class="hero-content case-study-settings">
-                            <h1>Come Together Hub - Pro-Bono Design and Development(2024)</h1>
+                            <h1>Come Together Hub - Pro-Bono Design and Development (2024).</h1>
                             <div class="flex-row space-between no-border">
                                 <div class="col">
                                     <div class="two-button-container left-align">
@@ -581,7 +581,6 @@
                                         </a>
                                     </div>
                                     <div class="two-button-container right-align">
-
                                         <a id="forwardButton" class="primary-button" href="/syn-ios-app.html"
                                             aria-label="button link to go to the next project"
                                             title="Please click this button if you would like to view the next project.">
@@ -600,6 +599,13 @@
                             </ul>
                             <div class="image-container">
                                 <div class="primary-banner come-together-banner lazyload lazyblurry"></div>
+                                <script>document.addEventListener('lazybeforeunveil', function (e) {
+                                        var bg = e.target.getAttribute('data-bg');
+                                        if (bg) {
+                                            e.target.style.backgroundImage = 'url(' + bg + ')';
+                                        }
+                                    });
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -842,7 +848,6 @@
                 <div id="ideation"></div>
                 <section class="lazyload lazyblurry">
                     <div class="editorial">
-
                         <h2>Strategy Ideation for Elevating the User Experience</h2>
                         <p>To enhance the website's usability and overall user experience, we planned to incorporate
                             several strategic elements, including:</p>
@@ -856,14 +861,15 @@
                         <p>Our main goal was to develop a visually appealing, user-focused website that improves
                             usability, increases user retention and engagement, and effectively showcases the client's
                             mission, free services, and opportunities for user involvement. We also aimed to ensure
-                            transparency in donations to build user trust.</p>
-
+                            transparency in donations to build user trust.
+                        </p>
                         <h3>Exploring the Customer Journey</h3>
                         <p>The customer journey map details each stage a user experiences while navigating charity
                             websites, from the initial search engine inquiry to key pages such as the Home Page,
                             Donation Heroes, Forms, and Service Pages. This comprehensive map explores users' emotions
                             and expectations throughout their interactions, offering valuable insights into their needs
-                            and behaviors, as revealed in previous user engagement sessions.</p>
+                            and behaviors, as revealed in previous user engagement sessions.
+                        </p>
                         <p>Understanding users' emotions and expectations is essential for gaining insight into their
                             journey. By analyzing their emotional responses and expectations, we can pinpoint pain
                             points, identify opportunities for improvement, and recognize areas of satisfaction. This
@@ -878,8 +884,8 @@
                                         data-src="/assets/images/Case-Studies/CS3/planning/CS3-C-Journey.svg" alt="Customer Journey Map showing the stages of user interaction on an e-commerce site, from 
                                             search to checkout, with emphasis on user emotions and expectations."
                                         width="500" height="360">
-                                    <p>Customer Journey Map highlighting the key stages from Page Load to Submitting the
-                                        Form.</p>
+                                    <p>Customer Journey Map highlighting the key stages from page load to submitting the
+                                        form.</p>
                                 </figure>
                                 <div class="lightbox lightbox_2">
                                     <div class="lightbox-content w-85 w-60a w-50b">
@@ -890,7 +896,7 @@
                                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                             alt="Customer Journey Map.">
                                         <p>Customer Journey Map highlighting the key stages from Page Load to Submitting
-                                            the Form.</p>
+                                            the form.</p>
                                     </div>
                                 </div>
                             </div>
@@ -915,9 +921,10 @@
                         <aside>
                             <h3>Site Maps and Design Layouts</h3>
                             <p>
-                                The site maps below illustrate the IA of the website, highlighting its structure and
-                                organization. They depict the hierarchy of pages and sections, providing a clear view of
-                                the product's interconnected components. These maps were instrumental in evaluating and
+                                The maps below highlight the IA structure and organization by depicting the page
+                                hierarchy and their key sections,
+                                providing a clear view of the product's interconnected components. These maps were
+                                instrumental in evaluating and
                                 refining user flows and navigation paths, contributing to an enhanced and more intuitive
                                 user experience.
                             </p>
@@ -933,9 +940,9 @@
                                 <div id="tabContent30" class="tab-module" data-title="Tab 1">
                                     <h3>Sitemap</h3>
                                     <p>
-                                        Using data from user interviews and aligning it with business requirements, we
-                                        developed a detailed sitemap for the application. This sitemap adheres to
-                                        established e-commerce industry conventions, ensuring it meets user expectations
+                                        Using data from interviews and aligning it with businesses requirements,
+                                        a detailed sitemap developed. This sitemap adheres to
+                                        established conventions, ensuring that it met user expectations
                                         and business objectives. It visually represents the site's structure, layout,
                                         and content, providing a clear overview of the navigational hierarchy and key
                                         sections.
@@ -958,9 +965,12 @@
                                     <p>
                                         The system navigation designs are crafted to provide a user-centric, organized,
                                         and intuitive framework. Their primary goal is to empower users to easily find
-                                        and navigate through the digital system, enhancing their overall experience.
-                                        These designs are essential for helping users achieve their objectives with
-                                        minimal effort, ensuring a smooth and efficient interaction within the system.
+                                        and navigate through the digital system, ina logical and multi-dimensional way
+                                        whilst
+                                        enhancing their overall experience. These designs were essential for helping
+                                        users
+                                        achieve their objectives with minimal effort, ensuring a smooth and efficient
+                                        interaction.
                                     </p>
                                     <div class="centered-row">
                                         <div class="image-container">
@@ -984,13 +994,12 @@
                     <div class="editorial">
                         <h2>Interaction Design 1.1: Task and User Flow Maps</h2>
                         <p>
-                            This section covers designing user-centric experiences by leveraging the created site
-                            maps. User task flows involve mapping out the detailed journeys users take to complete
-                            tasks, designing intuitive pathways, and crafting engaging interactions. By focusing on
-                            these elements, we aim to enhance usability and satisfaction, creating compelling
-                            experiences that captivate users and keep them engaged.
+                            This section covers the design of user-centric experiences through the use of detailed site
+                            maps. User task flows map out the specific journeys users take to complete tasks, design
+                            intuitive pathways, and craft engaging interactions. By focusing on these elements, we aim
+                            to enhance usability and satisfaction, creating compelling experiences that captivate and
+                            retain users.
                         </p>
-
                         <aside title="Task and User Flow Tabular Views">
                             <div class="tab-container" id="tabContainer2">
                                 <div class="tab-buttons">
@@ -1002,15 +1011,14 @@
                                     <div id="tabContent3" class="tab-module" data-title="Tab 1">
                                         <h3>Task Flow</h3>
                                         <p>
-                                            The task flow diagram illustrates the steps users should predictably follow,
-                                            to
-                                            interact with the site. It details the process of landing, finding and
-                                            searching
-                                            for information, choosing a page, and viewing the form. This visual
-                                            representation outlines each sequential step and decision point, providing a
-                                            clear and intuitive path for users to complete their tasks and enhance their
-                                            overall experience with the site.
+                                            The task flow diagram illustrates the predictable steps users should follow
+                                            to interact with the site. It details the process from landing on the
+                                            homepage, finding and searching for information, selecting a page, and
+                                            viewing the form. This visual representation outlines each sequential step
+                                            and decision points, providing clear and intuitive paths users could use to
+                                            complete their tasks and enhance their overall experience with the site.
                                         </p>
+
                                         <p class="hide-sm">Please feel free to click on any image to enlarge them.</p>
 
                                         <div class="grid-container-1col">
@@ -1041,10 +1049,10 @@
                                         <h3>User Flow</h3>
                                         <p>
                                             Based on qualitative and quantitative data from previous interviews and the
-                                            site map, key pathways were identified, that the users would take to
-                                            complete their
-                                            journey. This analysis helped outline the most effective routes
-                                            users follow to achieve their goals.
+                                            site map, key pathways were identified that users would take to complete
+                                            their journey. This analysis helped outline the most effective routes for
+                                            users to achieve their goals, ensuring a seamless and efficient user
+                                            experience.
                                         </p>
                                         <p class="hide-sm">Please feel free to click on the image to enlarge it.</p>
 
@@ -1055,9 +1063,7 @@
                                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                         data-src="/assets/images/Case-Studies/CS3/planning/User-Flow.svg"
                                                         alt="User Flow Map." width="483" height="252">
-                                                    <figcaption>User Flow map the Key Decision
-                                                        Journey.
-                                                    </figcaption>
+                                                    <figcaption>User Flow map the Key Decision Journey.</figcaption>
                                                 </figure>
                                                 <div class="lightbox lightbox_4">
                                                     <div class="lightbox-content w-90 w-70a w-50b">
@@ -1068,8 +1074,7 @@
                                                         </div>
                                                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                             alt="Paper Prototype - Top Bar and Footer Thumb Reach designs.">
-                                                        <p>User Flow map the Key Decision Journey.
-                                                        </p>
+                                                        <p>User Flow map the Key Decision Journey.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1087,11 +1092,16 @@
                         <h3>Front-End Technology Analysis</h3>
                         <p>
                             Given the client's limited budget for this pro-bono project, hiring a full development team
-                            was not financially feasible. Instead, I opted to use my semantic HTML5, CSS3, and modular
-                            JavaScript knowledge and experience for the development. Hindsight did discover, utilising a 
-                            framework would have been beneficial in terms of efficiency and certainly less time consuming.
-                            However, due to time constraints and lack of experience in this area of development, did not 
-                            have the resources for this project.
+                            was not financially feasible. Instead, I opted to use my knowledge and experience in
+                            semantic HTML5, CSS3, and modular JavaScript for the development.
+                        </p>
+                        <p>
+                            Hindsight did discover, utilizing a framework would have been beneficial in terms of
+                            efficiency and certainly less time-consuming.
+                        </p>
+                        <p>
+                            However, due to time constraints and lack of experience in this area of development, did
+                            not have the resources for this project.
                         </p>
                         <p>
                             Leveraging my extensive experience in these technologies, I focused on meticulous planning
@@ -1108,28 +1118,42 @@
                     <div class="editorial">
                         <h2>Low-Fidelity Designs 1.1</h2>
                         <h3>Rapid Prototyping</h3>
-                        <p>The initial design concepts were formulated using data from Affinity Mapping, Journey and
-                            Persona
-                            Analysis, resulting in prototypes for the Home Screen, Components, and generic Screen
-                            layouts.
-                            A dedicated focus was placed on refining the card components,
-                            ensuring optimal user interaction and visual appeal.
+                        <p>
+                            The initial design concepts were formulated using data from Affinity Mapping, Journey and
+                            Persona Analysis, resulting in prototypes for the Home Screen, Components, and generic
+                            Screen layouts. A dedicated focus was placed on refining the card components, ensuring
+                            optimal user interaction and visual appeal.
                         </p>
+                        <ul class="disc">
+                            <li>
+                                Prototypes for Home Screen, Components, and generic Screen layouts were created.
+                            </li>
+                            <li>
+                                Special focus on refining card components for optimal interaction and visual appeal.
+                            </li>
+                        </ul>
                         <p>
                             These design decisions were informed by a comprehensive analysis of User Interviews,
-                            explored
-                            Customer Journeys, the IA, and their alignment with business requirements, ensuring a
-                            balanced
-                            approach. The placement of essential Calls to Action in the top bar and footer was
-                            strategically
-                            designed to be within easy reach of both thumbs, aligning with previous research insights.
+                            explored Customer Journeys, the IA, and their alignment with business requirements, ensuring
+                            a balanced approach.
                         </p>
+                        <ul class="disc">
+                            <li>
+                                Placement of essential Calls to Action (CTAs) in the top bar and footer, designed to be
+                                within easy reach of both thumbs, aligning with ergonomic research.
+                            </li>
+                            <li>
+                                Emphasis on creating reusable components to streamline development and ensure
+                                consistency.
+                            </li>
+                        </ul>
                         <p>
-                            This intentional approach aimed to create a user-friendly and visually appealing
-                            interface, laying the foundation for thorough User Testing to gather valuable feedback
-                            and insights. The iterative process empowered the team to refine and optimize the user
-                            experience, customizing it to meet the specific needs of both users and the business.
+                            This intentional approach aimed to create a user-friendly and visually appealing interface,
+                            laying the foundation for thorough User Testing to gather valuable feedback and insights.
+                            The iterative process empowered the team to refine and optimize the user experience,
+                            customizing it to meet the specific needs of both users and the business.
                         </p>
+
                         <p class="hide-sm">You can click any image to enlarge them.</p>
 
                         <div class="grid-container-4col">
@@ -1236,23 +1260,27 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
-
                         </div>
                         <h3>User Feedback</h3>
                         <p>During the refinement stages, user involvement saw a significant boost following the
-                            alignment of Landing/Index Page Marketing Strategies such as the Donation and Recruitment
-                            Section as part of Primary Banner of each page with stakeholder consensus. These
-                            layouts garnered high praise during User Research, seamlessly integrating with the pages
-                            and enabling users to interact with these from the outset, rather than
-                            waiting until the browsing phase.</p>
-                        <p>Users were presented with a selection of card layouts tailored for this application.
-                            While the feedback was insightful, a final decision was deferred to allow for a more
-                            polished version that comprehensively addresses user expectations. This objective was
-                            achieved using Figma to create the Low-Fidelity Designs.
-                        </p>
+                            alignment of Landing/Index Page Marketing Strategies with stakeholder consensus. Key points
+                            included:</p>
+                        <ul class="disc">
+                            <li>Incorporating Donation and Recruitment Sections as part of the Primary Banner on each
+                                page.</li>
+                            <li>These layouts garnered high praise during User Research for their seamless integration
+                                with the pages.</li>
+                            <li>Users could interact with these sections from the outset, rather than waiting until the
+                                browsing phase.</li>
+                        </ul>
+                        <p>Users were presented with a selection of card layouts tailored for this application. The
+                            process involved:</p>
+                        <ul class="disc">
+                            <li>Gathering insightful feedback on various card layout options.</li>
+                            <li>Deferring the final decision to create a more polished version that comprehensively
+                                addresses user expectations.</li>
+                            <li>Utilizing Figma to create Low-Fidelity Designs to achieve this objective.</li>
+                        </ul>
                     </div>
                 </section>
 
@@ -1260,16 +1288,21 @@
                     <div class="editorial">
                         <h2>Low-Fidelity Designs 1.2</h2>
                         <h3>Responsive Wireframes</h3>
-                        <p>As we transitioned from early sketches to wireframes, we meticulously adapted and
-                            transposed our initial concept design into wireframes using Figma.
-                            This effectively portrays the responsive design elements
-                            across multiple devices.</p>
-                        <p>Within the wireframes presented below, you will discover a
-                            visual representation of the Home page, demonstrating its seamless adaptability across
-                            various viewports including Desktop, Tablet, and Mobile devices. The resulting
-                            designs embody the culmination of research conducted in preceding phases, aimed at
-                            capturing and communicating the user-centric insights and requirements identified during
-                            the research process.</p>
+                        <p>
+                            Figma was used to transition from early sketches to wireframes, with careful attention given
+                            to adapting and refining the initial concept designs. This approach effectively showcases
+                            the responsive design elements across multiple devices.
+                        </p>
+                        <p>The wireframes presented below illustrate:</p>
+                        <ul class="disc">
+                            <li>A visual representation of the Home page.</li>
+                            <li>Seamless adaptability across various viewports including Desktop, Tablet, and Mobile
+                                devices.</li>
+                            <li>The culmination of research conducted in preceding phases, aimed at capturing and
+                                communicating the user-centric insights and requirements identified during the research
+                                process.</li>
+                        </ul>
+
                         <aside title="Low Fidelity Designs Tabular Views">
                             <div class="tab-container" id="tabContainer3">
                                 <div class="tab-buttons">
@@ -1280,10 +1313,11 @@
                                 <div class="tab-contents">
                                     <div id="tabContent5" class="tab-module" data-title="Tab 1">
                                         <h3>Mobile Viewport</h3>
-                                        <p>The main pages embody a comprehensive approach, addressing all business
-                                            and user requirements within the application. The focus is centered on
-                                            effectively meeting the needs and goals of both the business and the end
-                                            users, culminating in a purposeful and comprehensive user experience.
+                                        <p>
+                                            The main pages are designed to comprehensively address all business and user
+                                            requirements within the application. The focus is on effectively meeting the
+                                            needs and goals of both the business and the end users, resulting in a
+                                            purposeful and complete user experience.
                                         </p>
                                         <p class="hide-sm">Please feel free to click on any image to enlarge them.
                                         </p>
@@ -1390,10 +1424,11 @@
                                     </div>
                                     <div id="tabContent6" class="tab-module" data-title="Tab 2">
                                         <h3>Tablet Viewports</h3>
-                                        <p>The main pages embody a comprehensive approach, addressing all business
-                                            and user requirements within the application. The focus is centered on
+                                        <p>
+                                            The main pages are designed with a comprehensive approach, addressing all
+                                            business and user requirements within the application. The focus is on
                                             effectively meeting the needs and goals of both the business and the end
-                                            users, culminating in a purposeful and comprehensive user experience.
+                                            users, resulting in a purposeful and complete user experience.
                                         </p>
                                         <p class="hide-sm">Please feel free to click on any image to enlarge them.</p>
                                         <div class="grid-container-4col">
@@ -1499,10 +1534,11 @@
                                     </div>
                                     <div id="tabContent7" class="tab-module" data-title="Tab 3">
                                         <h3>Desktop Viewports</h3>
-                                        <p>The main pages embody a comprehensive approach, addressing all business
-                                            and user requirements within the application. The focus is centered on
-                                            effectively meeting the needs and goals of both the business and the end
-                                            users, culminating in a purposeful and comprehensive user experience.
+                                        <p>
+                                            The desktop viewports are designed with a comprehensive approach, addressing
+                                            all business and user requirements. The emphasis is on meeting the needs and
+                                            goals of both the business and end users, ensuring a thorough and effective
+                                            user experience.
                                         </p>
                                         <p class="hide-sm">Please feel free to click on any image to enlarge them.</p>
                                         <div class="grid-container-4col">
@@ -1605,17 +1641,18 @@
                     <div class="editorial">
                         <h2>Low-Fidelity Designs 1.3</h2>
                         <h3>Enhanced Task Flow Wireframes</h3>
-                        <p>We undertook the process of iteratively refining the task flow wireframes to create intuitive
-                            and efficient interactive pathways, making it easier for users to complete their tasks
-                            seamlessly. By strategically identifying key interaction points and analyzing their
-                            usability, our primary aim was to seamlessly integrate market strategies while maintaining
-                            smooth user flow. This effort involved aligning design elements with significant relevance
-                            to stakeholders and C-level employees, ultimately ensuring a cohesive and compelling user
-                            experience.</p>
-                        <p>These designs cover the core pages of the application, thoughtfully addressing all business
-                            requirements. The main focus is on ensuring that the design effectively meets the needs and
-                            objectives of both the business and end users, resulting in a comprehensive and
-                            purpose-driven user experience.</p>
+                        <p>
+                            We refined the task flow wireframes through iterative design to create intuitive and
+                            efficient pathways for users. This approach aimed to facilitate seamless task completion by
+                            strategically identifying key interaction points and enhancing their usability. Our goal was
+                            to integrate market strategies effectively while maintaining a smooth user flow.
+                        </p>
+                        <p>
+                            These wireframes cover the core pages of the application and are designed to meet all
+                            business requirements. The focus is on ensuring that the design aligns with both business
+                            objectives and user needs, resulting in a comprehensive and purposeful user experience.
+                        </p>
+
                         <!-- accordion for mobile viewports  -->
                         <div class="accordion">
                             <div class="accordion-item active">
@@ -1725,21 +1762,31 @@
                             <div class="tab-contents">
                                 <div id="tabContent8" class="tab-module" data-title="Tab 1">
                                     <h3>Index Page</h3>
-                                    <p>These designs encapsulate the landing page, to encapsulate business and user
-                                        requirements it was suggested
-                                        not the implement the undesirable pop up advert, incorporating a subtle heading
-                                        as part of the hero
-                                        instead, accompanied by a primary (linking to the external donations page) and
-                                        secondary (linking to the
-                                        Volunteering page) button.</p>
-                                    <p>The remainder of the page incorporate reusable components, used sparingly
-                                        throughout for familiarity
-                                        and development efficiency. Included are company aims and missions for complete
-                                        transparency, cards on
-                                        user engagement for user engagement, donation usage for non-profit
-                                        accountability and a social media section with
-                                        interactive QR codes for enhanced communication.</p>
-                                    <figure class="gallery no-border">
+                                    <ul>
+                                        <li>
+                                            The design of the landing page integrates business and user requirements by:
+                                            <ul class="disc">
+                                                <li>Replacing the undesirable pop-up advert with a subtle heading in the
+                                                    hero section.</li>
+                                                <li>Incorporating a primary button linking to the external donations
+                                                    page.</li>
+                                                <li>Adding a secondary button linking to the Volunteering page.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            The page uses reusable components for consistency and development
+                                            efficiency:
+                                            <ul class="disc">
+                                                <li>Company aims and mission for complete transparency.</li>
+                                                <li>User engagement cards to boost interaction.</li>
+                                                <li>Donation usage information to ensure non-profit accountability.</li>
+                                                <li>Social media section featuring interactive QR codes for enhanced
+                                                    communication.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <figure class="gallery border">
                                         <img class="lazyload"
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                             data-src="/assets/images/Case-Studies/CS3/planning/CS3- ETF-1.svg"
@@ -1751,15 +1798,28 @@
 
                                 <div id="tabContent9" class="tab-module" data-title="Tab 2">
                                     <h3>About Us Page</h3>
-                                    <p>The introduction to this page was personally written by the founder of the
-                                        charity, to
-                                        highlight how some of hes personal struggles became strengths and formed the
-                                        foundation
-                                        to this brilliant charity. Additionally, more context on the charity's mission
-                                        statement
-                                        and more on what they are achieving in their local community.
-                                    </p>
-                                    <figure class="gallery no-border">
+                                    <ul>
+                                        <li>
+                                            The introduction features a personal narrative written by the charity's
+                                            founder:
+                                            <ul class="disc">
+                                                <li>Highlights how the founder's personal struggles transformed into
+                                                    strengths.</li>
+                                                <li>Describes how these experiences laid the foundation for the charity.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Provides additional context about the charity:
+                                            <ul class="disc">
+                                                <li>Details the charity's mission statement.</li>
+                                                <li>Explains their achievements and impact within the local community.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <figure class="gallery border">
                                         <img class="lazyload"
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                             data-src="/assets/images/Case-Studies/CS3/planning/CS3- ETF-2.svg"
