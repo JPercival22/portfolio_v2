@@ -582,18 +582,17 @@
                                     </div>
                                     <div class="two-button-container right-align">
                                         <a id="backButton" class="primary-button" href="/index.html"
-                                        aria-label="button link to home page"
-                                        title="Please click this button if you would like to return to Home page.">
-                                        Projects
-                                    </a>
-                                       
+                                            aria-label="button link to home page"
+                                            title="Please click this button if you would like to return to Home page.">
+                                            Projects
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="image-container">
-                                <div class="primary-banner guitar-banner lazyload lazyblurry"></div>
-                            </div>
-                            <ul class="hide-sm">
+
+
+                            <ul class="bullet-list-row">
                                 <li>Branding Creator</li>
                                 <li>UX Research</li>
                                 <li>UX &amp; UI Designer</li>
@@ -601,7 +600,17 @@
                                 <li>User Testing Facilitator</li>
                                 <li>Front End Developer</li>
                             </ul>
-
+                            <div class="image-container">
+                                <div class="primary-banner guitar-banner lazyload lazyblurry"></div>
+                                <script>
+                                    document.addEventListener('lazybeforeunveil', function (e) {
+                                        var bg = e.target.getAttribute('data-bg');
+                                        if (bg) {
+                                            e.target.style.backgroundImage = 'url(' + bg + ')';
+                                        }
+                                    });
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -2691,7 +2700,7 @@
                                         specifically for small devices. Those being &le; 767px in width for
                                         Mobile devices &le; 768px to 991px in width for Small Tablet devices.
                                     </p>
-                                
+
                                     <div class="grid-container-1col no-background">
                                         <figure class="gallery">
                                             <img class="lazyload"
@@ -2702,14 +2711,14 @@
                                             <figcaption>Hi-Fi Smaller Viewport Design - Home Page.
                                             </figcaption>
                                         </figure>
-                                        
+
                                         <figure class="gallery">
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/mobile-nav.webp"
                                                 alt="Illustration depicting the Hi Fidelity Closed Nav Design for small devices."
                                                 width="500" height="1296">
-                                            <figcaption>Hi-Fi Smaller Viewport Design -  Closed Nav Design
+                                            <figcaption>Hi-Fi Smaller Viewport Design - Closed Nav Design
                                             </figcaption>
                                         </figure>
 
@@ -2719,7 +2728,7 @@
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/mobile/nav-open.webp"
                                                 alt="Illustration depicting the Hi Fidelity Closed Nav Design for small devices."
                                                 width="500" height="1296">
-                                            <figcaption>Hi-Fi Smaller Viewport Design -  Open Nav Design
+                                            <figcaption>Hi-Fi Smaller Viewport Design - Open Nav Design
                                             </figcaption>
                                         </figure>
 
@@ -2739,7 +2748,8 @@
                                                 data-src="/assets/images/Case-Studies/CS1/hi-fi/tablet/modal-2.webp"
                                                 alt="Illustration depicting the Hi Fidelity Commands Modal Tab 2  design for small devices"
                                                 width="500" height="1061">
-                                            <figcaption>Hi-Fi Smaller Viewport Design - Commands Modal Tab 2 Design</figcaption>
+                                            <figcaption>Hi-Fi Smaller Viewport Design - Commands Modal Tab 2 Design
+                                            </figcaption>
                                         </figure>
                                         <figure class="gallery">
                                             <img class="lazyload"
@@ -2842,12 +2852,12 @@
                                 </div>
                                 <div class="accordion-content">
                                     These designs are crafted to encompass the essential pages of the application,
-                                        with meticulous attention to detail. Our primary focus is on ensuring that these
-                                        designs effectively meet the requirements of both the business and end-users,
-                                        delivering a comprehensive and purpose-driven user experience tailored
-                                        specifically for small devices. Those being &le; 767px in width for
-                                        Mobile devices &le; 768px to 991px in width for Small Tablet devices.
-                                    
+                                    with meticulous attention to detail. Our primary focus is on ensuring that these
+                                    designs effectively meet the requirements of both the business and end-users,
+                                    delivering a comprehensive and purpose-driven user experience tailored
+                                    specifically for small devices. Those being &le; 767px in width for
+                                    Mobile devices &le; 768px to 991px in width for Small Tablet devices.
+
                                     <div class="grid-container-1col no-background">
 
                                         <figure class="gallery">
@@ -2920,7 +2930,7 @@
                                                 width="500" height="795">
                                             <figcaption>Hi-Fidelity Tuning Lesson 1 Design.</figcaption>
                                         </figure>
-                                        
+
                                         <figure class="gallery">
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
@@ -3068,7 +3078,7 @@
                                                 width="500" height="722">
                                             <figcaption>Hi-Fi Strings Lesson design.</figcaption>
                                         </figure>
-                                        
+
                                         <figure class="gallery">
                                             <img class="lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
@@ -3605,19 +3615,35 @@
                     <div class="editorial">
                         <h2>Hi-Fidelity Designs 1.4</h2>
                         <h3>Interactive Prototype</h3>
+                        <p>This interactive prototype, designed in Adobes XD, was instrumental in testing the task flow
+                            for
+                            our project. It effectively showcased how the browser responds to vocal user interactions
+                            with the website. During testing, users were able to navigate the website successfully,
+                            allowing us to observe and gather essential feedback on the user experience.
+                            User testing provided invaluable insights into several key areas, including:</p>
+                        <h4>Usability</h4>
+                        <p>Identifying any obstacles or confusing elements that users encountered, allowing
+                            us to make necessary adjustments to improve navigation and overall ease of use.</p>
+                        <h4>Efficiency</h4>
+                        <p>Measuring the time it took for users to complete specific tasks, helping us
+                            optimize the task flow and reduce any unnecessary steps.</p>
+                        <h4>Engagement</h4>
+                        <p>Understanding how users interacted with various elements of the website, such as
+                            buttons, links, and forms, to ensure these components were engaging and intuitive.</p>
+                        <h4>Accessibility</h4>
+                        <p>Assessing how well the prototype accommodated users with different needs and
+                            preferences, ensuring the design was inclusive and accessible to all.</p>
+                        <h4>Emotional Response</h4>
+                        <p>Capturing users' emotional reactions to the website, helping us gauge
+                            their satisfaction and identify areas for enhancing the overall experience.</p>
                         <p>
-                            The interactive prototype, developed using Adobe XD, played a pivotal role in evaluating our
-                            project's task flow. This dynamic platform allowed us to assess how the browser responds to
-                            vocal commands from users navigating the website. During testing, participants seamlessly
-                            traversed the website using voice commands, facilitated by prompts within the Voice Command
-                            Hub Modal embedded in the designs.
+                            These insights allowed us to make informed design decisions and refine the prototype to
+                            better meet the needs and expectations of our users.</p>
+                        <h4>Natural Language Feedback</h4>
+                        <p>During testing, participants natural language responses were recorded to capture Voice commands used during development. This system does not use AI,
+                            although has a substantial dictionary, commands are defined in the code and closest matched words are not a part of it's system.
                         </p>
-                        <p>
-                            Additionally, our test facilitator manually translated vocal instructions to demonstrate the
-                            browser's response, which helped identify common user language patterns. This approach
-                            refined the Command Hub's language, aiming for simplicity to enable all users to navigate
-                            the system effortlessly, eventually eliminating the need for prompts.
-                        </p>
+                        
                         <div class="grid-container-2col">
                             <div class="prototype-container no-border">
 
@@ -3658,69 +3684,181 @@
                 <div id="ux-testing"></div>
                 <section class="lazyload lazyblurry">
                     <div class="editorial">
-                        <h2>Usability Testing</h2>
-                        <p>
-                            To assess the effectiveness of the application's usability, a usability test was conducted
-                            involving 5 participants. The methodology involved screen recording combined with the Think
-                            Aloud protocol to capture qualitative insights. Additionally, participants provided feedback
-                            through a voluntary survey using the SUS Testing method after completing the usability test,
-                            allowing for the collection of quantitative data.
-                        </p>
-                        <p>
-                            The integration of qualitative and quantitative data through triangulation facilitated the
-                            evaluation of the feasibility of navigating the website using non-AI Voice Control. This
-                            crucial design phase lays the groundwork for future tests on a developed website.
-                        </p>
-                        <p>
-                            Ethical considerations were paramount throughout the testing process, ensuring
-                            confidentiality and privacy for all participants. Their feedback and insights will remain
-                            confidential and will not be shared.
-                        </p>
-                        <p>
-                            Results indicated that all participants successfully completed the assigned tasks,
-                            demonstrating proficiency in recalling prompts to scroll to the top of the page and return
-                            to the home page. However, a minor issue was identified by 2 out of the 5 participants
-                            regarding the appearance of a confirmation modal after each interaction. Although this
-                            concern was not widespread among participants, it was duly noted for future refinement.
-                        </p>
                         <div class="split-header">
                             <div class="title">
-                                <h3>System Usability Scale (SUS)</h3>
+                                <h2>Think Aloud Protocol</h2>
                             </div>
                             <div class="sus-banner"></div>
                         </div>
-
-
-                        <p>Usability testing is a critical process for evaluating the effectiveness and
-                            efficiency of a product's user interface. The System Usability Scale (SUS) is a
-                            widely used and reliable tool for measuring system usability. It comprises a 10-item
-                            questionnaire with responses rated on a 5-point Likert scale, which is then transformed
-                            into a SUS
-                            score ranging from 0 to 100.
-                        </p>
-
-                        <h3>SUS Scores.</h3>
-                        <p>To obtain these valuable insights, a group of 5 participants rigorously tested the design
-                            following the prescribed task flow under controlled test conditions. As the test
-                            facilitator, I facilitated the online testing sessions utilizing Microsoft Teams as a
-                            robust platform for scrutinizing users' paralinguistic cues while they navigated through
-                            the
-                            prototype. Following the completion of the tasks unaided, all participants were
-                            requested to independently complete a multiple-choice System Usability Scale (SUS) to
-                            gauge the
-                            overall usability of the design.
-                        </p>
                         <p>
-                            Upon meticulous calculation and analysis, we are pleased to report that our design
-                            surpassed the esteemed minimal benchmark of 68/100, achieving an outstanding SUS score
-                            of
-                            87.5/100.
-                            This resounding success unequivocally signals a user-centric design that resonates with
-                            our audience, fueling confidence in the superior quality of our product. We invite you
-                            to
-                            peruse the accompanying visuals, which include the questionnaire and the impressive
-                            final
-                            score, underscoring the unequivocal excellence of our design.</p>
+                            The Think Aloud Protocol is a widely used method in usability testing that involves
+                            participants verbalising their thoughts, feelings, and actions while interacting with a
+                            product. This technique provides valuable insights into users' cognitive processes, allowing
+                            designers and researchers to understand how users approach tasks, identify potential
+                            usability issues, and gain a deeper understanding of the user experience. For our
+                            Voice-Controlled Guitar Tutorial high-fidelity design prototype, employing the Think Aloud
+                            Protocol helps to capture real-time feedback and pinpoint areas for improvement.
+                        </p>
+                        <p> As this testing was ethical all participants were promised that their personal data would
+                            never be disclosed,
+                            this is honored and as such, all recording and screen shots is not displayed here.
+                        </p>
+                        <div>
+                            <h3>What It Involves</h3>
+                            <p>
+                                In a Think Aloud Protocol session, participants are asked to use the Voice-Controlled
+                                Guitar Tutorial prototype and articulate their thoughts and actions as they navigate
+                                through the interface. Here’s how it typically works:
+                            </p>
+                            <p><strong>Briefing: </strong>Participants are briefed about the purpose of the session and
+                                instructed to vocalise everything that comes to their mind as they interact with the
+                                prototype.</p>
+                            <p><strong>Task Execution: </strong>Participants perform specific tasks, such as starting a
+                                guitar lesson, using voice commands to navigate and access features.</p>
+                            <p><strong>Observation and Recording:</strong>Facilitators observe and record the session,
+                                noting participants' verbal comments, actions, and any difficulties they encounter.</p>
+                            <p><strong>Follow-Up Questions: </strong>After the session, participants may be asked
+                                follow-up questions to clarify their thoughts or provide additional feedback on specific
+                                aspects of the prototype.</p>
+                        </div>
+                        <div>
+                            <h2>Pros and Cons</h2>
+                            <h3>Pros</h3>
+                            <ol>
+                                <li>
+                                    <strong>Rich Qualitative Data: </strong>
+                                    The Think Aloud Protocol provides detailed qualitative data on users' thought
+                                    processes, revealing insights that are often missed in traditional usability
+                                    testing.
+                                </li>
+                                <li>
+                                    <strong>Immediate Feedback: </strong>
+                                    Real-time verbalisation of thoughts allows designers to quickly identify and address
+                                    usability issues, improving the design iteratively.
+                                </li>
+                                <li>
+                                    <strong>Understanding User Perspective: </strong>
+                                    By hearing users' thoughts, designers can better understand the user's perspective,
+                                    leading to more user-centric design solutions.
+                                </li>
+                                <li>
+                                    <strong>Uncovering Hidden Issues: </strong>
+                                    Participants may articulate frustrations or confusion that aren't obvious through
+                                    observation alone, highlighting hidden usability problems.
+                                </li>
+                            </ol>
+                            <h3>Cons</h3>
+                            <ol>
+                                <li>
+                                    <strong>Influence on Behavior: </strong>
+                                    Verbalising thoughts can alter how participants interact with the prototype,
+                                    potentially leading to unnatural behaviour.
+                                </li>
+                                <li>
+                                    <strong>Participant Discomfort: </strong>
+                                    Some participants may find it challenging or uncomfortable to think aloud, which can
+                                    affect the quality of the data collected.
+                                </li>
+                                <li>
+                                    <strong>Data Interpretation: </strong>
+                                    Analysing think-aloud data can be time-consuming and requires careful interpretation
+                                    to extract meaningful insights.
+                                </li>
+                                <li>
+                                    <strong>Limited Quantitative Data: </strong>
+                                    The method primarily provides qualitative data, which may need to be supplemented
+                                    with other techniques to obtain comprehensive usability metrics.
+                                </li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h2>Tasks</h2>
+                            <h3>Task 1: Navigation</h3>
+                            <p><strong>Objective: </strong> To evaluate the ease of navigating the rich content website
+                                using a non-AI voice-controlled system.</p>
+                            <h4>Instructions</h4>
+                            <ol>
+                                <li><strong>Find the Command Hub:</strong> From any page, locate and select the button
+                                    to open the Voice Command Hub.</li>
+                                <li><strong>Open The Basics Lesson:</strong> Use a voice command to navigate to "The
+                                    Basics" lesson.</li>
+                                <li><strong>Browse The Basics Lesson:</strong> Use voice commands to scroll up and down
+                                    the page.</li>
+                                <li><strong>Navigate to The Rhythm Lesson:</strong> Use a voice command to open "The
+                                    Rhythm" lesson.</li>
+                                <li><strong>Return to the Home Page:</strong> Use a voice command to navigate back to
+                                    the home page.</li>
+                            </ol>
+                            <h4>Follow-Up Questions:</h4>
+                            <ul class="no-disc">
+                                <li><strong>Ease of Use:</strong> How easy or difficult was it to find and use the
+                                    Command Hub?</li>
+                                <li><strong>Navigation:</strong> Were the voice commands intuitive for navigating
+                                    between lessons and pages?</li>
+                                <li><strong>Issues Encountered:</strong> Did you face any problems or frustrations
+                                    during navigation? If so, please describe them.</li>
+                                <li><strong>Suggestions for Improvement:</strong> Do you have any suggestions to improve
+                                    the voice control navigation?</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Task 2: Media Interaction</h3>
+                            <p><strong>Objective:</strong> To assess the usability of voice commands for media
+                                interaction.</p>
+                            <h4>Instructions</h4>
+                            <ol>
+                                <li><strong>Navigate to The Strings Lesson:</strong> Use the Command Hub and voice
+                                    commands to navigate to "The Strings" lesson.</li>
+                                <li><strong>Browse The Strings Lesson:</strong> Use voice commands to scroll down the
+                                    page.</li>
+                                <li><strong>Play and Stop a Video:</strong> Use a voice command to select a video by its
+                                    title and play it. Use a voice command to stop the video.</li>
+                                <li><strong>Explore the Page:</strong> Browse the page as you wish using voice commands.
+                                </li>
+                                <li><strong>Return to the Home Page:</strong> Use a voice command to navigate back to
+                                    the home page.</li>
+                            </ol>
+                            <h4>Follow-Up Questions:</h4>
+                            <ul>
+                                <li><strong>Ease of Use:</strong> How easy or difficult was it to play and stop videos
+                                    using voice commands?</li>
+                                <li><strong>Media Interaction:</strong> Were the voice commands intuitive for
+                                    interacting with media?</li>
+                                <li><strong>Issues Encountered:</strong> Did you face any problems or frustrations
+                                    during media interaction? If so, please describe them.</li>
+                                <li><strong>Suggestions for Improvement:</strong> Do you have any suggestions to improve
+                                    the voice control for media interaction?</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Task 3: Intuitive Navigation</h3>
+                            <p><strong>Objective:</strong> To evaluate the intuitiveness of navigation using voice
+                                commands for various pages and media.</p>
+                            <h4>Instructions:</h4>
+                            <ol>
+                                <li><strong>Navigate to Four Different Pages:</strong> Use the basic commands learned in
+                                    previous tasks to navigate to four different pages of your choice.</li>
+                                <li><strong>Browse and Interact with Media:</strong> Browse each page using voice
+                                    commands. Play any media or interact with any carousel using voice commands.</li>
+                                <li><strong>Use the Command Hub if Needed:</strong> You can view the Command Hub at any
+                                    point if you are unsure of the commands.</li>
+                                <li><strong>Return to the Home Page:</strong> Use a voice command to navigate back to
+                                    the home page once you are satisfied.</li>
+                            </ol>
+                            <h4>Follow-Up Questions:</h4>
+                            <ul>
+                                <li><strong>Ease of Use:</strong> How easy or difficult was it to navigate to different
+                                    pages and interact with media using voice commands?</li>
+                                <li><strong>Intuitiveness:</strong> Did you find the voice commands intuitive for
+                                    navigating and interacting with the content?</li>
+                                <li><strong>Issues Encountered:</strong> Did you face any problems or frustrations
+                                    during this task? If so, please describe them.</li>
+                                <li><strong>Suggestions for Improvement:</strong> Do you have any suggestions to improve
+                                    the overall voice control functionality?</li>
+                            </ul>
+                        </div>
+
+
                         <p class="hide-sm">Please feel free to click any image to expand.</p>
                         <div class="grid-container-2col">
 
