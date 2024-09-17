@@ -1100,6 +1100,7 @@ textarea.input {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  width: -webkit-fill-available;
 }
 .sm-accordion .accordion-item .accordion-header.accordion-item:first-child .accordion-header,
 .accordion .accordion-item .accordion-header.accordion-item:first-child .accordion-header {

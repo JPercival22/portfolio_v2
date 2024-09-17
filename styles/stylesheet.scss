@@ -1060,6 +1060,7 @@ textarea.input {
       padding: 10px;
       cursor: pointer;
       @include apply-flex-styles($flex-row-center-space_between);
+      width: -webkit-fill-available;
       &.accordion-item:first-child .accordion-header {
         border-radius: 8px 8px 0 0;
       }
