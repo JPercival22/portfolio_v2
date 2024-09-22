@@ -5,16 +5,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="keywords" content="HTML5, CSS3, JavaScript">
     <meta name="description" content="UX Portfolio for Joseph Percival">
-    <meta name="keywords" content="HTML, CSS, JavaScript, User Experience Design, UI, UX, Usability Testing, Speech Recognition, Guitar Lessons, Voice-Controlled Guitar Tutorial, Just Speak Guitar Tutorial">
+    <meta name="keywords"
+        content="HTML, CSS, JavaScript, User Experience Design, UI, UX, Usability Testing, Speech Recognition, Guitar Lessons, Voice-Controlled Guitar Tutorial, Just Speak Guitar Tutorial">
     <meta name="author" content="Joseph Percival">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study 3- Just Speak Guitar Tutorial</title>
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
     <!-- Preload the primary banner image -->
-    <link rel="preload" href="/assets/images/Case-Studies/CS3/Banners/CS3-primary-banner_lg.webp" as="image">
-    <link rel="preload" href="/assets/images/Case-Studies/CS3/Banners/CS3-primary-banner_md.webp" as="image">
-    <link rel="preload" href="/assets/images/Case-Studies/CS3/Banners/CS3-primary-banner_sm.webp" as="image">
+
+    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_lg.webp" as="image">
+    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_md.webp" as="image">
+    <link rel="preload" href="/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_sm.webp" as="image">
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,6 +40,7 @@
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
             rel="stylesheet">
     </noscript>
+
     <style>
         :root {
             --bg-sm: url(/assets/images/Case-Studies/CS1/banners/CS1-primary-banner_sm.webp);
@@ -171,11 +174,9 @@
 
             .guitar-banner {
                 background-image: var(--bg-md);
-                border-radius: 8px;
-                /* aspect-ratio: 16/9; */
                 background-size: contain;
+                border-radius: 8px;
             }
-
         }
 
         @media only screen and (min-width: 1200px) {
@@ -209,11 +210,12 @@
 
             .guitar-banner {
                 background-image: var(--bg-lg);
-                border-radius: 8px;
                 aspect-ratio: 16/9;
                 background-size: contain;
+                border-radius: 8px;
             }
         }
+
 
         .lazyblurry {
             filter: blur(10px);
@@ -566,7 +568,7 @@
                                                 <path
                                                     d="M80-480v-80h120v80H80Zm136 222-56-58 84-84 58 56-86 86Zm28-382-84-84 56-58 86 86-58 56Zm476 480L530-350l-50 150-120-400 400 120-148 52 188 188-80 80ZM400-720v-120h80v120h-80Zm236 80-58-56 86-86 56 56-84 86Z" />
                                             </svg>
-                                            Visit Website</a>
+                                            Visit Website.</a>
 
                                         <a class="tertiary-link"
                                             href="https://xd.adobe.com/view/8b55e0b4-af7d-4318-b101-0bd575ea9bd6-de06/?fullscreen&hints=off"
@@ -576,33 +578,29 @@
                                                 <path
                                                     d="M120-280v-400q0-33 23.5-56.5T200-760h560q33 0 56.5 23.5T840-680v400q0 33-23.5 56.5T760-200H200q-33 0-56.5-23.5T120-280Zm293-240h347v-160H413v160Zm214 240h133v-160H627v160Zm-214 0h134v-160H413v160Zm-213 0h133v-400H200v400Z" />
                                             </svg>
-                                            See Prototype
+                                            See Prototype.
                                         </a>
                                     </div>
                                     <div class="two-button-container right-align">
-                                        <a id="backButton" class="primary-button" href="/index.html"
+                                        <a id="forwardButton" class="primary-button" href="/index.html"
                                             aria-label="button link to home page"
                                             title="Please click this button if you would like to return to Home page.">
-                                            Projects
+                                            See Projects
                                         </a>
-
                                     </div>
                                 </div>
                             </div>
-
-
                             <ul class="bullet-list-row">
-                                <li>Branding Creator</li>
-                                <li>UX Research</li>
-                                <li>UX &amp; UI Designer</li>
+                                <li>Brand Designer</li>
+                                <li>Lead UX Researcher</li>
+                                <li>Lead UX &amp; UI Designer</li>
                                 <li>UI Kit Designer</li>
-                                <li>User Testing Facilitator</li>
-                                <li>Front End Developer</li>
+                                <li>Lead UX Testing Facilitator</li>
+                                <li>Web Master</li>
                             </ul>
                             <div class="image-container">
                                 <div class="primary-banner guitar-banner lazyload lazyblurry"></div>
-                                <script>
-                                    document.addEventListener('lazybeforeunveil', function (e) {
+                                <script>document.addEventListener('lazybeforeunveil', function (e) {
                                         var bg = e.target.getAttribute('data-bg');
                                         if (bg) {
                                             e.target.style.backgroundImage = 'url(' + bg + ')';
@@ -615,30 +613,38 @@
                 </section>
 
                 <div id="introduction"></div>
+
                 <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Project Introduction</h2>
                         <div class="grid-container-2col">
                             <div class="item">
                                 <h3>Background</h3>
-                                <p>Just Speak Guitar Lessons is a user-friendly website that utilizes a non-AI speech
-                                    recognition algorithm for navigation. The inspiration for this innovation came from
-                                    a professional UX Designer meeting, hosted by UX Circus Ltd, which focused on
-                                    advancements in speech recognition technology. Incorporating this feature not only
-                                    enhances accessibility but also increases user engagement. This project was also my
-                                    final piece for earning a First Class BSc degree in Web Design and Development,
-                                    showcasing my expertise and commitment to creating inclusive digital experiences.
-                                </p>
+                                <p> <a href="https://just-speak-guitar-lessons.github.io/" class="text-link"
+                                        target="_blank" rel="noopener">Just Speak Guitar Lessons</a> is an intuitive
+                                    website that utilises a non-AI speech recognition algorithm for seamless navigation.
+                                    This innovation was inspired by a professional UX Designer meeting hosted by <a
+                                        href="https://techcircus.io/en/events/ux-live-london" class="text-link"
+                                        target="_blank" rel="noopener">Tech Circus</a>, focusing on advancements in
+                                    speech recognition technology. By integrating this feature, the website enhances
+                                    accessibility and boosts user engagement. This project served as my dissertation,
+                                    contributing to my achievement of obtaining a <b>First Class (Hons) BSc</b> degree
+                                    in Web
+                                    Design and Development, reflecting my commitment to creating inclusive digital
+                                    experiences. </p>
                             </div>
                             <div class="item">
                                 <h3>Problem</h3>
-                                <p>
-                                    While there are numerous guitar tutorials available online, each catering to
-                                    different niches, the challenge is to create a unique feature that stands out. This
-                                    feature should captivate users, enhance their engagement, and simplify the learning
-                                    process. Additionally, it should enable hands-free use and improve accessibility for
-                                    learners with accessibility issues.
-                                </p>
+                                <p> Although there is an abundance of guitar tutorials available online, each catering
+                                    to various niches and skill levels, the challenge lies in developing a distinctive
+                                    feature that truly stands out. This feature must not only captivate users but also
+                                    enhance their overall engagement and simplify the learning experience. A critical
+                                    aspect of this solution is the implementation of hands-free functionality, allowing
+                                    users to navigate the tutorials without needing to use their hands, which is
+                                    especially beneficial for those who may have mobility challenges or other
+                                    accessibility issues. By addressing these needs, the aim is to create an inclusive
+                                    platform that empowers all learners, fostering a more enjoyable and effective guitar
+                                    learning journey. </p>
                             </div>
                             <div class="item">
                                 <h3>My Rolls</h3>
@@ -654,11 +660,11 @@
                             <div class="item">
                                 <h3>Solution</h3>
                                 <p>
-                                    Through a comprehensive understanding of user behavior and the implementation of a
-                                    design sprint methodology featuring regular feedback stages, ideas were swiftly
-                                    developed and validated. I empathized with both novice learners and experienced
-                                    users, comprehensively understanding their frustrations and desires. Additionally,
-                                    the project underwent rigorous peer review, ensuring its quality and effectiveness.
+                                    By thoroughly understanding user behaviour and employing a design sprint methodology
+                                    with regular feedback loops, ideas were rapidly developed and validated. I
+                                    empathised with both novice learners and experienced users, gaining insights into
+                                    their frustrations and aspirations. The project also underwent rigorous peer review
+                                    to ensure its quality and effectiveness.
                                 </p>
                             </div>
                         </div>
@@ -669,21 +675,22 @@
 
                 <section class="lazyload lazyblurry">
                     <div class="editorial">
-
                         <h2>Research</h2>
                         <h3>Introduction</h3>
-                        <p>When designing a voice command tutorial platform tailored for learner guitarists, our primary
-                            focus was directed towards our established client base as the target demographic. Our
-                            approach centered on conducting comprehensive user research to gain profound insights into
-                            their distinct needs, preferences, and online behaviors. By thoroughly understanding their
-                            motivations, pain points, and expectations related to existing online tutorials, we were
-                            well-equipped to craft a user experience characterized by seamless navigation and an
-                            optimized customer journey.</p>
+                        <p>
+                            In designing a voice command tutorial platform for aspiring guitarists, we focused on our
+                            established client base as the target demographic. Our approach prioritised comprehensive
+                            user research to gain deep insights into their unique needs, preferences, and online
+                            behaviours. By understanding their motivations, pain points, and expectations regarding
+                            existing online tutorials, we aimed to create a user experience marked by seamless
+                            navigation and an optimised customer journey.
+                        </p>
                         <h3>Initial Assumptions</h3>
-                        <p>Based on my extensive background using these tutorials myself while learning the guitar, an
-                            initial hypothesis emerged, suggesting that users would derive significant value from a
-                            streamlined navigation system, prominent placement of critical pages and controls within an
-                            easily accessible prompt system, high-resolution media and detailed rich content.</p>
+                        <p> Drawing from my own experiences as a guitar player, an initial Hypothesis emerged: users
+                            would greatly benefit from a streamlined navigation system, strategic placement of key pages
+                            and controls within an easily accessible prompt system, as well as high-resolution media and
+                            detailed content.
+                        </p>
                     </div>
                 </section>
 
@@ -691,13 +698,15 @@
                     <div class="editorial">
                         <h2>Research 1.1: Competitive Analysis and Market Research</h2>
                         <h3>Understanding the Industry Landscape</h3>
-                        <p>Initiating the design process, I delved into comprehensive research to grasp the structure
-                            and standards of online guitar tutorials. Through meticulous comparison of key features, I
-                            aimed to identify prevailing issues. This phase revealed that many tutorials offered basic
-                            lessons of sub-standard quality unless users opted for premium access. Additionally, the
-                            language used often catered to advanced students, potentially causing cognitive overload and
-                            hindering the learning curve. In response, I explored the potential of introducing voice
-                            command navigation to alleviate these challenges.</p>
+                        <p>
+                            As the design process began, comprehensive research was conducted to understand the
+                            structure and standards of online guitar tutorials. By meticulously comparing key features,
+                            the goal was to identify prevailing issues. This phase revealed that many tutorials offered
+                            basic lessons of substandard quality unless users opted for premium access. Additionally,
+                            the language often catered to advanced students, leading to cognitive overload that could
+                            hinder the learning curve. In response, the potential for introducing voice command
+                            navigation was explored to alleviate these challenges.
+                        </p>
                         <h3>Early Hypothesis</h3>
                         <p>An early assumption was that the requirement for premium access might discourage many
                             beginners from continuing their learning journey. Synthesizing data from user interviews
@@ -708,9 +717,27 @@
                                 Guitar Tutorial Websites was created, showcasing discovered insights.</p>
                         </div>
                         <h3>Key Findings from Competitive Analysis</h3>
-                        <p>An intriguing discovery was made during the competitive analysis: no existing website offered
-                            voice command navigation. Subsequently, I conducted user interviews to assess the potential
-                            usefulness, usability, and desirability of this feature in the next phase of research.</p>
+                        <p>The competitive analysis yielded several important insights:</p>
+                        <ul class="no-disc">
+                            <li><strong>Lack of Voice Command Navigation:</strong> One of the most striking discoveries
+                                was that no existing guitar tutorial website provided a voice command navigation
+                                feature. This gap in the market highlighted an opportunity for innovation.</li>
+                            <li><strong>User Interviews:</strong> To further explore this opportunity, user interviews
+                                were conducted to evaluate the potential usefulness, usability, and desirability of
+                                integrating voice command navigation into the platform. The interviews aimed to gather
+                                feedback on:
+                                <ul class="disc">
+                                    <li>How users interact with current online tutorials</li>
+                                    <li>Their thoughts on hands-free navigation</li>
+                                    <li>Any specific needs or preferences regarding voice commands</li>
+                                </ul>
+                            </li>
+                            <li><strong>User Engagement:</strong> Initial responses indicated a strong interest in
+                                features that enhance accessibility and user engagement, particularly for learners who
+                                may struggle with traditional navigation methods.</li>
+                        </ul>
+                        <p>These findings laid the groundwork for the next phase of research and design, ensuring that
+                            user needs and preferences were at the forefront of the development process.</p>
                     </div>
                 </section>
 
@@ -719,23 +746,41 @@
                         <h2>Research 1.2: User Interviews &amp; Surveys</h2>
                         <h3>Understanding User Expectations</h3>
                         <p>
-                            Conducted in two phases, interviews were carried out with five random participants (4 male
-                            and 1 female), primarily aged between 18 and 22 years old. The decision to involve five
-                            participants aligns with established usability research practices, such as those advocated
-                            by <a href="https://www.nngroup.com/articles/5-test-users-qual-quant/" class="text-link">
-                                Nielsen Norman Group</a>, which suggest that five participants are often sufficient to
-                            uncover the majority of usability issues. Among the participants, three were experienced
-                            guitar players who frequently used online tutorials, while two had no prior guitar
-                            experience but expressed a desire to learn.
+                            The user research was conducted in two phases, involving interviews with five participants
+                            (four male and one female), aged between 18 and 22 years. This sample size was chosen in
+                            accordance with established usability research practices, such as those recommended by <a
+                                href="https://www.nngroup.com/articles/5-test-users-qual-quant/"
+                                class="text-link">Nielsen Norman Group</a>, which indicates that five participants can
+                            effectively uncover the majority of usability issues. Among the participants, three were
+                            experienced guitar players who regularly used online tutorials, while two were complete
+                            beginners eager to learn.
                         </p>
-                        <p>
-                            The research unveiled that participants primarily favored interacting with internet products
-                            via mobile devices. Consensus was reached among all participants on the significant
-                            enhancement a voice-navigable feature would bring to the learning experience. Participants
-                            with prior experience shared insights into their learning journey, highlighting pain points
-                            and expressing dissatisfaction with the requirement for premium access to basic lessons,
-                            often resulting in abandonment.
-                        </p>
+                        <ul>
+                            <li><strong>User Research:</strong> We conducted a series of in-depth interviews and online
+                                surveys, aiming to understand user expectations and needs for charity websites, focusing
+                                on key features, ease of use, and overall experience.</li>
+                            <li><strong>Diverse Participants:</strong> We engaged a varied group of users from different
+                                backgrounds, age groups, and levels of digital literacy to capture a wide range of
+                                perspectives.</li>
+                            <li><strong>Objective:</strong> Our aim was to uncover important insights into user
+                                behaviours, pain points, and preferences. These findings gave us a better understanding
+                                of how people interact with charity platforms and what they find most valuable.</li>
+                            <li><strong>Insights Gained:</strong> Through this research, we identified common user
+                                behaviours and emotions, as well as frustrations with existing charity websites. This
+                                validated many of our initial assumptions and provided direct input on what users found
+                                confusing or engaging.</li>
+
+                            <li><strong>Affinity Mapping:</strong> To organise and synthesise the data, we created an
+                                Affinity Map—a method used to group related insights into themes or categories. By
+                                clustering similar responses together, we were able to spot patterns and prioritise key
+                                areas of improvement and innovation for the site. This mapping process guided our
+                                decisions for a user-focused design.</li>
+                            <li><strong>Outcome:</strong> These insights, along with the affinity mapping, gave us a
+                                comprehensive understanding of the challenges users face when navigating charity
+                                websites. The findings directly informed our design choices, ensuring that the new
+                                platform would provide a seamless, intuitive, and satisfying user experience.</li>
+                        </ul>
+
                         <p class="hide-sm">Please click the image to enlarge it</p>
 
                         <div class="grid-container-1col">
@@ -760,41 +805,67 @@
                             </div>
                         </div>
                         <h3>Insights from User Research: Key Findings and Analysis</h3>
-                        <h4>Visuals</h4>
-                        <p>Participants expressed particular enthusiasm for the experience of online voice command
-                            navigation, highlighting the appeal of seamless, hands-free interaction with the
-                            application. The incorporation of compelling visual elements significantly enhanced the
-                            overall user experience, contributing to increased engagement and ease of use.</p>
-                        <h4>Key Information</h4>
-                        <p>Participants emphasized the importance of several factors, including competitive pricing,
-                            clear and simple language, and prioritizing visual content over videos. These elements were
-                            deemed crucial in creating a user-friendly environment and ensuring that the application
-                            caters to a diverse audience while offering a smooth and straightforward experience.</p>
-                        <h4>Preparation</h4>
-                        <p>Participants identified the limitations of existing speech recognition platforms in
-                            understanding local accents and idioms, highlighting the need for enhanced inclusivity and
-                            adaptability to regional language nuances. They also noted the challenges posed by advanced
-                            tutorials and beginner-unfriendly language, which often increased the learning curve and led
-                            to user abandonment. Participants expressed a clear preference for beginner-centric
-                            tutorials that offer a gradual learning curve, catering to users at different skill levels
-                            and fostering sustained engagement with the application.
+                        <p>
+                            The research revealed several important insights about user preferences and experiences:
                         </p>
+                        <ul class="no-disc">
+                            <li><strong>Device Preference:</strong> Participants showed a strong preference for using
+                                mobile devices as their primary means of interacting with online products.</li>
+                            <li><strong>Voice-Navigable Feature:</strong> All participants agreed that a voice-navigable
+                                feature would greatly enhance their learning experience by eliminating the need for
+                                physical actions, such as moving a cursor or turning pages in physical books.</li>
+                            <li><strong>Pain Points:</strong> Experienced players shared several frustrations in their
+                                learning journeys, particularly dissatisfaction with the requirement for premium access
+                                to basic lessons, which often led to abandonment of their efforts.</li>
+                        </ul>
+
+                        <h4>Visuals</h4>
+                        <p>
+                            Participants expressed enthusiasm for the experience of online voice command navigation,
+                            appreciating the seamless, hands-free interaction it offered. Additionally, the
+                            incorporation of engaging visual elements significantly enhanced the overall user
+                            experience, leading to increased engagement and ease of use.
+                        </p>
+
+                        <h4>Key Information</h4>
+                        <ul class="no-disc">
+                            <li><strong>Competitive Pricing:</strong> Participants emphasised the importance of
+                                affordable pricing structures.</li>
+                            <li><strong>Clear Language:</strong> They preferred simple, straightforward language that is
+                                easy to understand.</li>
+                            <li><strong>Visual Content:</strong> There was a clear preference for prioritising visual
+                                content over videos, which was seen as crucial for creating a user-friendly environment.
+                            </li>
+                        </ul>
+
+                        <h4>Overview</h4>
+                        <p>
+                            Participants noted limitations in existing speech recognition platforms regarding their
+                            ability to understand local accents and idioms. This highlighted the need for greater
+                            inclusivity and adaptability to regional language nuances. Additionally, they pointed out
+                            challenges associated with advanced tutorials and beginner-unfriendly language, which
+                            increased the learning curve and often led to user abandonment. A clear preference emerged
+                            for beginner-centric tutorials that offer a gradual learning curve, catering to users at
+                            various skill levels and fostering sustained engagement with the application.
+                        </p>
+
                     </div>
                 </section>
 
                 <section class="lazyload lazyblurry">
                     <div class="editorial">
                         <h2>Research 1.3: User Persona Development</h2>
-                        <h3>Leveraging Research Insights for Effective User Understanding</h3>
+                        <h3>Harnessing Research Insights for Deeper User Understanding</h3>
                         <p>
-                            To distill the insights obtained from the User Interview Research, a meticulously crafted
-                            user persona encapsulating the characteristics of our target user group was developed. This
-                            comprehensive persona offers a profound understanding of their needs, aspirations, and
-                            challenges, enabling us to foster empathy and gain valuable insights into the core concerns
-                            of our users. Leveraging this strategic tool empowers us to make design decisions that are
-                            precision-tailored to meet the exact requirements of our users, ensuring that our solutions
-                            resonate effectively with their needs.
+                            Building on the insights gathered from our user interviews, we created a detailed user
+                            persona that embodies the key traits of our target audience. This persona not only
+                            highlights their needs, aspirations, and challenges but also serves as a vital tool for
+                            fostering empathy within our design team. By understanding the core concerns of our users,
+                            we can make informed design decisions that are finely tuned to their specific requirements.
+                            This approach ensures our solutions are not only relevant but also deeply resonate with the
+                            users we aim to serve.
                         </p>
+
                         <div class="centered-row ">
                             <div class="image-container">
                                 <div class="gallery no-border">
@@ -4026,7 +4097,8 @@
                                             <h2>Design Tools</h2>
                                             <ul class="no-disc">
                                                 <li>Microsoft Excel (Project Planning)</li>
-                                                <li>Adobe XD(UX/UI Design, Prototyping, and Design System Creation).</li>
+                                                <li>Adobe XD(UX/UI Design, Prototyping, and Design System Creation).
+                                                </li>
                                                 <li>Photoshop (UI Design and Image Editing).</li>
                                                 <li>Microsoft Teams (Communication).</li>
                                                 <li>Typeform (SUS questionnaire and Survey Analysis).</li>
