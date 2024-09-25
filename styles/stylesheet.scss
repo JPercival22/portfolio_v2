@@ -530,6 +530,7 @@ section {
       height: 150px;
     }
   }
+  .highlight{font-style: italic; font-weight: 700;}
 }
 
 .primary-button,
@@ -2415,6 +2416,9 @@ textarea.input {
   .grid-container-1col .marketing-banner {
     height: 390px;
   }
+  .grid-container-3col .image-container .gallery .h500-image {height: 500px;}
+  .lightbox .lightbox-content .h75vh {height: 75vh;}
+  .lightbox .lightbox-content .w80vw {width: 80vw;}
 }
 /*Large Desktop viewport styles */
 @media only screen and (min-width: 1400px) {
@@ -2713,6 +2717,9 @@ textarea.input {
       }
       &.w-60b {
         max-width: 60%;
+      }
+      &.w-80b {
+        max-width: 80%;
       }
     }
   }
