@@ -493,6 +493,10 @@ section {
   width: 250px;
   height: 150px;
 }
+.editorial .highlight {
+  font-style: italic;
+  font-weight: 700;
+}
 
 .primary-button,
 .secondary-button {
@@ -2584,6 +2588,15 @@ textarea.input {
   .grid-container-1col .marketing-banner {
     height: 390px;
   }
+  .grid-container-3col .image-container .gallery .h500-image {
+    height: 500px;
+  }
+  .lightbox .lightbox-content .h75vh {
+    height: 75vh;
+  }
+  .lightbox .lightbox-content .w80vw {
+    width: 80vw;
+  }
 }
 /*Large Desktop viewport styles */
 @media only screen and (min-width: 1400px) {
@@ -2880,6 +2893,9 @@ textarea.input {
   }
   .lightbox .lightbox-content.w-60b {
     max-width: 60%;
+  }
+  .lightbox .lightbox-content.w-80b {
+    max-width: 80%;
   }
 }
 @media only screen and (min-width: 1800px) {
