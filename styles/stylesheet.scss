@@ -185,7 +185,9 @@ ul {
     list-style: none;
     @include apply-flex-styles($flex-col-center-start);
   }
-  &.mt-0{margin-top: 0;}
+  &.mt-0 {
+    margin-top: 0;
+  }
   &.disc {
     margin-left: 16px;
     list-style: disc;
@@ -511,6 +513,43 @@ section {
   @include apply-flex-styles($flex-col-center-start);
   gap: 10px;
   width: 90vw;
+
+  &.border {
+    border-width: 5px;
+    border-style: solid;
+    border-top-left-radius: 0; // Keep top-right radius 0 for the style you mentioned
+    &.-purple {
+      border-image: linear-gradient(to right, #f8a1ff 1%, #ffffff00 30%) 1;
+    }
+    &.-peach {
+      border-image: linear-gradient(to right, #febaa3 1%, #ffffff00 30%) 1;
+    }
+    &.-green {
+      border-image: linear-gradient(to right, #bbf8e9 1%, #ffffff00 30%) 1;
+    }
+    &.-green2 {
+      border-image: linear-gradient(to right, #c3ffd9 1%, #ffffff00 30%) 1;
+    }
+    &.-pink {
+      border-image: linear-gradient(to right, #ffb5a8 1%, #ffffff00 30%) 1;
+    }
+    &.-blue {
+      border-image: linear-gradient(to right, #9caeff 1%, #ffffff00 30%) 1;
+    }
+    &.-blue2 {
+      border-image: linear-gradient(to right, #82aafa 1%, #ffffff00 30%) 1;
+    }
+    &.-gold {
+      border-image: linear-gradient(to right, #fcb42e 1%, #ffffff00 30%) 1;
+    }
+    &.-gold2 {
+      border-image: linear-gradient(to right, #fed2a1 1%, #ffffff00 30%) 1;
+    }
+    &.-paleBlue {
+      border-image: linear-gradient(to right, #d9fffd 1%, #ffffff00 30%) 1;
+    }
+  }
+
   .hero,
   .case-study-settings {
     &.col {
@@ -518,7 +557,7 @@ section {
     }
   }
   .split-header {
-    @include apply-flex-styles($flex-row-center);
+    @include apply-flex-styles($flex-row-center-space_between);
     .title {
       flex: 80%;
     }
@@ -529,8 +568,74 @@ section {
       width: 250px;
       height: 150px;
     }
+    .testing-banner {
+      background-image: url(/assets/images/banners/UX-Testing-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .conclusion-banner {
+      background-image: url(/assets/images/banners/Conclusion-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .Hi-Fi-banner {
+      background-image: url(/assets/images/banners/Hi-Fi-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .Low-Fi-banner {
+      background-image: url(/assets/images/banners/Low-Fi-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .Interaction-banner {
+      background-image: url(/assets/images/banners/Interaction-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .IA-banner {
+      background-image: url(/assets/images/banners/IA-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .Ideation-banner {
+      background-image: url(/assets/images/banners/ideation-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .Research-banner {
+      background-image: url(/assets/images/banners/research-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .Brief-banner {
+      background-image: url(/assets/images/banners/brief-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
   }
-  .highlight{font-style: italic; font-weight: 700;}
+  .highlight {
+    font-style: italic;
+    font-weight: 700;
+  }
 }
 
 .primary-button,
@@ -1628,7 +1733,11 @@ textarea.input {
 
   // case study styles
   .editorial {
-    .hero {display: inherit; width: 100%;}.case-study-settings {
+    .hero {
+      display: inherit;
+      width: 100%;
+    }
+    .case-study-settings {
       .image-container {
         padding: 10px;
         background-color: transparent;
@@ -2416,9 +2525,15 @@ textarea.input {
   .grid-container-1col .marketing-banner {
     height: 390px;
   }
-  .grid-container-3col .image-container .gallery .h500-image {height: 500px;}
-  .lightbox .lightbox-content .h75vh {height: 75vh;}
-  .lightbox .lightbox-content .w80vw {width: 80vw;}
+  .grid-container-3col .image-container .gallery .h500-image {
+    height: 500px;
+  }
+  .lightbox .lightbox-content .h75vh {
+    height: 75vh;
+  }
+  .lightbox .lightbox-content .w80vw {
+    width: 80vw;
+  }
 }
 /*Large Desktop viewport styles */
 @media only screen and (min-width: 1400px) {
@@ -2628,24 +2743,36 @@ textarea.input {
             align-items: flex-start;
             gap: 0.5em;
             width: fit-content;
+            
             .side-bar-list-item {
               @include apply-flex-styles($flex-col-center);
               transition: all 0.3s ease-in-out;
               height: 40px;
               width: -webkit-fill-available;
+
               a {
                 @include apply-flex-styles($flex-row-center-start);
                 gap: 10px;
                 width: -webkit-fill-available;
-              }
-              &:hover {
-                background-color: aliceblue;
+              
+                &:hover,
+                &:focus {
+                   background-color: aliceblue; // Default active background color (for when no color is applied)
+                }
+                &.active {
+                  background-color: aliceblue; // Default active background color (for when no color is applied)
+                }
               }
             }
           }
         }
       }
     }
+    /* When a section is targeted */
+    section:target {
+      border-image: linear-gradient(to bottom right, #fcb42e 10%, rgba(255, 255, 255, 0) 100%) 1;
+    }
+
     .main-content {
       margin-top: 0;
       .editorial {
