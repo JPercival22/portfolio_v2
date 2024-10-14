@@ -1,4 +1,5 @@
 import { initCarousel } from './carousel.mjs';
+import { handleScroll } from './scrollHighlight.mjs'; // Import the scroll highlighting functionality
 
 // Define function to add main functionality
 async function addMainFunctionality() {
@@ -38,9 +39,8 @@ async function addMainFunctionality() {
       addToggleListener(menuToggle);
     }
 
-    // Dynamically import and call handleScroll function
-    const { handleScroll } = await import('./navigationModule.mjs');
-    handleScroll();
+    // Call the handleScroll function from scrollHighlights.mjs
+    handleScroll(); // Call this function here
 
     // Dynamically import and call read-more feature function
     const { initReadMore } = await import('./readMore.mjs');

@@ -414,6 +414,7 @@
             </nav>
 
             <!-- end of mobile side bar  -->
+            <!-- start of larger side bar -->
             <article>
                 <div class="sideBar sidebar">
                     <div class="sideBar-content">
@@ -422,7 +423,7 @@
                         </div>
                         <ul>
                             <li class="side-bar-list-item">
-                                <a href="#introduction">
+                                <a href="#introduction" aria-current="section">
                                     <span class="side-bar-icon" title="Project Brief">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                                             width="40">
@@ -435,7 +436,7 @@
                             </li>
 
                             <li class="side-bar-list-item">
-                                <a href="#research">
+                                <a href="#research" aria-current="section" >
                                     <span class="side-bar-icon" title="Research">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                                             width="40">
@@ -448,7 +449,7 @@
                             </li>
 
                             <li class="side-bar-list-item">
-                                <a href="#ideation">
+                                <a href="#ideation" aria-current="section" >
                                     <span class="side-bar-icon" title="Ideation">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                                             width="40">
@@ -460,7 +461,7 @@
                                 </a>
                             </li>
                             <li class="side-bar-list-item">
-                                <a href="#architecture">
+                                <a href="#architecture" aria-current="section">
                                     <span class="side-bar-icon" title="Information Architecture Designs">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                                             width="40">
@@ -472,7 +473,7 @@
                                 </a>
                             </li>
                             <li class="side-bar-list-item">
-                                <a href="#interaction">
+                                <a href="#interaction" aria-current="section" class="peach">
                                     <span class="side-bar-icon" title="Interaction Design Flows">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                                             width="40">
@@ -485,7 +486,7 @@
                             </li>
 
                             <li class="side-bar-list-item">
-                                <a href="#early-designs">
+                                <a href="#early-designs" aria-current="section" >
                                     <span class="side-bar-icon" title="Low-Fidelity Design">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                                             width="40">
@@ -498,7 +499,7 @@
                             </li>
 
                             <li class="side-bar-list-item">
-                                <a href="#hiFidelityDesigns">
+                                <a href="#hiFidelityDesigns" aria-current="section" >
                                     <span class="side-bar-icon" title="Hi Fidelity Designs">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                                             width="40">
@@ -511,7 +512,7 @@
                             </li>
 
                             <li class="side-bar-list-item">
-                                <a href="#ux-testing">
+                                <a href="#ux-testing" aria-current="section">
                                     <span class="side-bar-icon" title="UX Testing">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                                             width="40">
@@ -524,7 +525,7 @@
                             </li>
 
                             <li class="side-bar-list-item">
-                                <a href="#conclusion">
+                                <a href="#conclusion" aria-current="section">
                                     <span class="side-bar-icon" title="Closing Statement And Conclusion">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                                             width="40">
@@ -537,7 +538,7 @@
                             </li>
 
                             <li class="side-bar-list-item">
-                                <a href="#project-information">
+                                <a href="#project-information" aria-current="section">
                                     <span class="side-bar-icon" title="Project Information">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                                             width="40">
@@ -612,11 +613,17 @@
                     </div>
                 </section>
 
-                <div id="introduction"></div>
+                <section id="introduction" data-color="purple" class="lazyload lazyblurry">
+                    <div class="editorial border-gradient border -purple">
+                        <div class="split-header">
+                            <div class="title">
+                                <h2>Project Introduction</h2>
+                                <h3>Project Brief, Business Requirements &amp; Problem</h3>
+                              </div>
+                              
+                            <div class="Brief-banner"></div>
+                        </div>
 
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
-                        <h2>Project Introduction</h2>
                         <div class="grid-container-2col">
                             <div class="item">
                                 <h3>Background</h3>
@@ -674,12 +681,15 @@
                     </div>
                 </section>
 
-                <div id="research"></div>
-
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
-                        <h2>Research</h2>
-                        <h3>Introduction</h3>
+                <section id="research" data-color="gold2" class="lazyload lazyblurry">
+                    <div class="editorial border-gradient border -gold2">
+                        <div class="split-header">
+                            <div class="title">
+                                <h2>Research</h2>
+                                <h3>Introduction</h3>
+                            </div>
+                            <div class="Research-banner"></div>
+                        </div>
                         <p>
                             In designing a voice command tutorial platform for aspiring guitarists, we focused on our
                             established client base as the target demographic. Our approach prioritised comprehensive
@@ -694,11 +704,7 @@
                             and controls within an easily accessible prompt system, as well as high-resolution media and
                             detailed content.
                         </p>
-                    </div>
-                </section>
-
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
+                        <br>
                         <h2>Research 1.1: Competitive Analysis and Market Research</h2>
                         <h3>Understanding the Industry Landscape</h3>
                         <p>
@@ -741,11 +747,7 @@
                         </ul>
                         <p>These findings laid the groundwork for the next phase of research and design, ensuring that
                             user needs and preferences were at the forefront of the development process.</p>
-                    </div>
-                </section>
-
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
+                        <br>
                         <h2>Research 1.2: User Interviews &amp; Surveys</h2>
                         <h3>Understanding User Expectations</h3>
                         <p>
@@ -852,11 +854,6 @@
                             various skill levels and fostering sustained engagement with the application.
                         </p>
 
-                    </div>
-                </section>
-
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
                         <h2>Research 1.3: User Persona Development</h2>
                         <h3>Harnessing Research Insights for Deeper User Understanding</h3>
                         <p>
@@ -883,11 +880,16 @@
                     </div>
                 </section>
 
-                <div id="ideation"></div>
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
-                        <h2>Ideation: Enhancing UX Strategies</h2>
-                        <h3>Improving User Interaction and Engagement</h3>
+                <section id="ideation" data-color="green2" class="lazyload lazyblurry">
+                    <div class="editorial border-gradient border -green2">
+                        <div class="split-header">
+                            <div class="title">
+                                <h2>Ideation: Enhancing UX Strategies</h2>
+                                <h3>Improving User Interaction and Engagement</h3>
+                            </div>
+                            <div class="Ideation-banner"></div>
+                        </div>
+
                         <p>Building on our research insights, we conducted collaborative brainstorming sessions to
                             identify essential features that would significantly enhance the user experience of the
                             site. Due to time constraints, certain features were recognised as outside the current
@@ -935,11 +937,17 @@
                     </div>
                 </section>
 
-                <div id="architecture"></div>
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
-                        <h2>Information Architecture</h2>
-                        <h3>Structuring Content for Seamless Navigation</h3>
+
+                <section id="architecture" data-color="blue2" class="lazyload lazyblurry">
+                    <div class="editorial border-gradient border -blue2">
+                        <div class="split-header">
+                            <div class="title">
+                                <h2>Information Architecture</h2>
+                                <h3>Structuring Content for Seamless Navigation</h3>
+                            </div>
+                            <div class="IA-banner"></div>
+                        </div>
+
                         <p> Information architecture (IA) is essential in UX design, organising content to facilitate
                             intuitive and efficient user navigation. IA helps users find information easily by
                             structuring and categorising content logically. This section covers the IA of the
@@ -1004,10 +1012,15 @@
                     </div>
                 </section>
 
-                <div id="interaction"></div>
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
-                        <h2>Interaction Design 1.1: Task Flow and User Maps</h2>
+                <section id="interaction" data-color="peach" class="lazyload lazyblurry">
+                    <div class="editorial border-gradient border -peach">
+                        <div class="split-header">
+                            <div class="title">
+                                <h2>Interaction Design 1.1: Mapping the User Journey</h2>
+                                <h3>Task Flow and User Maps</h3>
+                            </div>
+                            <div class="Interaction-banner"></div>
+                        </div>
                         <p>
                             In this section, we explore the process of designing user-centric experiences that
                             effectively guide users to achieve their goals using the developed site maps. User task flow
@@ -1107,11 +1120,8 @@
                                 </div>
                             </div>
                         </aside>
-                    </div>
-                </section>
 
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
+                        <br>
                         <h2>Interaction Design 1.2: Speech Recognition Technology Analysis</h2>
                         <p>
                             Extensive research was undertaken to find a front-end JavaScript library suited for
@@ -1202,11 +1212,15 @@
                     </div>
                 </section>
 
-
-                <div id="early-designs"></div>
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
-                        <h2>Low Fidelity Designs 1.1: Rapid Prototyping</h2>
+                <section id="early-designs" data-color="green" class="lazyload lazyblurry">
+                    <div class="editorial border-gradient border -green">
+                        <div class="split-header">
+                            <div class="title">
+                                <h2>Low-Fidelity Design 1.1: Early Design Iterations</h2>
+                                <h3>Rapid Prototyping</h3>
+                            </div>
+                            <div class="Low-Fi-banner"></div>
+                        </div>
                         <p>
                             The initial design concepts were developed based on insights from Affinity Mapping, Journey
                             Analysis, and Persona Analysis, leading to the creation of prototypes for the Home Screen,
@@ -1316,6 +1330,7 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
                         <h3>User Feedback</h3>
                         <p>
                             User engagement played a crucial role in the refinement process of the interface. By
@@ -1337,11 +1352,7 @@
                             designs were completed to integrate user preferences, ultimately refining the interface for
                             optimal usability and engagement.
                         </p>
-                    </div>
-                </section>
-
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
+                        <br>
                         <h2>Low-Fidelity Designs 1.2: Responsive Wireframes</h2>
                         <p>
                             Attention to detail was essential in transitioning from early sketches to wireframe designs.
@@ -1423,11 +1434,7 @@
                             </div>
                             <!-- end of gallery -->
                         </div>
-                    </div>
-                </section>
 
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
                         <h2>Low-Fidelity Designs 1.3: Task Flow Wireframes</h2>
                         <p>
                             The iterative refinement of the task flow wireframes was essential for creating intuitive
@@ -1639,11 +1646,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
+                        <br>
                         <h2>Low-Fidelity Designs 1.4: Usability Testing</h2>
                         <p>Users expressed a clear need for an Online Tuner. Throughout the design iterations, usability
                             testing was conducted to evaluate which design would enhance user-friendliness, improve
@@ -1731,10 +1734,16 @@
                     </div>
                 </section>
 
-                <div id="hiFidelityDesigns"></div>
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
-                        <h2>Hi-Fidelity Design 1.1: Design System</h2>
+                <section id="hiFidelityDesigns" data-color="pink" class="lazyload lazyblurry">
+                    <div class="editorial border-gradient border -pink">
+                        <div class="split-header">
+                            <div class="title">
+                                <h2>Hi-Fidelity Design 1.1: Design System</h2>
+                                <h3>Creating a meaningful &amp; inclusive standards</h3>
+                            </div>
+                            <div class="Hi-Fi-banner"></div>
+                        </div>
+
                         <p>Design systems enhance consistency, efficiency, and brand identity across digital products.
                             This section covers the main elements: Foundation, Components, Content, and Patterns. We
                             will also provide insights into implementing and maintaining a successful design system for
@@ -2062,7 +2071,6 @@
                                                 </span>
                                             </a>
                                         </div>
-
                                     </div>
                                     <!-- end of slider  -->
                                 </div>
@@ -2171,11 +2179,9 @@
                                                 </span>
                                             </a>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                         <!-- tab carousel for larger viewports  -->
@@ -2600,11 +2606,7 @@
                             </div>
                         </div>
 
-                    </div>
-                </section>
 
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
                         <h2>Hi-Fidelity Design 1.2: Refined Task Flow Wireframes</h2>
                         The following hi-fidelity designs align with the key customer-facing screens identified in the
                         task flow. They meet both user and business requirements for the Home page, Voice Command
@@ -2679,12 +2681,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
 
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
+                        </div>
                         <h2>Hi-Fidelity Designs 1.3: Responsive Design</h2>
                         <p>
                             Following the establishment of Information Architecture and the definition of Task and User
@@ -3541,10 +3539,16 @@
                         </div>
                     </div>
                 </section>
-                <div id="ux-testing"></div>
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
-                        <h2>UX Testing 1.1: Interactive Prototype</h2>
+
+                <section id="ux-testing" data-color="blue" class="lazyload lazyblurry">
+                    <div class="editorial border-gradient border -blue">
+                        <div class="split-header">
+                            <div class="title">
+                                <h2>UX Testing 1.1: Analyzing User Interactions</h2>
+                                <h3>Interactive Prototype</h3>
+                            </div>
+                            <div class="testing-banner"></div>
+                        </div>
                         <p>This Adobe XD interactive prototype was crucial for testing the task flow and assessing how
                             the browser responds to voice interactions. During testing, users navigated the website
                             successfully, allowing us to gather essential feedback on the user experience. Insights from
@@ -3579,14 +3583,11 @@
                             </ul>
 
                         </div>
-                    </div>
-                </section>
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
-                        <h2>UX Testing 1.2: Usability Testing Procedure</h2>
+
                         <div class="split-header">
                             <div class="title">
-                                <h2>Think Aloud Protocol</h2>
+                                <h2>UX Testing 1.2: Real-Time Usability Study</h2>
+                                <h3>The Think Aloud Protocol</h3>
                             </div>
                             <div class="sus-banner"></div>
                         </div>
@@ -3614,7 +3615,9 @@
                             <li><strong>Follow-Up Questions:</strong> Post-session, participants answer questions to
                                 clarify feedback.</li>
                         </ul>
+                        <br>
                         <h2>Pros and Cons</h2>
+
                         <h3>Pros</h3>
                         <ul class="no-disc p0">
                             <li><strong>Rich Qualitative Data:</strong> Reveals user thought processes, offering
@@ -3637,12 +3640,11 @@
                             <li><strong>Limited Quantitative Data:</strong> Primarily qualitative, this method may need
                                 supplementary techniques for comprehensive analysis.</li>
                         </ul>
-                    </div>
-                </section>
 
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
-                        <h2>UX Testing 1.2: Tasks</h2>
+                        <br>
+                        <h2>UX Testing 1.3: User Experience Testing</h2>
+                        <h3>Task Design and Question Strategy</h3>
+
                         <div class="tab-container hide-sm " id="tabContainer7">
                             <div class="tab-buttons">
                                 <button type="button" class="tab-button active" data-target="tab1">Task 1</button>
@@ -3782,14 +3784,15 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
 
+                        <div class="split-header">
+                            <div class="title">
+                                <h2>UX Testing 1.3: Results and Analysis</h2>
+                                <h3>Triangulated Qualitatative and Quantitative Data</h3>
+                            </div>
+                            <div class="testing-banner"></div>
+                        </div>
 
-
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
-                        <h2>UX Testing 1.3: Results and Analysis</h2>
                         <p>
                             The Think Aloud Protocol assessment yielded an impressive score of 90.5 out of 100,
                             significantly exceeding the benchmark of 68. This outstanding score underscores the
@@ -3861,17 +3864,25 @@
                                 user-friendliness of the design. The triangulation of quantitative and qualitative
                                 results demonstrates that the project's overarching goal — to measure the feasibility of
                                 designing and developing a voice-navigable, rich-content website using a non-AI
-                                algorithm — was achieved with triumphant success.</li>
+                                algorithm — was achieved with triumphant success.
+                            </li>
                         </ul>
-
                     </div>
                 </section>
 
-                <div id="conclusion"></div>
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
+                <!-- <div id="conclusion"></div> -->
+                <section id="conclusion" data-color="gold" class="lazyload lazyblurry">
+                    <div class="editorial border-gradient border -gold">
+                        <div class="split-header">
+                            <div class="title">
+                                <h2>Conclusion: Summary and Future Directions</h2>
+                                <h3>Final Reflections &amp; Next Steps</h3>
+                            </div>
+                            <div class="conclusion-banner"></div>
+                        </div>
                         <div>
-                            <h2>After Thoughts</h2>
+                            <h2>Final Reflections</h2>
+                            <br>
                             <p>
                                 This UX case study has provided me with a profound understanding of design processes,
                                 research methodologies, and the significance of rigorous testing and iteration. Drawing
@@ -3913,9 +3924,8 @@
                     </div>
                 </section>
 
-                <div id="project-information"></div>
-                <section class="lazyload lazyblurry">
-                    <div class="editorial">
+                <section id="project-information" data-color="paleBlue" class="lazyload lazyblurry">
+                    <div class="editorial border-gradient border -paleBlue">
                         <div class="skills-section">
                             <h1>Project Information</h1>
                             <div class="centered-row">
