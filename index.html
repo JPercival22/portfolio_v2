@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="HTML5, CSS3, JavaScript" />
     <meta name="description" content="UX Portfolio for Joseph Percival" />
     <meta
       name="keywords"
@@ -10,8 +8,10 @@
     />
     <meta name="author" content="Joseph Percival" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - J Percival</title>
+    <title>Home Page - Joseph Percival</title>
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Preload hero images -->
     <link
       rel="preload"
       href="assets/images/hero-images/index/index-hero-banner_sm.svg"
@@ -34,6 +34,7 @@
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <!-- Preload the font -->
     <link
       rel="preload"
@@ -86,20 +87,8 @@
         letter-spacing: 0.55pt;
         margin: 0;
       }
-
-      .editorial {
-        background-color: white;
-        padding: 10px;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        width: 100%;
-        gap: 10px;
-        width: 90vw;
-      }
     </style>
+
     <!-- Preload main stylesheet -->
     <link
       rel="preload"
@@ -107,9 +96,8 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-
     <noscript>
-      <link rel="stylesheet" href="/styles/stylesheet.css" />
+      <link rel="stylesheet" href="styles/stylesheet.css" />
     </noscript>
   </head>
 
@@ -117,7 +105,7 @@
     <header id="navBar" class="navbar">
       <nav class="navbar-container">
         <div class="home-link">
-          <a href="/index.html" class="navbar-logo" aria-label="Home">
+          <a href="index.html" class="navbar-logo" aria-label="Home">
             <img
               src="assets/images/jp-LOGO.svg"
               width="40"
@@ -158,12 +146,12 @@
             >
           </li>
           <li class="navbar-link navbar-item">
-            <a href="/about-me.html" title="Link to the About Us page"
+            <a href="about-me.html" title="Link to the About Us page"
               >About Me</a
             >
           </li>
           <li class="navbar-link navbar-item">
-            <a href="/contact-form.html" title="Link to the Contact Us page"
+            <a href="contact-form.html" title="Link to the Contact Us page"
               >Contact Me</a
             >
           </li>
@@ -228,38 +216,33 @@
           <div class="editorial">
             <h2>Introduction</h2>
             <p>
-              I’m a <strong>Senior UX/UI Designer</strong> with a strong
-              background in <strong>Front-End Development</strong>, focused on
-              creating user-friendly digital experiences that drive business
-              growth. With a
-              <strong
-                >First-Class BSc (Hons) in Web Design and Development</strong
-              >
-              from Edge Hill University (UK), I’ve spent over five years refining my
-              skills in designing intuitive interfaces and solving complex user
-              problems.
+              With over four years of experience, I have had the privilege of
+              collaborating with both innovative start-ups and established
+              global corporations to design and develop exceptional user experiences. My
+              expertise is centred on creating intuitive and groundbreaking
+              web applications and mobile interfaces across a variety of
+              platforms and industries.
             </p>
-
             <p>
-              In my career, I’ve had the privilege of working with leading
-              brands like
-              <strong>Calvin Klein, Adidas, and L’Oréal</strong> while at
-              <strong>The Hut Group Plc</strong>, where I led the UX design and
-              development of e-commerce platforms. I’ve also contributed to
-              <strong>Synalogik’s Scout platform</strong>, an award-winning data
-              aggregation service used by the UK government and global banks.
+              Recently, I served as Senior UX Designer, Test Facilitator, and UI
+              Designer at a data aggregation company. This multifaceted position
+              involved leading UX design initiatives and overseeing development
+              projects utilised by prominent organisations such as the UK
+              Government, the Metropolitan Police, and the National Crime
+              Agency. These opportunities have enabled me to deliver outstanding
+              user experiences across multiple platforms.
             </p>
-
             <p>
-              More recently, I supported <strong>Come Together</strong>, a
-              charity focused on vulnerable communities, by designing a website
-              that helped secure National Lottery funding for expanded services.
+              My academic background at Edge Hill University, where I earned a
+              First Class BSc (Hons) degree in Web Design and Development, has
+              played a key role in shaping my career and driving my commitment
+              to creating innovative digital solutions.
             </p>
-
             <p>
-              I believe in blending creativity with data-driven insights to
-              craft compelling digital narratives that simplify user journeys,
-              increase engagement, and ultimately enhance business outcomes.
+              Looking ahead, I am eager to continue applying my skills and
+              creativity to craft meaningful, impactful user experiences. I am
+              passionate about contributing to projects that create significant
+              digital experiences and make a lasting difference.
             </p>
           </div>
         </section>
@@ -290,10 +273,12 @@
                   <h3>Come Together Hub Website Redesign and Development.</h3>
                   <h4>Responsive Re-design &amp; Development Case Study.</h4>
                   <ul class="inline-decorated-list">
-                    <li>Lead UX Designer.</li>
-                    <li>Lead UI Designer.</li>
-                    <li>Design System Creator.</li>
-                    <li>Web Master.</li>
+                    <li><span class="emphasis">Lead UX Designer.</span></li>
+                    <li><span class="emphasis">Lead UI Designer.</span></li>
+                    <li>
+                      <span class="emphasis">Design System Creator.</span>
+                    </li>
+                    <li><span class="emphasis">Web Master.</span></li>
                   </ul>
                 </div>
                 <div class="card-body">
@@ -338,10 +323,12 @@
                   <h3>Synalogik Innovative Solutions Ltd.</h3>
                   <h4>IOS App Design (UX &amp; UI) Case Study.</h4>
                   <ul class="inline-decorated-list">
-                    <li>Senior UX Designer.</li>
-                    <li>Senior UI Designer.</li>
-                    <li>UX Test Facilitator.</li>
-                    <li>Design System Creator.</li>
+                    <li><span class="emphasis">Senior UX Designer.</span></li>
+                    <li><span class="emphasis">Senior UI Designer.</span></li>
+                    <li><span class="emphasis">UX Test Facilitator.</span></li>
+                    <li>
+                      <span class="emphasis">Design System Creator.</span>
+                    </li>
                   </ul>
                 </div>
                 <div class="card-body">
@@ -385,10 +372,10 @@
                   <h3>Just Speak Guitar Tutorials.</h3>
                   <h4>Research, Design &amp; Development Case Study.</h4>
                   <ul class="inline-decorated-list">
-                    <li>UX Researcher.</li>
-                    <li>UX &amp; UI Designer.</li>
-                    <li>UX Test Facilitator.</li>
-                    <li>Front End Developer.</li>
+                    <li><span class="emphasis">UX Researcher.</span></li>
+                    <li><span class="emphasis">UX &amp; UI Designer.</span></li>
+                    <li><span class="emphasis">UX Test Facilitator.</span></li>
+                    <li><span class="emphasis">Front End Developer.</span></li>
                   </ul>
                 </div>
                 <div class="card-body">
@@ -398,14 +385,14 @@
                       development project aimed at evaluating the integration of
                       a non-AI voice command system within a responsive,
                       content-rich website. The project applied UX design
-                      principles 
+                      principles
                       <span class="more-content">
-                        throughout the design and development phases,
-                      utilising user data gathered from interviews, surveys, and
-                      testing. By synthesising user needs and empathising with
-                      their experiences, the project effectively removed
-                      frustrations, addressed concerns, and maintained
-                      transparency at every stage.
+                        throughout the design and development phases, utilising
+                        user data gathered from interviews, surveys, and
+                        testing. By synthesising user needs and empathising with
+                        their experiences, the project effectively removed
+                        frustrations, addressed concerns, and maintained
+                        transparency at every stage.
                       </span>
                     </p>
                     <button

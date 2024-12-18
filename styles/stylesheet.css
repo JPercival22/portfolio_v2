@@ -236,6 +236,10 @@ section {
   fill: #2c4465;
 }
 
+.emphasis {
+  font-weight: 500;
+}
+
 .hero_p-60 {
   display: flex;
   flex-direction: column;
@@ -656,6 +660,8 @@ section {
 }
 
 .text-link {
+  color: #1b1bac;
+  font-weight: 500;
   text-decoration: underline;
 }
 .text-link:hover {
