@@ -318,7 +318,7 @@ section {
 .flex-col .profile-image {
   width: 200px;
   height: 200px;
-  background-image: url(/assets/images/me-min.webp);
+  background-image: url(../assets/images/me-min.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -336,13 +336,13 @@ section {
   color: #0a7d94;
 }
 .flex-col .career-history-banner {
-  background: url(/assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
+  background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
   background-size: contain;
   height: 1000px;
   width: 100%;
 }
 .flex-col .process-banner {
-  background: url(/assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
+  background: url(../assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
   background-size: contain;
   height: 1000px;
   width: 100%;
@@ -408,20 +408,20 @@ section {
   border-radius: 8px;
 }
 .flex-col .wide-card .card-body .image-container.come-together-banner {
-  background: url(/assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
+  background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
   background-size: cover;
   width: 100%;
   height: 300px;
 }
 .flex-col .wide-card .card-body .image-container.syn-banner {
-  background: url(/assets/images/hero-images/index/syn-banner.webp) no-repeat center;
+  background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
   background-size: contain;
   width: 100%;
   height: 300px;
   border: 1px solid #d4d4d4;
 }
 .flex-col .wide-card .card-body .image-container.just-speak-banner {
-  background: url(/assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
+  background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -532,70 +532,70 @@ section {
   flex: 80%;
 }
 .editorial .split-header .sus-banner {
-  background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
+  background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 250px;
   height: 150px;
 }
 .editorial .split-header .testing-banner {
-  background-image: url(/assets/images/banners/UX-Testing-banner-min.svg);
+  background-image: url(../assets/images/banners/UX-Testing-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .conclusion-banner {
-  background-image: url(/assets/images/banners/Conclusion-banner-min.svg);
+  background-image: url(../assets/images/banners/Conclusion-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Hi-Fi-banner {
-  background-image: url(/assets/images/banners/Hi-Fi-banner-min.svg);
+  background-image: url(../assets/images/banners/Hi-Fi-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Low-Fi-banner {
-  background-image: url(/assets/images/banners/Low-Fi-banner-min.svg);
+  background-image: url(../assets/images/banners/Low-Fi-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Interaction-banner {
-  background-image: url(/assets/images/banners/Interaction-banner-min.svg);
+  background-image: url(../assets/images/banners/Interaction-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .IA-banner {
-  background-image: url(/assets/images/banners/IA-banner-min.svg);
+  background-image: url(../assets/images/banners/IA-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Ideation-banner {
-  background-image: url(/assets/images/banners/ideation-banner-min.svg);
+  background-image: url(../assets/images/banners/ideation-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Research-banner {
-  background-image: url(/assets/images/banners/research-banner-min.svg);
+  background-image: url(../assets/images/banners/research-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Brief-banner {
-  background-image: url(/assets/images/banners/brief-banner-min.svg);
+  background-image: url(../assets/images/banners/brief-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
@@ -711,16 +711,16 @@ section {
   transition: all 0.5s ease-in-out;
 }
 .contact-icon.mail-icon {
-  background-image: url(/assets/images/iconography/mail-icon.svg);
+  background-image: url(../assets/images/iconography/mail-icon.svg);
 }
 .contact-icon.phone-icon {
-  background-image: url(/assets/images/iconography/phone-icon.png);
+  background-image: url(../assets/images/iconography/phone-icon.png);
 }
 .contact-icon.web-icon {
-  background-image: url(/assets/images/iconography/web-icon.svg);
+  background-image: url(../assets/images/iconography/web-icon.svg);
 }
 .contact-icon.linkedIn {
-  background-image: url(/assets/images/iconography/linkedin.svg);
+  background-image: url(../assets/images/iconography/linkedin.svg);
   cursor: pointer;
 }
 .contact-icon.linkedIn:hover {
@@ -1353,7 +1353,7 @@ textarea.input {
 .grid-container-4col .marketing-banner,
 .grid-container-5col .marketing-banner,
 .grid-container-6col .marketing-banner {
-  background-image: url(/assets/images/Case-Studies/CS1/banners/marketing-table.svg);
+  background-image: url(../assets/images/Case-Studies/CS1/banners/marketing-table.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: -webkit-fill-available;
@@ -1668,7 +1668,7 @@ textarea.input {
   height: 40px;
 }
 .footer .footer-container .footer-social-icon a.logo {
-  background: url(/assets/images/jp-LOGO-mini.svg) no-repeat center;
+  background: url(../assets/images/jp-LOGO-mini.svg) no-repeat center;
   background-size: contain;
 }
 .footer .footer-container .copy-panel {
@@ -1860,14 +1860,14 @@ textarea.input {
     font-size: 4em;
   }
   .flex-col .career-history-banner {
-    background: url(/assets/images/hero-images/index/career-path_lg.svg) center;
+    background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
     background-size: contain;
     background-repeat: no-repeat;
     max-height: 200px;
     width: 100%;
   }
   .flex-col .process-banner {
-    background: url(/assets/images/hero-images/index/process-banner_lg.svg) center;
+    background: url(../assets/images/hero-images/index/process-banner_lg.svg) center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 300px;
@@ -1925,7 +1925,7 @@ textarea.input {
     border-radius: 8px;
   }
   .editorial .case-study-settings .image-container .syn-banner {
-    background-image: url(/assets/images/Case-Studies/CS2/main-banner.webp);
+    background-image: url(../assets/images/Case-Studies/CS2/main-banner.webp);
     background-size: contain;
   }
   .sidebar-open {
@@ -2055,14 +2055,14 @@ textarea.input {
     font-size: 24px;
   }
   .banner-container .banner-wrapper.banner-1 {
-    background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Results-Banner.svg);
+    background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Results-Banner.svg);
     background-size: contain;
     background-repeat: no-repeat;
   }
   .banner-container .banner-wrapper.banner-2 {
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-stats-Banner.svg);
+    background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-stats-Banner.svg);
   }
   .lightbox {
     display: none;
@@ -2415,7 +2415,7 @@ textarea.input {
     justify-content: flex-end;
   }
   .tab-container.hide-sm .tab-contents .tab-module .carousel-header .flex-col-right .carousel-banner-1 {
-    background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
+    background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
     width: 100%;
     height: 100%;
     background-size: contain;
@@ -2424,7 +2424,7 @@ textarea.input {
     border-radius: 8px;
   }
   .tab-container.hide-sm .tab-contents .tab-module .carousel-header .flex-col-right .carousel-banner-2 {
-    background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
+    background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
     width: 100%;
     height: 100%;
     background-size: contain;
@@ -2433,7 +2433,7 @@ textarea.input {
     border-radius: 8px;
   }
   .tab-container.hide-sm .tab-contents .tab-module .carousel-header .flex-col-right .carousel-banner-3 {
-    background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
+    background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
     width: 100%;
     height: 100%;
     background-size: contain;
@@ -2442,7 +2442,7 @@ textarea.input {
     border-radius: 8px;
   }
   .tab-container.hide-sm .tab-contents .tab-module .carousel-header .flex-col-right .carousel-banner-4 {
-    background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
+    background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
     width: 100%;
     height: 100%;
     background-size: contain;

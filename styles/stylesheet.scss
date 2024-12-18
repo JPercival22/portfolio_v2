@@ -375,7 +375,7 @@ section {
   .profile-image {
     width: 200px;
     height: 200px;
-    background-image: url(/assets/images/me-min.webp);
+    background-image: url(../assets/images/me-min.webp);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -393,13 +393,13 @@ section {
     }
   }
   .career-history-banner {
-    background: url(/assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
+    background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
     background-size: contain;
     height: 1000px;
     width: 100%;
   }
   .process-banner {
-    background: url(/assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
+    background: url(../assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
     background-size: contain;
     height: 1000px;
     width: 100%;
@@ -458,20 +458,20 @@ section {
         max-height: 300px;
         border-radius: $brad-8;
         &.come-together-banner {
-          background: url(/assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
+          background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
           background-size: cover;
           width: 100%;
           height: 300px;
         }
         &.syn-banner {
-          background: url(/assets/images/hero-images/index/syn-banner.webp) no-repeat center;
+          background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
           background-size: contain;
           width: 100%;
           height: 300px;
           border: $color_border-settings-grey;
         }
         &.just-speak-banner {
-          background: url(/assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
+          background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
           background-size: cover;
           width: 100%;
           height: 300px;
@@ -562,70 +562,70 @@ section {
       flex: 80%;
     }
     .sus-banner {
-      background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
+      background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 250px;
       height: 150px;
     }
     .testing-banner {
-      background-image: url(/assets/images/banners/UX-Testing-banner-min.svg);
+      background-image: url(../assets/images/banners/UX-Testing-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .conclusion-banner {
-      background-image: url(/assets/images/banners/Conclusion-banner-min.svg);
+      background-image: url(../assets/images/banners/Conclusion-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Hi-Fi-banner {
-      background-image: url(/assets/images/banners/Hi-Fi-banner-min.svg);
+      background-image: url(../assets/images/banners/Hi-Fi-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Low-Fi-banner {
-      background-image: url(/assets/images/banners/Low-Fi-banner-min.svg);
+      background-image: url(../assets/images/banners/Low-Fi-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Interaction-banner {
-      background-image: url(/assets/images/banners/Interaction-banner-min.svg);
+      background-image: url(../assets/images/banners/Interaction-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .IA-banner {
-      background-image: url(/assets/images/banners/IA-banner-min.svg);
+      background-image: url(../assets/images/banners/IA-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Ideation-banner {
-      background-image: url(/assets/images/banners/ideation-banner-min.svg);
+      background-image: url(../assets/images/banners/ideation-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Research-banner {
-      background-image: url(/assets/images/banners/research-banner-min.svg);
+      background-image: url(../assets/images/banners/research-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Brief-banner {
-      background-image: url(/assets/images/banners/brief-banner-min.svg);
+      background-image: url(../assets/images/banners/brief-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
@@ -735,16 +735,16 @@ section {
   height: 50px;
   transition: all 0.5s ease-in-out;
   &.mail-icon {
-    background-image: url(/assets/images/iconography/mail-icon.svg);
+    background-image: url(../assets/images/iconography/mail-icon.svg);
   }
   &.phone-icon {
-    background-image: url(/assets/images/iconography/phone-icon.png);
+    background-image: url(../assets/images/iconography/phone-icon.png);
   }
   &.web-icon {
-    background-image: url(/assets/images/iconography/web-icon.svg);
+    background-image: url(../assets/images/iconography/web-icon.svg);
   }
   &.linkedIn {
-    background-image: url(/assets/images/iconography/linkedin.svg);
+    background-image: url(../assets/images/iconography/linkedin.svg);
     cursor: pointer;
     &:hover {
       opacity: 0.7;
@@ -1273,7 +1273,7 @@ textarea.input {
   border-radius: 8px;
   margin-top: 1em;
   .marketing-banner {
-    background-image: url(/assets/images/Case-Studies/CS1/banners/marketing-table.svg);
+    background-image: url(../assets/images/Case-Studies/CS1/banners/marketing-table.svg);
     background-size: contain;
     background-repeat: no-repeat;
     width: -webkit-fill-available;
@@ -1481,7 +1481,7 @@ textarea.input {
         width: 40px;
         height: 40px;
         &.logo {
-          background: url(/assets/images/jp-LOGO-mini.svg) no-repeat center;
+          background: url(../assets/images/jp-LOGO-mini.svg) no-repeat center;
           background-size: contain;
         }
       }
@@ -1669,14 +1669,14 @@ textarea.input {
   }
   .flex-col {
     .career-history-banner {
-      background: url(/assets/images/hero-images/index/career-path_lg.svg) center;
+      background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
       background-size: contain;
       background-repeat: no-repeat;
       max-height: 200px;
       width: 100%;
     }
     .process-banner {
-      background: url(/assets/images/hero-images/index/process-banner_lg.svg) center;
+      background: url(../assets/images/hero-images/index/process-banner_lg.svg) center;
       background-size: contain;
       background-repeat: no-repeat;
       height: 300px;
@@ -1743,7 +1743,7 @@ textarea.input {
         background-color: transparent;
         border-radius: $brad-8;
         .syn-banner {
-          background-image: url(/assets/images/Case-Studies/CS2/main-banner.webp);
+          background-image: url(../assets/images/Case-Studies/CS2/main-banner.webp);
           background-size: contain;
         }
       }
@@ -1870,14 +1870,14 @@ textarea.input {
       color: white;
       font-size: 24px;
       &.banner-1 {
-        background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-Results-Banner.svg);
+        background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Results-Banner.svg);
         background-size: contain;
         background-repeat: no-repeat;
       }
       &.banner-2 {
         background-size: contain;
         background-repeat: no-repeat;
-        background-image: url(/assets/images/Case-Studies/CS2/Testing_images/SUS-stats-Banner.svg);
+        background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-stats-Banner.svg);
       }
     }
   }
@@ -2232,7 +2232,7 @@ textarea.input {
             display: flex;
             justify-content: flex-end;
             .carousel-banner-1 {
-              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
+              background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
               width: 100%;
               height: 100%;
               background-size: contain;
@@ -2241,7 +2241,7 @@ textarea.input {
               border-radius: $brad-8;
             }
             .carousel-banner-2 {
-              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
+              background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
               width: 100%;
               height: 100%;
               background-size: contain;
@@ -2250,7 +2250,7 @@ textarea.input {
               border-radius: $brad-8;
             }
             .carousel-banner-3 {
-              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
+              background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
               width: 100%;
               height: 100%;
               background-size: contain;
@@ -2259,7 +2259,7 @@ textarea.input {
               border-radius: $brad-8;
             }
             .carousel-banner-4 {
-              background-image: url(/assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
+              background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
               width: 100%;
               height: 100%;
               background-size: contain;
