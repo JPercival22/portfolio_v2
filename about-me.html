@@ -187,7 +187,7 @@
       </section>
 
       <div class="flex-col gap-1 mt-10">
-        <section>
+        <section role="region" aria-labelledby="heading-id">
           <div class="editorial">
             <p class="qoute-text">
               “Design creates culture. Culture shapes values. Values determine
@@ -197,9 +197,36 @@
             </p>
           </div>
         </section>
-        <section>
+
+        <section role="region" aria-labelledby="heading-id">
           <div class="editorial">
-            <h2>About Me</h2>
+            <div class="flex-row space-between center no-border">
+              <div class="col">
+                <div class="left-align">
+                  <h2>About Me</h2>
+                </div>
+                <div class="right-align">
+                  <!-- <div class="button-container"> -->
+                  <a
+                    class="primary-button"
+                    href="contact-form.html"
+                    aria-label="button link to contact page"
+                    title="Please click this button if you would like to set up a chat over a project."
+                  >
+                    Lets Talk
+                  </a>
+                  <a
+                    class="secondary-button"
+                    href="index.html"
+                    aria-label="button link to about page"
+                    title="Please click this button if you would like to view my experience and skills."
+                  >
+                    See Projects
+                  </a>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
             <p>
               I’m a
               <span class="emphasis">Senior UX &amp; UI Designer</span> with
@@ -219,36 +246,43 @@
               My journey as a designer has been guided by a belief in the power
               of empathy and collaboration. Throughout my career, I’ve had the
               privilege of working with renowned brands such as
-              <span class="emphasis">Calvin Klein, Adidas, and L’Oréal</span> at
-              <span class="text-link"
-                ><a href="https://www.thg.com/">The Hut Group Plc</a></span
-              >, where I was part of the Graduate UX design and development
-              team. This experience allowed me to contribute to creating
-              impactful E-commerce platforms that seamlessly connected users
-              with products. <br />
-              I’ve also worked on the
-              <span class="text-link"
-                ><a href="https://synalogik.com/">Scout</a></span
+              <span class="emphasis">Calvin Klein, Adidas, and L’Oréal</span>
+              at
+              <a class="text-link" href="https://www.thg.com/"
+                >The Hut Group Plc</a
               >
-              platform at
-              <span class="emphasis">Synalogik Innovative Solutions Ltd</span>,
-              an award-winning data aggregation service used by the UK
-              government and global financial institutions.
+              , where I was part of the Graduate UX design and development team.
+              This experience allowed me to contribute to creating impactful
+              E-commerce platforms that seamlessly connected users with
+              products.
+            </p>
+            <p>
+              In a more recent role, employed as the sole Senior UX &amp; UI
+              Designer I helped modernise, consult and improve existing designs
+              and collaborate with Architects at
+              <a class="text-link" href="https://synalogik.com/"
+                >Synalogik Solutions Ltd</a
+              >
+              concerning their award-winning data aggregation service, named
+              <span class="emphasis">SCOUT</span> used by the UK government and
+              global financial institutions. Additionally, I designed and tested
+              their E-Commerce platform to increase Data Set Sales and improve
+              their clients workflow.
             </p>
 
             <p>
-              More recently, I worked with
-              <span class="text-link"
-                ><a href="https://cometogetherhub.com/"
-                  >Come Together Hub</a
-                ></span
-              >, a charity focused on supporting vulnerable communities. I had
-              the opportunity to serve as the
+              In a project close to my heart, I worked with
+              <a class="text-link" href="https://cometogetherhub.com/"
+                >Come Together Hub</a
+              >
+              , a local charity focused on supporting vulnerable members of
+              society in their community. I had the opportunity to serve as the
               <span class="emphasis">Lead Designer and Web Master</span> for
-              their website, completely
-              <span class="emphasis"><em>pro-bono</em></span
-              >. The site helped secure National Lottery funding, enabling the
-              charity to expand its services and reach even more people in need.
+              their website, on a
+              <span class="emphasis"><em>pro-bono</em></span> basis. The
+              launcehed site helped secure this charity with National Lottery
+              funding, enabling the charity to expand its services further than
+              they ever imagined and reach more people in need.
             </p>
 
             <p>
@@ -260,42 +294,16 @@
               for design to create innovative digital experiences that solve
               real-world problems.
             </p>
-
-            <div class="button-container">
-              <a
-                class="primary-button"
-                href="contact-form.html"
-                aria-label="button link to contact page"
-                title="Please click this button if you would like to set up a chat over a project."
-              >
-                Lets Talk
-              </a>
-              <a
-                class="secondary-button"
-                href="index.html"
-                aria-label="button link to about page"
-                title="Please click this button if you would like to view my experience and skills."
-              >
-                See Projects
-              </a>
-            </div>
           </div>
         </section>
 
         <!-- Experience sections  -->
-        <section>
-          <div class="editorial">
-            <h2>Career History</h2>
-            <div class="career-history-banner"></div>
-          </div>
-        </section>
-
-        <section>
+        <section role="region" aria-labelledby="heading-id">
           <div class="editorial">
             <div class="flex-row space-between center no-border">
               <div class="col">
                 <div class="left-align">
-                  <h2 class="m-0">Experience</h2>
+                  <h2 id="heading-id" class="m-0">Career History</h2>
                 </div>
                 <div class="right-align">
                   <a
@@ -307,6 +315,17 @@
                   >
                     View CV
                   </a>
+                </div>
+              </div>
+            </div>
+            <div class="career-history-banner"></div>
+            <!-- </div>
+       
+          <div class="editorial"> -->
+            <div class="flex-row no-border">
+              <div class="col">
+                <div class="left-align">
+                  <h2 class="m-0">Experience</h2>
                 </div>
               </div>
             </div>
@@ -336,14 +355,14 @@
                     boosting their online presence.
                   </p>
                 </div>
-                <br />
-                <span class="text-link"
-                  ><a
+                <footer class="experience-footer">
+                  <a
+                    class="text-link"
                     href="https://cometogetherhub.com/"
                     title="Click to visit this website."
                     >Come Together Hub</a
-                  ></span
-                >
+                  >
+                </footer>
               </div>
 
               <div class="experience-body">
@@ -364,32 +383,36 @@
 
                 <div class="experience-details">
                   <p>
-                    Designed intuitive UX/UI E-Commerce platform and made improvements for their private data aggregation platform
+                    Designed intuitive UX/UI E-Commerce platform and made
+                    improvements for their private data aggregation platform
                     used by UK security agencies. Improving data access and user
-                    experience for law enforcement and government clients imcreasing due-dilligence and intellect.
+                    experience for law enforcement and government clients
+                    imcreasing due-dilligence and intellect.
                   </p>
                   <p>
-                    <span class="emphasis">UK Private Sector :</span> The NCA, UK Police, MI5, Local Governments, Aston
-                    University, NatWest Bank.
+                    <span class="emphasis">UK Private Sector :</span> The NCA,
+                    UK Police, MI5, Local Governments, Aston University, NatWest
+                    Bank.
                   </p>
                   <p>
                     <span class="emphasis">UK Public Sector :</span> Betfred,
                     Ladbrokes, Hastings Plc.
                   </p>
-                  <br />
                 </div>
-                <span class="text-link"
-                  ><a
+                <br />
+                <footer class="experience-footer">
+                  <a
+                    class="text-link"
                     href="https://synalogik.com/"
                     title="Click to visit this website."
-                    >Synalogik Innovative solutions Ltd</a
-                  ></span
-                >
+                    >Synalogik Solutions Ltd</a
+                  >
+                </footer>
               </div>
 
               <div class="experience-body">
                 <div class="experience-header">
-                  <h3>JP Web Services Ltd.</h3>
+                  <h3>Feelance UX Designer & Consultant.</h3>
                   <span class="emphasis">UX &amp; UI Design Consultant.</span>
                 </div>
                 <div class="experience-duration">
@@ -412,14 +435,14 @@
                     Businesses, Auto Services, Charities and Organisations.
                   </p>
                 </div>
-                <br />
-                <span class="text-link"
-                  ><a
+                <footer class="experience-footer">
+                  <a
+                    class="text-link"
                     href="https://www.portfolio.josephmpercival.co.uk/"
                     title="Click to visit this website."
                     >View my Portfolio</a
-                  ></span
-                >
+                  >
+                </footer>
               </div>
 
               <div class="experience-body">
@@ -449,14 +472,15 @@
                     Adidas, L'Oreal, Revoltion and Burt's Bees.
                   </p>
                 </div>
-                <br />
-                <span class="text-link"
-                  ><a
+                <footer class="experience-footer">
+                  <a
+                    class="text-link"
+                    class="text-link"
                     href="https://www.thg.com/"
                     title="Click to visit this website."
                     >The Hut Group Plc.</a
-                  ></span
-                >
+                  >
+                </footer>
               </div>
 
               <div class="experience-body">
@@ -490,14 +514,15 @@
                     Health Care PACO<sup>TM</sup> Platform.
                   </p>
                 </div>
-                <br />
-                <span class="text-link"
-                  ><a
+                <br>
+                <footer class="experience-footer">
+                  <a
+                    class="text-link"
                     href="https://www.blinxhealthcare.com/"
                     title="Click to visit this website."
                     >Blinx Health Care.</a
-                  ></span
-                >
+                  >
+                </footer>
               </div>
 
               <div class="experience-body">
@@ -521,6 +546,14 @@
                     development and academic achievement.
                   </p>
                 </div>
+                <footer class="experience-footer">
+                  <a
+                    class="text-link"
+                    href="https://www.edgehill.ac.uk/"
+                    title="Click to visit this website."
+                    >Edge Hill University.</a
+                  >
+                </footer>
               </div>
             </div>
           </div>
@@ -659,13 +692,23 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="#007bb6"
-              height="40"
-              viewBox="0 -960 960 960"
               width="40"
+              height="40"
+              viewBox="0 0 32 32"
+              fill="none"
             >
+              <rect x="2" y="2" width="28" height="28" rx="14" fill="#1275B1" />
               <path
-                d="M188-212q-23.85 0-39.925-16.075Q132-244.15 132-268v-424q0-23.85 16.075-39.925Q164.15-748 188-748h584q23.85 0 39.925 16.075Q828-715.85 828-692v424q0 23.85-16.075 39.925Q795.85-212 772-212H188Zm616-495.334L496.333-501q-4 2-8 3.5T480-496q-4.333 0-8.333-1.5t-7.334-3.5L156-707.334V-268q0 14 9 23t23 9h584q14 0 23-9t9-23v-439.334ZM480-520.667 787.333-724h-614L480-520.667ZM156-707.334v8-20.678 1.451V-724v5-2.109 21.775-8V-236v-471.334Z"
+                d="M12.6186 9.69215C12.6186 10.6267 11.8085 11.3843 10.8093 11.3843C9.81004 11.3843 9 10.6267 9 9.69215C9 8.7576 9.81004 8 10.8093 8C11.8085 8 12.6186 8.7576 12.6186 9.69215Z"
+                fill="white"
+              />
+              <path
+                d="M9.24742 12.6281H12.3402V22H9.24742V12.6281Z"
+                fill="white"
+              />
+              <path
+                d="M17.3196 12.6281H14.2268V22H17.3196C17.3196 22 17.3196 19.0496 17.3196 17.2049C17.3196 16.0976 17.6977 14.9855 19.2062 14.9855C20.911 14.9855 20.9008 16.4345 20.8928 17.5571C20.8824 19.0244 20.9072 20.5219 20.9072 22H24V17.0537C23.9738 13.8954 23.1508 12.4401 20.4433 12.4401C18.8354 12.4401 17.8387 13.1701 17.3196 13.8305V12.6281Z"
+                fill="white"
               />
             </svg>
           </a>

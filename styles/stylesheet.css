@@ -683,7 +683,7 @@ section {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
-  background-color: #dcfbff;
+  background-color: #e7fcff;
 }
 .experience-wrapper .experience-body .experience-header {
   display: flex;
@@ -704,7 +704,11 @@ section {
   font-weight: bold;
 }
 .experience-wrapper .experience-body .experience-details {
+  flex: 1;
   margin-top: 10px;
+}
+.experience-wrapper .experience-body .card-footer {
+  margin-top: auto;
 }
 
 /* contact page styles  */
@@ -1667,7 +1671,7 @@ textarea.input {
   justify-content: space-between;
   width: 100%;
   padding: 1em;
-  width: 90%;
+  width: 50%;
 }
 .footer .footer-container .footer-social-icon a {
   width: 40px;
@@ -2226,6 +2230,11 @@ textarea.input {
 @media only screen and (min-width: 1024px) {
   .body {
     margin: var(--side-margins-992px);
+  }
+  .flex-row.space-between .col .right-align .primary-button,
+  .flex-row.space-between .col .right-align .secondary-button {
+    width: 20%;
+    margin-right: 1em;
   }
   .editorial {
     padding: 1em;

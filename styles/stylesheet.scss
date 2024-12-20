@@ -708,7 +708,7 @@ section {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
-    background-color: $color_base-bkg-light;
+    background-color: #e7fcff;
     .experience-header {
       @include apply-flex-styles($flex-col-start-start);
       gap: 10px;
@@ -724,8 +724,12 @@ section {
       font-weight: bold;
     }
     .experience-details {
+      flex: 1;
       margin-top: 10px;
     }
+    .card-footer{
+      margin-top: auto;
+    } 
   }
 }
 /* contact page styles  */
@@ -1479,7 +1483,7 @@ textarea.input {
     .footer-social-icon {
       @include apply-flex-styles($flex-row-center-space_between);
       padding: 1em;
-      width: 90%;
+      width: 50%;
       a {
         width: 40px;
         height: 40px;
@@ -2048,6 +2052,12 @@ textarea.input {
   .body {
     margin: var(--side-margins-992px);
   }
+
+  .flex-row.space-between .col .right-align .primary-button, 
+  .flex-row.space-between .col .right-align .secondary-button {
+    width: 20%;
+    margin-right: 1em;
+}
 
   .editorial {
     padding: 1em;
