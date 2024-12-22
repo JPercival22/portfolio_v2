@@ -140,22 +140,42 @@
         </button>
 
         <ul id="navMenu" class="nav-menu">
-          <li class="navbar-link navbar-item">
-            <a href="index.html" title="Link to the Home Page">Home</a>
+          <li class="navbar-item navbar-link">
+            <!-- Case Studies item with dropdown -->
+            <div class="accordion">
+              <input
+                type="checkbox"
+                id="accordion-toggle"
+                class="accordion-toggle"
+              />
+              <label for="accordion-toggle" class="accordion-header">
+                Case Studies <span class="chevron">▼</span>
+              </label>
+              <div class="accordion-content">
+                <ul>
+                  <li><a class="case-link" href="come-together.html">Come Together Design & Development</a></li>
+                  <li><a class="case-link" href="syn-ios-app.html">IOS E-Commerce Design</a></li>
+                  <li><a class="case-link" href="guitar-tutorial.html">Voice Recognition R&D</a></li>
+                </ul>
+              </div>
+            </div>
           </li>
-          <li class="navbar-link navbar-item">
-            <a href="about-me.html" title="Link to the About Us page"
+
+          <li class="navbar-item navbar-link">
+            <a class="organic-link" href="about-me.html" title="Link to the About Me page"
               >About Me</a
             >
           </li>
-          <li class="navbar-link navbar-item">
-            <a href="contact-form.html" title="Link to the Contact Us page"
+
+          <li class="navbar-item navbar-link">
+            <a class="organic-link" href="contact-form.html" title="Link to the Contact Us page"
               >Contact Me</a
             >
           </li>
         </ul>
       </nav>
     </header>
+
     <div id="btt-anchor"></div>
     <main class="p-0">
       <section class="hero_p-60">
