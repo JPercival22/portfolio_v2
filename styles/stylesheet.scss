@@ -836,6 +836,7 @@ section {
   background-color: #30618b;
   border-radius: $brad-8;
   position: relative;
+  width: 90%;
 }
 
 .circle {
@@ -980,8 +981,8 @@ textarea.input {
 
 .input-container.focus label {
   top: 0;
-  transform: translateY(-50%);
-  left: 25px;
+  transform: translateY(-100%);
+  left: 10px;
   font-size: 0.8rem;
 }
 
@@ -1019,7 +1020,6 @@ textarea.input {
 
 .information {
   @include apply-flex-styles($flex-row-center);
-  gap: 10px;
   .col {
     @include apply-flex-styles($flex-col-center-start);
     p {
@@ -1551,7 +1551,7 @@ textarea.input {
     .footer-social-icon {
       @include apply-flex-styles($flex-row-center-space_between);
       padding: 1em;
-      width: 50%;
+      width: 90%;
       a {
         width: 40px;
         height: 40px;
@@ -1670,6 +1670,12 @@ textarea.input {
         padding: 2em;
       }
     }
+  }
+}
+
+@media (min-width: 480px) {
+  .contact-form {
+    width: 100%;
   }
 }
 
@@ -2117,6 +2123,9 @@ textarea.input {
   .form,
   .contact-form {
     padding: 2em;
+  }
+  .contact-form {
+    width: 90%;
   }
   /* thankyou styles  */
   .thank-you-container {
