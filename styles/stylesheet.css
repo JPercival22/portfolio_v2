@@ -801,6 +801,7 @@ section {
   background-color: #30618b;
   border-radius: 8px;
   position: relative;
+  width: 90%;
 }
 
 .circle {
@@ -949,8 +950,8 @@ textarea.input {
 
 .input-container.focus label {
   top: 0;
-  transform: translateY(-50%);
-  left: 25px;
+  transform: translateY(-100%);
+  left: 10px;
   font-size: 0.8rem;
 }
 
@@ -1004,7 +1005,6 @@ textarea.input {
   align-items: center;
   justify-content: center;
   width: 100%;
-  gap: 10px;
 }
 .information .col {
   display: flex;
@@ -1726,7 +1726,7 @@ textarea.input {
   justify-content: space-between;
   width: 100%;
   padding: 1em;
-  width: 50%;
+  width: 90%;
 }
 .footer .footer-container .footer-social-icon a {
   width: 40px;
@@ -1859,6 +1859,11 @@ textarea.input {
   }
   footer .footer-container .footer-details {
     padding: 2em;
+  }
+}
+@media (min-width: 480px) {
+  .contact-form {
+    width: 100%;
   }
 }
 @media only screen and (min-width: 576px) {
@@ -2282,6 +2287,9 @@ textarea.input {
   .form,
   .contact-form {
     padding: 2em;
+  }
+  .contact-form {
+    width: 90%;
   }
   /* thankyou styles  */
   .thank-you-container {
