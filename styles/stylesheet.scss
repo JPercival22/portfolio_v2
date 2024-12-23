@@ -1,5 +1,5 @@
 // Typography
-$font-family: "Poppins", sans-serif;
+$font-family: 'Poppins', sans-serif;
 
 // color palette
 $color_base-bkg: #30a7bf;
@@ -127,7 +127,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-size: 16px;
   padding: 0;
   margin: 0;
@@ -236,7 +236,7 @@ section {
   width: 100vw;
   background-color: $color_white;
   transition: box-shadow 0.3s ease;
-  z-index: 100;
+  z-index: 1000;
   &.scrolled {
     box-shadow: $b-shadow;
   }
@@ -339,7 +339,9 @@ section {
             .accordion-content {
               display: none; /* Hidden by default */
               overflow: hidden;
-              transition: max-height 0.3s ease, opacity 0.3s ease;
+              transition:
+                max-height 0.3s ease,
+                opacity 0.3s ease;
               opacity: 0;
               max-height: 0;
             }
@@ -457,15 +459,13 @@ section {
     }
   }
   .career-history-banner {
-    background: url(../assets/images/hero-images/index/career-path_sm.svg)
-      center no-repeat;
+    background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
     background-size: contain;
     height: 1000px;
     width: 100%;
   }
   .process-banner {
-    background: url(../assets/images/hero-images/index/process-banner_sm.svg)
-      center no-repeat;
+    background: url(../assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
     background-size: contain;
     height: 1000px;
     width: 100%;
@@ -524,23 +524,20 @@ section {
         max-height: 300px;
         border-radius: $brad-8;
         &.come-together-banner {
-          background: url(../assets/images/hero-images/index/come-together-banner.webp)
-            no-repeat center;
+          background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
           background-size: cover;
           width: 100%;
           height: 300px;
         }
         &.syn-banner {
-          background: url(../assets/images/hero-images/index/syn-banner.webp)
-            no-repeat center;
+          background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
           background-size: contain;
           width: 100%;
           height: 300px;
           border: $color_border-settings-grey;
         }
         &.just-speak-banner {
-          background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp)
-            no-repeat center;
+          background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
           background-size: cover;
           width: 100%;
           height: 300px;
@@ -860,7 +857,7 @@ section {
 }
 
 .contact-form:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 26px;
   height: 26px;
@@ -960,7 +957,7 @@ textarea.input {
 
 .input-container span:before,
 .input-container span:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 5%;
   opacity: 0;
@@ -1509,7 +1506,7 @@ textarea.input {
       justify-content: center;
       padding: 10px 20px;
       transition: all 0.3s ease-in-out;
-      font-family: "Poppins";
+      font-family: 'Poppins';
       font-size: 16px;
       font-weight: 500;
       border: 1px solid gainsboro;
@@ -1761,16 +1758,14 @@ textarea.input {
   }
   .flex-col {
     .career-history-banner {
-      background: url(../assets/images/hero-images/index/career-path_lg.svg)
-        center;
+      background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
       background-size: contain;
       background-repeat: no-repeat;
       max-height: 200px;
       width: 100%;
     }
     .process-banner {
-      background: url(../assets/images/hero-images/index/process-banner_lg.svg)
-        center;
+      background: url(../assets/images/hero-images/index/process-banner_lg.svg) center;
       background-size: contain;
       background-repeat: no-repeat;
       height: 300px;
@@ -2529,7 +2524,9 @@ textarea.input {
             overflow: hidden;
             opacity: 0; /* Initially hidden */
             max-height: 0; /* Initially collapsed */
-            transition: opacity 0.3s ease, max-height 0.3s ease;
+            transition:
+              opacity 0.3s ease,
+              max-height 0.3s ease;
             background-color: #fff;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             border-radius: 0 0 8px 8px;
@@ -2572,12 +2569,7 @@ textarea.input {
         }
 
         /* Chevron rotation fix */
-        .navbar
-          .navbar-container
-          .nav-menu
-          .navbar-link
-          .accordion:hover
-          .chevron {
+        .navbar .navbar-container .nav-menu .navbar-link .accordion:hover .chevron {
           transform: rotate(180deg); /* Rotate the chevron */
           transition: transform 0.3s ease;
         }
@@ -2993,12 +2985,7 @@ textarea.input {
     }
     /* When a section is targeted */
     section:target {
-      border-image: linear-gradient(
-          to bottom right,
-          #fcb42e 10%,
-          rgba(255, 255, 255, 0) 100%
-        )
-        1;
+      border-image: linear-gradient(to bottom right, #fcb42e 10%, rgba(255, 255, 255, 0) 100%) 1;
     }
 
     .main-content {
@@ -3098,12 +3085,7 @@ textarea.input {
       width: 100%;
     }
   }
-  .hero
-    .case-study-settings
-    .space-between
-    .col
-    .two-button-container.left-align
-    .tertiary-link {
+  .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
     width: 50%;
   }
 

@@ -1,13 +1,10 @@
 {
   "htmlWhitespaceSensitivity": "strict",
   "htmlWrapAttributes": "never",
-  "printWidth": 120, 
+  "printWidth": 120,
   "singleQuote": true,
   "endOfLine": "lf",
   "trailingComma": "es5",
   "tabWidth": 2,
-  "useTabs": false,
-  "formatOnSave": false,
-  "cursorSmoothCaretAnimation": "on",
-  "scrollBeyondLastLine": false
+  "useTabs": false
 }

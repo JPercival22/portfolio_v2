@@ -1,22 +1,94 @@
 {
-    "cSpell.words": [
-      "analysed", "animatetop", "anonymised", "autoplay", "autosizes", "Bandi", 
-      "Betfred", "Blinx", "Categorisation", "categorised", "columnheader", "cstudy",
-      "CTA's", "Elems", "flowsheet", "GCSE", "Guitareo", "harmonising", "itemised",
-      "josephmpercival", "Kapwing", "lazyautosizes", "lazybeforesizes", "lazybeforeunveil",
-      "lazyerror", "lazyincluded", "lazyload", "lazyloaded", "lazyloading", "lazypreload",
-      "lazysizes", "lazyunveilread", "Likert", "minimising", "mouseleave", "mygallery",
-      "opsz", "optimise", "Organisations", "picturefill", "prioritise", "prioritising",
-      "recognise", "recognised", "recognising", "rowgroup", "rowheader", "Stobart", 
-      "styletip", "Synaliogik", "Synalogik", "Synthesised", "tbody", "teritary", "Tewkesbury",
-      "tfoot", "Upsell", "utilises", "visualise", "webp", "wght", "zout"
-    ],
-    "cSpell.language": "en-GB",
-    "editor.formatOnSave": false,
-    "editor.wordWrap": "off", 
-    "prettier.printWidth": 120, // Moderate print width to ensure readability and prevent wrapping
-    "prettier.htmlWhitespaceSensitivity": "strict", // More control over whitespace, avoid line breaks
-    "prettier.htmlWrapAttributes": "never", // Keep attributes on the same line unless necessary
-    "editor.formatOnPaste": false
-  }
-  
+  "cSpell.words": [
+    "analysed",
+    "animatetop",
+    "anonymised",
+    "autoplay",
+    "autosizes",
+    "Bandi",
+    "Betfred",
+    "Blinx",
+    "Categorisation",
+    "categorised",
+    "columnheader",
+    "cstudy",
+    "CTA's",
+    "Elems",
+    "flowsheet",
+    "GCSE",
+    "Guitareo",
+    "harmonising",
+    "itemised",
+    "josephmpercival",
+    "Kapwing",
+    "lazyautosizes",
+    "lazybeforesizes",
+    "lazybeforeunveil",
+    "lazyerror",
+    "lazyincluded",
+    "lazyload",
+    "lazyloaded",
+    "lazyloading",
+    "lazypreload",
+    "lazysizes",
+    "lazyunveilread",
+    "Likert",
+    "minimising",
+    "mouseleave",
+    "mygallery",
+    "opsz",
+    "optimise",
+    "Organisations",
+    "picturefill",
+    "prioritise",
+    "prioritising",
+    "recognise",
+    "recognised",
+    "recognising",
+    "rowgroup",
+    "rowheader",
+    "Stobart",
+    "styletip",
+    "Synaliogik",
+    "Synalogik",
+    "Synthesised",
+    "tbody",
+    "teritary",
+    "Tewkesbury",
+    "tfoot",
+    "Upsell",
+    "utilises",
+    "visualise",
+    "webp",
+    "wght",
+    "zout"
+  ],
+  "cSpell.ignorePaths": ["**/*.svg"],
+  "cSpell.language": "en-GB",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.maxTokenizationLineLength": 2500,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "prettier.htmlWhitespaceSensitivity": "css",
+  "prettier.printWidth": 120,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "editor.formatOnPaste": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "prettier.resolveGlobalModules": true
+}
