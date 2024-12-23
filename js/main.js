@@ -1,6 +1,8 @@
 import { initCarousel } from './carousel.mjs';
 import { handleScroll } from './scrollHighlight.mjs'; // Import the scroll highlighting functionality
+import { navScroll } from './navigationModule.mjs';
 
+navScroll();
 // Define function to add main functionality
 async function addMainFunctionality() {
   try {
@@ -98,3 +100,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.error('Error on DOMContentLoaded:', error);
   }
 });
+
+// main.js

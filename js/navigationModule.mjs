@@ -1,6 +1,6 @@
 const navbars = document.querySelectorAll('.navbar');
 
-function handleScroll() {
+function navScroll() {
   function updateNavbarStyle() {
     navbars.forEach(navbar => {
       if (window.scrollY > 0) {
@@ -17,4 +17,4 @@ function handleScroll() {
   window.addEventListener('scroll', updateNavbarStyle);
 }
 
-export { handleScroll };
+export { navScroll };
