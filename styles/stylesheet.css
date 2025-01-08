@@ -2933,6 +2933,7 @@ textarea.input {
     grid-template-columns: 49% auto;
     grid-template-rows: auto;
     grid-gap: 1em;
+    width: 100%;
   }
   .grid-container-2col .item {
     display: flex;
@@ -3190,6 +3191,31 @@ textarea.input {
   }
   .lightbox .lightbox-content.w-80b {
     max-width: 80%;
+  }
+  .achievements-section .editorial .flex-row.space-between .col .left-align,
+  .achievements-section .editorial .flex-row.space-between .col .right-align {
+    width: 100%;
+  }
+  .achievements-section .editorial .flex-row.space-between .col .left-align .primary-button,
+  .achievements-section .editorial .flex-row.space-between .col .right-align .primary-button {
+    width: 40%;
+  }
+  .achievements-section .editorial .achievement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .achievements-section .editorial .achievement .banner-img {
+    width: 140px;
+    height: auto;
+  }
+  .achievements-section .editorial .achievement .stat {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a993a;
   }
 }
 @media only screen and (min-width: 1800px) {
