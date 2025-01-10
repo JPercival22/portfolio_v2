@@ -1229,32 +1229,42 @@ textarea.input {
   width: 90vw;
   border: $color_border-settings-grey;
   border-radius: $brad-8;
+
   .accordion-item {
     border-bottom: $color_border-settings-grey;
+
     .accordion-header {
       background-color: #f5f5f5;
       padding: 10px;
       cursor: pointer;
       @include apply-flex-styles($flex-row-center-space_between);
       width: -webkit-fill-available;
-      &.accordion-item:first-child .accordion-header {
-        border-radius: 8px 8px 0 0;
+
+      &:first-child {
+        border-radius: 8px 8px 0 0; // Fix for first item
       }
-      &.accordion-item:last-child > .accordion-header {
-        border-radius: 0 0 8px 8px;
+
+      &:last-child {
+        border-radius: 0 0 8px 8px; // Fix for last item
       }
+
       &:hover {
         background-color: #e0e0e0;
       }
+
       .headline h4 {
         margin: 0;
       }
     }
+
     .accordion-content {
       padding: 10px;
-      display: none;
       background-color: #fff;
+      display: none; // Default state: hidden
+
+      // Ensure content (including images) is hidden when accordion is inactive
       .gallery {
+        display: block; // Ensure images are visible by default
         width: -webkit-fill-available;
         margin: 0;
         img {
@@ -1262,12 +1272,15 @@ textarea.input {
           border-radius: $brad-8;
         }
       }
+
+      .paragraphs {
+        display: block; // Ensure paragraphs are visible by default
+      }
     }
+
+    // When active, show both images and text
     &.active .accordion-content {
       display: block;
-    }
-    &:not(.active) .accordion-content {
-      display: none;
     }
   }
 }
@@ -2936,7 +2949,7 @@ textarea.input {
         background-color: $color_white;
         border-radius: $brad-8;
         display: flex;
-        height: calc(100vh - 19em);
+        height: calc(100vh - 12em);
         width: fit-content;
         position: fixed;
         .sideBar-content {

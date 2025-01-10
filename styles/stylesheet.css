@@ -1279,12 +1279,12 @@ textarea.input {
   width: 100%;
   width: -webkit-fill-available;
 }
-.sm-accordion .accordion-item .accordion-header.accordion-item:first-child .accordion-header,
-.accordion .accordion-item .accordion-header.accordion-item:first-child .accordion-header {
+.sm-accordion .accordion-item .accordion-header:first-child,
+.accordion .accordion-item .accordion-header:first-child {
   border-radius: 8px 8px 0 0;
 }
-.sm-accordion .accordion-item .accordion-header.accordion-item:last-child > .accordion-header,
-.accordion .accordion-item .accordion-header.accordion-item:last-child > .accordion-header {
+.sm-accordion .accordion-item .accordion-header:last-child,
+.accordion .accordion-item .accordion-header:last-child {
   border-radius: 0 0 8px 8px;
 }
 .sm-accordion .accordion-item .accordion-header:hover,
@@ -1298,11 +1298,12 @@ textarea.input {
 .sm-accordion .accordion-item .accordion-content,
 .accordion .accordion-item .accordion-content {
   padding: 10px;
-  display: none;
   background-color: #fff;
+  display: none;
 }
 .sm-accordion .accordion-item .accordion-content .gallery,
 .accordion .accordion-item .accordion-content .gallery {
+  display: block;
   width: -webkit-fill-available;
   margin: 0;
 }
@@ -1311,13 +1312,13 @@ textarea.input {
   border: 1px solid #d4d4d4;
   border-radius: 8px;
 }
+.sm-accordion .accordion-item .accordion-content .paragraphs,
+.accordion .accordion-item .accordion-content .paragraphs {
+  display: block;
+}
 .sm-accordion .accordion-item.active .accordion-content,
 .accordion .accordion-item.active .accordion-content {
   display: block;
-}
-.sm-accordion .accordion-item:not(.active) .accordion-content,
-.accordion .accordion-item:not(.active) .accordion-content {
-  display: none;
 }
 
 .bullet-list-row {
@@ -3062,7 +3063,7 @@ textarea.input {
     background-color: #fff;
     border-radius: 8px;
     display: flex;
-    height: calc(100vh - 19em);
+    height: calc(100vh - 12em);
     width: -moz-fit-content;
     width: fit-content;
     position: fixed;
