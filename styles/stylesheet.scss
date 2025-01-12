@@ -141,8 +141,8 @@ $flex-row-center-end: (
 .spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid #b6fce5;
-  border-top: 5px solid $color-sButton_hover;
+  border: 5px solid #eff8ff;
+  border-top: 5px solid #3177bc;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -159,7 +159,7 @@ $flex-row-center-end: (
 
 /* Styling for the loading text */
 .loading-text {
-  color: $color_brand;
+  color: #3177bc;
   font-size: 16px;
   margin-top: 10px; /* Ensure it stays below the spinner */
   font-family: $font-family;
@@ -2934,11 +2934,9 @@ textarea.input {
     .tab-contents {
       @include apply-flex-styles($flex-col-center-start);
       width: initial;
-      background-color: aliceblue;
       .tab-module {
         border-radius: 0 0 8px 8px;
         width: fit-content;
-        background-color: aliceblue;
         .grid-container-1col,
         .grid-container-2col,
         .grid-container-3col,
@@ -2947,11 +2945,6 @@ textarea.input {
         .grid-container-6col {
           background-color: aliceblue;
         }
-      }
-      .car-tab-module,
-      .carousel-header,
-      .carousel-container {
-        background-color: #fff;
       }
     }
     .car-tab-contents {

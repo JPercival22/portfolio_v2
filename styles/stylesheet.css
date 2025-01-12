@@ -17,8 +17,8 @@
 .spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid #b6fce5;
-  border-top: 5px solid #0a7d94;
+  border: 5px solid #eff8ff;
+  border-top: 5px solid #3177bc;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -34,7 +34,7 @@
 }
 /* Styling for the loading text */
 .loading-text {
-  color: #2c4465;
+  color: #3177bc;
   font-size: 16px;
   margin-top: 10px; /* Ensure it stays below the spinner */
   font-family: "Poppins", sans-serif;
@@ -3021,13 +3021,11 @@ textarea.input {
     justify-content: center;
     width: 100%;
     width: initial;
-    background-color: aliceblue;
   }
   .tab-container .tab-contents .tab-module {
     border-radius: 0 0 8px 8px;
     width: -moz-fit-content;
     width: fit-content;
-    background-color: aliceblue;
   }
   .tab-container .tab-contents .tab-module .grid-container-1col,
   .tab-container .tab-contents .tab-module .grid-container-2col,
@@ -3036,11 +3034,6 @@ textarea.input {
   .tab-container .tab-contents .tab-module .grid-container-5col,
   .tab-container .tab-contents .tab-module .grid-container-6col {
     background-color: aliceblue;
-  }
-  .tab-container .tab-contents .car-tab-module,
-  .tab-container .tab-contents .carousel-header,
-  .tab-container .tab-contents .carousel-container {
-    background-color: #fff;
   }
   .tab-container .car-tab-contents {
     background: #fff;
