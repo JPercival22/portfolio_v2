@@ -7,40 +7,22 @@
       content="Explore innovative UX design projects and solutions tailored to enhance user experiences. Discover a diverse portfolio showcasing user-centric design principles, usability enhancements, and interactive prototypes. Elevate your digital experiences with insights from a seasoned UX designer passionate about crafting intuitive interfaces." />
     <meta name="author" content="Joseph Percival" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Case Study 1 - Full site Redesign &amp; Development</title>
+    <title>Case Study 1 - Come Together Hub Ltd</title>
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 
-    <!-- Preload hero images -->
-    <link
-      rel="preload"
-      href="assets/images/hero-images/index/index-hero-banner_sm.svg"
-      as="image"
-      media="(max-width: 766px)" />
-    <link
-      rel="preload"
-      href="assets/images/hero-images/index/index-hero-banner_md.svg"
-      as="image"
-      media="(min-width: 767px) and (max-width: 1023px)" />
-    <link
-      rel="preload"
-      href="assets/images/hero-images/index/index-hero-banner_lg.svg"
-      as="image"
-      media="(min-width: 1024px)" />
-
-    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Preload the font -->
+    <!-- Preload the font without italics -->
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'" />
     <noscript>
       <!-- Fallback for browsers with JavaScript disabled -->
       <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     </noscript>
 
@@ -63,17 +45,56 @@
 
     <!-- Defer lazySizes library script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" defer></script>
+
+    <link
+      rel="preload"
+      href="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_sm.webp"
+      as="image"
+      media="(max-width: 766px)" />
+    <link
+      rel="preload"
+      href="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_md.webp"
+      as="image"
+      media="(min-width: 767px) and (max-width: 1023px)" />
+    <link
+      rel="preload"
+      href="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp"
+      as="image"
+      media="(min-width: 1024px)" />
+
     <style>
-      :root {
-        --bg-sm: url(assets/images/Case-Studies/CS3/Banners/CS3-primary-banner_sm.webp);
-        --bg-md: url(assets/images/Case-Studies/CS3/Banners/CS3-primary-banner_md.webp);
-        --bg-lg: url(assets/images/Case-Studies/CS3/Banners/CS3-primary-banner_lg.webp);
+      /* Hide all sections by default */
+      section {
+        display: none;
       }
 
+      .primary-banner {
+        width: 100%;
+        height: 400px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      @media (max-width: 766px) {
+        .primary-banner {
+          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_sm.webp');
+        }
+      }
+      @media (min-width: 767px) and (max-width: 1023px) {
+        .primary-banner {
+          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_md.webp');
+        }
+      }
+      @media (min-width: 1024px) {
+        .primary-banner {
+          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp');
+        }
+      }
       h1 {
+        color: #2c4465;
         font-weight: 500;
         font-size: 1.5rem;
-        line-height: 1;
+        line-height: 1.5;
         margin: 0;
       }
 
@@ -84,34 +105,18 @@
         letter-spacing: 0.55pt;
         margin: 0;
       }
-
-      .editorial {
-        background-color: white;
-        padding: 10px;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        width: 100%;
-        gap: 10px;
-        width: 90vw;
-      }
-
       .hero .case-study-settings {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
         width: 100%;
       }
 
       .hero .case-study-settings .space-between {
-        display: grid;
-        grid-template-columns: 2fr;
-        grid-template-rows: auto;
-        justify-items: stretch;
-        align-items: center;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
         width: 100%;
       }
 
@@ -121,30 +126,74 @@
 
       .hero .case-study-settings .space-between .col .two-button-container.left-align {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+        flex-wrap: nowrap;
+      }
+      .editorial {
+        background-color: white;
+        padding: 10px;
+        border-radius: 8px;
+        width: 90vw;
+        gap: 1em;
+        display: inherit;
+        flex-direction: inherit;
+      }
+      .editorial .grid-container-2col {
+        margin-top: 0;
+      }
+      .editorial .flex-row,
+      .editorial .flex-row .col,
+      .editorial .flex-row .col .right-align {
+        display: inherit;
+        flex-direction: inherit;
         align-items: center;
         justify-content: center;
-        gap: 0.5em;
-        width: -webkit-fill-available;
+        gap: 1em;
+      }
+      .achievements-section .editorial .grid-container-3col,
+      .achievements-section .editorial .grid-container-3col .achievement,
+      .achievements-section .editorial .grid-container-3col .achievement .image-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+      }
+      .editorial .grid-container-3col .achievement .banner-img {
+        width: 60%;
+        height: auto;
       }
 
-      .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
+      .achievements-section .editorial .grid-container-3col .achievement .stat {
+        font-size: 27px;
+        font-weight: 600;
+        color: #4f73a4;
+      }
+      .achievements-section .editorial .grid-container-3col .achievement .highlight {
+        font-size: 18px;
+        font-weight: 500;
+        font-style: normal;
+      }
+      .tertiary-link {
         display: flex;
-        width: 50%;
+        width: 100%;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         transition: background-color 0.5s ease-in-out;
         border-radius: 8px;
         text-decoration: underline;
       }
 
-      .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link:hover {
+      .tertiary-link:hover {
         background-color: #aafadf;
         text-decoration: none;
       }
 
-      .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link svg {
+      .tertiary-link svg {
         width: 50px;
         height: auto;
       }
@@ -163,40 +212,111 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        width: 100%;
-        width: -webkit-fill-available;
         list-style: none;
+        margin-left: 0;
+        flex-wrap: nowrap;
       }
-
+      .hero .case-study-settings .bullet-list-row li {
+        border-left: 1px solid #2c4465;
+        padding-left: 10px;
+      }
       .hero .case-study-settings .image-container {
-        width: -webkit-fill-available;
-        background-color: transparent;
+        background-color: #fec6c7;
+        border-radius: 0 0 10px 10px;
       }
 
-      .come-together-banner {
-        background-image: var(--bg-sm);
-        border-radius: 8px;
-        height: 600px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: transparent;
+      #project-information .editorial .skills-section .centered-row {
+        display: inherit;
+        flex-direction: inherit;
+        align-items: flex-start;
+        justify-content: space-between;
       }
 
+      @media only screen and (min-width: 425px) {
+        .editorial .grid-container-3col .achievement .banner-img {
+          width: 40%;
+          height: auto;
+        }
+      }
       @media only screen and (min-width: 768px) {
+        .hero .case-study-settings .space-between {
+          flex-direction: row;
+        }
+        .hero .case-study-settings .space-between .col .two-button-container.left-align,
         .hero .case-study-settings .space-between .col .two-button-container.right-align {
           flex-direction: row;
           justify-content: flex-end;
+          width: 100%;
         }
 
         .hero .case-study-settings .space-between .col .two-button-container.right-align a {
           width: 40%;
         }
-
+        .hero .case-study-settings .bullet-list-row {
+          flex-direction: row;
+        }
+        .hero .case-study-settings .bullet-list-row li:last-child {
+          border-right: 1px solid #d4d4d4;
+          padding-left: 10px;
+        }
         .come-together-banner {
-          background-image: var(--bg-md);
+          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_md.webp');
           background-size: contain;
           border-radius: 8px;
+        }
+
+        .achievements-section .editorial .flex-row {
+          flex-direction: row;
+        }
+
+        .achievements-section .editorial .flex-row .col .left-align,
+        .achievements-section .editorial .flex-row .col .right-align {
+          width: 100%;
+        }
+
+        .achievements-section .editorial .flex-row .col .right-align .primary-button {
+          width: 40%;
+          margin: 0;
+        }
+
+        .achievements-section .editorial .grid-container-3col {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: auto;
+          grid-gap: 1em;
+        }
+        .achievements-section .editorial .grid-container-3col .achievement {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1em;
+        }
+      }
+      @media only screen and (min-width: 1024px) {
+        .achievements-section .editorial .grid-container-3col {
+          grid-template-columns: repeat(4, 1fr);
+          margin-top: 0;
+        }
+        .achievements-section .editorial .grid-container-3col .achievement {
+          height: 190px;
+        }
+        .achievements-section .editorial .grid-container-3col .achievement .image-container {
+          height: 80px;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: center;
+        }
+        .achievements-section .editorial .grid-container-3col .achievement .banner-img {
+          width: 50%;
+        }
+
+        .achievements-section .editorial .grid-container-3col .achievement .stat {
+          font-size: 20px;
+        }
+
+        .achievements-section .editorial .grid-container-3col .achievement .highlight {
+          font-size: 16px;
         }
       }
 
@@ -230,10 +350,8 @@
         }
 
         .come-together-banner {
-          background-image: var(--bg-lg);
+          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp');
           aspect-ratio: 16/9;
-          background-size: contain;
-          border-radius: 8px;
         }
       }
 
@@ -246,10 +364,7 @@
       }
     </style>
     <!-- Preload main stylesheet -->
-    <link rel="preload" href="styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-      <link rel="stylesheet" href="styles/stylesheet.css" />
-    </noscript>
+    <link rel="stylesheet" href="styles/stylesheet.css" media="print" onload="this.media='all';" />
   </head>
 
   <body>
@@ -289,13 +404,13 @@
               <div class="accordion-content">
                 <ul>
                   <li>
-                    <a class="case-link" href="come-together.html">Come Together Design & Development</a>
+                    <a class="case-link" href="come-together.html">Bespoke Website Design</a>
                   </li>
                   <li>
                     <a class="case-link" href="syn-ios-app.html">IOS E-Commerce Design</a>
                   </li>
                   <li>
-                    <a class="case-link" href="guitar-tutorial.html">Voice Recognition R&D</a>
+                    <a class="case-link" href="guitar-tutorial.html">Voice Recognition Design</a>
                   </li>
                 </ul>
               </div>
@@ -317,7 +432,7 @@
 
     <main>
       <div class="page-wrapper">
-        <div class="contents">
+        <div id="pageContent" class="contents">
           <button type="button" class="open-sidebar-btn" aria-label="Open side bar button">
             <span class="material-symbols-outlined">chevron_right</span>
           </button>
@@ -390,9 +505,10 @@
                 <span class="nav-item">Low-Fidelity Designs</span>
               </a>
             </li>
+
             <li class="side-bar-list-item">
               <a href="#designSystem">
-                <span class="side-bar-icon" title="Hi Fidelity Designs">
+                <span class="side-bar-icon" title="Design System">
                   <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px">
                     <path
                       d="M481.23-341.54 599.69-460q14.69-14.69 18.93-35.35 4.23-20.65-4.24-39.8-8.46-19.16-25.38-31.23-16.92-12.08-38.08-12.08-21.15 0-38.07 12.81-16.93 12.8-31.62 27.5-14.92-14.7-31.35-27.5-16.42-12.81-37.57-12.81-21.16 0-38.19 11.58-17.04 11.57-25.5 30.73-8.47 19.92-4.5 40.57 3.96 20.66 18.65 35.58l118.46 118.46ZM410.72-120l-15.59-114.87q-21.1-6.59-46.12-20.51-25.01-13.93-42.42-29.88l-106.03 47.03-69.43-122.41 93.51-69.69q-1.92-11.67-3.15-24.45t-1.23-24.45q0-10.9 1.23-23.55 1.23-12.66 3.15-26.89l-93.51-70.2 69.43-120.36 105.26 45.74q19.72-16.2 43.23-29.74 23.51-13.54 45.31-20.23L410.72-840h138.56l15.59 115.64q24.44 8.9 45.43 20.82 20.98 11.92 40.8 29.05l108.85-45.74 68.92 120.36-96.59 71.69q3.46 13.36 4.18 25.24.72 11.89.72 22.94 0 10.28-1.1 22.09-1.11 11.81-3.87 26.96l95.56 70.31-69.44 122.41-107.23-47.8q-20.48 17.49-42 30.59-21.51 13.11-44.23 19.8L549.28-120H410.72Zm28.15-33.85h81.16l14.76-110.25q30.54-8 55.71-22.45t51.06-39.07l101.88 43.83 39.92-69.13-89.8-66.9q4.34-18.05 6.29-32.81 1.95-14.75 1.95-29.37 0-15.9-1.88-29.88-1.87-13.99-6.36-30.76l91.34-68.44-39.93-69.13-104.17 43.9q-18.83-20.9-49.04-39.14-30.22-18.24-57.73-22.45l-12.9-110.25h-82.18l-12.46 109.48q-31.72 6.31-57.79 21.14-26.06 14.84-51.29 40.38l-102.38-43.06-39.93 69.13 89.54 66.05q-4.85 14.29-6.92 30.29-2.08 16-2.08 33.51 0 15.9 2.08 31.13 2.07 15.23 6.15 30.28l-88.77 66.9 39.93 69.13 101.61-43.13q23.85 24.43 50.17 39.01 26.32 14.58 58.91 22.58l13.15 109.48ZM480-480Z" />
@@ -437,6 +553,7 @@
                 <span class="nav-item">Test Results</span>
               </a>
             </li>
+
             <li class="side-bar-list-item">
               <a href="#conclusion">
                 <span class="side-bar-icon" title="Closing Statement And Conclusion">
@@ -465,7 +582,7 @@
 
         <!-- end of mobile side bar  -->
         <article>
-          <div class="sideBar sidebar">
+          <div id="sidebar_lg" class="sideBar sidebar">
             <div class="sideBar-content">
               <div class="header">
                 <h3>Contents</h3>
@@ -607,10 +724,11 @@
         </article>
 
         <div class="main-content">
-          <section class="editorial">
+          <section id="hero-section" class="editorial">
             <div class="hero">
               <div class="hero-content case-study-settings">
-                <h1>Come Together Hub - Pro-Bono Re-Design and Development (2024).</h1>
+                <h1>Come Together Hub - Re-Design and Development (2024).</h1>
+                <p class="emphasis">Estimated Reading Time: 15minutes</p>
                 <div class="flex-row space-between no-border">
                   <div class="col">
                     <div class="two-button-container left-align">
@@ -667,26 +785,18 @@
                   <li>Lead UX Researcher</li>
                   <li>Lead UX &amp; UI Designer</li>
                   <li>UI Kit Designer</li>
-                  <li>Lead UX Testing Facilitator</li>
+                  <li>Lead Testing Facilitator</li>
                   <li>Web Master</li>
                 </ul>
 
-                <div class="image-container">
-                  <div class="primary-banner come-together-banner lazyload lazyblurry"></div>
-                  <script>
-                    document.addEventListener('lazybeforeunveil', function (e) {
-                      var bg = e.target.getAttribute('data-bg');
-                      if (bg) {
-                        e.target.style.backgroundImage = 'url(' + bg + ')';
-                      }
-                    });
-                  </script>
+                <div id="primaryBanner-container" class="image-container">
+                  <div class="primary-banner"></div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="achievements-section">
+          <section id="achievements" class="achievements-section">
             <div class="editorial">
               <div class="flex-row space-between center no-border">
                 <div class="col">
@@ -706,42 +816,55 @@
                   </div>
                 </div>
               </div>
-              <p>
-                The launched, fully responsive and modernised website helped secure National Lottery funding, supporting
-                the charity’s mission and outreach.
-              </p>
+
               <div class="grid-container-3col">
                 <div class="achievement">
-                  <img
-                    class="banner-img"
-                    src="/portfolio_v2/assets/images/Case-Studies/metric-vectors/Traffic-Icon.svg"
-                    width="50"
-                    height="50"
-                    alt="" />
-                  <span class="stat">100%</span>
-                  <p><b>Growth in website traffic</b></p>
+                  <div class="image-container">
+                    <img
+                      class="banner-img"
+                      src="./assets/images/banners/metric-vectors/investment-vector.svg"
+                      width="50"
+                      height="50"
+                      alt="" />
+                  </div>
+                  <span class="stat">Investment</span>
+                  <span class="highlight">Client Gained National Lottery Funding</span>
                 </div>
                 <div class="achievement">
-                  <img
-                    class="banner-img"
-                    src="/portfolio_v2/assets/images/Case-Studies/metric-vectors/Speed-Vector.svg"
-                    width="50"
-                    height="50"
-                    alt="" />
-                  <span class="stat">100%</span>
-                  <p>
-                    <b>Faster page load times</b>
-                  </p>
+                  <div class="image-container">
+                    <img
+                      class="banner-img"
+                      src="./assets/images/banners/metric-vectors/traffic-vector.svg"
+                      width="50"
+                      height="50"
+                      alt="" />
+                  </div>
+                  <span class="stat">Traffic</span>
+                  <span class="highlight">100% Growth In All Website Traffic</span>
                 </div>
                 <div class="achievement">
-                  <img
-                    class="banner-img"
-                    src="/portfolio_v2/assets/images/Case-Studies/metric-vectors/Awareness-Vector.svg"
-                    width="50"
-                    height="50"
-                    alt="" />
-                  <span class="stat">100%</span>
-                  <p><b>Increase in social media referrals</b></p>
+                  <div class="image-container">
+                    <img
+                      class="banner-img"
+                      src="./assets/images/banners/metric-vectors/speed-vector.svg"
+                      width="50"
+                      height="50"
+                      alt="" />
+                  </div>
+                  <span class="stat">Page Speed</span>
+                  <span class="highlight">96% Secure Page Speeds Improvements</span>
+                </div>
+                <div class="achievement">
+                  <div class="image-container">
+                    <img
+                      class="banner-img"
+                      src="./assets/images/banners/metric-vectors/awareness-vector.svg"
+                      width="50"
+                      height="50"
+                      alt="" />
+                  </div>
+                  <span class="stat">Awareness</span>
+                  <span class="highlight">100% Increase In Social Media Referrals</span>
                 </div>
               </div>
             </div>
@@ -929,7 +1052,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/Banners/come-together-Affinity-Map.svg"
+                      data-src="./assets/images/Case-Studies/CS3/Banners/come-together-Affinity-Map.svg"
                       alt="User Interviews Affinity Map"
                       width="150"
                       height="300" />
@@ -1000,7 +1123,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/Banners/persona-come-together.webp"
+                      data-src="./assets/images/Case-Studies/CS3/Banners/persona-come-together.webp"
                       alt="User Persona"
                       width="150"
                       height="300" />
@@ -1038,7 +1161,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/CS3-C-Journey.svg"
+                      data-src="./assets/images/Case-Studies/CS3/planning/CS3-C-Journey.svg"
                       alt="Customer Journey Map showing the stages of user interaction"
                       width="500"
                       height="360" />
@@ -1117,7 +1240,7 @@
                           <img
                             class="lazyload no-border"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/Nav-Map.svg"
+                            data-src="./assets/images/Case-Studies/CS3/planning/Nav-Map.svg"
                             alt="Navigation System IA Design"
                             width="503"
                             height="260" />
@@ -1141,7 +1264,7 @@
                           <img
                             class="lazyload no-border"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/Site-Map.svg"
+                            data-src="./assets/images/Case-Studies/CS3/planning/Site-Map.svg"
                             alt="Information Architecture and Hierarchy Design"
                             width="503"
                             height="260" />
@@ -1189,7 +1312,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/Task-Flow.svg"
+                              data-src="./assets/images/Case-Studies/CS3/planning/Task-Flow.svg"
                               alt="Task Flow Map."
                               width="483"
                               height="252" />
@@ -1226,7 +1349,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/User-Flow.svg"
+                              data-src="./assets/images/Case-Studies/CS3/planning/User-Flow.svg"
                               alt="User Flow Map."
                               width="483"
                               height="252" />
@@ -1300,7 +1423,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/index-layout.webp"
+                      data-src="./assets/images/Case-Studies/CS3/planning/index-layout.webp"
                       alt="Image showing the early paper prototype of the index page"
                       width="501"
                       height="700" />
@@ -1325,7 +1448,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/comp-1.webp"
+                      data-src="./assets/images/Case-Studies/CS3/planning/comp-1.webp"
                       alt="Paper Prototype Design - Reusable Components ergonomic mock up"
                       width="501"
                       height="700" />
@@ -1350,7 +1473,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/comp-2.webp"
+                      data-src="./assets/images/Case-Studies/CS3/planning/comp-2.webp"
                       alt="Paper Prototype - Reusable Components V2 Design."
                       width="501"
                       height="700" />
@@ -1375,7 +1498,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/nav.webp"
+                      data-src="./assets/images/Case-Studies/CS3/planning/nav.webp"
                       alt="Paper Prototype - Mobile Navigation Design."
                       width="204"
                       height="290" />
@@ -1400,7 +1523,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/form-ABC.webp"
+                      data-src="./assets/images/Case-Studies/CS3/planning/form-ABC.webp"
                       alt="Paper Prototype - Form Design."
                       width="204"
                       height="295" />
@@ -1537,7 +1660,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/mobile/Index.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/mobile/Index.webp"
                               alt="Low Fidelity Design - Home Page Layout."
                               width="204"
                               height="1110" />
@@ -1550,7 +1673,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/mobile/Nav.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/mobile/Nav.webp"
                               alt="Low Fidelity Design - Mobile Navigation."
                               width="204"
                               height="1155" />
@@ -1563,7 +1686,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/mobile/About-Us.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/mobile/About-Us.webp"
                               alt="Low Fidelity Design - About Us Page."
                               width="501"
                               height="1165" />
@@ -1576,7 +1699,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/mobile/Services.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/mobile/Services.webp"
                               alt="Low Fidelity Design - Services Page."
                               width="501"
                               height="1165" />
@@ -1589,7 +1712,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/mobile/Events.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/mobile/Events.webp"
                               alt="Low Fidelity Design - Events Page."
                               width="501"
                               height="1165" />
@@ -1602,7 +1725,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/mobile/Volunteering.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/mobile/Volunteering.webp"
                               alt="Low Fidelity Design - Volunteering page."
                               width="501"
                               height="1165" />
@@ -1615,7 +1738,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/mobile/Podcast.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/mobile/Podcast.webp"
                               alt="Low Fidelity Design - Podcast page."
                               width="501"
                               height="1165" />
@@ -1628,7 +1751,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/mobile/Support.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/mobile/Support.webp"
                               alt="Low Fidelity Design - Support page."
                               width="501"
                               height="1165" />
@@ -1641,7 +1764,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/mobile/Thank-You.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/mobile/Thank-You.webp"
                               alt="Low Fidelity Design - Thank You page."
                               width="501"
                               height="1165" />
@@ -1673,7 +1796,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/tablet/Index.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/tablet/Index.webp"
                               alt="Low Fidelity Design (Tablets)- Index page."
                               width="501"
                               height="1165" />
@@ -1686,7 +1809,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/tablet/Nav.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/tablet/Nav.webp"
                               alt="Low Fidelity Design - Navigation."
                               width="501"
                               height="1165" />
@@ -1699,7 +1822,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/tablet/About.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/tablet/About.webp"
                               alt="Low Fidelity Design - About Us Page."
                               width="501"
                               height="1165" />
@@ -1712,7 +1835,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/tablet/Services.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/tablet/Services.webp"
                               alt="Low Fidelity Design - Services Page."
                               width="501"
                               height="1165" />
@@ -1725,7 +1848,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/tablet/Events.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/tablet/Events.webp"
                               alt="Low Fidelity Design - Events PAge."
                               width="501"
                               height="1165" />
@@ -1738,7 +1861,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/tablet/Volunteer.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/tablet/Volunteer.webp"
                               alt="Low Fidelity Design - Volunteer Page."
                               width="501"
                               height="1165" />
@@ -1751,7 +1874,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/tablet/Podcast.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/tablet/Podcast.webp"
                               alt="Low Fidelity Design - Podcast Page."
                               width="501"
                               height="1165" />
@@ -1764,7 +1887,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/tablet/Support.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/tablet/Support.webp"
                               alt="Low Fidelity Design - Support Page."
                               width="501"
                               height="1165" />
@@ -1777,7 +1900,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/tablet/Thank-You.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/tablet/Thank-You.webp"
                               alt="Low Fidelity Design - Thank You Page."
                               width="501"
                               height="1165" />
@@ -1807,7 +1930,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/desktop/Index.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/desktop/Index.webp"
                               alt="Low Fidelity Design - Index page."
                               width="501"
                               height="1165" />
@@ -1820,7 +1943,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/desktop/About-Us.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/desktop/About-Us.webp"
                               alt="Low Fidelity Design - About Us Page."
                               width="501"
                               height="1165" />
@@ -1833,7 +1956,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/desktop/Services.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/desktop/Services.webp"
                               alt="Low Fidelity Design - Services Page."
                               width="501"
                               height="1165" />
@@ -1846,7 +1969,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/desktop/Events.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/desktop/Events.webp"
                               alt="Low Fidelity Design - Events PAge."
                               width="501"
                               height="1165" />
@@ -1859,7 +1982,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/desktop/Volunteer.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/desktop/Volunteer.webp"
                               alt="Low Fidelity Design - Volunteer Page."
                               width="501"
                               height="1165" />
@@ -1872,7 +1995,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/desktop/Podcast.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/desktop/Podcast.webp"
                               alt="Low Fidelity Design - Podcast Page."
                               width="501"
                               height="1165" />
@@ -1885,7 +2008,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/desktop/Support.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/desktop/Support.webp"
                               alt="Low Fidelity Design - Support Us Page."
                               width="501"
                               height="1165" />
@@ -1898,7 +2021,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/lo-fi/desktop/Thank-You.webp"
+                              data-src="./assets/images/Case-Studies/CS3/lo-fi/desktop/Thank-You.webp"
                               alt="Low Fidelity Design - Thank You Page."
                               width="501"
                               height="1165" />
@@ -1941,7 +2064,7 @@
                       <img
                         class="lazyload no-border"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                        data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/CS3- ETF-1.svg"
+                        data-src="./assets/images/Case-Studies/CS3/planning/CS3- ETF-1.svg"
                         alt="Business &amp; User Requirements for the Index Page."
                         width="520"
                         height="740" />
@@ -1964,7 +2087,7 @@
                       <img
                         class="lazyload"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                        data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/CS3- ETF-2.svg"
+                        data-src="./assets/images/Case-Studies/CS3/planning/CS3- ETF-2.svg"
                         alt="Business &amp; User Requirements for the About Us Page."
                         width="521"
                         height="740" />
@@ -1987,7 +2110,7 @@
                       <img
                         class="lazyload"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                        data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/CS3- ETF-3.svg"
+                        data-src="./assets/images/Case-Studies/CS3/planning/CS3- ETF-3.svg"
                         alt="Business &amp; User Requirements for the Services Page."
                         width="521"
                         height="740" />
@@ -2010,7 +2133,7 @@
                       <img
                         class="lazyload"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                        data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/CS3- ETF-4.svg"
+                        data-src="./assets/images/Case-Studies/CS3/planning/CS3- ETF-4.svg"
                         alt="Business &amp; User Requirements for the Volunteering Page."
                         width="521"
                         height="740" />
@@ -2048,7 +2171,7 @@
                       <img
                         class="lazyload"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                        data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/CS3- ETF-1.svg"
+                        data-src="./assets/images/Case-Studies/CS3/planning/CS3- ETF-1.svg"
                         alt="Index page enhanced task flow dissection"
                         width="902"
                         height="1290" />
@@ -2069,7 +2192,7 @@
                       <img
                         class="lazyload"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                        data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/CS3- ETF-2.svg"
+                        data-src="./assets/images/Case-Studies/CS3/planning/CS3- ETF-2.svg"
                         alt="About Us page enhanced task flow dissection"
                         width="902"
                         height="1290" />
@@ -2091,7 +2214,7 @@
                       <img
                         class="lazyload"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACAAAAAAQABAAAC"
-                        data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/CS3- ETF-3.svg"
+                        data-src="./assets/images/Case-Studies/CS3/planning/CS3- ETF-3.svg"
                         alt="Services page enhanced task flow dissection"
                         width="902"
                         height="1290" />
@@ -2113,7 +2236,7 @@
                       <img
                         class="lazyload"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                        data-src="/portfolio_v2/assets/images/Case-Studies/CS3/planning/CS3- ETF-4.svg"
+                        data-src="./assets/images/Case-Studies/CS3/planning/CS3- ETF-4.svg"
                         alt="Index page enhanced task flow dissection"
                         width="902"
                         height="1290" />
@@ -2125,8 +2248,7 @@
             </div>
           </section>
 
-          <div id="designSystem"></div>
-          <section class="lazyload lazyblurry">
+          <section id="designSystem" class="lazyload lazyblurry">
             <div class="editorial">
               <h2>Design System</h2>
               <h3>Building a Robust Design System for Consistent Experiences</h3>
@@ -2184,7 +2306,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-1-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-1-min.svg"
                               alt="Person using a screen reader on a website, highlighting the importance of accessibility for all users."
                               width="500"
                               height="330" />
@@ -2197,7 +2319,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-2-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-2-min.svg"
                               alt="Color chart of the app showing vibrant, neutral, and transparent colors with primary colors for branding."
                               width="500"
                               height="330" />
@@ -2210,7 +2332,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-3-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-3-min.svg"
                               alt="Visual of flat, raised, and deep elevations in the app, showing different shadow effects to create depth."
                               width="500"
                               height="330" />
@@ -2223,7 +2345,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-4-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-4-min.svg"
                               alt="Iconography guidelines depicting accessibility and usage principles."
                               width="500"
                               height="330" />
@@ -2236,7 +2358,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-5-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-5-min.svg"
                               alt="Logo and brand usage guidelines, emphasizing clarity, consistency, and appropriate application."
                               width="500"
                               height="330" />
@@ -2249,7 +2371,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-6-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-6-min.svg"
                               alt="Brand typography guidelines, featuring the selected font stack for different operating systems."
                               width="500"
                               height="330" />
@@ -2317,7 +2439,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-1-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-1-min.svg"
                               alt="Visual representation showcasing icon design principles, usage, anatomy, and grid structure."
                               width="500"
                               height="330" />
@@ -2330,7 +2452,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-2-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-2-min.svg"
                               alt="Slide displaying guidelines for icon shapes, style, color, and best practices."
                               width="500"
                               height="330" />
@@ -2343,7 +2465,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-3-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-3-min.svg"
                               alt="Button design principles, including usage, guidelines for primary buttons."
                               width="500"
                               height="330" />
@@ -2356,7 +2478,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-4-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-4-min.svg"
                               alt="Accessibility guidelines for using buttons and applying tooltips on disabled buttons."
                               width="500"
                               height="330" />
@@ -2371,7 +2493,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-5-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-5-min.svg"
                               alt="Best practices for aligning and positioning buttons in UI design."
                               width="500"
                               height="330" />
@@ -2384,7 +2506,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-6-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-6-min.svg"
                               alt="Slide providing guidelines for button content and appropriate labeling practices."
                               width="500"
                               height="330" />
@@ -2447,7 +2569,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Content/Content-1-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Content/Content-1-min.svg"
                               alt="Best practices for inclusive writing for inclusive communication."
                               width="500"
                               height="330" />
@@ -2460,7 +2582,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Content/Content-2-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Content/Content-2-min.svg"
                               alt="Guidelines for language and grammar for effective communication."
                               width="500"
                               height="330" />
@@ -2473,7 +2595,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Content/Content-3-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Content/Content-3-min.svg"
                               alt="Voice and tone principles, emphasizing the use of appropriate language and tone."
                               width="500"
                               height="330" />
@@ -2486,7 +2608,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Content/Content-4-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Content/Content-4-min.svg"
                               alt="Writing guidelines to facilitate clear and effective communication."
                               width="500"
                               height="330" />
@@ -2499,7 +2621,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Content/Content-5-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Content/Content-5-min.svg"
                               alt="Writing style guidelines aimed at fostering cohesive and engaging content for the target audience."
                               width="500"
                               height="330" />
@@ -2567,7 +2689,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-1-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-1-min.svg"
                               alt="Design patterns for creating impactful first impressions in a holistic approach."
                               width="500"
                               height="330" />
@@ -2580,7 +2702,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-2-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-2-min.svg"
                               alt="Design patterns emphasizing the importance of understanding, supporting, and communicating with the target audience."
                               width="500"
                               height="330" />
@@ -2593,7 +2715,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-3-min.svg"
+                              data-src="./images/Case-Studies/CS3/carousel-images/Patterns/Patterns-3-min.svg"
                               alt="Form patterns, encompassing field states, styling considerations, and accessibility guidelines."
                               width="500"
                               height="330" />
@@ -2606,7 +2728,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-4-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-4-min.svg"
                               alt="Button layouts, emphasizing the importance of intuitive interactions for effective user engagement."
                               width="500"
                               height="330" />
@@ -2636,8 +2758,8 @@
                   <button type="button" class="tab-button" data-target="tab3">Contents</button>
                   <button type="button" class="tab-button" data-target="tab4">Patterns</button>
                 </div>
-                <div class="tab-contents">
-                  <div id="tabContent12" class="tab-module" data-title="Tab 1">
+                <div class="tab-contents car-tab-contents">
+                  <div id="tabContent12" class="tab-module car-tab-module" data-title="Tab 1">
                     <div class="carousel-header">
                       <div class="flex-col-left">
                         <h3 class="headline">Foundation</h3>
@@ -2681,7 +2803,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-1-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-1-min.svg"
                               width="1052"
                               height="690"
                               alt="Accessibility guidelines for creating an inclusive digital experience for all users." />
@@ -2694,7 +2816,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-2-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-2-min.svg"
                               width="1052"
                               height="690"
                               alt="Color Accessibility guidelines." />
@@ -2707,7 +2829,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-3-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-3-min.svg"
                               width="1052"
                               height="690"
                               alt="Elevation guidelines used in the website." />
@@ -2720,7 +2842,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-4-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-4-min.svg"
                               width="1052"
                               height="690"
                               alt="Iconography guidelines on usage and accessibility." />
@@ -2733,7 +2855,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-5-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-5-min.svg"
                               width="1052"
                               height="690"
                               alt="A visual representation showcasing logo and brand usage guidelines." />
@@ -2746,7 +2868,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-6-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Found/Foundation-6-min.svg"
                               width="1052"
                               height="690"
                               alt="Typography for different operating systems guidelines." />
@@ -2813,7 +2935,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-1-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-1-min.svg"
                               width="1052"
                               height="690"
                               alt="Visual representation showcasing icon design principles, usage, anatomy, and grid structure." />
@@ -2826,7 +2948,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-2-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-2-min.svg"
                               width="1052"
                               height="690"
                               alt="Slide displaying guidelines for icon shapes, style, color, and best practices." />
@@ -2839,7 +2961,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-3-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-3-min.svg"
                               width="1052"
                               height="690"
                               alt="Button design principles, including usage and guidelines for primary buttons." />
@@ -2852,7 +2974,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-4-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-4-min.svg"
                               width="1052"
                               height="690"
                               alt="Accessibility guidelines for using buttons and applying tooltips on disabled buttons." />
@@ -2867,7 +2989,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-5-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-5-min.svg"
                               width="1052"
                               height="690"
                               alt="Best practices for aligning and positioning buttons in UI." />
@@ -2880,7 +3002,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Comps/Components-6-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Comps/Components-6-min.svg"
                               width="1052"
                               height="690"
                               alt="Guidelines for button content and appropriate labeling practices." />
@@ -2939,7 +3061,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Content/Content-1-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Content/Content-1-min.svg"
                               width="1052"
                               height="690"
                               alt="Best practices for inclusive writing." />
@@ -2952,7 +3074,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2//assets/images/Case-Studies/CS3/carousel-images/Content/Content-2-min.svg"
+                              data-src=".//assets/images/Case-Studies/CS3/carousel-images/Content/Content-2-min.svg"
                               width="1052"
                               height="690"
                               alt="Guidelines for language and grammar for effective communication." />
@@ -2965,7 +3087,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2//assets/images/Case-Studies/CS3/carousel-images/Content/Content-3-min.svg"
+                              data-src=".//assets/images/Case-Studies/CS3/carousel-images/Content/Content-3-min.svg"
                               width="1052"
                               height="690"
                               alt="Voice and tone principles and the use of appropriate language and tone." />
@@ -2978,7 +3100,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2//assets/images/Case-Studies/CS3/carousel-images/Content/Content-4-min.svg"
+                              data-src=".//assets/images/Case-Studies/CS3/carousel-images/Content/Content-4-min.svg"
                               width="1052"
                               height="690"
                               alt="Table of writing guidelines to facilitate clear and effective communication." />
@@ -2991,7 +3113,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2//assets/images/Case-Studies/CS3/carousel-images/Content/Content-5-min.svg"
+                              data-src=".//assets/images/Case-Studies/CS3/carousel-images/Content/Content-5-min.svg"
                               width="1052"
                               height="690"
                               alt="Writing style guidelines." />
@@ -3058,7 +3180,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-1-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-1-min.svg"
                               width="1052"
                               height="690"
                               alt="User Centric Design Patterns." />
@@ -3071,7 +3193,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-2-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-2-min.svg"
                               width="1052"
                               height="690"
                               alt="Design patterns for crafting memorable first impressions." />
@@ -3084,7 +3206,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-3-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-3-min.svg"
                               width="1052"
                               height="690"
                               alt="Form patterns, encompassing field states, styling considerations, and accessibility guidelines." />
@@ -3097,7 +3219,7 @@
                             <img
                               class="lazyload lg"
                               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-4-min.svg"
+                              data-src="./assets/images/Case-Studies/CS3/carousel-images/Patterns/Patterns-4-min.svg"
                               width="1052"
                               height="690"
                               alt="Button layout Designs." />
@@ -3122,8 +3244,8 @@
               </div>
             </div>
           </section>
-          <div id="hiFidelityDesigns"></div>
-          <section class="lazyload lazyblurry">
+
+          <section id="hiFidelityDesigns" class="lazyload lazyblurry">
             <div class="editorial">
               <h2>Hi-Fidelity Designs 1.1</h2>
               <h3>Responsive Design</h3>
@@ -3167,7 +3289,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Index.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Index.webp"
                             alt="Image depicting the Hi-Fi Design for the Index Page."
                             width="500"
                             height="820" />
@@ -3179,7 +3301,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Nav.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Nav.webp"
                             alt="Image depicting the Hi-Fidelity Navigation Design."
                             width="500"
                             height="570" />
@@ -3191,7 +3313,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/About-Us.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/About-Us.webp"
                             alt="Hi Fi About Us Page Design."
                             width="500"
                             height="735" />
@@ -3203,7 +3325,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Services.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Services.webp"
                             alt="Image depicting the Hi-Fi Services design."
                             width="500"
                             height="735" />
@@ -3215,7 +3337,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Events.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Events.webp"
                             alt="Image depicting the Hi-Fi Events design."
                             width="500"
                             height="735" />
@@ -3227,7 +3349,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Volunteering.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Volunteering.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
                             width="500"
                             height="735" />
@@ -3239,7 +3361,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Podcast.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Podcast.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Podcast Page."
                             width="500"
                             height="735" />
@@ -3251,7 +3373,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Thank-You.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Thank-You.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Thank You Page."
                             width="500"
                             height="735" />
@@ -3287,7 +3409,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/tablet/Index.webp"
+                              data-src="./assets/images/Case-Studies/CS3/hi-fi/tablet/Index.webp"
                               alt="Image depicting the Hi Fidelity Design for the Index Page."
                               width="500"
                               height="820" />
@@ -3299,7 +3421,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/tablet/Nav.webp"
+                              data-src="./assets/images/Case-Studies/CS3/hi-fi/tablet/Nav.webp"
                               alt="Image depicting the Hi-Fidelity Navigation Design."
                               width="500"
                               height="570" />
@@ -3335,7 +3457,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/desktop/Index.webp"
+                              data-src="./assets/images/Case-Studies/CS3/hi-fi/desktop/Index.webp"
                               alt="Image depicting the Hi Fidelity Design for the Index Page."
                               width="500"
                               height="820" />
@@ -3347,7 +3469,7 @@
                             <img
                               class="lazyload"
                               src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/desktop/About-Us.webp"
+                              data-src="./assets/images/Case-Studies/CS3/hi-fi/desktop/About-Us.webp"
                               alt="Hi Fi About Us page design."
                               width="500"
                               height="735" />
@@ -3386,7 +3508,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Index.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Index.webp"
                             alt="Image depicting the Hi Fidelity Design for the Index Page."
                             width="500"
                             height="820" />
@@ -3399,7 +3521,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Nav.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Nav.webp"
                             alt="Image depicting the Hi-Fidelity Navigation Design."
                             width="500"
                             height="570" />
@@ -3412,7 +3534,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/About-Us.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/About-Us.webp"
                             alt="Hi Fi About Us Page Design."
                             width="500"
                             height="735" />
@@ -3425,7 +3547,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Services.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Services.webp"
                             alt="Image depicting the Hi-Fi Services design."
                             width="500"
                             height="735" />
@@ -3438,7 +3560,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Events.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Events.webp"
                             alt="Image depicting the Hi-Fi Events design."
                             width="500"
                             height="735" />
@@ -3451,7 +3573,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Volunteering.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Volunteering.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
                             width="500"
                             height="735" />
@@ -3464,7 +3586,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Podcast.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Podcast.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Podcast Page."
                             width="500"
                             height="735" />
@@ -3477,7 +3599,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Thank-You.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Thank-You.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Thank You Page."
                             width="500"
                             height="735" />
@@ -3503,7 +3625,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/tablet/Index.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/tablet/Index.webp"
                             alt="Image depicting the Hi Fidelity Design for the Index Page."
                             width="500"
                             height="820" />
@@ -3516,7 +3638,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/tablet/Nav.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/tablet/Nav.webp"
                             alt="Image depicting the Hi-Fidelity Navigation Design."
                             width="500"
                             height="570" />
@@ -3529,7 +3651,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/tablet/About-Us.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/tablet/About-Us.webp"
                             alt="Hi Fi About Us Page Design."
                             width="500"
                             height="735" />
@@ -3542,7 +3664,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/tablet/Services.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/tablet/Services.webp"
                             alt="Image depicting the Hi-Fi Services design."
                             width="500"
                             height="735" />
@@ -3555,7 +3677,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/tablet/Events.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/tablet/Events.webp"
                             alt="Image depicting the Hi-Fi Events design."
                             width="500"
                             height="735" />
@@ -3568,7 +3690,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/tablet/Volunteer.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/tablet/Volunteer.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
                             width="500"
                             height="735" />
@@ -3581,7 +3703,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/tablet/Podcast.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/tablet/Podcast.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Podcast Page."
                             width="500"
                             height="735" />
@@ -3594,7 +3716,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/tablet/Thank-You.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/tablet/Thank-You.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Thank You Page."
                             width="500"
                             height="735" />
@@ -3618,7 +3740,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/desktop/Index.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/desktop/Index.webp"
                             alt="Image depicting the Hi Fidelity Design for the Index Page."
                             width="500"
                             height="820" />
@@ -3631,7 +3753,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/desktop/About-Us.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/desktop/About-Us.webp"
                             alt="Hi Fi About Us Page Design."
                             width="500"
                             height="735" />
@@ -3644,7 +3766,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/desktop/Services.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/desktop/Services.webp"
                             alt="Image depicting the Hi-Fi Services design."
                             width="500"
                             height="735" />
@@ -3657,7 +3779,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/desktop/Events.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/desktop/Events.webp"
                             alt="Image depicting the Hi-Fi Events design."
                             width="500"
                             height="735" />
@@ -3670,7 +3792,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/desktop/Volunteer.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/desktop/Volunteer.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
                             width="500"
                             height="735" />
@@ -3683,7 +3805,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/desktop/Podcast.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/desktop/Podcast.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Podcast Page."
                             width="500"
                             height="735" />
@@ -3696,7 +3818,7 @@
                           <img
                             class="lazyload"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/desktop/Thank-You.webp"
+                            data-src="./assets/images/Case-Studies/CS3/hi-fi/desktop/Thank-You.webp"
                             alt="Image depicting the Hi-Fidelity Design for the Thank You Page."
                             width="500"
                             height="735" />
@@ -3722,7 +3844,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Index.webp"
+                      data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Index.webp"
                       alt="Image depicting the Hi Fidelity Design for the Index Page."
                       width="500"
                       height="820" />
@@ -3735,7 +3857,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Nav.webp"
+                      data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Nav.webp"
                       alt="Image depicting the Hi-Fidelity Navigation Design."
                       width="500"
                       height="570" />
@@ -3748,7 +3870,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/About-Us.webp"
+                      data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/About-Us.webp"
                       alt="Hi Fi About Us Page Design."
                       width="500"
                       height="735" />
@@ -3761,7 +3883,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Services.webp"
+                      data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Services.webp"
                       alt="Image depicting the Hi-Fi Services design."
                       width="500"
                       height="735" />
@@ -3774,7 +3896,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/hi-fi/mobile/Volunteering.webp"
+                      data-src="./assets/images/Case-Studies/CS3/hI-fi/mobile/Volunteering.webp"
                       alt="Image depicting the Hi-Fidelity Design for the Volunteering Page."
                       width="500"
                       height="735" />
@@ -3785,8 +3907,7 @@
             </div>
           </section>
 
-          <div id="ux-testing"></div>
-          <section class="lazyload lazyblurry">
+          <section id="ux-testing" class="lazyload lazyblurry">
             <div class="editorial">
               <h2>UX Testing 1.1</h2>
               <h3>Interactive Prototype</h3>
@@ -3797,7 +3918,7 @@
                 on their experiences across key areas:
               </p>
 
-              <ul>
+              <ul class="no-disc">
                 <li>
                   <p>
                     <strong>Usability</strong>
@@ -3851,7 +3972,7 @@
                     <img
                       class="lazyload border"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/Banners/iphone-screenshot.webp"
+                      data-src="./assets/images/Case-Studies/CS3/Banners/iphone-screenshot.webp"
                       alt="Link to interactive prototype"
                       width="500"
                       height="150"
@@ -3930,19 +4051,19 @@
                 </div>
               </div>
               <br />
-              <h2>UX Testing 1.2</h2>
-              <h3>Testing Procedure</h3>
+              <h2>Testing Procedure</h2>
+
               <div class="split-header">
-                <div class="title">
+                <div class="title-col">
                   <h2>System Usability Scale (SUS)</h2>
+                  <p>
+                    Usability testing assesses how easily users can interact with a product. We used the System
+                    Usability Scale (SUS), a standard tool for this purpose. Here's a summary of the testing process and
+                    key findings:
+                  </p>
                 </div>
                 <div class="sus-banner"></div>
               </div>
-
-              <p>
-                Usability testing assesses how easily users can interact with a product. We used the System Usability
-                Scale (SUS), a standard tool for this purpose. Here's a summary of the testing process and key findings:
-              </p>
 
               <ul class="no-disc">
                 <h3>SUS Overview</h3>
@@ -3981,8 +4102,8 @@
               </ul>
             </div>
           </section>
-          <div id="results"></div>
-          <section class="lazyload lazyblurry">
+
+          <section id="results" class="lazyload lazyblurry">
             <div class="editorial">
               <h2>Results and Analysis</h2>
               <p>
@@ -3999,7 +4120,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/testing/SUS-Results.svg"
+                      data-src="./assets/images/Case-Studies/CS3/testing/SUS-Results.svg"
                       alt="A visual representation of the System Usability Scale (SUS) Acceptance Tolerance Levels."
                       width="500"
                       height="735" />
@@ -4026,7 +4147,7 @@
                     <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      data-src="/portfolio_v2/assets/images/Case-Studies/CS3/testing/SUS-Scores.svg"
+                      data-src="./assets/images/Case-Studies/CS3/testing/SUS-Scores.svg"
                       alt="SUS Likert scale responses."
                       width="500"
                       height="735" />
@@ -4108,9 +4229,7 @@
             </div>
           </section>
 
-          <div id="conclusion"></div>
-
-          <section class="lazyload lazyblurry">
+          <section id="conclusion" class="lazyload lazyblurry">
             <div class="editorial">
               <h2>Overall Reflection</h2>
               <p>
@@ -4194,42 +4313,37 @@
           <section id="project-information" class="lazyload lazyblurry">
             <div class="editorial">
               <div class="skills-section">
-                <h1>Project Information</h1>
+                <h2>Project Information</h2>
                 <div class="centered-row">
-                  <div class="flex-row">
-                    <div class="left-col">
-                      <div class="flex-row">
-                        <div class="col">
-                          <h2>Client</h2>
-                          <p>Come Together Hub Ltd</p>
-                        </div>
-                        <div class="col">
-                          <h2>Date</h2>
-                          <p>2024</p>
-                        </div>
+                  <div class="flex-row no-border">
+                    <div class="left-col width_50">
+                      <div class="col">
+                        <h2>Client</h2>
+                        <p>Come Together Hub Ltd</p>
+                      </div>
+                      <div class="col">
+                        <h2>Date</h2>
+                        <p>2024</p>
                       </div>
                     </div>
-                    <div class="right-col">
-                      <div class="flex-row">
-                        <div class="col">
-                          <h2>Visit</h2>
-                          <a
-                            class="tertiary-link"
-                            href="https://cometogetherhub.com/"
-                            target="_blank"
-                            title="Click to see the launced website.">
-                            Come Together Hub Live Website.
-                          </a>
-                          <br />
-                          or
-                          <br />
-                          <a
-                            class="tertiary-link"
-                            href="https://www.figma.com/proto/Hyvo3r7FVLTfjR4QXwqdqX/Come-Together?page-id=574%3A1001&node-id=574-1738&viewport=639%2C546%2C0.13&t=8EqpEkTncz0l6SXy-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=574%3A1738&share=1"
-                            target="_blank">
-                            Ineteractive Prototype &amp; Designs.
-                          </a>
-                        </div>
+                    <div class="right-col width_50">
+                      <div class="col">
+                        <h2>Visit</h2>
+                        <a
+                          class="tertiary-link"
+                          href="https://cometogetherhub.com/"
+                          target="_blank"
+                          title="Click to see the launced website.">
+                          Come Together Hub Live Website.
+                        </a>
+                        <br />
+                        or
+                        <a
+                          class="tertiary-link"
+                          href="https://www.figma.com/proto/Hyvo3r7FVLTfjR4QXwqdqX/Come-Together?page-id=574%3A1001&node-id=574-1738&viewport=639%2C546%2C0.13&t=8EqpEkTncz0l6SXy-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=574%3A1738&share=1"
+                          target="_blank">
+                          Interactive Prototype.
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -4288,7 +4402,7 @@
       </div>
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer-container">
         <div class="footer-social-icon">
           <a href="/index.html" class="logo" aria-label="Home"></a>
