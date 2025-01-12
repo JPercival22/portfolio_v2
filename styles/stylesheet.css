@@ -1,9 +1,52 @@
+/* Styling for the overlay */
+#loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4fbdd2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack spinner and text vertically */
+  z-index: 10000; /* Ensure it's above other content */
+}
+
+/* Styling for the spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #b6fce5;
+  border-top: 5px solid #0a7d94;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Styling for the loading text */
+.loading-text {
+  color: #2c4465;
+  font-size: 16px;
+  margin-top: 10px; /* Ensure it stays below the spinner */
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   padding: 0;
   margin: 0;
@@ -59,7 +102,6 @@ ul {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
   gap: 10px;
 }
 ul.no-disc {
@@ -69,7 +111,6 @@ ul.no-disc {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
 }
 ul.mt-0 {
   margin-top: 0;
@@ -79,6 +120,7 @@ ul.disc {
   list-style: disc;
 }
 ul li {
+  display: list-item;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 30px;
@@ -87,13 +129,11 @@ ul li {
 
 ol {
   font-family: "Poppins", sans-serif;
-  margin-left: 16px;
-  padding: 0;
+  margin-left: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
   gap: 10px;
 }
 ol li {
@@ -119,7 +159,7 @@ section {
 .main-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   gap: 1em;
@@ -170,7 +210,7 @@ section {
 .navbar .navbar-container .home-link .navbar-logo .logo-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   margin-left: 10px;
@@ -227,7 +267,7 @@ section {
   width: inherit;
   padding-top: 1em;
   padding-bottom: 1em;
-  font-size: 16px;
+  font-size: 24px;
   font-family: inherit;
   color: #fff;
   text-decoration: none;
@@ -248,7 +288,7 @@ section {
   justify-content: center;
   padding-top: 1em;
   padding-bottom: 1em;
-  font-size: 16px;
+  font-size: 24px;
   font-family: inherit;
   color: #fff;
   width: unset;
@@ -273,12 +313,28 @@ section {
   flex-direction: column;
   opacity: 1;
   max-height: 300px;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 .navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-toggle:checked + .accordion-header + .accordion-content ul {
   margin-left: 0;
-  width: unset;
+  width: 40%;
   align-items: center;
   justify-content: center;
+}
+.navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-toggle:checked + .accordion-header + .accordion-content ul li {
+  width: 100%;
+  transition: background-color 0.5s ease-in-out;
+}
+.navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-toggle:checked + .accordion-header + .accordion-content ul li a {
+  font-size: 18px;
+  text-decoration: underline;
+}
+.navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-toggle:checked + .accordion-header + .accordion-content ul li a:hover {
+  text-decoration: none;
+}
+.navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-toggle:checked + .accordion-header + .accordion-content ul li:hover {
+  background-color: #198499;
 }
 .navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-toggle:checked + .accordion-header .chevron {
   transform: rotate(180deg); /* Rotate chevron upwards */
@@ -319,7 +375,7 @@ section {
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   gap: 0.5em;
@@ -345,7 +401,7 @@ section {
 .flex-col {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   margin-top: 1em;
@@ -466,12 +522,6 @@ section {
   max-height: 300px;
   border-radius: 8px;
 }
-.flex-col .wide-card .card-body .image-container.come-together-banner {
-  background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
-}
 .flex-col .wide-card .card-body .image-container.syn-banner {
   background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
   background-size: contain;
@@ -519,18 +569,6 @@ section {
   border: none;
 }
 
-.editorial {
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-  gap: 10px;
-  width: 90vw;
-}
 .editorial.border {
   border-width: 5px;
   border-style: solid;
@@ -584,11 +622,12 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
+  align-items: flex-start;
 }
-.editorial .split-header .title {
-  flex: 80%;
+.editorial .split-header .title-column {
+  flex: 60%;
 }
 .editorial .split-header .sus-banner {
   background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
@@ -672,11 +711,10 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: 1px solid #4eca63;
   border-radius: 50px;
   padding: 8px 16px;
   font-size: 16px;
-  color: #1a1a1a;
+  color: #fff;
   line-height: 30px;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -684,12 +722,12 @@ section {
   transition: all 0.5s ease-in-out;
   box-shadow: 0px 0px 8px 0px rgba(201, 201, 201, 0.9);
   margin-bottom: 1em;
+  width: 80%;
 }
 
 .primary-button {
   background-color: #2c4465;
   border-color: #2c4465;
-  color: #fff;
   width: 80%;
 }
 .primary-button:hover {
@@ -700,8 +738,6 @@ section {
 .secondary-button {
   background-color: #2b737c;
   border-color: #2b737c;
-  color: #fff;
-  width: 80%;
 }
 .secondary-button:hover {
   background-color: #0a7d94;
@@ -974,7 +1010,7 @@ textarea.input {
 .contact-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   justify-content: space-evenly;
@@ -988,7 +1024,7 @@ textarea.input {
 .info-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   gap: 10px;
@@ -1009,7 +1045,7 @@ textarea.input {
 .information .col {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
 }
@@ -1378,25 +1414,20 @@ textarea.input {
 .editorial .skills-section .centered-row {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
 }
-.editorial .skills-section .centered-row .flex-row {
+.editorial .skills-section .centered-row .flex-row.no-border {
   flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
   border: none;
 }
-.editorial .skills-section .centered-row .flex-row .right-col .no-border .col {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-}
-.editorial .skills-section .centered-row .flex-row .right-col .no-border .col .tertiary-link {
+.editorial .skills-section .centered-row .flex-row.no-border .right-col .no-border .col .tertiary-link {
   text-decoration: underline;
 }
-.editorial .skills-section .centered-row .flex-row .right-col .no-border .col .tertiary-link:hover {
+.editorial .skills-section .centered-row .flex-row.no-border .right-col .no-border .col .tertiary-link:hover {
   text-decoration: none;
 }
 
@@ -1535,7 +1566,7 @@ textarea.input {
 .grid-container-6col .editorial-sm {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   width: 100%;
@@ -1548,7 +1579,7 @@ textarea.input {
 .grid-container-6col .editorial-sm .content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   width: 100%;
@@ -1562,7 +1593,7 @@ textarea.input {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   margin: 0;
@@ -1832,7 +1863,7 @@ textarea.input {
     flex-wrap: nowrap;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     width: 100%;
   }
@@ -1892,6 +1923,9 @@ textarea.input {
   .accordion:hover .accordion-content {
     max-height: 1000px; /* Adjust as needed */
     opacity: 1;
+  }
+  .split-header .title-col {
+    width: 75%;
   }
   .flex-row.space-between .col {
     display: flex;
@@ -1999,11 +2033,6 @@ textarea.input {
     display: inherit;
     width: 100%;
   }
-  .editorial .case-study-settings .image-container {
-    padding: 10px;
-    background-color: transparent;
-    border-radius: 8px;
-  }
   .editorial .case-study-settings .image-container .syn-banner {
     background-image: url(../assets/images/Case-Studies/CS2/main-banner.webp);
     background-size: contain;
@@ -2059,7 +2088,7 @@ textarea.input {
   .grid-container-2col .prototype-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     width: 100%;
   }
@@ -2074,7 +2103,7 @@ textarea.input {
   .grid-container-3col .prototype-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     width: 100%;
   }
@@ -2105,7 +2134,7 @@ textarea.input {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-gap: 1em;
-    background-color: #fff;
+    background-color: #d9fffd;
     padding: 1em;
     border-radius: 8px;
   }
@@ -2162,7 +2191,7 @@ textarea.input {
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     width: 100%;
     background-color: #fff;
@@ -2447,7 +2476,7 @@ textarea.input {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     width: 100%;
     padding: 10px 20px;
@@ -2481,7 +2510,6 @@ textarea.input {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
     width: inherit;
   }
   .tab-container.hide-sm .tab-contents .tab-module .carousel-header {
@@ -2589,25 +2617,18 @@ textarea.input {
     gap: 10em;
     border-bottom: none;
   }
-  .skills-section .centered-row .flex-row .left-col {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 50%;
-  }
-  .skills-section .centered-row .flex-row .left-col.width_50 {
-    width: 50%;
-  }
+  .skills-section .centered-row .flex-row .left-col,
   .skills-section .centered-row .flex-row .right-col {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: flex-start;
     align-items: flex-start;
     width: 50%;
+    gap: 0;
   }
-  .skills-section .centered-row .flex-row .right-col .flex-row {
+  .skills-section .centered-row .flex-row .left-col.width_50,
+  .skills-section .centered-row .flex-row .right-col.width_50 {
     justify-content: flex-start;
   }
   .grid-container-1col .marketing-banner {
@@ -2996,15 +3017,33 @@ textarea.input {
   .tab-container .tab-contents {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     width: 100%;
     width: initial;
+    background-color: aliceblue;
   }
   .tab-container .tab-contents .tab-module {
     border-radius: 0 0 8px 8px;
     width: -moz-fit-content;
     width: fit-content;
+    background-color: aliceblue;
+  }
+  .tab-container .tab-contents .tab-module .grid-container-1col,
+  .tab-container .tab-contents .tab-module .grid-container-2col,
+  .tab-container .tab-contents .tab-module .grid-container-3col,
+  .tab-container .tab-contents .tab-module .grid-container-4col,
+  .tab-container .tab-contents .tab-module .grid-container-5col,
+  .tab-container .tab-contents .tab-module .grid-container-6col {
+    background-color: aliceblue;
+  }
+  .tab-container .tab-contents .car-tab-module,
+  .tab-container .tab-contents .carousel-header,
+  .tab-container .tab-contents .carousel-container {
+    background-color: #fff;
+  }
+  .tab-container .car-tab-contents {
+    background: #fff;
   }
   .research-list li {
     justify-content: flex-start;
@@ -3063,7 +3102,7 @@ textarea.input {
     background-color: #fff;
     border-radius: 8px;
     display: flex;
-    height: calc(100vh - 12em);
+    height: calc(100vh - 20em);
     width: -moz-fit-content;
     width: fit-content;
     position: fixed;
@@ -3130,7 +3169,7 @@ textarea.input {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     gap: 0.3em;
     margin: 0;
@@ -3192,31 +3231,6 @@ textarea.input {
   }
   .lightbox .lightbox-content.w-80b {
     max-width: 80%;
-  }
-  .achievements-section .editorial .flex-row.space-between .col .left-align,
-  .achievements-section .editorial .flex-row.space-between .col .right-align {
-    width: 100%;
-  }
-  .achievements-section .editorial .flex-row.space-between .col .left-align .primary-button,
-  .achievements-section .editorial .flex-row.space-between .col .right-align .primary-button {
-    width: 40%;
-  }
-  .achievements-section .editorial .achievement {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  .achievements-section .editorial .achievement .banner-img {
-    width: 140px;
-    height: auto;
-  }
-  .achievements-section .editorial .achievement .stat {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1a993a;
   }
 }
 @media only screen and (min-width: 1800px) {

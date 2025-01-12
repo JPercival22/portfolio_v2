@@ -1,78 +1,66 @@
 import { initCarousel } from './carousel.mjs';
-import { handleScroll } from './scrollHighlight.mjs'; // Import the scroll highlighting functionality
+import { handleScroll } from './scrollHighlight.mjs';
 import { navScroll } from './navigationModule.mjs';
+import { setupLazyLoading } from './lazyLoad.mjs';
 
+// Call navScroll
 navScroll();
-// Define function to add main functionality
+console.log("Calling lazy loading setup...");
+setupLazyLoading();  // Setup lazy loading
+
 async function addMainFunctionality() {
   try {
-    // Select the open and close sidebar buttons
+    // Select open/close buttons
     const openSidebarBtn = document.querySelector('.open-sidebar-btn');
     const closeSidebarBtn = document.querySelector('.close-btn');
 
-    // Add event listener for opening the sidebar
     if (openSidebarBtn) {
       openSidebarBtn.addEventListener('click', async () => {
-        try {
-          const { toggleSidebar } = await import('./sideBarModule.mjs');
-          toggleSidebar();
-        } catch (error) {
-          console.error('Failed to load sidebar module:', error);
-        }
+        const { toggleSidebar } = await import('./sideBarModule.mjs');
+        toggleSidebar();
       });
     }
 
-    // Add event listener for closing the sidebar
     if (closeSidebarBtn) {
       closeSidebarBtn.addEventListener('click', async () => {
-        try {
-          const { toggleSidebar } = await import('./sideBarModule.mjs');
-          toggleSidebar();
-        } catch (error) {
-          console.error('Failed to load sidebar module:', error);
-        }
+        const { toggleSidebar } = await import('./sideBarModule.mjs');
+        toggleSidebar();
       });
     }
 
-    // Select the menu toggle button and add toggle listener
+    // Select menu toggle button and add listener
     const menuToggle = document.querySelector('.menu-toggle');
     if (menuToggle) {
       const { addToggleListener } = await import('./menuModule.mjs');
       addToggleListener(menuToggle);
     }
 
-    // Call the handleScroll function from scrollHighlights.mjs
-    handleScroll(); // Call this function here
+    // Handle scroll highlights
+    handleScroll();
 
-    // Dynamically import and call read-more feature function
+    // Call other dynamic imports
     const { initReadMore } = await import('./readMore.mjs');
     initReadMore();
 
-    // Dynamically import and call initializeTabModules function
     const { initializeTabModules } = await import('./tabModule.mjs');
     initializeTabModules();
 
-    // Dynamically import and call initLightboxFunctionality function
     const { initLightboxFunctionality } = await import('./lightboxModule.mjs');
     initLightboxFunctionality();
 
-    // Dynamically import and call closeSidebarOnLinkClick function
     const { closeSidebarOnLinkClick } = await import('./sideBarModule.mjs');
     closeSidebarOnLinkClick();
 
-    // Call toggleScrolledClass to initiate scrolling behavior for back-to-top button
     const { toggleScrolledClass } = await import('./scrollButton.mjs');
     toggleScrolledClass();
 
-    // Call form dynamic fields functionality
     const { initializeFormFunctionality } = await import('./formModule.mjs');
     initializeFormFunctionality();
 
-    // Dynamically import and call initializeAccordion function
     const { initAccordion } = await import('./accordion.mjs');
     initAccordion();
 
-    // Call initCarousel function with appropriate parameters
+    // Initialize carousels
     const carousels = document.querySelectorAll('[data-carousel]');
     carousels.forEach((carousel, index) => {
       const carouselId = carousel.dataset.carousel;
@@ -87,18 +75,18 @@ async function addMainFunctionality() {
   }
 }
 
-// Add event listener for DOMContentLoaded
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    // Set up lazy load background images
-    const { setupLazyLoading } = await import('./lazyLoad.mjs');
-    setupLazyLoading();
+   document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM fully loaded. Initialising scripts...");
+  setupLazyLoading();
+  console.log("Lazy loading setup complete.");
+   });
 
-    // Call addMainFunctionality to add main functionality
+    // Add main functionality
     await addMainFunctionality();
+    console.log("Main functionality initialised.");
   } catch (error) {
     console.error('Error on DOMContentLoaded:', error);
   }
 });
-
-// main.js

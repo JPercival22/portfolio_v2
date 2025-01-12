@@ -56,7 +56,7 @@ $flex-col-center: (
 $flex-col-center-start: (
   display: flex,
   flex-direction: column,
-  align-items: flex-start,
+  align-items: center,
   justify-content: center,
   width: 100%,
 );
@@ -122,12 +122,56 @@ $flex-row-center-end: (
   width: 100%,
 );
 
+/* Styling for the overlay */
+#loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $background-color_teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack spinner and text vertically */
+  z-index: 10000; /* Ensure it's above other content */
+}
+
+/* Styling for the spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #b6fce5;
+  border-top: 5px solid $color-sButton_hover;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Styling for the loading text */
+.loading-text {
+  color: $color_brand;
+  font-size: 16px;
+  margin-top: 10px; /* Ensure it stays below the spinner */
+  font-family: $font-family;
+  font-weight: 500;
+}
+
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   padding: 0;
   margin: 0;
@@ -179,12 +223,18 @@ ul {
   list-style: none;
   margin-left: 16px;
   padding: 0;
-  @include apply-flex-styles($flex-col-center-start);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   gap: 10px;
   &.no-disc {
     margin-left: 0;
     list-style: none;
-    @include apply-flex-styles($flex-col-center-start);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
   &.mt-0 {
     margin-top: 0;
@@ -194,17 +244,21 @@ ul {
     list-style: disc;
   }
   li {
+    display: list-item;
     font-family: $font-family;
     font-size: 16px;
     line-height: 30px;
     color: $color_primary_text;
   }
 }
+
 ol {
   font-family: $font-family;
-  margin-left: 16px;
-  padding: 0;
-  @include apply-flex-styles($flex-col-center-start);
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   gap: 10px;
   li {
     display: list-item;
@@ -304,7 +358,7 @@ section {
             width: inherit;
             padding-top: 1em;
             padding-bottom: 1em;
-            font-size: 16px;
+            font-size: 24px;
             font-family: inherit;
             color: $color_white;
             text-decoration: none;
@@ -325,7 +379,7 @@ section {
               justify-content: center;
               padding-top: 1em;
               padding-bottom: 1em;
-              font-size: 16px;
+              font-size: 24px;
               font-family: inherit;
               color: $color_white;
               width: unset;
@@ -353,11 +407,27 @@ section {
               flex-direction: column;
               opacity: 1;
               max-height: 300px;
+              align-items: center;
+              flex-wrap: nowrap;
               ul {
                 margin-left: 0;
-                width: unset;
+                width: 40%;
                 align-items: center;
                 justify-content: center;
+                li {
+                  width: 100%;
+                  transition: background-color 0.5s ease-in-out;
+                  a {
+                    font-size: 18px;
+                    text-decoration: underline;
+                    &:hover {
+                      text-decoration: none;
+                    }
+                  }
+                  &:hover {
+                    background-color: #198499;
+                  }
+                }
               }
             }
             /* Rotate the chevron when the accordion is open */
@@ -521,12 +591,7 @@ section {
         width: 100%;
         max-height: 300px;
         border-radius: $brad-8;
-        &.come-together-banner {
-          background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
-          background-size: cover;
-          width: 100%;
-          height: 300px;
-        }
+
         &.syn-banner {
           background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
           background-size: contain;
@@ -571,13 +636,6 @@ section {
 }
 
 .editorial {
-  background-color: $color_white;
-  padding: 10px;
-  border-radius: 8px;
-  @include apply-flex-styles($flex-col-center-start);
-  gap: 10px;
-  width: 90vw;
-
   &.border {
     border-width: 5px;
     border-style: solid;
@@ -621,9 +679,10 @@ section {
     }
   }
   .split-header {
-    @include apply-flex-styles($flex-row-center-space_between);
-    .title {
-      flex: 80%;
+    @include apply-flex-styles($flex-row-center-start);
+    align-items: flex-start;
+    .title-column {
+      flex: 60%;
     }
     .sus-banner {
       background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
@@ -705,11 +764,10 @@ section {
 .primary-button,
 .secondary-button {
   @include apply-flex-styles($flex-col-center);
-  border: $color_border-settings-primary;
   border-radius: 50px;
   padding: 8px 16px;
   font-size: 16px;
-  color: $color_primary_text;
+  color: $color_white;
   line-height: 30px;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -717,12 +775,12 @@ section {
   transition: all 0.5s ease-in-out;
   box-shadow: $b-shadow;
   margin-bottom: 1em;
+  width: 80%;
 }
 
 .primary-button {
   background-color: $color_brand;
   border-color: $color_brand;
-  color: $color_white;
   width: 80%;
   &:hover {
     background: $color-pButton_hover;
@@ -732,8 +790,6 @@ section {
 .secondary-button {
   background-color: $color-sButton;
   border-color: $color-sButton;
-  color: $color_white;
-  width: 80%;
   &:hover {
     background-color: $color-sButton_hover;
     box-shadow: none;
@@ -1329,11 +1385,12 @@ textarea.input {
 }
 .editorial .skills-section .centered-row {
   @include apply-flex-styles($flex-col-center-start);
-  .flex-row {
+  .flex-row.no-border {
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
     border: none;
     .right-col .no-border .col {
-      @include apply-flex-styles($flex-col-center-start);
       .tertiary-link {
         text-decoration: underline;
         &:hover {
@@ -1717,7 +1774,9 @@ textarea.input {
     max-height: 1000px; /* Adjust as needed */
     opacity: 1;
   }
-
+  .split-header .title-col {
+    width: 75%;
+  }
   .flex-row {
     &.space-between {
       .col {
@@ -1839,9 +1898,6 @@ textarea.input {
     }
     .case-study-settings {
       .image-container {
-        padding: 10px;
-        background-color: transparent;
-        border-radius: $brad-8;
         .syn-banner {
           background-image: url(../assets/images/Case-Studies/CS2/main-banner.webp);
           background-size: contain;
@@ -1941,7 +1997,7 @@ textarea.input {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-gap: 1em;
-    background-color: $color_white;
+    background-color: #d9fffd;
     padding: 1em;
     border-radius: $brad-8;
   }
@@ -2321,7 +2377,10 @@ textarea.input {
       padding: 8px;
       width: 98%;
       .tab-module {
-        @include apply-flex-styles($flex-col-center-start);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
         width: inherit;
         .carousel-header {
           display: flex;
@@ -2437,24 +2496,16 @@ textarea.input {
       width: -webkit-fill-available;
       gap: 10em;
       border-bottom: none;
-      .left-col {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 50%;
-        &.width_50 {
-          width: 50%;
-        }
-      }
+      .left-col,
       .right-col {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
         justify-content: flex-start;
         align-items: flex-start;
         width: 50%;
-        .flex-row {
+        gap: 0;
+        &.width_50 {
           justify-content: flex-start;
         }
       }
@@ -2879,16 +2930,34 @@ textarea.input {
         }
       }
     }
+
     .tab-contents {
       @include apply-flex-styles($flex-col-center-start);
       width: initial;
+      background-color: aliceblue;
       .tab-module {
         border-radius: 0 0 8px 8px;
         width: fit-content;
+        background-color: aliceblue;
+        .grid-container-1col,
+        .grid-container-2col,
+        .grid-container-3col,
+        .grid-container-4col,
+        .grid-container-5col,
+        .grid-container-6col {
+          background-color: aliceblue;
+        }
+      }
+      .car-tab-module,
+      .carousel-header,
+      .carousel-container {
+        background-color: #fff;
       }
     }
+    .car-tab-contents {
+      background: #fff;
+    }
   }
-
   .research-list li {
     justify-content: flex-start;
   }
@@ -2949,7 +3018,7 @@ textarea.input {
         background-color: $color_white;
         border-radius: $brad-8;
         display: flex;
-        height: calc(100vh - 12em);
+        height: calc(100vh - 20em);
         width: fit-content;
         position: fixed;
         .sideBar-content {
@@ -3007,7 +3076,11 @@ textarea.input {
             justify-content: start;
             max-height: unset;
             .bullet-list-row {
-              @include apply-flex-styles($flex-row-center-space_evenly);
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
               gap: 0.3em;
               margin: 0;
               padding: 1em 0;
@@ -3075,36 +3148,8 @@ textarea.input {
       }
     }
   }
-
-  .achievements-section .editorial {
-    .flex-row.space-between .col {
-      .left-align,
-      .right-align {
-        width: 100%;
-        .primary-button {
-          width: 40%;
-        }
-      }
-    }
-    .achievement {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      .banner-img {
-        width: 140px;
-        height: auto;
-      }
-      .stat {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #1a993a;
-      }
-    }
-  }
 }
+
 @media only screen and (min-width: 1800px) {
   .navbar .navbar-container {
     width: 70%;
@@ -3165,9 +3210,3 @@ textarea.input {
     justify-content: space-evenly;
   }
 }
-
-// @media only screen and (min-width: 1919px) {
-//   .page-wrapper article .sideBar {
-//     height: calc(100vh - 24em);
-//   }
-// }

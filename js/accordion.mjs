@@ -1,15 +1,12 @@
 export function initAccordion() {
   const accordionItems = document.querySelectorAll('.accordion-item');
-  console.log('Accordion items:', accordionItems);  // Debugging line
 
   accordionItems.forEach(function(item, index) {
     // Add click event listener to each header
     const header = item.querySelector('.accordion-header');
-    console.log('Header for item', index, header); // Debugging line
 
     header.addEventListener('click', function() {
       // Toggle active class on clicked item
-      console.log('Item clicked:', item);  // Debugging line
 
       // Only toggle the clicked item's visibility, keeping other items closed
       if (!item.classList.contains('active')) {
