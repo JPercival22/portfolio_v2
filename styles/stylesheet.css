@@ -583,12 +583,12 @@ section {
      border-image: linear-gradient(to right, #febaa3 1%, rgba(255, 255, 255, 0) 30%) 1;
 }
 .editorial.border.-green {
-  -o-border-image: linear-gradient(to right, #bbf8e9 1%, rgba(255, 255, 255, 0) 30%) 1;
-     border-image: linear-gradient(to right, #bbf8e9 1%, rgba(255, 255, 255, 0) 30%) 1;
+  -o-border-image: linear-gradient(to right, #58d5b7 1%, rgba(255, 255, 255, 0) 30%) 1;
+     border-image: linear-gradient(to right, #58d5b7 1%, rgba(255, 255, 255, 0) 30%) 1;
 }
 .editorial.border.-green2 {
-  -o-border-image: linear-gradient(to right, #c3ffd9 1%, rgba(255, 255, 255, 0) 30%) 1;
-     border-image: linear-gradient(to right, #c3ffd9 1%, rgba(255, 255, 255, 0) 30%) 1;
+  -o-border-image: linear-gradient(to right, #9bfac0 1%, rgba(255, 255, 255, 0) 30%) 1;
+     border-image: linear-gradient(to right, #9bfac0 1%, rgba(255, 255, 255, 0) 30%) 1;
 }
 .editorial.border.-pink {
   -o-border-image: linear-gradient(to right, #ffb5a8 1%, rgba(255, 255, 255, 0) 30%) 1;
@@ -622,12 +622,15 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
   align-items: flex-start;
 }
 .editorial .split-header .title-column {
   flex: 60%;
+}
+.editorial .split-header .title-column .title {
+  color: #1a1a1a;
 }
 .editorial .split-header .sus-banner {
   background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
@@ -875,9 +878,8 @@ form {
   padding: 10px;
   position: relative;
 }
-
-.title,
-.white-text {
+form .title,
+form .white-text {
   color: #fff;
 }
 
@@ -1924,6 +1926,9 @@ textarea.input {
     max-height: 1000px; /* Adjust as needed */
     opacity: 1;
   }
+  section .editorial .split-header .title-col {
+    width: 80%;
+  }
   .split-header .title-col {
     width: 75%;
   }
@@ -2640,7 +2645,6 @@ textarea.input {
   }
   .grid-container-1col .marketing-banner {
     height: 350px;
-    padding-bottom: 4em;
   }
 }
 @media only screen and (min-width: 1200px) {
