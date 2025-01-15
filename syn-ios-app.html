@@ -238,7 +238,11 @@
         .hero .case-study-settings .space-between {
           flex-direction: row;
         }
-        .hero .case-study-settings .space-between .col .two-button-container.left-align,
+        .hero .case-study-settings .space-between .col .two-button-container.left-align {
+          flex-direction: row;
+          justify-content: flex-start;
+          width: 100%;
+        }
         .hero .case-study-settings .space-between .col .two-button-container.right-align {
           flex-direction: row;
           justify-content: flex-end;
@@ -254,11 +258,6 @@
         .hero .case-study-settings .bullet-list-row li:last-child {
           border-right: 1px solid #d4d4d4;
           padding-left: 10px;
-        }
-        .come-together-banner {
-          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_md.webp');
-          background-size: contain;
-          border-radius: 8px;
         }
 
         .achievements-section .editorial .flex-row {
@@ -290,6 +289,9 @@
         }
       }
       @media only screen and (min-width: 1024px) {
+        .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
+          width: 100%;
+        }
         .achievements-section .editorial .grid-container-3col {
           grid-template-columns: repeat(4, 1fr);
           margin-top: 0;
@@ -346,11 +348,6 @@
         .hero .case-study-settings .space-between .col .two-button-container.right-align .secondary-button {
           width: 120px;
           height: 24px;
-        }
-
-        .come-together-banner {
-          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp');
-          aspect-ratio: 16/9;
         }
       }
 
@@ -796,55 +793,55 @@
                   </div>
                 </div>
               </div>
-
               <div class="grid-container-3col">
                 <div class="achievement">
                   <div class="image-container">
                     <img
                       class="banner-img"
-                      src="./assets/images/banners/metric-vectors/investment-vector.svg"
+                      src="./assets/images/Case-Studies/CS2/metric-banners/User-Engagement-Icon.svg"
                       width="50"
                       height="50"
                       alt="" />
                   </div>
-                  <span class="stat">Investment</span>
-                  <span class="highlight">Client Gained National Lottery Funding</span>
+                  <span class="stat">User Engagement</span>
+                  <span class="highlight">85% users involved end-to-end.</span>
+                </div>
+
+                <div class="achievement">
+                  <div class="image-container">
+                    <img
+                      class="banner-img"
+                      src="./assets/images/Case-Studies/CS2/metric-banners/Innovate-Icon.svg"
+                      width="50"
+                      height="50"
+                      alt="" />
+                  </div>
+                  <span class="stat">Innovative Design</span>
+                  <span class="highlight">75% of users utilised product upgrades.</span>
                 </div>
                 <div class="achievement">
                   <div class="image-container">
                     <img
                       class="banner-img"
-                      src="./assets/images/banners/metric-vectors/traffic-vector.svg"
+                      src="./assets/images/Case-Studies/CS2/metric-banners/Iterative-icon.svg"
                       width="50"
                       height="50"
                       alt="" />
                   </div>
-                  <span class="stat">Traffic</span>
-                  <span class="highlight">100% Growth In All Website Traffic</span>
+                  <span class="stat">Iterative Process</span>
+                  <span class="highlight">5 rounds of user feedback applied.</span>
                 </div>
                 <div class="achievement">
                   <div class="image-container">
                     <img
                       class="banner-img"
-                      src="./assets/images/banners/metric-vectors/speed-vector.svg"
+                      src="./assets/images/Case-Studies/CS2/metric-banners/Test-rate-icon.svg"
                       width="50"
                       height="50"
                       alt="" />
                   </div>
-                  <span class="stat">Page Speed</span>
-                  <span class="highlight">96% Secure Page Speeds Improvements</span>
-                </div>
-                <div class="achievement">
-                  <div class="image-container">
-                    <img
-                      class="banner-img"
-                      src="./assets/images/banners/metric-vectors/awareness-vector.svg"
-                      width="50"
-                      height="50"
-                      alt="" />
-                  </div>
-                  <span class="stat">Awareness</span>
-                  <span class="highlight">100% Increase In Social Media Referrals</span>
+                  <span class="stat">Task Pass Rate</span>
+                  <span class="highlight">80% of users completed within time.</span>
                 </div>
               </div>
             </div>
