@@ -2620,8 +2620,7 @@ textarea.input {
   .skills-section .centered-row .flex-row .left-col,
   .skills-section .centered-row .flex-row .right-col {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     width: 50%;
@@ -2630,6 +2629,13 @@ textarea.input {
   .skills-section .centered-row .flex-row .left-col.width_50,
   .skills-section .centered-row .flex-row .right-col.width_50 {
     justify-content: flex-start;
+  }
+  .skills-section .centered-row .flex-row .left-col .col,
+  .skills-section .centered-row .flex-row .right-col .col {
+    align-items: flex-start;
+  }
+  .skills-section .centered-row .flex-row .left-col {
+    gap: 7em;
   }
   .grid-container-1col .marketing-banner {
     height: 350px;

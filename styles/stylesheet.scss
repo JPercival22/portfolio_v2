@@ -2489,24 +2489,31 @@ textarea.input {
   }
   .skills-section {
     width: -webkit-fill-available;
-    .centered-row .flex-row {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      width: -webkit-fill-available;
-      gap: 10em;
-      border-bottom: none;
-      .left-col,
-      .right-col {
+    .centered-row {
+      .flex-row {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
+        flex-direction: row;
         align-items: flex-start;
-        width: 50%;
-        gap: 0;
-        &.width_50 {
+        width: -webkit-fill-available;
+        gap: 10em;
+        border-bottom: none;
+        .left-col,
+        .right-col {
+          display: flex;
+          flex-direction: row;
           justify-content: flex-start;
+          align-items: flex-start;
+          width: 50%;
+          gap: 0;
+          &.width_50 {
+            justify-content: flex-start;
+          }
+          .col {
+            align-items: flex-start;
+          }
+        }
+        .left-col {
+          gap: 7em;
         }
       }
     }
