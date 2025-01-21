@@ -3023,7 +3023,7 @@ textarea.input {
         background-color: $color_white;
         border-radius: $brad-8;
         display: flex;
-        height: calc(100vh - 20em);
+        height: calc(100vh - 13em);
         width: fit-content;
         position: fixed;
         .sideBar-content {
@@ -3048,7 +3048,6 @@ textarea.input {
               transition: all 0.3s ease-in-out;
               height: 40px;
               width: -webkit-fill-available;
-
               a {
                 @include apply-flex-styles($flex-row-center-start);
                 gap: 10px;
@@ -3061,6 +3060,15 @@ textarea.input {
                 &.active {
                   background-color: aliceblue; // Default active background color (for when no color is applied)
                 }
+              }
+              .side-bar-icon {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                color: #3f3f3f;
+                max-width: 30px;
+                max-height: 30px;
               }
             }
           }

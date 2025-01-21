@@ -3106,7 +3106,7 @@ textarea.input {
     background-color: #fff;
     border-radius: 8px;
     display: flex;
-    height: calc(100vh - 20em);
+    height: calc(100vh - 13em);
     width: -moz-fit-content;
     width: fit-content;
     position: fixed;
@@ -3154,6 +3154,15 @@ textarea.input {
   }
   .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item a.active {
     background-color: aliceblue;
+  }
+  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #3f3f3f;
+    max-width: 30px;
+    max-height: 30px;
   }
   .page-wrapper section:target {
     -o-border-image: linear-gradient(to bottom right, #fcb42e 10%, rgba(255, 255, 255, 0) 100%) 1;
