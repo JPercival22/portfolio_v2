@@ -640,35 +640,35 @@ section {
     border-width: 5px;
     border-style: solid;
     border-top-left-radius: 0; // Keep top-right radius 0 for the style you mentioned
-    &.-purple {
-      border-image: linear-gradient(to right, #f8a1ff 1%, #ffffff00 30%) 1;
+    &.-brief_border {
+      border-image: linear-gradient(to right, #b2abff 1%, #ffffff00 30%) 1;
     }
-    &.-peach {
-      border-image: linear-gradient(to right, #febaa3 1%, #ffffff00 30%) 1;
+    &.-research_border {
+      border-image: linear-gradient(to right, #ff9494 1%, #ffffff00 30%) 1;
     }
-    &.-green {
-      border-image: linear-gradient(to right, #58d5b7 1%, #ffffff00 30%) 1;
+    &.-IA_border {
+      border-image: linear-gradient(to right, #7aafff 1%, #ffffff00 30%) 1;
     }
-    &.-green2 {
-      border-image: linear-gradient(to right, #9bfac0 1%, #ffffff00 30%) 1;
+    &.-Inter_border {
+      border-image: linear-gradient(to right, #ffe079 1%, #ffffff00 30%) 1;
     }
-    &.-pink {
-      border-image: linear-gradient(to right, #ffb5a8 1%, #ffffff00 30%) 1;
+    &.-Lo-Fi_border {
+      border-image: linear-gradient(to right, #9efbe6 1%, #ffffff00 30%) 1;
     }
-    &.-blue {
-      border-image: linear-gradient(to right, #9caeff 1%, #ffffff00 30%) 1;
+    &.-desSystem_border {
+      border-image: linear-gradient(to right, #c5ffff 1%, #ffffff00 30%) 1;
     }
-    &.-blue2 {
-      border-image: linear-gradient(to right, #82aafa 1%, #ffffff00 30%) 1;
+    &.-Hi-Fi_border {
+      border-image: linear-gradient(to right, #86ffb8 1%, #ffffff00 30%) 1;
     }
-    &.-gold {
-      border-image: linear-gradient(to right, #fcb42e 1%, #ffffff00 30%) 1;
+    &.-uxTest_border {
+      border-image: linear-gradient(to right, #21b1c9 1%, #ffffff00 30%) 1;
     }
-    &.-gold2 {
-      border-image: linear-gradient(to right, #fed2a1 1%, #ffffff00 30%) 1;
+    &.-results_border {
+      border-image: linear-gradient(to right, #ffe7b0 1%, #ffffff00 30%) 1;
     }
-    &.-paleBlue {
-      border-image: linear-gradient(to right, #d9fffd 1%, #ffffff00 30%) 1;
+    &.-conclusion_border {
+      border-image: linear-gradient(to right, #c6ffc6 1%, #ffffff00 30%) 1;
     }
   }
 
@@ -694,64 +694,72 @@ section {
       width: 250px;
       height: 150px;
     }
-    .testing-banner {
-      background-image: url(../assets/images/banners/UX-Testing-banner-min.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 150px;
-    }
-    .conclusion-banner {
-      background-image: url(../assets/images/banners/Conclusion-banner-min.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 150px;
-    }
-    .Hi-Fi-banner {
-      background-image: url(../assets/images/banners/Hi-Fi-banner-min.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 150px;
-    }
-    .Low-Fi-banner {
-      background-image: url(../assets/images/banners/Low-Fi-banner-min.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 150px;
-    }
-    .Interaction-banner {
-      background-image: url(../assets/images/banners/Interaction-banner-min.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 150px;
-    }
-    .IA-banner {
-      background-image: url(../assets/images/banners/IA-banner-min.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 150px;
-    }
-    .Ideation-banner {
-      background-image: url(../assets/images/banners/ideation-banner-min.svg);
+
+    .Brief-banner {
+      background-image: url(../assets/images/banners/section/brief-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Research-banner {
-      background-image: url(../assets/images/banners/research-banner-min.svg);
+      background-image: url(../assets/images/banners/section/research-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
-    .Brief-banner {
-      background-image: url(../assets/images/banners/brief-banner-min.svg);
+    .IA-banner {
+      background-image: url(../assets/images/banners/section/IA-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .Interaction-banner {
+      background-image: url(../assets/images/banners/section/Interaction-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .Low-Fi-banner {
+      background-image: url(../assets/images/banners/section/Low-Fi-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .Design-System-banner {
+      background-image: url(../assets/images/banners/section/Design-System-Banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .Hi-Fi-banner {
+      background-image: url(../assets/images/banners/section/Hi-Fi-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .testing-banner {
+      background-image: url(../assets/images/banners/section/UX-Testing-banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .Results-banner {
+      background-image: url(../assets/images/banners/section/Test-Results-Banner-min.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 150px;
+    }
+    .conclusion-banner {
+      background-image: url(../assets/images/banners/section/Conclusion-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
@@ -3074,10 +3082,6 @@ textarea.input {
           }
         }
       }
-    }
-    /* When a section is targeted */
-    section:target {
-      border-image: linear-gradient(to bottom right, #fcb42e 10%, rgba(255, 255, 255, 0) 100%) 1;
     }
 
     .main-content {
