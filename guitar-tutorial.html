@@ -262,7 +262,7 @@
         .hero .case-study-settings .image-container .primary-banner {
           background-image: url('./assets/images/Case-Studies/CS1/banners/CS1-primary-banner_md.webp');
           background-size: contain;
-          border-radius: 8px;
+          border-radius: 0 0 8px 8px;
         }
 
         .achievements-section .editorial .flex-row {
@@ -310,6 +310,9 @@
         .achievements-section .editorial .grid-container-3col .achievement .banner-img {
           width: 50%;
         }
+        .achievements-section .editorial .grid-container-3col .achievement .large-vector {
+          width: 100px;
+        }
 
         .achievements-section .editorial .grid-container-3col .achievement .stat {
           font-size: 20px;
@@ -355,6 +358,11 @@
           background-size: cover;
           height: fit-content;
         }
+      }
+
+      /* When a section is targeted */
+      section:target {
+        border-image: linear-gradient(to bottom right, #fcb42e 10%, rgba(255, 255, 255, 0) 100%) 1;
       }
 
       .lazyblurry {
@@ -476,14 +484,37 @@
             <li class="side-bar-list-item">
               <a href="#architecture">
                 <span class="side-bar-icon" title="Information Architecture Designs">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 60" fill="white">
+                    <line x1="11" y1="25.4453" x2="26.7895" y2="25.4453" stroke="black" stroke-width="2" />
                     <path
-                      d="M154.667-458v222-488 266ZM588-156q24.333 0 41.167-16.833Q646-189.667 646-214q0-24.333-16.75-41.167Q612.5-272 587.667-272q-24 0-40.834 16.75Q530-238.5 530-213.667q0 24 16.833 40.834Q563.667-156 588-156Zm214-312q24.333 0 41.167-16.833Q860-501.667 860-526q0-24.333-16.75-41.167Q826.5-584 801.667-584q-24 0-40.834 16.75Q744-550.5 744-525.667q0 24 16.833 40.834Q777.667-468 802-468Zm-334-82q5.15 0 8.575-3.462 3.425-3.462 3.425-8.667 0-5.204-3.425-8.538Q473.15-574 468-574H278q-5.15 0-8.575 3.462-3.425 3.462-3.425 8.667 0 5.204 3.425 8.538Q272.85-550 278-550h190Zm0 164q5.15 0 8.575-3.462 3.425-3.462 3.425-8.667 0-5.204-3.425-8.538Q473.15-410 468-410H278q-5.15 0-8.575 3.462-3.425 3.462-3.425 8.667 0 5.204 3.425 8.538Q272.85-386 278-386h190ZM186.667-212q-23.85 0-39.925-16.075Q130.667-244.15 130.667-268v-424q0-23.85 16.075-39.925Q162.817-748 186.667-748h586.666q23.85 0 39.925 16.075Q829.333-715.85 829.333-692h-24q0-12-10-22t-22-10H186.667q-12 0-22 10t-10 22v424q0 12 10 22t22 10H430v24H186.667Zm401.215 80q-34.215 0-58.049-23.917Q506-179.833 506-214q0-31.333 20-54t50-27.667V-354q0-12.15 7.925-20.075Q591.85-382 604-382h186v-62.333q-30-5-50-27.667t-20-54q0-34.167 23.951-58.083Q767.902-608 802.118-608q34.215 0 58.049 23.917Q884-560.167 884-526q0 31.333-20 54t-50 27.667V-386q0 12.15-7.925 20.075Q798.15-358 786-358H600v62.333q30 5 50 27.667t20 54q0 34.167-23.951 58.083Q622.098-132 587.882-132Z" />
+                      d="M16.7368 25.4444H17.7368V26.4444V34.6316C17.7368 39.2533 13.9902 43 9.36842 43C4.74667 43 1 39.2533 1 34.6316V34.2222C1 29.3744 4.92994 25.4444 9.77777 25.4444H16.7368Z"
+                      stroke="black"
+                      fill="white"
+                      stroke-width="2" />
+                    <line x1="26.2598" y1="32.2188" x2="26.2598" y2="17.7743" stroke="black" stroke-width="2" />
+                    <path
+                      d="M27.2632 25.4444H26.2632V26.4444V34.6316C26.2632 39.2533 30.0098 43 34.6316 43C39.2533 43 43 39.2533 43 34.6316V34.2222C43 29.3744 39.0701 25.4444 34.2222 25.4444H27.2632Z"
+                      stroke="black"
+                      fill="white"
+                      stroke-width="2" />
+                    <line x1="16.8398" y1="18.5469" x2="31.8398" y2="18.5469" stroke="black" stroke-width="2" />
+                    <path
+                      d="M27.2632 18.5556H26.2632V17.5556V9.36842C26.2632 4.74667 30.0098 1 34.6316 1C39.2533 1 43 4.74668 43 9.36843V9.77778C43 14.6256 39.0701 18.5556 34.2222 18.5556H27.2632Z"
+                      stroke="black"
+                      fill="white"
+                      stroke-width="2" />
+                    <line x1="17.75" y1="26" x2="17.75" y2="11" stroke="black" stroke-width="2" />
+                    <path
+                      d="M16.7368 18.5556H17.7368V17.5556V9.36842C17.7368 4.74667 13.9902 1 9.36842 1C4.74667 1 1 4.74668 1 9.36843V9.77778C1 14.6256 4.92994 18.5556 9.77777 18.5556H16.7368Z"
+                      stroke="black"
+                      fill="white"
+                      stroke-width="2" />
                   </svg>
                 </span>
                 <span class="nav-item">Information Architecture</span>
               </a>
             </li>
+
             <li class="side-bar-list-item">
               <a href="#interaction">
                 <span class="side-bar-icon" title="Interaction Design Flows">
@@ -549,7 +580,7 @@
                 <span class="side-bar-icon" title="Test Results">
                   <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px">
                     <path
-                      d="M479.78-153.85q77.48 0 131.93-54.23 54.44-54.23 54.44-131.7 0-77.48-54.23-131.93-54.23-54.44-131.7-54.44-77.48 0-131.93 54.23-54.44 54.23-54.44 131.7 0 77.48 54.23 131.93 54.23 54.44 131.7 54.44ZM359.36-523.69q21.56-14.66 46.26-23.2 24.69-8.55 51.59-11.93l-93.93-185.8H249.03l110.33 220.93Zm241.28 0 111.18-220.93h-115.1l-86.49 172.11 7.62 15.74q22.71 4.15 43.46 12.32 20.74 8.17 39.33 20.76ZM294.26-195.18q-1.74-7.65-.69-17.8 1.04-10.15 5.66-21.64-18.46-32.25-25.19-68.86-6.73-36.6-.55-74.93 0-30 10.38-56.92 10.39-26.93 28.85-48.47-18.67 1.85-33 11.92-14.34 10.06-18.95 24.96-44.62 14.9-66.05 56.75-21.44 41.86-7.39 88.07 0 45.13 31.16 76.02 31.15 30.9 75.77 30.9Zm371.48 0q58.67-1.59 99.54-43.45 40.87-41.86 40.87-101.37 0-59.51-40.87-101.37-40.87-41.86-99.54-43.96-4.61 0-9.23.64-4.61.64-9.23.89 24.64 29.88 38.68 66.22Q700-381.23 700-340t-14.04 77.58q-14.04 36.34-38.68 65.7 4.62.77 9.23 1.16 4.62.38 9.23.38ZM480-120q-38.46 0-72.65-11.88-34.2-11.89-62.12-34.2-10.54 3.54-22.23 4.81-11.69 1.27-24 1.27-74.08 0-126.54-52.46Q120-264.92 120-339q0-73.15 51.08-125.15 51.07-52 123.77-53.62 8.46 0 16.15 1.15 7.69 1.16 15.38 2.7L193.85-778.46h190.77L480-587.69l95.38-190.77h190.77L635.38-516.69q6.93-1.54 14.24-2.31 7.3-.77 15-.77 73.46 1.85 124.42 53.85Q840-413.92 840-340q0 75.08-52.46 127.54Q735.08-160 660-160q-12.08 0-23.5-1.27t-21.96-4.81q-27.92 21.54-62 33.81Q518.46-120 480-120Zm0-220ZM359.36-523.69 249.03-744.62l110.33 220.93Zm241.28 0 111.18-220.93-111.18 220.93Zm-183.1 275.23 23.38-77.16-62.46-44.53h77.16L480-451.54l24.38 81.39h77.16l-62.46 44.53 23.38 77.16L480-296l-62.46 47.54Z" />
+                      d="M237-257 132-362l19-19 85 85 170-170 19 20-188 189Zm0-280L132-642l19-19 85 85 170-170 19 20-188 189Zm284 211v-28h308v28H521Zm0-280v-28h308v28H521Z" />
                   </svg>
                 </span>
                 <span class="nav-item">Test Results</span>
@@ -617,14 +648,37 @@
                 <li class="side-bar-list-item">
                   <a href="#architecture">
                     <span class="side-bar-icon" title="Information Architecture Designs">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 60" fill="white">
+                        <line x1="11" y1="25.4453" x2="26.7895" y2="25.4453" stroke="black" stroke-width="2" />
                         <path
-                          d="M154.667-458v222-488 266ZM588-156q24.333 0 41.167-16.833Q646-189.667 646-214q0-24.333-16.75-41.167Q612.5-272 587.667-272q-24 0-40.834 16.75Q530-238.5 530-213.667q0 24 16.833 40.834Q563.667-156 588-156Zm214-312q24.333 0 41.167-16.833Q860-501.667 860-526q0-24.333-16.75-41.167Q826.5-584 801.667-584q-24 0-40.834 16.75Q744-550.5 744-525.667q0 24 16.833 40.834Q777.667-468 802-468Zm-334-82q5.15 0 8.575-3.462 3.425-3.462 3.425-8.667 0-5.204-3.425-8.538Q473.15-574 468-574H278q-5.15 0-8.575 3.462-3.425 3.462-3.425 8.667 0 5.204 3.425 8.538Q272.85-550 278-550h190Zm0 164q5.15 0 8.575-3.462 3.425-3.462 3.425-8.667 0-5.204-3.425-8.538Q473.15-410 468-410H278q-5.15 0-8.575 3.462-3.425 3.462-3.425 8.667 0 5.204 3.425 8.538Q272.85-386 278-386h190ZM186.667-212q-23.85 0-39.925-16.075Q130.667-244.15 130.667-268v-424q0-23.85 16.075-39.925Q162.817-748 186.667-748h586.666q23.85 0 39.925 16.075Q829.333-715.85 829.333-692h-24q0-12-10-22t-22-10H186.667q-12 0-22 10t-10 22v424q0 12 10 22t22 10H430v24H186.667Zm401.215 80q-34.215 0-58.049-23.917Q506-179.833 506-214q0-31.333 20-54t50-27.667V-354q0-12.15 7.925-20.075Q591.85-382 604-382h186v-62.333q-30-5-50-27.667t-20-54q0-34.167 23.951-58.083Q767.902-608 802.118-608q34.215 0 58.049 23.917Q884-560.167 884-526q0 31.333-20 54t-50 27.667V-386q0 12.15-7.925 20.075Q798.15-358 786-358H600v62.333q30 5 50 27.667t20 54q0 34.167-23.951 58.083Q622.098-132 587.882-132Z" />
+                          d="M16.7368 25.4444H17.7368V26.4444V34.6316C17.7368 39.2533 13.9902 43 9.36842 43C4.74667 43 1 39.2533 1 34.6316V34.2222C1 29.3744 4.92994 25.4444 9.77777 25.4444H16.7368Z"
+                          stroke="black"
+                          fill="white"
+                          stroke-width="2" />
+                        <line x1="26.2598" y1="32.2188" x2="26.2598" y2="17.7743" stroke="black" stroke-width="2" />
+                        <path
+                          d="M27.2632 25.4444H26.2632V26.4444V34.6316C26.2632 39.2533 30.0098 43 34.6316 43C39.2533 43 43 39.2533 43 34.6316V34.2222C43 29.3744 39.0701 25.4444 34.2222 25.4444H27.2632Z"
+                          stroke="black"
+                          fill="white"
+                          stroke-width="2" />
+                        <line x1="16.8398" y1="18.5469" x2="31.8398" y2="18.5469" stroke="black" stroke-width="2" />
+                        <path
+                          d="M27.2632 18.5556H26.2632V17.5556V9.36842C26.2632 4.74667 30.0098 1 34.6316 1C39.2533 1 43 4.74668 43 9.36843V9.77778C43 14.6256 39.0701 18.5556 34.2222 18.5556H27.2632Z"
+                          stroke="black"
+                          fill="white"
+                          stroke-width="2" />
+                        <line x1="17.75" y1="26" x2="17.75" y2="11" stroke="black" stroke-width="2" />
+                        <path
+                          d="M16.7368 18.5556H17.7368V17.5556V9.36842C17.7368 4.74667 13.9902 1 9.36842 1C4.74667 1 1 4.74668 1 9.36843V9.77778C1 14.6256 4.92994 18.5556 9.77777 18.5556H16.7368Z"
+                          stroke="black"
+                          fill="white"
+                          stroke-width="2" />
                       </svg>
                     </span>
                     <span class="nav-item">Information Architecture</span>
                   </a>
                 </li>
+
                 <li class="side-bar-list-item">
                   <a href="#interaction">
                     <span class="side-bar-icon" title="Interaction Design Flows">
@@ -690,7 +744,7 @@
                     <span class="side-bar-icon" title="Test Results">
                       <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px">
                         <path
-                          d="M479.78-153.85q77.48 0 131.93-54.23 54.44-54.23 54.44-131.7 0-77.48-54.23-131.93-54.23-54.44-131.7-54.44-77.48 0-131.93 54.23-54.44 54.23-54.44 131.7 0 77.48 54.23 131.93 54.23 54.44 131.7 54.44ZM359.36-523.69q21.56-14.66 46.26-23.2 24.69-8.55 51.59-11.93l-93.93-185.8H249.03l110.33 220.93Zm241.28 0 111.18-220.93h-115.1l-86.49 172.11 7.62 15.74q22.71 4.15 43.46 12.32 20.74 8.17 39.33 20.76ZM294.26-195.18q-1.74-7.65-.69-17.8 1.04-10.15 5.66-21.64-18.46-32.25-25.19-68.86-6.73-36.6-.55-74.93 0-30 10.38-56.92 10.39-26.93 28.85-48.47-18.67 1.85-33 11.92-14.34 10.06-18.95 24.96-44.62 14.9-66.05 56.75-21.44 41.86-7.39 88.07 0 45.13 31.16 76.02 31.15 30.9 75.77 30.9Zm371.48 0q58.67-1.59 99.54-43.45 40.87-41.86 40.87-101.37 0-59.51-40.87-101.37-40.87-41.86-99.54-43.96-4.61 0-9.23.64-4.61.64-9.23.89 24.64 29.88 38.68 66.22Q700-381.23 700-340t-14.04 77.58q-14.04 36.34-38.68 65.7 4.62.77 9.23 1.16 4.62.38 9.23.38ZM480-120q-38.46 0-72.65-11.88-34.2-11.89-62.12-34.2-10.54 3.54-22.23 4.81-11.69 1.27-24 1.27-74.08 0-126.54-52.46Q120-264.92 120-339q0-73.15 51.08-125.15 51.07-52 123.77-53.62 8.46 0 16.15 1.15 7.69 1.16 15.38 2.7L193.85-778.46h190.77L480-587.69l95.38-190.77h190.77L635.38-516.69q6.93-1.54 14.24-2.31 7.3-.77 15-.77 73.46 1.85 124.42 53.85Q840-413.92 840-340q0 75.08-52.46 127.54Q735.08-160 660-160q-12.08 0-23.5-1.27t-21.96-4.81q-27.92 21.54-62 33.81Q518.46-120 480-120Zm0-220ZM359.36-523.69 249.03-744.62l110.33 220.93Zm241.28 0 111.18-220.93-111.18 220.93Zm-183.1 275.23 23.38-77.16-62.46-44.53h77.16L480-451.54l24.38 81.39h77.16l-62.46 44.53 23.38 77.16L480-296l-62.46 47.54Z" />
+                          d="M237-257 132-362l19-19 85 85 170-170 19 20-188 189Zm0-280L132-642l19-19 85 85 170-170 19 20-188 189Zm284 211v-28h308v28H521Zm0-280v-28h308v28H521Z" />
                       </svg>
                     </span>
                     <span class="nav-item">Test Results</span>
@@ -825,57 +879,57 @@
                 <div class="achievement">
                   <div class="image-container">
                     <img
-                      class="banner-img"
-                      src="./assets/images/banners/metric-vectors/investment-vector.svg"
+                      class="large-vector"
+                      src="./assets/images/banners/metric-vectors/accuracy-icon.svg"
                       width="50"
                       height="50"
                       alt="" />
                   </div>
-                  <span class="stat">Investment</span>
-                  <span class="highlight">Client Gained National Lottery Funding</span>
+                  <span class="stat">Voice Detection</span>
+                  <span class="highlight">Zero Lag &amp; 100% Accuracy</span>
                 </div>
                 <div class="achievement">
                   <div class="image-container">
                     <img
-                      class="banner-img"
-                      src="./assets/images/banners/metric-vectors/traffic-vector.svg"
+                      class="large-vector"
+                      src="./assets/images/banners/metric-vectors/efficiency-icon.svg"
                       width="50"
                       height="50"
                       alt="" />
                   </div>
-                  <span class="stat">Traffic</span>
-                  <span class="highlight">100% Growth In All Website Traffic</span>
+                  <span class="stat">Efficiency</span>
+                  <span class="highlight">92% Navigation Efficiency</span>
                 </div>
                 <div class="achievement">
                   <div class="image-container">
                     <img
-                      class="banner-img"
-                      src="./assets/images/banners/metric-vectors/speed-vector.svg"
+                      class="large-vector"
+                      src="./assets/images/banners/metric-vectors/satisfaction-icon.svg"
                       width="50"
                       height="50"
                       alt="" />
                   </div>
-                  <span class="stat">Page Speed</span>
-                  <span class="highlight">96% Secure Page Speeds Improvements</span>
+                  <span class="stat">Satisfaction</span>
+                  <span class="highlight">92% User Satisfaction Rate</span>
                 </div>
                 <div class="achievement">
                   <div class="image-container">
                     <img
-                      class="banner-img"
-                      src="./assets/images/banners/metric-vectors/awareness-vector.svg"
+                      class="large-vector"
+                      src="./assets/images/banners/metric-vectors/user-testing-icon.svg"
                       width="50"
                       height="50"
                       alt="" />
                   </div>
-                  <span class="stat">Awareness</span>
-                  <span class="highlight">100% Increase In Social Media Referrals</span>
+                  <span class="stat">Usability</span>
+                  <span class="highlight">90.5/100 SUS Score</span>
                 </div>
               </div>
             </div>
           </section>
 
-          <section id="introduction" data-color="purple" class="lazyload lazyblurry">
-            <div class="editorial border-gradient border -purple">
+          <section id="introduction" data-color="brief_border" class="lazyload lazyblurry">
+            <div class="editorial border-gradient border -brief_border">
               <div class="split-header">
                 <div class="title">
                   <h2>Project Introduction</h2>
@@ -972,12 +1026,11 @@
             </div>
           </section>
 
-          <section id="research" data-color="gold2" class="lazyload lazyblurry">
-            <div class="editorial border-gradient border -gold2">
+          <section id="research" data-color="research_border" class="lazyload lazyblurry">
+            <div class="editorial border-gradient border -research_border">
               <div class="split-header">
                 <div class="title-col">
                   <h2>Research</h2>
-                  <p></p>
                   <p>
                     Designing a voice-command tutorial platform for aspiring guitarists focused on our established
                     client base as the target demographic. We prioritised comprehensive user research to uncover their
@@ -1210,16 +1263,16 @@
             </div>
           </section>
 
-          <section id="architecture" data-color="blue2" class="lazyload lazyblurry">
-            <div class="editorial border-gradient border -blue2">
+          <section id="architecture" data-color="IA_border" class="lazyload lazyblurry">
+            <div class="editorial border-gradient border -IA_border">
               <div class="split-header">
                 <div class="title-col">
                   <h2>Information Architecture</h2>
                   <p>
-                    Information architecture (IA) is a crucial element in UX design, organising content to enable
-                    intuitive and efficient user navigation. It helps users easily find information by structuring and
-                    categorising content in a logical manner. This section outlines the IA strategy of the application,
-                    built upon user needs, business requirements, and common patterns observed in similar platforms.
+                    Information architecture (IA) is essential in UX design, organising content to facilitate intuitive
+                    and efficient user navigation. IA helps users find information easily by structuring and
+                    categorising content logically. This section covers the IA of the application, built on a foundation
+                    of user needs, business requirements, and common patterns from similar platforms.
                   </p>
                 </div>
                 <div class="IA-banner"></div>
@@ -1305,8 +1358,8 @@
             </div>
           </section>
 
-          <section id="interaction" data-color="peach" class="lazyload lazyblurry">
-            <div class="editorial border-gradient border -peach">
+          <section id="interaction" data-color="Inter_border" class="lazyload lazyblurry">
+            <div class="editorial border-gradient border -Inter_border">
               <div class="split-header">
                 <div class="title-col">
                   <h2>Interaction Design</h2>
@@ -1528,8 +1581,8 @@
             </div>
           </section>
 
-          <section id="early-designs" data-color="green" class="lazyload lazyblurry">
-            <div class="editorial border-gradient border -green">
+          <section id="early-designs" data-color="Lo-Fi_border" class="lazyload lazyblurry">
+            <div class="editorial border-gradient border -Lo-Fi_border">
               <div class="split-header">
                 <div class="title-col">
                   <h2>Low-Fidelity Design</h2>
@@ -1544,6 +1597,7 @@
                 </div>
                 <div class="Low-Fi-banner"></div>
               </div>
+
               <h2>Low-Fidelity Design 1.1</h2>
               <h3>Rapid Prototyping</h3>
               <p>
@@ -2104,8 +2158,8 @@
             </div>
           </section>
 
-          <section id="designSystem" data-color="pink" class="lazyload lazyblurry">
-            <div class="editorial border-gradient border -pink">
+          <section id="designSystem" data-color="desSystem_border" class="lazyload lazyblurry">
+            <div class="editorial border-gradient border -desSystem_border">
               <div class="split-header">
                 <div class="title-col">
                   <h2>Design System</h2>
@@ -2115,7 +2169,7 @@
                     guidance on implementing and maintaining a sustainable design system for long-term success.
                   </p>
                 </div>
-                <div class="Hi-Fi-banner"></div>
+                <div class="Design-System-banner"></div>
               </div>
 
               <!-- accordion for mobile viewports  -->
@@ -3010,21 +3064,20 @@
             </div>
           </section>
 
-          <section id="hiFidelityDesigns" data-color="pink" class="lazyload lazyblurry">
-            <div class="editorial border-gradient border -pink">
+          <section id="hiFidelityDesigns" data-color="Hi-Fi_border" class="lazyload lazyblurry">
+            <div class="editorial border-gradient border -Hi-Fi_border">
               <div class="split-header">
                 <div class="title-col">
-                  <h2>Hi-Fidelity Designs</h2>
+                  <h2>Hi-Fidelity Design</h2>
                   <p>
-                    The Hi-Fidelity Designs phase focuses on refining task flows and ensuring a responsive design across
-                    all devices. This stage involves fine-tuning interactions and layouts to enhance user experience,
-                    while adapting the design to seamlessly adjust to various screen sizes. The result is a polished,
-                    intuitive interface that caters to both functional and aesthetic needs, providing a consistent
-                    experience on desktop, tablet, and mobile devices.
+                    Hi-Fidelity design refines the concepts into polished, user-focused visuals, shaped by research to
+                    balance user needs and business goals. Responsive design ensures accessibility across devices,
+                    enhancing user experience and supporting ROI.
                   </p>
                 </div>
                 <div class="Hi-Fi-banner"></div>
               </div>
+
               <h2>Hi-Fidelity Designs 1.2</h2>
               <h3>Responsive Design</h3>
               <p>
@@ -4075,8 +4128,8 @@
             </div>
           </section>
 
-          <section id="ux-testing" data-color="blue" class="lazyload lazyblurry">
-            <div class="editorial border-gradient border -blue">
+          <section id="ux-testing" data-color="results_border" class="lazyload lazyblurry">
+            <div class="editorial border-gradient border -uxTest_border">
               <div class="split-header">
                 <div class="title-col">
                   <h2>UX Testing</h2>
@@ -4091,13 +4144,8 @@
                 <div class="testing-banner"></div>
               </div>
 
-              <div class="split-header">
-                <div class="title">
-                  <h2>UX Testing 1.1</h2>
-                  <h3>The Think Aloud Protocol</h3>
-                </div>
-                <div class="sus-banner"></div>
-              </div>
+              <h2>UX Testing 1.1</h2>
+              <h3>The Think Aloud Protocol</h3>
               <p>
                 The Think Aloud Protocol is a common usability testing method where participants verbalise their
                 thoughts while using a product, offering real-time insights into user behaviour and potential usability
@@ -4419,7 +4467,7 @@
           </section>
 
           <section id="results" class="lazyload lazyblurry">
-            <div class="editorial border-gradient border -blue">
+            <div class="editorial border-gradient border -results_border">
               <div class="split-header">
                 <div class="title-col">
                   <h2>Results and Analysis</h2>
@@ -4574,20 +4622,15 @@
             </div>
           </section>
 
-          <section id="conclusion" data-color="gold" class="lazyload lazyblurry">
-            <div class="editorial border-gradient border -gold">
+          <section id="conclusion" data-color="conclusion_border" class="lazyload lazyblurry">
+            <div class="editorial border-gradient border -conclusion_border">
               <div class="split-header">
                 <div class="title-col">
-                  <h2>Final Reflections &amp; Next Steps</h2>
-                  <p>
-                    The primary goal was to create a user-friendly study aid for aspiring guitarists, providing
-                    essential tutorial materials while minimising distractions during practice. By simplifying the
-                    learning process, the aim was to lower the entry barrier for beginners and improve their overall
-                    experience.
-                  </p>
+                  <h2>Conclusion</h2>
                 </div>
                 <div class="conclusion-banner"></div>
               </div>
+
               <h2>Final Reflections</h2>
               <p>
                 This UX case study has deepened my understanding of design processes, research methodologies, and the
