@@ -1,69 +1,58 @@
-export function handleScroll() {
-    const sections = document.querySelectorAll('section[id]');
-    const navItems = document.querySelectorAll('.side-bar-list-item a');
+
+// Define the colorMap with the section's data-color names and their corresponding colours
+  const colorMap = {
+    brief_border: '#b2abff',
+    research_border: '#ff9494',
+    IA_border: '#7aafff',
+    Inter_border: '#ffe079',
+    LoFi_border: '#9efbe6',
+    desSystem_border: '#c5ffff',
+    HiFi_border: '#86ffb8',
+    uxTest_border: '#21b1c9',
+    results_border: '#ffe7b0',
+    conclusion_border: '#c6ffc6',
+  };
+
+export function scrollHighlight() {
+  const sections = document.querySelectorAll('section'); // All sections
+  const sidebarItems = document.querySelectorAll('.side-bar-list-item'); // Sidebar links
   
-    // Set up an IntersectionObserver to detect when sections come into view
-    const observerOptions = {
-      root: null,
-      threshold: 0.6, // Trigger when 60% of the section is visible
-    };
-  
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const section = entry.target;
+  // Function to highlight the sidebar item based on the section's data-color
+  const highlightSidebarItem = (sectionId, color) => {
+    sidebarItems.forEach(item => {
+      const link = item.querySelector('a');
+      const targetId = link.getAttribute('href').substring(1); // Get the target section's id
+      
+      if (targetId === sectionId) {
+        item.style.backgroundColor = color; // Set the background colour to match the section's data-color
+      } else {
+        item.style.backgroundColor = ''; // Reset for other items
+      }
+    });
+  };
+
+  const handleScroll = () => {
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+      const scrollPosition = window.scrollY + window.innerHeight;
+      
+      // Check if the section is in the viewport
+      if (scrollPosition >= sectionTop && window.scrollY <= sectionBottom) {
         const sectionId = section.getAttribute('id');
-        const sectionColor = section.getAttribute('data-color');
-  
-        // Find the corresponding nav item
-        const navItem = document.querySelector(`.side-bar-list-item a[href="#${sectionId}"]`);
+        const sectionColorName = section.getAttribute('data-color'); // Get the section's data-color value
+        const sectionColor = colorMap[sectionColorName]; // Get the corresponding colour from the colorMap
         
-        if (entry.isIntersecting) {
-          // Remove .active from all nav items and reset their background colors
-          navItems.forEach((item) => {
-            item.classList.remove('active');
-            item.parentElement.style.backgroundColor = ''; // Reset background of <li>
-          });
-  
-          // Add .active to the current nav item
-          if (navItem) {
-            navItem.classList.add('active');
-            navItem.parentElement.style.backgroundColor = sectionColor; // Change <li> background color
-          }
+        if (sectionColor) {
+          highlightSidebarItem(sectionId, sectionColor);
         }
-      });
-    }, observerOptions);
-  
-    // Observe each section
-    sections.forEach((section) => {
-      observer.observe(section);
+      }
     });
+  };
+
+  // Listen to scroll events
+  window.addEventListener('scroll', handleScroll);
   
-    // Add click event listener for nav items
-    navItems.forEach((navItem) => {
-      navItem.addEventListener('click', (e) => {
-        // Prevent default anchor click behavior
-        e.preventDefault();
-  
-        // Remove .active from all nav items and reset their background colors
-        navItems.forEach((item) => {
-          item.classList.remove('active');
-          item.parentElement.style.backgroundColor = ''; // Reset background of <li>
-        });
-  
-        // Add .active to the clicked nav item
-        navItem.classList.add('active');
-  
-        // Get the section's data-color
-        const sectionId = navItem.getAttribute('href').substring(1);
-        const section = document.getElementById(sectionId);
-        const sectionColor = section.getAttribute('data-color');
-  
-        // Change the background color of the corresponding <li>
-        navItem.parentElement.style.backgroundColor = sectionColor;
-  
-        // Scroll to the section smoothly
-        section.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-  }
-  
+  // Initial check on page load
+  handleScroll();
+}
