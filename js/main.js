@@ -1,12 +1,10 @@
 import { initCarousel } from './carousel.mjs';
-import { handleScroll } from './scrollHighlight.mjs';
-import { navScroll } from './navigationModule.mjs';
 import { setupLazyLoading } from './lazyLoad.mjs';
 
 // Call navScroll
-navScroll();
+// navScroll();
 console.log("Calling lazy loading setup...");
-setupLazyLoading();  // Setup lazy loading
+setupLazyLoading(); // Setup lazy loading
 
 async function addMainFunctionality() {
   try {
@@ -34,13 +32,12 @@ async function addMainFunctionality() {
       const { addToggleListener } = await import('./menuModule.mjs');
       addToggleListener(menuToggle);
     }
-
-    // Handle scroll highlights
-    handleScroll();
-
     // Call other dynamic imports
     const { initReadMore } = await import('./readMore.mjs');
     initReadMore();
+    // Call other dynamic imports
+    const { scrollHighlight } = await import('./scrollHighlight.mjs');
+    scrollHighlight();
 
     const { initializeTabModules } = await import('./tabModule.mjs');
     initializeTabModules();
@@ -77,13 +74,10 @@ async function addMainFunctionality() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-   document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM fully loaded. Initialising scripts...");
-  setupLazyLoading();
-  console.log("Lazy loading setup complete.");
-   });
-
-    // Add main functionality
+    console.log("DOM fully loaded. Initialising scripts...");
+    setupLazyLoading();
+   
+    console.log('Main functionality initialised.');
     await addMainFunctionality();
     console.log("Main functionality initialised.");
   } catch (error) {
