@@ -452,40 +452,6 @@ section {
   font-weight: 500;
 }
 // hero section styling
-.hero_p-60 {
-  @include apply-flex-styles($flex-col-center);
-  padding: 0;
-  padding-top: 60px;
-  background-color: #4fbdd2;
-  .hero {
-    @include apply-flex-styles($flex-col-center);
-    height: 50vh;
-    width: 100vw;
-    .hero-content {
-      padding: 20px;
-      border-radius: 16px;
-      @include apply-flex-styles($flex-col-center-start);
-      gap: 0.5em;
-      max-width: calc(100vw - 20%);
-      &.case-study-settings {
-        padding: 10px;
-        max-width: 100vw;
-      }
-      .name-container {
-        background-color: #008190;
-        color: $color_white;
-        padding: 10px;
-        padding-bottom: 8px;
-        border-radius: 50px;
-        p {
-          font-weight: 600;
-          letter-spacing: 3pt;
-          margin: 0;
-        }
-      }
-    }
-  }
-}
 
 .flex-col {
   @include apply-flex-styles($flex-col-center-start);
