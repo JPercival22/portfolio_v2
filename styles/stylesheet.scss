@@ -358,7 +358,7 @@ section {
             width: inherit;
             padding-top: 1em;
             padding-bottom: 1em;
-            font-size: 24px;
+            font-size: 20px;
             font-family: inherit;
             color: $color_white;
             text-decoration: none;
@@ -379,7 +379,7 @@ section {
               justify-content: center;
               padding-top: 1em;
               padding-bottom: 1em;
-              font-size: 24px;
+              font-size: 20px;
               font-family: inherit;
               color: $color_white;
               width: unset;
@@ -411,18 +411,15 @@ section {
               flex-wrap: nowrap;
               ul {
                 margin-left: 0;
-                width: 40%;
+                width: 95%;
                 align-items: center;
                 justify-content: center;
                 li {
                   width: 100%;
+                  border-bottom: 1px solid #fff;
                   transition: background-color 0.5s ease-in-out;
                   a {
                     font-size: 18px;
-                    text-decoration: underline;
-                    &:hover {
-                      text-decoration: none;
-                    }
                   }
                   &:hover {
                     background-color: #198499;
@@ -453,61 +450,26 @@ section {
 }
 // hero section styling
 
-.flex-col {
-  @include apply-flex-styles($flex-col-center-start);
-  margin-top: 1em;
-  &.gap-1 {
-    gap: 1em;
-  }
-  &.mt-10 {
-    margin-top: 1em;
-  }
-  .qoute-text {
-    @include apply-flex-styles($flex-col-center);
-    font-size: 1.8rem;
-    line-height: 22pt;
-    font-style: italic;
-    .signature {
-      @include apply-flex-styles($flex-col-center-end);
-      font-size: 1rem;
-    }
-  }
-  .profile-image {
-    width: 200px;
-    height: 200px;
-    background-image: url(../assets/images/me-min.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #ffffec;
-    border-radius: 100%;
-  }
-  .expanded-headline {
-    text-align: left;
-    font-size: 1.5rem;
-    line-height: 1em;
-    color: #4e4e4e;
-    font-weight: 600;
-    .highlight-text {
-      color: #0a7d94;
-    }
-  }
-  .career-history-banner {
-    background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
-    background-size: contain;
-    height: 1000px;
-    width: 100%;
-  }
-  .process-banner {
-    background: url(../assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
-    background-size: contain;
-    height: 1000px;
-    width: 100%;
-  }
+.career-history-banner {
+  background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
+  background-size: contain;
+  height: 1000px;
+  width: 100%;
+}
+.process-banner {
+  background: url(../assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
+  background-size: contain;
+  height: 1000px;
+  width: 100%;
+}
+.editorial {
   .wide-card {
     @include apply-flex-styles($flex-col-center);
-    border-bottom: $color_border-settings-grey;
-    padding: 1em 0;
+    border: $color_border-settings-grey;
+    border-radius: $brad-8;
+    padding: 10px;
+    width: unset;
+    margin-bottom: 1em;
     &.no-border {
       border: none;
     }
@@ -515,15 +477,22 @@ section {
       display: inherit;
       flex-direction: column;
       width: 100%;
+      h2 {
+        margin: 0;
+      }
       .inline-decorated-list {
         list-style: none;
         margin: 0;
         padding-bottom: 1em;
+        li {
+          line-height: 14px;
+        }
       }
     }
     .card-body {
       display: flex;
       flex-direction: column-reverse;
+      gap: 1em;
       .card-editorial {
         display: inherit;
         flex-direction: column;
@@ -540,6 +509,7 @@ section {
           font-weight: 600;
           text-decoration: underline;
           transition: all 0.3s ease-in-out;
+          color: $color_brand;
           &:hover {
             font-weight: 500;
             text-decoration: none;
@@ -554,16 +524,19 @@ section {
       }
       .image-container {
         flex: auto;
-        width: 100%;
-        max-height: 300px;
         border-radius: $brad-8;
 
+        &.come-together-banner {
+          background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
+          background-size: cover;
+          width: 100%;
+          height: 300px;
+        }
         &.syn-banner {
           background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
           background-size: contain;
           width: 100%;
           height: 300px;
-          border: $color_border-settings-grey;
         }
         &.just-speak-banner {
           background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
@@ -575,6 +548,7 @@ section {
       .button-row {
         width: 100%;
         a {
+          width: auto;
           text-decoration: none;
         }
       }
@@ -1159,6 +1133,7 @@ textarea.input {
   font-style: italic;
 }
 // case-study styles
+
 .page-wrapper {
   @include apply-flex-styles($flex-row-center-start);
   margin: 0 auto;
