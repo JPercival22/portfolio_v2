@@ -315,7 +315,7 @@ section {
           @include apply-flex-styles($flex-col-center-start);
           margin-left: 10px;
           font-family: $font-family;
-          color: $color_primary_text;
+          color: $color_brand;
           font-size: 16px;
           line-height: 16pt;
           .logo-name {
@@ -333,7 +333,7 @@ section {
       cursor: pointer;
       padding: 0;
       .icon-bar {
-        fill: $color_border-settings-primary;
+        fill: $color_brand;
       }
     }
 
@@ -360,7 +360,7 @@ section {
             padding-bottom: 1em;
             font-size: 20px;
             font-family: inherit;
-            color: $color_white;
+            color: $color_brand;
             text-decoration: none;
             &:hover,
             &:focus {
@@ -438,13 +438,6 @@ section {
   }
 }
 
-.home-link .navbar-logo .logo-container,
-.navbar-container .nav-menu a,
-.navbar-container .menu-toggle .icon-bar {
-  color: $color_brand;
-  fill: $color_brand;
-}
-
 .emphasis {
   font-weight: 500;
 }
@@ -501,7 +494,7 @@ section {
           font-size: 16px;
         }
         .read-more {
-          background-color: transparent;
+          background-color: rgba(245, 245, 245, 0.637);
           padding: 0;
           margin: 0;
           font-size: 1rem;
@@ -1780,29 +1773,40 @@ textarea.input {
       }
     }
   }
-  .flex-col {
-    .career-history-banner {
-      background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      max-height: 200px;
-      width: 100%;
-    }
-    .process-banner {
-      background: url(../assets/images/hero-images/index/process-banner_lg.svg) center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 300px;
-      width: 100%;
-    }
+
+  .career-history-banner {
+    background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-height: 200px;
+    width: 100%;
   }
-  .flex-container {
+  .process-banner {
+    background: url(../assets/images/hero-images/index/process-banner_lg.svg) center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+  }
+
+  .editorial {
     .wide-card {
-      display: flex;
-      padding-bottom: 2em;
+      padding: 1em;
+      gap: 1em;
       .card-header .inline-decorated-list {
         flex-direction: row;
         justify-content: space-between;
+        li {
+          border-right: 1px solid gainsboro;
+          padding-left: 10px;
+          padding-right: 10px;
+          .emphasis {
+            line-height: 22px;
+          }
+          &:first-child {
+            border-left: 1px solid gainsboro;
+          }
+        }
       }
       .card-body {
         flex-direction: row;
@@ -1811,10 +1815,15 @@ textarea.input {
         .card-editorial {
           align-items: flex-start;
           justify-content: center;
-          flex: 60%;
+          flex: 70%;
         }
         .image-container {
-          flex: 40%;
+          flex: 30%;
+          &.come-together-banner,
+          &.syn-banner,
+          &.just-speak-banner {
+            height: 210px;
+          }
         }
       }
       .button-row {
@@ -2165,31 +2174,13 @@ textarea.input {
     margin-right: 1em;
   }
 
-  .editorial {
-    padding: 1em;
-    &.profile-section {
-      @include apply-flex-styles($flex-row-center);
-      width: 90%;
-      gap: 1em;
-      .profile-image {
-        flex: 20%;
-      }
-      .expanded-headline {
-        flex: 79%;
-      }
+  .editorial .wide-card .card-body .image-container {
+    &.come-together-banner,
+    &.syn-banner,
+    &.just-speak-banner {
+      height: 308px;
     }
   }
-
-  .flex-container .wide-card .card-body {
-    .card-editorial {
-      flex: 70%;
-    }
-    .image-container {
-      flex: 30%;
-      max-height: 250px;
-    }
-  }
-
   .sidebar-open {
     width: 30%;
   }
@@ -2704,15 +2695,6 @@ textarea.input {
     }
   }
 
-  .w-90 {
-    flex-direction: row;
-    .profile-image {
-      width: 20%;
-    }
-    .expanded-headline {
-      width: -webkit-fill-available;
-    }
-  }
   .flex-row {
     &.space-between {
       justify-content: space-between;
@@ -2780,18 +2762,35 @@ textarea.input {
   .mobile-sidebar {
     display: none;
   }
-
-  .editorial.profile-section .profile-image {
-    flex: 10%;
+  .profile-image {
+    width: 200px;
+    height: 200px;
   }
-
-  .flex-container .wide-card .card-body {
-    .card-editorial {
-      flex: 80%;
-    }
-    .image-container {
-      flex: 20%;
-      max-height: 250px;
+  .career-history-banner {
+    max-height: 300px;
+  }
+  .editorial {
+    margin-bottom: 2em;
+    .row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1em;
+      .wide-card {
+        width: 30%;
+        background-color: #fff;
+        .card-header ul li .emphasis {
+          font-weight: normal;
+          font-size: 13px;
+        }
+        .card-body {
+          flex-direction: column-reverse;
+          .image-container {
+            flex: auto;
+          }
+        }
+      }
     }
   }
   /* about page  */
@@ -2954,9 +2953,6 @@ textarea.input {
     .bullet-list-row {
       list-style: none;
     }
-  }
-  main {
-    padding: 1em 0;
   }
 
   .page-wrapper {
