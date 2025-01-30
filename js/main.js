@@ -1,8 +1,7 @@
 import { initCarousel } from './carousel.mjs';
 import { setupLazyLoading } from './lazyLoad.mjs';
+import "./mainNavShadow.mjs";
 
-// Call navScroll
-// navScroll();
 console.log("Calling lazy loading setup...");
 setupLazyLoading(); // Setup lazy loading
 

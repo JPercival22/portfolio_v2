@@ -215,7 +215,7 @@ section {
   width: 100%;
   margin-left: 10px;
   font-family: "Poppins", sans-serif;
-  color: #1a1a1a;
+  color: #2c4465;
   font-size: 16px;
   line-height: 16pt;
 }
@@ -232,7 +232,7 @@ section {
   padding: 0;
 }
 .navbar .navbar-container .menu-toggle .icon-bar {
-  fill: 1px solid #4eca63;
+  fill: #2c4465;
 }
 .navbar .navbar-container .nav-menu {
   list-style-type: none;
@@ -269,7 +269,7 @@ section {
   padding-bottom: 1em;
   font-size: 20px;
   font-family: inherit;
-  color: #fff;
+  color: #2c4465;
   text-decoration: none;
 }
 .navbar .navbar-container .nav-menu.show .navbar-link a:hover, .navbar .navbar-container .nav-menu.show .navbar-link a:focus {
@@ -337,13 +337,6 @@ section {
   transform: rotate(180deg); /* Rotate chevron upwards */
 }
 
-.home-link .navbar-logo .logo-container,
-.navbar-container .nav-menu a,
-.navbar-container .menu-toggle .icon-bar {
-  color: #2c4465;
-  fill: #2c4465;
-}
-
 .emphasis {
   font-weight: 500;
 }
@@ -407,7 +400,7 @@ section {
   font-size: 16px;
 }
 .editorial .wide-card .card-body .card-editorial .read-more {
-  background-color: transparent;
+  background-color: rgba(245, 245, 245, 0.637);
   padding: 0;
   margin: 0;
   font-size: 1rem;
@@ -1900,46 +1893,60 @@ textarea.input {
   .p-0 .hero.index-banner .hero-content h1 {
     font-size: 4em;
   }
-  .flex-col .career-history-banner {
+  .career-history-banner {
     background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
     background-size: contain;
     background-repeat: no-repeat;
     max-height: 200px;
     width: 100%;
   }
-  .flex-col .process-banner {
+  .process-banner {
     background: url(../assets/images/hero-images/index/process-banner_lg.svg) center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 300px;
     width: 100%;
   }
-  .flex-container .wide-card {
-    display: flex;
-    padding-bottom: 2em;
+  .editorial .wide-card {
+    padding: 1em;
+    gap: 1em;
   }
-  .flex-container .wide-card .card-header .inline-decorated-list {
+  .editorial .wide-card .card-header .inline-decorated-list {
     flex-direction: row;
     justify-content: space-between;
   }
-  .flex-container .wide-card .card-body {
+  .editorial .wide-card .card-header .inline-decorated-list li {
+    border-right: 1px solid gainsboro;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .editorial .wide-card .card-header .inline-decorated-list li .emphasis {
+    line-height: 22px;
+  }
+  .editorial .wide-card .card-header .inline-decorated-list li:first-child {
+    border-left: 1px solid gainsboro;
+  }
+  .editorial .wide-card .card-body {
     flex-direction: row;
     justify-content: space-between;
     gap: 1em;
   }
-  .flex-container .wide-card .card-body .card-editorial {
+  .editorial .wide-card .card-body .card-editorial {
     align-items: flex-start;
     justify-content: center;
-    flex: 60%;
+    flex: 70%;
   }
-  .flex-container .wide-card .card-body .image-container {
-    flex: 40%;
+  .editorial .wide-card .card-body .image-container {
+    flex: 30%;
   }
-  .flex-container .wide-card .button-row {
+  .editorial .wide-card .card-body .image-container.come-together-banner, .editorial .wide-card .card-body .image-container.syn-banner, .editorial .wide-card .card-body .image-container.just-speak-banner {
+    height: 210px;
+  }
+  .editorial .wide-card .button-row {
     display: flex;
     width: 50%;
   }
-  .flex-container .wide-card .button-row .large {
+  .editorial .wide-card .button-row .large {
     width: 140px;
     height: 26px;
   }
@@ -2265,30 +2272,8 @@ textarea.input {
     width: 20%;
     margin-right: 1em;
   }
-  .editorial {
-    padding: 1em;
-  }
-  .editorial.profile-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    width: 90%;
-    gap: 1em;
-  }
-  .editorial.profile-section .profile-image {
-    flex: 20%;
-  }
-  .editorial.profile-section .expanded-headline {
-    flex: 79%;
-  }
-  .flex-container .wide-card .card-body .card-editorial {
-    flex: 70%;
-  }
-  .flex-container .wide-card .card-body .image-container {
-    flex: 30%;
-    max-height: 250px;
+  .editorial .wide-card .card-body .image-container.come-together-banner, .editorial .wide-card .card-body .image-container.syn-banner, .editorial .wide-card .card-body .image-container.just-speak-banner {
+    height: 308px;
   }
   .sidebar-open {
     width: 30%;
@@ -2780,15 +2765,6 @@ textarea.input {
     width: 100%;
     list-style: none;
   }
-  .w-90 {
-    flex-direction: row;
-  }
-  .w-90 .profile-image {
-    width: 20%;
-  }
-  .w-90 .expanded-headline {
-    width: -webkit-fill-available;
-  }
   .flex-row.space-between {
     justify-content: space-between;
   }
@@ -2847,15 +2823,36 @@ textarea.input {
   .mobile-sidebar {
     display: none;
   }
-  .editorial.profile-section .profile-image {
-    flex: 10%;
+  .profile-image {
+    width: 200px;
+    height: 200px;
   }
-  .flex-container .wide-card .card-body .card-editorial {
-    flex: 80%;
+  .career-history-banner {
+    max-height: 300px;
   }
-  .flex-container .wide-card .card-body .image-container {
-    flex: 20%;
-    max-height: 250px;
+  .editorial {
+    margin-bottom: 2em;
+  }
+  .editorial .row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1em;
+  }
+  .editorial .row .wide-card {
+    width: 30%;
+    background-color: #fff;
+  }
+  .editorial .row .wide-card .card-header ul li .emphasis {
+    font-weight: normal;
+    font-size: 13px;
+  }
+  .editorial .row .wide-card .card-body {
+    flex-direction: column-reverse;
+  }
+  .editorial .row .wide-card .card-body .image-container {
+    flex: auto;
   }
   /* about page  */
   .editorial .button-container .primary-button,
@@ -3008,9 +3005,6 @@ textarea.input {
   }
   .hero-container .bullet-list-row {
     list-style: none;
-  }
-  main {
-    padding: 1em 0;
   }
   .page-wrapper {
     display: flex;

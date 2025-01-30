@@ -18,7 +18,7 @@
       media="(max-width: 1023px)" />
     <link
       rel="preload"
-      href="assets/images/hero-images/index/index-hero-banner_lg.webp"
+      href="assets/images/hero-images/index/index-hero_lg.webp"
       as="image"
       media="(min-width: 1024px)" />
 
@@ -171,10 +171,39 @@
       }
       @media (min-width: 768px) {
         .index-banner {
-          background-image: url('assets/images/hero-images/index/index-hero-banner_lg-2.webp');
+          background-image: url('assets/images/hero-images/index/index-hero_lg.webp');
           background-size: cover;
           width: 100%;
           height: 600px;
+        }
+        .hero-content {
+          width: 330px;
+          height: 170px;
+          box-shadow: 10px 10px 23px -7px rgba(217, 217, 217, 1);
+        }
+        .name-container {
+          padding: 10px 20px;
+        }
+        .name-container p {
+          font-size: 20px;
+        }
+        .hero-content h1 {
+          font-size: 2.75rem;
+          line-height: 36.5pt;
+        }
+      }
+      @media (min-width: 1400px) {
+        .qoute-text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5em;
+        }
+        .signature {
+          width: 100%;
+          text-align: right;
+          line-height: unset;
         }
       }
     </style>
@@ -289,27 +318,27 @@
           <div class="editorial">
             <h2>Introduction</h2>
             <p>
-              With over four years of experience, I have had the privilege of collaborating with both innovative
-              start-ups and established global corporations to design and develop exceptional user experiences. My
-              expertise is centred on creating intuitive and groundbreaking web applications and mobile interfaces
-              across a variety of platforms and industries.
+              With over five years of experience, I have collaborated with start-ups and global corporations to design
+              and develop intuitive web applications and mobile interfaces across various industries.
             </p>
             <p>
-              Recently, I served as Senior UX Designer, Test Facilitator, and UI Designer at a data aggregation company.
-              This multifaceted position involved leading UX design initiatives and overseeing development projects
-              utilised by prominent organisations such as the UK Government, the Metropolitan Police, and the National
-              Crime Agency. These opportunities have enabled me to deliver outstanding user experiences across multiple
-              platforms.
+              Most recently, as
+              <strong>Senior UX Designer</strong>
+              ,
+              <strong>Test Facilitator</strong>
+              , and
+              <strong>UI Designer</strong>
+              at a data aggregation company, I led UX design initiatives and development projects used by the UK
+              Government, the Metropolitan Police, and the National Crime Agency.
             </p>
             <p>
-              My academic background at Edge Hill University, where I earned a First Class BSc (Hons) degree in Web
-              Design and Development, has played a key role in shaping my career and driving my commitment to creating
-              innovative digital solutions.
+              I hold a
+              <strong>First-Class BSc (Hons) in Web Design and Development</strong>
+              from Edge Hill University, which has shaped my approach to creating innovative digital solutions.
             </p>
             <p>
-              Looking ahead, I am eager to continue applying my skills and creativity to craft meaningful, impactful
-              user experiences. I am passionate about contributing to projects that create significant digital
-              experiences and make a lasting difference.
+              I am passionate about crafting meaningful user experiences and eager to contribute to projects that drive
+              lasting impact.
             </p>
           </div>
         </section>
@@ -328,120 +357,122 @@
         </section>
 
         <section id="caseStudies">
-          <div class="editorial">
+          <div class="editorial yellow">
             <!-- <div class="flex-container"> -->
             <h2>Case Studies</h2>
-
-            <div class="wide-card">
-              <div class="card-header">
-                <h2>Come Together Hub Ltd.</h2>
-                <h3>Responsive Re-design &amp; Development Case Study.</h3>
-                <ul class="inline-decorated-list">
-                  <li><span class="emphasis">Lead UX Designer.</span></li>
-                  <li><span class="emphasis">Lead UI Designer.</span></li>
-                  <li>
-                    <span class="emphasis">Design System Creator.</span>
-                  </li>
-                  <li><span class="emphasis">Web Master.</span></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <div class="card-editorial">
-                  <p>
-                    Come Together Hub, a St Helens-based charity in Merseyside (UK), required a functional and impactful
-                    online presence.
-                    <span class="more-content">
-                      After evaluating their existing website, it was evident that a complete redesign and redevelopment
-                      were necessary. Aware of the charity’s limited resources and vital mission, I volunteered to lead
-                      the redesign and development, aiming to deliver a user-friendly, reliable, and visually engaging
-                      website that reflects their commitment to supporting vulnerable individuals.
-                    </span>
-                  </p>
-                  <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
-                  <div class="button-row large-devices">
-                    <a
-                      class="primary-button large"
-                      href="/come-together.html"
-                      aria-label="Explore Come Together Hub Ltd Case study">
-                      See Case Study
-                    </a>
-                  </div>
+            <div class="row">
+              <div class="wide-card">
+                <div class="card-header">
+                  <h2>Come Together Hub Ltd.</h2>
+                  <h3>Bespoke Re-Design (UX&amp;UI) &amp; Development.</h3>
+                  <ul class="inline-decorated-list">
+                    <li><span class="emphasis">Lead UX Designer.</span></li>
+                    <li><span class="emphasis">Lead UI Designer.</span></li>
+                    <li>
+                      <span class="emphasis">System Creator.</span>
+                    </li>
+                    <li><span class="emphasis">Web Master.</span></li>
+                  </ul>
                 </div>
-                <div class="image-container come-together-banner"></div>
-              </div>
-            </div>
-
-            <div class="wide-card">
-              <div class="card-header">
-                <h2>Synalogik Innovative Solutions Ltd.</h2>
-                <h3>IOS App Design (UX &amp; UI) Case Study.</h3>
-                <ul class="inline-decorated-list">
-                  <li><span class="emphasis">Senior UX Designer.</span></li>
-                  <li><span class="emphasis">Senior UI Designer.</span></li>
-                  <li><span class="emphasis">UX Test Facilitator.</span></li>
-                  <li>
-                    <span class="emphasis">Design System Creator.</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <div class="card-editorial">
-                  <p>
-                    Synalogik Innovative Solutions Ltd partners with the UK government and gambling institutions to
-                    combat fraud through its proprietary platform. As their sole Senior UX and UI Designer, I designed
-                    an iOS e-commerce platform to enhance their marketing campaigns and strategies.
-                    <span class="more-content">
-                      This case study details the research and design phases behind creating a private, design-focused,
-                      and user-centric e-commerce solution.
-                    </span>
-                  </p>
-                  <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
-                  <div class="button-row large-devices">
-                    <a
-                      class="primary-button large"
-                      href="/syn-ios-app.html"
-                      aria-label="Read Synalogik Innovative Solutions Ltd. iOS App Design case study">
-                      See Case Study
-                    </a>
+                <div class="card-body">
+                  <div class="card-editorial">
+                    <p>
+                      Come Together Hub, a St Helens-based charity in Merseyside (UK), required a functional and
+                      impactful online presence. After evaluating their original website, it became evident
+                      <span class="more-content">
+                        that a complete redesign and redevelopment was necessary. Aware of the charity’s limited
+                        resources and vital mission, I volunteered to lead the redesign and development and delivered a
+                        user-friendly, reliable, and visually engaging website that reflected their commitment to
+                        supporting the vulnerable.
+                      </span>
+                    </p>
+                    <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
+                    <div class="button-row large-devices">
+                      <a
+                        class="primary-button large"
+                        href="/come-together.html"
+                        aria-label="Explore Come Together Hub Ltd Case study">
+                        See Case Study
+                      </a>
+                    </div>
                   </div>
+                  <div class="image-container come-together-banner"></div>
                 </div>
-                <div class="image-container syn-banner"></div>
               </div>
-            </div>
 
-            <div class="wide-card">
-              <div class="card-header">
-                <h2>Just Speak Guitar Tutorials.</h2>
-                <h3>Research, Design &amp; Development Case Study.</h3>
-                <ul class="inline-decorated-list">
-                  <li><span class="emphasis">UX Researcher.</span></li>
-                  <li><span class="emphasis">UX &amp; UI Designer.</span></li>
-                  <li><span class="emphasis">UX Test Facilitator.</span></li>
-                  <li><span class="emphasis">Front End Developer.</span></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <div class="card-editorial">
-                  <p>
-                    Just Speak Guitar Tutorials is a research and development project exploring the integration of a
-                    non-AI voice command system within a responsive, content-rich website.
-                    <span class="more-content">
-                      Guided by UX design principles, the project leveraged data from user interviews, surveys, and
-                      testing. By addressing user needs and concerns, it successfully eliminated frustrations and
-                      ensured transparency throughout the design and development process.
-                    </span>
-                  </p>
-                  <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
-                  <div class="button-row large-devices">
-                    <a
-                      class="primary-button large"
-                      href="/guitar-tutorial.html"
-                      aria-label="Guitar Tutorials Case Study">
-                      See Case Study
-                    </a>
-                  </div>
+              <div class="wide-card">
+                <div class="card-header">
+                  <h2>Synalogik Innovative Solutions Ltd.</h2>
+                  <h3>iOS E-Commerce Application Design (UX &amp; UI).</h3>
+                  <ul class="inline-decorated-list">
+                    <li><span class="emphasis">Senior UX Designer.</span></li>
+                    <li><span class="emphasis">Senior UI Designer.</span></li>
+                    <li><span class="emphasis">UX Test Facilitator.</span></li>
+                    <li>
+                      <span class="emphasis">System Creator.</span>
+                    </li>
+                  </ul>
                 </div>
-                <div class="image-container just-speak-banner">></div>
+                <div class="card-body">
+                  <div class="card-editorial">
+                    <p>
+                      Synalogik Innovative Solutions Ltd collaborates with the UK government and gambling institutions
+                      to combat fraud through its platform. As their sole Senior UX and UI Designer,
+                      <span class="more-content">
+                        I designed an iOS e-commerce platform to strengthen their marketing campaigns and strategies.
+                        This case study examines the research, UX testing, and design phases behind developing a
+                        private, user-centric e-commerce solution, ensuring seamless integration with their existing
+                        infrastructure.
+                      </span>
+                    </p>
+                    <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
+                    <div class="button-row large-devices">
+                      <a
+                        class="primary-button large"
+                        href="/syn-ios-app.html"
+                        aria-label="Read Synalogik Innovative Solutions Ltd. iOS App Design case study">
+                        See Case Study
+                      </a>
+                    </div>
+                  </div>
+                  <div class="image-container syn-banner"></div>
+                </div>
+              </div>
+
+              <div class="wide-card">
+                <div class="card-header">
+                  <h2>Just Speak Guitar Tutorials.</h2>
+                  <h3>Speech Recognition Research &amp; Design (UX&amp;UI).</h3>
+                  <ul class="inline-decorated-list">
+                    <li><span class="emphasis">UX Researcher.</span></li>
+                    <li><span class="emphasis">UX &amp; UI Designer.</span></li>
+                    <li><span class="emphasis">UX Test Facilitator.</span></li>
+                    <li><span class="emphasis">Front End Developer.</span></li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <div class="card-editorial">
+                    <p>
+                      Just Speak Guitar Tutorials is a research and development project exploring the integration of a
+                      non-AI voice command system within a responsive, content-rich website.
+                      <span class="more-content">
+                        Guided by fundamental UX design principles, the project leveraged data from user interviews,
+                        surveys, and testing. By addressing user needs and concerns, the sytem was successfull in
+                        eliminating frustration and ensuring transparency throughout the design and development process.
+                      </span>
+                    </p>
+                    <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
+                    <div class="button-row large-devices">
+                      <a
+                        class="primary-button large"
+                        href="/guitar-tutorial.html"
+                        aria-label="Guitar Tutorials Case Study">
+                        See Case Study
+                      </a>
+                    </div>
+                  </div>
+                  <div class="image-container just-speak-banner">></div>
+                </div>
               </div>
             </div>
           </div>
