@@ -7,23 +7,18 @@
       content="Explore innovative UX design projects and solutions tailored to enhance user experiences. Discover a diverse portfolio showcasing user-centric design principles, usability enhancements, and interactive prototypes. Elevate your digital experiences with insights from a seasoned UX designer passionate about crafting intuitive interfaces." />
     <meta name="author" content="Joseph Percival" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me - Joseph Percival</title>
+    <title>Home Page - Joseph Percival</title>
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 
     <!-- Preload hero images -->
     <link
       rel="preload"
-      href="assets/images/hero-images/index/index-hero-banner_sm.svg"
+      href="assets/images/hero-images/index/mobile-hero-min.svg"
       as="image"
-      media="(max-width: 766px)" />
+      media="(max-width: 1023px)" />
     <link
       rel="preload"
-      href="assets/images/hero-images/index/index-hero-banner_md.svg"
-      as="image"
-      media="(min-width: 767px) and (max-width: 1023px)" />
-    <link
-      rel="preload"
-      href="assets/images/hero-images/index/index-hero-banner_lg.svg"
+      href="assets/images/hero-images/index/index-hero_lg.webp"
       as="image"
       media="(min-width: 1024px)" />
 
@@ -78,6 +73,139 @@
         letter-spacing: 0.55pt;
         margin: 0;
       }
+
+      .page-wrapper_initial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1em;
+        margin: 0 auto;
+        background-color: #fff;
+      }
+
+      .hero {
+        height: auto;
+        width: 100%;
+      }
+
+      .index-banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('assets/images/hero-images/index/mobile-hero-min.svg');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 600px;
+      }
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background: #f0f8fffa;
+        border: 1px solid gainsboro;
+        padding: 10px;
+        border-radius: 16px;
+        gap: 0.5em;
+      }
+      .hero-content h1 {
+        font-size: 1.75rem;
+        line-height: 24.5pt;
+        margin: 0;
+        margin-top: 10px;
+      }
+      .name-container {
+        background-color: #008190;
+        color: #fff;
+        padding: 0 10px;
+        border-radius: 50px;
+      }
+      .name-container p {
+        font-weight: 600;
+        letter-spacing: 3pt;
+        margin: 0;
+      }
+      .editorial {
+        background-color: white;
+        padding: 10px;
+        border-radius: 8px;
+        width: 90vw;
+        gap: 1em;
+      }
+      .qoute-text {
+        display: inherit;
+        font-size: 1.5rem;
+        line-height: 22pt;
+        font-style: italic;
+      }
+      .qoute-text .signature {
+        font-size: 1rem;
+        line-height: 0.2rem;
+      }
+      .profile-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .profile-image {
+        width: 150px;
+        height: 150px;
+        background-image: url(./assets/images/hero-images/index/me-min.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #ffffec;
+        border-radius: 100%;
+      }
+      .expanded-headline {
+        font-size: 1.5rem;
+        line-height: 1.3em;
+        color: #4e4e4e;
+      }
+      .highlight-text {
+        color: #0a7d94;
+      }
+      @media (min-width: 768px) {
+        .index-banner {
+          background-image: url('assets/images/hero-images/index/index-hero_lg.webp');
+          background-size: cover;
+          width: 100%;
+          height: 600px;
+        }
+        .hero-content {
+          width: 330px;
+          height: 170px;
+          box-shadow: 10px 10px 23px -7px rgba(217, 217, 217, 1);
+        }
+        .name-container {
+          padding: 10px 20px;
+        }
+        .name-container p {
+          font-size: 20px;
+        }
+        .hero-content h1 {
+          font-size: 2.75rem;
+          line-height: 36.5pt;
+        }
+      }
+      @media (min-width: 1400px) {
+        .qoute-text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5em;
+        }
+        .signature {
+          width: 100%;
+          text-align: right;
+          line-height: unset;
+        }
+      }
     </style>
 
     <!-- Preload main stylesheet -->
@@ -123,7 +251,7 @@
               </label>
               <div class="accordion-content">
                 <ul>
-                  <li><a class="case-link" href="come-together.html">Come Together Design & Development</a></li>
+                  <li><a class="case-link" href="come-together.html">Bespoke Design & Development</a></li>
                   <li><a class="case-link" href="syn-ios-app.html">IOS E-Commerce Design</a></li>
                   <li><a class="case-link" href="guitar-tutorial.html">Voice Recognition R&D</a></li>
                 </ul>
@@ -143,451 +271,445 @@
     </header>
 
     <div id="btt-anchor"></div>
-    <main class="p-0">
-      <section class="hero_p-60">
-        <div
-          class="hero index-banner"
-          style="
-            background: url(assets/images/hero-images/index/index-hero-banner_sm.svg) no-repeat top right;
-            @media screen and (min-width: 768px) {
-              background: url(assets/images/hero-images/index/index-hero-banner_md.svg);
-              background-position: center;
-              background-size: contain;
-            }
-            @media only screen and (min-width: 1200px) {
-              background: url(assets/images/hero-images/index/index-hero-banner_lg.svg) no-repeat;
-              background-size: contain;
-              max-width: 1000px;
-            }
-          ">
-          <div class="hero-content">
-            <div class="name-container">
-              <p>JOSEPH PERCIVAL</p>
-            </div>
-            <h1>Skills &amp; Career.</h1>
-          </div>
-        </div>
-      </section>
 
-      <div class="flex-col gap-1 mt-10">
-        <section role="region" aria-labelledby="heading-id">
-          <div class="editorial">
-            <p class="qoute-text">
-              “Design creates culture. Culture shapes values. Values determine the future.”
-              <br />
-              <sub class="signature">- Robert L. Peters.</sub>
-            </p>
-          </div>
-        </section>
-
-        <section role="region" aria-labelledby="heading-id">
-          <div class="editorial">
-            <div class="flex-row space-between center no-border">
-              <div class="col">
-                <div class="left-align">
-                  <h2>About Me</h2>
-                </div>
-                <div class="right-align">
-                  <!-- <div class="button-container"> -->
-                  <a
-                    class="primary-button"
-                    href="contact-form.html"
-                    aria-label="button link to contact page"
-                    title="Please click this button if you would like to set up a chat over a project.">
-                    Lets Talk
-                  </a>
-                  <a
-                    class="secondary-button"
-                    href="index.html"
-                    aria-label="button link to about page"
-                    title="Please click this button if you would like to view my experience and skills.">
-                    See Projects
-                  </a>
-                  <!-- </div> -->
+    <main>
+      <div class="page-wrapper_initial">
+        <section>
+          <div class="hero">
+            <div class="image-container">
+              <div class="primary-banner index-banner">
+                <div class="hero-content">
+                  <div class="name-container">
+                    <p>JOSEPH PERCIVAL</p>
+                  </div>
+                  <h1>My Skills &amp; Experience</h1>
                 </div>
               </div>
             </div>
-            <p>
-              I’m a
-              <span class="emphasis">Senior UX &amp; UI Designer</span>
-              with over five years of experience creating user-friendly digital experiences. My career has been shaped
-              by my passion for both design and technology, with a strong foundation in
-              <span class="emphasis">Front-End Development</span>
-              . I hold a
-              <span class="emphasis">First-Class BSc (Hons) in Web Design and Development</span>
-              from Edge Hill University (UK), which gave me the technical and creative tools to excel in designing
-              intuitive interfaces and solving complex user problems.
-            </p>
-
-            <p>
-              My journey as a designer has been guided by a belief in the power of empathy and collaboration. Throughout
-              my career, I’ve had the privilege of working with renowned brands such as
-              <span class="emphasis">Calvin Klein, Adidas, and L’Oréal</span>
-              at
-              <a class="text-link" href="https://www.thg.com/">The Hut Group Plc</a>
-              , where I was part of the Graduate UX design and development team. This experience allowed me to
-              contribute to creating impactful E-commerce platforms that seamlessly connected users with products.
-            </p>
-            <p>
-              In a more recent role, employed as the sole Senior UX &amp; UI Designer I helped modernise, consult and
-              improve existing designs and collaborate with Architects at
-              <a class="text-link" href="https://synalogik.com/">Synalogik Solutions Ltd</a>
-              concerning their award-winning data aggregation service, named
-              <span class="emphasis">SCOUT</span>
-              used by the UK government and global financial institutions. Additionally, I designed and tested their
-              E-Commerce platform to increase Data Set Sales and improve their clients workflow.
-            </p>
-
-            <p>
-              In a project close to my heart, I worked with
-              <a class="text-link" href="https://cometogetherhub.com/">Come Together Hub</a>
-              , a local charity focused on supporting vulnerable members of society in their community. I had the
-              opportunity to serve as the
-              <span class="emphasis">Lead Designer and Web Master</span>
-              for their website, on a
-              <span class="emphasis"><em>pro-bono</em></span>
-              basis. The launcehed site helped secure this charity with National Lottery funding, enabling the charity
-              to expand its services further than they ever imagined and reach more people in need.
-            </p>
-
-            <p>
-              I approach design with a blend of creativity and data-driven insights, always striving to simplify user
-              journeys and enhance engagement. I believe in creating meaningful, user-centric solutions that have a real
-              impact on people's lives. Moving forward, I am excited to continue leveraging my skills and passion for
-              design to create innovative digital experiences that solve real-world problems.
-            </p>
           </div>
         </section>
 
-        <!-- Experience sections  -->
-        <section role="region" aria-labelledby="heading-id">
-          <div class="editorial">
-            <div class="flex-row space-between center no-border">
-              <div class="col">
-                <div class="left-align">
-                  <h2 id="heading-id" class="m-0">Career History</h2>
-                </div>
-                <div class="right-align">
-                  <a
-                    class="primary-button m-0"
-                    href="assets\documents\CV2023.pdf"
-                    target="_blank"
-                    aria-label="button link to my online CV pdf"
-                    title="Clicking this link will open my CV in a new browser window">
-                    View CV
-                  </a>
+        <div class="flex-col gap-1 mt-10">
+          <section role="region" aria-labelledby="heading-id">
+            <div class="editorial">
+              <p class="qoute-text">
+                “Design creates culture. Culture shapes values. Values determine the future.”
+                <br />
+                <sub class="signature">- Robert L. Peters.</sub>
+              </p>
+            </div>
+          </section>
+
+          <section role="region" aria-labelledby="heading-id">
+            <div class="editorial">
+              <div class="flex-row space-between center no-border">
+                <div class="col">
+                  <div class="left-align">
+                    <h2>About Me</h2>
+                  </div>
+                  <div class="right-align">
+                    <!-- <div class="button-container"> -->
+                    <a
+                      class="primary-button"
+                      href="contact-form.html"
+                      aria-label="button link to contact page"
+                      title="Please click this button if you would like to set up a chat over a project.">
+                      Lets Talk
+                    </a>
+                    <a
+                      class="secondary-button"
+                      href="index.html"
+                      aria-label="button link to about page"
+                      title="Please click this button if you would like to view my experience and skills.">
+                      See Projects
+                    </a>
+                    <!-- </div> -->
+                  </div>
                 </div>
               </div>
+              <p>
+                I’m a
+                <span class="emphasis">Senior UX &amp; UI Designer</span>
+                with over five years of experience creating user-friendly digital experiences. My career has been shaped
+                by my passion for both design and technology, with a strong foundation in
+                <span class="emphasis">Front-End Development</span>
+                . I hold a
+                <span class="emphasis">First-Class BSc (Hons) in Web Design and Development</span>
+                from Edge Hill University (UK), which gave me the technical and creative tools to excel in designing
+                intuitive interfaces and solving complex user problems.
+              </p>
+
+              <p>
+                My journey as a designer has been guided by a belief in the power of empathy and collaboration.
+                Throughout my career, I’ve had the privilege of working with renowned brands such as
+                <span class="emphasis">Calvin Klein, Adidas, and L’Oréal</span>
+                at
+                <a class="text-link" href="https://www.thg.com/">The Hut Group Plc</a>
+                , where I was part of the Graduate UX design and development team. This experience allowed me to
+                contribute to creating impactful E-commerce platforms that seamlessly connected users with products.
+              </p>
+              <p>
+                In a more recent role, employed as the sole Senior UX &amp; UI Designer I helped modernise, consult and
+                improve existing designs and collaborate with Architects at
+                <a class="text-link" href="https://synalogik.com/">Synalogik Solutions Ltd</a>
+                concerning their award-winning data aggregation service, named
+                <span class="emphasis">SCOUT</span>
+                used by the UK government and global financial institutions. Additionally, I designed and tested their
+                E-Commerce platform to increase Data Set Sales and improve their clients workflow.
+              </p>
+
+              <p>
+                In a project close to my heart, I worked with
+                <a class="text-link" href="https://cometogetherhub.com/">Come Together Hub</a>
+                , a local charity focused on supporting vulnerable members of society in their community. I had the
+                opportunity to serve as the
+                <span class="emphasis">Lead Designer and Web Master</span>
+                for their website, on a
+                <span class="emphasis"><em>pro-bono</em></span>
+                basis. The launcehed site helped secure this charity with National Lottery funding, enabling the charity
+                to expand its services further than they ever imagined and reach more people in need.
+              </p>
+
+              <p>
+                I approach design with a blend of creativity and data-driven insights, always striving to simplify user
+                journeys and enhance engagement. I believe in creating meaningful, user-centric solutions that have a
+                real impact on people's lives. Moving forward, I am excited to continue leveraging my skills and passion
+                for design to create innovative digital experiences that solve real-world problems.
+              </p>
             </div>
-            <div class="career-history-banner"></div>
-            <!-- </div>
+          </section>
+
+          <!-- Experience sections  -->
+          <section role="region" aria-labelledby="heading-id">
+            <div class="editorial">
+              <div class="flex-row space-between center no-border">
+                <div class="col">
+                  <div class="left-align">
+                    <h2 id="heading-id" class="m-0">Career History</h2>
+                  </div>
+                  <div class="right-align">
+                    <a
+                      class="primary-button m-0"
+                      href="assets\documents\CV2023.pdf"
+                      target="_blank"
+                      aria-label="button link to my online CV pdf"
+                      title="Clicking this link will open my CV in a new browser window">
+                      View CV
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="career-history-banner"></div>
+              <!-- </div>
        
           <div class="editorial"> -->
-            <div class="flex-row no-border">
-              <div class="col">
-                <div class="left-align">
-                  <h2 class="m-0">Experience</h2>
+              <div class="flex-row no-border">
+                <div class="col">
+                  <div class="left-align">
+                    <h2 class="m-0">Experience</h2>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="experience-wrapper">
-              <div class="experience-body">
-                <div class="experience-header">
-                  <h3>Come Together Hub Ltd.</h3>
-                  <span class="emphasis">Lead UX &amp; UI Designer, Web Master.</span>
-                </div>
-                <div class="experience-duration">
-                  <p>
-                    <span class="emphasis">Freelance - Remote.</span>
-                  </p>
-                  <p>
-                    <span class="emphasis">
-                      August 2021 - April 2024
-                      <br />
-                    </span>
-                  </p>
-                </div>
-
-                <div class="experience-details">
-                  <p>
-                    Redesigned and Developed their website on an honorable Pro-bono agreement. Full UX, UI design, and
-                    development for this UK charity, securing National Lottery funding and boosting their online
-                    presence.
-                  </p>
-                </div>
-                <footer class="experience-footer">
-                  <a class="text-link" href="https://cometogetherhub.com/" title="Click to visit this website.">
-                    Come Together Hub
-                  </a>
-                </footer>
-              </div>
-
-              <div class="experience-body">
-                <div class="experience-duration">
+              <div class="experience-wrapper">
+                <div class="experience-body">
                   <div class="experience-header">
-                    <h3>Synaliogik Solutions Ltd.</h3>
-                    <span class="emphasis">Senior UX &amp; UI Designer.</span>
+                    <h3>Come Together Hub Ltd.</h3>
+                    <span class="emphasis">Lead UX &amp; UI Designer, Web Master.</span>
+                  </div>
+                  <div class="experience-duration">
+                    <p>
+                      <span class="emphasis">Freelance - Remote.</span>
+                    </p>
+                    <p>
+                      <span class="emphasis">
+                        August 2021 - April 2024
+                        <br />
+                      </span>
+                    </p>
+                  </div>
+
+                  <div class="experience-details">
+                    <p>
+                      Redesigned and Developed their website on an honorable Pro-bono agreement. Full UX, UI design, and
+                      development for this UK charity, securing National Lottery funding and boosting their online
+                      presence.
+                    </p>
+                  </div>
+                  <footer class="experience-footer">
+                    <a class="text-link" href="https://cometogetherhub.com/" title="Click to visit this website.">
+                      Come Together Hub
+                    </a>
+                  </footer>
+                </div>
+
+                <div class="experience-body">
+                  <div class="experience-duration">
+                    <div class="experience-header">
+                      <h3>Synaliogik Solutions Ltd.</h3>
+                      <span class="emphasis">Senior UX &amp; UI Designer.</span>
+                    </div>
+                    <div class="experience-duration">
+                      <p>
+                        <span class="emphasis">Full Time - Remote.</span>
+                      </p>
+                      <p>
+                        <span class="emphasis">Dec 2021 - June 2023</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="experience-details">
+                    <p>
+                      Designed intuitive UX/UI E-Commerce platform and made improvements for their private data
+                      aggregation platform used by UK security agencies. Improving data access and user experience for
+                      law enforcement and government clients imcreasing due-dilligence and intellect.
+                    </p>
+                    <p>
+                      <span class="emphasis">UK Private Sector :</span>
+                      The NCA, UK Police, MI5, Local Governments, Aston University, NatWest Bank.
+                    </p>
+                    <p>
+                      <span class="emphasis">UK Public Sector :</span>
+                      Betfred, Ladbrokes, Hastings Plc.
+                    </p>
+                  </div>
+                  <br />
+                  <footer class="experience-footer">
+                    <a class="text-link" href="https://synalogik.com/" title="Click to visit this website.">
+                      Synalogik Solutions Ltd
+                    </a>
+                  </footer>
+                </div>
+
+                <div class="experience-body">
+                  <div class="experience-header">
+                    <h3>Feelance UX Designer & Consultant.</h3>
+                    <span class="emphasis">UX &amp; UI Design Consultant.</span>
+                  </div>
+                  <div class="experience-duration">
+                    <p>
+                      <span class="emphasis">Self Employed - Hybrid.</span>
+                    </p>
+                    <p>
+                      <span class="emphasis">Jan 2021 - Dec 2021</span>
+                    </p>
+                  </div>
+                  <div class="experience-details">
+                    <p>
+                      Provide freelance UX and UI design services, working closely with clients to create user-friendly,
+                      visually appealing digital experiences that meet business goals and improve user engagement.
+                    </p>
+                    <p>
+                      <span class="emphasis">UK Public Sector :</span>
+                      Enterprise Businesses, Auto Services, Charities and Organisations.
+                    </p>
+                  </div>
+                  <footer class="experience-footer">
+                    <a
+                      class="text-link"
+                      href="https://www.portfolio.josephmpercival.co.uk/"
+                      title="Click to visit this website.">
+                      View my Portfolio
+                    </a>
+                  </footer>
+                </div>
+
+                <div class="experience-body">
+                  <div class="experience-header">
+                    <h3>THG Plc.</h3>
+                    <span class="emphasis">Graduate UX Designer &amp; Software Engineer</span>
                   </div>
                   <div class="experience-duration">
                     <p>
                       <span class="emphasis">Full Time - Remote.</span>
                     </p>
                     <p>
-                      <span class="emphasis">Dec 2021 - June 2023</span>
+                      <span class="emphasis">May 2020 - Jan 2021</span>
                     </p>
                   </div>
+                  <div class="experience-details">
+                    <p>
+                      Assist in creating and improving e-commerce platforms, collaborating with the team to enhance user
+                      experiences and support the growth of the business through user-centric web design and
+                      development.
+                    </p>
+                    <p>
+                      <span class="emphasis">UK Public Sector :</span>
+                      Nike, Adidas, L'Oreal, Revoltion and Burt's Bees.
+                    </p>
+                  </div>
+                  <footer class="experience-footer">
+                    <a
+                      class="text-link"
+                      class="text-link"
+                      href="https://www.thg.com/"
+                      title="Click to visit this website.">
+                      The Hut Group Plc.
+                    </a>
+                  </footer>
                 </div>
 
-                <div class="experience-details">
-                  <p>
-                    Designed intuitive UX/UI E-Commerce platform and made improvements for their private data
-                    aggregation platform used by UK security agencies. Improving data access and user experience for law
-                    enforcement and government clients imcreasing due-dilligence and intellect.
-                  </p>
-                  <p>
-                    <span class="emphasis">UK Private Sector :</span>
-                    The NCA, UK Police, MI5, Local Governments, Aston University, NatWest Bank.
-                  </p>
-                  <p>
-                    <span class="emphasis">UK Public Sector :</span>
-                    Betfred, Ladbrokes, Hastings Plc.
-                  </p>
+                <div class="experience-body">
+                  <div class="experience-header">
+                    <h3>Blinx Solutions Ltd.</h3>
+                    <span class="emphasis">Junior UX Designer &amp; Front End Engineer.</span>
+                  </div>
+                  <div class="experience-duration">
+                    <p>
+                      <span class="emphasis">Full Time - On-Site.</span>
+                    </p>
+                    <p>
+                      <span class="emphasis">July 2019 - Feb 2022.</span>
+                    </p>
+                  </div>
+                  <div class="experience-details">
+                    <p>
+                      Assist in designing and developing user-friendly web solutions, collaborating with the team to
+                      improve interfaces and functionality while learning from experienced designers and developers.
+                    </p>
+                    <p>
+                      <span class="emphasis">UK Public Sector :</span>
+                      Stobart-Energy Mobile Application.
+                    </p>
+                    <p>
+                      <span class="emphasis">UK Private Sector :</span>
+                      Blinx Health Care PACO
+                      <sup>TM</sup>
+                      Platform.
+                    </p>
+                  </div>
+                  <br />
+                  <footer class="experience-footer">
+                    <a class="text-link" href="https://www.blinxhealthcare.com/" title="Click to visit this website.">
+                      Blinx Health Care.
+                    </a>
+                  </footer>
                 </div>
-                <br />
-                <footer class="experience-footer">
-                  <a class="text-link" href="https://synalogik.com/" title="Click to visit this website.">
-                    Synalogik Solutions Ltd
-                  </a>
-                </footer>
-              </div>
 
-              <div class="experience-body">
-                <div class="experience-header">
-                  <h3>Feelance UX Designer & Consultant.</h3>
-                  <span class="emphasis">UX &amp; UI Design Consultant.</span>
+                <div class="experience-body">
+                  <div class="experience-header">
+                    <h3>Edge hill University.</h3>
+                    <span class="emphasis">Computer Science Student Mentor.</span>
+                  </div>
+                  <div class="experience-duration">
+                    <p>
+                      <span class="emphasis">Part Time - On Site.</span>
+                    </p>
+                    <p>
+                      <span class="emphasis">Sept 2017 - May 2019</span>
+                    </p>
+                  </div>
+                  <div class="experience-details">
+                    <p>
+                      Provide mentorship to students in the Web Design and Development and Computer Science departments,
+                      offering guidance and constructive feedback to support their skill development and academic
+                      achievement.
+                    </p>
+                  </div>
+                  <footer class="experience-footer">
+                    <a class="text-link" href="https://www.edgehill.ac.uk/" title="Click to visit this website.">
+                      Edge Hill University.
+                    </a>
+                  </footer>
                 </div>
-                <div class="experience-duration">
-                  <p>
-                    <span class="emphasis">Self Employed - Hybrid.</span>
-                  </p>
-                  <p>
-                    <span class="emphasis">Jan 2021 - Dec 2021</span>
-                  </p>
-                </div>
-                <div class="experience-details">
-                  <p>
-                    Provide freelance UX and UI design services, working closely with clients to create user-friendly,
-                    visually appealing digital experiences that meet business goals and improve user engagement.
-                  </p>
-                  <p>
-                    <span class="emphasis">UK Public Sector :</span>
-                    Enterprise Businesses, Auto Services, Charities and Organisations.
-                  </p>
-                </div>
-                <footer class="experience-footer">
-                  <a
-                    class="text-link"
-                    href="https://www.portfolio.josephmpercival.co.uk/"
-                    title="Click to visit this website.">
-                    View my Portfolio
-                  </a>
-                </footer>
-              </div>
-
-              <div class="experience-body">
-                <div class="experience-header">
-                  <h3>THG Plc.</h3>
-                  <span class="emphasis">Graduate UX Designer &amp; Software Engineer</span>
-                </div>
-                <div class="experience-duration">
-                  <p>
-                    <span class="emphasis">Full Time - Remote.</span>
-                  </p>
-                  <p>
-                    <span class="emphasis">May 2020 - Jan 2021</span>
-                  </p>
-                </div>
-                <div class="experience-details">
-                  <p>
-                    Assist in creating and improving e-commerce platforms, collaborating with the team to enhance user
-                    experiences and support the growth of the business through user-centric web design and development.
-                  </p>
-                  <p>
-                    <span class="emphasis">UK Public Sector :</span>
-                    Nike, Adidas, L'Oreal, Revoltion and Burt's Bees.
-                  </p>
-                </div>
-                <footer class="experience-footer">
-                  <a
-                    class="text-link"
-                    class="text-link"
-                    href="https://www.thg.com/"
-                    title="Click to visit this website.">
-                    The Hut Group Plc.
-                  </a>
-                </footer>
-              </div>
-
-              <div class="experience-body">
-                <div class="experience-header">
-                  <h3>Blinx Solutions Ltd.</h3>
-                  <span class="emphasis">Junior UX Designer &amp; Front End Engineer.</span>
-                </div>
-                <div class="experience-duration">
-                  <p>
-                    <span class="emphasis">Full Time - On-Site.</span>
-                  </p>
-                  <p>
-                    <span class="emphasis">July 2019 - Feb 2022.</span>
-                  </p>
-                </div>
-                <div class="experience-details">
-                  <p>
-                    Assist in designing and developing user-friendly web solutions, collaborating with the team to
-                    improve interfaces and functionality while learning from experienced designers and developers.
-                  </p>
-                  <p>
-                    <span class="emphasis">UK Public Sector :</span>
-                    Stobart-Energy Mobile Application.
-                  </p>
-                  <p>
-                    <span class="emphasis">UK Private Sector :</span>
-                    Blinx Health Care PACO
-                    <sup>TM</sup>
-                    Platform.
-                  </p>
-                </div>
-                <br />
-                <footer class="experience-footer">
-                  <a class="text-link" href="https://www.blinxhealthcare.com/" title="Click to visit this website.">
-                    Blinx Health Care.
-                  </a>
-                </footer>
-              </div>
-
-              <div class="experience-body">
-                <div class="experience-header">
-                  <h3>Edge hill University.</h3>
-                  <span class="emphasis">Computer Science Student Mentor.</span>
-                </div>
-                <div class="experience-duration">
-                  <p>
-                    <span class="emphasis">Part Time - On Site.</span>
-                  </p>
-                  <p>
-                    <span class="emphasis">Sept 2017 - May 2019</span>
-                  </p>
-                </div>
-                <div class="experience-details">
-                  <p>
-                    Provide mentorship to students in the Web Design and Development and Computer Science departments,
-                    offering guidance and constructive feedback to support their skill development and academic
-                    achievement.
-                  </p>
-                </div>
-                <footer class="experience-footer">
-                  <a class="text-link" href="https://www.edgehill.ac.uk/" title="Click to visit this website.">
-                    Edge Hill University.
-                  </a>
-                </footer>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Skills and Achievements section -->
+          <!-- Skills and Achievements section -->
 
-        <section>
-          <div class="editorial">
-            <h2>Achievements &amp; Skills</h2>
-            <div class="grid-container rows-1">
-              <div class="grid-item">
-                <h3>Qualifications</h3>
-                <ul>
-                  <li>First Class BSc (Hons) - Web Design &amp; Development</li>
-                  <li>Level 5 - Fundamentals of HTML5, CSS3 &amp; JavaScript</li>
-                  <li>UX Design - Grid Systems &amp; Layouts - LinkedIn Learning</li>
-                  <li>CSS3 Layouts - LinkedIn Learning</li>
-                  <li>Level 3 - ITQ (A Level Equivalent)</li>
-                  <li>Level 2 - ITQ (GCSE Level Equivalent)</li>
-                  <li>Security Clearance (SC) - UK Government</li>
-                  <li>MS Office Master - Microsoft</li>
-                </ul>
-              </div>
-              <div class="grid-item">
-                <h3>Hard Skills</h3>
-                <ul>
-                  <li>User Research</li>
-                  <li>Competitor Analysis</li>
-                  <li>Persona &amp; Customer Journey Mapping (CJM)</li>
-                  <li>Design Thinking</li>
-                  <li>Creativity</li>
-                  <li>Typography &amp; Color Psychology</li>
-                  <li>Icons &amp; Illustrations</li>
-                  <li>Data Visualization</li>
-                  <li>Design Principles</li>
-                  <li>Design Systems</li>
-                  <li>Rapid Prototyping</li>
-                  <li>Usability Testing</li>
-                  <li>Responsive Design</li>
-                  <li>WCAG (Web Content Accessibility Guidelines) Compliance</li>
-                  <li>UX Laws &amp; Principles</li>
-                  <li>HCI Guidelines</li>
-                </ul>
-              </div>
-              <div class="grid-item">
-                <h3>Soft Skills</h3>
-                <ul>
-                  <li>Self Organization &amp; Discipline</li>
-                  <li>Communication</li>
-                  <li>Teamwork</li>
-                  <li>Self-Initiative</li>
-                  <li>Empathy</li>
-                  <li>Adaptability</li>
-                  <li>Problem-solving</li>
-                  <li>Creativity</li>
-                  <li>Critical Thinking</li>
-                  <li>Time Management</li>
-                  <li>Leadership</li>
-                  <li>Conflict Resolution</li>
-                  <li>Active Listening</li>
-                </ul>
-              </div>
-              <div class="grid-item">
-                <h3>Tools</h3>
-                <ul>
-                  <li>Adobe Creative Suite (including XD, Photoshop, Illustrator, InDesign)</li>
-                  <li>Adobe XD</li>
-                  <li>Figma</li>
-                  <li>Sketch</li>
-                  <li>Axe</li>
-                  <li>Balsamiq</li>
-                  <li>UserTesting</li>
-                  <li>Google Analytics</li>
-                  <li>Lix Analytics</li>
-                  <li>Quantitative UX Research Tools (e.g.Qualtrics, SurveyMonkey)</li>
-                  <li>Heatmap &amp; Click Tracking Tools (e.g.Crazy Egg, Hotjar)</li>
-                  <li>Session Recording Tools (e.g.FullStory, Hotjar)</li>
-                  <li>Customer Journey Analytics Platforms (e.g.Mixpanel, Amplitude)</li>
-                  <li>AB Testing Platforms (e.g.Optimizely, VWO)</li>
-                </ul>
+          <section>
+            <div class="editorial">
+              <h2>Achievements &amp; Skills</h2>
+              <div class="grid-container rows-1">
+                <div class="grid-item">
+                  <h3>Qualifications</h3>
+                  <ul>
+                    <li>First Class BSc (Hons) - Web Design &amp; Development</li>
+                    <li>Level 5 - Fundamentals of HTML5, CSS3 &amp; JavaScript</li>
+                    <li>UX Design - Grid Systems &amp; Layouts - LinkedIn Learning</li>
+                    <li>CSS3 Layouts - LinkedIn Learning</li>
+                    <li>Level 3 - ITQ (A Level Equivalent)</li>
+                    <li>Level 2 - ITQ (GCSE Level Equivalent)</li>
+                    <li>Security Clearance (SC) - UK Government</li>
+                    <li>MS Office Master - Microsoft</li>
+                  </ul>
+                </div>
+                <div class="grid-item">
+                  <h3>Hard Skills</h3>
+                  <ul>
+                    <li>User Research</li>
+                    <li>Competitor Analysis</li>
+                    <li>Persona &amp; Customer Journey Mapping (CJM)</li>
+                    <li>Design Thinking</li>
+                    <li>Creativity</li>
+                    <li>Typography &amp; Color Psychology</li>
+                    <li>Icons &amp; Illustrations</li>
+                    <li>Data Visualization</li>
+                    <li>Design Principles</li>
+                    <li>Design Systems</li>
+                    <li>Rapid Prototyping</li>
+                    <li>Usability Testing</li>
+                    <li>Responsive Design</li>
+                    <li>WCAG (Web Content Accessibility Guidelines) Compliance</li>
+                    <li>UX Laws &amp; Principles</li>
+                    <li>HCI Guidelines</li>
+                  </ul>
+                </div>
+                <div class="grid-item">
+                  <h3>Soft Skills</h3>
+                  <ul>
+                    <li>Self Organization &amp; Discipline</li>
+                    <li>Communication</li>
+                    <li>Teamwork</li>
+                    <li>Self-Initiative</li>
+                    <li>Empathy</li>
+                    <li>Adaptability</li>
+                    <li>Problem-solving</li>
+                    <li>Creativity</li>
+                    <li>Critical Thinking</li>
+                    <li>Time Management</li>
+                    <li>Leadership</li>
+                    <li>Conflict Resolution</li>
+                    <li>Active Listening</li>
+                  </ul>
+                </div>
+                <div class="grid-item">
+                  <h3>Tools</h3>
+                  <ul>
+                    <li>Adobe Creative Suite (including XD, Photoshop, Illustrator, InDesign)</li>
+                    <li>Adobe XD</li>
+                    <li>Figma</li>
+                    <li>Sketch</li>
+                    <li>Axe</li>
+                    <li>Balsamiq</li>
+                    <li>UserTesting</li>
+                    <li>Google Analytics</li>
+                    <li>Lix Analytics</li>
+                    <li>Quantitative UX Research Tools (e.g.Qualtrics, SurveyMonkey)</li>
+                    <li>Heatmap &amp; Click Tracking Tools (e.g.Crazy Egg, Hotjar)</li>
+                    <li>Session Recording Tools (e.g.FullStory, Hotjar)</li>
+                    <li>Customer Journey Analytics Platforms (e.g.Mixpanel, Amplitude)</li>
+                    <li>AB Testing Platforms (e.g.Optimizely, VWO)</li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      </div>
-      <div class="bttt-btn" id="scrollButton" title="Click this button to return to the top of the page.">
-        <a href="#top" aria-label="Scroll to top">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-            <path
-              d="M8 15.5V1M8 1L1 7.5M8 1L15 7.5"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </a>
+          </section>
+        </div>
+        <div class="bttt-btn" id="scrollButton" title="Click this button to return to the top of the page.">
+          <a href="#top" aria-label="Scroll to top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+              <path
+                d="M8 15.5V1M8 1L1 7.5M8 1L15 7.5"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
       </div>
     </main>
 
