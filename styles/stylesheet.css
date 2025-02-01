@@ -269,7 +269,7 @@ section {
   padding-bottom: 1em;
   font-size: 20px;
   font-family: inherit;
-  color: #2c4465;
+  color: #fff;
   text-decoration: none;
 }
 .navbar .navbar-container .nav-menu.show .navbar-link a:hover, .navbar .navbar-container .nav-menu.show .navbar-link a:focus {
@@ -2269,7 +2269,7 @@ textarea.input {
   }
   .flex-row.space-between .col .right-align .primary-button,
   .flex-row.space-between .col .right-align .secondary-button {
-    width: 20%;
+    width: auto;
     margin-right: 1em;
   }
   .editorial .wide-card .card-body .image-container.come-together-banner, .editorial .wide-card .card-body .image-container.syn-banner, .editorial .wide-card .card-body .image-container.just-speak-banner {

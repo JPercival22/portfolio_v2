@@ -107,9 +107,11 @@
         justify-content: center;
         background: #f0f8fffa;
         border: 1px solid gainsboro;
-        padding: 10px;
+        padding: 20px;
         border-radius: 16px;
         gap: 0.5em;
+        width: 80vw;
+        box-shadow: 10px 10px 23px -7px rgba(217, 217, 217, 1);
       }
       .hero-content h1 {
         font-size: 1.75rem;
@@ -118,7 +120,7 @@
         margin-top: 10px;
       }
       .name-container {
-        background-color: #008190;
+        background-color: #74b3ce;
         color: #fff;
         padding: 0 10px;
         border-radius: 50px;
@@ -128,6 +130,17 @@
         letter-spacing: 3pt;
         margin: 0;
       }
+      .hero-content .two-button-container {
+        width: 100%;
+      }
+      .hero-content .two-button-container .primary-button,
+      .hero-content .two-button-container .secondary-button {
+        width: -webkit-fill-available;
+      }
+      .hero-content .two-button-container .primary-button a,
+      .hero-content .two-button-container .secondary-button a {
+        color: #fff;
+      }
       .editorial {
         background-color: white;
         padding: 10px;
@@ -135,13 +148,13 @@
         width: 90vw;
         gap: 1em;
       }
-      .qoute-text {
+      .quote-text {
         display: inherit;
         font-size: 1.5rem;
         line-height: 22pt;
         font-style: italic;
       }
-      .qoute-text .signature {
+      .quote-text .signature {
         font-size: 1rem;
         line-height: 0.2rem;
       }
@@ -169,6 +182,9 @@
       .highlight-text {
         color: #0a7d94;
       }
+      .right-align a {
+        width: auto;
+      }
       @media (min-width: 768px) {
         .index-banner {
           background-image: url('assets/images/hero-images/index/index-hero_lg.webp');
@@ -177,9 +193,7 @@
           height: 600px;
         }
         .hero-content {
-          width: 330px;
-          height: 170px;
-          box-shadow: 10px 10px 23px -7px rgba(217, 217, 217, 1);
+          width: 40vw;
         }
         .name-container {
           padding: 10px 20px;
@@ -188,12 +202,31 @@
           font-size: 20px;
         }
         .hero-content h1 {
-          font-size: 2.75rem;
+          font-size: 1.7rem;
           line-height: 36.5pt;
         }
       }
+      @media (min-width: 1024px) {
+        .hero-content {
+          width: 300px;
+        }
+      }
       @media (min-width: 1400px) {
-        .qoute-text {
+        .hero-content {
+          width: 30vw;
+        }
+        .hero-content h1 {
+          font-size: 2.3rem;
+        }
+        .hero-content .two-button-container {
+          flex-direction: row;
+          gap: 1em;
+        }
+        .hero-content .two-button-container .primary-button,
+        .hero-content .two-button-container .secondary-button {
+          width: 50%;
+        }
+        .quote-text {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -282,11 +315,15 @@
                   <div class="name-container">
                     <p>JOSEPH PERCIVAL</p>
                   </div>
-                  <h1>
-                    UX &amp; UI Design
-                    <br />
-                    Portfolio
-                  </h1>
+                  <h1>UX &amp; UI Portfolio</h1>
+                  <div class="two-button-container">
+                    <div class="primary-button">
+                      <a href="/contact-form.html">Lets Talk</a>
+                    </div>
+                    <div class="secondary-button">
+                      <a href="#projects">See Projects</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -295,7 +332,7 @@
 
         <section>
           <div class="editorial">
-            <p class="qoute-text">
+            <p class="quote-text">
               “If you think that design is expensive, then you should look at the cost of bad design.”
               <br />
               <sub class="signature">- Dr. Ralf Speth. CEO, Jaguar Land Rover.</sub>
@@ -365,142 +402,163 @@
             </p>
           </div>
         </section>
-        <section>
+        <!-- Experience sections  -->
+
+        <section role="region" aria-labelledby="heading-id">
           <div class="editorial">
-            <h2>Career History</h2>
+            <div class="flex-row space-between center no-border">
+              <div class="col">
+                <div class="left-align">
+                  <h2 id="heading-id" class="m-0">Career History</h2>
+                </div>
+                <div class="right-align">
+                  <a
+                    class="primary-button m-0"
+                    href="assets\documents\CV2023.pdf"
+                    target="_blank"
+                    aria-label="button link to my online CV pdf"
+                    title="Clicking this link will open my CV in a new browser window">
+                    View CV
+                  </a>
+                </div>
+              </div>
+            </div>
             <div class="career-history-banner"></div>
           </div>
         </section>
 
-        <section>
+        <!-- <section>
           <div class="editorial">
             <h2>UX Design is a 5 stage process.</h2>
             <div class="process-banner"></div>
           </div>
-        </section>
+        </section> -->
 
         <section id="caseStudies">
           <div class="editorial">
-            <!-- <div class="flex-container"> -->
-            <h2>Case Studies</h2>
-            <div class="row">
-              <div class="wide-card">
-                <div class="card-header">
-                  <h2>Come Together Hub Ltd.</h2>
-                  <h3>Bespoke Re-Design (UX&amp;UI) &amp; Development.</h3>
-                  <ul class="inline-decorated-list">
-                    <li><span class="emphasis">Lead UX Designer.</span></li>
-                    <li><span class="emphasis">Lead UI Designer.</span></li>
-                    <li>
-                      <span class="emphasis">System Creator.</span>
-                    </li>
-                    <li><span class="emphasis">Web Master.</span></li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <div class="card-editorial">
-                    <p>
-                      Come Together Hub, a St Helens-based charity in Merseyside (UK), required a functional and
-                      impactful online presence. After evaluating their original website, it became evident
-                      <span class="more-content">
-                        that a complete redesign and redevelopment was necessary. Aware of the charity’s limited
-                        resources and vital mission, I volunteered to lead the redesign and development and delivered a
-                        user-friendly, reliable, and visually engaging website that reflected their commitment to
-                        supporting the vulnerable.
-                      </span>
-                    </p>
-                    <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
-                    <div class="button-row large-devices">
-                      <a
-                        class="primary-button large"
-                        href="/come-together.html"
-                        aria-label="Explore Come Together Hub Ltd Case study">
-                        See Case Study
-                      </a>
-                    </div>
+            <div class="flex-container">
+              <h2>Case Studies</h2>
+              <div class="row">
+                <div class="wide-card">
+                  <div class="card-header">
+                    <h2>Come Together Hub Ltd.</h2>
+                    <h3>Bespoke Re-Design (UX&amp;UI) &amp; Development.</h3>
+                    <ul class="inline-decorated-list">
+                      <li><span class="emphasis">Lead UX Designer.</span></li>
+                      <li><span class="emphasis">Lead UI Designer.</span></li>
+                      <li>
+                        <span class="emphasis">System Creator.</span>
+                      </li>
+                      <li><span class="emphasis">Web Master.</span></li>
+                    </ul>
                   </div>
-                  <div class="image-container come-together-banner"></div>
+                  <div class="card-body">
+                    <div class="card-editorial">
+                      <p>
+                        Come Together Hub, a St Helens-based charity in Merseyside (UK), required a functional and
+                        impactful online presence. After evaluating their original website, it became evident
+                        <span class="more-content">
+                          that a complete redesign and redevelopment was necessary. Aware of the charity’s limited
+                          resources and vital mission, I volunteered to lead the redesign and development and delivered
+                          a user-friendly, reliable, and visually engaging website that reflected their commitment to
+                          supporting the vulnerable.
+                        </span>
+                      </p>
+                      <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
+                      <div class="button-row large-devices">
+                        <a
+                          class="primary-button large"
+                          href="/come-together.html"
+                          aria-label="Explore Come Together Hub Ltd Case study">
+                          See Case Study
+                        </a>
+                      </div>
+                    </div>
+                    <div class="image-container come-together-banner"></div>
+                  </div>
                 </div>
-              </div>
 
-              <div class="wide-card">
-                <div class="card-header">
-                  <h2>Synalogik Innovative Solutions Ltd.</h2>
-                  <h3>iOS E-Commerce Application Design (UX &amp; UI).</h3>
-                  <ul class="inline-decorated-list">
-                    <li><span class="emphasis">Senior UX Designer.</span></li>
-                    <li><span class="emphasis">Senior UI Designer.</span></li>
-                    <li><span class="emphasis">UX Test Facilitator.</span></li>
-                    <li>
-                      <span class="emphasis">System Creator.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <div class="card-editorial">
-                    <p>
-                      Synalogik Innovative Solutions Ltd collaborates with the UK government and gambling institutions
-                      to combat fraud through its platform. As their sole Senior UX and UI Designer,
-                      <span class="more-content">
-                        I designed an iOS e-commerce platform to strengthen their marketing campaigns and strategies.
-                        This case study examines the research, UX testing, and design phases behind developing a
-                        private, user-centric e-commerce solution, ensuring seamless integration with their existing
-                        infrastructure.
-                      </span>
-                    </p>
-                    <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
-                    <div class="button-row large-devices">
-                      <a
-                        class="primary-button large"
-                        href="/syn-ios-app.html"
-                        aria-label="Read Synalogik Innovative Solutions Ltd. iOS App Design case study">
-                        See Case Study
-                      </a>
-                    </div>
+                <div class="wide-card">
+                  <div class="card-header">
+                    <h2>Synalogik Innovative Solutions Ltd.</h2>
+                    <h3>iOS E-Commerce Application Design (UX &amp; UI).</h3>
+                    <ul class="inline-decorated-list">
+                      <li><span class="emphasis">Senior UX Designer.</span></li>
+                      <li><span class="emphasis">Senior UI Designer.</span></li>
+                      <li><span class="emphasis">UX Test Facilitator.</span></li>
+                      <li>
+                        <span class="emphasis">System Creator.</span>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="image-container syn-banner"></div>
+                  <div class="card-body">
+                    <div class="card-editorial">
+                      <p>
+                        Synalogik Innovative Solutions Ltd collaborates with the UK government and gambling institutions
+                        to combat fraud through its platform. As their sole Senior UX and UI Designer,
+                        <span class="more-content">
+                          I designed an iOS e-commerce platform to strengthen their marketing campaigns and strategies.
+                          This case study examines the research, UX testing, and design phases behind developing a
+                          private, user-centric e-commerce solution, ensuring seamless integration with their existing
+                          infrastructure.
+                        </span>
+                      </p>
+                      <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
+                      <div class="button-row large-devices">
+                        <a
+                          class="primary-button large"
+                          href="/syn-ios-app.html"
+                          aria-label="Read Synalogik Innovative Solutions Ltd. iOS App Design case study">
+                          See Case Study
+                        </a>
+                      </div>
+                    </div>
+                    <div class="image-container syn-banner"></div>
+                  </div>
                 </div>
-              </div>
 
-              <div class="wide-card">
-                <div class="card-header">
-                  <h2>Just Speak Guitar Tutorials.</h2>
-                  <h3>Speech Recognition Research &amp; Design (UX&amp;UI).</h3>
-                  <ul class="inline-decorated-list">
-                    <li><span class="emphasis">UX Researcher.</span></li>
-                    <li><span class="emphasis">UX &amp; UI Designer.</span></li>
-                    <li><span class="emphasis">UX Test Facilitator.</span></li>
-                    <li><span class="emphasis">Front End Developer.</span></li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <div class="card-editorial">
-                    <p>
-                      Just Speak Guitar Tutorials is a research and development project exploring the integration of a
-                      non-AI voice command system within a responsive, content-rich website.
-                      <span class="more-content">
-                        Guided by fundamental UX design principles, the project leveraged data from user interviews,
-                        surveys, and testing. By addressing user needs and concerns, the sytem was successfull in
-                        eliminating frustration and ensuring transparency throughout the design and development process.
-                      </span>
-                    </p>
-                    <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
-                    <div class="button-row large-devices">
-                      <a
-                        class="primary-button large"
-                        href="/guitar-tutorial.html"
-                        aria-label="Guitar Tutorials Case Study">
-                        See Case Study
-                      </a>
-                    </div>
+                <div class="wide-card">
+                  <div class="card-header">
+                    <h2>Just Speak Guitar Tutorials.</h2>
+                    <h3>Speech Recognition Research &amp; Design (UX&amp;UI).</h3>
+                    <ul class="inline-decorated-list">
+                      <li><span class="emphasis">UX Researcher.</span></li>
+                      <li><span class="emphasis">UX &amp; UI Designer.</span></li>
+                      <li><span class="emphasis">UX Test Facilitator.</span></li>
+                      <li><span class="emphasis">Front End Developer.</span></li>
+                    </ul>
                   </div>
-                  <div class="image-container just-speak-banner">></div>
+                  <div class="card-body">
+                    <div class="card-editorial">
+                      <p>
+                        Just Speak Guitar Tutorials is a research and development project exploring the integration of a
+                        non-AI voice command system within a responsive, content-rich website.
+                        <span class="more-content">
+                          Guided by fundamental UX design principles, the project leveraged data from user interviews,
+                          surveys, and testing. By addressing user needs and concerns, the system was successful in
+                          eliminating frustration and ensuring transparency throughout the design and development
+                          process.
+                        </span>
+                      </p>
+                      <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
+                      <div class="button-row large-devices">
+                        <a
+                          class="primary-button large"
+                          href="/guitar-tutorial.html"
+                          aria-label="Guitar Tutorials Case Study">
+                          See Case Study
+                        </a>
+                      </div>
+                    </div>
+                    <div class="image-container just-speak-banner"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </div>
+
       <div class="bttt-btn" id="scrollButton" title="Click this button to return to the top of the page.">
         <a href="#top" aria-label="Scroll to top">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
