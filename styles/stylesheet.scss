@@ -360,7 +360,7 @@ section {
             padding-bottom: 1em;
             font-size: 20px;
             font-family: inherit;
-            color: $color_brand;
+            color: #fff;
             text-decoration: none;
             &:hover,
             &:focus {
@@ -2170,7 +2170,7 @@ textarea.input {
 
   .flex-row.space-between .col .right-align .primary-button,
   .flex-row.space-between .col .right-align .secondary-button {
-    width: 20%;
+    width: auto;
     margin-right: 1em;
   }
 
