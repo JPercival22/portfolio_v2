@@ -1,0 +1,197 @@
+.contents {
+  position: fixed;
+  top: 84px;
+  left: 10px;
+  z-index: 1;
+  @include apply-flex-styles($flex-row-center);
+  width: unset;
+  .open-sidebar-btn {
+    background-color: $color_brand;
+    cursor: pointer;
+    @include apply-flex-styles($flex-col-center);
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    box-shadow: $b-shadow;
+    .material-symbols-outlined {
+      color: $color_white;
+      font-size: 30px;
+    }
+  }
+  .tooltip {
+    @include apply-flex-styles($flex-col-center);
+    background-color: white;
+    padding: 6px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: $b-shadow;
+    width: unset;
+  }
+}
+
+.sideBar {
+  display: none;
+}
+
+.mobile-sidebar {
+  display: none;
+  opacity: 0;
+  &.sidebar-open {
+    @include apply-flex-styles($flex-col-start-start);
+    opacity: 1;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    overflow-x: hidden;
+    top: 76px;
+    background-color: $color_white;
+    border-right: $color_border-settings-grey;
+    box-shadow: $b-shadow;
+    transition: all 0.5s ease-in-out;
+    width: 90%;
+    padding: 0 10px;
+    z-index: 1;
+    .close-btn {
+      @include apply-flex-styles($flex-row-center);
+      background-color: $color_brand;
+      cursor: pointer;
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 24px;
+      .material-symbols-outlined {
+        color: $color_white;
+        font-size: 30px;
+      }
+    }
+    .header {
+      @include apply-flex-styles($flex-row-center-space_between);
+    }
+    ul {
+      list-style-type: none;
+      margin: 0 1em;
+      gap: 1em;
+    }
+    li {
+      font-family: inherit;
+      width: 100%;
+    }
+    a {
+      color: $color_primary_text;
+      text-decoration: none;
+      display: block;
+      transition: 0.3s;
+      @include apply-flex-styles($flex-row-center-start);
+      flex-wrap: nowrap;
+      .nav-item {
+        margin-left: 10px;
+        fill: #404040;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .sidebar.show {
+    width: 50%;
+    padding: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sidebar-open {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contents {
+    left: 2em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .open-sidebar-btn {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .mobile-sidebar {
+    display: none;
+  }
+  // case study styles
+  .contents {
+    display: none;
+  }
+  .page-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90vw;
+    margin: 0 auto;
+    article {
+      display: flex;
+      flex: 0 0 23%;
+      .sideBar {
+        background-color: $color_white;
+        border-radius: $brad-8;
+        display: flex;
+        height: calc(100vh - 11em);
+        width: fit-content;
+        position: fixed;
+        .sideBar-content {
+          display: flex;
+          flex-direction: column;
+          align-items: baseline;
+          .header {
+            display: flex;
+            h3 {
+              margin: 13px 0;
+            }
+          }
+          ul {
+            list-style-type: none;
+            margin: 0 1em;
+            align-items: flex-start;
+            gap: 0.5em;
+            width: fit-content;
+
+            .side-bar-list-item {
+              @include apply-flex-styles($flex-col-center);
+              transition: all 0.3s ease-in-out;
+              height: 40px;
+              width: -webkit-fill-available;
+              a {
+                @include apply-flex-styles($flex-row-center-start);
+                gap: 10px;
+                width: -webkit-fill-available;
+
+                &:hover,
+                &:focus {
+                  background-color: aliceblue; // Default active background color (for when no color is applied)
+                }
+                &.active {
+                  background-color: aliceblue; // Default active background color (for when no color is applied)
+                }
+              }
+              .side-bar-icon {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                color: #3f3f3f;
+                max-width: 30px;
+                max-height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

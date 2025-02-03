@@ -1,0 +1,172 @@
+.primary-button,
+.secondary-button {
+  @include apply-flex-styles($flex-col-center);
+  border-radius: 50px;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: $color_white;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  box-shadow: $b-shadow;
+  margin-bottom: 1em;
+  width: 80%;
+}
+
+.primary-button {
+  background-color: $color_brand;
+  border-color: $color_brand;
+  width: 80%;
+  &:hover {
+    background: $color-pButton_hover;
+    box-shadow: none;
+  }
+}
+.secondary-button {
+  background-color: $color-sButton;
+  border-color: $color-sButton;
+  &:hover {
+    background-color: $color-sButton_hover;
+    box-shadow: none;
+  }
+}
+
+.tertiary-btn {
+  font-weight: bold;
+  border-bottom: $color_border-settings-grey;
+  color: $color_brand;
+}
+
+.text-link {
+  color: $background-color_link;
+  font-weight: 500;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.two-button-container {
+  @include apply-flex-styles($flex-col-center);
+  width: -webkit-fill-available;
+  margin-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .flex-row {
+    &.space-between {
+      .col {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 1em;
+        .left-align {
+          display: inherit;
+          justify-content: flex-start;
+          align-items: center;
+          width: 40%;
+          .m-0 {
+            margin: 0;
+          }
+          .tertiary-link svg {
+            width: 45px;
+          }
+        }
+        .right-align {
+          display: inherit;
+          justify-content: flex-end;
+          width: 46%;
+          .primary-button {
+            width: 25%;
+            &.m-0 {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .button-container {
+    @include apply-flex-styles($flex-row-center-start);
+    gap: 1em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .flex-row.space-between .col .right-align .primary-button,
+  .flex-row.space-between .col .right-align .secondary-button {
+    width: auto;
+    margin-right: 1em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .flex-container {
+    &.row {
+      @include apply-flex-styles($flex-row-center);
+      width: 30%;
+      gap: 3em;
+      .left {
+        display: flex;
+        flex: 90%;
+      }
+      .right {
+        display: flex;
+        flex: 10%;
+        .primary-button {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  .flex-row {
+    &.space-between {
+      justify-content: space-between;
+      .two-button-container {
+        &.right-align {
+          justify-content: flex-end;
+        }
+        &.left-align {
+          justify-content: flex-start;
+          .tertiary-link {
+            text-decoration: underline;
+            svg {
+              height: 24px; /* Initial height */
+              width: 24px; /* Initial width */
+              fill: #008190; /* Initial fill color */
+              transition: transform 0.5s ease; /* Apply transition only to transform property */
+            }
+
+            &:hover {
+              svg {
+                transform: scale(1.2);
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .skills-section .centered-row {
+    width: 100%;
+    .left-col,
+    .left-col.width_50 {
+      width: 90%;
+    }
+    .flex-row .right-col .flex-row .col .tertiary-link {
+      color: $color_brand;
+      text-decoration: underline;
+      border: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

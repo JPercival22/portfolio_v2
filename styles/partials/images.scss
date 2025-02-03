@@ -1,0 +1,177 @@
+.career-history-banner {
+  background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
+  background-size: contain;
+  height: 1000px;
+  width: 100%;
+}
+.process-banner {
+  background: url(../assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
+  background-size: contain;
+  height: 1000px;
+  width: 100%;
+}
+
+.centered-row {
+  @include apply-flex-styles($flex-row-center);
+  margin: 2em 0;
+  .image-container {
+    @include apply-flex-styles($flex-col-center);
+    content-visibility: auto;
+    .gallery {
+      margin: 0;
+      img {
+        border: $color_border-settings-grey;
+        border-radius: $brad-8;
+        &.no-border {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .career-history-banner {
+    background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-height: 200px;
+    width: 100%;
+  }
+  .process-banner {
+    background: url(../assets/images/hero-images/index/process-banner_lg.svg) center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+  }
+
+  .grid-container-4col {
+    @include apply-grid-styles($grid-4col-auto);
+    background-color: $color_white;
+    padding: 1em;
+    border-radius: $brad-8;
+    .gallery {
+      @include apply-flex-styles($flex-col-even-start);
+      margin: 0;
+      border: $color_border-settings-grey;
+      border-radius: $brad-6;
+    }
+    &.start_even {
+      align-items: start;
+      justify-content: space-evenly;
+    }
+  }
+
+  .banner-container {
+    @include apply-grid-styles($grid-2-col-banner);
+    .banner-wrapper {
+      height: 500px; // Set the height as needed
+      @include apply-flex-styles($flex-row-center);
+      color: white;
+      font-size: 24px;
+      &.banner-1 {
+        background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Results-Banner.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      &.banner-2 {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-stats-Banner.svg);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    width: -webkit-fill-available;
+    &.no-border {
+      border: none;
+    }
+    .col {
+      display: flex;
+      flex-direction: column;
+      .md {
+        width: 180px;
+        height: 440px;
+        border: 1px solid lightgray;
+        border-radius: 6px;
+      }
+      .sm {
+        width: 70px;
+        height: 500px;
+        border: 1px solid lightgray;
+        border-radius: 6px;
+      }
+      .xsm {
+        width: 70px;
+        height: 270px;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+      }
+    }
+    .lg {
+      margin-bottom: 0.8em;
+    }
+    .sm {
+      width: 110px;
+      height: 800px;
+    }
+    .xsm {
+      width: 110px;
+      height: 400px;
+    }
+    img {
+      &.wide {
+        width: 100%;
+      }
+      &.no-border {
+        border: none;
+      }
+    }
+    &.p10 {
+      padding: 10px;
+    }
+    figcaption {
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 10px;
+    }
+  }
+
+  .grid-container-1col .marketing-banner {
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+  .career-history-banner {
+    max-height: 300px;
+  }
+  .grid-container-4col .image-container .gallery,
+  .grid-container-6col .image-container .gallery {
+    background-color: $color_white;
+    border: 1px solid #f2fbfe;
+    border-radius: $brad-8;
+    transition: 0.5s all ease-in-out;
+    padding: 0.5em;
+    box-shadow: $b-shadow;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -4,6 +4,11 @@
     #{$property}: $value;
   }
 }
+@mixin apply-grid-styles($grid-styles) {
+  @each $property, $value in $grid-styles {
+    #{$property}: $value;
+  }
+}
 // flex-col
 $flex-col-center: (
   display: flex,
@@ -38,6 +43,13 @@ $flex-col-start-start: (
   flex-direction: column,
   align-items: flex-start,
   justify-content: flex-start,
+  width: 100%,
+);
+$flex-col-even-start: (
+  display: flex,
+  flex-direction: column,
+  justify-content: space-evenly,
+  align-items: flex-start,
   width: 100%,
 );
 
@@ -79,4 +91,54 @@ $flex-row-center-end: (
   align-items: center,
   justify-content: flex-end,
   width: 100%,
+);
+
+$grid-3col-2row: (
+  display: grid,
+  grid-template-columns: repeat(3, 40px),
+  grid-template-rows: repeat(2, 12px),
+  gap: 10px,
+);
+
+$grid-2-col-banner: (
+  display: grid,
+  grid-template-columns: 1fr 1fr,
+  grid-gap: 10px,
+  width: 100%,
+);
+
+$grid-3col-auto: (
+  display: grid,
+  grid-template-columns: repeat(3, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+
+$grid-4col-auto: (
+  display: grid,
+  grid-template-columns: repeat(4, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+
+$grid-5col-auto: (
+  display: grid,
+  grid-template-columns: repeat(5, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+
+$grid-6col-auto: (
+  display: grid,
+  grid-template-columns: repeat(6, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+$grid-6col-auto_start-even: (
+  display: grid,
+  grid-template-columns: repeat(6, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+  align-items: start,
+  justify-content: space-evenly,
 );
