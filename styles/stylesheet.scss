@@ -12,7 +12,7 @@ $color-sButton_hover: #0a7d94;
 
 // grey scale
 $color_white: #fff;
-$color_main-bkg: #f0f2f5;
+$color_main-bkg: #f7f7f7;
 $color_primary_text: #1a1a1a;
 $background_copy: gainsboro;
 $background_theader: #f2f2f2;
@@ -2618,7 +2618,7 @@ textarea.input {
                   display: flex;
                   padding: 10px;
                   &:hover {
-                    background-color: #8dfde7;
+                    background-color: #8dddfd;
                     border: none;
                   }
                 }
@@ -2631,7 +2631,7 @@ textarea.input {
             .accordion-content {
               opacity: 1;
               max-height: 300px; /* Adjust to the desired size */
-              width: 350px;
+              width: 275px;
             }
 
             .chevron {
