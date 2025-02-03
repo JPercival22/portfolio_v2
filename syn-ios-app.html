@@ -362,7 +362,10 @@
       }
     </style>
     <!-- Preload main stylesheet -->
-    <link rel="stylesheet" href="styles/stylesheet.css" media="print" onload="this.media='all';" />
+    <link rel="preload" href="styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="styles/main.css" />
+    </noscript>
   </head>
 
   <body>
