@@ -3063,7 +3063,7 @@ textarea.input {
     background-color: #fff;
     border-radius: 8px;
     display: flex;
-    height: calc(100vh - 13em);
+    height: calc(100vh - 11em);
     width: -moz-fit-content;
     width: fit-content;
     position: fixed;
