@@ -54,7 +54,7 @@ body {
 }
 
 main {
-  background-color: #f0f2f5;
+  background-color: #f7f7f7;
   padding-bottom: 1em;
   margin-top: 76px;
 }
@@ -2695,13 +2695,13 @@ textarea.input {
     padding: 10px;
   }
   .navbar .navbar-container .nav-menu .accordion .accordion-content ul li .case-link:hover {
-    background-color: #8dfde7;
+    background-color: #8dddfd;
     border: none;
   }
   .navbar .navbar-container .nav-menu .accordion:hover .accordion-content {
     opacity: 1;
     max-height: 300px; /* Adjust to the desired size */
-    width: 350px;
+    width: 275px;
   }
   .navbar .navbar-container .nav-menu .accordion:hover .chevron {
     transform: rotate(180deg); /* Rotate the chevron */
