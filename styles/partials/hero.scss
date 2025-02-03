@@ -1,0 +1,58 @@
+@media only screen and (min-width: 1200px) {
+  .hero-container {
+    padding: 1em;
+    .two-button-container {
+      @include apply-flex-styles($flex-col-center-end);
+      width: 100%;
+      justify-content: flex-end;
+      gap: 1em;
+      .primary-button,
+      .secondary-button {
+        width: 16%;
+      }
+    }
+    .primary-button {
+      &:hover {
+        background: #b3e2bb;
+        border-color: $color_border-settings-primary;
+        box-shadow: none;
+      }
+    }
+    .secondary-button {
+      &:hover {
+        background-color: $background-color_teal;
+        color: $color_primary_text;
+        border-color: $color_border-settings-secondary;
+        box-shadow: none;
+      }
+    }
+    .bullet-list-row {
+      @include apply-flex-styles($flex-row-center-space_evenly);
+      list-style: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .hero-container {
+    padding: 2em;
+    .two-button-container {
+      .primary-button {
+        width: 15%;
+      }
+      .secondary-button {
+        width: 15%;
+      }
+      justify-content: flex-end;
+    }
+    .bullet-list-row {
+      list-style: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
+    width: 50%;
+  }
+}

@@ -1,0 +1,249 @@
+.thank-you-container {
+  @include apply-flex-styles($flex-col-center);
+  border: $color_border-settings-grey;
+  border-radius: $brad-8;
+  background-color: $color_white;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+.thankyou-title {
+  @include apply-flex-styles($flex-row-center);
+}
+
+.thankyou-body {
+  @include apply-flex-styles($flex-row-center);
+}
+
+.thankyou-footer {
+  @include apply-flex-styles($flex-col-center);
+}
+
+// case-study styles
+
+.page-wrapper {
+  @include apply-flex-styles($flex-row-center-start);
+  margin: 0 auto;
+}
+
+.hide-sm {
+  display: none;
+}
+
+@media only screen and (min-width: 425px) {
+  .flex-row {
+    @include apply-flex-styles($flex-row-center-start);
+    align-items: start;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 3em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid lightgray;
+    &.center {
+      align-items: center;
+    }
+  }
+  .no-border {
+    border: none;
+  }
+  .flex-col {
+    flex-wrap: nowrap;
+    @include apply-flex-styles($flex-col-center-start);
+    &.gap-1 {
+      gap: 1em;
+    }
+  }
+  .left-col {
+    @include apply-flex-styles($flex-row-center-space_between);
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+  .right-col {
+    @include apply-flex-styles($flex-row-center-space_between);
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    width: 50%;
+  }
+}
+
+@media (min-width: 480px) {
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .wrapper {
+    padding: 1em;
+  }
+
+  /* thankyou styles  */
+  .thank-you-container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hide-sm {
+    display: flex;
+  }
+
+  .thank-you-container {
+    width: 60%;
+    padding: 2em;
+    margin-bottom: 2em;
+  }
+
+  .thankyou-footer {
+    align-items: center;
+  }
+
+  .col-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    gap: 3em;
+    .left-col {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+    .right-col {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+  }
+  .flex-row-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .flex-col-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+  }
+
+  .grid-container-5col {
+    @include apply-grid-styles($grid-5col-auto);
+    background-color: #d9fffd;
+    padding: 1em;
+    border-radius: $brad-8;
+  }
+  .grid-container-6col {
+    @include apply-grid-styles($grid-6col-auto_start-even);
+    background-color: $background-color_blue;
+    padding: 1em;
+    border-radius: $brad-8;
+  }
+
+  .grid-container-1col .marketing-banner {
+    height: 300px;
+    aspect-ratio: 2/1;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .thank-you-container {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    &.rows-1 {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  .start_even {
+    align-items: start;
+    justify-content: space-evenly;
+  }
+
+  .skills-section {
+    width: -webkit-fill-available;
+    .centered-row {
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: -webkit-fill-available;
+        gap: 10em;
+        border-bottom: none;
+        .left-col,
+        .right-col {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: flex-start;
+          width: 50%;
+          gap: 0;
+          &.width_50 {
+            justify-content: flex-start;
+          }
+          .col {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+        .left-col {
+          gap: 7em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .page-boundary .centered-row {
+    max-width: 80%;
+    align-items: center;
+  }
+
+  .grid-container-1col .marketing-banner {
+    height: 390px;
+  }
+  .grid-container-3col .image-container .gallery .h500-image {
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .experience-wrapper {
+    width: 99%;
+  }
+
+  .skills-section .centered-row {
+    align-items: flex-start;
+    .flex-row {
+      border: none;
+    }
+  }
+
+  .grid-container-1col {
+    width: 97%;
+  }
+
+  .grid-container-4col {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .page-wrapper {
+    width: 70vw;
+    justify-content: space-evenly;
+    gap: 1em;
+  }
+  .page-wrapper article {
+    flex: 0 0 11%;
+  }
+}

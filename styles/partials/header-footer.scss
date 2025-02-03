@@ -152,6 +152,7 @@
     }
   }
 }
+
 // footer styles
 .footer {
   background-color: $color_white;
@@ -188,6 +189,28 @@
     }
   }
 }
+@media only screen and (min-width: 425px) {
+  .home-link {
+    padding-left: 20px;
+  }
+  .menu-toggle {
+    width: 60px;
+  }
+  footer {
+    .footer-container {
+      .footer-details {
+        padding: 2em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  footer .footer-container .footer-details {
+    padding: 2em;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .navbar .navbar-container .nav-menu .navbar-link .accordion {
     display: inherit;

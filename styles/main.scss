@@ -36,15 +36,26 @@ $color_border-settings-grey: 1px solid #d4d4d4;
 $color_border-settings-primary: 1px solid #4eca63;
 $color_border-settings-secondary: 1px solid #2c4465;
 $brad-4: 4px;
+$brad-6: 6px;
 $brad-8: 8px;
 $brad-16: 16px;
 
 // imports
 
+@import './partials/spinner';
 @import './partials/layout';
-@import './partials/stylesheet';
+@import './partials/editorials';
+@import './partials/containers';
 @import './partials/header-footer';
-@import './partials/case-study';
+@import './partials/hero';
+@import './partials/buttons';
+@import './partials/cards';
+@import './partials/form';
+@import './partials/side-bar';
+@import './partials/tabs';
+@import './partials/accordions';
+@import './partials/lightbox';
+@import './partials/bttt-button';
 
 html,
 body {
@@ -131,6 +142,10 @@ ol {
   }
 }
 
+.emphasis {
+  font-weight: 500;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -146,4 +161,16 @@ section {
   gap: 1em;
   width: 100%;
   margin-top: 3em;
+}
+
+@media only screen and (min-width: 1024px) {
+  .body {
+    margin: var(--side-margins-992px);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .main-content {
+    margin-top: 0;
+  }
 }
