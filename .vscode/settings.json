@@ -90,5 +90,9 @@
   },
   "editor.formatOnPaste": false,
   "editor.cursorSmoothCaretAnimation": "on",
-  "prettier.resolveGlobalModules": true
+  "prettier.resolveGlobalModules": true,
+
+  "liveSassCompile.settings.includeItems": ["/styles/main.scss"],
+  "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/**/.vscode/**"],
+  "liveSassCompile.settings.outputDir": "/styles/css"
 }

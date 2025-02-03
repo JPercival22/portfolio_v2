@@ -1,0 +1,82 @@
+// mixins
+@mixin apply-flex-styles($flex-styles) {
+  @each $property, $value in $flex-styles {
+    #{$property}: $value;
+  }
+}
+// flex-col
+$flex-col-center: (
+  display: flex,
+  flex-direction: column,
+  align-items: center,
+  justify-content: center,
+  width: 100%,
+);
+$flex-col-center-start: (
+  display: flex,
+  flex-direction: column,
+  align-items: flex-start,
+  justify-content: center,
+  width: 100%,
+);
+$flex-col-center-end: (
+  display: flex,
+  flex-direction: column,
+  align-items: flex-end,
+  justify-content: center,
+  width: 100%,
+);
+$flex-col-center-space-between: (
+  display: flex,
+  flex-direction: column,
+  align-items: space-between,
+  justify-content: center,
+  width: 100%,
+);
+$flex-col-start-start: (
+  display: flex,
+  flex-direction: column,
+  align-items: flex-start,
+  justify-content: flex-start,
+  width: 100%,
+);
+
+// flex row
+$flex-row-center: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: center,
+  width: 100%,
+);
+
+$flex-row-center-space_between: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: space-between,
+  width: 100%,
+);
+$flex-row-center-space_evenly: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: space-evenly,
+  width: 100%,
+);
+
+$flex-row-center-start: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: flex-start,
+  width: 100%,
+);
+
+$flex-row-center-end: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: flex-end,
+  width: 100%,
+);
