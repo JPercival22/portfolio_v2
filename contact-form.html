@@ -13,17 +13,12 @@
     <!-- Preload hero images -->
     <link
       rel="preload"
-      href="assets/images/hero-images/index/index-hero-banner_sm.svg"
+      href="assets/images/hero-images/index/mobile-hero-min.svg"
       as="image"
-      media="(max-width: 766px)" />
+      media="(max-width: 1023px)" />
     <link
       rel="preload"
-      href="assets/images/hero-images/index/index-hero-banner_md.svg"
-      as="image"
-      media="(min-width: 767px) and (max-width: 1023px)" />
-    <link
-      rel="preload"
-      href="assets/images/hero-images/index/index-hero-banner_lg.svg"
+      href="assets/images/hero-images/index/index-hero_lg.webp"
       as="image"
       media="(min-width: 1024px)" />
 
@@ -78,6 +73,174 @@
         letter-spacing: 0.55pt;
         margin: 0;
       }
+
+      .page-wrapper_initial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1em;
+        margin: 0 auto;
+        background-color: #fff;
+      }
+
+      .hero {
+        height: auto;
+        width: 100%;
+      }
+
+      .index-banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('assets/images/hero-images/index/mobile-hero-min.svg');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 600px;
+      }
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background: #f0f8fffa;
+        border: 1px solid gainsboro;
+        padding: 20px;
+        border-radius: 16px;
+        gap: 0.5em;
+        width: 80vw;
+        box-shadow: 10px 10px 23px -7px rgba(217, 217, 217, 1);
+      }
+      .hero-content h1 {
+        font-size: 1.75rem;
+        line-height: 24.5pt;
+        margin: 0;
+        margin-top: 10px;
+      }
+      .name-container {
+        background-color: #50b3dd;
+        color: #fff;
+        padding: 0 10px;
+        border-radius: 50px;
+      }
+      .name-container p {
+        font-weight: 600;
+        letter-spacing: 3pt;
+        margin: 0;
+      }
+      .hero-content .two-button-container {
+        width: 100%;
+      }
+      .hero-content .two-button-container .primary-button,
+      .hero-content .two-button-container .secondary-button {
+        width: -webkit-fill-available;
+      }
+      .hero-content .two-button-container .primary-button a,
+      .hero-content .two-button-container .secondary-button a {
+        color: #fff;
+      }
+      .editorial {
+        background-color: white;
+        padding: 10px;
+        border-radius: 8px;
+        width: 90vw;
+        gap: 1em;
+      }
+      .quote-text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        font-size: 1.5rem;
+        line-height: 22pt;
+        font-style: italic;
+      }
+      .quote-text .signature {
+        font-size: 1rem;
+        line-height: 0.2rem;
+      }
+      .profile-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .profile-image {
+        width: 150px;
+        height: 150px;
+        background-image: url(./assets/images/hero-images/index/me-min.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #ffffec;
+        border-radius: 100%;
+      }
+      .expanded-headline {
+        font-size: 1.5rem;
+        line-height: 1.3em;
+        color: #4e4e4e;
+      }
+      .highlight-text {
+        color: #0a7d94;
+      }
+      .right-align a {
+        width: auto;
+      }
+      @media (min-width: 768px) {
+        .index-banner {
+          background-image: url('assets/images/hero-images/index/index-hero_lg.webp');
+          background-size: cover;
+          width: 100%;
+          height: 600px;
+        }
+        .hero-content {
+          width: 40vw;
+        }
+        .name-container {
+          padding: 10px 20px;
+        }
+        .name-container p {
+          font-size: 20px;
+        }
+        .hero-content h1 {
+          font-size: 1.7rem;
+          line-height: 36.5pt;
+        }
+      }
+      @media (min-width: 1024px) {
+        .hero-content {
+          width: 300px;
+        }
+      }
+      @media (min-width: 1400px) {
+        .hero-content {
+          width: 300px;
+        }
+        .hero-content .two-button-container {
+          flex-direction: row;
+          gap: 1em;
+        }
+        .hero-content .two-button-container .primary-button,
+        .hero-content .two-button-container .secondary-button {
+          width: 50%;
+        }
+        .quote-text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5em;
+        }
+        .signature {
+          width: 100%;
+          text-align: right;
+          line-height: unset;
+        }
+      }
     </style>
 
     <!-- Preload main stylesheet -->
@@ -123,7 +286,7 @@
               </label>
               <div class="accordion-content">
                 <ul>
-                  <li><a class="case-link" href="come-together.html">Come Together Design & Development</a></li>
+                  <li><a class="case-link" href="come-together.html">Bespoke Design & Development</a></li>
                   <li><a class="case-link" href="syn-ios-app.html">IOS E-Commerce Design</a></li>
                   <li><a class="case-link" href="guitar-tutorial.html">Voice Recognition R&D</a></li>
                 </ul>
@@ -143,36 +306,35 @@
     </header>
 
     <div id="btt-anchor"></div>
-    <main class="p-0">
-      <section class="hero_p-60">
-        <div
-          class="hero index-banner"
-          style="
-            background: url(assets/images/hero-images/index/index-hero-banner_sm.svg) no-repeat top right;
-            @media screen and (min-width: 768px) {
-              background: url(assets/images/hero-images/index/index-hero-banner_md.svg);
-              background-position: center;
-              background-size: contain;
-            }
-            @media only screen and (min-width: 1200px) {
-              background: url(assets/images/hero-images/index/index-hero-banner_lg.svg) no-repeat;
-              background-size: contain;
-              max-width: 1000px;
-            }
-          ">
-          <div class="hero-content">
-            <div class="name-container">
-              <p>JOSEPH PERCIVAL</p>
-            </div>
-            <h1>Lets Get In Touch.</h1>
-          </div>
-        </div>
-      </section>
 
-      <div class="flex-col gap-1 mt-10">
+    <main>
+      <div class="page-wrapper_initial">
         <section>
+          <div class="hero">
+            <div class="image-container">
+              <div class="primary-banner index-banner">
+                <div class="hero-content">
+                  <div class="name-container">
+                    <p>JOSEPH PERCIVAL</p>
+                  </div>
+                  <h1>Let's Get In Touch</h1>
+                  <div class="two-button-container">
+                    <div class="primary-button">
+                      <a href="/contact-form.html">Lets Talk</a>
+                    </div>
+                    <div class="secondary-button">
+                      <a href="#projects">See Projects</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section role="region" aria-labelledby="heading-id">
           <div class="editorial">
-            <p class="qoute-text">
+            <p class="quote-text">
               “Every great design begins with an even better story.”
               <br />
               <sub class="signature">- Lorinda Mamo.</sub>
@@ -180,125 +342,120 @@
           </div>
         </section>
 
-        <section>
-          <div class="editorial">
-            <div class="form-container">
-              <div class="form">
-                <div class="contact-info">
-                  <h2>Let's get in touch</h2>
-                  <p>You can contact me using any of the links below or using the form to send me a message.</p>
-                  <div class="info-card">
-                    <div class="information">
-                      <div class="contact-icon mail-icon"></div>
-                      <div class="col">
-                        <p>Email:</p>
-                        <a class="anchor" href="mailto:josephmpercival@gmail.com">joseph.m.percival@gmail.com</a>
-                      </div>
+        <section class="editorial">
+          <!-- <div class="form-container"> -->
+          <div class="form">
+            <div class="contact-info">
+              <h2>Let's get in touch</h2>
+              <p>You can contact me using any of the links below or using the form to send me a message.</p>
+              <div class="info-card">
+                <div class="item">
+                  <div class="information">
+                    <div class="contact-icon mail-icon"></div>
+                    <div class="col">
+                      <a class="anchor" title="Reach out to me via email." href="mailto:josephmpercival@gmail.com">
+                        Send me a message
+                      </a>
                     </div>
-                    <div class="information">
-                      <div class="contact-icon phone-icon"></div>
-                      <div class="col">
-                        <p>Telephone:</p>
-                        <a class="anchor" href="tel:07709718757">07709718757</a>
-                      </div>
+                  </div>
+                  <div class="information">
+                    <div class="contact-icon phone-icon"></div>
+                    <div class="col">
+                      <a class="anchor" title="Contact me by telephone." href="tel:07709718757">07709718757</a>
                     </div>
-                    <div class="information">
-                      <div class="contact-icon web-icon"></div>
-                      <div class="col">
-                        <p>Web Site:</p>
-                        <a class="anchor" href="/index.html">www.josephmpercival.co.uk</a>
-                      </div>
-                    </div>
-                    <div class="social-media">
-                      <h3 class="subtitle">Connect with me :</h3>
-
-                      <a
-                        href="https://www.linkedin.com/in/joseph-percival/"
-                        class="contact-icon linkedIn"
-                        title="Clicking this link will open my Linked In account in a new window."></a>
-
-                      <p class="small-text">Click the icon to visit my Linked In account.</p>
+                  </div>
+                  <div class="information">
+                    <div class="contact-icon web-icon"></div>
+                    <div class="col">
+                      <a class="anchor" title="Reach out to me through my website." href="/index.html">
+                        Visit my portfolio
+                      </a>
                     </div>
                   </div>
                 </div>
-
-                <div class="contact-form">
-                  <span class="circle one"></span>
-                  <span class="circle two"></span>
-
-                  <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
-                    <input type="hidden" name="_next" value="/thank-you.html" />
-                    <input type="hidden" name="_subject" value="New Email From Portfolio" />
-
-                    <h2 class="title">Contact Me</h2>
-                    <p class="white-text">
-                      Please complete fields marked with *. These are mandatory for the form to send.
-                    </p>
-
-                    <p class="white-text">
-                      Feel free to send me a message, I typically respond within
-                      <em>2 hours</em>
-                      .
-                    </p>
-                    <div class="input-container" title="Please enter your full name here *">
-                      <!-- customers name section  -->
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        class="input"
-                        autocomplete="name"
-                        spellcheck="false"
-                        required />
-                      <label for="name">Name</label>
-                    </div>
-
-                    <div class="input-container" title="Please enter your Email here *">
-                      <input
-                        type="email"
-                        id="email"
-                        class="input"
-                        name="_replyto"
-                        autocomplete="email"
-                        autofocus
-                        spellcheck="false"
-                        required />
-                      <label for="email">Email</label>
-                    </div>
-
-                    <div class="input-container" title="Please enter Your telephone number here (Optional)">
-                      <input
-                        type="tel"
-                        name="phone"
-                        id="phone"
-                        class="input"
-                        autocomplete="tel"
-                        autofocus
-                        spellcheck="false" />
-                      <label for="phone">Telephone</label>
-                    </div>
-
-                    <div class="input-container textarea" title="Please type your brief message here. *">
-                      <textarea
-                        name="message"
-                        id="message"
-                        class="input"
-                        required
-                        autofocus
-                        spellcheck="true"></textarea>
-                      <label for="message">Message</label>
-                    </div>
-
-                    <input
-                      type="submit"
-                      value="Send"
-                      class="submit-btn"
-                      title="Click this button to send your message, after you have check all other fields. Please allow 2 hours for my reply." />
-                  </form>
+                <div class="item">
+                  <div class="social-media">
+                    <h3 class="subtitle">Connect with me :</h3>
+                    <p>Join me on Linked In !</p>
+                    <a
+                      href="https://www.linkedin.com/in/joseph-percival/"
+                      class="contact-icon linkedIn"
+                      title="Clicking this link will open my Linked In account in a new window."></a>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <div class="contact-form">
+              <span class="circle one"></span>
+              <span class="circle two"></span>
+
+              <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
+                <input type="hidden" name="_next" value="/thank-you.html" />
+                <input type="hidden" name="_subject" value="New Email From Portfolio" />
+
+                <h2 class="title">Contact Me</h2>
+                <p class="white-text">
+                  Please complete fields marked with *. These are mandatory for the form to send.
+                </p>
+
+                <p class="white-text">
+                  Feel free to send me a message, I typically respond within
+                  <em>2 hours</em>
+                  .
+                </p>
+                <div class="input-container" title="Please enter your full name here *">
+                  <!-- customers name section  -->
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="input"
+                    autocomplete="name"
+                    spellcheck="false"
+                    required />
+                  <label for="name">Name *</label>
+                </div>
+
+                <div class="input-container" title="Please enter your Email here *">
+                  <input
+                    type="email"
+                    id="email"
+                    class="input"
+                    name="_replyto"
+                    autocomplete="email"
+                    autofocus
+                    spellcheck="false"
+                    required />
+                  <label for="email">Email *</label>
+                </div>
+
+                <div class="input-container" title="Please enter Your telephone number here (Optional)">
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    class="input"
+                    autocomplete="tel"
+                    autofocus
+                    spellcheck="false" />
+                  <label for="phone">Telephone</label>
+                </div>
+
+                <div class="input-container textarea" title="Please type your brief message here. *">
+                  <textarea name="message" id="message" class="input" required autofocus spellcheck="true"></textarea>
+                  <label for="message">Message *</label>
+                </div>
+
+                <input
+                  type="submit"
+                  value="Send"
+                  class="submit-btn"
+                  title="Click this button to send your message, after you have check all other fields. Please allow 2 hours for my reply." />
+              </form>
+            </div>
           </div>
+          <!-- </div> -->
         </section>
       </div>
       <div class="bttt-btn" id="scrollButton" title="Click this button to return to the top of the page.">
@@ -315,7 +472,7 @@
       </div>
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer-container">
         <div class="footer-social-icon">
           <a href="/index.html" class="logo" aria-label="Home"></a>
@@ -323,15 +480,9 @@
             href="https://www.linkedin.com/in/joseph-percival"
             title="Click this link to see my Linked In my account"
             aria-label="linked in button link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none">
-              <rect x="2" y="2" width="28" height="28" rx="14" fill="#1275B1" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#007bb6" height="40" viewBox="0 -960 960 960" width="40">
               <path
-                d="M12.6186 9.69215C12.6186 10.6267 11.8085 11.3843 10.8093 11.3843C9.81004 11.3843 9 10.6267 9 9.69215C9 8.7576 9.81004 8 10.8093 8C11.8085 8 12.6186 8.7576 12.6186 9.69215Z"
-                fill="white" />
-              <path d="M9.24742 12.6281H12.3402V22H9.24742V12.6281Z" fill="white" />
-              <path
-                d="M17.3196 12.6281H14.2268V22H17.3196C17.3196 22 17.3196 19.0496 17.3196 17.2049C17.3196 16.0976 17.6977 14.9855 19.2062 14.9855C20.911 14.9855 20.9008 16.4345 20.8928 17.5571C20.8824 19.0244 20.9072 20.5219 20.9072 22H24V17.0537C23.9738 13.8954 23.1508 12.4401 20.4433 12.4401C18.8354 12.4401 17.8387 13.1701 17.3196 13.8305V12.6281Z"
-                fill="white" />
+                d="M188-212q-23.85 0-39.925-16.075Q132-244.15 132-268v-424q0-23.85 16.075-39.925Q164.15-748 188-748h584q23.85 0 39.925 16.075Q828-715.85 828-692v424q0 23.85-16.075 39.925Q795.85-212 772-212H188Zm616-495.334L496.333-501q-4 2-8 3.5T480-496q-4.333 0-8.333-1.5t-7.334-3.5L156-707.334V-268q0 14 9 23t23 9h584q14 0 23-9t9-23v-439.334ZM480-520.667 787.333-724h-614L480-520.667ZM156-707.334v8-20.678 1.451V-724v5-2.109 21.775-8V-236v-471.334Z" />
             </svg>
           </a>
           <a
@@ -357,7 +508,10 @@
       </div>
     </footer>
 
-    <!-- custom js  -->
-    <script type="module" src="js/main.js" defer></script>
+    <!-- Defer main.js script to ensure it's loaded after HTML parsing -->
+    <script type="module" src="js/main.js"></script>
+
+    <!-- Defer lazySizes library script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
   </body>
 </html>
