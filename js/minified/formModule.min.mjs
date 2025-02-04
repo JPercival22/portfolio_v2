@@ -1,0 +1,1 @@
+export function initializeFormFunctionality(){function focusFunc(){this.parentNode.classList.add("focus")}function blurFunc(){let parent=this.parentNode;""==this.value&&parent.classList.remove("focus")}document.querySelectorAll(".input").forEach((input=>{input.addEventListener("focus",focusFunc),input.addEventListener("blur",blurFunc)}))}

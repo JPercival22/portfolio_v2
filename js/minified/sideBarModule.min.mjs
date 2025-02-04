@@ -1,0 +1,1 @@
+const sidebar=document.querySelector(".mobile-sidebar");function toggleSidebar(){sidebar.classList.toggle("sidebar-open")}function closeSidebarOnLinkClick(){const sidebarLinks=document.querySelectorAll("#sidebar a");sidebarLinks&&sidebarLinks.forEach((link=>{link.addEventListener("click",toggleSidebar)}))}export{toggleSidebar,closeSidebarOnLinkClick};

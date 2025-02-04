@@ -1,6 +1,6 @@
-import { initCarousel } from './carousel.mjs';
-import { setupLazyLoading } from './lazyLoad.mjs';
-import "./mainNavShadow.mjs";
+import { initCarousel } from './carousel.min.mjs';
+import { setupLazyLoading } from './lazyLoad.min.mjs';
+import "./mainNavShadow.min.mjs";
 
 console.log("Calling lazy loading setup...");
 setupLazyLoading(); // Setup lazy loading
@@ -13,14 +13,14 @@ async function addMainFunctionality() {
 
     if (openSidebarBtn) {
       openSidebarBtn.addEventListener('click', async () => {
-        const { toggleSidebar } = await import('./sideBarModule.mjs');
+        const { toggleSidebar } = await import('./sideBarModule.min.mjs');
         toggleSidebar();
       });
     }
 
     if (closeSidebarBtn) {
       closeSidebarBtn.addEventListener('click', async () => {
-        const { toggleSidebar } = await import('./sideBarModule.mjs');
+        const { toggleSidebar } = await import('./sideBarModule.min.mjs');
         toggleSidebar();
       });
     }
@@ -28,32 +28,32 @@ async function addMainFunctionality() {
     // Select menu toggle button and add listener
     const menuToggle = document.querySelector('.menu-toggle');
     if (menuToggle) {
-      const { addToggleListener } = await import('./menuModule.mjs');
+      const { addToggleListener } = await import('./menuModule.min.mjs');
       addToggleListener(menuToggle);
     }
     // Call other dynamic imports
-    const { initReadMore } = await import('./readMore.mjs');
+    const { initReadMore } = await import('./readMore.min.mjs');
     initReadMore();
     // Call other dynamic imports
-    const { scrollHighlight } = await import('./scrollHighlight.mjs');
+    const { scrollHighlight } = await import('./scrollHighlight.min.mjs');
     scrollHighlight();
 
-    const { initializeTabModules } = await import('./tabModule.mjs');
+    const { initializeTabModules } = await import('./tabModule.min.mjs');
     initializeTabModules();
 
-    const { initLightboxFunctionality } = await import('./lightboxModule.mjs');
+    const { initLightboxFunctionality } = await import('./lightboxModule.min.mjs');
     initLightboxFunctionality();
 
-    const { closeSidebarOnLinkClick } = await import('./sideBarModule.mjs');
+    const { closeSidebarOnLinkClick } = await import('./sideBarModule.min.mjs');
     closeSidebarOnLinkClick();
 
-    const { toggleScrolledClass } = await import('./scrollButton.mjs');
+    const { toggleScrolledClass } = await import('./scrollButton.min.mjs');
     toggleScrolledClass();
 
-    const { initializeFormFunctionality } = await import('./formModule.mjs');
+    const { initializeFormFunctionality } = await import('./formModule.min.mjs');
     initializeFormFunctionality();
 
-    const { initAccordion } = await import('./accordion.mjs');
+    const { initAccordion } = await import('./accordion.min.mjs');
     initAccordion();
 
     // Initialize carousels
