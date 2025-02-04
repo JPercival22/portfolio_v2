@@ -1,0 +1,1 @@
+(()=>{const navbar=document.querySelector(".navbar");if(!navbar)return;window.addEventListener("scroll",(()=>{navbar.classList.toggle("scrolled",window.scrollY>0)}))})();

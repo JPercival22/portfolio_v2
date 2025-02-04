@@ -67,7 +67,10 @@
   "cSpell.language": "en-GB",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "files.associations": {
+        "*.min.html": "html"
+    }
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -94,5 +97,14 @@
 
   "liveSassCompile.settings.includeItems": ["/styles/main.scss"],
   "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/**/.vscode/**"],
-  "liveSassCompile.settings.outputDir": "/styles/css"
+  "liveSassCompile.settings.outputDir": "/styles/css",
+
+  "minify.minifyOnSave": true,
+  "minify.jsMinPath": "dist", // Output directory for minified JS
+  "minify.cssMinPath": "dist", // Output directory for minified CSS
+  "minify.htmlMinPath": "dist", // Output directory for minified HTML
+  "minify.jsMinFileExtension": ".min.js", // Minified JS file suffix
+  "minify.cssMinFileExtension": ".min.css", // Minified CSS file suffix
+  "minify.htmlMinFileExtension": ".min.html", // Minified HTML file suffix
+  "minify.exclude": ["node_modules", ".vscode"] // Exclude folders from minification
 }
