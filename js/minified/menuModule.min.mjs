@@ -1,1 +1,0 @@
-function toggleMobileMenu(event){event.target.closest("nav").querySelector(".nav-menu").classList.toggle("show")}function addToggleListener(menuToggle){menuToggle.addEventListener("click",toggleMobileMenu)}function removeToggleListener(menuToggle){menuToggle.removeEventListener("click",toggleMobileMenu)}export{addToggleListener,removeToggleListener};
