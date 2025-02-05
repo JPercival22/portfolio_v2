@@ -1,4 +1,5 @@
 // Typography
+
 $font-family: 'Poppins', sans-serif;
 
 // color palette
@@ -6,7 +7,6 @@ $color_base-bkg: #30a7bf;
 $color_base-bkg-dark: darken($color_base-bkg, 10%);
 $color_base-bkg-light: #dcfbff;
 $color_pButton_hover: #4f73a4;
-
 $color-sButton: #2b737c;
 $color-sButton_hover: #0a7d94;
 
@@ -22,7 +22,6 @@ $color_brand: #2c4465;
 $background-color_blue: #f0f8ff;
 $background-color_teal: #4fbdd2;
 $background-color_link: #1b1bac;
-// green scale
 
 //yellow scale
 $background-color_yellow: #fff2ce;
@@ -31,6 +30,7 @@ $background-color_yellow: #fff2ce;
 $b-shadow: 0px 0px 8px 0px rgba(201, 201, 201, 0.9);
 $br-shadow: 4px 4px 4px 0px rgba(201, 201, 201, 0.9);
 $top-shadow: 1px -5px 5px 0px rgba(201, 201, 201, 0.6);
+
 // border-settings
 $color_border-settings-grey: 1px solid #d4d4d4;
 $color_border-settings-primary: 1px solid #4eca63;
@@ -45,6 +45,7 @@ $brad-16: 16px;
     #{$property}: $value;
   }
 }
+
 // flex-col
 $flex-col-center: (
   display: flex,
