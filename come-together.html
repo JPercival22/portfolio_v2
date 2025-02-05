@@ -336,9 +336,9 @@
       }
     </style>
     <!-- Preload main stylesheet -->
-    <link rel="preload" href="styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="styles/stylesheet.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript>
-      <link rel="stylesheet" href="styles/stylesheet.css" />
+      <link rel="stylesheet" href="styles/stylesheet.min.css" />
     </noscript>
   </head>
 
@@ -400,7 +400,7 @@
     <div id="btt-anchor"></div>
 
     <main>
-      <div class="page-wrapper">
+      <div class="lazyload lazyblurry page-wrapper">
         <div id="pageContent" class="contents">
           <button type="button" class="open-sidebar-btn" aria-label="Open side bar button">
             <span class="material-symbols-outlined">chevron_right</span>
