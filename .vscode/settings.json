@@ -90,5 +90,7 @@
   },
   "editor.formatOnPaste": false,
   "editor.cursorSmoothCaretAnimation": "on",
-  "prettier.resolveGlobalModules": true
+  "prettier.resolveGlobalModules": true,
+  "autoMinify.ignore": ["**/*.html", "**/*.js"],
+  "autoMinify.minifyHTML": false
 }
