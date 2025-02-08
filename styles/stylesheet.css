@@ -200,7 +200,11 @@ section {
   width: 100%;
   padding: 10px 0;
 }
-.navbar .navbar-container .home-link .navbar-logo img {
+.navbar .navbar-container .home-link .navbar-logo .logo {
+  background-image: url("../assets/images/iconography/jp-LOGO-mini.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 60px;
   height: 60px;
   background-color: #fff;
@@ -1723,15 +1727,49 @@ textarea.input {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  padding: 1em;
+  height: 50px;
 }
 .footer .footer-container .footer-social-icon a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity ease-in-out 0.3s;
+}
+.footer .footer-container .footer-social-icon a .Home-icon {
+  background-image: url("../assets/images/iconography/Home-Icon-min.svg");
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.footer .footer-container .footer-social-icon a .linkedIn-icon {
+  background-image: url("../assets/images/iconography/linkedin-min.svg");
   width: 40px;
   height: 40px;
-}
-.footer .footer-container .footer-social-icon a.logo {
-  background: url(../assets/images/jp-LOGO-mini.svg) no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: contain;
+}
+.footer .footer-container .footer-social-icon a .gitHub-icon {
+  background-image: url("../assets/images/iconography/github-logo-min.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.footer .footer-container .footer-social-icon a .cv-icon {
+  background-image: url("../assets/images/iconography/cv-icon-min.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.footer .footer-container .footer-social-icon a:hover {
+  opacity: 0.7;
 }
 .footer .footer-container .copy-panel {
   display: flex;
