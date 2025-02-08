@@ -1231,9 +1231,10 @@ textarea.input {
     }
     ul {
       list-style-type: none;
-      margin: 0 1em;
       gap: 1em;
+      margin-left: 0;
     }
+
     li {
       font-family: inherit;
       width: 100%;
@@ -1245,6 +1246,51 @@ textarea.input {
       transition: 0.3s;
       @include apply-flex-styles($flex-row-center-start);
       flex-wrap: nowrap;
+      .side-bar-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: #404040;
+        width: 40px;
+        height: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &.introduction-icon {
+          background-image: url('../assets/images/Case-Studies/side-bar-icons/Intro-Icon-min.svg');
+        }
+        &.research-icon {
+          background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
+        }
+        &.IA-icon {
+          background-image: url('../assets/images/Case-Studies/side-bar-icons/IA-Icon-min.svg');
+        }
+        &.ID-icon {
+          background-image: url('../assets/images/Case-Studies/side-bar-icons/Inter-Design-Icon-min.svg');
+        }
+        &.Lo-Fi-icon {
+          background-image: url('../assets/images/Case-Studies/side-bar-icons/Lo-Fi-Icon-min.svg');
+        }
+        &.DesSystem-icon {
+          background-image: url('../assets/images/Case-Studies/side-bar-icons/Des-System-Icon-min.svg');
+        }
+        &.Hi-Fi-icon {
+          background-image: url('../assets/images/Case-Studies/side-bar-icons/HiFi-Icon-min.svg');
+        }
+        &.UXTesting-icon {
+          background-image: url('../assets/images/Case-Studies/side-bar-icons/UXTest-icon-min.svg');
+        }
+        &.Results-icon {
+          background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
+        }
+        &.Conc-icon {
+          background-image: url('../assets/images/Case-Studies/side-bar-icons/Conclusion-Icon-min.svg');
+        }
+        &.Info-icon {
+          background-image: url('../assets/images/Case-Studies/side-bar-icons/Info-Icon-min.svg');
+        }
+      }
       .nav-item {
         margin-left: 10px;
         fill: #404040;
@@ -1341,7 +1387,6 @@ textarea.input {
       height: auto;
     }
     a {
-      color: $color_primary_text;
       font-weight: 500;
       text-decoration: underline;
       color: $color_brand;
@@ -1619,8 +1664,6 @@ textarea.input {
 
 .bttt-btn {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
   padding: 15px;
   background-color: #007bff;
   color: #fff;
@@ -3031,7 +3074,7 @@ textarea.input {
         background-color: $color_white;
         border-radius: $brad-8;
         display: flex;
-        height: calc(100vh - 13em);
+        height: calc(100vh - 12em);
         width: fit-content;
         position: fixed;
         .sideBar-content {
@@ -3074,9 +3117,45 @@ textarea.input {
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: center;
-                color: #3f3f3f;
-                max-width: 30px;
-                max-height: 30px;
+                color: #404040;
+                width: 40px;
+                height: 40px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                &.introduction-icon {
+                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Intro-Icon-min.svg');
+                }
+                &.research-icon {
+                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
+                }
+                &.IA-icon {
+                  background-image: url('../assets/images/Case-Studies/side-bar-icons/IA-Icon-min.svg');
+                }
+                &.ID-icon {
+                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Inter-Design-Icon-min.svg');
+                }
+                &.Lo-Fi-icon {
+                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Lo-Fi-Icon-min.svg');
+                }
+                &.DesSystem-icon {
+                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Des-System-Icon-min.svg');
+                }
+                &.Hi-Fi-icon {
+                  background-image: url('../assets/images/Case-Studies/side-bar-icons/HiFi-Icon-min.svg');
+                }
+                &.UXTesting-icon {
+                  background-image: url('../assets/images/Case-Studies/side-bar-icons/UXTest-icon-min.svg');
+                }
+                &.Results-icon {
+                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
+                }
+                &.Conc-icon {
+                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Conclusion-Icon-min.svg');
+                }
+                &.Info-icon {
+                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Info-Icon-min.svg');
+                }
               }
             }
           }

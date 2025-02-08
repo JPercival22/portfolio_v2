@@ -1191,8 +1191,8 @@ textarea.input {
 }
 .mobile-sidebar.sidebar-open ul {
   list-style-type: none;
+  margin: 0 1em;
   gap: 1em;
-  margin-left: 0;
 }
 .mobile-sidebar.sidebar-open li {
   font-family: inherit;
@@ -1209,51 +1209,6 @@ textarea.input {
   justify-content: flex-start;
   width: 100%;
   flex-wrap: nowrap;
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  color: #404040;
-  width: 40px;
-  height: 40px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon.introduction-icon {
-  background-image: url("../assets/images/Case-Studies/side-bar-icons/Intro-Icon-min.svg");
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon.research-icon {
-  background-image: url("../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg");
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon.IA-icon {
-  background-image: url("../assets/images/Case-Studies/side-bar-icons/IA-Icon-min.svg");
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon.ID-icon {
-  background-image: url("../assets/images/Case-Studies/side-bar-icons/Inter-Design-Icon-min.svg");
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon.Lo-Fi-icon {
-  background-image: url("../assets/images/Case-Studies/side-bar-icons/Lo-Fi-Icon-min.svg");
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon.DesSystem-icon {
-  background-image: url("../assets/images/Case-Studies/side-bar-icons/Des-System-Icon-min.svg");
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon.Hi-Fi-icon {
-  background-image: url("../assets/images/Case-Studies/side-bar-icons/HiFi-Icon-min.svg");
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon.UXTesting-icon {
-  background-image: url("../assets/images/Case-Studies/side-bar-icons/UXTest-icon-min.svg");
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon.Results-icon {
-  background-image: url("../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg");
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon.Conc-icon {
-  background-image: url("../assets/images/Case-Studies/side-bar-icons/Conclusion-Icon-min.svg");
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon.Info-icon {
-  background-image: url("../assets/images/Case-Studies/side-bar-icons/Info-Icon-min.svg");
 }
 .mobile-sidebar.sidebar-open a .nav-item {
   margin-left: 10px;
@@ -3093,7 +3048,7 @@ textarea.input {
     background-color: #fff;
     border-radius: 8px;
     display: flex;
-    height: calc(100vh - 12em);
+    height: calc(100vh - 13em);
     width: fit-content;
     position: fixed;
   }
@@ -3146,44 +3101,6 @@ textarea.input {
     align-items: flex-start;
     justify-content: center;
     color: #404040;
-    width: 40px;
-    height: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon.introduction-icon {
-    background-image: url("../assets/images/Case-Studies/side-bar-icons/Intro-Icon-min.svg");
-  }
-  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon.research-icon {
-    background-image: url("../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg");
-  }
-  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon.IA-icon {
-    background-image: url("../assets/images/Case-Studies/side-bar-icons/IA-Icon-min.svg");
-  }
-  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon.ID-icon {
-    background-image: url("../assets/images/Case-Studies/side-bar-icons/Inter-Design-Icon-min.svg");
-  }
-  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon.Lo-Fi-icon {
-    background-image: url("../assets/images/Case-Studies/side-bar-icons/Lo-Fi-Icon-min.svg");
-  }
-  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon.DesSystem-icon {
-    background-image: url("../assets/images/Case-Studies/side-bar-icons/Des-System-Icon-min.svg");
-  }
-  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon.Hi-Fi-icon {
-    background-image: url("../assets/images/Case-Studies/side-bar-icons/HiFi-Icon-min.svg");
-  }
-  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon.UXTesting-icon {
-    background-image: url("../assets/images/Case-Studies/side-bar-icons/UXTest-icon-min.svg");
-  }
-  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon.Results-icon {
-    background-image: url("../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg");
-  }
-  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon.Conc-icon {
-    background-image: url("../assets/images/Case-Studies/side-bar-icons/Conclusion-Icon-min.svg");
-  }
-  .page-wrapper article .sideBar .sideBar-content ul .side-bar-list-item .side-bar-icon.Info-icon {
-    background-image: url("../assets/images/Case-Studies/side-bar-icons/Info-Icon-min.svg");
   }
   .page-wrapper .main-content {
     margin-top: 0;
