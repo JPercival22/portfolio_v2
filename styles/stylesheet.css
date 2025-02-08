@@ -1064,14 +1064,30 @@ textarea.input {
   background-color: #fff;
   padding: 8px;
   margin: 0 auto;
+  gap: 1em;
+  width: unset;
 }
-
-.thankyou-title {
+.thank-you-container .thankyou-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0;
+}
+.thank-you-container .thankyou-header .gif {
+  display: inherit;
+  width: 200px;
+  height: auto;
+}
+.thank-you-container .thankyou-header .thankyou-title {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+.thank-you-container .thankyou-header .thankyou-title h1 {
+  margin: 0;
 }
 
 .thankyou-body {
@@ -1088,6 +1104,7 @@ textarea.input {
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 1em;
 }
 
 .italic {
@@ -2194,12 +2211,9 @@ textarea.input {
   /* contact page styles  */
   /* thankyou styles  */
   .thank-you-container {
-    width: 60%;
+    width: 40%;
     padding: 2em;
     margin-bottom: 2em;
-  }
-  .thankyou-footer {
-    align-items: center;
   }
   .editorial .hero {
     display: inherit;
@@ -2544,7 +2558,7 @@ textarea.input {
   }
   /* thankyou styles  */
   .thank-you-container {
-    width: 40%;
+    width: 30%;
   }
   .contents {
     left: 2em;
@@ -3178,6 +3192,10 @@ textarea.input {
   }
   .editorial .grid-container.rows-1 .grid-item ul {
     margin-left: 0;
+  }
+  /* thankyou styles  */
+  .thank-you-container {
+    width: 20%;
   }
   .experience-wrapper {
     width: 99%;

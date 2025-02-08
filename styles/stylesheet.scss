@@ -1147,10 +1147,26 @@ textarea.input {
   background-color: $color_white;
   padding: 8px;
   margin: 0 auto;
-}
-
-.thankyou-title {
-  @include apply-flex-styles($flex-row-center);
+  gap: 1em;
+  width: unset;
+  .thankyou-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+    .gif {
+      display: inherit;
+      width: 200px;
+      height: auto;
+    }
+    .thankyou-title {
+      @include apply-flex-styles($flex-row-center);
+      h1 {
+        margin: 0;
+      }
+    }
+  }
 }
 
 .thankyou-body {
@@ -1159,6 +1175,7 @@ textarea.input {
 
 .thankyou-footer {
   @include apply-flex-styles($flex-col-center);
+  gap: 1em;
 }
 .italic {
   font-style: italic;
@@ -2085,13 +2102,9 @@ textarea.input {
 
   /* thankyou styles  */
   .thank-you-container {
-    width: 60%;
+    width: 40%;
     padding: 2em;
     margin-bottom: 2em;
-  }
-
-  .thankyou-footer {
-    align-items: center;
   }
 
   // case study styles
@@ -2450,7 +2463,7 @@ textarea.input {
   }
   /* thankyou styles  */
   .thank-you-container {
-    width: 40%;
+    width: 30%;
   }
 
   // case study styles
@@ -3134,7 +3147,10 @@ textarea.input {
       }
     }
   }
-
+  /* thankyou styles  */
+  .thank-you-container {
+    width: 20%;
+  }
   .experience-wrapper {
     width: 99%;
   }
