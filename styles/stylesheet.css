@@ -1569,6 +1569,155 @@ textarea.input {
   margin: 0;
 }
 
+.achievements-section .editorial .grid-container-3col,
+.achievements-section .editorial .grid-container-3col .achievement,
+.achievements-section .editorial .grid-container-3col .achievement .image-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.achievements-section .editorial .grid-container-3col .invest-img,
+.achievements-section .editorial .grid-container-3col .achievement .invest-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .invest-img {
+  background-image: url("../assets/images/banners/metric-vectors/investment-vector.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+.achievements-section .editorial .grid-container-3col .traffic-img,
+.achievements-section .editorial .grid-container-3col .achievement .traffic-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .traffic-img {
+  background-image: url("../assets/images/banners/metric-vectors/traffic-vector.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+.achievements-section .editorial .grid-container-3col .speed-img,
+.achievements-section .editorial .grid-container-3col .achievement .speed-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .speed-img {
+  background-image: url("../assets/images/banners/metric-vectors/speed-vector.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+.achievements-section .editorial .grid-container-3col .awareness-img,
+.achievements-section .editorial .grid-container-3col .achievement .awareness-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .awareness-img {
+  background-image: url("../assets/images/banners/metric-vectors/awareness-vector.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+.achievements-section .editorial .grid-container-3col .engagement-img,
+.achievements-section .editorial .grid-container-3col .achievement .engagement-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .engagement-img {
+  background-image: url("../assets/images/Case-Studies/CS2/metric-banners/User-Engagement-Icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+.achievements-section .editorial .grid-container-3col .innovate-img,
+.achievements-section .editorial .grid-container-3col .achievement .innovate-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .innovate-img {
+  background-image: url("../assets/images/Case-Studies/CS2/metric-banners/Innovate-Icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+.achievements-section .editorial .grid-container-3col .iterate-img,
+.achievements-section .editorial .grid-container-3col .achievement .iterate-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .iterate-img {
+  background-image: url("../assets/images/Case-Studies/CS2/metric-banners/Iterative-icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+.achievements-section .editorial .grid-container-3col .task-img,
+.achievements-section .editorial .grid-container-3col .achievement .task-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .task-img {
+  background-image: url("../assets/images/Case-Studies/CS2/metric-banners/Test-rate-icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+.achievements-section .editorial .grid-container-3col .accuracy-img,
+.achievements-section .editorial .grid-container-3col .achievement .accuracy-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .accuracy-img {
+  background-image: url("../assets/images/banners/metric-vectors/accuracy-icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+.achievements-section .editorial .grid-container-3col .efficiency-img,
+.achievements-section .editorial .grid-container-3col .achievement .efficiency-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .efficiency-img {
+  background-image: url("../assets/images/banners/metric-vectors/efficiency-icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+.achievements-section .editorial .grid-container-3col .satisfaction-img,
+.achievements-section .editorial .grid-container-3col .achievement .satisfaction-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .satisfaction-img {
+  background-image: url("../assets/images/banners/metric-vectors/satisfaction-icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 600px;
+}
+.achievements-section .editorial .grid-container-3col .usability-img,
+.achievements-section .editorial .grid-container-3col .achievement .usability-img,
+.achievements-section .editorial .grid-container-3col .achievement .image-container .usability-img {
+  background-image: url("../assets/images/banners/metric-vectors/user-testing-icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+}
+
+.editorial .grid-container-3col .achievement .banner-img {
+  width: 60%;
+  height: auto;
+}
+
+.achievements-section .editorial .grid-container-3col .achievement .stat {
+  font-size: 27px;
+  font-weight: 600;
+  color: #4f73a4;
+}
+
+.achievements-section .editorial .grid-container-3col .achievement .highlight {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .carousel-container {
   position: relative;
   overflow: hidden;
@@ -2167,6 +2316,30 @@ textarea.input {
     align-items: start;
     justify-content: space-evenly;
   }
+  .achievements-section .editorial .flex-row {
+    flex-direction: row;
+  }
+  .achievements-section .editorial .flex-row .col .left-align,
+  .achievements-section .editorial .flex-row .col .right-align {
+    width: 100%;
+  }
+  .achievements-section .editorial .flex-row .col .right-align .primary-button {
+    width: 40%;
+    margin: 0;
+  }
+  .achievements-section .editorial .grid-container-3col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1em;
+  }
+  .achievements-section .editorial .grid-container-3col .achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+  }
   .banner-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2661,6 +2834,28 @@ textarea.input {
   }
   .grid-container-1col .marketing-banner {
     height: 350px;
+  }
+  .achievements-section .editorial .grid-container-3col {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 0;
+  }
+  .achievements-section .editorial .grid-container-3col .achievement {
+    height: 190px;
+  }
+  .achievements-section .editorial .grid-container-3col .achievement .image-container {
+    height: 80px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .achievements-section .editorial .grid-container-3col .achievement .banner-img {
+    width: 50%;
+  }
+  .achievements-section .editorial .grid-container-3col .achievement .stat {
+    font-size: 20px;
+  }
+  .achievements-section .editorial .grid-container-3col .achievement .highlight {
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 1200px) {

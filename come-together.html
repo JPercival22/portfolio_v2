@@ -124,31 +124,7 @@
         justify-content: center;
         gap: 1em;
       }
-      .achievements-section .editorial .grid-container-3col,
-      .achievements-section .editorial .grid-container-3col .achievement,
-      .achievements-section .editorial .grid-container-3col .achievement .image-container {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-        align-items: center;
-        text-align: center;
-      }
-      .editorial .grid-container-3col .achievement .banner-img {
-        width: 60%;
-        height: auto;
-      }
 
-      .achievements-section .editorial .grid-container-3col .achievement .stat {
-        font-size: 27px;
-        font-weight: 600;
-        color: #4f73a4;
-      }
-      .achievements-section .editorial .grid-container-3col .achievement .highlight {
-        font-size: 18px;
-        font-weight: 500;
-        font-style: normal;
-      }
       .tertiary-link {
         display: flex;
         width: 100%;
@@ -235,60 +211,6 @@
           background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_md.webp');
           background-size: contain;
           border-radius: 8px;
-        }
-
-        .achievements-section .editorial .flex-row {
-          flex-direction: row;
-        }
-
-        .achievements-section .editorial .flex-row .col .left-align,
-        .achievements-section .editorial .flex-row .col .right-align {
-          width: 100%;
-        }
-
-        .achievements-section .editorial .flex-row .col .right-align .primary-button {
-          width: 40%;
-          margin: 0;
-        }
-
-        .achievements-section .editorial .grid-container-3col {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: auto;
-          grid-gap: 1em;
-        }
-        .achievements-section .editorial .grid-container-3col .achievement {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-between;
-          gap: 1em;
-        }
-      }
-      @media only screen and (min-width: 1024px) {
-        .achievements-section .editorial .grid-container-3col {
-          grid-template-columns: repeat(4, 1fr);
-          margin-top: 0;
-        }
-        .achievements-section .editorial .grid-container-3col .achievement {
-          height: 190px;
-        }
-        .achievements-section .editorial .grid-container-3col .achievement .image-container {
-          height: 80px;
-          flex-direction: row;
-          align-items: flex-start;
-          justify-content: center;
-        }
-        .achievements-section .editorial .grid-container-3col .achievement .banner-img {
-          width: 50%;
-        }
-
-        .achievements-section .editorial .grid-container-3col .achievement .stat {
-          font-size: 20px;
-        }
-
-        .achievements-section .editorial .grid-container-3col .achievement .highlight {
-          font-size: 16px;
         }
       }
 
@@ -646,28 +568,28 @@
               <div class="grid-container-3col">
                 <div class="achievement">
                   <div class="image-container">
-                    <img class="banner-img" src="./assets/images/banners/metric-vectors/investment-vector.svg" width="50" height="50" alt="" />
+                    <div class="invest-img"></div>
                   </div>
                   <span class="stat">Investment</span>
                   <span class="highlight">Client Gained National Lottery Funding</span>
                 </div>
                 <div class="achievement">
                   <div class="image-container">
-                    <img class="banner-img" src="./assets/images/banners/metric-vectors/traffic-vector.svg" width="50" height="50" alt="" />
+                    <div class="traffic-img"></div>
                   </div>
                   <span class="stat">Traffic</span>
                   <span class="highlight">100% Growth In All Website Traffic</span>
                 </div>
                 <div class="achievement">
                   <div class="image-container">
-                    <img class="banner-img" src="./assets/images/banners/metric-vectors/speed-vector.svg" width="50" height="50" alt="" />
+                    <div class="speed-img"></div>
                   </div>
                   <span class="stat">Page Speed</span>
                   <span class="highlight">96% Secure Page Speeds Improvements</span>
                 </div>
                 <div class="achievement">
                   <div class="image-container">
-                    <img class="banner-img" src="./assets/images/banners/metric-vectors/awareness-vector.svg" width="50" height="50" alt="" />
+                    <div class="awareness-img"></div>
                   </div>
                   <span class="stat">Awareness</span>
                   <span class="highlight">100% Increase In Social Media Referrals</span>
