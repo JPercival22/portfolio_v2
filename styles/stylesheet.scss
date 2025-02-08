@@ -336,7 +336,12 @@ section {
       cursor: pointer;
       padding: 0;
       .icon-bar {
-        fill: $color_brand;
+        background-image: url('../assets/images/iconography/menu-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 30px;
+        height: 30px;
       }
     }
 
