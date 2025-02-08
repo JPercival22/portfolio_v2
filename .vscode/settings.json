@@ -92,5 +92,14 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "prettier.resolveGlobalModules": true,
   "autoMinify.ignore": ["**/*.html", "**/*.js"],
-  "autoMinify.minifyHTML": false
+  "autoMinify.minifyHTML": false,
+
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "./styles"
+    }
+  ],
+  "liveSassCompile.settings.autoprefix": true
 }
