@@ -187,6 +187,14 @@ main {
   }
 }
 
+h1 {
+  color: #2c4465;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 h2 {
   font-weight: 500;
   font-size: 1.35rem;
@@ -209,6 +217,14 @@ h4 {
   line-height: 1;
   margin-bottom: 0.7rem;
   color: $color_brand;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 15pt;
+  letter-spacing: 0.55pt;
+  margin: 0;
 }
 
 a {
@@ -464,6 +480,49 @@ section {
   width: 100%;
 }
 .editorial {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 90vw;
+  gap: 1em;
+  display: inherit;
+  flex-direction: inherit;
+}
+.editorial .grid-container-2col {
+  margin-top: 0;
+}
+.editorial .flex-row,
+.editorial .flex-row .col,
+.editorial .flex-row .col .right-align {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.tertiary-link {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.5s ease-in-out;
+  border-radius: 8px;
+  text-decoration: underline;
+}
+
+.tertiary-link:hover {
+  background-color: #aafadf;
+  text-decoration: none;
+}
+
+.tertiary-link svg {
+  width: 50px;
+  height: auto;
+}
+
+.editorial {
   .wide-card {
     @include apply-flex-styles($flex-col-center);
     border: $color_border-settings-grey;
@@ -576,6 +635,13 @@ section {
   }
 }
 
+#project-information .editorial .skills-section .centered-row {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 .editorial {
   &.border {
     border-width: 5px;
@@ -637,70 +703,70 @@ section {
     }
 
     .Brief-banner {
-      background-image: url(../assets/images/banners/section/brief-banner-min.svg);
+      background-image: url(../assets/images/Case-Studies/banners/section/brief-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Research-banner {
-      background-image: url(../assets/images/banners/section/research-banner-min.svg);
+      background-image: url(../assets/images/Case-Studies/banners/section/research-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .IA-banner {
-      background-image: url(../assets/images/banners/section/IA-banner-min.svg);
+      background-image: url(../assets/images/Case-Studies/banners/section/IA-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Interaction-banner {
-      background-image: url(../assets/images/banners/section/Interaction-banner-min.svg);
+      background-image: url(../assets/images/Case-Studies/banners/section/Interaction-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Low-Fi-banner {
-      background-image: url(../assets/images/banners/section/Low-Fi-banner-min.svg);
+      background-image: url(../assets/images/Case-Studies/banners/section/Low-Fi-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Design-System-banner {
-      background-image: url(../assets/images/banners/section/Design-System-Banner-min.svg);
+      background-image: url(../assets/images/Case-Studies/banners/section/Design-System-Banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Hi-Fi-banner {
-      background-image: url(../assets/images/banners/section/Hi-Fi-banner-min.svg);
+      background-image: url(../assets/images/Case-Studies/banners/section/Hi-Fi-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .testing-banner {
-      background-image: url(../assets/images/banners/section/UX-Testing-banner-min.svg);
+      background-image: url(../assets/images/Case-Studies/banners/section/UX-Testing-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .Results-banner {
-      background-image: url(../assets/images/banners/section/Test-Results-Banner-min.svg);
+      background-image: url(../assets/images/Case-Studies/banners/section/Test-Results-Banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
       height: 150px;
     }
     .conclusion-banner {
-      background-image: url(../assets/images/banners/section/Conclusion-banner-min.svg);
+      background-image: url(../assets/images/Case-Studies/banners/section/Conclusion-banner-min.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 200px;
@@ -1217,12 +1283,12 @@ textarea.input {
   }
 }
 
-.sideBar {
-  display: none;
-}
+// .sideBar {
+//   display: none;
+// }
 
 .mobile-sidebar {
-  display: none;
+  // display: none;
   opacity: 0;
   &.sidebar-open {
     @include apply-flex-styles($flex-col-start-start);
@@ -1539,7 +1605,7 @@ textarea.input {
   justify-content: space-evenly;
   text-align: center;
   .invest-img {
-    background-image: url('../assets/images/banners/metric-vectors/investment-vector.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/investment-vector.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1547,7 +1613,7 @@ textarea.input {
     height: 80px;
   }
   .traffic-img {
-    background-image: url('../assets/images/banners/metric-vectors/traffic-vector.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/traffic-vector.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1555,7 +1621,7 @@ textarea.input {
     height: 80px;
   }
   .speed-img {
-    background-image: url('../assets/images/banners/metric-vectors/speed-vector.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/speed-vector.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1563,7 +1629,7 @@ textarea.input {
     height: 80px;
   }
   .awareness-img {
-    background-image: url('../assets/images/banners/metric-vectors/awareness-vector.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/awareness-vector.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1571,7 +1637,7 @@ textarea.input {
     height: 80px;
   }
   .engagement-img {
-    background-image: url('../assets/images/Case-Studies/CS2/metric-banners/User-Engagement-Icon.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/User-Engagement-Icon.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1579,7 +1645,7 @@ textarea.input {
     height: 80px;
   }
   .innovate-img {
-    background-image: url('../assets/images/Case-Studies/CS2/metric-banners/Innovate-Icon.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Innovate-Icon.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1587,7 +1653,7 @@ textarea.input {
     height: 80px;
   }
   .iterate-img {
-    background-image: url('../assets/images/Case-Studies/CS2/metric-banners/Iterative-icon.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Iterative-icon.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1595,7 +1661,7 @@ textarea.input {
     height: 80px;
   }
   .task-img {
-    background-image: url('../assets/images/Case-Studies/CS2/metric-banners/Test-rate-icon.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Test-rate-icon.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1603,7 +1669,7 @@ textarea.input {
     height: 80px;
   }
   .accuracy-img {
-    background-image: url('../assets/images/banners/metric-vectors/accuracy-icon.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/accuracy-icon.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1611,7 +1677,7 @@ textarea.input {
     height: 80px;
   }
   .efficiency-img {
-    background-image: url('../assets/images/banners/metric-vectors/efficiency-icon.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/efficiency-icon.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1619,7 +1685,7 @@ textarea.input {
     height: 80px;
   }
   .satisfaction-img {
-    background-image: url('../assets/images/banners/metric-vectors/satisfaction-icon.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/satisfaction-icon.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1627,7 +1693,7 @@ textarea.input {
     height: 600px;
   }
   .usability-img {
-    background-image: url('../assets/images/banners/metric-vectors/user-testing-icon.svg');
+    background-image: url('../assets/images/Case-Studies/banners/metric-vectors/user-testing-icon.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1929,6 +1995,11 @@ textarea.input {
     flex-wrap: nowrap;
     align-items: flex-start;
     width: 50%;
+  }
+
+  .editorial .grid-container-3col .achievement .banner-img {
+    width: 40%;
+    height: auto;
   }
 
   footer {
@@ -3296,14 +3367,11 @@ textarea.input {
   }
 
   .page-wrapper {
-    display: flex;
     align-items: flex-start;
-    justify-content: center;
     width: 90vw;
-    margin: 0 auto;
     article {
       display: flex;
-      flex: 0 0 23%;
+      flex: 0 0 28%;
       .sideBar {
         background-color: $color_white;
         border-radius: $brad-8;

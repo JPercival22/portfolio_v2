@@ -62,21 +62,7 @@
           background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp');
         }
       }
-      h1 {
-        color: #2c4465;
-        font-weight: 500;
-        font-size: 1.5rem;
-        line-height: 1.5;
-        margin: 0;
-      }
 
-      p {
-        font-size: 1rem;
-        font-weight: 300;
-        line-height: 15pt;
-        letter-spacing: 0.55pt;
-        margin: 0;
-      }
       .hero .case-study-settings {
         display: flex;
         flex-direction: column;
@@ -102,48 +88,6 @@
         align-items: flex-start;
         gap: 1em;
         flex-wrap: nowrap;
-      }
-      .editorial {
-        background-color: white;
-        padding: 10px;
-        border-radius: 8px;
-        width: 90vw;
-        gap: 1em;
-        display: inherit;
-        flex-direction: inherit;
-      }
-      .editorial .grid-container-2col {
-        margin-top: 0;
-      }
-      .editorial .flex-row,
-      .editorial .flex-row .col,
-      .editorial .flex-row .col .right-align {
-        display: inherit;
-        flex-direction: inherit;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-      }
-
-      .tertiary-link {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        transition: background-color 0.5s ease-in-out;
-        border-radius: 8px;
-        text-decoration: underline;
-      }
-
-      .tertiary-link:hover {
-        background-color: #aafadf;
-        text-decoration: none;
-      }
-
-      .tertiary-link svg {
-        width: 50px;
-        height: auto;
       }
 
       .hero .case-study-settings .space-between .col .two-button-container.right-align {
@@ -173,19 +117,6 @@
         border-radius: 0 0 10px 10px;
       }
 
-      #project-information .editorial .skills-section .centered-row {
-        display: inherit;
-        flex-direction: inherit;
-        align-items: flex-start;
-        justify-content: space-between;
-      }
-
-      @media only screen and (min-width: 425px) {
-        .editorial .grid-container-3col .achievement .banner-img {
-          width: 40%;
-          height: auto;
-        }
-      }
       @media only screen and (min-width: 768px) {
         .hero .case-study-settings .space-between {
           flex-direction: row;
@@ -320,191 +251,12 @@
     <div id="btt-anchor"></div>
 
     <main>
-      <div class="lazyload lazyblurry page-wrapper">
-        <div id="pageContent" class="contents">
-          <button type="button" class="open-sidebar-btn" aria-label="Open side bar button">
-            <span class="material-symbols-outlined">chevron_right</span>
-          </button>
-          <div class="tooltip">Contents Menu</div>
-        </div>
-
-        <nav id="sidebar" class="mobile-sidebar">
-          <div class="header">
-            <h4>Contents</h4>
-            <button type="button" class="close-btn" aria-label="close sidebar button">
-              <span class="material-symbols-outlined">chevron_left</span>
-            </button>
-          </div>
-          <ul>
-            <li class="side-bar-list-item">
-              <a href="#introduction">
-                <span class="side-bar-icon introduction-icon" title="Research"></span>
-                <span class="nav-item">Introduction</span>
-              </a>
-            </li>
-
-            <li class="side-bar-list-item">
-              <a href="#research">
-                <span class="side-bar-icon research-icon" title="Research"></span>
-                <span class="nav-item">Research</span>
-              </a>
-            </li>
-
-            <li class="side-bar-list-item">
-              <a href="#architecture">
-                <span class="side-bar-icon IA-icon" title="Research"></span>
-                <span class="nav-item">Information Architecture</span>
-              </a>
-            </li>
-
-            <li class="side-bar-list-item">
-              <a href="#interaction">
-                <span class="side-bar-icon ID-icon" title="Research"></span>
-                <span class="nav-item">Interaction Design</span>
-              </a>
-            </li>
-
-            <li class="side-bar-list-item">
-              <a href="#early-designs">
-                <span class="side-bar-icon Lo-Fi-icon" title="Research"></span>
-                <span class="nav-item">Low-Fidelity Designs</span>
-              </a>
-            </li>
-
-            <li class="side-bar-list-item">
-              <a href="#designSystem">
-                <span class="side-bar-icon DesSystem-icon" title="Research"></span>
-                <span class="nav-item">Design System</span>
-              </a>
-            </li>
-
-            <li class="side-bar-list-item">
-              <a href="#hiFidelityDesigns">
-                <span class="side-bar-icon Hi-Fi-icon" title="Research"></span>
-                <span class="nav-item">Hi-Fidelity Designs</span>
-              </a>
-            </li>
-
-            <li class="side-bar-list-item">
-              <a href="#ux-testing">
-                <span class="side-bar-icon UXTesting-icon" title="Research"></span>
-                <span class="nav-item">UX Testing</span>
-              </a>
-            </li>
-
-            <li class="side-bar-list-item">
-              <a href="#results">
-                <span class="side-bar-icon Results-icon" title="Research"></span>
-                <span class="nav-item">Test Results</span>
-              </a>
-            </li>
-
-            <li class="side-bar-list-item">
-              <a href="#conclusion">
-                <span class="side-bar-icon Conc-icon" title="Research"></span>
-                <span class="nav-item">Conclusion</span>
-              </a>
-            </li>
-
-            <li class="side-bar-list-item">
-              <a href="#project-information">
-                <span class="side-bar-icon Info-icon" title="Research"></span>
-                <span class="nav-item">Project Information</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- end of mobile side bar  -->
+      <div class="page-wrapper">
         <article>
-          <div id="sidebar_lg" class="sideBar sidebar">
-            <div class="sideBar-content">
-              <div class="header">
-                <h3>Contents</h3>
-              </div>
-              <ul>
-                <li class="side-bar-list-item">
-                  <a href="#introduction">
-                    <span class="side-bar-icon introduction-icon" title="Research"></span>
-                    <span class="nav-item">Introduction</span>
-                  </a>
-                </li>
-
-                <li class="side-bar-list-item">
-                  <a href="#research">
-                    <span class="side-bar-icon research-icon" title="Research"></span>
-                    <span class="nav-item">Research</span>
-                  </a>
-                </li>
-
-                <li class="side-bar-list-item">
-                  <a href="#architecture">
-                    <span class="side-bar-icon IA-icon" title="Research"></span>
-                    <span class="nav-item">Information Architecture</span>
-                  </a>
-                </li>
-
-                <li class="side-bar-list-item">
-                  <a href="#interaction">
-                    <span class="side-bar-icon ID-icon" title="Research"></span>
-                    <span class="nav-item">Interaction Design</span>
-                  </a>
-                </li>
-
-                <li class="side-bar-list-item">
-                  <a href="#early-designs">
-                    <span class="side-bar-icon Lo-Fi-icon" title="Research"></span>
-                    <span class="nav-item">Low-Fidelity Designs</span>
-                  </a>
-                </li>
-
-                <li class="side-bar-list-item">
-                  <a href="#designSystem">
-                    <span class="side-bar-icon DesSystem-icon" title="Research"></span>
-                    <span class="nav-item">Design System</span>
-                  </a>
-                </li>
-
-                <li class="side-bar-list-item">
-                  <a href="#hiFidelityDesigns">
-                    <span class="side-bar-icon Hi-Fi-icon" title="Research"></span>
-                    <span class="nav-item">Hi-Fidelity Designs</span>
-                  </a>
-                </li>
-
-                <li class="side-bar-list-item">
-                  <a href="#ux-testing">
-                    <span class="side-bar-icon UXTesting-icon" title="Research"></span>
-                    <span class="nav-item">UX Testing</span>
-                  </a>
-                </li>
-
-                <li class="side-bar-list-item">
-                  <a href="#results">
-                    <span class="side-bar-icon Results-icon" title="Research"></span>
-                    <span class="nav-item">Test Results</span>
-                  </a>
-                </li>
-
-                <li class="side-bar-list-item">
-                  <a href="#conclusion">
-                    <span class="side-bar-icon Conc-icon" title="Research"></span>
-                    <span class="nav-item">Conclusion</span>
-                  </a>
-                </li>
-
-                <li class="side-bar-list-item">
-                  <a href="#project-information">
-                    <span class="side-bar-icon Info-icon" title="Research"></span>
-                    <span class="nav-item">Project Information</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <div id="largeSidebar"></div>
         </article>
-
         <div class="main-content">
+          <div id="mobileSidebar"></div>
           <section id="hero-section" class="editorial">
             <div class="hero">
               <div class="hero-content case-study-settings">
@@ -541,7 +293,7 @@
                   <li>Web Master</li>
                 </ul>
 
-                <div id="primaryBanner-container" class="image-container">
+                <div id="primaryBanner-container" class="image-container lazyload lazy-blurry">
                   <div class="primary-banner"></div>
                 </div>
               </div>
@@ -603,7 +355,7 @@
                   <h2>Project Introduction</h2>
                 </div>
 
-                <div class="Brief-banner"></div>
+                <div class="Brief-banner lazyload lazyblurry"></div>
               </div>
               <div class="grid-container-2col">
                 <div class="item">
@@ -653,7 +405,7 @@
                   <h2>Research</h2>
                   <p>Creating the charity’s website was a collaborative effort to attract investors and engage the public. The goal was to effectively showcase the organisation’s mission, events, and fundraising opportunities. To achieve this, we conducted market and user research, analysing similar sites, industry trends, and user expectations. By aligning with the charity’s vision, we identified key motivations and challenges, ensuring the user experience featured intuitive navigation and a clear journey that balanced the charity’s goals with audience needs.</p>
                 </div>
-                <div class="Research-banner"></div>
+                <div class="Research-banner lazyload lazyblurry"></div>
               </div>
 
               <h3>Initial Assumptions</h3>
@@ -820,7 +572,7 @@
                   <h2>Information Architecture</h2>
                   <p>Information architecture (IA) is essential in UX design, organising content to facilitate intuitive and efficient user navigation. IA helps users find information easily by structuring and categorising content logically. This section covers the IA of the application, built on a foundation of user needs, business requirements, and common patterns from similar platforms.</p>
                 </div>
-                <div class="IA-banner"></div>
+                <div class="IA-banner lazyload lazyblurry"></div>
               </div>
               <p>
                 For this project, informed decisions regarding the platform's Information Architecture (IA) were essential in creating a clean, user-friendly structure. By leveraging my expertise in semantic
@@ -887,7 +639,7 @@
                   <h2>Interaction Design</h2>
                   <p>Interaction design plays a crucial role in shaping a user’s experience by defining how users interact with a product or system. Task flow and user maps are essential tools in this process, as they outline the steps users take to achieve their goals. By carefully designing these flows, we ensure that the user's journey is intuitive, efficient, and aligned with their needs, ultimately enhancing overall satisfaction and reducing friction. Clear task flows and user maps are key to creating a seamless, goal-oriented experience.</p>
                 </div>
-                <div class="Interaction-banner"></div>
+                <div class="Interaction-banner lazyload lazyblurry"></div>
               </div>
 
               <h2>Task and User Flow Maps</h2>
@@ -961,7 +713,7 @@
                   <h2>Low-Fidelity Design</h2>
                   <p>Rapid prototyping is a crucial phase in the design process, enabling the quick creation of low-fidelity wireframes and rapid prototyping to visualise core concepts and features. By iterating on these basic prototypes, I could quickly gather feedback, test ideas, and refine the user interface before investing time in high-fidelity designs. This approach ensured that the design remained user-focused and aligned with the project’s goals, while also allowing flexibility for adjustments based on real user input.</p>
                 </div>
-                <div class="Low-Fi-banner"></div>
+                <div class="Low-Fi-banner lazyload lazyblurry"></div>
               </div>
 
               <h2>Low-Fidelity Designs 1.1</h2>
@@ -1502,7 +1254,7 @@
                   <h2>Design System</h2>
                   <p>Design systems promote consistency, efficiency, and brand identity across digital products. This section covers the key elements: Foundation, Components, Content, and Patterns. It also provides guidance on implementing and maintaining a sustainable design system for long-term success.</p>
                 </div>
-                <div class="Design-System-banner"></div>
+                <div class="Design-System-banner lazyload lazyblurry"></div>
               </div>
 
               <p>Design systems promote consistency, efficiency, and brand identity across digital products. This section covers the key elements: Foundation, Components, Content, and Patterns. It also provides guidance on implementing and maintaining a sustainable design system for long-term success.</p>
@@ -2228,7 +1980,7 @@
                   <h2>Hi-Fidelity Design</h2>
                   <p>Hi-Fidelity design refines the concepts into polished, user-focused visuals, shaped by research to balance user needs and business goals. Responsive design ensures accessibility across devices, enhancing user experience and supporting ROI.</p>
                 </div>
-                <div class="Hi-Fi-banner"></div>
+                <div class="Hi-Fi-banner lazyload lazyblurry"></div>
               </div>
 
               <h2>Hi-Fidelity Designs 1.1</h2>
@@ -2635,7 +2387,7 @@
                   <h2>UX Testing</h2>
                   <p>The UX testing phase involved evaluating the design prototype using the System Usability Scale (SUS). By testing the prototype, we gathered valuable feedback on its usability, which helped pinpoint areas for improvement. The SUS results were used to refine the design, ensuring a more intuitive and user-friendly experience.</p>
                 </div>
-                <div class="testing-banner"></div>
+                <div class="testing-banner lazyload lazyblurry"></div>
               </div>
 
               <h2>UX Testing 1.1</h2>
@@ -2891,7 +2643,7 @@
                     out of 100, significantly exceeding the benchmark of 68. This outstanding score underscores the user-centric effectiveness of the design, indicating that it resonates well with the target audience and affirming its overall usability.
                   </p>
                 </div>
-                <div class="testing-banner"></div>
+                <div class="testing-banner lazyload lazyblurry"></div>
               </div>
               <h3>Task 1 - Navigation Ease and Efficiency</h3>
               <p>
@@ -3043,7 +2795,7 @@
                 <div class="title-col">
                   <h2>Conclusion</h2>
                 </div>
-                <div class="conclusion-banner"></div>
+                <div class="conclusion-banner lazyload lazyblurry"></div>
               </div>
 
               <h2>Overall Reflection</h2>
@@ -3204,7 +2956,7 @@
     </footer>
 
     <!-- Defer main.js script to ensure it's loaded after HTML parsing -->
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/main.js" defer></script>
 
     <!-- Defer lazySizes library script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
