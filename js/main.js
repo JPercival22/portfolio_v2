@@ -1,29 +1,36 @@
 import { initCarousel } from './carousel.mjs';
 import { setupLazyLoading } from './lazyLoad.mjs';
+import { insertSidebar } from './sideBarModule.mjs';
 import "./mainNavShadow.mjs";
 
 console.log("Calling lazy loading setup...");
 setupLazyLoading(); // Setup lazy loading
 
 async function addMainFunctionality() {
-  try {
-    // Select open/close buttons
-    const openSidebarBtn = document.querySelector('.open-sidebar-btn');
-    const closeSidebarBtn = document.querySelector('.close-btn');
+ try {
+        // Select open/close buttons
+        const openSidebarBtn = document.querySelector('.open-sidebar-btn');
+        const closeSidebarBtn = document.querySelector('.close-btn');
 
-    if (openSidebarBtn) {
-      openSidebarBtn.addEventListener('click', async () => {
-        const { toggleSidebar } = await import('./sideBarModule.mjs');
-        toggleSidebar();
-      });
-    }
+        if (openSidebarBtn) {
+            openSidebarBtn.addEventListener('click', async () => {
+                const { toggleSidebar } = await import('./sideBarModule.mjs');
+                toggleSidebar();
+            });
+        }
 
-    if (closeSidebarBtn) {
-      closeSidebarBtn.addEventListener('click', async () => {
-        const { toggleSidebar } = await import('./sideBarModule.mjs');
-        toggleSidebar();
-      });
-    }
+        if (closeSidebarBtn) {
+            closeSidebarBtn.addEventListener('click', async () => {
+                const { toggleSidebar } = await import('./sideBarModule.mjs');
+                toggleSidebar();
+            });
+        }
+
+        // Call the function to insert sidebars
+        insertSidebar(); 
+
+        // Other initializations (omitted for brevity)
+
 
     // Select menu toggle button and add listener
     const menuToggle = document.querySelector('.menu-toggle');
@@ -31,21 +38,20 @@ async function addMainFunctionality() {
       const { addToggleListener } = await import('./menuModule.mjs');
       addToggleListener(menuToggle);
     }
-    // Call other dynamic imports
+
+    // Dynamically import other modules
     const { initReadMore } = await import('./readMore.mjs');
     initReadMore();
-    // Call other dynamic imports
     const { scrollHighlight } = await import('./scrollHighlight.mjs');
     scrollHighlight();
-
     const { initializeTabModules } = await import('./tabModule.mjs');
     initializeTabModules();
-
     const { initLightboxFunctionality } = await import('./lightboxModule.mjs');
     initLightboxFunctionality();
-
+    
+    // Import sidebar functions dynamically
     const { closeSidebarOnLinkClick } = await import('./sideBarModule.mjs');
-    closeSidebarOnLinkClick();
+    closeSidebarOnLinkClick(); // Call closeSidebarOnLinkClick after the import resolves
 
     const { toggleScrolledClass } = await import('./scrollButton.mjs');
     toggleScrolledClass();

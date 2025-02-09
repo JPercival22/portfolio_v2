@@ -62,6 +62,14 @@ main.p-0 {
   margin: 0;
 }
 
+h1 {
+  color: #2c4465;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 h2 {
   font-weight: 500;
   font-size: 1.35rem;
@@ -84,6 +92,14 @@ h4 {
   line-height: 1;
   margin-bottom: 0.7rem;
   color: #2c4465;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 15pt;
+  letter-spacing: 0.55pt;
+  margin: 0;
 }
 
 a {
@@ -363,6 +379,51 @@ section {
   width: 100%;
 }
 
+.editorial {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 90vw;
+  gap: 1em;
+  display: inherit;
+  flex-direction: inherit;
+}
+
+.editorial .grid-container-2col {
+  margin-top: 0;
+}
+
+.editorial .flex-row,
+.editorial .flex-row .col,
+.editorial .flex-row .col .right-align {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.tertiary-link {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.5s ease-in-out;
+  border-radius: 8px;
+  text-decoration: underline;
+}
+
+.tertiary-link:hover {
+  background-color: #aafadf;
+  text-decoration: none;
+}
+
+.tertiary-link svg {
+  width: 50px;
+  height: auto;
+}
+
 .editorial .wide-card {
   display: flex;
   flex-direction: column;
@@ -485,6 +546,13 @@ section {
   border: none;
 }
 
+#project-information .editorial .skills-section .centered-row {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 .editorial.border {
   border-width: 5px;
   border-style: solid;
@@ -546,70 +614,70 @@ section {
   height: 150px;
 }
 .editorial .split-header .Brief-banner {
-  background-image: url(../assets/images/banners/section/brief-banner-min.svg);
+  background-image: url(../assets/images/Case-Studies/banners/section/brief-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Research-banner {
-  background-image: url(../assets/images/banners/section/research-banner-min.svg);
+  background-image: url(../assets/images/Case-Studies/banners/section/research-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .IA-banner {
-  background-image: url(../assets/images/banners/section/IA-banner-min.svg);
+  background-image: url(../assets/images/Case-Studies/banners/section/IA-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Interaction-banner {
-  background-image: url(../assets/images/banners/section/Interaction-banner-min.svg);
+  background-image: url(../assets/images/Case-Studies/banners/section/Interaction-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Low-Fi-banner {
-  background-image: url(../assets/images/banners/section/Low-Fi-banner-min.svg);
+  background-image: url(../assets/images/Case-Studies/banners/section/Low-Fi-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Design-System-banner {
-  background-image: url(../assets/images/banners/section/Design-System-Banner-min.svg);
+  background-image: url(../assets/images/Case-Studies/banners/section/Design-System-Banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Hi-Fi-banner {
-  background-image: url(../assets/images/banners/section/Hi-Fi-banner-min.svg);
+  background-image: url(../assets/images/Case-Studies/banners/section/Hi-Fi-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .testing-banner {
-  background-image: url(../assets/images/banners/section/UX-Testing-banner-min.svg);
+  background-image: url(../assets/images/Case-Studies/banners/section/UX-Testing-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .Results-banner {
-  background-image: url(../assets/images/banners/section/Test-Results-Banner-min.svg);
+  background-image: url(../assets/images/Case-Studies/banners/section/Test-Results-Banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
   height: 150px;
 }
 .editorial .split-header .conclusion-banner {
-  background-image: url(../assets/images/banners/section/Conclusion-banner-min.svg);
+  background-image: url(../assets/images/Case-Studies/banners/section/Conclusion-banner-min.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 200px;
@@ -1163,12 +1231,7 @@ textarea.input {
   width: unset;
 }
 
-.sideBar {
-  display: none;
-}
-
 .mobile-sidebar {
-  display: none;
   opacity: 0;
 }
 .mobile-sidebar.sidebar-open {
@@ -1605,7 +1668,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .invest-img,
 .achievements-section .editorial .grid-container-3col .achievement .invest-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .invest-img {
-  background-image: url("../assets/images/banners/metric-vectors/investment-vector.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/investment-vector.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1615,7 +1678,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .traffic-img,
 .achievements-section .editorial .grid-container-3col .achievement .traffic-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .traffic-img {
-  background-image: url("../assets/images/banners/metric-vectors/traffic-vector.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/traffic-vector.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1625,7 +1688,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .speed-img,
 .achievements-section .editorial .grid-container-3col .achievement .speed-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .speed-img {
-  background-image: url("../assets/images/banners/metric-vectors/speed-vector.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/speed-vector.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1635,7 +1698,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .awareness-img,
 .achievements-section .editorial .grid-container-3col .achievement .awareness-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .awareness-img {
-  background-image: url("../assets/images/banners/metric-vectors/awareness-vector.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/awareness-vector.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1645,7 +1708,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .engagement-img,
 .achievements-section .editorial .grid-container-3col .achievement .engagement-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .engagement-img {
-  background-image: url("../assets/images/Case-Studies/CS2/metric-banners/User-Engagement-Icon.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/User-Engagement-Icon.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1655,7 +1718,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .innovate-img,
 .achievements-section .editorial .grid-container-3col .achievement .innovate-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .innovate-img {
-  background-image: url("../assets/images/Case-Studies/CS2/metric-banners/Innovate-Icon.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/Innovate-Icon.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1665,7 +1728,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .iterate-img,
 .achievements-section .editorial .grid-container-3col .achievement .iterate-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .iterate-img {
-  background-image: url("../assets/images/Case-Studies/CS2/metric-banners/Iterative-icon.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/Iterative-icon.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1675,7 +1738,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .task-img,
 .achievements-section .editorial .grid-container-3col .achievement .task-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .task-img {
-  background-image: url("../assets/images/Case-Studies/CS2/metric-banners/Test-rate-icon.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/Test-rate-icon.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1685,7 +1748,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .accuracy-img,
 .achievements-section .editorial .grid-container-3col .achievement .accuracy-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .accuracy-img {
-  background-image: url("../assets/images/banners/metric-vectors/accuracy-icon.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/accuracy-icon.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1695,7 +1758,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .efficiency-img,
 .achievements-section .editorial .grid-container-3col .achievement .efficiency-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .efficiency-img {
-  background-image: url("../assets/images/banners/metric-vectors/efficiency-icon.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/efficiency-icon.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1705,7 +1768,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .satisfaction-img,
 .achievements-section .editorial .grid-container-3col .achievement .satisfaction-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .satisfaction-img {
-  background-image: url("../assets/images/banners/metric-vectors/satisfaction-icon.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/satisfaction-icon.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1715,7 +1778,7 @@ textarea.input {
 .achievements-section .editorial .grid-container-3col .usability-img,
 .achievements-section .editorial .grid-container-3col .achievement .usability-img,
 .achievements-section .editorial .grid-container-3col .achievement .image-container .usability-img {
-  background-image: url("../assets/images/banners/metric-vectors/user-testing-icon.svg");
+  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/user-testing-icon.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -2060,6 +2123,10 @@ textarea.input {
     flex-wrap: nowrap;
     align-items: flex-start;
     width: 50%;
+  }
+  .editorial .grid-container-3col .achievement .banner-img {
+    width: 40%;
+    height: auto;
   }
   footer .footer-container .footer-details {
     padding: 2em;
@@ -3335,15 +3402,12 @@ textarea.input {
     list-style: none;
   }
   .page-wrapper {
-    display: flex;
     align-items: flex-start;
-    justify-content: center;
     width: 90vw;
-    margin: 0 auto;
   }
   .page-wrapper article {
     display: flex;
-    flex: 0 0 23%;
+    flex: 0 0 28%;
   }
   .page-wrapper article .sideBar {
     background-color: #fff;
