@@ -1188,6 +1188,11 @@ textarea.input {
   margin: 0 auto;
 }
 
+/* Contents button (only visible when sidebar is closed) */
+.hidden {
+  display: none;
+}
+
 .contents {
   position: fixed;
   top: 84px;
@@ -1214,9 +1219,12 @@ textarea.input {
   border-radius: 50%;
   box-shadow: 0px 0px 8px 0px rgba(201, 201, 201, 0.9);
 }
-.contents .open-sidebar-btn .material-symbols-outlined {
-  color: #fff;
-  font-size: 30px;
+.contents .open-sidebar-btn .chevron {
+  background-image: url("../assets/images/controls/chevron.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
 }
 .contents .tooltip {
   display: flex;
@@ -1231,122 +1239,111 @@ textarea.input {
   width: unset;
 }
 
+/* Hide sidebar by default */
 .mobile-sidebar {
-  opacity: 0;
-}
-.mobile-sidebar.sidebar-open {
+  position: fixed;
+  top: 80px;
+  left: -100%;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  opacity: 1;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  overflow-x: hidden;
-  top: 76px;
-  background-color: #fff;
-  border-right: 1px solid #d4d4d4;
-  box-shadow: 0px 0px 8px 0px rgba(201, 201, 201, 0.9);
-  transition: all 0.5s ease-in-out;
-  width: 90%;
-  padding: 0 10px;
-  z-index: 1;
+  /* When sidebar is open, slide it in */
 }
-.mobile-sidebar.sidebar-open .close-btn {
+.mobile-sidebar.sidebar-open {
+  left: 0;
+}
+.mobile-sidebar .header {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+.mobile-sidebar .header .title {
+  margin: unset;
+}
+.mobile-sidebar .header .close-btn {
+  background-color: #2c4465;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #2c4465;
-  cursor: pointer;
   border: none;
   width: 34px;
   height: 34px;
-  border-radius: 24px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px 0px rgba(201, 201, 201, 0.9);
 }
-.mobile-sidebar.sidebar-open .close-btn .material-symbols-outlined {
-  color: #fff;
-  font-size: 30px;
+.mobile-sidebar .header .close-btn .chevron {
+  background-image: url("../assets/images/controls/chevron.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  transform: rotate(180deg);
 }
-.mobile-sidebar.sidebar-open .header {
+.mobile-sidebar .side-bar-list {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.mobile-sidebar.sidebar-open ul {
-  list-style-type: none;
-  gap: 1em;
-  margin-left: 0;
-}
-.mobile-sidebar.sidebar-open li {
-  font-family: inherit;
-  width: 100%;
-}
-.mobile-sidebar.sidebar-open a {
-  color: #1a1a1a;
-  text-decoration: none;
-  display: block;
-  transition: 0.3s;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  flex-wrap: nowrap;
-}
-.mobile-sidebar.sidebar-open a .side-bar-icon {
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  color: #404040;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.mobile-sidebar .side-bar-list .side-bar-list-item {
+  width: 90%;
+  margin: 0 auto;
+}
+.mobile-sidebar .side-bar-list .side-bar-list-item a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #333;
+}
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon {
   width: 40px;
   height: 40px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
-.mobile-sidebar.sidebar-open a .side-bar-icon.introduction-icon {
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon.introduction-icon {
   background-image: url("../assets/images/Case-Studies/side-bar-icons/Intro-Icon-min.svg");
 }
-.mobile-sidebar.sidebar-open a .side-bar-icon.research-icon {
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon.research-icon {
   background-image: url("../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg");
 }
-.mobile-sidebar.sidebar-open a .side-bar-icon.IA-icon {
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon.IA-icon {
   background-image: url("../assets/images/Case-Studies/side-bar-icons/IA-Icon-min.svg");
 }
-.mobile-sidebar.sidebar-open a .side-bar-icon.ID-icon {
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon.ID-icon {
   background-image: url("../assets/images/Case-Studies/side-bar-icons/Inter-Design-Icon-min.svg");
 }
-.mobile-sidebar.sidebar-open a .side-bar-icon.Lo-Fi-icon {
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon.Lo-Fi-icon {
   background-image: url("../assets/images/Case-Studies/side-bar-icons/Lo-Fi-Icon-min.svg");
 }
-.mobile-sidebar.sidebar-open a .side-bar-icon.DesSystem-icon {
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon.DesSystem-icon {
   background-image: url("../assets/images/Case-Studies/side-bar-icons/Des-System-Icon-min.svg");
 }
-.mobile-sidebar.sidebar-open a .side-bar-icon.Hi-Fi-icon {
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon.Hi-Fi-icon {
   background-image: url("../assets/images/Case-Studies/side-bar-icons/HiFi-Icon-min.svg");
 }
-.mobile-sidebar.sidebar-open a .side-bar-icon.UXTesting-icon {
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon.UXTesting-icon {
   background-image: url("../assets/images/Case-Studies/side-bar-icons/UXTest-icon-min.svg");
 }
-.mobile-sidebar.sidebar-open a .side-bar-icon.Results-icon {
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon.Results-icon {
   background-image: url("../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg");
 }
-.mobile-sidebar.sidebar-open a .side-bar-icon.Conc-icon {
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon.Conc-icon {
   background-image: url("../assets/images/Case-Studies/side-bar-icons/Conclusion-Icon-min.svg");
 }
-.mobile-sidebar.sidebar-open a .side-bar-icon.Info-icon {
+.mobile-sidebar .side-bar-list .side-bar-list-item a .side-bar-icon.Info-icon {
   background-image: url("../assets/images/Case-Studies/side-bar-icons/Info-Icon-min.svg");
-}
-.mobile-sidebar.sidebar-open a .nav-item {
-  margin-left: 10px;
-  fill: #404040;
 }
 
 .sm-accordion,
@@ -3212,9 +3209,6 @@ textarea.input {
   .navbar-container {
     margin: 0 130px;
   }
-  .mobile-sidebar {
-    display: none;
-  }
   .profile-image {
     width: 200px;
     height: 200px;
@@ -3413,7 +3407,7 @@ textarea.input {
     background-color: #fff;
     border-radius: 8px;
     display: flex;
-    height: calc(100vh - 12em);
+    height: 580px;
     width: fit-content;
     position: fixed;
   }

@@ -2,19 +2,19 @@ function createMobileSidebar() {
     return `
         <div class="contents">
           <button type="button" class="open-sidebar-btn" aria-label="Open side bar button">
-            <span class="material-symbols-outlined">chevron_right</span>
+            <div class="chevron"></div>
           </button>
           <div class="tooltip">Contents Menu</div>
         </div>
 
         <nav id="sidebar" class="mobile-sidebar">
           <div class="header">
-            <h4>Contents</h4>
-            <button type="button" class="close-btn" aria-label="close sidebar button">
-              <span class="material-symbols-outlined">chevron_left</span>
+            <h4 class="title">Contents</h4>
+            <button type="button" class="close-btn" aria-label="Close sidebar button">
+              <span class="chevron"></span>
             </button>
           </div>
-          <ul>
+          <ul class="side-bar-list">  <!-- Updated class name -->
             ${generateSidebarItems()}
           </ul>
         </nav>
@@ -23,8 +23,8 @@ function createMobileSidebar() {
 
 function createLargeSidebar() {
     return `
-    
-          <div class="sideBar sidebar">
+        <article>
+          <div id="sidebar_lg" class="sideBar sidebar">
             <div class="sideBar-content">
               <div class="header">
                 <h3>Contents</h3>
@@ -34,7 +34,7 @@ function createLargeSidebar() {
               </ul>
             </div>
           </div>
-     
+        </article>
     `;
 }
 
@@ -63,51 +63,55 @@ function generateSidebarItems() {
     `).join('');
 }
 
-// Function to insert the appropriate sidebar
 function insertSidebar() {
-    const mobileSidebarContainer = document.getElementById('mobileSidebar');
-    const largeSidebarContainer = document.getElementById('largeSidebar');
+    const mobileSidebarContainer = document.getElementById("mobileSidebar");
+    const largeSidebarContainer = document.getElementById("largeSidebar");
 
-    // Check for mobile and large sidebar containers
-    if (mobileSidebarContainer) {
-        console.log('mobileSidebarContainer exists:', mobileSidebarContainer);
-    }
-    if (largeSidebarContainer) {
-        console.log('largeSidebarContainer exists:', largeSidebarContainer);
-    }
-
-    // If the window width is <= 1400px, insert the mobile sidebar
-    if (window.innerWidth <= 1400 && !mobileSidebarContainer.querySelector('.mobile-sidebar')) {
-        const sidebarMarkup = createMobileSidebar();
-        mobileSidebarContainer.insertAdjacentHTML("beforeend", sidebarMarkup);
-        console.log("Mobile sidebar inserted into container.");
-    } 
-    // If the window width is > 1400px, insert the large sidebar
-    else if (window.innerWidth > 1400 && !largeSidebarContainer.querySelector('.sideBar')) {
-        const sidebarMarkup = createLargeSidebar();
-        largeSidebarContainer.insertAdjacentHTML("beforeend", sidebarMarkup);
-        console.log("Large sidebar inserted into container.");
+    if (window.innerWidth <= 1400 && mobileSidebarContainer && !document.getElementById("sidebar")) {
+        mobileSidebarContainer.innerHTML = createMobileSidebar();
+        attachMobileSidebarListeners();
+    } else if (window.innerWidth > 1400 && largeSidebarContainer && !document.getElementById("sidebar_lg")) {
+        largeSidebarContainer.innerHTML = createLargeSidebar();
     }
 }
 
-// Listen for page load and resize events to insert sidebars
-window.addEventListener("load", insertSidebar);
-window.addEventListener("resize", insertSidebar);
+function attachMobileSidebarListeners() {
+    const openSidebarBtn = document.querySelector(".open-sidebar-btn");
+    const closeSidebarBtn = document.querySelector(".close-btn");
+    const sidebar = document.getElementById("sidebar");
+    const contentsButton = document.querySelector(".contents");
 
-// Functions for sidebar functionality
-const sidebar = document.querySelector(".mobile-sidebar");
+    if (openSidebarBtn && closeSidebarBtn && sidebar && contentsButton) {
+        openSidebarBtn.addEventListener("click", () => {
+            sidebar.classList.add("sidebar-open");
+            contentsButton.style.display = "none"; // Hide when opened
+        });
 
-function toggleSidebar() {
-    sidebar.classList.toggle("sidebar-open");
-}
-
-function closeSidebarOnLinkClick() {
-    const sidebarLinks = document.querySelectorAll('#sidebar a'); // Select all links in the sidebar
-    if (sidebarLinks) {
-        sidebarLinks.forEach(link => {
-            link.addEventListener('click', toggleSidebar); // Add event listener to each link to close the sidebar when clicked
+        closeSidebarBtn.addEventListener("click", () => {
+            sidebar.classList.remove("sidebar-open");
+            setTimeout(() => {
+                contentsButton.style.display = "flex"; // Show when closed
+            }, 300);
         });
     }
 }
 
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar) {
+        sidebar.classList.toggle("sidebar-open");
+    }
+}
+
+function closeSidebarOnLinkClick() {
+    document.querySelectorAll("#sidebar a").forEach(link => {
+        link.addEventListener("click", toggleSidebar);
+    });
+}
+
+// Ensure sidebar is inserted dynamically
+window.addEventListener("load", insertSidebar);
+window.addEventListener("resize", insertSidebar);
+
+// **Ensure all exports remain intact**
 export { toggleSidebar, closeSidebarOnLinkClick, insertSidebar };
