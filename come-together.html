@@ -21,16 +21,13 @@
     <!-- Preload Material Symbols font (combined) -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" media="print" onload="this.media='all'" />
-    <noscript>
+    <!-- <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    </noscript>
+    </noscript> -->
 
-    <!-- Defer lazySizes library script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" defer></script>
-
-    <link rel="preload" href="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_sm.webp" as="image" media="(max-width: 766px)" />
+    <!-- <link rel="preload" href="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_sm.webp" as="image" media="(max-width: 766px)" />
     <link rel="preload" href="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_md.webp" as="image" media="(min-width: 767px) and (max-width: 1023px)" />
-    <link rel="preload" href="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp" as="image" media="(min-width: 1024px)" />
+    <link rel="preload" href="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp" as="image" media="(min-width: 1024px)" /> -->
 
     <style>
       /* Hide all sections by default */
@@ -47,21 +44,21 @@
         background-repeat: no-repeat;
         background-position: center;
       }
-      @media (max-width: 766px) {
-        .primary-banner {
-          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_sm.webp');
-        }
-      }
-      @media (min-width: 767px) and (max-width: 1023px) {
-        .primary-banner {
-          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_md.webp');
-        }
-      }
-      @media (min-width: 1024px) {
-        .primary-banner {
-          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp');
-        }
-      }
+      /* @media (max-width: 766px) {
+            .primary-banner {
+              background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_sm.webp');
+            }
+          }
+          @media (min-width: 767px) and (max-width: 1023px) {
+            .primary-banner {
+              background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_md.webp');
+            }
+          }
+          @media (min-width: 1024px) {
+            .primary-banner {
+              background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp');
+            }
+          } */
 
       .hero .case-study-settings {
         display: flex;
@@ -98,7 +95,9 @@
         gap: 0.5em;
         width: -webkit-fill-available;
       }
-
+      .hero .case-study-settings .space-between .col .two-button-container.right-align .primary-button {
+        width: -webkit-fill-available;
+      }
       .hero .case-study-settings .bullet-list-row {
         display: flex;
         flex-direction: column;
@@ -113,6 +112,9 @@
         padding-left: 10px;
       }
       .hero .case-study-settings .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #fec6c7;
         border-radius: 0 0 10px 10px;
       }
@@ -137,11 +139,6 @@
         .hero .case-study-settings .bullet-list-row li:last-child {
           border-right: 1px solid #d4d4d4;
           padding-left: 10px;
-        }
-        .come-together-banner {
-          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_md.webp');
-          background-size: contain;
-          border-radius: 8px;
         }
       }
 
@@ -173,10 +170,8 @@
           width: 120px;
           height: 24px;
         }
-
-        .come-together-banner {
-          background-image: url('./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp');
-          aspect-ratio: 16/9;
+        .primary-banner {
+          width: 600px;
         }
       }
 
@@ -193,6 +188,26 @@
     <noscript>
       <link rel="stylesheet" href="styles/stylesheet.css" />
     </noscript>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const screenWidth = window.innerWidth;
+        let preloadImage = '';
+
+        if (screenWidth <= 766) {
+          preloadImage = './assets/images/Case-Studies/CS3/banners/CS3-primary-banner_sm.webp';
+        } else if (screenWidth >= 767 && screenWidth <= 1023) {
+          preloadImage = './assets/images/Case-Studies/CS3/banners/CS3-primary-banner_md.webp';
+        } else {
+          preloadImage = './assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp';
+        }
+
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = preloadImage;
+        document.head.appendChild(link);
+      });
+    </script>
   </head>
 
   <body>
@@ -294,8 +309,13 @@
                   <li>Web Master</li>
                 </ul>
 
-                <div id="primaryBanner-container" class="image-container lazyload lazy-blurry">
-                  <div class="primary-banner"></div>
+                <div id="primaryBanner-container" class="image-container">
+                  <picture>
+                    <source srcset="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_sm.webp" media="(max-width: 766px)" fetchpriority="high" />
+                    <source srcset="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_md.webp" media="(min-width: 767px) and (max-width: 1023px)" fetchpriority="high" />
+                    <source srcset="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp" media="(min-width: 1024px)" fetchpriority="high" />
+                    <img src="./assets/images/Case-Studies/CS3/banners/CS3-primary-banner_lg.webp" alt="Primary banner" width="800" height="400" class="primary-banner" fetchpriority="high" />
+                  </picture>
                 </div>
               </div>
             </div>
@@ -356,7 +376,7 @@
                   <h2>Project Introduction</h2>
                 </div>
 
-                <div class="Brief-banner lazyload lazyblurry"></div>
+                <div class="header-banner Brief-banner lazyload lazyblurry"></div>
               </div>
               <div class="grid-container-2col">
                 <div class="item">
@@ -404,11 +424,10 @@
               <div class="split-header">
                 <div class="title-col">
                   <h2>Research</h2>
-                  <p>Creating the charity’s website was a collaborative effort to attract investors and engage the public. The goal was to effectively showcase the organisation’s mission, events, and fundraising opportunities. To achieve this, we conducted market and user research, analysing similar sites, industry trends, and user expectations. By aligning with the charity’s vision, we identified key motivations and challenges, ensuring the user experience featured intuitive navigation and a clear journey that balanced the charity’s goals with audience needs.</p>
                 </div>
-                <div class="Research-banner lazyload lazyblurry"></div>
+                <div class="header-banner Research-banner lazyload lazyblurry"></div>
               </div>
-
+              <p>Creating the charity’s website was a collaborative effort to attract investors and engage the public. The goal was to effectively showcase the organisation’s mission, events, and fundraising opportunities. To achieve this, we conducted market and user research, analysing similar sites, industry trends, and user expectations. By aligning with the charity’s vision, we identified key motivations and challenges, ensuring the user experience featured intuitive navigation and a clear journey that balanced the charity’s goals with audience needs.</p>
               <h3>Initial Assumptions</h3>
               <p>Based on professional experience and team discussions, we assumed users would prioritise straightforward navigation, leveraging F and Z-pattern design for content accessibility. Highlighting unique offerings the charity has to offer, such as free therapy sessions and a podcast channel, we decided to include a video streaming feature. This addition aimed to boost engagement, personalise the experience, and strengthen the charity’s online presence through subscriptions and integration with social media and YouTube.</p>
 
@@ -571,10 +590,10 @@
               <div class="split-header">
                 <div class="title-col">
                   <h2>Information Architecture</h2>
-                  <p>Information architecture (IA) is essential in UX design, organising content to facilitate intuitive and efficient user navigation. IA helps users find information easily by structuring and categorising content logically. This section covers the IA of the application, built on a foundation of user needs, business requirements, and common patterns from similar platforms.</p>
                 </div>
-                <div class="IA-banner lazyload lazyblurry"></div>
+                <div class="header-banner IA-banner lazyload lazyblurry"></div>
               </div>
+              <p>Information architecture (IA) is essential in UX design, organising content to facilitate intuitive and efficient user navigation. IA helps users find information easily by structuring and categorising content logically. This section covers the IA of the application, built on a foundation of user needs, business requirements, and common patterns from similar platforms.</p>
               <p>
                 For this project, informed decisions regarding the platform's Information Architecture (IA) were essential in creating a clean, user-friendly structure. By leveraging my expertise in semantic
                 <strong>HTML5</strong>
@@ -638,11 +657,10 @@
               <div class="split-header">
                 <div class="title-col">
                   <h2>Interaction Design</h2>
-                  <p>Interaction design plays a crucial role in shaping a user’s experience by defining how users interact with a product or system. Task flow and user maps are essential tools in this process, as they outline the steps users take to achieve their goals. By carefully designing these flows, we ensure that the user's journey is intuitive, efficient, and aligned with their needs, ultimately enhancing overall satisfaction and reducing friction. Clear task flows and user maps are key to creating a seamless, goal-oriented experience.</p>
                 </div>
-                <div class="Interaction-banner lazyload lazyblurry"></div>
+                <div class="header-banner Interaction-banner lazyload lazyblurry"></div>
               </div>
-
+              <p>Interaction design plays a crucial role in shaping a user’s experience by defining how users interact with a product or system. Task flow and user maps are essential tools in this process, as they outline the steps users take to achieve their goals. By carefully designing these flows, we ensure that the user's journey is intuitive, efficient, and aligned with their needs, ultimately enhancing overall satisfaction and reducing friction. Clear task flows and user maps are key to creating a seamless, goal-oriented experience.</p>
               <h2>Task and User Flow Maps</h2>
               <p>This section focuses on designing user-centric experiences through Task and User Flow Maps. These visualisations outline the steps users take to complete tasks, providing a solid foundation for creating intuitive and engaging interactions. By aligning with user behaviours and expectations, the goal is to enhance usability, boost satisfaction, and foster continued engagement.</p>
               <aside title="Task and User Flow Tabular Views">
@@ -712,11 +730,10 @@
               <div class="split-header">
                 <div class="title-col">
                   <h2>Low-Fidelity Design</h2>
-                  <p>Rapid prototyping is a crucial phase in the design process, enabling the quick creation of low-fidelity wireframes and rapid prototyping to visualise core concepts and features. By iterating on these basic prototypes, I could quickly gather feedback, test ideas, and refine the user interface before investing time in high-fidelity designs. This approach ensured that the design remained user-focused and aligned with the project’s goals, while also allowing flexibility for adjustments based on real user input.</p>
                 </div>
-                <div class="Low-Fi-banner lazyload lazyblurry"></div>
+                <div class="header-banner Low-Fi-banner lazyload lazyblurry"></div>
               </div>
-
+              <p>Rapid prototyping is a crucial phase in the design process, enabling the quick creation of low-fidelity wireframes and rapid prototyping to visualise core concepts and features. By iterating on these basic prototypes, I could quickly gather feedback, test ideas, and refine the user interface before investing time in high-fidelity designs. This approach ensured that the design remained user-focused and aligned with the project’s goals, while also allowing flexibility for adjustments based on real user input.</p>
               <h2>Low-Fidelity Designs 1.1</h2>
               <h3>Rapid Prototyping</h3>
               <p>The initial design concepts were shaped by Affinity Mapping, Journey Analysis, and Persona Analysis, resulting in prototypes for the Home Screen, components, and generic screen layouts. Special attention was given to refining card components for seamless interaction and visual appeal.</p>
@@ -1253,11 +1270,10 @@
               <div class="split-header">
                 <div class="title-col">
                   <h2>Design System</h2>
-                  <p>Design systems promote consistency, efficiency, and brand identity across digital products. This section covers the key elements: Foundation, Components, Content, and Patterns. It also provides guidance on implementing and maintaining a sustainable design system for long-term success.</p>
                 </div>
-                <div class="Design-System-banner lazyload lazyblurry"></div>
+                <div class="header-banner Design-System-banner lazyload lazyblurry"></div>
               </div>
-
+              <p>Design systems promote consistency, efficiency, and brand identity across digital products. This section covers the key elements: Foundation, Components, Content, and Patterns. It also provides guidance on implementing and maintaining a sustainable design system for long-term success.</p>
               <p>Design systems promote consistency, efficiency, and brand identity across digital products. This section covers the key elements: Foundation, Components, Content, and Patterns. It also provides guidance on implementing and maintaining a sustainable design system for long-term success.</p>
 
               <!-- accordion for mobile viewports  -->
@@ -1979,11 +1995,11 @@
               <div class="split-header">
                 <div class="title-col">
                   <h2>Hi-Fidelity Design</h2>
-                  <p>Hi-Fidelity design refines the concepts into polished, user-focused visuals, shaped by research to balance user needs and business goals. Responsive design ensures accessibility across devices, enhancing user experience and supporting ROI.</p>
                 </div>
-                <div class="Hi-Fi-banner lazyload lazyblurry"></div>
+                <div class="header-bannerHi-Fi-banner lazyload lazyblurry"></div>
               </div>
 
+              <p>Hi-Fidelity design refines the concepts into polished, user-focused visuals, shaped by research to balance user needs and business goals. Responsive design ensures accessibility across devices, enhancing user experience and supporting ROI.</p>
               <h2>Hi-Fidelity Designs 1.1</h2>
               <h3>Responsive Design</h3>
               <p>Responsive Hi-Fidelity designs were created after establishing Information Architecture, Task Flows, and User Flows. These designs ensure consistent and optimised user experiences across devices.</p>
@@ -2386,11 +2402,11 @@
               <div class="split-header">
                 <div class="title-col">
                   <h2>UX Testing</h2>
-                  <p>The UX testing phase involved evaluating the design prototype using the System Usability Scale (SUS). By testing the prototype, we gathered valuable feedback on its usability, which helped pinpoint areas for improvement. The SUS results were used to refine the design, ensuring a more intuitive and user-friendly experience.</p>
                 </div>
-                <div class="testing-banner lazyload lazyblurry"></div>
+                <div class="header-banner testing-banner lazyload lazyblurry"></div>
               </div>
 
+              <p>The UX testing phase involved evaluating the design prototype using the System Usability Scale (SUS). By testing the prototype, we gathered valuable feedback on its usability, which helped pinpoint areas for improvement. The SUS results were used to refine the design, ensuring a more intuitive and user-friendly experience.</p>
               <h2>UX Testing 1.1</h2>
               <div class="split-header">
                 <div class="title-col">
@@ -2638,14 +2654,15 @@
               <div class="split-header">
                 <div class="title-col">
                   <h2>Results and Analysis</h2>
-                  <p>
-                    The System Usability Scale (SUS) assessment yielded an impressive score of
-                    <strong>90.5</strong>
-                    out of 100, significantly exceeding the benchmark of 68. This outstanding score underscores the user-centric effectiveness of the design, indicating that it resonates well with the target audience and affirming its overall usability.
-                  </p>
                 </div>
-                <div class="testing-banner lazyload lazyblurry"></div>
+                <div class="header-banner testing-banner lazyload lazyblurry"></div>
               </div>
+
+              <p>
+                The System Usability Scale (SUS) assessment yielded an impressive score of
+                <strong>90.5</strong>
+                out of 100, significantly exceeding the benchmark of 68. This outstanding score underscores the user-centric effectiveness of the design, indicating that it resonates well with the target audience and affirming its overall usability.
+              </p>
               <h3>Task 1 - Navigation Ease and Efficiency</h3>
               <p>
                 This task assessed website usability by instructing users to explore pages via primary and secondary links, starting from the
@@ -2796,7 +2813,7 @@
                 <div class="title-col">
                   <h2>Conclusion</h2>
                 </div>
-                <div class="conclusion-banner lazyload lazyblurry"></div>
+                <div class="header-banner conclusion-banner lazyload lazyblurry"></div>
               </div>
 
               <h2>Overall Reflection</h2>
