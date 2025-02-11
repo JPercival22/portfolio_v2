@@ -594,17 +594,25 @@ section {
 }
 .editorial .split-header {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
   width: 100%;
   align-items: flex-start;
 }
 .editorial .split-header .title-column {
+  display: none;
   flex: 60%;
 }
 .editorial .split-header .title-column .title {
   color: #1a1a1a;
+}
+.editorial .split-header .header-banner {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 34vh;
 }
 .editorial .split-header .sus-banner {
   background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
@@ -614,74 +622,34 @@ section {
   height: 150px;
 }
 .editorial .split-header .Brief-banner {
-  background-image: url(../assets/images/Case-Studies/banners/section/brief-banner-min.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 150px;
+  background-image: url(../assets/images/Case-Studies/banners/section/Intro-Banner.webp);
 }
 .editorial .split-header .Research-banner {
-  background-image: url(../assets/images/Case-Studies/banners/section/research-banner-min.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 150px;
+  background-image: url(../assets/images/Case-Studies/banners/section/Research-Banner.webp);
 }
 .editorial .split-header .IA-banner {
-  background-image: url(../assets/images/Case-Studies/banners/section/IA-banner-min.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 150px;
+  background-image: url(../assets/images/Case-Studies/banners/section/IA-Banner.webp);
 }
 .editorial .split-header .Interaction-banner {
-  background-image: url(../assets/images/Case-Studies/banners/section/Interaction-banner-min.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 150px;
+  background-image: url(../assets/images/Case-Studies/banners/section/Interaction-Banner.webp);
 }
 .editorial .split-header .Low-Fi-banner {
-  background-image: url(../assets/images/Case-Studies/banners/section/Low-Fi-banner-min.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 150px;
+  background-image: url(../assets/images/Case-Studies/banners/section/Low-Fi-Banner.webp);
 }
 .editorial .split-header .Design-System-banner {
-  background-image: url(../assets/images/Case-Studies/banners/section/Design-System-Banner-min.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 150px;
+  background-image: url(../assets/images/Case-Studies/banners/section/Design-System-Banner.webp);
 }
 .editorial .split-header .Hi-Fi-banner {
-  background-image: url(../assets/images/Case-Studies/banners/section/Hi-Fi-banner-min.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 150px;
+  background-image: url(../assets/images/Case-Studies/banners/section/Hi-Fi-Banner.webp);
 }
 .editorial .split-header .testing-banner {
-  background-image: url(../assets/images/Case-Studies/banners/section/UX-Testing-banner-min.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 150px;
+  background-image: url(../assets/images/Case-Studies/banners/section/UX-Testing-Banner.webp);
 }
 .editorial .split-header .Results-banner {
-  background-image: url(../assets/images/Case-Studies/banners/section/Test-Results-Banner-min.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 150px;
+  background-image: url(../assets/images/Case-Studies/banners/section/Test-Results-Banner.webp);
 }
 .editorial .split-header .conclusion-banner {
-  background-image: url(../assets/images/Case-Studies/banners/section/Conclusion-banner-min.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 150px;
+  background-image: url(../assets/images/Case-Studies/banners/section/Conclusion-Banner.webp);
 }
 .editorial .highlight {
   font-style: italic;
@@ -2160,12 +2128,6 @@ textarea.input {
     max-height: 1000px; /* Adjust as needed */
     opacity: 1;
   }
-  section .editorial .split-header .title-col {
-    width: 80%;
-  }
-  .split-header .title-col {
-    width: 75%;
-  }
   .flex-row.space-between .col {
     display: flex;
     flex-direction: row;
@@ -2446,6 +2408,22 @@ textarea.input {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-stats-Banner.svg);
+  }
+  .editorial .split-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .editorial .split-header .title-col {
+    display: flex;
+    flex: 70%;
+  }
+  .editorial .split-header .header-banner {
+    background-position: right;
+    height: 150px;
   }
   .lightbox {
     display: none;
