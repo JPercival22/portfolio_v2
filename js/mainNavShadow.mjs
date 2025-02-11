@@ -1,11 +1,1 @@
-(() => {
-  const navbar = document.querySelector(".navbar");
-
-  if (!navbar) return;
-
-  const handleScroll = () => {
-    navbar.classList.toggle("scrolled", window.scrollY > 0);
-  };
-
-  window.addEventListener("scroll", handleScroll);
-})();
+(()=>{const e=document.querySelector(".navbar");if(!e)return;window.addEventListener("scroll",(()=>{e.classList.toggle("scrolled",window.scrollY>0)}))})();
