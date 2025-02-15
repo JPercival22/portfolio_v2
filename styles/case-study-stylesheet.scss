@@ -838,7 +838,6 @@ section {
       font-size: 16px;
       font-weight: 500;
       border: none;
-      // border-bottom: 2px solid gainsboro;
       border-radius: inherit;
       color: $color_primary_text;
       background-color: #daefff;
@@ -862,13 +861,86 @@ section {
     }
   }
 }
+
+.sm-accordion,
+.accordion {
+  width: 100%;
+  margin: 1em 0;
+
+  .accordion-item {
+    cursor: pointer;
+    width: -webkit-fill-available;
+
+    &:first-child {
+      border: 1px solid $card-header-text;
+      border-radius: 4px 4px 0 0;
+    }
+    &:last-child {
+      border: 1px solid $card-header-text;
+      border-radius: 0 0 4px 4px;
+    }
+    &:hover {
+      background-color: #e0e0e0;
+    }
+
+    .accordion-header {
+      @include apply-flex-styles($flex-row-center-space_between);
+      width: inherit;
+      background-color: $card-header-text;
+      padding: 10px;
+      cursor: pointer;
+
+      h3 {
+        margin: 0;
+        color: $color_white;
+        font-weight: 400;
+        letter-spacing: 1pt;
+      }
+
+      .accordion-toggle {
+        @include apply-flex-styles($flex-col-center);
+        width: unset;
+
+        .chev {
+          display: inherit;
+          width: 12px;
+          height: 12px;
+          background-image: url(../assets/images/controls/chevron.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          transform: rotate(90deg);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+    }
+    .accordion-header:has(+ .accordion-content.open) .accordion-toggle .chev {
+      transform: rotate(270deg);
+    }
+    &.active .accordion-header .accordion-toggle .chev {
+      transform: rotate(270deg);
+    }
+
+    .accordion-content {
+      display: none; // Default: hidden
+
+      .gallery {
+        margin: 0;
+      }
+
+      .paragraphs {
+        display: block;
+      }
+    }
+
+    // Show content when active
+    &.active .accordion-content {
+      display: block;
+    }
+  }
+}
+
 //     "Home-icon",
-//     "accordion", *top bar
-//     "accordion-content", *top bar
-//     "accordion-header", *top bar
-//     "accordion-item",
-//     "accordion-toggle", *top bar
-//     "active",
 //     "car-tab-contents",
 //     "car-tab-module",
 //     "carousel-banner-1",
@@ -924,7 +996,6 @@ section {
 //     "p0",
 //     "pagination",
 //     "skills-section",
-//     "sm-accordion",
 //     "space-between",
 //     "tab-button",
 //     "tab-buttons",
