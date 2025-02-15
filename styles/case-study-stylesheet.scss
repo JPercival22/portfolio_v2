@@ -1,738 +1,1496 @@
-// mobile 
-[
-    "-Hi-Fi_border",
-    "-IA_border",
-    "-Inter_border",
-    "-Lo-Fi_border",
-    "-brief_border",
-    "-conclusion_border",
-    "-desSystem_border",
-    "-research_border",
-    "-results_border",
-    "-uxTest_border",
-    "Brief-banner",
-    "Conc-icon",
-    "DesSystem-icon",
-    "Design-System-banner",
-    "Hi-Fi-icon",
-    "Home-icon",
-    "IA-banner",
-    "IA-icon",
-    "ID-icon",
-    "Info-icon",
-    "Interaction-banner",
-    "Lo-Fi-icon",
-    "Low-Fi-banner",
-    "Research-banner",
-    "Results-icon",
-    "UXTesting-icon",
-    "accordion",
-    "accordion-content",
-    "accordion-header",
-    "accordion-item",
-    "accordion-toggle",
-    "achievement",
-    "achievements-section",
-    "active",
-    "awareness-img",
-    "border",
-    "border-gradient",
-    "bttt-btn",
-    "bullet-list-row",
-    "car-tab-contents",
-    "car-tab-module",
-    "carousel-banner-1",
-    "carousel-banner-2",
-    "carousel-banner-3",
-    "carousel-banner-4",
-    "carousel-buttons",
-    "carousel-container",
-    "carousel-editorial",
-    "carousel-header",
-    "carousel-slide",
-    "carousel-track",
-    "case-link",
-    "case-study-settings",
-    "center",
-    "centered-row",
-    "chevron",
-    "close-btn",
-    "col",
-    "conclusion-banner",
-    "contents",
-    "controls",
-    "copy-panel",
-    "cv-icon",
-    "disc",
-    "dot",
-    "editorial",
-    "emphasis",
-    "flex-col-left",
-    "flex-col-right",
-    "flex-row",
-    "footer",
-    "footer-container",
-    "footer-social-icon",
-    "gallery",
-    "gitHub-icon",
-    "grid-container-1col",
-    "grid-container-2col",
-    "grid-container-3col",
-    "grid-container-4col",
-    "grid-container-5col",
-    "grid-container-6col",
-    "header",
-    "header-banner",
-    "header-bannerHi-Fi-banner",
-    "headline",
-    "hero",
-    "hero-content",
-    "hide-sm",
-    "highlight",
-    "home-link",
-    "icon-bar",
-    "image-container",
-    "introduction-icon",
-    "invest-img",
-    "item",
-    "lazyblurry",
-    "lazyload",
-    "left-align",
-    "left-col",
-    "lg",
-    "lightbox",
-    "lightbox-content",
-    "lightbox-img-trigger",
-    "lightbox_1",
-    "lightbox_2",
-    "lightbox_28",
-    "lightbox_29",
-    "lightbox_3",
-    "lightbox_4",
-    "lightbox_5",
-    "lightbox_6",
-    "lightbox_7",
-    "lightbox_8",
-    "lightbox_9",
-    "linkedIn-icon",
-    "loading-text",
-    "logo",
-    "logo-container",
-    "logo-name",
-    "logo-title",
-    "main-content",
-    "material-symbols-outlined",
-    "menu-toggle",
-    "mobile-sidebar",
-    "nav-item",
-    "nav-menu",
-    "navbar",
-    "navbar-container",
-    "navbar-item",
-    "navbar-link",
-    "navbar-logo",
-    "no-background",
-    "no-border",
-    "no-disc",
-    "open-sidebar-btn",
-    "organic-link",
-    "p0",
-    "page-wrapper",
-    "pagination",
-    "primary-banner",
-    "primary-button",
-    "prototype-container",
-    "research-icon",
-    "right-align",
-    "right-col",
-    "side-bar-icon",
-    "side-bar-list",
-    "side-bar-list-item",
-    "skills-section",
-    "sm-accordion",
-    "space-between",
-    "speed-img",
-    "spinner",
-    "split-header",
-    "stat",
-    "sus-banner",
-    "tab-button",
-    "tab-buttons",
-    "tab-container",
-    "tab-contents",
-    "tab-module",
-    "tertiary-link",
-    "testing-banner",
-    "text-link",
-    "title",
-    "title-col",
-    "tooltip",
-    "traffic-img",
-    "two-button-container",
-    "vector",
-    "w-30a",
-    "w-40",
-    "w-40b",
-    "w-50b",
-    "w-60a",
-    "w-60b",
-    "w-70a",
-    "w-85",
-    "w-90",
-    "width_50"
-]
-// tablet 
-[
-    "-Hi-Fi_border",
-    "-IA_border",
-    "-Inter_border",
-    "-Lo-Fi_border",
-    "-brief_border",
-    "-conclusion_border",
-    "-desSystem_border",
-    "-research_border",
-    "-results_border",
-    "-uxTest_border",
-    "Brief-banner",
-    "Conc-icon",
-    "DesSystem-icon",
-    "Design-System-banner",
-    "Hi-Fi-icon",
-    "Home-icon",
-    "IA-banner",
-    "IA-icon",
-    "ID-icon",
-    "Info-icon",
-    "Interaction-banner",
-    "Lo-Fi-icon",
-    "Low-Fi-banner",
-    "Research-banner",
-    "Results-icon",
-    "UXTesting-icon",
-    "accordion",
-    "accordion-content",
-    "accordion-header",
-    "accordion-item",
-    "accordion-toggle",
-    "achievement",
-    "achievements-section",
-    "active",
-    "awareness-img",
-    "border",
-    "border-gradient",
-    "bttt-btn",
-    "bullet-list-row",
-    "car-tab-contents",
-    "car-tab-module",
-    "carousel-banner-1",
-    "carousel-banner-2",
-    "carousel-banner-3",
-    "carousel-banner-4",
-    "carousel-buttons",
-    "carousel-container",
-    "carousel-editorial",
-    "carousel-header",
-    "carousel-slide",
-    "carousel-track",
-    "case-link",
-    "case-study-settings",
-    "center",
-    "centered-row",
-    "chevron",
-    "close-btn",
-    "col",
-    "conclusion-banner",
-    "contents",
-    "controls",
-    "copy-panel",
-    "cv-icon",
-    "disc",
-    "dot",
-    "editorial",
-    "emphasis",
-    "flex-col-left",
-    "flex-col-right",
-    "flex-row",
-    "footer",
-    "footer-container",
-    "footer-social-icon",
-    "gallery",
-    "gitHub-icon",
-    "grid-container-1col",
-    "grid-container-2col",
-    "grid-container-3col",
-    "grid-container-4col",
-    "grid-container-5col",
-    "grid-container-6col",
-    "header",
-    "header-banner",
-    "header-bannerHi-Fi-banner",
-    "headline",
-    "hero",
-    "hero-content",
-    "hide-sm",
-    "highlight",
-    "home-link",
-    "icon-bar",
-    "image-container",
-    "introduction-icon",
-    "invest-img",
-    "item",
-    "lazyblurry",
-    "lazyload",
-    "lazyloaded",
-    "left-align",
-    "left-col",
-    "lg",
-    "lightbox",
-    "lightbox-content",
-    "lightbox-img-trigger",
-    "lightbox_1",
-    "lightbox_2",
-    "lightbox_28",
-    "lightbox_29",
-    "lightbox_3",
-    "lightbox_4",
-    "lightbox_5",
-    "lightbox_6",
-    "lightbox_7",
-    "lightbox_8",
-    "lightbox_9",
-    "linkedIn-icon",
-    "loading-text",
-    "logo",
-    "logo-container",
-    "logo-name",
-    "logo-title",
-    "main-content",
-    "material-symbols-outlined",
-    "menu-toggle",
-    "mobile-sidebar",
-    "nav-item",
-    "nav-menu",
-    "navbar",
-    "navbar-container",
-    "navbar-item",
-    "navbar-link",
-    "navbar-logo",
-    "no-background",
-    "no-border",
-    "no-disc",
-    "open-sidebar-btn",
-    "organic-link",
-    "p0",
-    "page-wrapper",
-    "pagination",
-    "primary-banner",
-    "primary-button",
-    "prototype-container",
-    "research-icon",
-    "right-align",
-    "right-col",
-    "side-bar-icon",
-    "side-bar-list",
-    "side-bar-list-item",
-    "skills-section",
-    "sm-accordion",
-    "space-between",
-    "speed-img",
-    "spinner",
-    "split-header",
-    "stat",
-    "sus-banner",
-    "tab-button",
-    "tab-buttons",
-    "tab-container",
-    "tab-contents",
-    "tab-module",
-    "tertiary-link",
-    "testing-banner",
-    "text-link",
-    "title",
-    "title-col",
-    "tooltip",
-    "traffic-img",
-    "two-button-container",
-    "vector",
-    "w-30a",
-    "w-40",
-    "w-40b",
-    "w-50b",
-    "w-60a",
-    "w-60b",
-    "w-70a",
-    "w-85",
-    "w-90",
-    "width_50"
-]
-// laptop 
-[
-    "-Hi-Fi_border",
-    "-IA_border",
-    "-Inter_border",
-    "-Lo-Fi_border",
-    "-brief_border",
-    "-conclusion_border",
-    "-desSystem_border",
-    "-research_border",
-    "-results_border",
-    "-uxTest_border",
-    "Brief-banner",
-    "Conc-icon",
-    "DesSystem-icon",
-    "Design-System-banner",
-    "Hi-Fi-icon",
-    "Home-icon",
-    "IA-banner",
-    "IA-icon",
-    "ID-icon",
-    "Info-icon",
-    "Interaction-banner",
-    "Lo-Fi-icon",
-    "Low-Fi-banner",
-    "Research-banner",
-    "Results-icon",
-    "UXTesting-icon",
-    "accordion",
-    "accordion-content",
-    "accordion-header",
-    "accordion-item",
-    "accordion-toggle",
-    "achievement",
-    "achievements-section",
-    "active",
-    "awareness-img",
-    "border",
-    "border-gradient",
-    "bttt-btn",
-    "bullet-list-row",
-    "car-tab-contents",
-    "car-tab-module",
-    "carousel-banner-1",
-    "carousel-banner-2",
-    "carousel-banner-3",
-    "carousel-banner-4",
-    "carousel-buttons",
-    "carousel-container",
-    "carousel-editorial",
-    "carousel-header",
-    "carousel-slide",
-    "carousel-track",
-    "case-link",
-    "case-study-settings",
-    "center",
-    "centered-row",
-    "chevron",
-    "close-btn",
-    "col",
-    "conclusion-banner",
-    "contents",
-    "controls",
-    "copy-panel",
-    "cv-icon",
-    "disc",
-    "dot",
-    "editorial",
-    "emphasis",
-    "flex-col-left",
-    "flex-col-right",
-    "flex-row",
-    "footer",
-    "footer-container",
-    "footer-social-icon",
-    "gallery",
-    "gitHub-icon",
-    "grid-container-1col",
-    "grid-container-2col",
-    "grid-container-3col",
-    "grid-container-4col",
-    "grid-container-5col",
-    "grid-container-6col",
-    "header",
-    "header-banner",
-    "header-bannerHi-Fi-banner",
-    "headline",
-    "hero",
-    "hero-content",
-    "hide-sm",
-    "highlight",
-    "home-link",
-    "icon-bar",
-    "image-container",
-    "introduction-icon",
-    "invest-img",
-    "item",
-    "lazyblurry",
-    "lazyload",
-    "lazyloaded",
-    "left-align",
-    "left-col",
-    "lg",
-    "lightbox",
-    "lightbox-content",
-    "lightbox-img-trigger",
-    "lightbox_1",
-    "lightbox_2",
-    "lightbox_28",
-    "lightbox_29",
-    "lightbox_3",
-    "lightbox_4",
-    "lightbox_5",
-    "lightbox_6",
-    "lightbox_7",
-    "lightbox_8",
-    "lightbox_9",
-    "linkedIn-icon",
-    "loading-text",
-    "logo",
-    "logo-container",
-    "logo-name",
-    "logo-title",
-    "main-content",
-    "material-symbols-outlined",
-    "menu-toggle",
-    "mobile-sidebar",
-    "nav-item",
-    "nav-menu",
-    "navbar",
-    "navbar-container",
-    "navbar-item",
-    "navbar-link",
-    "navbar-logo",
-    "no-background",
-    "no-border",
-    "no-disc",
-    "open-sidebar-btn",
-    "organic-link",
-    "p0",
-    "page-wrapper",
-    "pagination",
-    "primary-banner",
-    "primary-button",
-    "prototype-container",
-    "research-icon",
-    "right-align",
-    "right-col",
-    "side-bar-icon",
-    "side-bar-list",
-    "side-bar-list-item",
-    "skills-section",
-    "sm-accordion",
-    "space-between",
-    "speed-img",
-    "spinner",
-    "split-header",
-    "stat",
-    "sus-banner",
-    "tab-button",
-    "tab-buttons",
-    "tab-container",
-    "tab-contents",
-    "tab-module",
-    "tertiary-link",
-    "testing-banner",
-    "text-link",
-    "title",
-    "title-col",
-    "tooltip",
-    "traffic-img",
-    "two-button-container",
-    "vector",
-    "w-30a",
-    "w-40",
-    "w-40b",
-    "w-50b",
-    "w-60a",
-    "w-60b",
-    "w-70a",
-    "w-85",
-    "w-90",
-    "width_50"
-]
-// desktop 
-[
-    "-Hi-Fi_border",
-    "-IA_border",
-    "-Inter_border",
-    "-Lo-Fi_border",
-    "-brief_border",
-    "-conclusion_border",
-    "-desSystem_border",
-    "-research_border",
-    "-results_border",
-    "-uxTest_border",
-    "Brief-banner",
-    "Conc-icon",
-    "DesSystem-icon",
-    "Design-System-banner",
-    "Hi-Fi-icon",
-    "Home-icon",
-    "IA-banner",
-    "IA-icon",
-    "ID-icon",
-    "Info-icon",
-    "Interaction-banner",
-    "Lo-Fi-icon",
-    "Low-Fi-banner",
-    "Research-banner",
-    "Results-icon",
-    "UXTesting-icon",
-    "accordion",
-    "accordion-content",
-    "accordion-header",
-    "accordion-item",
-    "accordion-toggle",
-    "achievement",
-    "achievements-section",
-    "active",
-    "awareness-img",
-    "border",
-    "border-gradient",
-    "bttt-btn",
-    "bullet-list-row",
-    "car-tab-contents",
-    "car-tab-module",
-    "carousel-banner-1",
-    "carousel-banner-2",
-    "carousel-banner-3",
-    "carousel-banner-4",
-    "carousel-buttons",
-    "carousel-container",
-    "carousel-editorial",
-    "carousel-header",
-    "carousel-slide",
-    "carousel-track",
-    "case-link",
-    "case-study-settings",
-    "center",
-    "centered-row",
-    "chevron",
-    "close-btn",
-    "col",
-    "conclusion-banner",
-    "contents",
-    "controls",
-    "copy-panel",
-    "cv-icon",
-    "disc",
-    "dot",
-    "editorial",
-    "emphasis",
-    "flex-col-left",
-    "flex-col-right",
-    "flex-row",
-    "footer",
-    "footer-container",
-    "footer-social-icon",
-    "gallery",
-    "gitHub-icon",
-    "grid-container-1col",
-    "grid-container-2col",
-    "grid-container-3col",
-    "grid-container-4col",
-    "grid-container-5col",
-    "grid-container-6col",
-    "header",
-    "header-banner",
-    "header-bannerHi-Fi-banner",
-    "headline",
-    "hero",
-    "hero-content",
-    "hide-sm",
-    "highlight",
-    "home-link",
-    "icon-bar",
-    "image-container",
-    "introduction-icon",
-    "invest-img",
-    "item",
-    "lazyblurry",
-    "lazyload",
-    "lazyloaded",
-    "left-align",
-    "left-col",
-    "lg",
-    "lightbox",
-    "lightbox-content",
-    "lightbox-img-trigger",
-    "lightbox_1",
-    "lightbox_2",
-    "lightbox_28",
-    "lightbox_29",
-    "lightbox_3",
-    "lightbox_4",
-    "lightbox_5",
-    "lightbox_6",
-    "lightbox_7",
-    "lightbox_8",
-    "lightbox_9",
-    "linkedIn-icon",
-    "loading-text",
-    "logo",
-    "logo-container",
-    "logo-name",
-    "logo-title",
-    "main-content",
-    "material-symbols-outlined",
-    "menu-toggle",
-    "mobile-sidebar",
-    "nav-item",
-    "nav-menu",
-    "navbar",
-    "navbar-container",
-    "navbar-item",
-    "navbar-link",
-    "navbar-logo",
-    "no-background",
-    "no-border",
-    "no-disc",
-    "open-sidebar-btn",
-    "organic-link",
-    "p0",
-    "page-wrapper",
-    "pagination",
-    "primary-banner",
-    "primary-button",
-    "prototype-container",
-    "research-icon",
-    "right-align",
-    "right-col",
-    "side-bar-icon",
-    "side-bar-list",
-    "side-bar-list-item",
-    "sideBar",
-    "sideBar-content",
-    "sidebar",
-    "skills-section",
-    "sm-accordion",
-    "space-between",
-    "speed-img",
-    "spinner",
-    "split-header",
-    "stat",
-    "sus-banner",
-    "tab-button",
-    "tab-buttons",
-    "tab-container",
-    "tab-contents",
-    "tab-module",
-    "tertiary-link",
-    "testing-banner",
-    "text-link",
-    "title",
-    "title-col",
-    "tooltip",
-    "traffic-img",
-    "two-button-container",
-    "vector",
-    "w-30a",
-    "w-40",
-    "w-40b",
-    "w-50b",
-    "w-60a",
-    "w-60b",
-    "w-70a",
-    "w-85",
-    "w-90",
-    "width_50"
-]
+// Typography
+$font-family: 'Poppins', sans-serif;
+$color_primary_text: #1a1a1a;
+// color palette
+
+// greyscale
+$color_white: #fff;
+$color_main-bkg: #f7f7f7;
+$background_copy: #dcdcdc;
+$background-color_blue: #f0f8ff;
+
+// blue-scale
+$color_brand: #2c4465;
+$card-header-text: #4f73a4;
+$background-color_teal: #4fbdd2;
+$background-color_link: #1b1bac;
+$background-color_bttt: #007bff;
+$blue_menuBkg: #30a7bf;
+
+// box shadow
+$b-shadow: 6px 6px 12px -5px #6f6f6fbf;
+
+// border-settings
+$color_border-settings-grey: 1px solid #d4d4d4;
+$color_border-settings-primary: 1px solid #4eca63;
+$color_border-settings-secondary: 1px solid #2c4465;
+$brad-8: 8px;
+
+// mixins
+@mixin apply-flex-styles($flex-styles) {
+  @each $property, $value in $flex-styles {
+    #{$property}: $value;
+  }
+}
+
+@mixin apply-grid-styles($grid-styles) {
+  @each $property, $value in $grid-styles {
+    #{$property}: $value;
+  }
+}
+// grid 1 col 0 rows
+$grid-1col: (
+  display: grid,
+  grid-template-columns: 1fr,
+  grid-gap: 1em,
+  margin-top: 1em,
+);
+$grid-2col-auto: (
+  display: grid,
+  grid-template-columns: repeat(2, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+$grid-3col-auto: (
+  display: grid,
+  grid-template-columns: repeat(3, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+$grid-4col-auto: (
+  display: grid,
+  grid-template-columns: repeat(4, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+$grid-5col-auto: (
+  display: grid,
+  grid-template-columns: repeat(5, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+$grid-6col-auto: (
+  display: grid,
+  grid-template-columns: repeat(6, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+
+// flex-col
+$flex-col-center: (
+  display: flex,
+  flex-direction: column,
+  align-items: center,
+  justify-content: center,
+);
+$flex-col-start-center: (
+  display: flex,
+  flex-direction: column,
+  align-items: flex-start,
+  justify-content: center,
+);
+
+@mixin background-image-style {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  display: none;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: $font-family;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  color: $color_primary_text;
+}
+
+main {
+  background-color: $color_main-bkg;
+  padding-bottom: 1em;
+  padding-top: 8em;
+}
+
+h1 {
+  color: $color-brand;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h2 {
+  color: $color_brand;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+
+h3 {
+  color: $color_brand;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+h4 {
+  color: $color_brand;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 15pt;
+  letter-spacing: 0.55pt;
+  margin: 0;
+}
+
+.emphasis {
+  font-weight: 500;
+}
+
+a {
+  color: $color_brand;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+ul {
+  font-family: $font-family;
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+  @include apply-flex-styles($flex-col-start-center);
+  gap: 10px;
+  &.disc {
+    margin-left: 16px;
+    list-style: disc;
+  }
+  li {
+    display: list-item;
+    font-family: $font-family;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color_primary_text;
+  }
+}
+
+ol {
+  @include apply-flex-styles($flex-col-start-center);
+  font-family: $font-family;
+  margin-left: 0;
+  gap: 10px;
+  li {
+    display: list-item;
+    font-family: $font-family;
+    font-size: 16px;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.primary-button {
+  @include apply-flex-styles($flex-col-center);
+  border-radius: 50px;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: $color_white;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  box-shadow: $b-shadow;
+  margin-bottom: 1em;
+  background-color: $color_brand;
+  border-color: $color_brand;
+  &:hover {
+    background-color: color.mix(white, $color-brand, 10%);
+    box-shadow: none;
+  }
+}
+
+.text-link {
+  color: $background-color_link;
+  font-weight: 500;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// topbar
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: $color_white;
+  z-index: 9999;
+  &.scrolled {
+    box-shadow: $b-shadow;
+  }
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 76px;
+    margin: 0 auto;
+    .navbar-logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 70%;
+      padding: 10px 0;
+      .logo {
+        background-image: url('../assets/images/iconography/jp-LOGO-mini.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 60px;
+        height: 60px;
+      }
+      .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 10px;
+        line-height: 16pt;
+        .logo-name {
+          text-transform: capitalize;
+        }
+        .logo-title {
+          text-transform: uppercase;
+        }
+      }
+    }
+    .menu-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      .icon-bar {
+        background-image: url('../assets/images/iconography/menu-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    // mobile nav items
+    .nav-menu {
+      display: none;
+      &.show {
+        position: fixed;
+        top: 75px;
+        left: 0;
+        @include apply-flex-styles($flex-col-center);
+        gap: 3em;
+        height: 100vh;
+        width: -webkit-fill-available;
+        background-color: $blue_menuBkg;
+        margin: 0;
+        .navbar-link {
+          width: 100%;
+          .organic-link {
+            @include apply-flex-styles($flex-col-center);
+            font-size: 20px;
+            color: $color_white;
+            &:hover,
+            &:focus {
+              background: $color_brand;
+            }
+          }
+          /* Case Studies dropdown (Accordion Style) */
+          .accordion {
+            width: 100%;
+            border: none;
+            .accordion-header {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 20px;
+              color: $color_white;
+            }
+            .chevron {
+              transition: transform 0.3s ease;
+              margin-left: 10px;
+              transform: rotate(0deg);
+            }
+            .accordion-content {
+              transition: max-height 0.3s ease, opacity 0.3s ease;
+              opacity: 0;
+              max-height: 0;
+            }
+            .accordion-toggle {
+              display: none;
+            }
+            .accordion-toggle:checked + .accordion-header + .accordion-content {
+              display: flex;
+              opacity: 1;
+              max-height: 170px;
+              margin-top: 2em;
+              ul {
+                margin: 0 auto;
+                gap: 2em;
+                li {
+                  width: 100%;
+                  border-bottom: 1px solid $color_white;
+                  transition: background-color 0.5s ease-in-out;
+                  a {
+                    font-size: 18px;
+                    color: $color_white;
+                  }
+                }
+              }
+            }
+            .accordion-toggle:checked + .accordion-header .chevron {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.bttt-btn {
+  position: fixed;
+  padding: 15px;
+  background-color: $background-color_bttt;
+  color: $color_white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: $b-shadow;
+  transition: opacity 0.5s ease;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  &:hover {
+    background-color: $background-color_link;
+    box-shadow: none;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s ease;
+    &:hover {
+      stroke: #4fbdd2;
+      transform: translateY(-5px);
+    }
+  }
+}
+
+/* Styling for the overlay */
+#loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $background-color_teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10000;
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #eff8ff;
+    border-top: 5px solid #3177bc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .loading-text {
+    color: #3177bc;
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: $font-family;
+    font-weight: 500;
+  }
+}
+.hidden {
+  display: none;
+}
+
+// content styles
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+section {
+  @include apply-flex-styles($flex-col-center);
+}
+.editorial {
+  display: inherit;
+  flex-direction: inherit;
+  background-color: $color_white;
+  padding: 10px;
+  border-radius: 8px;
+  &.border {
+    border: 1px solid;
+    &.-brief_border {
+      border-image: linear-gradient(to right, #b2abff 1%, #ffffff00 30%) 1;
+    }
+    &.-research_border {
+      border-image: linear-gradient(to right, #ff9494 1%, #ffffff00 30%) 1;
+    }
+    &.-IA_border {
+      border-image: linear-gradient(to right, #7aafff 1%, #ffffff00 30%) 1;
+    }
+    &.-Inter_border {
+      border-image: linear-gradient(to right, #ffe079 1%, #ffffff00 30%) 1;
+    }
+    &.-Lo-Fi_border {
+      border-image: linear-gradient(to right, #9efbe6 1%, #ffffff00 30%) 1;
+    }
+    &.-desSystem_border {
+      border-image: linear-gradient(to right, #c5ffff 1%, #ffffff00 30%) 1;
+    }
+    &.-Hi-Fi_border {
+      border-image: linear-gradient(to right, #86ffb8 1%, #ffffff00 30%) 1;
+    }
+    &.-uxTest_border {
+      border-image: linear-gradient(to right, #21b1c9 1%, #ffffff00 30%) 1;
+    }
+    &.-results_border {
+      border-image: linear-gradient(to right, #ffe7b0 1%, #ffffff00 30%) 1;
+    }
+    &.-conclusion_border {
+      border-image: linear-gradient(to right, #c6ffc6 1%, #ffffff00 30%) 1;
+    }
+  }
+}
+// sidebar styles
+.contents {
+  position: fixed;
+  top: 90px;
+  left: 10px;
+  align-items: center;
+  &.hidden {
+    display: none;
+  }
+  .open-sidebar-btn {
+    background-color: $color_brand;
+    display: flex;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    box-shadow: 5px 8px 8px 0px rgba(201, 201, 201, 0.9);
+    .chevron {
+      background-image: url('../assets/images/controls/chevron.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .tooltip {
+    background-color: $color_white;
+    padding: 6px;
+    margin-left: 6px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 6px 6px 8px -1px rgba(201, 201, 201, 0.9);
+  }
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 80px;
+  left: -100%;
+  width: 100vw;
+  height: 100vh;
+  background: $color_white;
+  transition: left 0.3s ease-in-out;
+  &.sidebar-open {
+    left: 0;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    .title {
+      margin: unset;
+    }
+    .close-btn {
+      background-color: $color_brand;
+      display: flex;
+      align-items: center;
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      box-shadow: 5px 8px 8px 0px rgba(201, 201, 201, 0.9);
+      .chevron {
+        background-image: url('../assets/images/controls/chevron.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 30px;
+        height: 30px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .side-bar-list {
+    margin: 0;
+    overflow-y: auto;
+    .side-bar-list-item {
+      width: 90%;
+      margin: 0 auto;
+      a {
+        display: flex;
+        align-items: center;
+        .side-bar-icon {
+          width: 40px;
+          height: 40px;
+          &.introduction-icon {
+            background-image: url('../assets/images/Case-Studies/side-bar-icons/Intro-Icon-min.svg');
+          }
+          &.research-icon {
+            background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
+          }
+          &.IA-icon {
+            background-image: url('../assets/images/Case-Studies/side-bar-icons/IA-Icon-min.svg');
+          }
+          &.ID-icon {
+            background-image: url('../assets/images/Case-Studies/side-bar-icons/Inter-Design-Icon-min.svg');
+          }
+          &.Lo-Fi-icon {
+            background-image: url('../assets/images/Case-Studies/side-bar-icons/Lo-Fi-Icon-min.svg');
+          }
+          &.DesSystem-icon {
+            background-image: url('../assets/images/Case-Studies/side-bar-icons/Des-System-Icon-min.svg');
+          }
+          &.Hi-Fi-icon {
+            background-image: url('../assets/images/Case-Studies/side-bar-icons/HiFi-Icon-min.svg');
+          }
+          &.UXTesting-icon {
+            background-image: url('../assets/images/Case-Studies/side-bar-icons/UXTest-icon-min.svg');
+          }
+          &.Results-icon {
+            background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
+          }
+          &.Conc-icon {
+            background-image: url('../assets/images/Case-Studies/side-bar-icons/Conclusion-Icon-min.svg');
+          }
+          &.Info-icon {
+            background-image: url('../assets/images/Case-Studies/side-bar-icons/Info-Icon-min.svg');
+          }
+        }
+      }
+    }
+  }
+}
+
+// section styles
+
+// hero styles
+.hero-content {
+  .hero-content {
+    @include apply-flex-styles($flex-col-center);
+    align-items: start;
+    .hero-buttons-container {
+      @include apply-flex-styles($flex-col-center-start);
+      width: -webkit-fill-available;
+      gap: 1em;
+      margin-top: 1em;
+      .col {
+        width: -webkit-fill-available;
+        .hero-buttons {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1em;
+          flex-wrap: nowrap;
+          .tertiary-link {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .primary-button-container {
+      width: -webkit-fill-available;
+      display: flex;
+      margin-top: 1em;
+      .primary-button {
+        width: 100%;
+      }
+    }
+    .bullet-list-row {
+      display: flex;
+      margin-left: 0;
+      li {
+        border-left: 1px solid $color_brand;
+        padding-left: 10px;
+      }
+    }
+    .image-container {
+      @include apply-flex-styles($flex-col-center);
+      width: -webkit-fill-available;
+    }
+  }
+}
+
+.achievements-section {
+  .split-header {
+    @include apply-flex-styles($flex-col-center-start);
+    gap: 1em;
+    width: -webkit-fill-available;
+    .left-align,
+    .right-align {
+      width: inherit;
+      .primary-button {
+        width: inherit;
+      }
+    }
+  }
+  .achievement-cards {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2em;
+    .card {
+      @include apply-flex-styles($flex-col-center);
+      gap: 1em;
+      .image-container {
+        width: 80px;
+        height: 80px;
+        .invest-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/investment-vector.svg');
+          @include background-image-style;
+        }
+        .traffic-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/traffic-vector.svg');
+          @include background-image-style;
+        }
+        .speed-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/speed-vector.svg');
+          @include background-image-style;
+        }
+        .awareness-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/awareness-vector.svg');
+          @include background-image-style;
+        }
+        .engagement-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/User-Engagement-Icon.svg');
+          @include background-image-style;
+        }
+        .innovate-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Innovate-Icon.svg');
+          @include background-image-style;
+        }
+        .iterate-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Iterative-icon.svg');
+          @include background-image-style;
+        }
+        .task-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Test-rate-icon.svg');
+          @include background-image-style;
+        }
+        .accuracy-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/accuracy-icon.svg');
+          @include background-image-style;
+        }
+        .efficiency-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/efficiency-icon.svg');
+          @include background-image-style;
+        }
+        .satisfaction-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/satisfaction-icon.svg');
+          @include background-image-style;
+        }
+        .usability-img {
+          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/user-testing-icon.svg');
+          @include background-image-style;
+        }
+      }
+      .stat {
+        font-size: 27px;
+        font-weight: 600;
+        color: $card-header-text;
+      }
+      .highlight {
+        font-size: 18px;
+        font-weight: 500;
+        font-style: normal;
+      }
+    }
+  }
+}
+
+.centered-row {
+  @include apply-flex-styles($flex-row-center);
+  margin: 2em 0;
+  .image-container {
+    display: flex;
+    content-visibility: auto;
+    .gallery {
+      margin: 0;
+      img {
+        border: $color_border-settings-grey;
+        border-radius: $brad-8;
+        &.no-border {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.grid-container-1col,
+.grid-container-2col,
+.grid-container-3col,
+.grid-container-4col,
+.grid-container-5col,
+.grid-container-6col {
+  @include apply-grid-styles($grid-1col);
+  .item {
+    @include apply-flex-styles($flex-col-start-start);
+    gap: 1em;
+  }
+  .marketing-banner {
+    background-image: url(../assets/images/Case-Studies/CS1/banners/marketing-table.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: -webkit-fill-available;
+    height: 200px;
+  }
+  .image-container {
+    .gallery {
+      margin: 0;
+    }
+  }
+  .prototype-container {
+    display: flex;
+    flex-direction: column;
+    a {
+      color: $color_primary_text;
+      text-decoration: underline;
+      transition: all ease-in-out 0.5s;
+      &:hover {
+        text-decoration: none;
+        filter: brightness(0.8);
+      }
+      .border {
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+.tab-container.hide-sm {
+  display: none;
+}
+.tab-container {
+  display: flex;
+  flex-direction: column;
+  .tab-buttons {
+    display: flex;
+    background-color: #eff8ff;
+    border-radius: 8px 8px 0 0;
+    gap: 1.5px;
+    .tab-button {
+      cursor: pointer;
+      padding: 10px;
+      transition: all 0.3s ease-in-out;
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      // border-bottom: 2px solid gainsboro;
+      border-radius: inherit;
+      color: $color_primary_text;
+      background-color: #daefff;
+      &.active {
+        font-weight: 600;
+        background-color: #c1f2f8;
+        box-shadow: 0px 0px 0px 0.5px #3fa8eebf;
+      }
+    }
+  }
+  .tab-contents {
+    border: $color_border-settings-grey;
+    border-radius: 0 0 8px 8px;
+    padding: 0 8px;
+    .tab-module {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      width: inherit;
+    }
+  }
+}
+//     "Home-icon",
+//     "accordion", *top bar
+//     "accordion-content", *top bar
+//     "accordion-header", *top bar
+//     "accordion-item",
+//     "accordion-toggle", *top bar
+//     "active",
+//     "car-tab-contents",
+//     "car-tab-module",
+//     "carousel-banner-1",
+//     "carousel-banner-2",
+//     "carousel-banner-3",
+//     "carousel-banner-4",
+//     "carousel-buttons",
+//     "carousel-container",
+//     "carousel-editorial",
+//     "carousel-header",
+//     "carousel-slide",
+//     "carousel-track",
+//     "center",
+//     "centered-row",
+//     "close-btn",
+//     "controls",
+//     "copy-panel",
+//     "cv-icon",
+//     "disc",
+//     "dot",
+//     "emphasis",
+//     "flex-col-left",
+//     "flex-col-right",
+//     "flex-row",
+//     "footer",
+//     "footer-container",
+//     "footer-social-icon",
+//     "gitHub-icon",
+//     "header-bannerHi-Fi-banner",
+//     "headline",
+//     "left-col",
+//     "lg",
+//     "lightbox",
+//     "lightbox-content",
+//     "lightbox-img-trigger",
+//     "lightbox_1",
+//     "lightbox_2",
+//     "lightbox_28",
+//     "lightbox_29",
+//     "lightbox_3",
+//     "lightbox_4",
+//     "lightbox_5",
+//     "lightbox_6",
+//     "lightbox_7",
+//     "lightbox_8",
+//     "lightbox_9",
+//     "linkedIn-icon",
+//     "material-symbols-outlined",
+//     "nav-item",
+//     "no-background",
+//     "no-border",
+//     "no-disc",
+//     "p0",
+//     "pagination",
+//     "skills-section",
+//     "sm-accordion",
+//     "space-between",
+//     "tab-button",
+//     "tab-buttons",
+//     "tab-container",
+//     "tab-contents",
+//     "tab-module",
+//     "text-link",
+//     "vector",
+//     "w-30a",
+//     "w-40",
+//     "w-40b",
+//     "w-50b",
+//     "w-60a",
+//     "w-60b",
+//     "w-70a",
+//     "w-85",
+//     "w-90",
+//     "width_50"
+
+// tablet
+
+// "-Hi-Fi_border",
+// "-IA_border",
+// "-Inter_border",
+// "-Lo-Fi_border",
+// "-brief_border",
+// "-conclusion_border",
+// "-desSystem_border",
+// "-research_border",
+// "-results_border",
+// "-uxTest_border",
+// "Brief-banner",
+// "Conc-icon",
+// "DesSystem-icon",
+// "Design-System-banner",
+// "Hi-Fi-icon",
+// "Home-icon",
+// "IA-banner",
+// "IA-icon",
+// "ID-icon",
+// "Info-icon",
+// "Interaction-banner",
+// "Lo-Fi-icon",
+// "Low-Fi-banner",
+// "Research-banner",
+// "Results-icon",
+// "UXTesting-icon",
+// "accordion",
+// "accordion-content",
+// "accordion-header",
+// "accordion-item",
+// "accordion-toggle",
+// "achievement",
+// "achievements-section",
+// "active",
+// "awareness-img",
+// "border",
+// "border-gradient",
+// "bttt-btn",
+// "bullet-list-row",
+// "car-tab-contents",
+// "car-tab-module",
+// "carousel-banner-1",
+// "carousel-banner-2",
+// "carousel-banner-3",
+// "carousel-banner-4",
+// "carousel-buttons",
+// "carousel-container",
+// "carousel-editorial",
+// "carousel-header",
+// "carousel-slide",
+// "carousel-track",
+// "case-link",
+// "case-study-settings",
+// "center",
+// "centered-row",
+// "chevron",
+// "close-btn",
+// "col",
+// "conclusion-banner",
+// "contents",
+// "controls",
+// "copy-panel",
+// "cv-icon",
+// "disc",
+// "dot",
+// "editorial",
+// "emphasis",
+// "flex-col-left",
+// "flex-col-right",
+// "flex-row",
+// "footer",
+// "footer-container",
+// "footer-social-icon",
+// "gallery",
+// "gitHub-icon",
+// "grid-container-1col",
+// "grid-container-2col",
+// "grid-container-3col",
+// "grid-container-4col",
+// "grid-container-5col",
+// "grid-container-6col",
+// "header",
+// "header-banner",
+// "header-bannerHi-Fi-banner",
+// "headline",
+// "hero",
+// "hero-content",
+// "hide-sm",
+// "highlight",
+// "home-link",
+// "icon-bar",
+// "image-container",
+// "introduction-icon",
+// "invest-img",
+// "item",
+// "lazyblurry",
+// "lazyload",
+// "lazyloaded",
+// "left-align",
+// "left-col",
+// "lg",
+// "lightbox",
+// "lightbox-content",
+// "lightbox-img-trigger",
+// "lightbox_1",
+// "lightbox_2",
+// "lightbox_28",
+// "lightbox_29",
+// "lightbox_3",
+// "lightbox_4",
+// "lightbox_5",
+// "lightbox_6",
+// "lightbox_7",
+// "lightbox_8",
+// "lightbox_9",
+// "linkedIn-icon",
+// "logo",
+// "logo-container",
+// "logo-name",
+// "logo-title",
+// "main-content",
+// "material-symbols-outlined",
+// "menu-toggle",
+// "mobile-sidebar",
+// "nav-item",
+// "nav-menu",
+// "navbar",
+// "navbar-container",
+// "navbar-item",
+// "navbar-link",
+// "navbar-logo",
+// "no-background",
+// "no-border",
+// "no-disc",
+// "open-sidebar-btn",
+// "organic-link",
+// "p0",
+// "page-wrapper",
+// "pagination",
+// "primary-banner",
+// "primary-button",
+// "prototype-container",
+// "research-icon",
+// "right-align",
+// "right-col",
+// "side-bar-icon",
+// "side-bar-list",
+// "side-bar-list-item",
+// "skills-section",
+// "sm-accordion",
+// "space-between",
+// "speed-img",
+
+// "split-header",
+// "stat",
+// "sus-banner",
+// "tab-button",
+// "tab-buttons",
+// "tab-container",
+// "tab-contents",
+// "tab-module",
+// "tertiary-link",
+// "testing-banner",
+// "text-link",
+// "title",
+// "title-col",
+// "tooltip",
+// "traffic-img",
+// "two-button-container",
+// "vector",
+// "w-30a",
+// "w-40",
+// "w-40b",
+// "w-50b",
+// "w-60a",
+// "w-60b",
+// "w-70a",
+// "w-85",
+// "w-90",
+// "width_50"
+
+// laptop
+
+// "-Hi-Fi_border",
+// "-IA_border",
+// "-Inter_border",
+// "-Lo-Fi_border",
+// "-brief_border",
+// "-conclusion_border",
+// "-desSystem_border",
+// "-research_border",
+// "-results_border",
+// "-uxTest_border",
+// "Brief-banner",
+// "Conc-icon",
+// "DesSystem-icon",
+// "Design-System-banner",
+// "Hi-Fi-icon",
+// "Home-icon",
+// "IA-banner",
+// "IA-icon",
+// "ID-icon",
+// "Info-icon",
+// "Interaction-banner",
+// "Lo-Fi-icon",
+// "Low-Fi-banner",
+// "Research-banner",
+// "Results-icon",
+// "UXTesting-icon",
+// "accordion",
+// "accordion-content",
+// "accordion-header",
+// "accordion-item",
+// "accordion-toggle",
+// "achievement",
+// "achievements-section",
+// "active",
+// "awareness-img",
+// "border",
+// "border-gradient",
+// "bttt-btn",
+// "bullet-list-row",
+// "car-tab-contents",
+// "car-tab-module",
+// "carousel-banner-1",
+// "carousel-banner-2",
+// "carousel-banner-3",
+// "carousel-banner-4",
+// "carousel-buttons",
+// "carousel-container",
+// "carousel-editorial",
+// "carousel-header",
+// "carousel-slide",
+// "carousel-track",
+// "case-link",
+// "case-study-settings",
+// "center",
+// "centered-row",
+// "chevron",
+// "close-btn",
+// "col",
+// "conclusion-banner",
+// "contents",
+// "controls",
+// "copy-panel",
+// "cv-icon",
+// "disc",
+// "dot",
+// "editorial",
+// "emphasis",
+// "flex-col-left",
+// "flex-col-right",
+// "flex-row",
+// "footer",
+// "footer-container",
+// "footer-social-icon",
+// "gallery",
+// "gitHub-icon",
+// "grid-container-1col",
+// "grid-container-2col",
+// "grid-container-3col",
+// "grid-container-4col",
+// "grid-container-5col",
+// "grid-container-6col",
+// "header",
+// "header-banner",
+// "header-bannerHi-Fi-banner",
+// "headline",
+// "hero",
+// "hero-content",
+// "hide-sm",
+// "highlight",
+// "home-link",
+// "icon-bar",
+// "image-container",
+// "introduction-icon",
+// "invest-img",
+// "item",
+// "lazyblurry",
+// "lazyload",
+// "lazyloaded",
+// "left-align",
+// "left-col",
+// "lg",
+// "lightbox",
+// "lightbox-content",
+// "lightbox-img-trigger",
+// "lightbox_1",
+// "lightbox_2",
+// "lightbox_28",
+// "lightbox_29",
+// "lightbox_3",
+// "lightbox_4",
+// "lightbox_5",
+// "lightbox_6",
+// "lightbox_7",
+// "lightbox_8",
+// "lightbox_9",
+// "linkedIn-icon",
+// "logo",
+// "logo-container",
+// "logo-name",
+// "logo-title",
+// "main-content",
+// "material-symbols-outlined",
+// "menu-toggle",
+// "mobile-sidebar",
+// "nav-item",
+// "nav-menu",
+// "navbar",
+// "navbar-container",
+// "navbar-item",
+// "navbar-link",
+// "navbar-logo",
+// "no-background",
+// "no-border",
+// "no-disc",
+// "open-sidebar-btn",
+// "organic-link",
+// "p0",
+// "page-wrapper",
+// "pagination",
+// "primary-banner",
+// "primary-button",
+// "prototype-container",
+// "research-icon",
+// "right-align",
+// "right-col",
+// "side-bar-icon",
+// "side-bar-list",
+// "side-bar-list-item",
+// "skills-section",
+// "sm-accordion",
+// "space-between",
+// "speed-img",
+// "split-header",
+// "stat",
+// "sus-banner",
+// "tab-button",
+// "tab-buttons",
+// "tab-container",
+// "tab-contents",
+// "tab-module",
+// "tertiary-link",
+// "testing-banner",
+// "text-link",
+// "title",
+// "title-col",
+// "tooltip",
+// "traffic-img",
+// "two-button-container",
+// "vector",
+// "w-30a",
+// "w-40",
+// "w-40b",
+// "w-50b",
+// "w-60a",
+// "w-60b",
+// "w-70a",
+// "w-85",
+// "w-90",
+// "width_50"
+
+// desktop
+
+// "-Hi-Fi_border",
+// "-IA_border",
+// "-Inter_border",
+// "-Lo-Fi_border",
+// "-brief_border",
+// "-conclusion_border",
+// "-desSystem_border",
+// "-research_border",
+// "-results_border",
+// "-uxTest_border",
+// "Brief-banner",
+// "Conc-icon",
+// "DesSystem-icon",
+// "Design-System-banner",
+// "Hi-Fi-icon",
+// "Home-icon",
+// "IA-banner",
+// "IA-icon",
+// "ID-icon",
+// "Info-icon",
+// "Interaction-banner",
+// "Lo-Fi-icon",
+// "Low-Fi-banner",
+// "Research-banner",
+// "Results-icon",
+// "UXTesting-icon",
+// "accordion",
+// "accordion-content",
+// "accordion-header",
+// "accordion-item",
+// "accordion-toggle",
+// "achievement",
+// "achievements-section",
+// "active",
+// "awareness-img",
+// "border",
+// "border-gradient",
+// "bttt-btn",
+// "bullet-list-row",
+// "car-tab-contents",
+// "car-tab-module",
+// "carousel-banner-1",
+// "carousel-banner-2",
+// "carousel-banner-3",
+// "carousel-banner-4",
+// "carousel-buttons",
+// "carousel-container",
+// "carousel-editorial",
+// "carousel-header",
+// "carousel-slide",
+// "carousel-track",
+// "case-link",
+// "case-study-settings",
+// "center",
+// "centered-row",
+// "chevron",
+// "close-btn",
+// "col",
+// "conclusion-banner",
+// "contents",
+// "controls",
+// "copy-panel",
+// "cv-icon",
+// "disc",
+// "dot",
+// "editorial",
+// "emphasis",
+// "flex-col-left",
+// "flex-col-right",
+// "flex-row",
+// "footer",
+// "footer-container",
+// "footer-social-icon",
+// "gallery",
+// "gitHub-icon",
+// "grid-container-1col",
+// "grid-container-2col",
+// "grid-container-3col",
+// "grid-container-4col",
+// "grid-container-5col",
+// "grid-container-6col",
+// "header",
+// "header-banner",
+// "header-bannerHi-Fi-banner",
+// "headline",
+// "hero",
+// "hero-content",
+// "hide-sm",
+// "highlight",
+// "icon-bar",
+// "image-container",
+// "introduction-icon",
+// "invest-img",
+// "item",
+// "lazyblurry",
+// "lazyload",
+// "lazyloaded",
+// "left-align",
+// "left-col",
+// "lg",
+// "lightbox",
+// "lightbox-content",
+// "lightbox-img-trigger",
+// "lightbox_1",
+// "lightbox_2",
+// "lightbox_28",
+// "lightbox_29",
+// "lightbox_3",
+// "lightbox_4",
+// "lightbox_5",
+// "lightbox_6",
+// "lightbox_7",
+// "lightbox_8",
+// "lightbox_9",
+// "linkedIn-icon",
+// "loading-text",
+// "logo",
+// "logo-container",
+// "logo-name",
+// "logo-title",
+// "main-content",
+// "material-symbols-outlined",
+// "menu-toggle",
+// "mobile-sidebar",
+// "nav-item",
+// "nav-menu",
+// "navbar",
+// "navbar-container",
+// "navbar-item",
+// "navbar-link",
+// "navbar-logo",
+// "no-background",
+// "no-border",
+// "no-disc",
+// "open-sidebar-btn",
+// "organic-link",
+// "p0",
+// "page-wrapper",
+// "pagination",
+// "primary-banner",
+// "primary-button",
+// "prototype-container",
+// "research-icon",
+// "right-align",
+// "right-col",
+// "side-bar-icon",
+// "side-bar-list",
+// "side-bar-list-item",
+// "sideBar",
+// "sideBar-content",
+// "sidebar",
+// "skills-section",
+// "sm-accordion",
+// "space-between",
+// "speed-img",
+// "spinner",
+// "split-header",
+// "stat",
+// "sus-banner",
+// "tab-button",
+// "tab-buttons",
+// "tab-container",
+// "tab-contents",
+// "tab-module",
+// "tertiary-link",
+// "testing-banner",
+// "text-link",
+// "title",
+// "title-col",
+// "tooltip",
+// "traffic-img",
+// "two-button-container",
+// "vector",
+// "w-30a",
+// "w-40",
+// "w-40b",
+// "w-50b",
+// "w-60a",
+// "w-60b",
+// "w-70a",
+// "w-85",
+// "w-90",
+// "width_50"
