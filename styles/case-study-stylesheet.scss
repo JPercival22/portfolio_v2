@@ -465,6 +465,52 @@ section {
   background-color: $color_white;
   padding: 10px;
   border-radius: 8px;
+  .hero-content {
+    @include apply-flex-styles($flex-col-center);
+    align-items: start;
+    .hero-buttons-container {
+      @include apply-flex-styles($flex-col-center-start);
+      width: -webkit-fill-available;
+      gap: 1em;
+      margin-top: 1em;
+      .col {
+        width: -webkit-fill-available;
+        .hero-buttons {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1em;
+          flex-wrap: nowrap;
+          .tertiary-link {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .primary-button-container {
+      width: -webkit-fill-available;
+      display: flex;
+      margin-top: 1em;
+      .primary-button {
+        width: 100%;
+      }
+    }
+
+    .bullet-list-row {
+      display: flex;
+      margin-left: 0;
+      li {
+        border-left: 1px solid $color_brand;
+        padding-left: 10px;
+      }
+    }
+
+    .image-container {
+      @include apply-flex-styles($flex-col-center);
+      width: -webkit-fill-available;
+    }
+  }
   &.border {
     border: 1px solid;
     &.-brief_border {
@@ -498,6 +544,60 @@ section {
       border-image: linear-gradient(to right, #c6ffc6 1%, #ffffff00 30%) 1;
     }
   }
+  .split-header {
+    @include apply-flex-styles($flex-col-center-space_between);
+    align-items: flex-start;
+    .title-col {
+      flex: 60%;
+      .title {
+        color: $color_primary_text;
+      }
+    }
+    .header-banner {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 34vh;
+    }
+    .sus-banner {
+      background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 150px;
+    }
+    .Brief-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Intro-Banner.webp);
+    }
+    .Research-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Research-Banner.webp);
+    }
+    .IA-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/IA-Banner.webp);
+    }
+    .Interaction-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Interaction-Banner.webp);
+    }
+    .Low-Fi-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Low-Fi-Banner.webp);
+    }
+    .Design-System-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Design-System-Banner.webp);
+    }
+    .Hi-Fi-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Hi-Fi-Banner.webp);
+    }
+    .testing-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/UX-Testing-Banner.webp);
+    }
+    .Results-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Test-Results-Banner.webp);
+    }
+    .conclusion-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Conclusion-Banner.webp);
+    }
+  }
 }
 // sidebar styles
 .contents {
@@ -505,6 +605,7 @@ section {
   top: 90px;
   left: 10px;
   align-items: center;
+  z-index: 1;
   &.hidden {
     display: none;
   }
@@ -822,6 +923,9 @@ section {
 .tab-container.hide-sm {
   display: none;
 }
+.tabular-view {
+  margin-top: 1em;
+}
 .tab-container {
   display: flex;
   flex-direction: column;
@@ -838,6 +942,7 @@ section {
       font-size: 16px;
       font-weight: 500;
       border: none;
+      // border-bottom: 2px solid gainsboro;
       border-radius: inherit;
       color: $color_primary_text;
       background-color: #daefff;
@@ -849,7 +954,7 @@ section {
     }
   }
   .tab-contents {
-    border: $color_border-settings-grey;
+    border: $color_border-settings-blue;
     border-radius: 0 0 8px 8px;
     padding: 0 8px;
     .tab-module {
@@ -866,21 +971,13 @@ section {
 .accordion {
   width: 100%;
   margin: 1em 0;
-
+  max-width: 92vw;
   .accordion-item {
     cursor: pointer;
     width: -webkit-fill-available;
-
-    &:first-child {
-      border: 1px solid $card-header-text;
-      border-radius: 4px 4px 0 0;
-    }
+    border-bottom: $color_border-settings-blue;
     &:last-child {
-      border: 1px solid $card-header-text;
-      border-radius: 0 0 4px 4px;
-    }
-    &:hover {
-      background-color: #e0e0e0;
+      border: none;
     }
 
     .accordion-header {
@@ -890,7 +987,7 @@ section {
       padding: 10px;
       cursor: pointer;
 
-      h3 {
+      h4 {
         margin: 0;
         color: $color_white;
         font-weight: 400;
@@ -911,6 +1008,85 @@ section {
           background-position: center;
           transform: rotate(90deg);
           transition: transform 0.3s ease-in-out;
+        }
+      }
+    }
+    .accordion-content {
+      border: $color_border-settings-blue;
+      .carousel-editorial {
+        background-color: $color_white;
+        width: -webkit-fill-available;
+        padding: 10px;
+      }
+      .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        margin: auto;
+
+        .carousel-track {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+          transform: translateX(0%);
+          .carousel-slide {
+            width: 100%;
+            height: auto;
+            background-size: contain;
+            figure {
+              @include apply-flex-styles($flex-col-center);
+              width: 100%;
+              height: -webkit-fill-available;
+              margin: 0 auto;
+              img {
+                width: -webkit-fill-available;
+                height: auto;
+                border: none;
+              }
+              figcaption {
+                display: flex;
+              }
+            }
+          }
+        }
+        .carousel-buttons {
+          width: -webkit-fill-available;
+          @include apply-flex-styles($flex-row-center-space_between);
+          .controls {
+            @include apply-flex-styles($flex-col-center);
+            border: 1px solid $color_brand;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            transition: all 0.3s ease-in-out;
+            background-color: $color_white;
+            box-shadow: $b-shadow;
+            color: $color_brand;
+            cursor: pointer;
+            &:hover {
+              background-color: $color_brand;
+              color: $color_white;
+              box-shadow: $b-shadow;
+            }
+          }
+        }
+        .pagination {
+          display: grid;
+          grid-template-columns: repeat(3, 40px);
+          grid-template-rows: repeat(2, 12px);
+          gap: 10px;
+          .dot {
+            width: 10px;
+            height: 10px;
+            margin: 0 10px;
+            background-color: lightblue;
+            border: 1px solid $color_brand;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+          .active {
+            background-color: $color_brand;
+          }
         }
       }
     }
@@ -941,26 +1117,12 @@ section {
 }
 
 //     "Home-icon",
-//     "car-tab-contents",
-//     "car-tab-module",
-//     "carousel-banner-1",
-//     "carousel-banner-2",
-//     "carousel-banner-3",
-//     "carousel-banner-4",
-//     "carousel-buttons",
-//     "carousel-container",
-//     "carousel-editorial",
-//     "carousel-header",
-//     "carousel-slide",
-//     "carousel-track",
 //     "center",
 //     "centered-row",
-//     "close-btn",
-//     "controls",
+//     "close-btn,
 //     "copy-panel",
 //     "cv-icon",
 //     "disc",
-//     "dot",
 //     "emphasis",
 //     "flex-col-left",
 //     "flex-col-right",
@@ -969,7 +1131,6 @@ section {
 //     "footer-container",
 //     "footer-social-icon",
 //     "gitHub-icon",
-//     "header-bannerHi-Fi-banner",
 //     "headline",
 //     "left-col",
 //     "lg",
@@ -994,14 +1155,8 @@ section {
 //     "no-border",
 //     "no-disc",
 //     "p0",
-//     "pagination",
 //     "skills-section",
 //     "space-between",
-//     "tab-button",
-//     "tab-buttons",
-//     "tab-container",
-//     "tab-contents",
-//     "tab-module",
 //     "text-link",
 //     "vector",
 //     "w-30a",

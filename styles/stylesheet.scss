@@ -24,6 +24,7 @@ $b-shadow_focus: 6px 6px 12px -5px #3fa8eebf;
 
 // border-settings
 $color_border-settings-grey: 1px solid #acacac;
+$color_border-settings-blue: 1px solid #daefff;
 $color_border-settings-primary: 1px solid #4eca63;
 $color_border-brand: 1px solid #2c4465;
 $color_border-focus: 1px solid #2c4465;
@@ -1202,6 +1203,7 @@ textarea.input {
   left: 10px;
   display: flex;
   align-items: center;
+  z-index: 1;
   &.hidden {
     display: none;
   }
@@ -1324,21 +1326,13 @@ textarea.input {
 .accordion {
   width: 100%;
   margin: 1em 0;
-
+  max-width: 92vw;
   .accordion-item {
     cursor: pointer;
     width: -webkit-fill-available;
-
-    &:first-child {
-      border: 1px solid $card-header-text;
-      border-radius: 4px 4px 0 0;
-    }
+    border-bottom: $color_border-settings-blue;
     &:last-child {
-      border: 1px solid $card-header-text;
-      border-radius: 0 0 4px 4px;
-    }
-    &:hover {
-      background-color: #e0e0e0;
+      border: none;
     }
 
     .accordion-header {
@@ -1348,7 +1342,7 @@ textarea.input {
       padding: 10px;
       cursor: pointer;
 
-      h3 {
+      h4 {
         margin: 0;
         color: $color_white;
         font-weight: 400;
@@ -1369,6 +1363,85 @@ textarea.input {
           background-position: center;
           transform: rotate(90deg);
           transition: transform 0.3s ease-in-out;
+        }
+      }
+    }
+    .accordion-content {
+      border: $color_border-settings-blue;
+      .carousel-editorial {
+        background-color: $color_white;
+        width: -webkit-fill-available;
+        padding: 10px;
+      }
+      .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        margin: auto;
+
+        .carousel-track {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+          transform: translateX(0%);
+          .carousel-slide {
+            width: 100%;
+            height: auto;
+            background-size: contain;
+            figure {
+              @include apply-flex-styles($flex-col-center);
+              width: 100%;
+              height: -webkit-fill-available;
+              margin: 0 auto;
+              img {
+                width: -webkit-fill-available;
+                height: auto;
+                border: none;
+              }
+              figcaption {
+                display: flex;
+              }
+            }
+          }
+        }
+        .carousel-buttons {
+          width: -webkit-fill-available;
+          @include apply-flex-styles($flex-row-center-space_between);
+          .controls {
+            @include apply-flex-styles($flex-col-center);
+            border: 1px solid $color_brand;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            transition: all 0.3s ease-in-out;
+            background-color: $color_white;
+            box-shadow: $b-shadow;
+            color: $color_brand;
+            cursor: pointer;
+            &:hover {
+              background-color: $color_brand;
+              color: $color_white;
+              box-shadow: $b-shadow;
+            }
+          }
+        }
+        .pagination {
+          display: grid;
+          grid-template-columns: repeat(3, 40px);
+          grid-template-rows: repeat(2, 12px);
+          gap: 10px;
+          .dot {
+            width: 10px;
+            height: 10px;
+            margin: 0 10px;
+            background-color: lightblue;
+            border: 1px solid $color_brand;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+          .active {
+            background-color: $color_brand;
+          }
         }
       }
     }
@@ -1625,77 +1698,6 @@ $grid-1-col: (
   height: auto;
 }
 
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  margin: auto;
-
-  .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(0%);
-    .carousel-slide {
-      width: 100%;
-      height: auto;
-      background-size: contain;
-      figure {
-        @include apply-flex-styles($flex-col-center);
-        width: 100%;
-        height: -webkit-fill-available;
-        margin: 0 auto;
-        img {
-          width: -webkit-fill-available;
-          height: auto;
-          border: none;
-        }
-        figcaption {
-          display: flex;
-        }
-      }
-    }
-  }
-  .carousel-buttons {
-    width: -webkit-fill-available;
-    @include apply-flex-styles($flex-row-center-space_between);
-    .controls {
-      @include apply-flex-styles($flex-col-center);
-      border: 1px solid $color_brand;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      transition: all 0.3s ease-in-out;
-      background-color: $color_white;
-      box-shadow: $b-shadow;
-      color: $color_brand;
-      cursor: pointer;
-      &:hover {
-        background-color: $color_brand;
-        color: $color_white;
-        box-shadow: $b-shadow;
-      }
-    }
-  }
-  .pagination {
-    display: grid;
-    grid-template-columns: repeat(3, 40px);
-    grid-template-rows: repeat(2, 12px);
-    gap: 10px;
-    .dot {
-      width: 10px;
-      height: 10px;
-      margin: 0 10px;
-      background-color: lightblue;
-      border: 1px solid $color_brand;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-    .active {
-      background-color: $color_brand;
-    }
-  }
-}
 .tab-container.hide-sm {
   display: none;
 }
@@ -1730,7 +1732,7 @@ $grid-1-col: (
     }
   }
   .tab-contents {
-    border: $color_border-settings-grey;
+    border: $color_border-settings-blue;
     border-radius: 0 0 8px 8px;
     padding: 0 8px;
     .tab-module {
@@ -1742,6 +1744,7 @@ $grid-1-col: (
     }
   }
 }
+
 // footer styles
 .footer {
   background-color: $color_white;

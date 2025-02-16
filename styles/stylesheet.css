@@ -1124,6 +1124,7 @@ textarea.input {
   left: 10px;
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 .contents.hidden {
   display: none;
@@ -1246,25 +1247,17 @@ textarea.input {
 .accordion {
   width: 100%;
   margin: 1em 0;
+  max-width: 92vw;
 }
 .sm-accordion .accordion-item,
 .accordion .accordion-item {
   cursor: pointer;
   width: -webkit-fill-available;
-}
-.sm-accordion .accordion-item:first-child,
-.accordion .accordion-item:first-child {
-  border: 1px solid #4f73a4;
-  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid #daefff;
 }
 .sm-accordion .accordion-item:last-child,
 .accordion .accordion-item:last-child {
-  border: 1px solid #4f73a4;
-  border-radius: 0 0 4px 4px;
-}
-.sm-accordion .accordion-item:hover,
-.accordion .accordion-item:hover {
-  background-color: #e0e0e0;
+  border: none;
 }
 .sm-accordion .accordion-item .accordion-header,
 .accordion .accordion-item .accordion-header {
@@ -1278,8 +1271,8 @@ textarea.input {
   padding: 10px;
   cursor: pointer;
 }
-.sm-accordion .accordion-item .accordion-header h3,
-.accordion .accordion-item .accordion-header h3 {
+.sm-accordion .accordion-item .accordion-header h4,
+.accordion .accordion-item .accordion-header h4 {
   margin: 0;
   color: #fff;
   font-weight: 400;
@@ -1304,6 +1297,108 @@ textarea.input {
   background-position: center;
   transform: rotate(90deg);
   transition: transform 0.3s ease-in-out;
+}
+.sm-accordion .accordion-item .accordion-content,
+.accordion .accordion-item .accordion-content {
+  border: 1px solid #daefff;
+}
+.sm-accordion .accordion-item .accordion-content .carousel-editorial,
+.accordion .accordion-item .accordion-content .carousel-editorial {
+  background-color: #fff;
+  width: -webkit-fill-available;
+  padding: 10px;
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container,
+.accordion .accordion-item .accordion-content .carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .carousel-track,
+.accordion .accordion-item .accordion-content .carousel-container .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0%);
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .carousel-track .carousel-slide,
+.accordion .accordion-item .accordion-content .carousel-container .carousel-track .carousel-slide {
+  width: 100%;
+  height: auto;
+  background-size: contain;
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .carousel-track .carousel-slide figure,
+.accordion .accordion-item .accordion-content .carousel-container .carousel-track .carousel-slide figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: -webkit-fill-available;
+  margin: 0 auto;
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .carousel-track .carousel-slide figure img,
+.accordion .accordion-item .accordion-content .carousel-container .carousel-track .carousel-slide figure img {
+  width: -webkit-fill-available;
+  height: auto;
+  border: none;
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .carousel-track .carousel-slide figure figcaption,
+.accordion .accordion-item .accordion-content .carousel-container .carousel-track .carousel-slide figure figcaption {
+  display: flex;
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .carousel-buttons,
+.accordion .accordion-item .accordion-content .carousel-container .carousel-buttons {
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .carousel-buttons .controls,
+.accordion .accordion-item .accordion-content .carousel-container .carousel-buttons .controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2c4465;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  box-shadow: 6px 6px 12px -5px rgba(111, 111, 111, 0.7490196078);
+  color: #2c4465;
+  cursor: pointer;
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .carousel-buttons .controls:hover,
+.accordion .accordion-item .accordion-content .carousel-container .carousel-buttons .controls:hover {
+  background-color: #2c4465;
+  color: #fff;
+  box-shadow: 6px 6px 12px -5px rgba(111, 111, 111, 0.7490196078);
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .pagination,
+.accordion .accordion-item .accordion-content .carousel-container .pagination {
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  grid-template-rows: repeat(2, 12px);
+  gap: 10px;
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .pagination .dot,
+.accordion .accordion-item .accordion-content .carousel-container .pagination .dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  background-color: lightblue;
+  border: 1px solid #2c4465;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .pagination .active,
+.accordion .accordion-item .accordion-content .carousel-container .pagination .active {
+  background-color: #2c4465;
 }
 .sm-accordion .accordion-item .accordion-header:has(+ .accordion-content.open) .accordion-toggle .chev,
 .accordion .accordion-item .accordion-header:has(+ .accordion-content.open) .accordion-toggle .chev {
@@ -1670,87 +1765,6 @@ textarea.input {
   height: auto;
 }
 
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  margin: auto;
-}
-.carousel-container .carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(0%);
-}
-.carousel-container .carousel-track .carousel-slide {
-  width: 100%;
-  height: auto;
-  background-size: contain;
-}
-.carousel-container .carousel-track .carousel-slide figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: -webkit-fill-available;
-  margin: 0 auto;
-}
-.carousel-container .carousel-track .carousel-slide figure img {
-  width: -webkit-fill-available;
-  height: auto;
-  border: none;
-}
-.carousel-container .carousel-track .carousel-slide figure figcaption {
-  display: flex;
-}
-.carousel-container .carousel-buttons {
-  width: -webkit-fill-available;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.carousel-container .carousel-buttons .controls {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #2c4465;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  transition: all 0.3s ease-in-out;
-  background-color: #fff;
-  box-shadow: 6px 6px 12px -5px rgba(111, 111, 111, 0.7490196078);
-  color: #2c4465;
-  cursor: pointer;
-}
-.carousel-container .carousel-buttons .controls:hover {
-  background-color: #2c4465;
-  color: #fff;
-  box-shadow: 6px 6px 12px -5px rgba(111, 111, 111, 0.7490196078);
-}
-.carousel-container .pagination {
-  display: grid;
-  grid-template-columns: repeat(3, 40px);
-  grid-template-rows: repeat(2, 12px);
-  gap: 10px;
-}
-.carousel-container .pagination .dot {
-  width: 10px;
-  height: 10px;
-  margin: 0 10px;
-  background-color: lightblue;
-  border: 1px solid #2c4465;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.carousel-container .pagination .active {
-  background-color: #2c4465;
-}
-
 .tab-container.hide-sm {
   display: none;
 }
@@ -1787,7 +1801,7 @@ textarea.input {
   box-shadow: 0px 0px 0px 0.5px rgba(63, 168, 238, 0.7490196078);
 }
 .tab-container .tab-contents {
-  border: 1px solid #acacac;
+  border: 1px solid #daefff;
   border-radius: 0 0 8px 8px;
   padding: 0 8px;
 }
