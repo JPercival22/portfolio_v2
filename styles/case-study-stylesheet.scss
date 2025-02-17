@@ -564,8 +564,8 @@ section {
       background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
       background-size: contain;
       background-repeat: no-repeat;
-      width: 250px;
-      height: 150px;
+      width: -webkit-fill-available;
+      height: 200px;
     }
     .Brief-banner {
       background-image: url(../assets/images/Case-Studies/banners/section/Intro-Banner.webp);
@@ -879,6 +879,12 @@ section {
   }
 }
 
+#project-information .editorial .skills-section .centered-row {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 .grid-container-1col,
 .grid-container-2col,
 .grid-container-3col,
@@ -902,9 +908,13 @@ section {
       margin: 0;
     }
   }
+  ol {
+    padding-left: 20px;
+  }
   .prototype-container {
     display: flex;
     flex-direction: column;
+    margin-top: 1em;
     a {
       color: $color_primary_text;
       text-decoration: underline;
@@ -1024,7 +1034,7 @@ section {
         width: 100%;
         height: auto;
         margin: auto;
-
+        padding-bottom: 1em;
         .carousel-track {
           display: flex;
           transition: transform 0.5s ease-in-out;
@@ -1102,6 +1112,9 @@ section {
 
       .gallery {
         margin: 0;
+        figcaption {
+          padding-left: 10px;
+        }
       }
 
       .paragraphs {
@@ -1116,59 +1129,74 @@ section {
   }
 }
 
-//     "Home-icon",
-//     "center",
-//     "centered-row",
-//     "close-btn,
-//     "copy-panel",
-//     "cv-icon",
-//     "disc",
-//     "emphasis",
-//     "flex-col-left",
-//     "flex-col-right",
-//     "flex-row",
-//     "footer",
-//     "footer-container",
-//     "footer-social-icon",
-//     "gitHub-icon",
-//     "headline",
-//     "left-col",
-//     "lg",
-//     "lightbox",
-//     "lightbox-content",
-//     "lightbox-img-trigger",
-//     "lightbox_1",
-//     "lightbox_2",
-//     "lightbox_28",
-//     "lightbox_29",
-//     "lightbox_3",
-//     "lightbox_4",
-//     "lightbox_5",
-//     "lightbox_6",
-//     "lightbox_7",
-//     "lightbox_8",
-//     "lightbox_9",
-//     "linkedIn-icon",
-//     "material-symbols-outlined",
-//     "nav-item",
-//     "no-background",
-//     "no-border",
-//     "no-disc",
-//     "p0",
-//     "skills-section",
-//     "space-between",
-//     "text-link",
-//     "vector",
-//     "w-30a",
-//     "w-40",
-//     "w-40b",
-//     "w-50b",
-//     "w-60a",
-//     "w-60b",
-//     "w-70a",
-//     "w-85",
-//     "w-90",
-//     "width_50"
+.footer {
+  background-color: $color_white;
+  color: $color_primary_text;
+  .footer-container {
+    @include apply-flex-styles($flex-col-center);
+    .footer-social-icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 50px;
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity ease-in-out 0.3s;
+        .Home-icon {
+          background-image: url('../assets/images/iconography/Home-Icon-min.svg');
+          width: 35px;
+          height: 35px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+        .linkedIn-icon {
+          background-image: url('../assets/images/iconography/linkedin-min.svg');
+          width: 40px;
+          height: 40px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+        .gitHub-icon {
+          background-image: url('../assets/images/iconography/github-logo-min.svg');
+          width: 40px;
+          height: 40px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+        .cv-icon {
+          background-image: url('../assets/images/iconography/cv-icon-min.svg');
+          width: 40px;
+          height: 40px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    .copy-panel {
+      @include apply-flex-styles($flex-row-center);
+      background-color: $background_copy;
+      color: #0a0a0a;
+      padding: 1em;
+      width: 100vw;
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+}
 
 // tablet
 

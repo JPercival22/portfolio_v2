@@ -264,6 +264,9 @@ img {
   opacity: 0;
   max-height: 0;
 }
+.navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-content .gallery {
+  padding-left: 10px;
+}
 .navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-toggle {
   display: none;
 }
@@ -539,8 +542,8 @@ section {
   background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 250px;
-  height: 150px;
+  width: -webkit-fill-available;
+  height: 200px;
 }
 .editorial .split-header .Brief-banner {
   background-image: url(../assets/images/Case-Studies/banners/section/Intro-Banner.webp);
@@ -1315,6 +1318,7 @@ textarea.input {
   width: 100%;
   height: auto;
   margin: auto;
+  padding-bottom: 1em;
 }
 .sm-accordion .accordion-item .accordion-content .carousel-container .carousel-track,
 .accordion .accordion-item .accordion-content .carousel-container .carousel-track {
@@ -1436,6 +1440,10 @@ textarea.input {
 .sm-accordion .accordion-item .accordion-content .gallery,
 .accordion .accordion-item .accordion-content .gallery {
   margin: 0;
+}
+.sm-accordion .accordion-item .accordion-content .gallery figcaption,
+.accordion .accordion-item .accordion-content .gallery figcaption {
+  padding-left: 10px;
 }
 .sm-accordion .accordion-item .accordion-content .paragraphs,
 .accordion .accordion-item .accordion-content .paragraphs {
@@ -1559,6 +1567,14 @@ textarea.input {
 .grid-container-6col .image-container .gallery {
   margin: 0;
 }
+.grid-container-1col ol,
+.grid-container-2col ol,
+.grid-container-3col ol,
+.grid-container-4col ol,
+.grid-container-5col ol,
+.grid-container-6col ol {
+  padding-left: 20px;
+}
 .grid-container-1col .prototype-container,
 .grid-container-2col .prototype-container,
 .grid-container-3col .prototype-container,
@@ -1567,6 +1583,7 @@ textarea.input {
 .grid-container-6col .prototype-container {
   display: flex;
   flex-direction: column;
+  margin-top: 1em;
 }
 .grid-container-1col .prototype-container a,
 .grid-container-2col .prototype-container a,
@@ -1908,6 +1925,10 @@ textarea.input {
 .footer .footer-container .copy-panel p {
   margin: 0;
   font-size: 14px;
+}
+
+.lightbox {
+  display: none;
 }
 
 .bttt-btn {
