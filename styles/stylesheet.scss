@@ -1418,8 +1418,27 @@ textarea.input {
             box-shadow: $b-shadow;
             color: $color_brand;
             cursor: pointer;
+            .move-left {
+              background-image: url(../assets/images/controls/left_chev.svg);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              width: 20px;
+              height: 20px;
+              color: $color-brand;
+              transform: rotate(181deg);
+            }
+            .move-right {
+              background-image: url(../assets/images/controls/left_chev.svg);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              width: 20px;
+              height: 20px;
+              color: $color-brand;
+            }
             &:hover {
-              background-color: $color_brand;
+              background-color: lightblue;
               color: $color_white;
               box-shadow: $b-shadow;
             }

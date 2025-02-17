@@ -1373,9 +1373,30 @@ textarea.input {
   color: #2c4465;
   cursor: pointer;
 }
+.sm-accordion .accordion-item .accordion-content .carousel-container .carousel-buttons .controls .move-left,
+.accordion .accordion-item .accordion-content .carousel-container .carousel-buttons .controls .move-left {
+  background-image: url(../assets/images/controls/left_chev.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  color: #2c4465;
+  transform: rotate(181deg);
+}
+.sm-accordion .accordion-item .accordion-content .carousel-container .carousel-buttons .controls .move-right,
+.accordion .accordion-item .accordion-content .carousel-container .carousel-buttons .controls .move-right {
+  background-image: url(../assets/images/controls/left_chev.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  color: #2c4465;
+}
 .sm-accordion .accordion-item .accordion-content .carousel-container .carousel-buttons .controls:hover,
 .accordion .accordion-item .accordion-content .carousel-container .carousel-buttons .controls:hover {
-  background-color: #2c4465;
+  background-color: lightblue;
   color: #fff;
   box-shadow: 6px 6px 12px -5px rgba(111, 111, 111, 0.7490196078);
 }
