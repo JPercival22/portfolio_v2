@@ -369,6 +369,9 @@ img {
               transition: max-height 0.3s ease, opacity 0.3s ease;
               opacity: 0;
               max-height: 0;
+              .gallery {
+                padding-left: 10px;
+              }
             }
             .accordion-toggle {
               display: none;
@@ -638,8 +641,8 @@ section {
       background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
       background-size: contain;
       background-repeat: no-repeat;
-      width: 250px;
-      height: 150px;
+      width: -webkit-fill-available;
+      height: 200px;
     }
     .Brief-banner {
       background-image: url(../assets/images/Case-Studies/banners/section/Intro-Banner.webp);
@@ -1379,7 +1382,7 @@ textarea.input {
         width: 100%;
         height: auto;
         margin: auto;
-
+        padding-bottom: 1em;
         .carousel-track {
           display: flex;
           transition: transform 0.5s ease-in-out;
@@ -1476,6 +1479,9 @@ textarea.input {
 
       .gallery {
         margin: 0;
+        figcaption {
+          padding-left: 10px;
+        }
       }
 
       .paragraphs {
@@ -1583,9 +1589,13 @@ $grid-1-col: (
       margin: 0;
     }
   }
+  ol {
+    padding-left: 20px;
+  }
   .prototype-container {
     display: flex;
     flex-direction: column;
+    margin-top: 1em;
     a {
       color: $color_primary_text;
       text-decoration: underline;
@@ -1833,7 +1843,9 @@ $grid-1-col: (
     }
   }
 }
-
+.lightbox {
+  display: none;
+}
 .bttt-btn {
   position: fixed;
   padding: 15px;
