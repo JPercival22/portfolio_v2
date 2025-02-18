@@ -249,7 +249,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 95%;
     height: 76px;
     margin: 0 auto;
     .navbar-logo {
@@ -257,8 +256,7 @@ img {
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      width: 70%;
-      padding: 10px 0;
+      padding: 10px;
       .logo {
         background-image: url('../assets/images/iconography/jp-LOGO-mini.svg');
         background-size: contain;
@@ -458,6 +456,7 @@ img {
 }
 section {
   @include apply-flex-styles($flex-col-center);
+  width: 95%;
 }
 .editorial {
   display: inherit;
@@ -724,7 +723,9 @@ section {
 }
 
 // section styles
-
+.lightbox {
+  visibility: none;
+}
 // hero styles
 .hero-content {
   .hero-content {
@@ -861,7 +862,6 @@ section {
 }
 
 .centered-row {
-  @include apply-flex-styles($flex-row-center);
   margin: 2em 0;
   .image-container {
     display: flex;
@@ -879,7 +879,7 @@ section {
   }
 }
 
-#project-information .editorial .skills-section .centered-row {
+#project-information .skills-section .centered-row {
   display: inherit;
   flex-direction: inherit;
   align-items: flex-start;
@@ -977,8 +977,7 @@ section {
   }
 }
 
-.sm-accordion,
-.accordion {
+.sm-accordion {
   width: 100%;
   margin: 1em 0;
   max-width: 92vw;
@@ -1197,189 +1196,305 @@ section {
     }
   }
 }
+@media only screen and (min-width: 425px) {
+  .editorial .hero-content .image-container {
+    background-color: #fec6c7;
+    .primary-banner {
+      width: 250px;
+    }
+  }
+}
 
-// tablet
+@media only screen and (min-width: 768px) {
+  .sm-accordion,
+  .tabular-view-sm {
+    display: none;
+  }
+  .hide-sm,
+  .tab-container.hide-sm {
+    display: flex;
+    margin-top: 1em;
+  }
 
-// "-Hi-Fi_border",
-// "-IA_border",
-// "-Inter_border",
-// "-Lo-Fi_border",
-// "-brief_border",
-// "-conclusion_border",
-// "-desSystem_border",
-// "-research_border",
-// "-results_border",
-// "-uxTest_border",
-// "Brief-banner",
-// "Conc-icon",
-// "DesSystem-icon",
-// "Design-System-banner",
-// "Hi-Fi-icon",
-// "Home-icon",
-// "IA-banner",
-// "IA-icon",
-// "ID-icon",
-// "Info-icon",
-// "Interaction-banner",
-// "Lo-Fi-icon",
-// "Low-Fi-banner",
-// "Research-banner",
-// "Results-icon",
-// "UXTesting-icon",
-// "accordion",
-// "accordion-content",
-// "accordion-header",
-// "accordion-item",
-// "accordion-toggle",
-// "achievement",
-// "achievements-section",
-// "active",
-// "awareness-img",
-// "border",
-// "border-gradient",
-// "bttt-btn",
-// "bullet-list-row",
-// "car-tab-contents",
-// "car-tab-module",
-// "carousel-banner-1",
-// "carousel-banner-2",
-// "carousel-banner-3",
-// "carousel-banner-4",
-// "carousel-buttons",
-// "carousel-container",
-// "carousel-editorial",
-// "carousel-header",
-// "carousel-slide",
-// "carousel-track",
-// "case-link",
-// "case-study-settings",
-// "center",
-// "centered-row",
-// "chevron",
-// "close-btn",
-// "col",
-// "conclusion-banner",
-// "contents",
-// "controls",
-// "copy-panel",
-// "cv-icon",
-// "disc",
-// "dot",
-// "editorial",
-// "emphasis",
-// "flex-col-left",
-// "flex-col-right",
-// "flex-row",
-// "footer",
-// "footer-container",
-// "footer-social-icon",
-// "gallery",
-// "gitHub-icon",
-// "grid-container-1col",
-// "grid-container-2col",
-// "grid-container-3col",
-// "grid-container-4col",
-// "grid-container-5col",
-// "grid-container-6col",
-// "header",
-// "header-banner",
-// "header-bannerHi-Fi-banner",
-// "headline",
-// "hero",
-// "hero-content",
-// "hide-sm",
-// "highlight",
-// "home-link",
-// "icon-bar",
-// "image-container",
-// "introduction-icon",
-// "invest-img",
-// "item",
-// "lazyblurry",
-// "lazyload",
-// "lazyloaded",
-// "left-align",
-// "left-col",
-// "lg",
-// "lightbox",
-// "lightbox-content",
-// "lightbox-img-trigger",
-// "lightbox_1",
-// "lightbox_2",
-// "lightbox_28",
-// "lightbox_29",
-// "lightbox_3",
-// "lightbox_4",
-// "lightbox_5",
-// "lightbox_6",
-// "lightbox_7",
-// "lightbox_8",
-// "lightbox_9",
-// "linkedIn-icon",
-// "logo",
-// "logo-container",
-// "logo-name",
-// "logo-title",
-// "main-content",
-// "material-symbols-outlined",
-// "menu-toggle",
-// "mobile-sidebar",
-// "nav-item",
-// "nav-menu",
-// "navbar",
-// "navbar-container",
-// "navbar-item",
-// "navbar-link",
-// "navbar-logo",
-// "no-background",
-// "no-border",
-// "no-disc",
-// "open-sidebar-btn",
-// "organic-link",
-// "p0",
-// "page-wrapper",
-// "pagination",
-// "primary-banner",
-// "primary-button",
-// "prototype-container",
-// "research-icon",
-// "right-align",
-// "right-col",
-// "side-bar-icon",
-// "side-bar-list",
-// "side-bar-list-item",
-// "skills-section",
-// "sm-accordion",
-// "space-between",
-// "speed-img",
+  section {
+    margin: 0 auto;
+  }
 
-// "split-header",
-// "stat",
-// "sus-banner",
-// "tab-button",
-// "tab-buttons",
-// "tab-container",
-// "tab-contents",
-// "tab-module",
-// "tertiary-link",
-// "testing-banner",
-// "text-link",
-// "title",
-// "title-col",
-// "tooltip",
-// "traffic-img",
-// "two-button-container",
-// "vector",
-// "w-30a",
-// "w-40",
-// "w-40b",
-// "w-50b",
-// "w-60a",
-// "w-60b",
-// "w-70a",
-// "w-85",
-// "w-90",
-// "width_50"
+  .sidebar-open {
+    width: 40%;
+  }
+
+  // Layouts
+
+  @mixin apply-grid-styles($grid-styles) {
+    @each $property, $value in $grid-styles {
+      #{$property}: $value;
+    }
+  }
+  // grid 1 col 0 rows
+  $grid-1col: (
+    display: grid,
+    grid-template-columns: 1fr,
+    grid-gap: 1em,
+    margin-top: 1em,
+  );
+  $grid-2col-auto: (
+    display: grid,
+    grid-template-columns: repeat(2, 1fr),
+    grid-template-rows: auto,
+    grid-gap: 1em,
+  );
+  $grid-3col-auto: (
+    display: grid,
+    grid-template-columns: repeat(3, 1fr),
+    grid-template-rows: auto,
+    gap: 1em,
+  );
+  $grid-4col-auto: (
+    display: grid,
+    grid-template-columns: repeat(4, 1fr),
+    grid-template-rows: auto,
+    grid-gap: 1em,
+  );
+  $grid-5col-auto: (
+    display: grid,
+    grid-template-columns: repeat(5, 1fr),
+    grid-template-rows: auto,
+    grid-gap: 1em,
+  );
+  $grid-6col-auto: (
+    display: grid,
+    grid-template-columns: repeat(6, 1fr),
+    grid-template-rows: auto,
+    grid-gap: 1em,
+  );
+
+  .editorial {
+    .hero-content {
+      .hero-buttons-container {
+        width: -webkit-fill-available;
+        margin-top: 1em;
+        .col {
+          display: flex;
+          justify-content: space-between;
+          .hero-buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1em;
+            width: 50%;
+            .tertiary-link {
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+      .primary-button-container {
+        display: flex;
+        margin-top: 1em;
+        width: 33%;
+      }
+      .bullet-list-row {
+        @include apply-flex-styles($flex-row-center-space_between);
+        flex-wrap: wrap;
+      }
+      .image-container {
+        border-radius: 0 0 8px 8px;
+        .primary-banner {
+          width: 100%;
+        }
+      }
+    }
+    .achievement-cards {
+      @include apply-grid-styles($grid-4col-auto);
+      .card {
+        .stat {
+          font-size: 1.3rem;
+          font-weight: 500;
+        }
+        .highlight {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .grid-container-4col {
+      @include apply-grid-styles($grid-4col-auto);
+      .gallery {
+        figcaption {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .grid-container-2col {
+      margin-top: 2em;
+      @include apply-grid-styles($grid-2col-auto);
+      .grrid-item {
+        @include apply-flex-styles($flex-col-center);
+      }
+    }
+    .grid-container-3col {
+      @include apply-grid-styles($grid-3col-auto);
+    }
+    .grid-container-4col {
+      @include apply-grid-styles($grid-4col-auto);
+    }
+
+    .split-header {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      .left-align {
+        width: 50%;
+        display: inline-flex;
+      }
+      .right-align {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row;
+        .primary-button {
+          margin-bottom: 0;
+        }
+      }
+      .title-col {
+        width: 60%;
+        margin-right: 10px;
+      }
+      .header-banner {
+        background-position: right;
+        height: 150px;
+        &.carousel-banner-1 {
+          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
+          width: 150px;
+          height: 150px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: bottom;
+          margin-bottom: 1em;
+        }
+        &.carousel-banner-2 {
+          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: right;
+          border-radius: $brad-8;
+        }
+        &.carousel-banner-3 {
+          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: right;
+          border-radius: $brad-8;
+        }
+        &.carousel-banner-4 {
+          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: right;
+          border-radius: $brad-8;
+        }
+      }
+    }
+  }
+
+  .tab-container .tab-contents .tab-module {
+    .list-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-top: 1em;
+    }
+  }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000075;
+    z-index: 9999;
+    cursor: zoom-out;
+    .lightbox-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include apply-flex-styles($flex-col-center-start);
+      background-color: #fff;
+      padding: 1em;
+      border-radius: $brad-8;
+      width: 90%;
+      cursor: context-menu;
+
+      &.w-40 {
+        max-width: 40%;
+      }
+      &.w-50 {
+        max-width: 50%;
+      }
+      &.w-90 {
+        max-width: 90%;
+      }
+      img {
+        background-color: $color_white;
+        border: $color_border-settings-grey;
+        align-self: center;
+        &.no-border {
+          border: none;
+        }
+      }
+      p {
+        font-size: 12px;
+        line-height: 11px;
+        margin: 0;
+        margin-top: 10px;
+      }
+      .header {
+        width: 100%;
+        @include apply-flex-styles($flex-row-center-space_between);
+        margin-bottom: 10px;
+        h4 {
+          font-size: 16px;
+          margin: 0;
+          display: inherit;
+          flex: 0 0 75%;
+        }
+        .close-btn {
+          flex: 1;
+          background-color: $color_white;
+          color: $color_primary_text;
+          border: none;
+          font-size: 30px;
+          text-align: right;
+          cursor: pointer;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            background-color: gainsboro;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .sidebar-open {
+    width: 30%;
+  }
+
+  .navbar .navbar-container {
+    padding: 1em;
+  }
+}
 
 // laptop
 
