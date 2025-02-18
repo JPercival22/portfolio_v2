@@ -279,7 +279,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 95%;
     height: 76px;
     margin: 0 auto;
     .navbar-logo {
@@ -287,8 +286,7 @@ img {
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      width: 70%;
-      padding: 10px 0;
+      padding: 10px;
       .logo {
         background-image: url('../assets/images/iconography/jp-LOGO-mini.svg');
         background-size: contain;
@@ -425,6 +423,7 @@ img {
 
 section {
   @include apply-flex-styles($flex-col-center);
+  width: 95%;
 }
 .editorial {
   display: inherit;
@@ -562,7 +561,6 @@ section {
 }
 
 .centered-row {
-  @include apply-flex-styles($flex-row-center);
   margin: 2em 0;
   .image-container {
     display: flex;
@@ -636,10 +634,11 @@ section {
       background-position: center;
       width: 100%;
       height: 34vh;
+      margin-bottom: 2em;
     }
     .sus-banner {
       background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       width: -webkit-fill-available;
       height: 200px;
@@ -1091,6 +1090,7 @@ textarea.input {
     }
   }
 }
+
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
@@ -1325,8 +1325,7 @@ textarea.input {
   }
 }
 
-.sm-accordion,
-.accordion {
+.sm-accordion {
   width: 100%;
   margin: 1em 0;
   max-width: 92vw;
@@ -1537,18 +1536,25 @@ textarea.input {
   width: -webkit-fill-available;
   margin-top: 1em;
 }
-.editorial .skills-section .centered-row {
-  @include apply-flex-styles($flex-col-center-start);
-  .flex-row.no-border {
-    flex-direction: row;
+#project-information .skills-section {
+  display: flex;
+  flex-direction: column;
+  .centered-row {
+    display: inherit;
+    flex-direction: inherit;
     align-items: flex-start;
     justify-content: space-between;
-    border: none;
-    .right-col .no-border .col {
-      .tertiary-link {
-        text-decoration: underline;
-        &:hover {
-          text-decoration: none;
+    .flex-row.no-border {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      border: none;
+      .right-col .no-border .col {
+        .tertiary-link {
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }
@@ -1891,12 +1897,16 @@ $grid-1-col: (
   .home-link {
     padding-left: 20px;
   }
-  .menu-toggle {
-    width: 60px;
+  .editorial .hero-content .image-container {
+    background-color: #fec6c7;
+    .primary-banner {
+      width: 250px;
+    }
   }
-  .sidebar.show {
-    width: 50%;
-    padding: 20px;
+
+  .editorial .split-header .sus-banner {
+    height: 39vh;
+    margin-bottom: 0;
   }
 
   .flex-row {
@@ -1921,29 +1931,10 @@ $grid-1-col: (
       gap: 1em;
     }
   }
-  .left-col {
-    @include apply-flex-styles($flex-row-center-space_between);
-    flex-wrap: nowrap;
-    align-items: flex-start;
-  }
-  .right-col {
-    @include apply-flex-styles($flex-row-center-space_between);
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    width: 50%;
-  }
 
   .editorial .grid-container-3col .achievement .banner-img {
     width: 40%;
     height: auto;
-  }
-
-  footer {
-    .footer-container {
-      .footer-details {
-        padding: 2em;
-      }
-    }
   }
 }
 
@@ -1962,17 +1953,269 @@ $grid-1-col: (
   .thank-you-container {
     width: 80%;
   }
-
-  footer .footer-container .footer-details {
-    padding: 2em;
-  }
 }
 
 /* Start of Responsive Navigation Shift  */
 @media screen and (min-width: 768px) {
-  .hide-sm {
-    display: flex;
+  .sm-accordion,
+  .tabular-view-sm {
+    display: none;
   }
+  .hide-sm,
+  .tab-container.hide-sm {
+    display: flex;
+    margin-top: 1em;
+  }
+  .tab-container .tab-contents .tab-module {
+    .list-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-top: 1em;
+    }
+  }
+
+  section {
+    margin: 0 auto;
+  }
+  .editorial .hero-content {
+    .hero-buttons-container {
+      width: -webkit-fill-available;
+      margin-top: 1em;
+      .col {
+        display: flex;
+        justify-content: space-between;
+        .hero-buttons {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1em;
+          width: 50%;
+          .tertiary-link {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+    .primary-button-container {
+      display: flex;
+      margin-top: 1em;
+      width: 33%;
+    }
+    .bullet-list-row {
+      @include apply-flex-styles($flex-row-center-space_between);
+      flex-wrap: wrap;
+    }
+    .image-container {
+      border-radius: 0 0 8px 8px;
+      .primary-banner {
+        width: 100%;
+      }
+    }
+  }
+  // .editorial .split-header {
+  //   @include apply-flex-styles($flex-row-center-space_between);
+  //   .title-col {
+  //     display: flex;
+  //     flex: 70%;
+  //   }
+  //   .header-banner {
+  //     background-position: right;
+  //     height: 150px;
+  //   }
+  // }
+
+  @mixin apply-grid-styles($grid-styles) {
+    @each $property, $value in $grid-styles {
+      #{$property}: $value;
+    }
+  }
+  // grid 1 col 0 rows
+  $grid-1col: (
+    display: grid,
+    grid-template-columns: 1fr,
+    grid-gap: 1em,
+    margin-top: 1em,
+  );
+  $grid-2col-auto: (
+    display: grid,
+    grid-template-columns: repeat(2, 1fr),
+    grid-template-rows: auto,
+    grid-gap: 1em,
+  );
+  $grid-3col-auto: (
+    display: grid,
+    grid-template-columns: repeat(3, 1fr),
+    grid-template-rows: auto,
+    gap: 1em,
+  );
+  $grid-4col-auto: (
+    display: grid,
+    grid-template-columns: repeat(4, 1fr),
+    grid-template-rows: auto,
+    grid-gap: 1em,
+  );
+  $grid-5col-auto: (
+    display: grid,
+    grid-template-columns: repeat(5, 1fr),
+    grid-template-rows: auto,
+    grid-gap: 1em,
+  );
+  $grid-6col-auto: (
+    display: grid,
+    grid-template-columns: repeat(6, 1fr),
+    grid-template-rows: auto,
+    grid-gap: 1em,
+  );
+
+  .editorial {
+    .hero-content {
+      .hero-buttons-container {
+        width: -webkit-fill-available;
+        margin-top: 1em;
+        .col {
+          display: flex;
+          justify-content: space-between;
+          .hero-buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1em;
+            width: 50%;
+            .tertiary-link {
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+      .primary-button-container {
+        display: flex;
+        margin-top: 1em;
+        width: 33%;
+      }
+      .bullet-list-row {
+        @include apply-flex-styles($flex-row-center-space_between);
+        flex-wrap: wrap;
+      }
+      .image-container {
+        border-radius: 0 0 8px 8px;
+        .primary-banner {
+          width: 100%;
+        }
+      }
+    }
+
+    .grid-container-2col {
+      margin-top: 2em;
+      @include apply-grid-styles($grid-2col-auto);
+      .grid-item {
+        @include apply-flex-styles($flex-col-center);
+      }
+    }
+    .grid-container-3col {
+      @include apply-grid-styles($grid-3col-auto);
+      .grid-item {
+        @include apply-flex-styles($flex-col-center);
+      }
+    }
+    .grid-container-4col {
+      @include apply-grid-styles($grid-4col-auto);
+      .grid-item {
+        @include apply-flex-styles($flex-col-center);
+      }
+    }
+    .grid-container-5col {
+      @include apply-grid-styles($grid-5col-auto);
+    }
+    .grid-container-6col {
+      @include apply-grid-styles($grid-6col-auto);
+    }
+    .split-header {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      .left-align {
+        width: 50%;
+        display: inline-flex;
+      }
+      .right-align {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row;
+        .primary-button {
+          margin-bottom: 0;
+        }
+      }
+      .title-col {
+        width: 60%;
+        margin-right: 10px;
+      }
+      .header-banner {
+        background-position: right;
+        height: 150px;
+        &.carousel-banner-1 {
+          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
+          width: 150px;
+          height: 150px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: bottom;
+          margin-bottom: 1em;
+        }
+        &.carousel-banner-2 {
+          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: right;
+          border-radius: $brad-8;
+        }
+        &.carousel-banner-3 {
+          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: right;
+          border-radius: $brad-8;
+        }
+        &.carousel-banner-4 {
+          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: right;
+          border-radius: $brad-8;
+        }
+      }
+    }
+
+    .achievement-cards {
+      @include apply-grid-styles($grid-4col-auto);
+      .card {
+        .stat {
+          font-size: 1.3rem;
+          font-weight: 500;
+        }
+        .highlight {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .grid-container-4col {
+      @include apply-grid-styles($grid-4col-auto);
+      .gallery {
+        figcaption {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
   .accordion .accordion-content {
     max-height: 0;
     opacity: 0;
@@ -2033,7 +2276,7 @@ $grid-1-col: (
       }
     }
   }
-
+  // index
   .career-history-banner {
     background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
     background-size: contain;
@@ -2110,143 +2353,81 @@ $grid-1-col: (
   }
 
   // case study styles
-  .editorial {
-    .hero {
-      display: inherit;
-      width: 100%;
-    }
-    .case-study-settings {
-      .image-container {
-        .syn-banner {
-          background-image: url(../assets/images/Case-Studies/CS2/main-banner.webp);
-          background-size: contain;
-        }
-      }
-    }
+  section {
+    margin: 0 auto;
   }
+
   // .editorial .hero .case-study-settings .image-container
   .sidebar-open {
     width: 40%;
   }
-  .sm-cs-hero {
-    display: none;
-  }
-  .lg-cs-hero {
-    display: flex;
-  }
-  .sm-accordion {
-    display: none;
-  }
 
-  .col-2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    width: 100%;
-    gap: 3em;
-    .left-col {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-    }
-    .right-col {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-    }
-  }
-  .flex-row-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .flex-col-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
-  }
+  // .col-2 {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-evenly;
+  //   align-items: flex-start;
+  //   width: 100%;
+  //   gap: 3em;
+  //   .left-col {
+  //     display: flex;
+  //     flex-direction: column;
+  //     width: 50%;
+  //   }
+  //   .right-col {
+  //     display: flex;
+  //     flex-direction: column;
+  //     width: 50%;
+  //   }
+  // }
+  // .flex-row-container {
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-wrap: wrap;
+  // }
+  // .flex-col-container {
+  //   display: flex;
+  //   flex-direction: column;
+  //   margin-bottom: 1em;
+  // }
 
-  @mixin apply-grid-styles($grid-styles) {
-    @each $property, $value in $grid-styles {
-      #{$property}: $value;
-    }
-  }
-  // grid 1 col 0 rows
-  $grid-1col: (
-    display: grid,
-    grid-template-columns: 1fr,
-    grid-gap: 1em,
-    margin-top: 1em,
-  );
-  $grid-2col-auto: (
-    display: grid,
-    grid-template-columns: repeat(2, 1fr),
-    grid-template-rows: auto,
-    grid-gap: 1em,
-  );
-  $grid-3col-auto: (
-    display: grid,
-    grid-template-columns: repeat(3, 1fr),
-    grid-template-rows: auto,
-    grid-gap: 1em,
-  );
-  $grid-4col-auto: (
-    display: grid,
-    grid-template-columns: repeat(4, 1fr),
-    grid-template-rows: auto,
-    grid-gap: 1em,
-  );
-  $grid-5col-auto: (
-    display: grid,
-    grid-template-columns: repeat(5, 1fr),
-    grid-template-rows: auto,
-    grid-gap: 1em,
-  );
-  $grid-6col-auto: (
-    display: grid,
-    grid-template-columns: repeat(6, 1fr),
-    grid-template-rows: auto,
-    grid-gap: 1em,
-  );
-
-  .grid-container-2col {
-    @include apply-grid-styles($grid-2col-auto);
-    .prototype-container {
-      @include apply-flex-styles($flex-col-center-start);
-    }
-  }
-  .grid-container-3col {
-    @include apply-grid-styles($grid-3col-auto);
-    .prototype-container {
-      @include apply-flex-styles($flex-col-center-start);
-    }
-  }
-  .grid-container-4col {
-    @include apply-grid-styles($grid-4col-auto);
-    .gallery {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: flex-start;
-      margin: 0;
-      border: 1px solid lightgray;
-      border-radius: 6px;
-    }
-    &.start_even {
-      display: flex;
-      align-items: start;
-      justify-content: space-evenly;
-    }
-  }
-  .grid-container-5col {
-    @include apply-grid-styles($grid-5col-auto);
-  }
-  .grid-container-6col {
-    @include apply-grid-styles($grid-6col-auto);
-    align-items: start;
-    justify-content: space-evenly;
-  }
+  // .grid-container-2col {
+  //   @include apply-grid-styles($grid-2col-auto);
+  //   .prototype-container {
+  //     @include apply-flex-styles($flex-col-center-start);
+  //   }
+  // }
+  // .grid-container-3col {
+  //   @include apply-grid-styles($grid-3col-auto);
+  //   .prototype-container {
+  //     @include apply-flex-styles($flex-col-center-start);
+  //   }
+  // }
+  // .grid-container-4col {
+  //   @include apply-grid-styles($grid-4col-auto);
+  //   .gallery {
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: space-evenly;
+  //     align-items: flex-start;
+  //     margin: 0;
+  //     border: 1px solid lightgray;
+  //     border-radius: 6px;
+  //   }
+  //   &.start_even {
+  //     display: flex;
+  //     align-items: start;
+  //     justify-content: space-evenly;
+  //   }
+  // }
+  // .grid-container-5col {
+  //   @include apply-grid-styles($grid-5col-auto);
+  // }
+  // .grid-container-6col {
+  //   @include apply-grid-styles($grid-6col-auto);
+  //   align-items: start;
+  //   justify-content: space-evenly;
+  // }
 
   .achievements-section .editorial .flex-row {
     flex-direction: row;
@@ -2276,81 +2457,6 @@ $grid-1-col: (
     gap: 1em;
   }
 
-  .banner-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; // Two equal columns
-    grid-gap: 10px; // Adjust gap between grid items as needed
-    width: 100%;
-    .banner-wrapper {
-      height: 500px; // Set the height as needed
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 24px;
-      &.banner-1 {
-        background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Results-Banner.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-      &.banner-2 {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-stats-Banner.svg);
-      }
-    }
-  }
-
-  .editorial .split-header {
-    @include apply-flex-styles($flex-row-center-space_between);
-    align-items: flex-start;
-    .title-col {
-      display: flex;
-      flex: 70%;
-    }
-    .header-banner {
-      background-position: right;
-      height: 150px;
-    }
-  }
-  .grid-container-1col,
-  .grid-container-2col,
-  .grid-container-3col,
-  .grid-container-4col,
-  .grid-container-5col,
-  .grid-container-6col {
-    @include apply-grid-styles($grid-1-col);
-    .item {
-      @include apply-flex-styles($flex-col-start-start);
-      gap: 1em;
-    }
-    .marketing-banner {
-      background-image: url(../assets/images/Case-Studies/CS1/banners/marketing-table.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: -webkit-fill-available;
-      height: 200px;
-    }
-    .image-container {
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      padding: 0;
-      &.lightbox-img-trigger {
-        cursor: zoom-in;
-      }
-      .gallery {
-        background-color: $color_white;
-        border: 1px solid #f2fbfe;
-        border-radius: $brad-8;
-        transition: border-color 0.5s ease-in-out;
-        padding: 0.5em;
-        box-shadow: $b-shadow;
-        margin: 0;
-      }
-    }
-  }
-
   .lightbox {
     display: none;
     position: fixed;
@@ -2372,32 +2478,9 @@ $grid-1-col: (
       border-radius: $brad-8;
       width: 90%;
       cursor: context-menu;
-      &.w-10 {
-        max-width: 10%;
-      }
-      &.w-15 {
-        max-width: 15%;
-      }
-      &.w-20 {
-        max-width: 20%;
-      }
-      &.w-25 {
-        max-width: 25%;
-      }
-      &.w-30 {
-        max-width: 30%;
-      }
-      &.w-40 {
-        max-width: 40%;
-      }
-      &.w-45 {
-        max-width: 45%;
-      }
+
       &.w-50 {
         max-width: 50%;
-      }
-      &.w-85 {
-        max-width: 85%;
       }
       &.w-90 {
         max-width: 90%;
@@ -2445,10 +2528,6 @@ $grid-1-col: (
   .grid-container-1col .marketing-banner {
     height: 300px;
     aspect-ratio: 2/1;
-  }
-  .btt-button {
-    bottom: 2rem;
-    right: 1rem;
   }
 }
 
@@ -2557,6 +2636,11 @@ $grid-1-col: (
     &.just-speak-banner {
       height: 308px;
     }
+  }
+
+  // case
+  .navbar .navbar-container {
+    padding: 1em;
   }
   .sidebar-open {
     width: 30%;
@@ -2704,69 +2788,26 @@ $grid-1-col: (
         align-items: flex-start;
         justify-content: center;
         width: inherit;
-        .carousel-header {
+
+        .flex-col-left {
+          align-items: flex-start;
+          justify-content: flex-start;
+          width: 50%;
+          .headline {
+            margin: 0;
+          }
+        }
+        .flex-col-right {
+          width: 50%;
+          height: 170px;
           display: flex;
-          justify-content: space-evenly;
-          align-items: center;
-          flex-direction: row;
-          width: -webkit-fill-available;
-          margin-bottom: 1em;
-          .flex-col-left {
-            align-items: flex-start;
-            justify-content: flex-start;
-            width: 50%;
-            .headline {
-              margin: 0;
-            }
-          }
-          .flex-col-right {
-            width: 50%;
-            height: 170px;
-            display: flex;
-            justify-content: flex-end;
-            .carousel-banner-1 {
-              background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
-              width: 100%;
-              height: 100%;
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: right;
-              border-radius: $brad-8;
-            }
-            .carousel-banner-2 {
-              background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
-              width: 100%;
-              height: 100%;
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: right;
-              border-radius: $brad-8;
-            }
-            .carousel-banner-3 {
-              background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
-              width: 100%;
-              height: 100%;
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: right;
-              border-radius: $brad-8;
-            }
-            .carousel-banner-4 {
-              background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
-              width: 100%;
-              height: 100%;
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: right;
-              border-radius: $brad-8;
-            }
-          }
+          justify-content: flex-end;
         }
       }
     }
   }
 
-  .tab-container.hide-sm .tab-contents .tab-module .carousel-header {
+  .tab-container.hide-sm .tab-contents .tab-module {
     .flex-col-left {
       align-items: flex-start;
       justify-content: flex-start;
