@@ -428,6 +428,7 @@ section {
 .editorial {
   display: inherit;
   flex-direction: inherit;
+  align-items: flex-start;
   background-color: $color_white;
   padding: 10px;
   border-radius: 8px;
@@ -1536,25 +1537,23 @@ textarea.input {
   width: -webkit-fill-available;
   margin-top: 1em;
 }
-#project-information .skills-section {
+
+.centered-row {
   display: flex;
   flex-direction: column;
-  .centered-row {
-    display: inherit;
-    flex-direction: inherit;
+  align-items: flex-start;
+  justify-content: space-between;
+  .flex-row,
+  .no-border {
+    flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    .flex-row.no-border {
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
-      border: none;
-      .right-col .no-border .col {
-        .tertiary-link {
-          text-decoration: underline;
-          &:hover {
-            text-decoration: none;
-          }
+    border: none;
+    .right-col .no-border .col {
+      .tertiary-link {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
         }
       }
     }
@@ -2192,6 +2191,11 @@ $grid-1-col: (
           border-radius: $brad-8;
         }
       }
+      .sus-banner {
+        height: 150px;
+        margin-bottom: 1em;
+        width: 220px;
+      }
     }
 
     .achievement-cards {
@@ -2259,6 +2263,25 @@ $grid-1-col: (
             }
           }
         }
+      }
+    }
+    &.no-border {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 3em;
+      .left-col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .col {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1em;
+          width: -webkit-fill-available;
+        }
+      }
+      .width_50 {
+        width: 50%;
       }
     }
   }
@@ -2479,6 +2502,9 @@ $grid-1-col: (
       width: 90%;
       cursor: context-menu;
 
+      &.w-40 {
+        max-width: 40%;
+      }
       &.w-50 {
         max-width: 50%;
       }
