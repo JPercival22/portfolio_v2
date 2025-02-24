@@ -320,6 +320,7 @@ section {
 .editorial {
   display: inherit;
   flex-direction: inherit;
+  align-items: flex-start;
   background-color: #fff;
   padding: 10px;
   border-radius: 8px;
@@ -1470,26 +1471,25 @@ textarea.input {
   margin-top: 1em;
 }
 
-#project-information .skills-section {
+.centered-row {
   display: flex;
   flex-direction: column;
-}
-#project-information .skills-section .centered-row {
-  display: inherit;
-  flex-direction: inherit;
   align-items: flex-start;
   justify-content: space-between;
 }
-#project-information .skills-section .centered-row .flex-row.no-border {
+.centered-row .flex-row,
+.centered-row .no-border {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   border: none;
 }
-#project-information .skills-section .centered-row .flex-row.no-border .right-col .no-border .col .tertiary-link {
+.centered-row .flex-row .right-col .no-border .col .tertiary-link,
+.centered-row .no-border .right-col .no-border .col .tertiary-link {
   text-decoration: underline;
 }
-#project-information .skills-section .centered-row .flex-row.no-border .right-col .no-border .col .tertiary-link:hover {
+.centered-row .flex-row .right-col .no-border .col .tertiary-link:hover,
+.centered-row .no-border .right-col .no-border .col .tertiary-link:hover {
   text-decoration: none;
 }
 
@@ -2211,6 +2211,11 @@ textarea.input {
     background-position: right;
     border-radius: 8px;
   }
+  .editorial .split-header .sus-banner {
+    height: 150px;
+    margin-bottom: 1em;
+    width: 220px;
+  }
   .editorial .achievement-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2272,6 +2277,25 @@ textarea.input {
   }
   .flex-row.space-between .col .right-align .primary-button.m-0 {
     margin: 0;
+  }
+  .flex-row.no-border {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3em;
+  }
+  .flex-row.no-border .left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .flex-row.no-border .left-col .col {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    width: -webkit-fill-available;
+  }
+  .flex-row.no-border .width_50 {
+    width: 50%;
   }
   .button-container {
     display: flex;
@@ -2410,6 +2434,9 @@ textarea.input {
     border-radius: 8px;
     width: 90%;
     cursor: context-menu;
+  }
+  .lightbox .lightbox-content.w-40 {
+    max-width: 40%;
   }
   .lightbox .lightbox-content.w-50 {
     max-width: 50%;

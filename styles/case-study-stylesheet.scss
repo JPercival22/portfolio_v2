@@ -461,6 +461,7 @@ section {
 .editorial {
   display: inherit;
   flex-direction: inherit;
+  align-items: flex-start;
   background-color: $color_white;
   padding: 10px;
   border-radius: 8px;
@@ -879,11 +880,26 @@ section {
   }
 }
 
-#project-information .skills-section .centered-row {
-  display: inherit;
-  flex-direction: inherit;
+.centered-row {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  .flex-row,
+  .no-border {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: none;
+    .right-col .no-border .col {
+      .tertiary-link {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 .grid-container-1col,
 .grid-container-2col,
