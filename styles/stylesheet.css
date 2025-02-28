@@ -3023,6 +3023,20 @@ textarea.input {
   .contents {
     display: none;
   }
+  .page-wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    grid-template-columns: 20% auto;
+  }
+  .editorial .hero-content .primary-button-container .primary-button {
+    width: auto;
+  }
   .skills-section .centered-row {
     align-items: flex-start;
   }
@@ -3150,10 +3164,6 @@ textarea.input {
   }
   .hero-container .bullet-list-row {
     list-style: none;
-  }
-  .page-wrapper {
-    margin: 0 auto;
-    width: 70%;
   }
   .page-wrapper article {
     display: flex;

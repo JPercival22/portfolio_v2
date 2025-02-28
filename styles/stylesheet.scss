@@ -111,6 +111,51 @@ $flex-row-center-end: (
   width: 100%,
 );
 
+// grid-styles
+
+@mixin apply-grid-styles($grid-styles) {
+  @each $property, $value in $grid-styles {
+    #{$property}: $value;
+  }
+}
+// grid 1 col 0 rows
+$grid-1col: (
+  display: grid,
+  grid-template-columns: 1fr,
+  grid-gap: 1em,
+  margin-top: 1em,
+);
+$grid-2col-auto: (
+  display: grid,
+  grid-template-columns: repeat(2, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+$grid-3col-auto: (
+  display: grid,
+  grid-template-columns: repeat(3, 1fr),
+  grid-template-rows: auto,
+  gap: 1em,
+);
+$grid-4col-auto: (
+  display: grid,
+  grid-template-columns: repeat(4, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+$grid-5col-auto: (
+  display: grid,
+  grid-template-columns: repeat(5, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+$grid-6col-auto: (
+  display: grid,
+  grid-template-columns: repeat(6, 1fr),
+  grid-template-rows: auto,
+  grid-gap: 1em,
+);
+
 /* Styling for the overlay */
 #loadingOverlay {
   position: fixed;
@@ -3201,6 +3246,25 @@ $grid-1-col: (
     display: none;
   }
 
+  .page-wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .main-content {
+    @include apply-grid-styles($grid-2col-auto);
+    grid-template-columns: 20% auto;
+  }
+
+  // editorial styles
+  .editorial {
+    .hero-content {
+      .primary-button-container .primary-button {
+        width: auto;
+      }
+    }
+  }
+
   .skills-section .centered-row {
     align-items: flex-start;
     .flex-row {
@@ -3338,8 +3402,6 @@ $grid-1-col: (
   }
 
   .page-wrapper {
-    margin: 0 auto;
-    width: 70%;
     article {
       display: flex;
       flex: 0 0 28%;
