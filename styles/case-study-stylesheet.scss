@@ -15,6 +15,7 @@ $card-header-text: #4f73a4;
 $background-color_teal: #4fbdd2;
 $background-color_link: #1b1bac;
 $background-color_bttt: #007bff;
+$primary-btn-hover: #6b8dba;
 $blue_menuBkg: #30a7bf;
 
 // box shadow
@@ -24,7 +25,12 @@ $b-shadow: 6px 6px 12px -5px #6f6f6fbf;
 $color_border-settings-grey: 1px solid #d4d4d4;
 $color_border-settings-primary: 1px solid #4eca63;
 $color_border-settings-secondary: 1px solid #2c4465;
+$color_border-brand: 1px solid #2c4465;
+$color_border-focus: 1px solid #5474a1;
 $brad-8: 8px;
+
+//imports
+@use 'sass:color';
 
 // mixins
 @mixin apply-flex-styles($flex-styles) {
@@ -83,11 +89,65 @@ $flex-col-center: (
   align-items: center,
   justify-content: center,
 );
+$flex-col-start-start: (
+  display: flex,
+  flex-direction: column,
+  align-items: flex-start,
+  justify-content: flex-start,
+);
 $flex-col-start-center: (
   display: flex,
   flex-direction: column,
   align-items: flex-start,
   justify-content: center,
+);
+$flex-col-center-start: (
+  display: flex,
+  flex-direction: column,
+  align-items: center,
+  justify-content: flex-start,
+);
+$flex-col-center-space_between: (
+  display: flex,
+  flex-direction: column,
+  align-items: center,
+  justify-content: space-between,
+);
+$flex-col-center-evenly: (
+  display: flex,
+  flex-direction: column,
+  align-items: center,
+  justify-content: space-evenly,
+);
+$flex-row-center: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: center,
+);
+$flex-row-center-space_between: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: space-between,
+);
+$flex-row-center-space_evenly: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: space-evenly,
+);
+$flex-row-center-end: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: flex-end,
+);
+$flex-row-center-start: (
+  display: flex,
+  flex-direction: row,
+  align-items: center,
+  justify-content: flex-start,
 );
 
 @mixin background-image-style {
@@ -205,6 +265,110 @@ img {
   height: auto;
 }
 
+.edtorial {
+  .split-header {
+    @include apply-flex-styles($flex-col-center-space_between);
+    align-items: flex-start;
+    .title-col {
+      flex: 60%;
+      .title {
+        color: $color_primary_text;
+      }
+    }
+    .header-banner {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 34vh;
+      margin-bottom: 2em;
+    }
+    .sus-banner {
+      background-image: url(../assets/images/Case-Studies/CS2/Testing_images/SUS-Banner.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: -webkit-fill-available;
+      height: 200px;
+    }
+    .Brief-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Intro-Banner.webp);
+    }
+    .Research-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Research-Banner.webp);
+    }
+    .IA-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/IA-Banner.webp);
+    }
+    .Interaction-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Interaction-Banner.webp);
+    }
+    .Low-Fi-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Low-Fi-Banner.webp);
+    }
+    .Design-System-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Design-System-Banner.webp);
+    }
+    .Hi-Fi-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Hi-Fi-Banner.webp);
+    }
+    .testing-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/UX-Testing-Banner.webp);
+    }
+    .Results-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Test-Results-Banner.webp);
+    }
+    .conclusion-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Conclusion-Banner.webp);
+    }
+  }
+  .hero-content {
+    @include apply-flex-styles($flex-col-center);
+    align-items: start;
+    .hero-buttons-container {
+      @include apply-flex-styles($flex-col-center-start);
+      width: -webkit-fill-available;
+      gap: 1em;
+      margin-top: 1em;
+      .col {
+        width: -webkit-fill-available;
+        .hero-buttons {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1em;
+          flex-wrap: nowrap;
+          .tertiary-link {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .primary-button-container {
+      width: -webkit-fill-available;
+      display: flex;
+      margin-top: 1em;
+      .primary-button {
+        width: 100%;
+      }
+    }
+
+    .bullet-list-row {
+      display: flex;
+      margin-left: 0;
+      li {
+        border-left: 1px solid $color_brand;
+        padding-left: 10px;
+      }
+    }
+
+    .image-container {
+      @include apply-flex-styles($flex-col-center);
+      width: -webkit-fill-available;
+    }
+  }
+}
+
 .primary-button {
   @include apply-flex-styles($flex-col-center);
   border-radius: 50px;
@@ -221,7 +385,7 @@ img {
   background-color: $color_brand;
   border-color: $color_brand;
   &:hover {
-    background-color: color.mix(white, $color-brand, 10%);
+    background-color: $primary-btn-hover;
     box-shadow: none;
   }
 }
@@ -452,7 +616,6 @@ img {
   align-items: flex-start;
   justify-content: center;
   gap: 1em;
-  margin-top: 2em;
 }
 section {
   @include apply-flex-styles($flex-col-center);
@@ -469,7 +632,7 @@ section {
     @include apply-flex-styles($flex-col-center);
     align-items: start;
     .hero-buttons-container {
-      @include apply-flex-styles($flex-col-center-start);
+      @include apply-flex-styles($flex-col-start-center);
       width: -webkit-fill-available;
       gap: 1em;
       margin-top: 1em;
@@ -606,6 +769,7 @@ section {
   left: 10px;
   align-items: center;
   z-index: 1;
+  display: flex;
   &.hidden {
     display: none;
   }
@@ -733,7 +897,7 @@ section {
     @include apply-flex-styles($flex-col-center);
     align-items: start;
     .hero-buttons-container {
-      @include apply-flex-styles($flex-col-center-start);
+      @include apply-flex-styles($flex-col-start-center);
       width: -webkit-fill-available;
       gap: 1em;
       margin-top: 1em;
@@ -777,7 +941,7 @@ section {
 
 .achievements-section {
   .split-header {
-    @include apply-flex-styles($flex-col-center-start);
+    @include apply-flex-styles($flex-col-start-center);
     gap: 1em;
     width: -webkit-fill-available;
     .left-align,
@@ -980,7 +1144,7 @@ section {
     }
   }
   .tab-contents {
-    border: $color_border-settings-blue;
+    border: $color_border-settings-grey;
     border-radius: 0 0 8px 8px;
     padding: 0 8px;
     .tab-module {
@@ -1000,7 +1164,7 @@ section {
   .accordion-item {
     cursor: pointer;
     width: -webkit-fill-available;
-    border-bottom: $color_border-settings-blue;
+    border-bottom: $color_border-settings-secondary;
     &:last-child {
       border: none;
     }
@@ -1037,7 +1201,7 @@ section {
       }
     }
     .accordion-content {
-      border: $color_border-settings-blue;
+      border: $color_border-settings-secondary;
       .carousel-editorial {
         background-color: $color_white;
         width: -webkit-fill-available;
@@ -1557,16 +1721,6 @@ section {
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  .sidebar-open {
-    width: 30%;
-  }
-
-  .navbar .navbar-container {
-    padding: 1em;
-  }
-}
-
 // laptop
 @media only screen and (min-width: 1024px) {
   .navbar .navbar-container .nav-menu .navbar-link .accordion {
@@ -1816,7 +1970,9 @@ section {
   .contents {
     display: none;
   }
-
+  main {
+    padding-top: 6em;
+  }
   .page-wrapper {
     width: 90%;
     margin: 0 auto;
@@ -1931,6 +2087,39 @@ section {
     .border {
       width: unset;
     }
+    .border-gradient {
+      border: 1px solid;
+      &.-brief_border {
+        border-image: linear-gradient(to right, #b2abff 1%, #ffffff00 30%) 1;
+      }
+      &.-research_border {
+        border-image: linear-gradient(to right, #ff9494 1%, #ffffff00 30%) 1;
+      }
+      &.-IA_border {
+        border-image: linear-gradient(to right, #7aafff 1%, #ffffff00 30%) 1;
+      }
+      &.-Inter_border {
+        border-image: linear-gradient(to right, #ffe079 1%, #ffffff00 30%) 1;
+      }
+      &.-Lo-Fi_border {
+        border-image: linear-gradient(to right, #9efbe6 1%, #ffffff00 30%) 1;
+      }
+      &.-desSystem_border {
+        border-image: linear-gradient(to right, #c5ffff 1%, #ffffff00 30%) 1;
+      }
+      &.-Hi-Fi_border {
+        border-image: linear-gradient(to right, #86ffb8 1%, #ffffff00 30%) 1;
+      }
+      &.-uxTest_border {
+        border-image: linear-gradient(to right, #21b1c9 1%, #ffffff00 30%) 1;
+      }
+      &.-results_border {
+        border-image: linear-gradient(to right, #ffe7b0 1%, #ffffff00 30%) 1;
+      }
+      &.-conclusion_border {
+        border-image: linear-gradient(to right, #c6ffc6 1%, #ffffff00 30%) 1;
+      }
+    }
   }
 
   .lightbox .lightbox-content {
@@ -1957,368 +2146,13 @@ section {
     }
   }
 }
-// "-Hi-Fi_border",
-// "-IA_border",
-// "-Inter_border",
-// "-Lo-Fi_border",
-// "-brief_border",
-// "-conclusion_border",
-// "-desSystem_border",
-// "-research_border",
-// "-results_border",
-// "-uxTest_border",
-// "Brief-banner",
-// "Conc-icon",
-// "DesSystem-icon",
-// "Design-System-banner",
-// "Hi-Fi-icon",
-// "Home-icon",
-// "IA-banner",
-// "IA-icon",
-// "ID-icon",
-// "Info-icon",
-// "Interaction-banner",
-// "Lo-Fi-icon",
-// "Low-Fi-banner",
-// "Research-banner",
-// "Results-icon",
-// "UXTesting-icon",
-// "accordion",
-// "accordion-content",
-// "accordion-header",
-// "accordion-item",
-// "accordion-toggle",
-// "achievement",
-// "achievements-section",
-// "active",
-// "awareness-img",
-// "border",
-// "border-gradient",
-// "bttt-btn",
-// "bullet-list-row",
-// "car-tab-contents",
-// "car-tab-module",
-// "carousel-banner-1",
-// "carousel-banner-2",
-// "carousel-banner-3",
-// "carousel-banner-4",
-// "carousel-buttons",
-// "carousel-container",
-// "carousel-editorial",
-// "carousel-header",
-// "carousel-slide",
-// "carousel-track",
-// "case-link",
-// "case-study-settings",
-// "center",
-// "centered-row",
-// "chevron",
-// "close-btn",
-// "col",
-// "conclusion-banner",
-// "contents",
-// "controls",
-// "copy-panel",
-// "cv-icon",
-// "disc",
-// "dot",
-// "editorial",
-// "emphasis",
-// "flex-col-left",
-// "flex-col-right",
-// "flex-row",
-// "footer",
-// "footer-container",
-// "footer-social-icon",
-// "gallery",
-// "gitHub-icon",
-// "grid-container-1col",
-// "grid-container-2col",
-// "grid-container-3col",
-// "grid-container-4col",
-// "grid-container-5col",
-// "grid-container-6col",
-// "header",
-// "header-banner",
-// "header-bannerHi-Fi-banner",
-// "headline",
-// "hero",
-// "hero-content",
-// "hide-sm",
-// "highlight",
-// "home-link",
-// "icon-bar",
-// "image-container",
-// "introduction-icon",
-// "invest-img",
-// "item",
-// "lazyblurry",
-// "lazyload",
-// "lazyloaded",
-// "left-align",
-// "left-col",
-// "lg",
-// "lightbox",
-// "lightbox-content",
-// "lightbox-img-trigger",
-// "lightbox_1",
-// "lightbox_2",
-// "lightbox_28",
-// "lightbox_29",
-// "lightbox_3",
-// "lightbox_4",
-// "lightbox_5",
-// "lightbox_6",
-// "lightbox_7",
-// "lightbox_8",
-// "lightbox_9",
-// "linkedIn-icon",
-// "logo",
-// "logo-container",
-// "logo-name",
-// "logo-title",
-// "main-content",
-// "material-symbols-outlined",
-// "menu-toggle",
-// "mobile-sidebar",
-// "nav-item",
-// "nav-menu",
-// "navbar",
-// "navbar-container",
-// "navbar-item",
-// "navbar-link",
-// "navbar-logo",
-// "no-background",
-// "no-border",
-// "no-disc",
-// "open-sidebar-btn",
-// "organic-link",
-// "p0",
-// "page-wrapper",
-// "pagination",
-// "primary-banner",
-// "primary-button",
-// "prototype-container",
-// "research-icon",
-// "right-align",
-// "right-col",
-// "side-bar-icon",
-// "side-bar-list",
-// "side-bar-list-item",
-// "skills-section",
-// "sm-accordion",
-// "space-between",
-// "speed-img",
-// "split-header",
-// "stat",
-// "sus-banner",
-// "tab-button",
-// "tab-buttons",
-// "tab-container",
-// "tab-contents",
-// "tab-module",
-// "tertiary-link",
-// "testing-banner",
-// "text-link",
-// "title",
-// "title-col",
-// "tooltip",
-// "traffic-img",
-// "two-button-container",
-// "vector",
-// "w-30a",
-// "w-40",
-// "w-40b",
-// "w-50b",
-// "w-60a",
-// "w-60b",
-// "w-70a",
-// "w-85",
-// "w-90",
-// "width_50"
 
-// desktop
+@media only screen and (min-width: 1800px) {
+  .navbar .navbar-container {
+    width: 70%;
+  }
 
-// "-Hi-Fi_border",
-// "-IA_border",
-// "-Inter_border",
-// "-Lo-Fi_border",
-// "-brief_border",
-// "-conclusion_border",
-// "-desSystem_border",
-// "-research_border",
-// "-results_border",
-// "-uxTest_border",
-// "Brief-banner",
-// "Conc-icon",
-// "DesSystem-icon",
-// "Design-System-banner",
-// "Hi-Fi-icon",
-// "Home-icon",
-// "IA-banner",
-// "IA-icon",
-// "ID-icon",
-// "Info-icon",
-// "Interaction-banner",
-// "Lo-Fi-icon",
-// "Low-Fi-banner",
-// "Research-banner",
-// "Results-icon",
-// "UXTesting-icon",
-// "accordion",
-// "accordion-content",
-// "accordion-header",
-// "accordion-item",
-// "accordion-toggle",
-// "achievement",
-// "achievements-section",
-// "active",
-// "awareness-img",
-// "border",
-// "border-gradient",
-// "bttt-btn",
-// "bullet-list-row",
-// "car-tab-contents",
-// "car-tab-module",
-// "carousel-banner-1",
-// "carousel-banner-2",
-// "carousel-banner-3",
-// "carousel-banner-4",
-// "carousel-buttons",
-// "carousel-container",
-// "carousel-editorial",
-// "carousel-header",
-// "carousel-slide",
-// "carousel-track",
-// "case-link",
-// "case-study-settings",
-// "center",
-// "centered-row",
-// "chevron",
-// "close-btn",
-// "col",
-// "conclusion-banner",
-// "contents",
-// "controls",
-// "copy-panel",
-// "cv-icon",
-// "disc",
-// "dot",
-// "editorial",
-// "emphasis",
-// "flex-col-left",
-// "flex-col-right",
-// "flex-row",
-// "footer",
-// "footer-container",
-// "footer-social-icon",
-// "gallery",
-// "gitHub-icon",
-// "grid-container-1col",
-// "grid-container-2col",
-// "grid-container-3col",
-// "grid-container-4col",
-// "grid-container-5col",
-// "grid-container-6col",
-// "header",
-// "header-banner",
-// "header-bannerHi-Fi-banner",
-// "headline",
-// "hero",
-// "hero-content",
-// "hide-sm",
-// "highlight",
-// "icon-bar",
-// "image-container",
-// "introduction-icon",
-// "invest-img",
-// "item",
-// "lazyblurry",
-// "lazyload",
-// "lazyloaded",
-// "left-align",
-// "left-col",
-// "lg",
-// "lightbox",
-// "lightbox-content",
-// "lightbox-img-trigger",
-// "lightbox_1",
-// "lightbox_2",
-// "lightbox_28",
-// "lightbox_29",
-// "lightbox_3",
-// "lightbox_4",
-// "lightbox_5",
-// "lightbox_6",
-// "lightbox_7",
-// "lightbox_8",
-// "lightbox_9",
-// "linkedIn-icon",
-// "loading-text",
-// "logo",
-// "logo-container",
-// "logo-name",
-// "logo-title",
-// "main-content",
-// "material-symbols-outlined",
-// "menu-toggle",
-// "mobile-sidebar",
-// "nav-item",
-// "nav-menu",
-// "navbar",
-// "navbar-container",
-// "navbar-item",
-// "navbar-link",
-// "navbar-logo",
-// "no-background",
-// "no-border",
-// "no-disc",
-// "open-sidebar-btn",
-// "organic-link",
-// "p0",
-// "page-wrapper",
-// "pagination",
-// "primary-banner",
-// "primary-button",
-// "prototype-container",
-// "research-icon",
-// "right-align",
-// "right-col",
-// "side-bar-icon",
-// "side-bar-list",
-// "side-bar-list-item",
-// "sideBar",
-// "sideBar-content",
-// "sidebar",
-// "skills-section",
-// "sm-accordion",
-// "space-between",
-// "speed-img",
-// "spinner",
-// "split-header",
-// "stat",
-// "sus-banner",
-// "tab-button",
-// "tab-buttons",
-// "tab-container",
-// "tab-contents",
-// "tab-module",
-// "tertiary-link",
-// "testing-banner",
-// "text-link",
-// "title",
-// "title-col",
-// "tooltip",
-// "traffic-img",
-// "two-button-container",
-// "vector",
-// "w-30a",
-// "w-40",
-// "w-40b",
-// "w-50b",
-// "w-60a",
-// "w-60b",
-// "w-70a",
-// "w-85",
-// "w-90",
-// "width_50"
+  .page-wrapper {
+    width: 70vw;
+  }
+}

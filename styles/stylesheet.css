@@ -3126,47 +3126,8 @@ textarea.input {
   .navbar .navbar-container {
     width: 70%;
   }
-  .hero_p-0 .hero {
-    width: 70%;
-    height: 100vh;
-  }
-  .hero_p-0 .hero .hero-content {
-    width: 90%;
-  }
-  .p-0 .flex-col section {
-    max-width: 70vw;
-  }
-  .p-0 .flex-col section .editorial {
-    width: 100%;
-  }
-  .hero .case-study-settings .space-between .col .two-button-container.left-align .tertiary-link {
-    width: 50%;
-  }
-  .editorial .grid-container.rows-1 {
-    gap: 4em;
-  }
   .page-wrapper {
     width: 70vw;
-    justify-content: space-evenly;
-    gap: 1em;
-  }
-  .page-wrapper article {
-    flex: 0 0 11%;
-  }
-  .page-wrapper .main-content .editorial {
-    max-width: 75%;
-  }
-  .wrapper .wide-card .card-body .card-editorial {
-    width: 80%;
-  }
-  .wrapper .wide-card .card-body .image-container {
-    width: 15%;
-  }
-  .wrapper .wide-card .card-body .button-row {
-    margin-top: 2em;
-  }
-  .lightbox .lightbox-content.w-4c {
-    max-width: 4%;
   }
 }
 
