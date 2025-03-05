@@ -1041,6 +1041,14 @@ section {
   grid-gap: 1em;
   margin-top: 1em;
 }
+.grid-container-1col.hide-sm,
+.grid-container-2col.hide-sm,
+.grid-container-3col.hide-sm,
+.grid-container-4col.hide-sm,
+.grid-container-5col.hide-sm,
+.grid-container-6col.hide-sm {
+  display: none;
+}
 .grid-container-1col .item,
 .grid-container-2col .item,
 .grid-container-3col .item,
@@ -1071,6 +1079,7 @@ section {
 .grid-container-4col .image-container .gallery,
 .grid-container-5col .image-container .gallery,
 .grid-container-6col .image-container .gallery {
+  border: 1px solid #d4d4d4;
   margin: 0;
 }
 .grid-container-1col ol,
@@ -1499,6 +1508,9 @@ section {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 1em;
+  }
+  .editorial .grid-container-3col .lightbox-img-trigger {
+    cursor: pointer;
   }
   .editorial .grid-container-4col {
     display: grid;
