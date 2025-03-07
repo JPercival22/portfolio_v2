@@ -1111,8 +1111,14 @@ section {
   }
   .image-container {
     .gallery {
-      border: $color_border-settings-grey;
       margin: 0;
+      img {
+        border: $color_border-settings-grey;
+      }
+      figcaption {
+        padding: 10px;
+        font-size: 12px;
+      }
     }
   }
   ol {
