@@ -1079,8 +1079,24 @@ section {
 .grid-container-4col .image-container .gallery,
 .grid-container-5col .image-container .gallery,
 .grid-container-6col .image-container .gallery {
-  border: 1px solid #d4d4d4;
   margin: 0;
+}
+.grid-container-1col .image-container .gallery img,
+.grid-container-2col .image-container .gallery img,
+.grid-container-3col .image-container .gallery img,
+.grid-container-4col .image-container .gallery img,
+.grid-container-5col .image-container .gallery img,
+.grid-container-6col .image-container .gallery img {
+  border: 1px solid #d4d4d4;
+}
+.grid-container-1col .image-container .gallery figcaption,
+.grid-container-2col .image-container .gallery figcaption,
+.grid-container-3col .image-container .gallery figcaption,
+.grid-container-4col .image-container .gallery figcaption,
+.grid-container-5col .image-container .gallery figcaption,
+.grid-container-6col .image-container .gallery figcaption {
+  padding: 10px;
+  font-size: 12px;
 }
 .grid-container-1col ol,
 .grid-container-2col ol,
