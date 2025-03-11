@@ -363,6 +363,10 @@ img {
           .tertiary-link {
             display: flex;
             align-items: center;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
           }
         }
       }
@@ -1736,9 +1740,10 @@ section {
       }
     }
     &.no-border {
+      display: flex;
       flex-direction: row;
       align-items: flex-start;
-      gap: 3em;
+      width: -webkit-fill-available;
       .left-col {
         display: flex;
         flex-direction: column;
@@ -1752,6 +1757,16 @@ section {
       }
       .width_50 {
         width: 50%;
+        .col {
+          .tertiary-link {
+            display: flex;
+            align-items: center;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
       }
     }
   }
