@@ -1044,6 +1044,7 @@ section {
   grid-template-columns: 1fr;
   grid-gap: 1em;
   margin-top: 1em;
+  width: 100%;
 }
 .grid-container-1col.hide-sm,
 .grid-container-2col.hide-sm,
@@ -1154,6 +1155,9 @@ section {
 
 .tabular-view {
   margin-top: 1em;
+}
+.tabular-view.hide-sm {
+  display: none;
 }
 
 .tab-container {
@@ -1547,6 +1551,12 @@ section {
   .editorial .grid-container-4col {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1em;
+  }
+  .editorial .grid-container-5col {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-gap: 1em;
   }

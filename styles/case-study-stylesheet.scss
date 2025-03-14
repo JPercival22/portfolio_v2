@@ -1102,6 +1102,7 @@ section {
     display: none;
   }
   @include apply-grid-styles($grid-1col);
+  width: 100%;
   .item {
     @include apply-flex-styles($flex-col-start-start);
     gap: 1em;
@@ -1152,6 +1153,9 @@ section {
 }
 .tabular-view {
   margin-top: 1em;
+  &.hide-sm {
+    display: none;
+  }
 }
 .tab-container {
   display: flex;
@@ -1569,6 +1573,9 @@ section {
     }
     .grid-container-4col {
       @include apply-grid-styles($grid-4col-auto);
+    }
+    .grid-container-5col {
+      @include apply-grid-styles($grid-5col-auto);
     }
 
     .split-header {
