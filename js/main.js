@@ -30,51 +30,37 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log("Main functionality initialised.");
     
     // Main functionality script handling
-                  await (async function addMainFunctionality() {
-                    try {
-                        const t = document.querySelector(".open-sidebar-btn"),
-                            a = document.querySelector(".close-btn");
-                        t &&
-                            t.addEventListener("click", async () => {
-                                const { toggleSidebar: o } = await import("./sideBarModule.mjs");
-                                o();
-                            }),
-                            a &&
-                                a.addEventListener("click", async () => {
-                                    const { toggleSidebar: o } = await import("./sideBarModule.mjs");
-                                    o();
-                                }),
-                            i();
-                        const n = document.querySelector(".menu-toggle");
-                        if (n) {
-                            const { addToggleListener: o } = await import("./menuModule.mjs");
-                            o(n);
-                        }
-                        const { initReadMore: e } = await import("./readMore.mjs");
-                        e();
-                        const { scrollHighlight: r } = await import("./scrollHighlight.mjs");
-                        r();
-                        const { initializeTabModules: l } = await import("./tabModule.mjs");
-                        l();
-                        const { initLightboxFunctionality: s } = await import("./lightboxModule.mjs");
-                        s();
-                        const { closeSidebarOnLinkClick: c } = await import("./sideBarModule.mjs");
-                        c();
-                        const { toggleScrolledClass: d } = await import("./scrollButton.mjs");
-                        d();
-                        const { initializeFormFunctionality: m } = await import("./formModule.mjs");
-                        m();
-                        const { initAccordion: u } = await import("./accordion.mjs");
-                        u(),
-                            document.querySelectorAll("[data-carousel]").forEach((t, i) => {
-                                const a = t.dataset.carousel;
-                                o(a, `carouselTrack_${i}`, `prevButton_${i}`, `nextButton_${i}`, `pagination_${i}`);
-                            });
-                    } catch (o) {
-                        console.error("Error adding main functionality:", o);
-                    }
-                })(),
-                console.log("Main functionality initialised.");
+    await (async function addMainFunctionality() {
+        try {
+           
+            const n = document.querySelector(".menu-toggle");
+            if (n) {
+                const { addToggleListener: o } = await import("./menuModule.mjs");
+                o(n);
+            }
+            const { initReadMore: e } = await import("./readMore.mjs");
+            e();
+            const { scrollHighlight: r } = await import("./scrollHighlight.mjs");
+            r();
+            const { initializeTabModules: l } = await import("./tabModule.mjs");
+            l();
+            const { initLightboxFunctionality: s } = await import("./lightboxModule.mjs");
+            s();
+            const { toggleScrolledClass: d } = await import("./scrollButton.mjs");
+            d();
+            const { initializeFormFunctionality: m } = await import("./formModule.mjs");
+            m();
+            const { initAccordion: u } = await import("./accordion.mjs");
+            u(),
+                document.querySelectorAll("[data-carousel]").forEach((t, i) => {
+                    const a = t.dataset.carousel;
+                    o(a, `carouselTrack_${i}`, `prevButton_${i}`, `nextButton_${i}`, `pagination_${i}`);
+                });
+        } catch (o) {
+            console.error("Error adding main functionality:", o);
+        }
+    })(),
+    console.log("Main functionality initialised.");
         } catch (o) {
             console.error("Error on DOMContentLoaded:", o);
         }

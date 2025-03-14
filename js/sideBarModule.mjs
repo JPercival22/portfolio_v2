@@ -58,34 +58,30 @@ function insertSidebar() {
             contentsButton = document.querySelector(".contents");
 
       if (openButton && closeButton && sidebar && contentsButton) {
-        // Open sidebar and hide contents button by adding 'hidden' class
+        // Open sidebar and hide contents button
         openButton.addEventListener("click", () => {
           sidebar.classList.add("sidebar-open");
-          contentsButton.classList.add("hidden"); // Hide contents button
+          contentsButton.classList.add("hidden"); 
         });
 
-        // Close sidebar and show contents button by removing 'hidden' class after transition
-        closeButton.addEventListener("click", () => {
-          sidebar.classList.remove("sidebar-open");
-
-          // Ensure contents button reappears after sidebar closes with delay
-          setTimeout(() => {
-            contentsButton.classList.remove("hidden"); // Show contents button again
-          }, 300); // Adjust timeout to match transition time
-        });
+        // Close sidebar and show contents button after transition
+        closeButton.addEventListener("click", () => closeSidebar());
       }
     }
 
     attachMobileSidebarListeners();
 
-    // Hide contents button when sidebar link is clicked
+    // Handle sidebar link clicks
     document.querySelectorAll('.sidebar-link').forEach(link => {
-      link.addEventListener('click', () => {
-        const contentsButton = document.querySelector(".contents");
-        contentsButton.classList.add("hidden"); // Hide contents button when a link is clicked
-        setTimeout(() => {
-          document.getElementById("sidebar").classList.remove("sidebar-open");
-        }, 300); // Adjust timeout to match sidebar transition time
+      link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default anchor jump behavior
+        const targetId = link.getAttribute("href").substring(1); // Get target ID
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+          setTimeout(() => closeSidebar(), 500); // Close sidebar AFTER scrolling
+        }
       });
     });
   } else if (window.innerWidth > 1400 && largeSidebar && !document.getElementById("sidebar_lg")) {
@@ -107,22 +103,28 @@ function insertSidebar() {
   }
 }
 
-// Function to toggle the sidebar
-function toggleSidebar() {
-  const sidebar = document.getElementById("sidebar");
-  sidebar && sidebar.classList.toggle("sidebar-open");
+// Function to close sidebar properly
+function closeSidebar() {
+  const sidebar = document.getElementById("sidebar"),
+        contentsButton = document.querySelector(".contents");
+
+  if (sidebar) {
+    sidebar.classList.remove("sidebar-open");
+    setTimeout(() => {
+      contentsButton.classList.remove("hidden");
+    }, 300);
+  }
 }
 
-// Function to close sidebar when a link is clicked
-function closeSidebarOnLinkClick() {
-  document.querySelectorAll("#sidebar a").forEach((e) => {
-    e.addEventListener("click", toggleSidebar);
-  });
-}
+// Disable sidebar reopening on scroll
+let lastScrollTop = window.scrollY;
+window.addEventListener("scroll", () => {
+  lastScrollTop = window.scrollY;
+});
 
 // Event listeners for page load and resize
 window.addEventListener("load", insertSidebar);
 window.addEventListener("resize", insertSidebar);
 
-// Export functions to make them available for other modules
-export { toggleSidebar, closeSidebarOnLinkClick, insertSidebar };
+// Export functions
+export { closeSidebar, insertSidebar };
