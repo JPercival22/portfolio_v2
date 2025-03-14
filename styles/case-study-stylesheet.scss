@@ -1290,9 +1290,21 @@ section {
             color: $color_brand;
             cursor: pointer;
             &:hover {
-              background-color: $color_brand;
+              background-color: #d8e5f8;
               color: $color_white;
               box-shadow: $b-shadow;
+            }
+            .move-left,
+            .move-right {
+              background-image: url(../assets/images/controls/left_chev.svg);
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 16px;
+              height: 16px;
+            }
+            .move-left {
+              transform: rotate(180deg);
             }
           }
         }
