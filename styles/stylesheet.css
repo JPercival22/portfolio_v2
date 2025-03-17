@@ -95,6 +95,9 @@ p {
   letter-spacing: 0.55pt;
   margin: 0;
 }
+p .highlight-text {
+  color: #0a6cc2;
+}
 
 .emphasis {
   font-weight: 500;
@@ -445,14 +448,7 @@ img {
   justify-content: center;
   gap: 1em;
 }
-.page-wrapper section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.page-wrapper section .editorial {
+.page-wrapper .editorial {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -460,48 +456,82 @@ img {
   background-color: #fff;
   padding: 10px;
   border-radius: 8px;
+  width: 92%;
 }
-.page-wrapper section .editorial.left-align {
+.page-wrapper .editorial.purple-fill {
+  background-color: #38389c;
+}
+.page-wrapper .editorial.left-align {
   display: flex;
   align-items: flex-start;
 }
-.page-wrapper section .editorial .quote-text {
+.page-wrapper .editorial .quote-text {
   font-size: 1.2rem;
   font-style: italic;
 }
-.page-wrapper section .editorial .signature {
+.page-wrapper .editorial .signature {
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 0.1pt;
 }
-
-.career-history-banner {
-  background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
-  background-size: contain;
-  height: 1000px;
-  width: 100%;
+.page-wrapper .editorial .split-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: -webkit-fill-available;
+}
+.page-wrapper .editorial .split-header .title-col {
+  flex: 60%;
+}
+.page-wrapper .editorial .split-header .title-col .title {
+  color: #1a1a1a;
 }
 
-.process-banner {
-  background: url(../assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
-  background-size: contain;
-  height: 1000px;
-  width: 100%;
+.project-section .white-text {
+  color: #fff;
 }
-
-.editorial .grid-container-2col {
-  margin-top: 0;
-}
-
-.editorial .flex-row,
-.editorial .flex-row .col,
-.editorial .flex-row .col .right-align {
-  display: inherit;
-  flex-direction: inherit;
+.project-section .card {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1em;
+}
+.project-section .card .card-body {
+  width: 100%;
+}
+.project-section .card .card-body .image-container {
+  border: 2px solid #fff;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+.project-section .card .card-body .image-container:hover {
+  opacity: 0.7;
+  filter: grayscale(80%);
+}
+.project-section .card .card-body .image-container.come-together-banner {
+  background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+.project-section .card .card-body .image-container.syn-banner {
+  background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 300px;
+}
+.project-section .card .card-body .image-container.just-speak-banner {
+  background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+.project-section .card .card-body .white-text {
+  color: #fff;
 }
 
 .editorial .wide-card {
@@ -571,24 +601,6 @@ img {
 .editorial .wide-card .card-body .image-container {
   flex: auto;
   border-radius: 8px;
-}
-.editorial .wide-card .card-body .image-container.come-together-banner {
-  background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
-}
-.editorial .wide-card .card-body .image-container.syn-banner {
-  background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
-  background-size: contain;
-  width: 100%;
-  height: 300px;
-}
-.editorial .wide-card .card-body .image-container.just-speak-banner {
-  background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
 }
 .editorial .wide-card .card-body .button-row {
   width: 100%;
@@ -1599,146 +1611,6 @@ textarea.input {
   align-items: center;
   justify-content: flex-start;
   margin: 0;
-}
-
-.achievements-section .split-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1em;
-  width: -webkit-fill-available;
-}
-.achievements-section .split-header .left-align,
-.achievements-section .split-header .right-align {
-  width: inherit;
-}
-.achievements-section .split-header .left-align .primary-button,
-.achievements-section .split-header .right-align .primary-button {
-  width: inherit;
-}
-.achievements-section .achievement-cards {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 2em;
-}
-.achievements-section .achievement-cards .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-}
-.achievements-section .achievement-cards .card .image-container {
-  width: 80px;
-  height: 80px;
-}
-.achievements-section .achievement-cards .card .image-container .invest-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/investment-vector.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .image-container .traffic-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/traffic-vector.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .image-container .speed-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/speed-vector.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .image-container .awareness-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/awareness-vector.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .image-container .engagement-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/User-Engagement-Icon.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .image-container .innovate-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/Innovate-Icon.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .image-container .iterate-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/Iterative-icon.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .image-container .task-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/Test-rate-icon.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .image-container .accuracy-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/accuracy-icon.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .image-container .efficiency-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/efficiency-icon.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .image-container .satisfaction-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/satisfaction-icon.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .image-container .usability-img {
-  background-image: url("../assets/images/Case-Studies/banners/metric-vectors/user-testing-icon.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.achievements-section .achievement-cards .card .stat {
-  font-size: 27px;
-  font-weight: 600;
-  color: #4f73a4;
-}
-.achievements-section .achievement-cards .card .highlight {
-  font-size: 18px;
-  font-weight: 500;
-  font-style: normal;
 }
 
 .editorial .grid-container-3col .achievement .banner-img {
