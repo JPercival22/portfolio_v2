@@ -270,6 +270,9 @@ p {
   line-height: 15pt;
   letter-spacing: 0.55pt;
   margin: 0;
+  .highlight-text {
+    color: #0a6cc2;
+  }
 }
 
 .emphasis {
@@ -603,55 +606,118 @@ img {
 .page-wrapper {
   @include apply-flex-styles($flex-col-center);
   gap: 1em;
-  section {
-    @include apply-flex-styles($flex-col-center);
-    width: 100%;
-    .editorial {
-      @include apply-flex-styles($flex-col-center-start);
-      background-color: $color_white;
-      padding: 10px;
-      border-radius: 8px;
-      &.left-align {
-        display: flex;
-        align-items: flex-start;
-      }
-      .quote-text {
-        font-size: 1.2rem;
-        font-style: italic;
-      }
-      .signature {
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 0.1pt;
+  .editorial {
+    @include apply-flex-styles($flex-col-center-start);
+    background-color: $color_white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 92%;
+    &.purple-fill {
+      background-color: #38389c;
+    }
+    &.left-align {
+      display: flex;
+      align-items: flex-start;
+    }
+    .quote-text {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    .signature {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 0.1pt;
+    }
+    .split-header {
+      @include apply-flex-styles($flex-row-center-space_between);
+      align-items: flex-start;
+      width: -webkit-fill-available;
+      .title-col {
+        flex: 60%;
+        .title {
+          color: $color_primary_text;
+        }
       }
     }
   }
 }
-.career-history-banner {
-  background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
+
+// .career-history-banner {
+//   background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
+//   background-size: contain;
+//   height: 1000px;
+//   width: 100%;
+// }
+// .process-banner {
+//   background: url(../assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
+//   background-size: contain;
+//   height: 1000px;
+//   width: 100%;
+// }
+
+// .editorial .grid-container-2col {
+//   margin-top: 0;
+// }
+// .editorial .flex-row,
+// .editorial .flex-row .col,
+// .editorial .flex-row .col .right-align {
+//   display: inherit;
+//   flex-direction: inherit;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 1em;
+// }
+
+@mixin background-image-style {
   background-size: contain;
-  height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-}
-.process-banner {
-  background: url(../assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
-  background-size: contain;
-  height: 1000px;
-  width: 100%;
+  height: 100%;
 }
 
-.editorial .grid-container-2col {
-  margin-top: 0;
-}
-.editorial .flex-row,
-.editorial .flex-row .col,
-.editorial .flex-row .col .right-align {
-  display: inherit;
-  flex-direction: inherit;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
+.project-section {
+  .white-text {
+    color: $color_white;
+  }
+  .card {
+    @include apply-flex-styles($flex-col-center);
+    gap: 1em;
+    .card-body {
+      width: 100%;
+      .image-container {
+        border: 2px solid $color_white;
+        border-radius: $brad-8;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          opacity: 0.7;
+          filter: grayscale(80%);
+        }
+        &.come-together-banner {
+          background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
+          background-size: cover;
+          width: 100%;
+          height: 300px;
+        }
+        &.syn-banner {
+          background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
+          background-size: contain;
+          width: 100%;
+          height: 300px;
+        }
+        &.just-speak-banner {
+          background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
+          background-size: cover;
+          width: 100%;
+          height: 300px;
+        }
+      }
+      .white-text {
+        color: $color_white;
+      }
+    }
+  }
 }
 
 .editorial {
@@ -717,25 +783,6 @@ img {
       .image-container {
         flex: auto;
         border-radius: $brad-8;
-
-        &.come-together-banner {
-          background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
-          background-size: cover;
-          width: 100%;
-          height: 300px;
-        }
-        &.syn-banner {
-          background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
-          background-size: contain;
-          width: 100%;
-          height: 300px;
-        }
-        &.just-speak-banner {
-          background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
-          background-size: cover;
-          width: 100%;
-          height: 300px;
-        }
       }
       .button-row {
         width: 100%;
@@ -1672,101 +1719,6 @@ $grid-1-col: (
         list-style-type: none;
         @include apply-flex-styles($flex-col-center-start);
         margin: 0;
-      }
-    }
-  }
-}
-
-@mixin background-image-style {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-
-.achievements-section {
-  .split-header {
-    @include apply-flex-styles($flex-col-center-start);
-    gap: 1em;
-    width: -webkit-fill-available;
-    .left-align,
-    .right-align {
-      width: inherit;
-      .primary-button {
-        width: inherit;
-      }
-    }
-  }
-  .achievement-cards {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 2em;
-    .card {
-      @include apply-flex-styles($flex-col-center);
-      gap: 1em;
-      .image-container {
-        width: 80px;
-        height: 80px;
-        .invest-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/investment-vector.svg');
-          @include background-image-style;
-        }
-        .traffic-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/traffic-vector.svg');
-          @include background-image-style;
-        }
-        .speed-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/speed-vector.svg');
-          @include background-image-style;
-        }
-        .awareness-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/awareness-vector.svg');
-          @include background-image-style;
-        }
-        .engagement-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/User-Engagement-Icon.svg');
-          @include background-image-style;
-        }
-        .innovate-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Innovate-Icon.svg');
-          @include background-image-style;
-        }
-        .iterate-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Iterative-icon.svg');
-          @include background-image-style;
-        }
-        .task-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Test-rate-icon.svg');
-          @include background-image-style;
-        }
-        .accuracy-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/accuracy-icon.svg');
-          @include background-image-style;
-        }
-        .efficiency-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/efficiency-icon.svg');
-          @include background-image-style;
-        }
-        .satisfaction-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/satisfaction-icon.svg');
-          @include background-image-style;
-        }
-        .usability-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/user-testing-icon.svg');
-          @include background-image-style;
-        }
-      }
-      .stat {
-        font-size: 27px;
-        font-weight: 600;
-        color: #4f73a4;
-      }
-      .highlight {
-        font-size: 18px;
-        font-weight: 500;
-        font-style: normal;
       }
     }
   }
