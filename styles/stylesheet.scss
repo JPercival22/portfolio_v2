@@ -189,10 +189,6 @@ body {
   color: $color_primary_text;
 }
 
-// main {
-
-// }
-
 /* Styling for the overlay */
 #loadingOverlay {
   position: fixed;
@@ -541,14 +537,11 @@ img {
   }
   .hero-content {
     @include apply-flex-styles($flex-col-center);
-    background-color: #fff;
-    // border: 1px solid gainsboro;
+    margin-left: 1em;
     padding: 10px;
-    // border-radius: 16px;
+    background-color: $color_white;
+    border-radius: 25px;
     gap: 1em;
-    // width: 70%;
-    // height: auto;
-    // box-shadow: $b-shadow;
     .profile-image {
       width: 150px;
       height: 150px;
@@ -1889,9 +1882,6 @@ $grid-1-col: (
   }
 }
 @media only screen and (min-width: 425px) {
-  .home-link {
-    padding-left: 20px;
-  }
   .editorial .hero-content .image-container {
     background-color: #fec6c7;
     .primary-banner {
@@ -1961,63 +1951,6 @@ $grid-1-col: (
     display: flex;
     margin-top: 1em;
   }
-  .tab-container .tab-contents .tab-module {
-    .list-column {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      margin-top: 1em;
-    }
-  }
-
-  section {
-    margin: 0 auto;
-  }
-  .editorial .hero-content {
-    .hero-buttons-container {
-      width: -webkit-fill-available;
-      margin-top: 1em;
-      .col {
-        display: flex;
-        justify-content: space-between;
-        .hero-buttons {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: 1em;
-          width: 50%;
-          .tertiary-link {
-            justify-content: flex-start;
-          }
-        }
-      }
-    }
-    .primary-button-container {
-      display: flex;
-      width: 33%;
-    }
-    .bullet-list-row {
-      @include apply-flex-styles($flex-row-center-space_between);
-      flex-wrap: wrap;
-    }
-    .image-container {
-      border-radius: 0 0 8px 8px;
-      .primary-banner {
-        width: 100%;
-      }
-    }
-  }
-  // .editorial .split-header {
-  //   @include apply-flex-styles($flex-row-center-space_between);
-  //   .title-col {
-  //     display: flex;
-  //     flex: 70%;
-  //   }
-  //   .header-banner {
-  //     background-position: right;
-  //     height: 150px;
-  //   }
-  // }
 
   @mixin apply-grid-styles($grid-styles) {
     @each $property, $value in $grid-styles {
@@ -2031,194 +1964,71 @@ $grid-1-col: (
     grid-gap: 1em,
     margin-top: 1em,
   );
-  $grid-2col-auto: (
+  $grid-2col: (
     display: grid,
     grid-template-columns: repeat(2, 1fr),
     grid-template-rows: auto,
     grid-gap: 1em,
   );
-  $grid-3col-auto: (
+  $grid-3col: (
     display: grid,
     grid-template-columns: repeat(3, 1fr),
     grid-template-rows: auto,
     gap: 1em,
   );
-  $grid-4col-auto: (
+  $grid-4col: (
     display: grid,
     grid-template-columns: repeat(4, 1fr),
     grid-template-rows: auto,
     grid-gap: 1em,
   );
-  $grid-5col-auto: (
+  $grid-5col: (
     display: grid,
     grid-template-columns: repeat(5, 1fr),
     grid-template-rows: auto,
     grid-gap: 1em,
   );
-  $grid-6col-auto: (
+  $grid-6col: (
     display: grid,
     grid-template-columns: repeat(6, 1fr),
     grid-template-rows: auto,
     grid-gap: 1em,
   );
 
+  .hero {
+    .primary-banner {
+      background-image: url(../assets/images/hero-images/index/UIUX-banner.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      align-items: flex-start;
+      .hero-content {
+        @include apply-flex-styles($flex-col-start-center);
+        width: 50%;
+      }
+    }
+  }
+
   .editorial {
-    .hero-content {
-      .hero-buttons-container {
-        width: -webkit-fill-available;
-        margin-top: 1em;
-        .col {
-          display: flex;
-          justify-content: space-between;
-          .hero-buttons {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 1em;
-            width: 50%;
-            .tertiary-link {
-              justify-content: flex-start;
-            }
+    width: 95%;
+    margin: 0 auto;
+    .grid-container-3col {
+      @include apply-grid-styles($grid-3col);
+      .card {
+        justify-content: flex-start;
+        .image-container {
+          width: -webbkit-fill-available;
+          height: 230px;
+          &.syn-banner {
+            background-size: cover;
+            min-height: unset;
           }
         }
-      }
-      .bullet-list-row {
-        @include apply-flex-styles($flex-row-center-space_between);
-        flex-wrap: wrap;
-      }
-      .image-container {
-        border-radius: 0 0 8px 8px;
-        .primary-banner {
-          width: 100%;
+        h2 {
+          font-size: 1.06rem;
         }
       }
     }
-
-    .grid-container-2col {
-      margin-top: 2em;
-      @include apply-grid-styles($grid-2col-auto);
-      .grid-item {
-        @include apply-flex-styles($flex-col-center);
-      }
-    }
-    .grid-container-3col {
-      @include apply-grid-styles($grid-3col-auto);
-      .grid-item {
-        @include apply-flex-styles($flex-col-center);
-      }
-    }
-    .grid-container-4col {
-      @include apply-grid-styles($grid-4col-auto);
-      .grid-item {
-        @include apply-flex-styles($flex-col-center);
-      }
-    }
-    .grid-container-5col {
-      @include apply-grid-styles($grid-5col-auto);
-    }
-    .grid-container-6col {
-      @include apply-grid-styles($grid-6col-auto);
-    }
-    .split-header {
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      .left-align {
-        width: 50%;
-        display: inline-flex;
-      }
-      .right-align {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex-direction: row;
-        .primary-button {
-          margin-bottom: 0;
-        }
-      }
-      .title-col {
-        width: 60%;
-        margin-right: 10px;
-      }
-      .header-banner {
-        background-position: right;
-        height: 150px;
-        &.carousel-banner-1 {
-          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
-          width: 150px;
-          height: 150px;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: bottom;
-          margin-bottom: 1em;
-        }
-        &.carousel-banner-2 {
-          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
-          width: 100%;
-          height: 100%;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: right;
-          border-radius: $brad-8;
-        }
-        &.carousel-banner-3 {
-          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
-          width: 100%;
-          height: 100%;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: right;
-          border-radius: $brad-8;
-        }
-        &.carousel-banner-4 {
-          background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
-          width: 100%;
-          height: 100%;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: right;
-          border-radius: $brad-8;
-        }
-      }
-      .sus-banner {
-        height: 150px;
-        margin-bottom: 1em;
-        width: 220px;
-      }
-    }
-
-    .achievement-cards {
-      @include apply-grid-styles($grid-4col-auto);
-      .card {
-        .stat {
-          font-size: 1.3rem;
-          font-weight: 500;
-        }
-        .highlight {
-          font-size: 0.9rem;
-        }
-      }
-    }
-    .grid-container-4col {
-      @include apply-grid-styles($grid-4col-auto);
-      .gallery {
-        figcaption {
-          font-size: 0.9rem;
-        }
-      }
-    }
-  }
-
-  .accordion .accordion-content {
-    max-height: 0;
-    opacity: 0;
-  }
-
-  /* Show content when hovered on mobile */
-  .accordion:hover .accordion-content {
-    max-height: 1000px; /* Adjust as needed */
-    opacity: 1;
   }
 
   .flex-row {
@@ -2354,16 +2164,6 @@ $grid-1-col: (
     width: 40%;
     padding: 2em;
     margin-bottom: 2em;
-  }
-
-  // case study styles
-  section {
-    margin: 0 auto;
-  }
-
-  // .editorial .hero .case-study-settings .image-container
-  .sidebar-open {
-    width: 40%;
   }
 
   // .col-2 {
