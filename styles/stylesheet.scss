@@ -516,88 +516,77 @@ img {
   }
 }
 
-// hero elements
-.hero {
-  @include apply-flex-styles($flex-col-center);
-  height: 80vh;
-  width: 100%;
-  .primary-banner {
-    @include apply-flex-styles($flex-col-center);
-    background-color: #fff;
-    height: 100%;
-    // &.index-banner {
-    //   background-image: url(../assets/images/hero-images/index/mobile-hero-min.svg);
-    //   @include background-image-style_cover;
-    // }
-  }
-  .hero-content {
-    @include apply-flex-styles($flex-col-center);
-    margin-left: 1em;
-    padding: 10px;
-    background-color: $color_white;
-    border-radius: 25px;
-    gap: 1em;
-    .profile-image {
-      width: 150px;
-      height: 150px;
-      background-image: url(../assets/images/hero-images/index/me-min.webp);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #fdfdee;
-      border-radius: 100%;
-    }
-    .name-container {
-      background-color: #e6ad40;
-      color: $color_brand;
-      padding: 0 10px;
-      width: -webbkit-fill-available;
-      border-radius: 50px;
-    }
-    .expanded-headline {
-      font-size: 1.75rem;
-      font-weight: 600;
-      line-height: 24.5pt;
-      margin-top: 10px;
-      letter-spacing: 1pt;
-      .highlight-text {
-        color: #0a6cc2;
-      }
-    }
-    p {
-      font-size: 1.2rem;
-      .highlight-text {
-        color: #0a6cc2;
-      }
-    }
-    .two-button-container {
-      width: 100%;
-      margin: 0;
-      @include apply-flex-styles($flex-col-center);
-      gap: 1em;
-      .primary-button,
-      .secondary-button {
-        min-height: 40px;
-        min-width: 48px;
-        width: -webkit-fill-available;
-        padding: 0;
-        margin: 0;
-      }
-      .primary-button a {
-        color: $color_white;
-      }
-      .secondary-button a {
-        color: $color_primary_text;
-      }
-    }
-  }
-}
-
 .page-wrapper {
   padding-bottom: 1em;
   padding-top: 4em;
   @include apply-flex-styles($flex-col-center);
   gap: 1em;
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    .primary-banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      height: 100%;
+      background-image: url(../assets/images/hero-images/index/UIUX-banner.webp);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 25px;
+      gap: 1em;
+      width: 80%;
+      box-shadow: $b-shadow;
+      .profile-image {
+        width: 150px;
+        height: 150px;
+        background-image: url(../assets/images/hero-images/index/me-min.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #fdfdee;
+        border-radius: 100%;
+      }
+      .two-button-container {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+
+        .primary-button,
+        .secondary-button {
+          min-height: 40px;
+          min-width: 48px;
+          width: -webkit-fill-available;
+          padding: 0;
+          margin: 0;
+          a {
+            color: #fff;
+          }
+        }
+        .secondary-button a {
+          color: #1a1a1a;
+        }
+      }
+    }
+  }
   .editorial {
     @include apply-flex-styles($flex-col-center-start);
     background-color: $color_white;
@@ -1992,7 +1981,7 @@ $grid-1-col: (
 
   .hero {
     .primary-banner {
-      background-image: url(../assets/images/hero-images/index/UIUX-banner.png);
+      background-image: url(../assets/images/hero-images/index/UIUX-banner.webp);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -2754,9 +2743,13 @@ $grid-1-col: (
   .page-wrapper {
     width: unset;
     margin: unset;
-    .hero .primary-banner .hero-content {
-      margin-left: 5em;
-      box-shadow: $b-shadow;
+    .hero .primary-banner {
+      align-items: flex-start;
+      .hero-content {
+        width: 23%;
+        margin-left: 5em;
+        box-shadow: $b-shadow;
+      }
     }
     .editorial {
       width: 90%;
