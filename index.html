@@ -27,6 +27,16 @@
     <noscript>
       <link rel="stylesheet" href="styles/stylesheet.css" />
     </noscript>
+    <style>
+      .hero .primary-banner .hero-content .expanded-headline {
+        font-size: 1.2rem;
+      }
+      .hero .primary-banner .hero-content .expanded-headline .highlight-text {
+        color: #0a6cc2;
+      }
+    </style>
+
+    <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner.webp" type="image/webp" />
   </head>
 
   <body>
@@ -88,12 +98,12 @@
           <div class="primary-banner">
             <div class="hero-content">
               <div class="profile-image"></div>
-              <div class="expanded-headline">
+              <span class="expanded-headline">
                 Hi, I'm Joe!
                 <br />
                 <span class="highlight-text">Senior UX &amp; UI Designer</span>
                 based in St. Helens, Merseyside (UK).
-              </div>
+              </span>
               <p>
                 With 5+ years of experience, I have
                 <span class="highlight-text">designed and developed</span>
@@ -111,7 +121,7 @@
           </div>
         </section>
 
-        <section role="region" aria-labelledby="heading-id" class="editorial">
+        <section class="editorial">
           <p class="quote-text">
             “If you think that design is expensive, then you should look at the cost of bad design.”
             <br />
