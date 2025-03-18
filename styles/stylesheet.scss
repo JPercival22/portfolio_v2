@@ -429,6 +429,7 @@ img {
     .menu-toggle {
       background: none;
       border: none;
+      cursor: pointer;
       .icon-bar {
         background-image: url('../assets/images/iconography/menu-icon.svg');
         background-repeat: no-repeat;
@@ -438,7 +439,7 @@ img {
         height: 30px;
       }
     }
-
+    // mobile nav items
     .nav-menu {
       display: none;
       &.show {
@@ -449,20 +450,19 @@ img {
         gap: 3em;
         height: 100vh;
         width: -webkit-fill-available;
-        background-color: #f4e3d7;
+        background-color: $blue_menuBkg;
         margin: 0;
         .navbar-link {
           width: 100%;
           .organic-link {
             @include apply-flex-styles($flex-col-center);
             font-size: 20px;
-            color: $color_brand;
+            color: $color_white;
             &:hover,
             &:focus {
-              text-decoration: underline;
+              background: $color_brand;
             }
           }
-
           /* Case Studies dropdown (Accordion Style) */
           .accordion {
             width: 100%;
@@ -472,7 +472,7 @@ img {
               align-items: center;
               justify-content: center;
               font-size: 20px;
-              color: $color_brand;
+              color: $color_white;
             }
             .chevron {
               transition: transform 0.3s ease;
@@ -483,9 +483,6 @@ img {
               transition: max-height 0.3s ease, opacity 0.3s ease;
               opacity: 0;
               max-height: 0;
-              .gallery {
-                padding-left: 10px;
-              }
             }
             .accordion-toggle {
               display: none;
@@ -500,13 +497,11 @@ img {
                 gap: 2em;
                 li {
                   width: 100%;
+                  border-bottom: 1px solid $color_white;
                   transition: background-color 0.5s ease-in-out;
                   a {
                     font-size: 18px;
-                    color: $color_brand;
-                    &:hover {
-                      text-decoration: underline;
-                    }
+                    color: $color_white;
                   }
                 }
               }
@@ -2424,6 +2419,14 @@ $grid-1-col: (
 }
 
 @media only screen and (min-width: 1024px) {
+  .navbar .navbar-container .nav-menu .navbar-link .accordion {
+    display: inherit;
+  }
+
+  .accordion,
+  .accordion-toggle {
+    display: none;
+  }
   .page-wrapper .editorial .quote-text {
     display: flex;
     flex-direction: column;
@@ -2626,9 +2629,6 @@ $grid-1-col: (
     @include apply-flex-styles($flex-row-center-space_evenly);
     .navbar-container {
       width: 90%;
-      a {
-        cursor: pointer;
-      }
       .menu-toggle {
         display: none;
       }
@@ -2645,7 +2645,7 @@ $grid-1-col: (
         @include apply-flex-styles($flex-row-center-end);
         gap: 1em;
         .navbar-item {
-          transition: all 0.3s 0.5s ease-in-out;
+          transition: all 0.3s ease-in-out;
           a {
             font-size: 1rem;
             color: $color_primary_text;
@@ -2657,11 +2657,15 @@ $grid-1-col: (
           &:hover {
             border-bottom: $color_border-brand;
           }
+          &:first-child:hover {
+            border-bottom: none;
+          }
         }
         .accordion {
-          .accordion-toggle {
-            display: none;
-          }
+          position: relative;
+          width: fit-content;
+          border: none;
+
           .accordion-header {
             cursor: pointer;
             display: flex;
@@ -2675,6 +2679,7 @@ $grid-1-col: (
           .chevron {
             transition: transform 0.3s ease;
             margin-left: 10px;
+            // fill: #3f3f3f;
             transform: rotate(0deg); /* Initially pointing down */
           }
 
@@ -2694,7 +2699,7 @@ $grid-1-col: (
             display: flex;
             flex-wrap: nowrap;
             gap: 10px;
-            width: 350px;
+            width: 242px;
             ul {
               li {
                 width: -webkit-fill-available;
@@ -2720,7 +2725,7 @@ $grid-1-col: (
             .accordion-content {
               opacity: 1;
               max-height: 300px; /* Adjust to the desired size */
-              width: 275px;
+              width: 242px;
             }
           }
         }
@@ -2929,46 +2934,35 @@ $grid-1-col: (
     }
   }
 }
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1700px) {
   .navbar .navbar-container {
     width: 70%;
   }
-
-  // .hero_p-0 .hero {
-  //   width: 70%;
-  //   height: 100vh;
-  //   .hero-content {
-  //     width: 90%;
-  //   }
-  // }
-
-  // .p-0 .flex-col section {
-  //   max-width: 70vw;
-  //   .editorial {
-  //     width: 100%;
-  //   }
-  // }
-
-  // .editorial .grid-container {
-  //   &.rows-1 {
-  //     gap: 4em;
-  //   }
-  // }
-
-  // case study
   .page-wrapper {
-    width: 70vw;
+    .hero .primary-banner .hero-content {
+      margin-left: 17em;
+      width: 23%;
+    }
+    .editorial {
+      &.left-align,
+      &.purple-fill .project-section {
+        width: 70%;
+      }
+      .career-history-banner {
+        max-height: 360px;
+      }
+    }
   }
-
-  // .wrapper .wide-card .card-body {
-  //   .card-editorial {
-  //     width: 80%;
-  //   }
-  //   .image-container {
-  //     width: 15%;
-  //   }
-  //   .button-row {
-  //     margin-top: 2em;
-  //   }
-  // }
 }
+// .p-0 .flex-col section {
+//   max-width: 70vw;
+//   .editorial {
+//     width: 100%;
+//   }
+// }
+
+// .editorial .grid-container {
+//   &.rows-1 {
+//     gap: 4em;
+//   }
+// }
