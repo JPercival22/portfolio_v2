@@ -22,7 +22,28 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" media="print" onload="this.media='all'" />
 
-    <style>
+    <!-- <style>
+      .index-banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('assets/images/hero-images/index/mobile-hero-min.svg');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 600px;
+      }
+      
+      @media (min-width: 768px) {
+        .index-banner {
+          background-image: url('assets/images/hero-images/index/index-hero_lg.webp');
+          background-size: cover;
+          width: 100%;
+          height: 600px;
+        }
+      }
+
       .lazyblurry {
         filter: blur(10px);
       }
@@ -30,14 +51,14 @@
       .lazyloaded {
         filter: none;
       }
-    </style>
+    </style> -->
     <!-- Preload main stylesheet -->
     <link rel="preload" href="styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript>
       <link rel="stylesheet" href="styles/stylesheet.css" />
     </noscript>
 
-    <script>
+    <!-- <script>
       document.addEventListener('DOMContentLoaded', () => {
         const screenWidth = window.innerWidth;
         let preloadImage = '';
@@ -54,7 +75,7 @@
         link.href = preloadImage;
         document.head.appendChild(link);
       });
-    </script>
+    </script> -->
 
     <!-- .index-banner {
         display: flex;
@@ -131,16 +152,7 @@
         align-items: center;
         justify-content: center;
       }
-      .profile-image {
-        width: 150px;
-        height: 150px;
-        background-image: url(./assets/images/hero-images/index/me-min.webp);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: #ffffec;
-        border-radius: 100%;
-      }
+      
       .expanded-headline {
         font-size: 1.5rem;
         line-height: 1.3em;
@@ -153,12 +165,7 @@
         width: auto;
       }
       @media (min-width: 768px) {
-        .index-banner {
-          background-image: url('assets/images/hero-images/index/index-hero_lg.webp');
-          background-size: cover;
-          width: 100%;
-          height: 600px;
-        }
+        
         .hero-content {
           width: 40vw;
         }
@@ -212,15 +219,13 @@
   <body>
     <header id="navBar" class="navbar">
       <nav class="navbar-container">
-        <div class="home-link">
-          <a href="index.html" class="navbar-logo" aria-label="Home">
-            <span class="logo"></span>
-            <div class="logo-container">
-              <div class="logo-name">Joseph Percival</div>
-              <div class="logo-title">UX &amp; UI DESIGNER</div>
-            </div>
-          </a>
-        </div>
+        <a href="index.html" class="navbar-logo" aria-label="Home">
+          <span class="logo"></span>
+          <div class="logo-container">
+            <div class="logo-name">Joseph Percival</div>
+            <div class="logo-title">UX &amp; UI DESIGNER</div>
+          </div>
+        </a>
 
         <button type="button" class="menu-toggle" aria-label="main navigation menu button" aria-expanded="false" aria-controls="navMenu">
           <div class="icon-bar"></div>
@@ -237,9 +242,15 @@
               </label>
               <div class="accordion-content">
                 <ul>
-                  <li><a class="case-link" href="come-together.html">Bespoke Design & Development</a></li>
-                  <li><a class="case-link" href="syn-ios-app.html">IOS E-Commerce Design</a></li>
-                  <li><a class="case-link" href="guitar-tutorial.html">Voice Recognition R&D</a></li>
+                  <li>
+                    <a class="case-link" href="come-together.html">Bespoke Website Design</a>
+                  </li>
+                  <li>
+                    <a class="case-link" href="syn-ios-app.html">IOS E-Commerce Design</a>
+                  </li>
+                  <li>
+                    <a class="case-link" href="guitar-tutorial.html">Voice Recognition Design</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -259,187 +270,78 @@
     <div id="btt-anchor"></div>
 
     <main>
-      <div class="page-wrapper_initial">
-        <section>
-          <div class="hero">
-            <div class="image-container">
-              <div class="primary-banner index-banner">
-                <div class="hero-content">
-                  <div class="name-container">
-                    <p>JOSEPH PERCIVAL</p>
-                  </div>
-                  <h1>UX &amp; UI Portfolio</h1>
-                  <div class="two-button-container">
-                    <div class="primary-button">
-                      <a href="contact-form.html">Lets Talk</a>
-                    </div>
-                    <div class="secondary-button">
-                      <a href="#projects">See Projects</a>
-                    </div>
-                  </div>
+      <div class="page-wrapper">
+        <section class="hero">
+          <div class="primary-banner">
+            <div class="hero-content">
+              <div class="profile-image"></div>
+              <div class="expanded-headline">
+                Hi, I'm Joe!
+                <br />
+                a
+                <span class="highlight-text">Senior UX &amp; UI Designer</span>
+                based in St. Helens, Merseyside (UK).
+              </div>
+              <p>
+                With 5+ years of experience, I have
+                <span class="highlight-text">designed and developed</span>
+                intuitive web applications and interfaces for start-ups and global corporations across various industries.
+              </p>
+              <div class="two-button-container">
+                <div class="primary-button">
+                  <a href="contact-form.html">Lets Talk</a>
+                </div>
+                <div class="secondary-button">
+                  <a href="#projects">See Projects</a>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section role="region" aria-labelledby="heading-id">
-          <div class="editorial">
-            <p class="quote-text">
-              “If you think that design is expensive, then you should look at the cost of bad design.”
-              <br />
-              <sub class="signature">- Dr. Ralf Speth. CEO, Jaguar Land Rover.</sub>
-            </p>
-          </div>
+        <section role="region" aria-labelledby="heading-id" class="editorial">
+          <p class="quote-text">
+            “If you think that design is expensive, then you should look at the cost of bad design.”
+            <br />
+            <sub class="signature">- Dr. Ralf Speth. CEO, Jaguar Land Rover.</sub>
+          </p>
         </section>
 
-        <section>
-          <div class="editorial profile-section">
-            <div class="profile-image"></div>
-            <div class="expanded-headline">
-              Hi, I'm
-              <span class="highlight-text">Joseph Percival</span>
-              , Senior UX &amp; UI Designer, based in St. Helens, Merseyside (UK).
+        <section class="editorial left-align">
+          <div class="split-header">
+            <div class="title-col">
+              <h2>My History</h2>
             </div>
-            <div class="flex-row space-between center no-border">
-              <div class="col">
-                <div class="left-align"></div>
-                <div class="right-align">
-                  <a class="primary-button" href="contact-form.html" aria-label="button link to contact page" title="Please click this button if you would like to set up a chat over a project.">Lets Talk</a>
-                  <a class="secondary-button" href="#projects" aria-label="button link to about page" title="Please click this button if you would like to view my experience and skills.">See Projects</a>
-                </div>
-              </div>
-            </div>
+            <a class="primary-button" href="assets\documents\CV2023.pdf" target="_blank" aria-label="button link to my online CV pdf" title="Clicking this link will open my CV in a new browser window">View CV</a>
           </div>
+          <div class="career-history-banner"></div>
         </section>
 
-        <section>
-          <div class="editorial">
-            <h2>Introduction</h2>
-            <p>With over five years of experience, I have collaborated with start-ups and global corporations to design and develop intuitive web applications and mobile interfaces across various industries.</p>
-            <p>
-              Most recently, as
-              <strong>Senior UX Designer</strong>
-              ,
-              <strong>Test Facilitator</strong>
-              , and
-              <strong>UI Designer</strong>
-              at a data aggregation company, I led UX design initiatives and development projects used by the UK Government, the Metropolitan Police, and the National Crime Agency.
-            </p>
-            <p>
-              I hold a
-              <strong>First-Class BSc (Hons) in Web Design and Development</strong>
-              from Edge Hill University, which has shaped my approach to creating innovative digital solutions.
-            </p>
-            <p>I am passionate about crafting meaningful user experiences and eager to contribute to projects that drive lasting impact.</p>
-          </div>
-        </section>
-        <!-- Experience sections  -->
+        <section id="projects" class="editorial purple-fill">
+          <div class="project-section">
+            <h2 class="white-text">My Work</h2>
+            <p class="white-text">I’ve made significant impact at each organisation that I’ve served. I’ve grown revenue, established essential infrastructure, shaped brands, hired and cultivated talent, built new teams, and led the creation of life saving products. Jump into my work below to learn more, or use the case study option in the menu.</p>
 
-        <section role="region" aria-labelledby="heading-id">
-          <div class="editorial">
-            <div class="flex-row space-between center no-border">
-              <div class="col">
-                <div class="left-align">
-                  <h2 id="heading-id" class="m-0">Career History</h2>
-                </div>
-                <div class="right-align">
-                  <a class="primary-button m-0" href="assets\documents\CV2023.pdf" target="_blank" aria-label="button link to my online CV pdf" title="Clicking this link will open my CV in a new browser window">View CV</a>
-                </div>
-              </div>
+            <div class="grid-container-3col">
+              <a class="card" href="/come-together.html" aria-label="Explore Come Together Hub Ltd Case study">
+                <div class="image-container come-together-banner"></div>
+                <h2 class="white-text">Come Together Hub Ltd.</h2>
+                <p class="white-text">Bespoke Re-Design (UX&amp;UI) &amp; Development.</p>
+              </a>
+
+              <a class="card" href="/syn-ios-app.html" aria-label="Read Synalogik Innovative Solutions Ltd. iOS App Design case study">
+                <div class="image-container syn-banner"></div>
+                <h2 class="white-text">Synalogik Solutions Ltd.</h2>
+                <p class="white-text">E-Commerce iOS Application Design (UX &amp; UI).</p>
+              </a>
+
+              <a class="card" href="/guitar-tutorial.html" aria-label="Explore Guitar Tutorials Case Study">
+                <div class="image-container just-speak-banner"></div>
+                <h2 class="white-text">Just Speak Guitar Tutorials.</h2>
+                <p class="white-text">Speech Recognition Research &amp; Design (UX &amp; UI).</p>
+              </a>
             </div>
-            <div class="career-history-banner"></div>
-          </div>
-        </section>
-
-        <section id="projects">
-          <div class="editorial">
-            <div class="flex-container">
-              <h2>Case Studies</h2>
-              <div class="row">
-                <div class="wide-card">
-                  <div class="card-header">
-                    <h2>Come Together Hub Ltd.</h2>
-                    <h3>Bespoke Re-Design (UX&amp;UI) &amp; Development.</h3>
-                    <ul class="inline-decorated-list">
-                      <li><span class="emphasis">Lead UX Designer.</span></li>
-                      <li><span class="emphasis">Lead UI Designer.</span></li>
-                      <li>
-                        <span class="emphasis">System Creator.</span>
-                      </li>
-                      <li><span class="emphasis">Web Master.</span></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <div class="card-editorial">
-                      <p>
-                        Come Together Hub, a St Helens-based charity in Merseyside (UK), required a functional and impactful online presence. After evaluating their original website, it became evident
-                        <span class="more-content">that a complete redesign and redevelopment was necessary. Aware of the charity’s limited resources and vital mission, I volunteered to lead the redesign and development and delivered a user-friendly, reliable, and visually engaging website that reflected their commitment to supporting the vulnerable.</span>
-                      </p>
-                      <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
-                      <div class="button-row large-devices">
-                        <a class="primary-button large" href="/come-together.html" aria-label="Explore Come Together Hub Ltd Case study">See Case Study</a>
-                      </div>
-                    </div>
-                    <div class="image-container come-together-banner"></div>
-                  </div>
-                </div>
-
-                <div class="wide-card">
-                  <div class="card-header">
-                    <h2>Synalogik Innovative Solutions Ltd.</h2>
-                    <h3>iOS E-Commerce Application Design (UX &amp; UI).</h3>
-                    <ul class="inline-decorated-list">
-                      <li><span class="emphasis">Senior UX Designer.</span></li>
-                      <li><span class="emphasis">Senior UI Designer.</span></li>
-                      <li><span class="emphasis">UX Test Facilitator.</span></li>
-                      <li>
-                        <span class="emphasis">System Creator.</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <div class="card-editorial">
-                      <p>
-                        Synalogik Innovative Solutions Ltd collaborates with the UK government and gambling institutions to combat fraud through its platform. As their sole Senior UX and UI Designer,
-                        <span class="more-content">I designed an iOS e-commerce platform to strengthen their marketing campaigns and strategies. This case study examines the research, UX testing, and design phases behind developing a private, user-centric e-commerce solution, ensuring seamless integration with their existing infrastructure.</span>
-                      </p>
-                      <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
-                      <div class="button-row large-devices">
-                        <a class="primary-button large" href="/syn-ios-app.html" aria-label="Read Synalogik Innovative Solutions Ltd. iOS App Design case study">See Case Study</a>
-                      </div>
-                    </div>
-                    <div class="image-container syn-banner"></div>
-                  </div>
-                </div>
-
-                <div class="wide-card">
-                  <div class="card-header">
-                    <h2>Just Speak Guitar Tutorials.</h2>
-                    <h3>Speech Recognition Research &amp; Design (UX&amp;UI).</h3>
-                    <ul class="inline-decorated-list">
-                      <li><span class="emphasis">UX Researcher.</span></li>
-                      <li><span class="emphasis">UX &amp; UI Designer.</span></li>
-                      <li><span class="emphasis">UX Test Facilitator.</span></li>
-                      <li><span class="emphasis">Front End Developer.</span></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <div class="card-editorial">
-                      <p>
-                        Just Speak Guitar Tutorials is a research and development project exploring the integration of a non-AI voice command system within a responsive, content-rich website.
-                        <span class="more-content">Guided by fundamental UX design principles, the project leveraged data from user interviews, surveys, and testing. By addressing user needs and concerns, the system was successful in eliminating frustration and ensuring transparency throughout the design and development process.</span>
-                      </p>
-                      <button class="read-more" type="button" aria-label="Reveal full content">Show more</button>
-                      <div class="button-row large-devices">
-                        <a class="primary-button large" href="/guitar-tutorial.html" aria-label="Guitar Tutorials Case Study">See Case Study</a>
-                      </div>
-                    </div>
-                    <div class="image-container just-speak-banner"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!-- end of grid container  -->
           </div>
         </section>
       </div>
@@ -478,9 +380,6 @@
     </footer>
 
     <!-- Defer main.js script to ensure it's loaded after HTML parsing -->
-    <script type="module" src="js/main.js"></script>
-
-    <!-- Defer lazySizes library script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+    <script type="module" src="./js/main.js" defer></script>
   </body>
 </html>

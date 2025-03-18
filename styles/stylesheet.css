@@ -14,12 +14,6 @@ body {
   color: #1a1a1a;
 }
 
-main {
-  background-color: #f7f7f7;
-  padding-bottom: 1em;
-  padding-top: 4em;
-}
-
 /* Styling for the overlay */
 #loadingOverlay {
   position: fixed;
@@ -150,14 +144,14 @@ img {
   letter-spacing: 1px;
   text-transform: capitalize;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
   box-shadow: 6px 6px 12px -5px rgba(111, 111, 111, 0.7490196078);
   margin-bottom: 1em;
   background-color: #2c4465;
   border-color: #2c4465;
+  transition: all 0.3s ease-in-out;
 }
 .primary-button:hover {
-  background-color: #6b8dba;
+  background-color: #173661;
   box-shadow: none;
 }
 
@@ -174,13 +168,13 @@ img {
   letter-spacing: 1px;
   text-transform: capitalize;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
   box-shadow: 6px 6px 12px -5px rgba(111, 111, 111, 0.7490196078);
   margin-bottom: 1em;
   background-color: #4fbdd2;
+  transition: all 0.3s ease-in-out;
 }
 .secondary-button:hover {
-  background-color: rgb(96.6, 195.6, 214.5);
+  background-color: #2fb0c9;
   box-shadow: none;
 }
 
@@ -291,7 +285,7 @@ img {
   gap: 3em;
   height: 100vh;
   width: -webkit-fill-available;
-  background-color: #30a7bf;
+  background-color: #f4e3d7;
   margin: 0;
 }
 .navbar .navbar-container .nav-menu.show .navbar-link {
@@ -304,10 +298,10 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: #fff;
+  color: #2c4465;
 }
 .navbar .navbar-container .nav-menu.show .navbar-link .organic-link:hover, .navbar .navbar-container .nav-menu.show .navbar-link .organic-link:focus {
-  background: #2c4465;
+  text-decoration: underline;
 }
 .navbar .navbar-container .nav-menu.show .navbar-link .accordion {
   width: 100%;
@@ -318,7 +312,7 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: #fff;
+  color: #2c4465;
 }
 .navbar .navbar-container .nav-menu.show .navbar-link .accordion .chevron {
   transition: transform 0.3s ease;
@@ -348,12 +342,14 @@ img {
 }
 .navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-toggle:checked + .accordion-header + .accordion-content ul li {
   width: 100%;
-  border-bottom: 1px solid #fff;
   transition: background-color 0.5s ease-in-out;
 }
 .navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-toggle:checked + .accordion-header + .accordion-content ul li a {
   font-size: 18px;
-  color: #fff;
+  color: #2c4465;
+}
+.navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-toggle:checked + .accordion-header + .accordion-content ul li a:hover {
+  text-decoration: underline;
 }
 .navbar .navbar-container .nav-menu.show .navbar-link .accordion .accordion-toggle:checked + .accordion-header .chevron {
   transform: rotate(180deg);
@@ -442,6 +438,8 @@ img {
 }
 
 .page-wrapper {
+  padding-bottom: 1em;
+  padding-top: 4em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -456,7 +454,6 @@ img {
   background-color: #fff;
   padding: 10px;
   border-radius: 8px;
-  width: 92%;
 }
 .page-wrapper .editorial.purple-fill {
   background-color: #38389c;
@@ -490,47 +487,56 @@ img {
   color: #1a1a1a;
 }
 
+.career-history-banner {
+  background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
+  background-size: contain;
+  height: 1000px;
+  width: 100%;
+}
+
 .project-section .white-text {
   color: #fff;
 }
 .project-section .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 1em;
 }
-.project-section .card .card-body {
+.project-section .card .image-container {
   width: 100%;
-}
-.project-section .card .card-body .image-container {
-  border: 2px solid #fff;
-  border-radius: 8px;
+  height: 300px;
   transition: all 0.3s ease-in-out;
 }
-.project-section .card .card-body .image-container:hover {
+.project-section .card .image-container:hover {
   opacity: 0.7;
   filter: grayscale(80%);
 }
-.project-section .card .card-body .image-container.come-together-banner {
+.project-section .card .image-container.come-together-banner {
   background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
   background-size: cover;
   width: 100%;
   height: 300px;
+  border: 2px solid #fff;
+  border-radius: 8px;
 }
-.project-section .card .card-body .image-container.syn-banner {
+.project-section .card .image-container.syn-banner {
   background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
-  background-size: contain;
+  background-size: cover;
   width: 100%;
-  height: 300px;
+  min-height: 300px;
+  border: 2px solid #fff;
+  border-radius: 8px;
 }
-.project-section .card .card-body .image-container.just-speak-banner {
+.project-section .card .image-container.just-speak-banner {
   background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
   background-size: cover;
   width: 100%;
   height: 300px;
+  border: 2px solid #fff;
+  border-radius: 8px;
 }
-.project-section .card .card-body .white-text {
+.project-section .card .white-text {
   color: #fff;
 }
 
@@ -1666,6 +1672,44 @@ textarea.input {
   width: inherit;
 }
 
+.bttt-btn {
+  position: fixed;
+  padding: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px -5px rgba(111, 111, 111, 0.7490196078);
+  transition: opacity 0.5s ease;
+  bottom: 3px;
+  right: 3px;
+  z-index: 999;
+}
+.bttt-btn:hover {
+  background-color: #1b1bac;
+  box-shadow: none;
+}
+.bttt-btn svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+}
+.bttt-btn svg:hover {
+  stroke: #4fbdd2;
+  transform: translateY(-5px);
+}
+
+.hide-sm {
+  display: none;
+}
+
 .footer {
   background-color: #fff;
   color: #1a1a1a;
@@ -1739,53 +1783,6 @@ textarea.input {
 .footer .footer-container .copy-panel p {
   margin: 0;
   font-size: 14px;
-}
-
-.lightbox {
-  display: none;
-}
-
-.bttt-btn {
-  position: fixed;
-  padding: 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 6px 6px 12px -5px rgba(111, 111, 111, 0.7490196078);
-  transition: opacity 0.5s ease;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-}
-.bttt-btn:hover {
-  background-color: #1b1bac;
-  box-shadow: none;
-}
-.bttt-btn svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  fill: none;
-  stroke: white;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: transform 0.3s ease;
-}
-.bttt-btn svg:hover {
-  stroke: #4fbdd2;
-  transform: translateY(-5px);
-}
-
-.hide-sm {
-  display: none;
-}
-
-.scrolled {
-  opacity: 1;
-  /* Show the button when scrolled */
 }
 
 @media only screen and (min-width: 425px) {
