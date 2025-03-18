@@ -301,131 +301,263 @@
         <section role="region" aria-labelledby="heading-id">
           <div class="editorial">
             <p class="quote-text">
-              “Every great design begins with an even better story.”
-              <br />
-              <sub class="signature">- Lorinda Mamo.</sub>
+              <!DOCTYPE html>
+              <html lang="en">
+                <head>
+                  <meta name="description" content="UX Portfolio for Joseph Percival" />
+                  <meta name="keywords" content="Explore innovative UX design projects and solutions tailored to enhance user experiences. Discover a diverse portfolio showcasing user-centric design principles, usability enhancements, and interactive prototypes. Elevate your digital experiences with insights from a seasoned UX designer passionate about crafting intuitive interfaces." />
+                  <meta name="author" content="Joseph Percival" />
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                  <title>About Me - Joseph Percival</title>
+                  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+                  <link rel="preconnect" href="https://fonts.googleapis.com" />
+                  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+                  <!-- Preload the font without italics -->
+                  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+                  <noscript>
+                    <!-- Fallback for browsers with JavaScript disabled -->
+                    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+                  </noscript>
+
+                  <!-- Preload Material Symbols font (combined) -->
+                  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+                  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" media="print" onload="this.media='all'" />
+
+                  <!-- Preload main stylesheet -->
+                  <link rel="preload" href="styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+                  <noscript>
+                    <link rel="stylesheet" href="styles/stylesheet.css" />
+                  </noscript>
+                  <style>
+                    .hero .primary-banner .hero-content .expanded-headline {
+                      font-size: 1.2rem;
+                    }
+                    .hero .primary-banner .hero-content .expanded-headline .highlight-text {
+                      color: #0a6cc2;
+                    }
+                  </style>
+
+                  <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner.webp" type="image/webp" />
+                </head>
+
+                <body>
+                  <header id="navBar" class="navbar">
+                    <nav class="navbar-container">
+                      <a href="index.html" class="navbar-logo" aria-label="Home">
+                        <span class="logo"></span>
+                        <div class="logo-container">
+                          <div class="logo-name">Joseph Percival</div>
+                          <div class="logo-title">UX &amp; UI DESIGNER</div>
+                        </div>
+                      </a>
+
+                      <button type="button" class="menu-toggle" aria-label="main navigation menu button" aria-expanded="false" aria-controls="navMenu">
+                        <div class="icon-bar"></div>
+                      </button>
+
+                      <ul id="navMenu" class="nav-menu">
+                        <li class="navbar-item navbar-link">
+                          <!-- Case Studies item with dropdown -->
+                          <div class="accordion">
+                            <input type="checkbox" id="accordion-toggle" class="accordion-toggle" />
+                            <label for="accordion-toggle" class="accordion-header">
+                              Case Studies
+                              <span class="chevron">▼</span>
+                            </label>
+                            <div class="accordion-content">
+                              <ul>
+                                <li>
+                                  <a class="case-link" href="come-together.html">Bespoke Website Design</a>
+                                </li>
+                                <li>
+                                  <a class="case-link" href="syn-ios-app.html">IOS E-Commerce Design</a>
+                                </li>
+                                <li>
+                                  <a class="case-link" href="guitar-tutorial.html">Voice Recognition Design</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="navbar-item navbar-link">
+                          <a class="organic-link" href="about-me.html" title="Link to the About Me page">About Me</a>
+                        </li>
+
+                        <li class="navbar-item navbar-link">
+                          <a class="organic-link" href="contact-form.html" title="Link to the Contact Us page">Contact Me</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </header>
+
+                  <div id="btt-anchor"></div>
+
+                  <main>
+                    <div class="page-wrapper">
+                      <section class="hero">
+                        <div class="primary-banner">
+                          <div class="hero-content">
+                            <span class="expanded-headline">
+                              <h1>About Me</h1>
+
+                              <p class="description">
+                                A
+                                <span class="highlight-text">clever</span>
+                                problem solver,
+                                <span class="highlight-text">resourceful</span>
+                                strategist, and
+                                <span class="highlight-text">thoughtful</span>
+                                visual communicator
+                              </p>
+                            </span>
+                            <div class="two-button-container">
+                              <div class="primary-button">
+                                <a href="contact-form.html">Lets Talk</a>
+                              </div>
+                              <div class="secondary-button">
+                                <a href="#projects">See Projects</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+
+                      <section class="editorial">
+                        <p class="quote-text">
+                          "If you make customers unhappy in the physical world, they might each tell six friends. If you make customers unhappy on the internet, they can each tell 6,000."
+                          <br />
+                          <sub class="signature">- Thomas Watson Jnr - Former CEO of IBM.</sub>
+                        </p>
+                      </section>
+
+                      <section class="editorial">
+                        <!-- <div class="form-container"> -->
+                        <div class="form">
+                          <div class="contact-info">
+                            <h2>Let's get in touch</h2>
+                            <p>You can contact me using any of the links below or using the form to send me a message.</p>
+                            <div class="info-card">
+                              <div class="item">
+                                <div class="information">
+                                  <div class="contact-icon mail-icon"></div>
+                                  <div class="col">
+                                    <a class="anchor" title="Reach out to me via email." href="mailto:josephmpercival@gmail.com">Send me a message</a>
+                                  </div>
+                                </div>
+                                <div class="information">
+                                  <div class="contact-icon phone-icon"></div>
+                                  <div class="col">
+                                    <a class="anchor" title="Contact me by telephone." href="tel:07709718757">07709718757</a>
+                                  </div>
+                                </div>
+                                <div class="information">
+                                  <div class="contact-icon web-icon"></div>
+                                  <div class="col">
+                                    <a class="anchor" title="Reach out to me through my website." href="/index.html">Visit my portfolio</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="item">
+                                <div class="social-media">
+                                  <h3 class="subtitle">Connect with me :</h3>
+                                  <p>Join me on Linked In !</p>
+                                  <a href="https://www.linkedin.com/in/joseph-percival/" class="contact-icon linkedIn" title="Clicking this link will open my Linked In account in a new window."></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="contact-form">
+                            <span class="circle one"></span>
+                            <span class="circle two"></span>
+
+                            <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
+                              <input type="hidden" name="_next" value="/thank-you.html" />
+                              <input type="hidden" name="_subject" value="New Email From Portfolio" />
+
+                              <h2 class="title">Contact Me</h2>
+                              <p class="white-text">Please complete fields marked with *. These are mandatory for the form to send.</p>
+
+                              <p class="white-text">
+                                Feel free to send me a message, I typically respond within
+                                <em>2 hours</em>
+                                .
+                              </p>
+                              <div class="input-container" title="Please enter your full name here *">
+                                <!-- customers name section  -->
+                                <input type="text" name="name" id="name" class="input" autocomplete="name" spellcheck="false" required />
+                                <label for="name">Name *</label>
+                              </div>
+
+                              <div class="input-container" title="Please enter your Email here *">
+                                <input type="email" id="email" class="input" name="_replyto" autocomplete="email" autofocus spellcheck="false" required />
+                                <label for="email">Email *</label>
+                              </div>
+
+                              <div class="input-container" title="Please enter Your telephone number here (Optional)">
+                                <input type="tel" name="phone" id="phone" class="input" autocomplete="tel" autofocus spellcheck="false" />
+                                <label for="phone">Telephone</label>
+                              </div>
+
+                              <div class="input-container textarea" title="Please type your brief message here. *">
+                                <textarea name="message" id="message" class="input" required autofocus spellcheck="true"></textarea>
+                                <label for="message">Message *</label>
+                              </div>
+
+                              <input type="submit" value="Send" class="submit-btn" title="Click this button to send your message, after you have check all other fields. Please allow 2 hours for my reply." />
+                            </form>
+                          </div>
+                        </div>
+                        <!-- </div> -->
+                      </section>
+                    </div>
+                    <div class="bttt-btn" id="scrollButton" title="Click this button to return to the top of the page.">
+                      <a href="#top" aria-label="Scroll to top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                          <path d="M8 15.5V1M8 1L1 7.5M8 1L15 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </main>
+
+                  <footer id="footer" class="footer">
+                    <div class="footer-container">
+                      <div class="footer-social-icon">
+                        <a href="/index.html" title="Click this link to see return to the Home page." aria-label="Home">
+                          <span class="Home-icon"></span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/joseph-percival" title="Click this link to view my Linked In my account." aria-label="Linked In button link">
+                          <span class="linkedIn-icon"></span>
+                        </a>
+                        <a href="https://github.com/JPercival22" title="Click this link to view my Git Hub account." aria-label="Git hub button link">
+                          <span class="gitHub-icon"></span>
+                        </a>
+
+                        <a href="assets/documents/CV2023.pdf" title="Click this link to view my CV (PDF)">
+                          <span class="cv-icon"></span>
+                        </a>
+                      </div>
+                      <div class="copy-panel">
+                        <p>&copy; 2025 Site by Joseph M Percival</p>
+                      </div>
+                    </div>
+                  </footer>
+
+                  <!-- Defer main.js script to ensure it's loaded after HTML parsing -->
+                  <script type="module" src="js/main.js"></script>
+
+                  <!-- Defer lazySizes library script -->
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+                </body>
+              </html>
             </p>
           </div>
         </section>
-
-        <section class="editorial">
-          <!-- <div class="form-container"> -->
-          <div class="form">
-            <div class="contact-info">
-              <h2>Let's get in touch</h2>
-              <p>You can contact me using any of the links below or using the form to send me a message.</p>
-              <div class="info-card">
-                <div class="item">
-                  <div class="information">
-                    <div class="contact-icon mail-icon"></div>
-                    <div class="col">
-                      <a class="anchor" title="Reach out to me via email." href="mailto:josephmpercival@gmail.com">Send me a message</a>
-                    </div>
-                  </div>
-                  <div class="information">
-                    <div class="contact-icon phone-icon"></div>
-                    <div class="col">
-                      <a class="anchor" title="Contact me by telephone." href="tel:07709718757">07709718757</a>
-                    </div>
-                  </div>
-                  <div class="information">
-                    <div class="contact-icon web-icon"></div>
-                    <div class="col">
-                      <a class="anchor" title="Reach out to me through my website." href="/index.html">Visit my portfolio</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="social-media">
-                    <h3 class="subtitle">Connect with me :</h3>
-                    <p>Join me on Linked In !</p>
-                    <a href="https://www.linkedin.com/in/joseph-percival/" class="contact-icon linkedIn" title="Clicking this link will open my Linked In account in a new window."></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-form">
-              <span class="circle one"></span>
-              <span class="circle two"></span>
-
-              <form action="https://formsubmit.co/joseph.m.percival@gmail.com" method="POST">
-                <input type="hidden" name="_next" value="/thank-you.html" />
-                <input type="hidden" name="_subject" value="New Email From Portfolio" />
-
-                <h2 class="title">Contact Me</h2>
-                <p class="white-text">Please complete fields marked with *. These are mandatory for the form to send.</p>
-
-                <p class="white-text">
-                  Feel free to send me a message, I typically respond within
-                  <em>2 hours</em>
-                  .
-                </p>
-                <div class="input-container" title="Please enter your full name here *">
-                  <!-- customers name section  -->
-                  <input type="text" name="name" id="name" class="input" autocomplete="name" spellcheck="false" required />
-                  <label for="name">Name *</label>
-                </div>
-
-                <div class="input-container" title="Please enter your Email here *">
-                  <input type="email" id="email" class="input" name="_replyto" autocomplete="email" autofocus spellcheck="false" required />
-                  <label for="email">Email *</label>
-                </div>
-
-                <div class="input-container" title="Please enter Your telephone number here (Optional)">
-                  <input type="tel" name="phone" id="phone" class="input" autocomplete="tel" autofocus spellcheck="false" />
-                  <label for="phone">Telephone</label>
-                </div>
-
-                <div class="input-container textarea" title="Please type your brief message here. *">
-                  <textarea name="message" id="message" class="input" required autofocus spellcheck="true"></textarea>
-                  <label for="message">Message *</label>
-                </div>
-
-                <input type="submit" value="Send" class="submit-btn" title="Click this button to send your message, after you have check all other fields. Please allow 2 hours for my reply." />
-              </form>
-            </div>
-          </div>
-          <!-- </div> -->
-        </section>
-      </div>
-      <div class="bttt-btn" id="scrollButton" title="Click this button to return to the top of the page.">
-        <a href="#top" aria-label="Scroll to top">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-            <path d="M8 15.5V1M8 1L1 7.5M8 1L15 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </a>
       </div>
     </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-container">
-        <div class="footer-social-icon">
-          <a href="/index.html" title="Click this link to see return to the Home page." aria-label="Home">
-            <span class="Home-icon"></span>
-          </a>
-
-          <a href="https://www.linkedin.com/in/joseph-percival" title="Click this link to view my Linked In my account." aria-label="Linked In button link">
-            <span class="linkedIn-icon"></span>
-          </a>
-          <a href="https://github.com/JPercival22" title="Click this link to view my Git Hub account." aria-label="Git hub button link">
-            <span class="gitHub-icon"></span>
-          </a>
-
-          <a href="assets/documents/CV2023.pdf" title="Click this link to view my CV (PDF)">
-            <span class="cv-icon"></span>
-          </a>
-        </div>
-        <div class="copy-panel">
-          <p>&copy; 2025 Site by Joseph M Percival</p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Defer main.js script to ensure it's loaded after HTML parsing -->
-    <script type="module" src="js/main.js"></script>
-
-    <!-- Defer lazySizes library script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
   </body>
 </html>

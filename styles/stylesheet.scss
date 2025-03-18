@@ -47,7 +47,7 @@ $brad-8: 8px;
   }
 }
 // grid 1 col 0 rows
-$grid-1col: (
+$grid-1col-auto: (
   display: grid,
   grid-template-columns: 1fr,
   grid-gap: 1em,
@@ -266,7 +266,8 @@ p {
   letter-spacing: 0.55pt;
   margin: 0;
   .highlight-text {
-    color: #0a6cc2;
+    color: #4e5deb;
+    font-weight: 400;
   }
 }
 
@@ -522,29 +523,16 @@ img {
   @include apply-flex-styles($flex-col-center);
   gap: 1em;
   .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    width: 100%;
+    @include apply-flex-styles($flex-col-center);
+    height: 90vh;
     .primary-banner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #fff;
-      height: 100%;
+      @include apply-flex-styles($flex-col-center);
+      @include background-image-style_cover;
+      width: 100vw;
       background-image: url(../assets/images/hero-images/index/UIUX-banner.webp);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
     }
     .hero-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include apply-flex-styles($flex-col-center);
       padding: 10px;
       background-color: #fff;
       border-radius: 25px;
@@ -552,15 +540,32 @@ img {
       width: 80%;
       box-shadow: $b-shadow;
       .profile-image {
+        @include background-image-style_contain;
         width: 150px;
         height: 150px;
         background-image: url(../assets/images/hero-images/index/me-min.webp);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
         background-color: #fdfdee;
         border-radius: 100%;
       }
+      h1 {
+        font-size: 2.5rem; /* Make it more prominent */
+        font-weight: 500;
+        color: $color-brand;
+        margin-bottom: 0.5rem;
+      }
+      .expanded-headline {
+        font-size: 1.2rem;
+        .highlight-text {
+          color: #4e5deb;
+        }
+      }
+      .description {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto 1.5rem;
+      }
+
       .two-button-container {
         width: 100%;
         margin: 0;
@@ -591,7 +596,7 @@ img {
     @include apply-flex-styles($flex-col-center-start);
     background-color: $color_white;
     padding: 10px;
-    border-radius: 8px;
+    width: 90%;
     &.purple-fill {
       background-color: #38389c;
     }
@@ -1275,486 +1280,17 @@ textarea.input {
   @include apply-flex-styles($flex-col-center);
   gap: 1em;
 }
-.italic {
-  font-style: italic;
-}
-// case-study styles
 
-/* Contents button (only visible when sidebar is closed) */
-
-.contents {
-  position: fixed;
-  top: 90px;
-  left: 10px;
-  display: flex;
-  align-items: center;
-  z-index: 1;
-  &.hidden {
-    display: none;
-  }
-  .open-sidebar-btn {
-    background-color: $color_brand;
-    display: flex;
-    border: none;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    box-shadow: $b-shadow;
-    .chevron {
-      background-image: url('../assets/images/controls/chevron.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 30px;
-      height: 30px;
-    }
-  }
-  .tooltip {
-    background-color: $color_white;
-    padding: 6px;
-    margin-left: 6px;
-    border-radius: 0 8px 8px 0;
-    box-shadow: $b-shadow;
-  }
-}
-
-/* Hide sidebar by default */
-.mobile-sidebar {
-  position: fixed;
-  top: 80px;
-  left: -100%;
-  width: 100vw;
-  height: 100vh;
-  background: $color_white;
-  transition: left 0.3s ease-in-out;
-  &.sidebar-open {
-    left: 0;
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    .title {
-      margin: unset;
-    }
-    .close-btn {
-      background-color: $color_brand;
-      display: flex;
-      align-items: center;
-      border: none;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      box-shadow: $b-shadow;
-      .chevron {
-        background-image: url('../assets/images/controls/chevron.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 30px;
-        height: 30px;
-        transform: rotate(180deg);
-      }
-    }
-  }
-  .side-bar-list {
-    margin: 0;
-    overflow-y: auto;
-    .side-bar-list-item {
-      width: 90%;
-      margin: 0 auto;
-      a {
-        display: flex;
-        align-items: center;
-        .side-bar-icon {
-          width: 40px;
-          height: 40px;
-          &.introduction-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Intro-Icon-min.svg');
-          }
-          &.research-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
-          }
-          &.IA-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/IA-Icon-min.svg');
-          }
-          &.ID-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Inter-Design-Icon-min.svg');
-          }
-          &.Lo-Fi-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Lo-Fi-Icon-min.svg');
-          }
-          &.DesSystem-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Des-System-Icon-min.svg');
-          }
-          &.Hi-Fi-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/HiFi-Icon-min.svg');
-          }
-          &.UXTesting-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/UXTest-icon-min.svg');
-          }
-          &.Results-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
-          }
-          &.Conc-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Conclusion-Icon-min.svg');
-          }
-          &.Info-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Info-Icon-min.svg');
-          }
-        }
-      }
-    }
-  }
-}
-
-.sm-accordion {
-  width: 100%;
-  margin: 1em 0;
-  max-width: 92vw;
-  .accordion-item {
-    cursor: pointer;
-    width: -webkit-fill-available;
-    border-bottom: $color_border-settings-blue;
-    &:last-child {
-      border: none;
-    }
-
-    .accordion-header {
-      @include apply-flex-styles($flex-row-center-space_between);
-      width: inherit;
-      background-color: $card-header-text;
-      padding: 10px;
-      cursor: pointer;
-
-      h4 {
-        margin: 0;
-        color: $color_white;
-        font-weight: 400;
-        letter-spacing: 1pt;
-      }
-
-      .accordion-toggle {
-        @include apply-flex-styles($flex-col-center);
-        width: unset;
-
-        .chev {
-          display: inherit;
-          width: 12px;
-          height: 12px;
-          background-image: url(../assets/images/controls/chevron.svg);
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          transform: rotate(90deg);
-          transition: transform 0.3s ease-in-out;
-        }
-      }
-    }
-    .accordion-content {
-      border: $color_border-settings-blue;
-      .carousel-editorial {
-        background-color: $color_white;
-        width: -webkit-fill-available;
-        padding: 10px;
-      }
-      .carousel-container {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: auto;
-        margin: auto;
-        padding-bottom: 1em;
-        .carousel-track {
-          display: flex;
-          transition: transform 0.5s ease-in-out;
-          transform: translateX(0%);
-          .carousel-slide {
-            width: 100%;
-            height: auto;
-            background-size: contain;
-            figure {
-              @include apply-flex-styles($flex-col-center);
-              width: 100%;
-              height: -webkit-fill-available;
-              margin: 0 auto;
-              img {
-                width: -webkit-fill-available;
-                height: auto;
-                border: none;
-              }
-              figcaption {
-                display: flex;
-              }
-            }
-          }
-        }
-        .carousel-buttons {
-          width: -webkit-fill-available;
-          @include apply-flex-styles($flex-row-center-space_between);
-          .controls {
-            @include apply-flex-styles($flex-col-center);
-            border: 1px solid $color_brand;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            transition: all 0.3s ease-in-out;
-            background-color: $color_white;
-            box-shadow: $b-shadow;
-            color: $color_brand;
-            cursor: pointer;
-            .move-left {
-              background-image: url(../assets/images/controls/left_chev.svg);
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: contain;
-              width: 20px;
-              height: 20px;
-              color: $color-brand;
-              transform: rotate(181deg);
-            }
-            .move-right {
-              background-image: url(../assets/images/controls/left_chev.svg);
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: contain;
-              width: 20px;
-              height: 20px;
-              color: $color-brand;
-            }
-            &:hover {
-              background-color: lightblue;
-              color: $color_white;
-              box-shadow: $b-shadow;
-            }
-          }
-        }
-        .pagination {
-          display: grid;
-          grid-template-columns: repeat(3, 40px);
-          grid-template-rows: repeat(2, 12px);
-          gap: 10px;
-          .dot {
-            width: 10px;
-            height: 10px;
-            margin: 0 10px;
-            background-color: lightblue;
-            border: 1px solid $color_brand;
-            border-radius: 50%;
-            cursor: pointer;
-          }
-          .active {
-            background-color: $color_brand;
-          }
-        }
-      }
-    }
-    .accordion-header:has(+ .accordion-content.open) .accordion-toggle .chev {
-      transform: rotate(270deg);
-    }
-    &.active .accordion-header .accordion-toggle .chev {
-      transform: rotate(270deg);
-    }
-
-    .accordion-content {
-      display: none; // Default: hidden
-
-      .gallery {
-        margin: 0;
-        figcaption {
-          padding-left: 10px;
-        }
-      }
-
-      .paragraphs {
-        display: block;
-      }
-    }
-
-    // Show content when active
-    &.active .accordion-content {
-      display: block;
-    }
-  }
-}
-
-.bullet-list-row {
-  display: none;
-  li {
-    .bullet-list-col {
-      display: none;
-    }
-  }
-}
-.bullet-list-col {
-  li {
-    display: none;
-  }
-}
-.research-list {
-  @include apply-flex-styles($flex-col-start-start);
-  gap: 10px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  li {
-    @include apply-flex-styles($flex-row-center-start);
-    gap: 10px;
-    .logo-sm {
-      width: 40px;
-      height: auto;
-    }
-    a {
-      font-weight: 500;
-      text-decoration: underline;
-      color: $color_brand;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-}
-.two-button-container {
-  @include apply-flex-styles($flex-col-center);
-  width: -webkit-fill-available;
-  margin-top: 1em;
-}
-
-.centered-row {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  .flex-row,
-  .no-border {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    border: none;
-    .right-col .no-border .col {
-      .tertiary-link {
-        text-decoration: underline;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
-@mixin apply-grid-styles($grid-styles) {
-  @each $property, $value in $grid-styles {
-    #{$property}: $value;
-  }
-}
-// grid 1 col 0 rows
-$grid-1-col: (
-  display: grid,
-  grid-template-columns: 1fr,
-  grid-gap: 1em,
-  margin-top: 1em,
-);
 .grid-container-1col,
 .grid-container-2col,
 .grid-container-3col,
 .grid-container-4col,
 .grid-container-5col,
 .grid-container-6col {
-  @include apply-grid-styles($grid-1-col);
+  @include apply-grid-styles($grid-1col-auto);
   .item {
     @include apply-flex-styles($flex-col-start-start);
     gap: 1em;
-  }
-  .marketing-banner {
-    background-image: url(../assets/images/Case-Studies/CS1/banners/marketing-table.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: -webkit-fill-available;
-    height: 200px;
-  }
-  .image-container {
-    .gallery {
-      margin: 0;
-    }
-  }
-  ol {
-    padding-left: 20px;
-  }
-  .prototype-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1em;
-    a {
-      color: $color_primary_text;
-      text-decoration: underline;
-      transition: all ease-in-out 0.5s;
-      .border {
-        border-radius: 20px;
-      }
-    }
-  }
-  .editorial-sm {
-    @include apply-flex-styles($flex-col-center-start);
-    width: 100%;
-    .content {
-      @include apply-flex-styles($flex-col-center-start);
-      width: 100%;
-      ul {
-        list-style-type: none;
-        @include apply-flex-styles($flex-col-center-start);
-        margin: 0;
-      }
-    }
-  }
-}
-
-.editorial .grid-container-3col .achievement .banner-img {
-  width: 60%;
-  height: auto;
-}
-
-.tab-container.hide-sm {
-  display: none;
-}
-.tabular-view {
-  margin-top: 1em;
-}
-.tab-container {
-  display: flex;
-  flex-direction: column;
-  .tab-buttons {
-    display: flex;
-    background-color: #eff8ff;
-    border-radius: 8px 8px 0 0;
-    gap: 1.5px;
-    .tab-button {
-      cursor: pointer;
-      padding: 10px;
-      transition: all 0.3s ease-in-out;
-      font-family: $font-family;
-      font-size: 16px;
-      font-weight: 500;
-      border: none;
-      // border-bottom: 2px solid gainsboro;
-      border-radius: inherit;
-      color: $color_primary_text;
-      background-color: #daefff;
-      &.active {
-        font-weight: 600;
-        background-color: #c1f2f8;
-        box-shadow: 0px 0px 0px 0.5px #3fa8eebf;
-      }
-    }
-  }
-  .tab-contents {
-    border: $color_border-settings-blue;
-    border-radius: 0 0 8px 8px;
-    padding: 0 8px;
-    .tab-module {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      width: inherit;
-    }
   }
 }
 
@@ -1790,10 +1326,6 @@ $grid-1-col: (
       transform: translateY(-5px);
     }
   }
-}
-
-.hide-sm {
-  display: none;
 }
 
 // footer styles
@@ -1936,49 +1468,6 @@ $grid-1-col: (
     margin-top: 1em;
   }
 
-  @mixin apply-grid-styles($grid-styles) {
-    @each $property, $value in $grid-styles {
-      #{$property}: $value;
-    }
-  }
-
-  $grid-1col: (
-    display: grid,
-    grid-template-columns: 1fr,
-    grid-gap: 1em,
-    margin-top: 1em,
-  );
-  $grid-2col: (
-    display: grid,
-    grid-template-columns: repeat(2, 1fr),
-    grid-template-rows: auto,
-    grid-gap: 1em,
-  );
-  $grid-3col: (
-    display: grid,
-    grid-template-columns: repeat(3, 1fr),
-    grid-template-rows: auto,
-    gap: 1em,
-  );
-  $grid-4col: (
-    display: grid,
-    grid-template-columns: repeat(4, 1fr),
-    grid-template-rows: auto,
-    grid-gap: 1em,
-  );
-  $grid-5col: (
-    display: grid,
-    grid-template-columns: repeat(5, 1fr),
-    grid-template-rows: auto,
-    grid-gap: 1em,
-  );
-  $grid-6col: (
-    display: grid,
-    grid-template-columns: repeat(6, 1fr),
-    grid-template-rows: auto,
-    grid-gap: 1em,
-  );
-
   .hero {
     .primary-banner {
       background-image: url(../assets/images/hero-images/index/UIUX-banner.webp);
@@ -1989,338 +1478,48 @@ $grid-1-col: (
       .hero-content {
         @include apply-flex-styles($flex-col-start-center);
         width: 50%;
+        .two-button-container {
+          flex-direction: row;
+        }
       }
     }
   }
 
-  .editorial {
-    width: 95%;
-    margin: 0 auto;
-    .grid-container-3col {
-      @include apply-grid-styles($grid-3col);
-      .card {
-        justify-content: flex-start;
-        .image-container {
-          width: -webbkit-fill-available;
-          height: 230px;
-          &.syn-banner {
-            background-size: cover;
-            min-height: unset;
-          }
-        }
-        h2 {
-          font-size: 1.06rem;
-        }
-      }
-    }
-    .career-history-banner {
-      background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      max-height: 200px;
-      width: 100%;
-    }
-  }
+  .page-wrapper {
+    .editorial {
+      width: 95%;
 
-  .flex-row {
-    &.space-between {
-      .col {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+      .career-history-banner {
+        background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        max-height: 200px;
         width: 100%;
-        gap: 1em;
-        .left-align {
-          display: inherit;
-          justify-content: flex-start;
-          align-items: center;
-          width: 40%;
-          .m-0 {
-            margin: 0;
-          }
-          .tertiary-link svg {
-            width: 45px;
-          }
-        }
-        .right-align {
-          display: inherit;
-          justify-content: flex-end;
-          width: 46%;
-          .primary-button {
-            width: 25%;
-            &.m-0 {
-              margin: 0;
-            }
-          }
-        }
       }
-    }
-    &.no-border {
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 3em;
-      .left-col {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        .col {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 1em;
-          width: -webkit-fill-available;
-        }
-      }
-      .width_50 {
-        width: 50%;
-      }
-    }
-  }
+      .page-wrapper {
+        .editorial {
+          width: 95%;
 
-  .button-container {
-    @include apply-flex-styles($flex-row-center-start);
-    gap: 1em;
-  }
-
-  // index
-
-  .process-banner {
-    background: url(../assets/images/hero-images/index/process-banner_lg.svg) center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 100%;
-  }
-
-  .editorial {
-    .wide-card {
-      padding: 1em;
-      gap: 1em;
-      .card-header .inline-decorated-list {
-        flex-direction: row;
-        justify-content: space-between;
-        li {
-          border-right: 1px solid gainsboro;
-          padding-left: 10px;
-          padding-right: 10px;
-          .emphasis {
-            line-height: 22px;
-          }
-          &:first-child {
-            border-left: 1px solid gainsboro;
+          .career-history-banner {
+            background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            max-height: 200px;
+            width: 100%;
           }
         }
-      }
-      .card-body {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 1em;
-        .card-editorial {
-          align-items: flex-start;
-          justify-content: center;
-          flex: 70%;
-        }
-        .image-container {
-          flex: 30%;
-          &.come-together-banner,
-          &.syn-banner,
-          &.just-speak-banner {
-            height: 210px;
-          }
-        }
-      }
-      .button-row {
-        display: flex;
-        width: 50%;
-        .large {
-          width: 140px;
-          height: 26px;
+        .grid-container-2col {
+          @include apply-grid-styles($grid-2col-auto);
         }
       }
     }
   }
-  // about me styles
-  .editorial .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  /* contact page styles  */
 
   /* thankyou styles  */
   .thank-you-container {
     width: 40%;
     padding: 2em;
     margin-bottom: 2em;
-  }
-
-  // .col-2 {
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: space-evenly;
-  //   align-items: flex-start;
-  //   width: 100%;
-  //   gap: 3em;
-  //   .left-col {
-  //     display: flex;
-  //     flex-direction: column;
-  //     width: 50%;
-  //   }
-  //   .right-col {
-  //     display: flex;
-  //     flex-direction: column;
-  //     width: 50%;
-  //   }
-  // }
-  // .flex-row-container {
-  //   display: flex;
-  //   flex-direction: row;
-  //   flex-wrap: wrap;
-  // }
-  // .flex-col-container {
-  //   display: flex;
-  //   flex-direction: column;
-  //   margin-bottom: 1em;
-  // }
-
-  // .grid-container-2col {
-  //   @include apply-grid-styles($grid-2col-auto);
-  //   .prototype-container {
-  //     @include apply-flex-styles($flex-col-center-start);
-  //   }
-  // }
-  // .grid-container-3col {
-  //   @include apply-grid-styles($grid-3col-auto);
-  //   .prototype-container {
-  //     @include apply-flex-styles($flex-col-center-start);
-  //   }
-  // }
-  // .grid-container-4col {
-  //   @include apply-grid-styles($grid-4col-auto);
-  //   .gallery {
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: space-evenly;
-  //     align-items: flex-start;
-  //     margin: 0;
-  //     border: 1px solid lightgray;
-  //     border-radius: 6px;
-  //   }
-  //   &.start_even {
-  //     display: flex;
-  //     align-items: start;
-  //     justify-content: space-evenly;
-  //   }
-  // }
-  // .grid-container-5col {
-  //   @include apply-grid-styles($grid-5col-auto);
-  // }
-  // .grid-container-6col {
-  //   @include apply-grid-styles($grid-6col-auto);
-  //   align-items: start;
-  //   justify-content: space-evenly;
-  // }
-
-  .achievements-section .editorial .flex-row {
-    flex-direction: row;
-  }
-
-  .achievements-section .editorial .flex-row .col .left-align,
-  .achievements-section .editorial .flex-row .col .right-align {
-    width: 100%;
-  }
-
-  .achievements-section .editorial .flex-row .col .right-align .primary-button {
-    width: 40%;
-    margin: 0;
-  }
-
-  .achievements-section .editorial .grid-container-3col {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 1em;
-  }
-  .achievements-section .editorial .grid-container-3col .achievement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1em;
-  }
-
-  .lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #00000075;
-    z-index: 9999;
-    cursor: zoom-out;
-    .lightbox-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      @include apply-flex-styles($flex-col-center-start);
-      background-color: #fff;
-      padding: 1em;
-      border-radius: $brad-8;
-      width: 90%;
-      cursor: context-menu;
-
-      &.w-40 {
-        max-width: 40%;
-      }
-      &.w-50 {
-        max-width: 50%;
-      }
-      &.w-90 {
-        max-width: 90%;
-      }
-      img {
-        background-color: $color_white;
-        border: $color_border-settings-grey;
-        align-self: center;
-        &.no-border {
-          border: none;
-        }
-      }
-      p {
-        font-size: 12px;
-        line-height: 11px;
-        margin: 0;
-        margin-top: 10px;
-      }
-      .header {
-        width: 100%;
-        @include apply-flex-styles($flex-row-center-space_between);
-        margin-bottom: 10px;
-        h4 {
-          font-size: 16px;
-          margin: 0;
-          display: inherit;
-          flex: 0 0 75%;
-        }
-        .close-btn {
-          flex: 1;
-          background-color: $color_white;
-          color: $color_primary_text;
-          border: none;
-          font-size: 30px;
-          text-align: right;
-          cursor: pointer;
-          transition: all 0.5s ease-in-out;
-          &:hover {
-            background-color: gainsboro;
-          }
-        }
-      }
-    }
-  }
-  .grid-container-1col .marketing-banner {
-    height: 300px;
-    aspect-ratio: 2/1;
   }
 }
 
@@ -2416,29 +1615,47 @@ $grid-1-col: (
   .accordion-toggle {
     display: none;
   }
-  .page-wrapper .editorial .quote-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 1em;
-  }
 
-  .editorial .grid-container-3col {
-    justify-items: center;
-    .card {
-      max-width: 234px;
-      .white-text {
+  .page-wrapper {
+    .hero .primary-banner {
+      align-items: flex-start;
+
+      .hero-content {
+        margin: 1em;
+        width: 40%;
+        gap: 0;
+      }
+    }
+    .editorial .quote-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1em;
+    }
+
+    .editorial {
+      .grid-container-3col {
+        @include apply-grid-styles($grid-3col-auto);
         width: 100%;
-        .image-container {
-          &.syn-banner {
-            width: 234px;
+        gap: 2em;
+        margin-bottom: 1em;
+        .card .white-text {
+          width: 100%;
+          .image-container {
+            &.syn-banner {
+              width: 234px;
+            }
           }
         }
       }
     }
+    .grid-container-2col {
+      @include apply-grid-styles($grid-2col-auto);
+      width: 100%;
+      gap: 2em;
+    }
   }
-
   .flex-row.space-between .col .right-align .primary-button,
   .flex-row.space-between .col .right-align .secondary-button {
     width: auto;
@@ -2500,9 +1717,6 @@ $grid-1-col: (
   /* index page styles  */
   .hero .primary-banner .hero-content {
     width: 33.33%;
-    .two-button-container {
-      flex-direction: row;
-    }
   }
 
   .editorial .grid-container-3col .card {
@@ -2748,7 +1962,6 @@ $grid-1-col: (
       .hero-content {
         width: 23%;
         margin-left: 5em;
-        box-shadow: $b-shadow;
       }
     }
     .editorial {
