@@ -376,8 +376,10 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  margin-left: 1em;
   padding: 10px;
+  background-color: #fff;
+  border-radius: 25px;
   gap: 1em;
 }
 .hero .hero-content .profile-image {
@@ -1786,9 +1788,6 @@ textarea.input {
 }
 
 @media only screen and (min-width: 425px) {
-  .home-link {
-    padding-left: 20px;
-  }
   .editorial .hero-content .image-container {
     background-color: #fec6c7;
   }
@@ -1857,93 +1856,23 @@ textarea.input {
     display: flex;
     margin-top: 1em;
   }
-  .tab-container .tab-contents .tab-module .list-column {
+  .hero .primary-banner {
+    background-image: url(../assets/images/hero-images/index/UIUX-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: flex-start;
+  }
+  .hero .primary-banner .hero-content {
     display: flex;
     flex-direction: column;
-    gap: 1em;
-    margin-top: 1em;
-  }
-  section {
-    margin: 0 auto;
-  }
-  .editorial .hero-content .hero-buttons-container {
-    width: -webkit-fill-available;
-    margin-top: 1em;
-  }
-  .editorial .hero-content .hero-buttons-container .col {
-    display: flex;
-    justify-content: space-between;
-  }
-  .editorial .hero-content .hero-buttons-container .col .hero-buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1em;
-    width: 50%;
-  }
-  .editorial .hero-content .hero-buttons-container .col .hero-buttons .tertiary-link {
-    justify-content: flex-start;
-  }
-  .editorial .hero-content .primary-button-container {
-    display: flex;
-    width: 33%;
-  }
-  .editorial .hero-content .bullet-list-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .editorial .hero-content .image-container {
-    border-radius: 0 0 8px 8px;
-  }
-  .editorial .hero-content .image-container .primary-banner {
-    width: 100%;
-  }
-  .editorial .hero-content .hero-buttons-container {
-    width: -webkit-fill-available;
-    margin-top: 1em;
-  }
-  .editorial .hero-content .hero-buttons-container .col {
-    display: flex;
-    justify-content: space-between;
-  }
-  .editorial .hero-content .hero-buttons-container .col .hero-buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1em;
-    width: 50%;
-  }
-  .editorial .hero-content .hero-buttons-container .col .hero-buttons .tertiary-link {
-    justify-content: flex-start;
-  }
-  .editorial .hero-content .bullet-list-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .editorial .hero-content .image-container {
-    border-radius: 0 0 8px 8px;
-  }
-  .editorial .hero-content .image-container .primary-banner {
-    width: 100%;
-  }
-  .editorial .grid-container-2col {
-    margin-top: 2em;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 1em;
-  }
-  .editorial .grid-container-2col .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    width: 50%;
+  }
+  .editorial {
+    width: 95%;
+    margin: 0 auto;
   }
   .editorial .grid-container-3col {
     display: grid;
@@ -1951,134 +1880,19 @@ textarea.input {
     grid-template-rows: auto;
     gap: 1em;
   }
-  .editorial .grid-container-3col .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .editorial .grid-container-3col .card {
+    justify-content: flex-start;
   }
-  .editorial .grid-container-4col {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 1em;
+  .editorial .grid-container-3col .card .image-container {
+    width: -webbkit-fill-available;
+    height: 230px;
   }
-  .editorial .grid-container-4col .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .editorial .grid-container-3col .card .image-container.syn-banner {
+    background-size: cover;
+    min-height: unset;
   }
-  .editorial .grid-container-5col {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 1em;
-  }
-  .editorial .grid-container-6col {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 1em;
-  }
-  .editorial .split-header {
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-  }
-  .editorial .split-header .left-align {
-    width: 50%;
-    display: inline-flex;
-  }
-  .editorial .split-header .right-align {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: row;
-  }
-  .editorial .split-header .right-align .primary-button {
-    margin-bottom: 0;
-  }
-  .editorial .split-header .title-col {
-    width: 60%;
-    margin-right: 10px;
-  }
-  .editorial .split-header .header-banner {
-    background-position: right;
-    height: 150px;
-  }
-  .editorial .split-header .header-banner.carousel-banner-1 {
-    background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Foundation/foundation-image.svg);
-    width: 150px;
-    height: 150px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    margin-bottom: 1em;
-  }
-  .editorial .split-header .header-banner.carousel-banner-2 {
-    background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Components/Components-image.svg);
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    border-radius: 8px;
-  }
-  .editorial .split-header .header-banner.carousel-banner-3 {
-    background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Content/Content-Banner-image.svg);
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    border-radius: 8px;
-  }
-  .editorial .split-header .header-banner.carousel-banner-4 {
-    background-image: url(../assets/images/Case-Studies/CS2/Enhanced/Hi-Fi/carousel-slides/Patterns/Patterns-Banner-image.svg);
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    border-radius: 8px;
-  }
-  .editorial .split-header .sus-banner {
-    height: 150px;
-    margin-bottom: 1em;
-    width: 220px;
-  }
-  .editorial .achievement-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 1em;
-  }
-  .editorial .achievement-cards .card .stat {
-    font-size: 1.3rem;
-    font-weight: 500;
-  }
-  .editorial .achievement-cards .card .highlight {
-    font-size: 0.9rem;
-  }
-  .editorial .grid-container-4col {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 1em;
-  }
-  .editorial .grid-container-4col .gallery figcaption {
-    font-size: 0.9rem;
-  }
-  .accordion .accordion-content {
-    max-height: 0;
-    opacity: 0;
-  }
-  /* Show content when hovered on mobile */
-  .accordion:hover .accordion-content {
-    max-height: 1000px; /* Adjust as needed */
-    opacity: 1;
+  .editorial .grid-container-3col .card h2 {
+    font-size: 1.06rem;
   }
   .flex-row.space-between .col {
     display: flex;
@@ -2203,12 +2017,6 @@ textarea.input {
     width: 40%;
     padding: 2em;
     margin-bottom: 2em;
-  }
-  section {
-    margin: 0 auto;
-  }
-  .sidebar-open {
-    width: 40%;
   }
   .achievements-section .editorial .flex-row {
     flex-direction: row;
