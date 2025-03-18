@@ -15,7 +15,8 @@ $card-header-text: #4f73a4;
 $background-color_teal: #4fbdd2;
 $background-color_link: #1b1bac;
 $background-color_bttt: #007bff;
-$primary-btn-hover: #6b8dba;
+$primary-btn-hover: #173661;
+$secondary-btn-hover: #2fb0c9;
 $blue_menuBkg: #30a7bf;
 
 // box shadow
@@ -188,11 +189,9 @@ body {
   color: $color_primary_text;
 }
 
-main {
-  background-color: $color_main-bkg;
-  padding-bottom: 1em;
-  padding-top: 4em;
-}
+// main {
+
+// }
 
 /* Styling for the overlay */
 #loadingOverlay {
@@ -321,11 +320,11 @@ img {
   letter-spacing: 1px;
   text-transform: capitalize;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
   box-shadow: $b-shadow;
   margin-bottom: 1em;
   background-color: $color_brand;
   border-color: $color_brand;
+  transition: all 0.3s ease-in-out;
   &:hover {
     background-color: $primary-btn-hover;
     box-shadow: none;
@@ -342,12 +341,13 @@ img {
   letter-spacing: 1px;
   text-transform: capitalize;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
   box-shadow: $b-shadow;
   margin-bottom: 1em;
   background-color: $background-color_teal;
+
+  transition: all 0.3s ease-in-out;
   &:hover {
-    background-color: color.mix(white, $background-color_teal, 10%);
+    background-color: $secondary-btn-hover;
     box-shadow: none;
   }
 }
@@ -453,17 +453,17 @@ img {
         gap: 3em;
         height: 100vh;
         width: -webkit-fill-available;
-        background-color: $blue_menuBkg;
+        background-color: #f4e3d7;
         margin: 0;
         .navbar-link {
           width: 100%;
           .organic-link {
             @include apply-flex-styles($flex-col-center);
             font-size: 20px;
-            color: $color_white;
+            color: $color_brand;
             &:hover,
             &:focus {
-              background: $color_brand;
+              text-decoration: underline;
             }
           }
 
@@ -476,7 +476,7 @@ img {
               align-items: center;
               justify-content: center;
               font-size: 20px;
-              color: $color_white;
+              color: $color_brand;
             }
             .chevron {
               transition: transform 0.3s ease;
@@ -504,11 +504,13 @@ img {
                 gap: 2em;
                 li {
                   width: 100%;
-                  border-bottom: 1px solid $color_white;
                   transition: background-color 0.5s ease-in-out;
                   a {
                     font-size: 18px;
-                    color: $color_white;
+                    color: $color_brand;
+                    &:hover {
+                      text-decoration: underline;
+                    }
                   }
                 }
               }
@@ -604,6 +606,8 @@ img {
 }
 
 .page-wrapper {
+  padding-bottom: 1em;
+  padding-top: 4em;
   @include apply-flex-styles($flex-col-center);
   gap: 1em;
   .editorial {
@@ -611,7 +615,6 @@ img {
     background-color: $color_white;
     padding: 10px;
     border-radius: 8px;
-    width: 92%;
     &.purple-fill {
       background-color: #38389c;
     }
@@ -643,12 +646,12 @@ img {
   }
 }
 
-// .career-history-banner {
-//   background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
-//   background-size: contain;
-//   height: 1000px;
-//   width: 100%;
-// }
+.career-history-banner {
+  background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
+  background-size: contain;
+  height: 1000px;
+  width: 100%;
+}
 // .process-banner {
 //   background: url(../assets/images/hero-images/index/process-banner_sm.svg) center no-repeat;
 //   background-size: contain;
@@ -682,40 +685,42 @@ img {
     color: $color_white;
   }
   .card {
-    @include apply-flex-styles($flex-col-center);
-    gap: 1em;
-    .card-body {
+    @include apply-flex-styles($flex-col-start-center);
+    .image-container {
       width: 100%;
-      .image-container {
+      height: 300px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.7;
+        filter: grayscale(80%);
+      }
+      &.come-together-banner {
+        background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 300px;
         border: 2px solid $color_white;
         border-radius: $brad-8;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-          opacity: 0.7;
-          filter: grayscale(80%);
-        }
-        &.come-together-banner {
-          background: url(../assets/images/hero-images/index/come-together-banner.webp) no-repeat center;
-          background-size: cover;
-          width: 100%;
-          height: 300px;
-        }
-        &.syn-banner {
-          background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
-          background-size: contain;
-          width: 100%;
-          height: 300px;
-        }
-        &.just-speak-banner {
-          background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
-          background-size: cover;
-          width: 100%;
-          height: 300px;
-        }
       }
-      .white-text {
-        color: $color_white;
+      &.syn-banner {
+        background: url(../assets/images/hero-images/index/syn-banner.webp) no-repeat center;
+        background-size: cover;
+        width: 100%;
+        min-height: 300px;
+        border: 2px solid $color_white;
+        border-radius: $brad-8;
       }
+      &.just-speak-banner {
+        background: url(../assets/images/hero-images/index/guitar-lessons-banner.webp) no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 300px;
+        border: 2px solid $color_white;
+        border-radius: $brad-8;
+      }
+    }
+    .white-text {
+      color: $color_white;
     }
   }
 }
@@ -1776,6 +1781,44 @@ $grid-1-col: (
   }
 }
 
+.bttt-btn {
+  position: fixed;
+  padding: 15px;
+  background-color: $background-color_bttt;
+  color: $color_white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: $b-shadow;
+  transition: opacity 0.5s ease;
+  bottom: 3px;
+  right: 3px;
+  z-index: 999;
+  &:hover {
+    background-color: $background-color_link;
+    box-shadow: none;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s ease;
+    &:hover {
+      stroke: #4fbdd2;
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.hide-sm {
+  display: none;
+}
+
 // footer styles
 .footer {
   background-color: $color_white;
@@ -1845,50 +1888,6 @@ $grid-1-col: (
     }
   }
 }
-.lightbox {
-  display: none;
-}
-.bttt-btn {
-  position: fixed;
-  padding: 15px;
-  background-color: $background-color_bttt;
-  color: $color_white;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: $b-shadow;
-  transition: opacity 0.5s ease;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  &:hover {
-    background-color: $background-color_link;
-    box-shadow: none;
-  }
-  svg {
-    display: block;
-    width: 100%;
-    height: auto;
-    fill: none;
-    stroke: white;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: transform 0.3s ease;
-    &:hover {
-      stroke: #4fbdd2;
-      transform: translateY(-5px);
-    }
-  }
-}
-.hide-sm {
-  display: none;
-}
-.scrolled {
-  opacity: 1;
-  /* Show the button when scrolled */
-}
-
 @media only screen and (min-width: 425px) {
   .home-link {
     padding-left: 20px;
