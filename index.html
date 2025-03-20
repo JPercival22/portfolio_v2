@@ -28,17 +28,20 @@
       <link rel="stylesheet" href="styles/stylesheet.css" />
     </noscript>
 
+    <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner_md.webp" type="image/webp" />
     <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner.webp" type="image/webp" />
     <style>
-      .hero .primary-banner .hero-content .expanded-headline {
-        font-size: 1.2rem;
+      .page-wrapper .hero .primary-banner {
+        background-image: url('./assets/images/hero-images/index/UIUX-banner.webp');
       }
-      .hero .primary-banner .hero-content .expanded-headline .highlight-text {
-        color: #0a6cc2;
+
+      @media only screen and (min-width: 1024px) {
+        .page-wrapper .hero .primary-banner {
+          background-image: url('./assets/images/hero-images/index/UIUX-banner.webp');
+          align-items: flex-start;
+        }
       }
     </style>
-
-    <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner.webp" type="image/webp" />
   </head>
 
   <body>
