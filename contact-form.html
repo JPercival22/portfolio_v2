@@ -31,11 +31,15 @@
     <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner_md.webp" type="image/webp" />
     <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner.webp" type="image/webp" />
     <style>
-      .hero .primary-banner .hero-content .expanded-headline {
-        font-size: 1.2rem;
+      .page-wrapper .hero .primary-banner {
+        background-image: url('./assets/images/hero-images/index/UIUX-banner.webp');
       }
-      .hero .primary-banner .hero-content .expanded-headline .highlight-text {
-        color: #0a6cc2;
+
+      @media only screen and (min-width: 1024px) {
+        .page-wrapper .hero .primary-banner {
+          background-image: url('./assets/images/hero-images/index/UIUX-banner.webp');
+          align-items: flex-start;
+        }
       }
     </style>
   </head>
@@ -107,7 +111,6 @@
                   <span class="highlight-text">always open to new opportunities</span>
                   to create impactful digital experiences.
                 </p>
-                <p>Drop me a message, and let’s build something amazing together.</p>
               </span>
               <div class="two-button-container">
                 <div class="primary-button">
@@ -130,9 +133,13 @@
           <div class="form">
             <div class="contact-info">
               <h2>Let's get in touch</h2>
+              <p>Drop me a message, and let’s build something amazing together.</p>
               <p>You can contact me using any of the links below or using the form to send me a message.</p>
               <div class="info-card">
                 <div class="item">
+                  <div class="header">
+                    <h3>Contact Details</h3>
+                  </div>
                   <div class="information">
                     <div class="contact-icon mail-icon"></div>
                     <div class="col">
@@ -153,10 +160,12 @@
                   </div>
                 </div>
                 <div class="item">
-                  <div class="social-media">
-                    <h3 class="subtitle">Connect with me :</h3>
-                    <p>Join me on Linked In !</p>
-                    <a href="https://www.linkedin.com/in/joseph-percival/" class="contact-icon linkedIn" title="Clicking this link will open my Linked In account in a new window."></a>
+                  <div class="header">
+                    <h3>Connect With Me</h3>
+                  </div>
+                  <p>Join me on Linked In !</p>
+                  <div class="information">
+                    <a class="anchor contact-icon linkedIn-icon" title="Reach out to me through my website." href="https://www.linkedin.com/in/joseph-percival/"></a>
                   </div>
                 </div>
               </div>
@@ -171,12 +180,16 @@
                 <input type="hidden" name="_subject" value="New Email From Portfolio" />
 
                 <h2 class="title">Contact Me</h2>
-                <p class="white-text">Please complete fields marked with *. These are mandatory for the form to send.</p>
-
-                <p class="white-text">
-                  Feel free to send me a message, I typically respond within
-                  <em>2 hours</em>
+                <p>
+                  Feel free to send me a message, I typically responds within
+                  <span class="emphasis"><i>2 hours</i></span>
                   .
+                </p>
+                <br />
+                <p>
+                  Please complete fields marked with a
+                  <span class="emphasis">*</span>
+                  . These are mandatory for the form to send.
                 </p>
                 <div class="input-container" title="Please enter your full name here *">
                   <!-- customers name section  -->
