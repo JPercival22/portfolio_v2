@@ -525,11 +525,12 @@ img {
   .hero {
     @include apply-flex-styles($flex-col-center);
     height: 90vh;
+    width: 100%;
     .primary-banner {
       @include apply-flex-styles($flex-col-center);
       @include background-image-style_cover;
-      width: 100vw;
-      background-image: url(../assets/images/hero-images/index/UIUX-banner.webp);
+      background-image: url(../assets/images/hero-images/index/UIUX-banner_md.webp);
+      width: 100%;
     }
     .hero-content {
       @include apply-flex-styles($flex-col-center);
@@ -1166,27 +1167,6 @@ textarea.input {
   }
 }
 
-@media (max-width: 768px) {
-  .contact-info .info-card {
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 10px; /* Optional spacing */
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    .item {
-      padding: 20px;
-      background-color: #fff5d8; /* Example background */
-      color: #0e2836; /* WCAG-compliant text */
-      border-radius: 8px;
-      .social-media {
-        gap: 10px;
-      }
-    }
-  }
-}
-
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
@@ -1397,47 +1377,6 @@ textarea.input {
     }
   }
 }
-@media only screen and (min-width: 425px) {
-  .editorial .hero-content .image-container {
-    background-color: #fec6c7;
-    .primary-banner {
-      width: 250px;
-    }
-  }
-
-  .editorial .split-header .sus-banner {
-    height: 39vh;
-    margin-bottom: 0;
-  }
-
-  .flex-row {
-    @include apply-flex-styles($flex-row-center-start);
-    align-items: start;
-    flex-wrap: nowrap;
-    width: 100%;
-    gap: 3em;
-    margin-bottom: 1em;
-    border-bottom: 1px solid lightgray;
-    &.center {
-      align-items: center;
-    }
-  }
-  .no-border {
-    border: none;
-  }
-  .flex-col {
-    flex-wrap: nowrap;
-    @include apply-flex-styles($flex-col-center-start);
-    &.gap-1 {
-      gap: 1em;
-    }
-  }
-
-  .editorial .grid-container-3col .achievement .banner-img {
-    width: 40%;
-    height: auto;
-  }
-}
 
 @media (min-width: 480px) {
   .contact-form {
@@ -1446,10 +1385,6 @@ textarea.input {
 }
 
 @media only screen and (min-width: 576px) {
-  .wrapper {
-    padding: 1em;
-  }
-
   /* thankyou styles  */
   .thank-you-container {
     width: 80%;
@@ -1458,25 +1393,10 @@ textarea.input {
 
 /* Start of Responsive Navigation Shift  */
 @media screen and (min-width: 768px) {
-  .sm-accordion,
-  .tabular-view-sm {
-    display: none;
-  }
-  .hide-sm,
-  .tab-container.hide-sm {
-    display: flex;
-    margin-top: 1em;
-  }
-
   .hero {
     .primary-banner {
-      background-image: url(../assets/images/hero-images/index/UIUX-banner.webp);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      align-items: flex-start;
+      background-image: url('../assets/images/hero/images/index/UI/UX-banner.webp');
       .hero-content {
-        @include apply-flex-styles($flex-col-start-center);
         width: 50%;
         .two-button-container {
           flex-direction: row;
@@ -1485,36 +1405,24 @@ textarea.input {
     }
   }
 
-  .page-wrapper {
-    .editorial {
-      width: 95%;
-
-      .career-history-banner {
-        background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        max-height: 200px;
-        width: 100%;
-      }
-      .page-wrapper {
-        .editorial {
-          width: 95%;
-
-          .career-history-banner {
-            background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            max-height: 200px;
-            width: 100%;
-          }
-        }
-        .grid-container-2col {
-          @include apply-grid-styles($grid-2col-auto);
-        }
+  .contact-info .info-card {
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 10px; /* Optional spacing */
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    .item {
+      padding: 20px;
+      background-color: #fff5d8; /* Example background */
+      color: #0e2836; /* WCAG-compliant text */
+      border-radius: 8px;
+      .social-media {
+        gap: 10px;
       }
     }
   }
-
   /* thankyou styles  */
   .thank-you-container {
     width: 40%;
@@ -1524,47 +1432,6 @@ textarea.input {
 }
 
 @media only screen and (min-width: 992px) {
-  /* index-styles  */
-  .p-0 .hero .hero-content {
-    border: 1px solid gainsboro;
-    &.case-study-settings {
-      border: none;
-    }
-  }
-  .wrapper {
-    .hero-editorial {
-      flex-direction: row;
-    }
-    .editorial-footer a {
-      width: 50%;
-      font-size: 16px;
-    }
-    .wide-card {
-      .card-header {
-        .inline-decorated-list {
-          gap: 1.9em;
-        }
-      }
-      .card-body {
-        .card-editorial {
-          width: 70%;
-        }
-        .button-row {
-          a {
-            font-weight: normal;
-          }
-        }
-      }
-    }
-  }
-  /* about page styles */
-  .editorial .button-container {
-    flex-direction: row;
-    .primary-button,
-    .secondary-button {
-      width: 50%;
-    }
-  }
   /* contact page styles  */
   .form,
   .contact-form {
@@ -1607,10 +1474,15 @@ textarea.input {
 }
 
 @media only screen and (min-width: 1024px) {
-  .navbar .navbar-container .nav-menu .navbar-link .accordion {
-    display: inherit;
+  .navbar .navbar-container {
+    width: 90%;
+    .navbar-logo {
+      padding-left: 0;
+    }
+    .nav-menu .navbar-link .accordion {
+      display: inherit;
+    }
   }
-
   .accordion,
   .accordion-toggle {
     display: none;
@@ -1621,17 +1493,10 @@ textarea.input {
       align-items: flex-start;
 
       .hero-content {
-        margin: 1em;
-        width: 40%;
-        gap: 0;
+        position: relative;
+        left: 5vw;
+        width: 35%;
       }
-    }
-    .editorial .quote-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 1em;
     }
 
     .editorial {
@@ -1649,49 +1514,24 @@ textarea.input {
           }
         }
       }
+      &.left-align {
+        .career-history-banner {
+          background: url('../assets/images/hero-images/index/career-path_lg.svg') center no-repeat;
+          height: 16em;
+          background-size: contain;
+        }
+      }
+      &.purple-fill {
+        width: 100%;
+        .project-section {
+          width: 90%;
+        }
+      }
     }
     .grid-container-2col {
       @include apply-grid-styles($grid-2col-auto);
       width: 100%;
       gap: 2em;
-    }
-  }
-  .flex-row.space-between .col .right-align .primary-button,
-  .flex-row.space-between .col .right-align .secondary-button {
-    width: auto;
-    margin-right: 1em;
-  }
-
-  .skills-section {
-    // width: -webkit-fill-available;
-    .centered-row {
-      .flex-row {
-        // display: flex;
-        // flex-direction: row;
-        // align-items: flex-start;
-        // width: -webkit-fill-available;
-        // gap: 10em;
-        // border-bottom: none;
-        .left-col,
-        .right-col {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: flex-start;
-          width: 50%;
-          gap: 0;
-          &.width_50 {
-            justify-content: flex-start;
-          }
-          .col {
-            flex-direction: column;
-            align-items: flex-start;
-          }
-        }
-        .left-col {
-          gap: 7em;
-        }
-      }
     }
   }
 }
@@ -1700,25 +1540,17 @@ textarea.input {
   .navbar-container {
     padding: 0 1em;
   }
-  .p-0 {
-    @include apply-flex-styles($flex-col-center);
-  }
 
-  .page-boundary .centered-row {
-    max-width: 80%;
-    align-items: center;
-  }
-  .editorial .button-container {
-    .primary-button,
-    .secondary-button {
-      width: 20%;
+  /* index page styles  */
+  .page-wrapper .hero .primary-banner {
+    @include apply-flex-styles($flex-col-center);
+    @include background-image-style_cover;
+    width: 100vw;
+    background-image: url(../assets/images/hero-images/index/UIUX-banner.webp);
+    .hero-content {
+      width: 33.33%;
     }
   }
-  /* index page styles  */
-  .hero .primary-banner .hero-content {
-    width: 33.33%;
-  }
-
   .editorial .grid-container-3col .card {
     max-width: 300px;
     margin-bottom: 1em;
@@ -1795,36 +1627,6 @@ textarea.input {
   //     }
   //   }
   // }
-  .achievements-section .split-header .left-align .primary-button,
-  .achievements-section .split-header .right-align .primary-button {
-    width: auto;
-  }
-  .skills-section .centered-row {
-    .left-col,
-    .left-col.width_50 {
-      width: 90%;
-    }
-  }
-
-  .grid-container-1col .marketing-banner {
-    height: 390px;
-  }
-
-  .grid-container-2col .prototype-container {
-    display: unset;
-    margin-top: 0;
-    a {
-      @include apply-flex-styles($flex-col-center);
-      background-color: #fdc4c5;
-      border-radius: 10px;
-      .border {
-        width: 50%;
-      }
-      &:hover {
-        filter: opacity(0.6);
-      }
-    }
-  }
 }
 /*Large Desktop viewport styles */
 @media only screen and (min-width: 1400px) {
@@ -1960,14 +1762,14 @@ textarea.input {
     .hero .primary-banner {
       align-items: flex-start;
       .hero-content {
-        width: 23%;
-        margin-left: 5em;
+        width: 26%;
       }
     }
     .editorial {
       width: 90%;
       .quote-text {
         font-size: 1.5rem;
+        line-height: 22pt;
       }
       .career-history-banner {
         max-height: 300px;
@@ -2140,16 +1942,18 @@ textarea.input {
     }
   }
 }
+
 @media only screen and (min-width: 1700px) {
   .navbar .navbar-container {
     width: 70%;
   }
   .page-wrapper {
     .hero .primary-banner .hero-content {
-      margin-left: 17em;
+      left: 15vw;
       width: 23%;
     }
     .editorial {
+      width: 70%;
       &.left-align,
       &.purple-fill .project-section {
         width: 70%;
@@ -2158,6 +1962,13 @@ textarea.input {
         max-height: 360px;
       }
     }
+  }
+}
+
+@media only screen and (min-width: 2450px) {
+  .page-wrapper .hero .primary-banner .hero-content {
+    width: 16%;
+    padding: 2em;
   }
 }
 // .p-0 .flex-col section {

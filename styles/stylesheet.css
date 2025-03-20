@@ -367,6 +367,7 @@ img {
   align-items: center;
   justify-content: center;
   height: 90vh;
+  width: 100%;
 }
 .page-wrapper .hero .primary-banner {
   display: flex;
@@ -378,8 +379,8 @@ img {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  width: 100vw;
-  background-image: url(../assets/images/hero-images/index/UIUX-banner.webp);
+  background-image: url(../assets/images/hero-images/index/UIUX-banner_md.webp);
+  width: 100%;
 }
 .page-wrapper .hero .hero-content {
   display: flex;
@@ -1010,26 +1011,6 @@ textarea.input {
   margin-top: 0;
 }
 
-@media (max-width: 768px) {
-  .contact-info .info-card {
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 10px; /* Optional spacing */
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-  .contact-info .info-card .item {
-    padding: 20px;
-    background-color: #fff5d8; /* Example background */
-    color: #0e2836; /* WCAG-compliant text */
-    border-radius: 8px;
-  }
-  .contact-info .info-card .item .social-media {
-    gap: 10px;
-  }
-}
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
@@ -1258,59 +1239,12 @@ textarea.input {
   font-size: 14px;
 }
 
-@media only screen and (min-width: 425px) {
-  .editorial .hero-content .image-container {
-    background-color: #fec6c7;
-  }
-  .editorial .hero-content .image-container .primary-banner {
-    width: 250px;
-  }
-  .editorial .split-header .sus-banner {
-    height: 39vh;
-    margin-bottom: 0;
-  }
-  .flex-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    align-items: start;
-    flex-wrap: nowrap;
-    width: 100%;
-    gap: 3em;
-    margin-bottom: 1em;
-    border-bottom: 1px solid lightgray;
-  }
-  .flex-row.center {
-    align-items: center;
-  }
-  .no-border {
-    border: none;
-  }
-  .flex-col {
-    flex-wrap: nowrap;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .flex-col.gap-1 {
-    gap: 1em;
-  }
-  .editorial .grid-container-3col .achievement .banner-img {
-    width: 40%;
-    height: auto;
-  }
-}
 @media (min-width: 480px) {
   .contact-form {
     width: 100%;
   }
 }
 @media only screen and (min-width: 576px) {
-  .wrapper {
-    padding: 1em;
-  }
   /* thankyou styles  */
   .thank-you-container {
     width: 80%;
@@ -1318,57 +1252,32 @@ textarea.input {
 }
 /* Start of Responsive Navigation Shift  */
 @media screen and (min-width: 768px) {
-  .sm-accordion,
-  .tabular-view-sm {
-    display: none;
-  }
-  .hide-sm,
-  .tab-container.hide-sm {
-    display: flex;
-    margin-top: 1em;
-  }
   .hero .primary-banner {
-    background-image: url(../assets/images/hero-images/index/UIUX-banner.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: flex-start;
+    background-image: url("../assets/images/hero/images/index/UI/UX-banner.webp");
   }
   .hero .primary-banner .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
     width: 50%;
   }
   .hero .primary-banner .hero-content .two-button-container {
     flex-direction: row;
   }
-  .page-wrapper .editorial {
-    width: 95%;
-  }
-  .page-wrapper .editorial .career-history-banner {
-    background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    max-height: 200px;
+  .contact-info .info-card {
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 10px; /* Optional spacing */
     width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
-  .page-wrapper .editorial .page-wrapper .editorial {
-    width: 95%;
+  .contact-info .info-card .item {
+    padding: 20px;
+    background-color: #fff5d8; /* Example background */
+    color: #0e2836; /* WCAG-compliant text */
+    border-radius: 8px;
   }
-  .page-wrapper .editorial .page-wrapper .editorial .career-history-banner {
-    background: url(../assets/images/hero-images/index/career-path_lg.svg) center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    max-height: 200px;
-    width: 100%;
-  }
-  .page-wrapper .editorial .page-wrapper .grid-container-2col {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 1em;
+  .contact-info .info-card .item .social-media {
+    gap: 10px;
   }
   /* thankyou styles  */
   .thank-you-container {
@@ -1378,37 +1287,6 @@ textarea.input {
   }
 }
 @media only screen and (min-width: 992px) {
-  /* index-styles  */
-  .p-0 .hero .hero-content {
-    border: 1px solid gainsboro;
-  }
-  .p-0 .hero .hero-content.case-study-settings {
-    border: none;
-  }
-  .wrapper .hero-editorial {
-    flex-direction: row;
-  }
-  .wrapper .editorial-footer a {
-    width: 50%;
-    font-size: 16px;
-  }
-  .wrapper .wide-card .card-header .inline-decorated-list {
-    gap: 1.9em;
-  }
-  .wrapper .wide-card .card-body .card-editorial {
-    width: 70%;
-  }
-  .wrapper .wide-card .card-body .button-row a {
-    font-weight: normal;
-  }
-  /* about page styles */
-  .editorial .button-container {
-    flex-direction: row;
-  }
-  .editorial .button-container .primary-button,
-  .editorial .button-container .secondary-button {
-    width: 50%;
-  }
   /* contact page styles  */
   .form,
   .contact-form {
@@ -1448,6 +1326,12 @@ textarea.input {
   }
 }
 @media only screen and (min-width: 1024px) {
+  .navbar .navbar-container {
+    width: 90%;
+  }
+  .navbar .navbar-container .navbar-logo {
+    padding-left: 0;
+  }
   .navbar .navbar-container .nav-menu .navbar-link .accordion {
     display: inherit;
   }
@@ -1459,16 +1343,9 @@ textarea.input {
     align-items: flex-start;
   }
   .page-wrapper .hero .primary-banner .hero-content {
-    margin: 1em;
-    width: 40%;
-    gap: 0;
-  }
-  .page-wrapper .editorial .quote-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 1em;
+    position: relative;
+    left: 5vw;
+    width: 35%;
   }
   .page-wrapper .editorial .grid-container-3col {
     display: grid;
@@ -1485,6 +1362,17 @@ textarea.input {
   .page-wrapper .editorial .grid-container-3col .card .white-text .image-container.syn-banner {
     width: 234px;
   }
+  .page-wrapper .editorial.left-align .career-history-banner {
+    background: url("../assets/images/hero-images/index/career-path_lg.svg") center no-repeat;
+    height: 16em;
+    background-size: contain;
+  }
+  .page-wrapper .editorial.purple-fill {
+    width: 100%;
+  }
+  .page-wrapper .editorial.purple-fill .project-section {
+    width: 90%;
+  }
   .page-wrapper .grid-container-2col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1493,53 +1381,26 @@ textarea.input {
     width: 100%;
     gap: 2em;
   }
-  .flex-row.space-between .col .right-align .primary-button,
-  .flex-row.space-between .col .right-align .secondary-button {
-    width: auto;
-    margin-right: 1em;
-  }
-  .skills-section .centered-row .flex-row .left-col,
-  .skills-section .centered-row .flex-row .right-col {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 50%;
-    gap: 0;
-  }
-  .skills-section .centered-row .flex-row .left-col.width_50,
-  .skills-section .centered-row .flex-row .right-col.width_50 {
-    justify-content: flex-start;
-  }
-  .skills-section .centered-row .flex-row .left-col .col,
-  .skills-section .centered-row .flex-row .right-col .col {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .skills-section .centered-row .flex-row .left-col {
-    gap: 7em;
-  }
 }
 @media only screen and (min-width: 1200px) {
   .navbar-container {
     padding: 0 1em;
   }
-  .p-0 {
+  /* index page styles  */
+  .page-wrapper .hero .primary-banner {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    width: 100vw;
+    background-image: url(../assets/images/hero-images/index/UIUX-banner.webp);
   }
-  .page-boundary .centered-row {
-    max-width: 80%;
-    align-items: center;
-  }
-  .editorial .button-container .primary-button,
-  .editorial .button-container .secondary-button {
-    width: 20%;
-  }
-  /* index page styles  */
-  .hero .primary-banner .hero-content {
+  .page-wrapper .hero .primary-banner .hero-content {
     width: 33.33%;
   }
   .editorial .grid-container-3col .card {
@@ -1584,35 +1445,6 @@ textarea.input {
   }
   .editorial .border {
     width: 100%;
-  }
-  .achievements-section .split-header .left-align .primary-button,
-  .achievements-section .split-header .right-align .primary-button {
-    width: auto;
-  }
-  .skills-section .centered-row .left-col,
-  .skills-section .centered-row .left-col.width_50 {
-    width: 90%;
-  }
-  .grid-container-1col .marketing-banner {
-    height: 390px;
-  }
-  .grid-container-2col .prototype-container {
-    display: unset;
-    margin-top: 0;
-  }
-  .grid-container-2col .prototype-container a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #fdc4c5;
-    border-radius: 10px;
-  }
-  .grid-container-2col .prototype-container a .border {
-    width: 50%;
-  }
-  .grid-container-2col .prototype-container a:hover {
-    filter: opacity(0.6);
   }
 }
 /*Large Desktop viewport styles */
@@ -1738,14 +1570,14 @@ textarea.input {
     align-items: flex-start;
   }
   .page-wrapper .hero .primary-banner .hero-content {
-    width: 23%;
-    margin-left: 5em;
+    width: 26%;
   }
   .page-wrapper .editorial {
     width: 90%;
   }
   .page-wrapper .editorial .quote-text {
     font-size: 1.5rem;
+    line-height: 22pt;
   }
   .page-wrapper .editorial .career-history-banner {
     max-height: 300px;
@@ -1795,14 +1627,23 @@ textarea.input {
     width: 70%;
   }
   .page-wrapper .hero .primary-banner .hero-content {
-    margin-left: 17em;
+    left: 15vw;
     width: 23%;
+  }
+  .page-wrapper .editorial {
+    width: 70%;
   }
   .page-wrapper .editorial.left-align, .page-wrapper .editorial.purple-fill .project-section {
     width: 70%;
   }
   .page-wrapper .editorial .career-history-banner {
     max-height: 360px;
+  }
+}
+@media only screen and (min-width: 2450px) {
+  .page-wrapper .hero .primary-banner .hero-content {
+    width: 16%;
+    padding: 2em;
   }
 }
 

@@ -27,6 +27,9 @@
     <noscript>
       <link rel="stylesheet" href="styles/stylesheet.css" />
     </noscript>
+
+    <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner_md.webp" type="image/webp" />
+    <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner.webp" type="image/webp" />
     <style>
       .hero .primary-banner .hero-content .expanded-headline {
         font-size: 1.2rem;
@@ -35,8 +38,6 @@
         color: #0a6cc2;
       }
     </style>
-
-    <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner.webp" type="image/webp" />
   </head>
 
   <body>
@@ -96,18 +97,19 @@
       <div class="page-wrapper">
         <section class="hero">
           <div class="primary-banner">
-            <div class="hero-content">
+            <div class="hero-content lazysizes">
+              <div class="profile-image"></div>
               <span class="expanded-headline">
                 <h1>About Me</h1>
 
                 <p class="description">
-                  A
-                  <span class="highlight-text">clever</span>
-                  problem solver,
-                  <span class="highlight-text">resourceful</span>
-                  strategist, and
-                  <span class="highlight-text">thoughtful</span>
-                  visual communicator
+                  Im an experienced and qualified
+                  <span class="highlight-text">problem solver</span>
+                  , resourceful
+                  <span class="highlight-text">strategist</span>
+                  , and thoughtful
+                  <span class="highlight-text">visual communicator</span>
+                  .
                 </p>
               </span>
               <div class="two-button-container">
@@ -115,32 +117,24 @@
                   <a href="contact-form.html">Lets Talk</a>
                 </div>
                 <div class="secondary-button">
-                  <a href="#myExperiences">My Experiences</a>
+                  <a href="#myExperiences">See Career</a>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="editorial">
+        <section class="editorial lazysizes">
           <p class="quote-text">
-            "If you make customers unhappy in the physical world, they might each tell six friends. If you make customers unhappy on the internet, they can each tell 6,000."
+            "If you make customers unhappy in the physical world, they might each tell six friends over time. If you make customers unhappy on the internet, they can each tell 6,000 in seconds!"
             <br />
             <sub class="signature">- Jeff Bezos - Amazon Founder.</sub>
           </p>
         </section>
 
-        <!-- <div class="flex-col gap-1 mt-10"> -->
-        <section class="editorial">
-          <p class="quote-text">
-            “Design creates culture. Culture shapes values. Values determine the future.”
-            <br />
-            <sub class="signature">- Robert L. Peters.</sub>
-          </p>
-        </section>
-
-        <section class="editorial">
-          <p>I blend experience and strategic design thinking to create visually compelling, functional experiences. From user research to polished prototypes, I ensure seamless, user-friendly products.</p>
+        <section class="editorial left-align">
+          <h2>About Me</h2>
+          <p>I blend experience and strategic design thinking to create visually compelling and functional experiences. From user research to polished prototypes, I ensure seamless, user-friendly products.</p>
           <br />
           <p>
             While earning my
@@ -187,8 +181,7 @@
           </p>
         </section>
 
-        <!-- Experience sections  -->
-        <section id="myExperiences" class="editorial left-align">
+        <section class="editorial left-align lazysizes">
           <div class="split-header">
             <div class="title-col">
               <h2>Experience</h2>
@@ -200,7 +193,7 @@
 
         <!-- Skills and Achievements section -->
 
-        <section class="editorial left-align">
+        <section class="editorial left-align lazysizes">
           <h2>Achievements &amp; Skills</h2>
           <div class="grid-container-2col">
             <div class="grid-item">
@@ -248,18 +241,18 @@
             </div>
           </div>
         </section>
+      </div>
 
-        <div class="bttt-btn" id="scrollButton" title="Click this button to return to the top of the page.">
-          <a href="#top" aria-label="Scroll to top">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-              <path d="M8 15.5V1M8 1L1 7.5M8 1L15 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </div>
+      <div class="bttt-btn" id="scrollButton" title="Click this button to return to the top of the page.">
+        <a href="#top" aria-label="Scroll to top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+            <path d="M8 15.5V1M8 1L1 7.5M8 1L15 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer lazysizes">
       <div class="footer-container">
         <div class="footer-social-icon">
           <a href="/index.html" title="Click this link to see return to the Home page." aria-label="Home">
