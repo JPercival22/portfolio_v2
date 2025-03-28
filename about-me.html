@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta name="description" content="UX Portfolio for Joseph Percival" />
-    <meta name="keywords" content="Explore innovative UX design projects and solutions tailored to enhance user experiences. Discover a diverse portfolio showcasing user-centric design principles, usability enhancements, and interactive prototypes. Elevate your digital experiences with insights from a seasoned UX designer passionate about crafting intuitive interfaces." />
+    <meta
+      name="keywords"
+      content="Explore innovative UX design projects and solutions tailored to enhance user experiences. Discover a diverse portfolio showcasing user-centric design principles, usability enhancements, and interactive prototypes. Elevate your digital experiences with insights from a seasoned UX designer passionate about crafting intuitive interfaces."
+    />
     <meta name="author" content="Joseph Percival" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me - Joseph Percival</title>
@@ -12,15 +15,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Preload the font without italics -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
     <noscript>
       <!-- Fallback for browsers with JavaScript disabled -->
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+      />
     </noscript>
 
     <!-- Preload Material Symbols font (combined) -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" media="print" onload="this.media='all'" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      media="print"
+      onload="this.media='all'"
+    />
 
     <!-- Preload main stylesheet -->
     <link rel="preload" href="styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
@@ -32,13 +53,57 @@
     <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner.webp" type="image/webp" />
     <style>
       .page-wrapper .hero .primary-banner {
-        background-image: url('./assets/images/hero-images/index/UIUX-banner.webp');
+        background-image: url("./assets/images/hero-images/index/UIUX-banner_md.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
       }
 
+      h3 {
+        color: #4e5deb;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+      .career-history-banner {
+        background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
+        background-size: contain;
+        height: 1000px;
+        width: 100%;
+      }
       @media only screen and (min-width: 1024px) {
         .page-wrapper .hero .primary-banner {
-          background-image: url('./assets/images/hero-images/index/UIUX-banner.webp');
+          background-image: url("./assets/images/hero-images/index/UIUX-banner.webp");
           align-items: flex-start;
+        }
+        .page-wrapper .left-align .career-history-banner {
+          background: url("../assets/images/hero-images/index/career-path_lg.svg") center no-repeat;
+          height: 16em;
+          background-size: contain;
+        }
+        .page-wrapper .grid-container-2col {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: auto;
+          grid-gap: 1em;
+          width: 100%;
+          gap: 2em;
+        }
+      }
+      @media only screen and (min-width: 1439px) {
+        .page-wrapper .left-align .career-history-banner {
+          max-height: 300px;
+        }
+      }
+      @media only screen and (min-width: 1700px) {
+        .page-wrapper .left-align .career-history-banner {
+          max-height: 360px;
+        }
+        .editorial,
+        .editorial .left-align,
+        .editorial.purple-fill .project-section {
+          width: 70%;
         }
       }
     </style>
@@ -55,7 +120,13 @@
           </div>
         </a>
 
-        <button type="button" class="menu-toggle" aria-label="main navigation menu button" aria-expanded="false" aria-controls="navMenu">
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="main navigation menu button"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
           <div class="icon-bar"></div>
         </button>
 
@@ -130,7 +201,8 @@
 
         <section class="editorial lazysizes">
           <p class="quote-text">
-            "If you make customers unhappy in the physical world, they might each tell six friends over time. If you make customers unhappy on the internet, they can each tell 6,000 in seconds!"
+            "If you make customers unhappy in the physical world, they might each tell six friends over time. If you
+            make customers unhappy on the internet, they can each tell 6,000 in seconds!"
             <br />
             <sub class="signature">- Jeff Bezos - Amazon Founder.</sub>
           </p>
@@ -138,12 +210,16 @@
 
         <section class="editorial left-align">
           <h2>About Me</h2>
-          <p>I blend experience and strategic design thinking to create visually compelling and functional experiences. From user research to polished prototypes, I ensure seamless, user-friendly products.</p>
+          <p>
+            I blend experience and strategic design thinking to create visually compelling and functional experiences.
+            From user research to polished prototypes, I ensure seamless, user-friendly products.
+          </p>
           <br />
           <p>
             While earning my
             <span class="highlight-text">First-Class BSc in Web Design &amp; Development</span>
-            , I was employed as a Student Mentor, honing skills in public speaking and teaching. As a father of two, I believe in helping others succeed.
+            , I was employed as a Student Mentor, honing skills in public speaking and teaching. As a father of two, I
+            believe in helping others succeed.
           </p>
           <p>
             I secured full-time employment before graduation, working with the
@@ -171,7 +247,9 @@
           <p>
             I also took on a
             <span class="highlight-text">Pro-Bono</span>
-            project and as such a lead role in the re-design and development of a local charity website in my spare time which help them achieve a greater online presence, modern communication tool and more importantly secured funding from the
+            project and as such a lead role in the re-design and development of a local charity website in my spare time
+            which help them achieve a greater online presence, modern communication tool and more importantly secured
+            funding from the
             <span class="highlight-text">National Lottery</span>
             and other investors.
           </p>
@@ -181,7 +259,9 @@
             <span class="highlight-text">creativity</span>
             and
             <span class="highlight-text">data-driven</span>
-            insights, always aiming to simplify user journeys and drive engagement. My focus is on creating meaningful, user-centric solutions that make a tangible difference. Looking ahead, I’m excited to continue using my skills to design innovative digital experiences that solve real-world challenges.
+            insights, always aiming to simplify user journeys and drive engagement. My focus is on creating meaningful,
+            user-centric solutions that make a tangible difference. Looking ahead, I’m excited to continue using my
+            skills to design innovative digital experiences that solve real-world challenges.
           </p>
         </section>
 
@@ -190,7 +270,14 @@
             <div class="title-col">
               <h2>Experience</h2>
             </div>
-            <a class="primary-button" href="assets\documents\CV2023.pdf" target="_blank" aria-label="button link to my online CV pdf" title="Clicking this link will open my CV in a new browser window">View CV</a>
+            <a
+              class="primary-button"
+              href="assets\documents\CV2023.pdf"
+              target="_blank"
+              aria-label="button link to my online CV pdf"
+              title="Clicking this link will open my CV in a new browser window"
+              >View CV</a
+            >
           </div>
           <div class="career-history-banner"></div>
         </section>
@@ -250,7 +337,13 @@
       <div class="bttt-btn" id="scrollButton" title="Click this button to return to the top of the page.">
         <a href="#top" aria-label="Scroll to top">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-            <path d="M8 15.5V1M8 1L1 7.5M8 1L15 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M8 15.5V1M8 1L1 7.5M8 1L15 7.5"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
         </a>
       </div>
@@ -263,10 +356,18 @@
             <span class="Home-icon"></span>
           </a>
 
-          <a href="https://www.linkedin.com/in/joseph-percival" title="Click this link to view my Linked In my account." aria-label="Linked In button link">
+          <a
+            href="https://www.linkedin.com/in/joseph-percival"
+            title="Click this link to view my Linked In my account."
+            aria-label="Linked In button link"
+          >
             <span class="linkedIn-icon"></span>
           </a>
-          <a href="https://github.com/JPercival22" title="Click this link to view my Git Hub account." aria-label="Git hub button link">
+          <a
+            href="https://github.com/JPercival22"
+            title="Click this link to view my Git Hub account."
+            aria-label="Git hub button link"
+          >
             <span class="gitHub-icon"></span>
           </a>
 
