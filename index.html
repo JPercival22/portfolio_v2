@@ -44,23 +44,15 @@
       onload="this.media='all'"
     />
 
-    <!-- Preload main stylesheet -->
-    <link rel="preload" href="styles/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="styles/stylesheet.css?v=1.1" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript>
-      <link rel="stylesheet" href="styles/stylesheet.css" />
+      <link rel="stylesheet" href="styles/stylesheet.css?v=1.1" />
     </noscript>
 
     <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner.webp" type="image/webp" />
     <link rel="preload" as="image" href="../assets/images/hero-images/index/me-min.webp" type="image/webp" />
 
     <style>
-      .page-wrapper .hero .hero-content .profile-image {
-        display: block;
-        object-fit: contain;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-      }
       .page-wrapper .hero .primary-banner {
         background-image: url(./assets/images/hero-images/index/UIUX-banner.webp);
         background-size: cover;
@@ -75,13 +67,12 @@
         height: 1000px;
         width: 100%;
       }
-      .page-wrapper .editorial.purple-fill {
-        background-color: #38389c;
+      .page-wrapper .editorial.color-fill {
+        background-color: #ffe093;
+        width: 100%;
       }
-
-      .project-section .white-text,
-      .project-section .card .white-text {
-        color: #fff;
+      .project-section {
+        padding: 1em;
       }
       .project-section .card {
         display: flex;
@@ -143,10 +134,10 @@
           width: 100%;
         }
 
-        .page-wrapper .editorial.purple-fill {
+        .page-wrapper .editorial.color-fill {
           width: 100%;
         }
-        .page-wrapper .editorial.purple-fill .project-section {
+        .page-wrapper .editorial.color-fill .project-section {
           width: 90%;
         }
         .project-section .card .image-container:hover {
@@ -168,12 +159,31 @@
         }
       }
       @media only screen and (min-width: 1700px) {
+        .page-wrapper .hero .primary-banner .hero-content {
+          left: 15vw;
+          max-width: unset;
+          width: 42%;
+        }
+
+        .page-wrapper .hero .hero-content .description {
+          max-width: unset;
+        }
+        .hero .primary-banner .hero-content .two-button-container {
+          flex-direction: row;
+          justify-content: flex-start;
+          margin-bottom: 1em;
+        }
+        .page-wrapper .hero .hero-content .two-button-container .primary-button,
+        .page-wrapper .hero .hero-content .two-button-container .secondary-button {
+          max-width: 160px;
+          height: 42px;
+        }
         .page-wrapper .left-align .career-history-banner {
           max-height: 360px;
         }
         .editorial,
         .editorial .left-align,
-        .page-wrapper .editorial.purple-fill .project-section {
+        .page-wrapper .editorial.color-fill .project-section {
           width: 70%;
         }
       }
@@ -181,6 +191,8 @@
   </head>
 
   <body>
+    <div id="cursor-dot"></div>
+    <div id="btt-anchor"></div>
     <header id="navBar" class="navbar">
       <nav class="navbar-container">
         <a href="index.html" class="navbar-logo" aria-label="Home">
@@ -236,38 +248,17 @@
         </ul>
       </nav>
     </header>
-
-    <div id="btt-anchor"></div>
-
     <main>
       <div class="page-wrapper">
         <section class="hero">
           <div class="primary-banner">
             <div class="hero-content">
-              <img
-                class="profile-image"
-                src="./assets/images/hero-images/index/me-min.webp"
-                width="200"
-                height="200"
-                alt="Profile picture of Joe"
-              />
+              <h1 class="primary-banner-heading">High-quality Web Sites for Startups, Agencies and Global Brands.</h1>
+              <p class="description">
+                As a <span class="highlight-text">qualified and experienced UX/UI Web Designer and Developer </span>, I
+                create custom, high-quality websites that stand out and easy to use.
+              </p>
 
-              <span class="expanded-headline">
-                <h1>Hi, I'm Joe!</h1>
-                <p class="description">
-                  <span class="highlight-text">Senior UX & UI Designer</span>
-                  based in St. Helens, UK.
-                </p>
-                <p>
-                  With a
-                  <span class="highlight-text">First-Class BSc (Hons)</span>
-                  in
-                  <span class="highlight-text">Web Design & Development</span>
-                  and
-                  <span class="highlight-text">5+ years</span>
-                  of experience, I've designed and developed intuitive web applications for startups and global brands.
-                </p>
-              </span>
               <div class="two-button-container">
                 <div class="primary-button">
                   <a href="contact-form.html">Lets Talk</a>
@@ -281,16 +272,39 @@
         </section>
 
         <section class="editorial">
-          <p class="quote-text">
-            A user interface is like a joke. If you ever have to explain it, then it’s not that good."
-            <sub class="signature">- Martin LeBlanc, Designer & CEO of Iconfinder.</sub>
-          </p>
+          <blockquote class="quote-text">
+            “A user interface is like a joke. If you ever have to explain it, then it’s not that good.”
+            <cite class="signature"> Martin LeBlanc, Designer & CEO of Iconfinder.</cite>
+          </blockquote>
+        </section>
+
+        <section class="editorial">
+          <div class="profile-section">
+            <div class="profile-image-container">
+              <div class="profile-image"></div>
+            </div>
+            <div class="profile-content">
+              <div class="profile-text">
+                <h2 class="intro-text">Hi, I'm Joe.</h2>
+                <p class="description">
+                  Hi, I'm a Senior UX & UI Designer from Merseyside, England. I hold a First-Class (Hons) Bachelor's
+                  Degree in Web Design & Development, and I've spent over five years creating amazing digital
+                  experiences for users.
+                </p>
+                <p class="description">
+                  I’m passionate about both design and development, which helps me create smooth, interactive, and
+                  engaging content. My mission is to make technology more accessible and enjoyable, ensuring that every
+                  project I work on not only works well but also feels great to use.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="editorial left-align">
           <div class="split-header">
             <div class="title-col">
-              <h2>Experience</h2>
+              <h2 class="headline-text">Driven by Experience.</h2>
             </div>
             <a
               class="primary-button"
@@ -304,21 +318,117 @@
           <div class="career-history-banner"></div>
         </section>
 
-        <section id="projects" class="editorial purple-fill">
-          <div class="project-section">
-            <h2 class="white-text">My Work</h2>
-            <p class="white-text">
-              I’ve made significant impact at each organisation that I’ve served. I’ve grown revenue, established
-              essential infrastructure, shaped brands, hired and cultivated talent, built new teams, and led the
-              creation of life saving products. Jump into my work below to learn more, or use the case study option in
-              the menu.
-            </p>
+        <section class="editorial left-align">
+          <h2 class="headline-text">Your Reliable Web Designer.</h2>
 
+          <div class="grid-container-6col">
+            <div class="item">
+              <div class="item-head">
+                <div class="item-icon">
+                  <img src="/assets/images/iconography/chat-vector.svg" alt="chat image" width="24" height="24" />
+                </div>
+                <h3>Clear Communication</h3>
+              </div>
+              <div class="item-description">
+                <p>
+                  I prioritise open and honest communication at every stage of a project. From timelines and budgets to
+                  design decisions and technical challenges, I ensure complete transparency. A straightforward approach
+                  builds trust and leads to better collaboration and results.
+                </p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-head">
+                <div class="item-icon">
+                  <img src="/assets/images/iconography/grid-vector.svg" alt="chat image" width="24" height="24" />
+                </div>
+                <h3>Design-First Development</h3>
+              </div>
+              <div class="item-description">
+                <p>
+                  Great design is at the heart of every exceptional user experience. With a deep understanding of both
+                  UX/UI and development, I ensure that every design is brought to life with precision, maintaining both
+                  aesthetics and functionality.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-head">
+                <div class="item-icon">
+                  <img src="/assets/images/iconography/degree-vector.svg" alt="chat image" width="28" height="24" />
+                </div>
+                <h3>Your Reliable Expert</h3>
+              </div>
+              <div class="item-description">
+                <p>
+                  With over five years of experience in UX/UI design and front-end development, I have a strong grasp of
+                  both UX principles and technical implementation. My expertise in modern web technologies, allows me to
+                  solve challenges and provide high-quality digital experiences.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-head">
+                <div class="item-icon">
+                  <img src="/assets/images/iconography/award-vector.svg" alt="award image" width="20" height="24" />
+                </div>
+                <h3>Highest Quality</h3>
+              </div>
+              <div class="item-description">
+                <p>
+                  I prioritise performance, accessibility, and clean, efficient code to ensure every digital experience
+                  meets the highest quality standards. Every interface I design is built with usability in mind,
+                  creating seamless and engaging experiences for all users.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-head">
+                <div class="item-icon">
+                  <img src="/assets/images/iconography/check-vector.svg" alt="chat image" width="24" height="24" />
+                </div>
+                <h3>Worry-Free Execution</h3>
+              </div>
+              <div class="item-description">
+                <p>
+                  Technical challenges shouldn’t stand in the way of great design. With a strong UX/UI focus, front-end
+                  expertise, and a problem-solving mindset, I ensure seamless execution—delivering solutions that are
+                  both functional and delightful to use.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-head">
+                <div class="item-icon">
+                  <img src="/assets/images/iconography/support-vector.svg" alt="chat image" width="30" height="24" />
+                </div>
+                <h3>Ongoing Support</h3>
+              </div>
+              <div class="item-description">
+                <p>
+                  My commitment doesn’t end at launch. I provide ongoing support to ensure your digital product
+                  continues to perform at its best. Whether it’s quick technical assistance or continuous improvements,
+                  I’m here to help evolve and refine your website as your needs grow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="editorial color-fill">
+          <div class="project-section">
+            <h2 class="headline-text">Web Design Projects</h2>
+            <p>
+              I’ve delivered substantial impact across every organisation I’ve worked with—driving revenue growth,
+              establishing key infrastructure, shaping brands, building teams, and leading the creation of life-saving
+              products. Explore my work below or use the case study section in the menu for more details.
+            </p>
             <div class="grid-container-3col">
               <a class="card" href="/come-together.html" aria-label="Explore Come Together Hub Ltd Case study">
                 <div class="image-container come-together-banner"></div>
-                <h2 class="white-text">Come Together Hub Ltd.</h2>
-                <p class="white-text">Bespoke Design (UX&amp;UI) &amp; Development.</p>
+                <h2>Come Together Hub Ltd.</h2>
+                <p>Bespoke Design (UX&amp;UI) &amp; Development.</p>
               </a>
 
               <a
@@ -327,14 +437,14 @@
                 aria-label="Read Synalogik Innovative Solutions Ltd. iOS App Design case study"
               >
                 <div class="image-container syn-banner"></div>
-                <h2 class="white-text">Synalogik Solutions Ltd.</h2>
-                <p class="white-text">E-Commerce iOS App Design (UX &amp; UI).</p>
+                <h2>Synalogik Solutions Ltd.</h2>
+                <p>E-Commerce iOS App Design (UX &amp; UI).</p>
               </a>
 
               <a class="card" href="/guitar-tutorial.html" aria-label="Explore Guitar Tutorials Case Study">
                 <div class="image-container just-speak-banner"></div>
-                <h2 class="white-text">Just Speak Guitar Tutorials.</h2>
-                <p class="white-text">Voice Recognition Research Project (UX &amp; UI).</p>
+                <h2>Just Speak Guitar Tutorials.</h2>
+                <p>Voice Recognition Research Project (UX &amp; UI).</p>
               </a>
             </div>
             <!-- end of grid container  -->

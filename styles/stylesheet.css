@@ -67,8 +67,25 @@ h2 {
   line-height: 1;
   margin-bottom: 0.7rem;
 }
+h2.headline-text {
+  font-size: 1.68rem;
+  margin-top: 0;
+}
+h2.intro-text {
+  font-size: 2.6rem;
+  margin-top: 0;
+}
+
+h3 {
+  color: #2c4465;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
 
 p {
+  color: #1a1a1a;
   font-size: 1rem;
   font-weight: 300;
   line-height: 15pt;
@@ -76,7 +93,7 @@ p {
   margin: 0;
 }
 p .highlight-text {
-  color: #4e5deb;
+  color: #38389c;
   font-weight: 400;
 }
 
@@ -295,7 +312,6 @@ ul li {
 }
 
 .page-wrapper {
-  padding-bottom: 1em;
   padding-top: 4em;
   display: flex;
   flex-direction: column;
@@ -326,11 +342,11 @@ ul li {
   background-color: #fff;
   border-radius: 25px;
   gap: 1em;
-  width: 80%;
+  width: 90%;
   box-shadow: 6px 6px 12px -5px rgba(111, 111, 111, 0.7490196078);
 }
-.page-wrapper .hero .hero-content h1 {
-  font-size: 2.5rem; /* Make it more prominent */
+.page-wrapper .hero .hero-content .primary-banner-heading {
+  font-size: 2rem;
   font-weight: 500;
   color: #2c4465;
   margin-bottom: 0.5rem;
@@ -339,7 +355,7 @@ ul li {
   font-size: 1.2rem;
 }
 .page-wrapper .hero .hero-content .expanded-headline .highlight-text {
-  color: #4e5deb;
+  color: #38389c;
 }
 .page-wrapper .hero .hero-content .description {
   font-size: 1.3rem;
@@ -353,7 +369,7 @@ ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1em;
 }
 .page-wrapper .hero .hero-content .two-button-container .primary-button,
@@ -384,7 +400,11 @@ ul li {
   display: flex;
   align-items: flex-start;
 }
-.page-wrapper .editorial .quote-text {
+.page-wrapper .editorial blockquote {
+  margin: 0;
+  padding: 0;
+}
+.page-wrapper .editorial blockquote.quote-text {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -392,21 +412,54 @@ ul li {
   font-style: italic;
   gap: 1em;
 }
-.page-wrapper .editorial .quote-text .signature {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.2; /* Adjusted from 0.1pt to avoid collapse */
-  display: inline; /* Ensures `vertical-align` applies */
-  vertical-align: sub; /* Keeps the subscript styling */
+.page-wrapper .editorial blockquote.quote-text cite.signature {
+  font-style: italic;
+  font-size: 16px;
+  color: #555;
+  display: inline;
+  vertical-align: sub;
+}
+.page-wrapper .editorial .profile-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  gap: 2em;
+}
+.page-wrapper .editorial .profile-section .profile-image-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.page-wrapper .editorial .profile-section .profile-image-container .profile-image {
+  background: url("../assets/images/hero-images/index/profile-img.webp") no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 396px;
+  height: 56vh;
+  border-radius: 0 0 90px 0;
+  background-color: rgba(253, 245, 234, 0.2588235294);
+}
+.page-wrapper .editorial .profile-section .profile-content {
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  flex-flow: column;
+  align-items: flex-start;
+  display: flex;
+}
+.page-wrapper .editorial .profile-section .profile-content .profile-text {
+  grid-row-gap: 1.5rem;
+  flex-flow: column;
+  display: flex;
 }
 .page-wrapper .editorial .split-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   align-items: flex-start;
   width: -webkit-fill-available;
+  gap: 1em;
 }
 .page-wrapper .editorial .split-header .title-col {
   flex: 60%;
@@ -485,6 +538,33 @@ ul li {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1em;
+}
+.grid-container-1col .item .item-head,
+.grid-container-2col .item .item-head,
+.grid-container-3col .item .item-head,
+.grid-container-4col .item .item-head,
+.grid-container-5col .item .item-head,
+.grid-container-6col .item .item-head {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+.grid-container-1col .item .item-head .item-icon,
+.grid-container-2col .item .item-head .item-icon,
+.grid-container-3col .item .item-head .item-icon,
+.grid-container-4col .item .item-head .item-icon,
+.grid-container-5col .item .item-head .item-icon,
+.grid-container-6col .item .item-head .item-icon {
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  background-color: #38389c;
+  border-radius: 8px;
 }
 
 .bttt-btn {
@@ -612,6 +692,65 @@ ul li {
   .hero .primary-banner .hero-content .two-button-container {
     flex-direction: row;
   }
+  .page-wrapper .left-align .career-history-banner {
+    background: url(../assets/images/hero-images/index/career-path_lg.svg) center no-repeat;
+    height: 16em;
+    background-size: contain;
+  }
+  .page-wrapper .left-align .grid-container-6col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    grid-template-rows: repeat(2, auto);
+  }
+  .page-wrapper .left-align .grid-container-6col .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1em;
+  }
+  .page-wrapper .left-align .grid-container-6col .item .item-head {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90px;
+  }
+  .page-wrapper .left-align .grid-container-6col .item .item-head .item-icon {
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    background-color: #38389c;
+    border-radius: 8px;
+  }
+  .page-wrapper .editorial .split-header {
+    flex-direction: row;
+  }
+  .page-wrapper .editorial .profile-section {
+    flex-direction: row;
+  }
+  .page-wrapper .editorial .profile-section .profile-image-container {
+    width: 30%;
+  }
+  .page-wrapper .editorial .profile-section .profile-image-container .profile-image {
+    width: 260px;
+    max-width: 396px;
+    height: 270px;
+  }
+  .page-wrapper .grid-container-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    align-items: start;
+  }
   /* thankyou styles  */
   .thank-you-container {
     width: 40%;
@@ -620,6 +759,14 @@ ul li {
   }
 }
 @media only screen and (min-width: 992px) {
+  .page-wrapper .editorial .profile-section .profile-image-container {
+    width: 50%;
+  }
+  .page-wrapper .editorial .profile-section .profile-image-container .profile-image {
+    width: 270px;
+    height: 280px;
+    max-width: 396px;
+  }
   /* thankyou styles  */
   .thank-you-container {
     width: 30%;
@@ -639,18 +786,51 @@ ul li {
   .accordion-toggle {
     display: none;
   }
+  .page-wrapper .hero .primary-banner {
+    align-items: flex-start;
+  }
   .page-wrapper .hero .primary-banner .hero-content {
     position: relative;
     left: 5vw;
-    width: 35%;
+    width: 57%;
+    align-items: flex-start;
+  }
+  .page-wrapper .hero .primary-banner .hero-content .description {
+    max-width: unset;
+  }
+  .page-wrapper .hero .primary-banner .hero-content .two-button-container {
+    max-width: 400px;
+  }
+  .page-wrapper .hero .primary-banner .hero-content .two-button-container .primary-button,
+  .page-wrapper .hero .primary-banner .hero-content .two-button-container .secondary-button {
+    min-height: 42px;
+    min-width: 48px;
+    width: -webkit-fill-available;
+    padding: 0;
+    margin: 0;
+  }
+  .page-wrapper .editorial .profile-section {
+    justify-content: space-between;
+    display: flex;
+  }
+  .page-wrapper .editorial .profile-section .profile-image-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 30%;
+    display: flex;
+  }
+  .page-wrapper .editorial .profile-section .profile-image-container .profile-image {
+    width: 240px;
+    height: 240px;
+    max-width: 396px;
+  }
+  .page-wrapper .left-align .grid-container-6col {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
   .navbar-container {
     padding: 0 1em;
-  }
-  .page-wrapper .hero .primary-banner .hero-content {
-    width: 33.33%;
   }
 }
 @media only screen and (min-width: 1439px) {
@@ -773,15 +953,18 @@ ul li {
   .page-wrapper .hero .primary-banner {
     align-items: flex-start;
   }
-  .page-wrapper .hero .primary-banner .hero-content {
-    width: 26%;
-  }
   .page-wrapper .editorial {
     width: 90%;
   }
-  .page-wrapper .editorial .quote-text {
-    font-size: 1.5rem;
+  .page-wrapper .editorial blockquote.quote-text {
+    font-size: 1.8rem;
     line-height: 22pt;
+  }
+  .page-wrapper .editorial .profile-section .profile-image-container {
+    width: 20%;
+  }
+  .page-wrapper .editorial .grid-container-3col .card {
+    max-width: 28vw;
   }
 }
 @media only screen and (min-width: 1700px) {
@@ -790,16 +973,20 @@ ul li {
   }
   .page-wrapper .hero .primary-banner .hero-content {
     left: 15vw;
-    width: 23%;
+    padding: 2em;
+  }
+  .page-wrapper .hero .primary-banner .hero-content .description {
+    max-width: unset;
   }
   .page-wrapper .editorial {
     width: 70%;
   }
-}
-@media only screen and (min-width: 2450px) {
-  .page-wrapper .hero .primary-banner .hero-content {
-    width: 16%;
-    padding: 2em;
+  .page-wrapper .editorial .profile-section .profile-image-container {
+    width: 30%;
+  }
+  .page-wrapper .editorial .profile-section .profile-image-container .profile-image {
+    width: 246px;
+    height: 262px;
   }
 }
 
