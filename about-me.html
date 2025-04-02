@@ -49,22 +49,15 @@
       <link rel="stylesheet" href="styles/stylesheet.css" />
     </noscript>
 
-    <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner_md.webp" type="image/webp" />
     <link rel="preload" as="image" href="./assets/images/hero-images/index/UIUX-banner.webp" type="image/webp" />
     <style>
       .page-wrapper .hero .primary-banner {
-        background-image: url("./assets/images/hero-images/index/UIUX-banner_md.webp");
+        background-image: url(./assets/images/hero-images/index/UIUX-banner.webp);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
-      }
-
-      h3 {
-        color: #4e5deb;
-        font-size: 1.2rem;
-        font-weight: 500;
       }
       .career-history-banner {
         background: url(../assets/images/hero-images/index/career-path_sm.svg) center no-repeat;
@@ -74,7 +67,6 @@
       }
       @media only screen and (min-width: 1024px) {
         .page-wrapper .hero .primary-banner {
-          background-image: url("./assets/images/hero-images/index/UIUX-banner.webp");
           align-items: flex-start;
         }
         .page-wrapper .left-align .career-history-banner {
@@ -101,8 +93,7 @@
           max-height: 360px;
         }
         .editorial,
-        .editorial .left-align,
-        .editorial.purple-fill .project-section {
+        .editorial .left-align {
           width: 70%;
         }
       }
@@ -110,6 +101,8 @@
   </head>
 
   <body>
+    <div id="cursor-dot"></div>
+    <div id="btt-anchor"></div>
     <header id="navBar" class="navbar">
       <nav class="navbar-container">
         <a href="index.html" class="navbar-logo" aria-label="Home">
@@ -166,27 +159,20 @@
       </nav>
     </header>
 
-    <div id="btt-anchor"></div>
-
     <main>
       <div class="page-wrapper">
         <section class="hero">
           <div class="primary-banner">
-            <div class="hero-content lazysizes">
-              <div class="profile-image"></div>
-              <span class="expanded-headline">
-                <h1>About Me</h1>
+            <div class="hero-content">
+              <h1 class="primary-banner-heading">About Me</h1>
 
-                <p class="description">
-                  Im an experienced and qualified
-                  <span class="highlight-text">problem solver</span>
-                  , resourceful
-                  <span class="highlight-text">strategist</span>
-                  , and thoughtful
-                  <span class="highlight-text">visual communicator</span>
-                  .
-                </p>
-              </span>
+              <p class="description">
+                I'm an experienced and qualified <span class="highlight-text">problem solver</span>, passionate about
+                solving solutions that are both creative and functional. As a resourceful
+                <span class="highlight-text">strategist</span>, I focus on creating engaging designs that not only look
+                great but also deliver clear and intuitive user experiences.
+              </p>
+
               <div class="two-button-container">
                 <div class="primary-button">
                   <a href="contact-form.html">Lets Talk</a>
@@ -199,76 +185,62 @@
           </div>
         </section>
 
-        <section class="editorial lazysizes">
-          <p class="quote-text">
-            "If you make customers unhappy in the physical world, they might each tell six friends over time. If you
-            make customers unhappy on the internet, they can each tell 6,000 in seconds!"
-            <br />
-            <sub class="signature">- Jeff Bezos - Amazon Founder.</sub>
-          </p>
+        <section class="editorial">
+          <blockquote class="quote-text">
+            “The role of the designer is that of a good, thoughtful host anticipating the needs of his guests.”
+            <cite class="signature"><span class="name"> Charles Eames</span>, Visionary Designer & Innovator</cite>
+          </blockquote>
         </section>
 
         <section class="editorial left-align">
-          <h2>About Me</h2>
+          <h2 class="headline-text">About Me</h2>
           <p>
-            I blend experience and strategic design thinking to create visually compelling and functional experiences.
-            From user research to polished prototypes, I ensure seamless, user-friendly products.
+            With a blend of experience and strategic design thinking, I create visually captivating and functional
+            digital experiences. From comprehensive user research to polished prototypes, I focus on delivering
+            seamless, user-friendly products that exceed expectations.
           </p>
           <br />
           <p>
-            While earning my
-            <span class="highlight-text">First-Class BSc in Web Design &amp; Development</span>
-            , I was employed as a Student Mentor, honing skills in public speaking and teaching. As a father of two, I
-            believe in helping others succeed.
+            During my time earning a
+            <span class="highlight-text">First-Class BSc in Web Design &amp; Development</span>, I also worked as a
+            Student Mentor, sharpening my skills in public speaking and teaching. As a father of two, I am deeply
+            passionate about helping others grow and succeed, both professionally and personally.
           </p>
           <p>
-            I secured full-time employment before graduation, working with the
-            <span class="highlight-text">NHS</span>
-            on health apps, then for a global corporation, creating marketing strategies for brands like
-            <span class="highlight-text">Calvin Klein</span>
-            ,
-            <span class="highlight-text">Adidas</span>
-            , and
-            <span class="highlight-text">Versace</span>
-            .
+            Before graduating, I secured full-time employment and began working with the
+            <span class="highlight-text">NHS</span> on health apps. My career then took me to a global corporation,
+            where I contributed to marketing strategies for brands like
+            <span class="highlight-text">Calvin Klein</span>, <span class="highlight-text">Adidas</span>, and
+            <span class="highlight-text">Versace</span>.
           </p>
           <p>
-            Recently, as
-            <span class="highlight-text">Senior UX/UI Designer</span>
-            for a data aggregation business, I led the design of an e-commerce platform used by the
-            <span class="highlight-text">UK Police</span>
-            ,
-            <span class="highlight-text">MI5</span>
-            , and some major banks and insurers too. The company won the
-            <span class="highlight-text">Prince’s Trust for Innovation</span>
-            during my tenure.
+            Most recently, as a <span class="highlight-text">Senior UX/UI Designer</span> for a data aggregation
+            company, I led the design of a highly secure e-commerce platform used by organizations such as the
+            <span class="highlight-text">UK Police</span>, <span class="highlight-text">MI5</span>, and leading banks
+            and insurers. During my tenure, the company was awarded the
+            <span class="highlight-text">Prince’s Trust for Innovation</span>.
           </p>
           <br />
           <p>
-            I also took on a
-            <span class="highlight-text">Pro-Bono</span>
-            project and as such a lead role in the re-design and development of a local charity website in my spare time
-            which help them achieve a greater online presence, modern communication tool and more importantly secured
-            funding from the
-            <span class="highlight-text">National Lottery</span>
-            and other investors.
+            In addition to my professional work, I took on a <span class="highlight-text">Pro-Bono</span> project,
+            leading the redesign and development of a local charity’s website. This initiative helped the organization
+            improve its online presence, enhance communication with its community, and secure funding from the
+            <span class="highlight-text">National Lottery</span> and other investors.
           </p>
 
           <p>
-            I approach design with a mix of
-            <span class="highlight-text">creativity</span>
-            and
-            <span class="highlight-text">data-driven</span>
-            insights, always aiming to simplify user journeys and drive engagement. My focus is on creating meaningful,
-            user-centric solutions that make a tangible difference. Looking ahead, I’m excited to continue using my
-            skills to design innovative digital experiences that solve real-world challenges.
+            My design approach is grounded in a balance of <span class="highlight-text">creativity</span> and
+            <span class="highlight-text">data-driven</span> insights, with a constant focus on simplifying user journeys
+            and fostering meaningful engagement. I am committed to crafting user-centric solutions that solve real-world
+            challenges and drive innovation. Looking ahead, I’m excited to continue leveraging my skills to shape
+            digital experiences that make a positive, lasting impact.
           </p>
         </section>
 
         <section class="editorial left-align lazysizes">
           <div class="split-header">
             <div class="title-col">
-              <h2>Experience</h2>
+              <h2 class="headline-text">Experience</h2>
             </div>
             <a
               class="primary-button"
@@ -285,7 +257,7 @@
         <!-- Skills and Achievements section -->
 
         <section class="editorial left-align lazysizes">
-          <h2>Achievements &amp; Skills</h2>
+          <h2 class="headline-text">Achievements &amp; Skills</h2>
           <div class="grid-container-2col">
             <div class="grid-item">
               <h3>Qualifications</h3>

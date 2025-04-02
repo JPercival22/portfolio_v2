@@ -254,11 +254,10 @@ h2 {
 }
 
 h3 {
-  color: $color_brand;
+  color: #27329f;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 0.5rem;
 }
 
 p {
@@ -564,9 +563,14 @@ ul {
           &.signature {
             font-style: italic;
             font-size: 16px;
+            line-height: 22pt;
             color: #555;
             display: inline;
             vertical-align: sub;
+            .name {
+              font-style: normal;
+              font-weight: 600;
+            }
           }
         }
       }
@@ -1119,6 +1123,7 @@ ul {
     .hero .primary-banner .hero-content {
       left: 15vw;
       padding: 2em;
+      width: 37%;
       .description {
         max-width: unset;
       }
