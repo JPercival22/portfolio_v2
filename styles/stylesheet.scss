@@ -243,16 +243,33 @@ h2 {
   font-weight: 500;
   line-height: 1;
   margin-bottom: 0.7rem;
+  &.headline-text {
+    font-size: 1.68rem;
+    margin-top: 0;
+  }
+  &.intro-text {
+    font-size: 2.6rem;
+    margin-top: 0;
+  }
+}
+
+h3 {
+  color: $color_brand;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 
 p {
+  color: $color_primary_text;
   font-size: 1rem;
   font-weight: 300;
   line-height: 15pt;
   letter-spacing: 0.55pt;
   margin: 0;
   .highlight-text {
-    color: #4e5deb;
+    color: #38389c;
     font-weight: 400;
   }
 }
@@ -461,7 +478,6 @@ ul {
 }
 
 .page-wrapper {
-  padding-bottom: 1em;
   padding-top: 4em;
   @include apply-flex-styles($flex-col-center);
   gap: 1em;
@@ -478,10 +494,10 @@ ul {
       background-color: #fff;
       border-radius: 25px;
       gap: 1em;
-      width: 80%;
+      width: 90%;
       box-shadow: $b-shadow;
-      h1 {
-        font-size: 2.5rem; /* Make it more prominent */
+      .primary-banner-heading {
+        font-size: 2rem;
         font-weight: 500;
         color: $color-brand;
         margin-bottom: 0.5rem;
@@ -489,7 +505,7 @@ ul {
       .expanded-headline {
         font-size: 1.2rem;
         .highlight-text {
-          color: #4e5deb;
+          color: #38389c;
         }
       }
       .description {
@@ -505,7 +521,7 @@ ul {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 1em;
 
         .primary-button,
@@ -534,28 +550,66 @@ ul {
       display: flex;
       align-items: flex-start;
     }
-    .quote-text {
+    blockquote {
+      margin: 0;
+      padding: 0;
+      &.quote-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 1.2rem;
+        font-style: italic;
+        gap: 1em;
+        cite {
+          &.signature {
+            font-style: italic;
+            font-size: 16px;
+            color: #555;
+            display: inline;
+            vertical-align: sub;
+          }
+        }
+      }
+    }
+    .profile-section {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
-      font-size: 1.2rem;
-      font-style: italic;
-      gap: 1em;
-
-      .signature {
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.2; /* Adjusted from 0.1pt to avoid collapse */
-        display: inline; /* Ensures `vertical-align` applies */
-        vertical-align: sub; /* Keeps the subscript styling */
+      justify-content: space-between;
+      margin-bottom: 2em;
+      gap: 2em;
+      .profile-image-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .profile-image {
+          background: url("../assets/images/hero-images/index/profile-img.webp") no-repeat center;
+          background-size: contain;
+          width: 100%;
+          max-width: 396px;
+          height: 56vh;
+          border-radius: 0 0 90px 0;
+          background-color: #fdf5ea42;
+        }
+      }
+      .profile-content {
+        grid-column-gap: 3rem;
+        grid-row-gap: 3rem;
+        flex-flow: column;
+        align-items: flex-start;
+        display: flex;
+        .profile-text {
+          grid-row-gap: 1.5rem;
+          flex-flow: column;
+          display: flex;
+        }
       }
     }
 
     .split-header {
-      @include apply-flex-styles($flex-row-center-space_between);
+      @include apply-flex-styles($flex-col-center-space_between);
       align-items: flex-start;
       width: -webkit-fill-available;
+      gap: 1em;
       .title-col {
         flex: 60%;
       }
@@ -621,6 +675,23 @@ ul {
   .item {
     @include apply-flex-styles($flex-col-start-start);
     gap: 1em;
+    .item-head {
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      justify-content: flex-start;
+      align-items: center;
+      display: flex;
+      .item-icon {
+        flex: none;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        background-color: #38389c;
+        border-radius: 8px;
+      }
+    }
   }
 }
 
@@ -748,6 +819,61 @@ ul {
     }
   }
 
+  .page-wrapper {
+    .left-align {
+      .career-history-banner {
+        background: url(../assets/images/hero-images/index/career-path_lg.svg) center no-repeat;
+        height: 16em;
+        background-size: contain;
+      }
+      .grid-container-6col {
+        @include apply-grid-styles($grid-2col-auto);
+        grid-template-rows: repeat(2, auto);
+        .item {
+          @include apply-flex-styles($flex-col-start-start);
+          gap: 1em;
+          .item-head {
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            @include apply-flex-styles($flex-row-center-space_between);
+            min-height: 90px;
+            .item-icon {
+              flex: none;
+              justify-content: center;
+              align-items: center;
+              width: 48px;
+              height: 48px;
+              display: flex;
+              background-color: #38389c;
+              border-radius: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    .editorial {
+      .split-header {
+        flex-direction: row;
+      }
+      .profile-section {
+        flex-direction: row;
+        .profile-image-container {
+          width: 30%;
+          .profile-image {
+            width: 260px;
+            max-width: 396px;
+            height: 270px;
+          }
+        }
+      }
+    }
+
+    .grid-container-3col {
+      @include apply-grid-styles($grid-3col-auto);
+      align-items: start;
+    }
+  }
   /* thankyou styles  */
   .thank-you-container {
     width: 40%;
@@ -757,6 +883,14 @@ ul {
 }
 
 @media only screen and (min-width: 992px) {
+  .page-wrapper .editorial .profile-section .profile-image-container {
+    width: 50%;
+    .profile-image {
+      width: 270px;
+      height: 280px;
+      max-width: 396px;
+    }
+  }
   /* thankyou styles  */
   .thank-you-container {
     width: 30%;
@@ -778,23 +912,53 @@ ul {
   }
 
   .page-wrapper {
-    .hero .primary-banner .hero-content {
-      position: relative;
-      left: 5vw;
-      width: 35%;
+    .hero .primary-banner {
+      align-items: flex-start;
+      .hero-content {
+        position: relative;
+        left: 5vw;
+        width: 57%;
+        align-items: flex-start;
+        .description {
+          max-width: unset;
+        }
+        .two-button-container {
+          max-width: 400px;
+          .primary-button,
+          .secondary-button {
+            min-height: 42px;
+            min-width: 48px;
+            width: -webkit-fill-available;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .editorial .profile-section {
+      justify-content: space-between;
+      display: flex;
+      .profile-image-container {
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 30%;
+        display: flex;
+        .profile-image {
+          width: 240px;
+          height: 240px;
+          max-width: 396px;
+        }
+      }
+    }
+    .left-align .grid-container-6col {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .navbar-container {
     padding: 0 1em;
-  }
-
-  .page-wrapper .hero .primary-banner {
-    .hero-content {
-      width: 33.33%;
-    }
   }
 }
 
@@ -928,15 +1092,20 @@ ul {
     margin: unset;
     .hero .primary-banner {
       align-items: flex-start;
-      .hero-content {
-        width: 26%;
-      }
     }
     .editorial {
       width: 90%;
-      .quote-text {
-        font-size: 1.5rem;
-        line-height: 22pt;
+      blockquote {
+        &.quote-text {
+          font-size: 1.8rem;
+          line-height: 22pt;
+        }
+      }
+      .profile-section .profile-image-container {
+        width: 20%;
+      }
+      .grid-container-3col .card {
+        max-width: 28vw;
       }
     }
   }
@@ -949,17 +1118,20 @@ ul {
   .page-wrapper {
     .hero .primary-banner .hero-content {
       left: 15vw;
-      width: 23%;
+      padding: 2em;
+      .description {
+        max-width: unset;
+      }
     }
     .editorial {
       width: 70%;
+      .profile-section .profile-image-container {
+        width: 30%;
+        .profile-image {
+          width: 246px;
+          height: 262px;
+        }
+      }
     }
-  }
-}
-
-@media only screen and (min-width: 2450px) {
-  .page-wrapper .hero .primary-banner .hero-content {
-    width: 16%;
-    padding: 2em;
   }
 }
