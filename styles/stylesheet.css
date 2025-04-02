@@ -77,11 +77,10 @@ h2.intro-text {
 }
 
 h3 {
-  color: #2c4465;
+  color: #27329f;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 0.5rem;
 }
 
 p {
@@ -415,9 +414,14 @@ ul li {
 .page-wrapper .editorial blockquote.quote-text cite.signature {
   font-style: italic;
   font-size: 16px;
+  line-height: 22pt;
   color: #555;
   display: inline;
   vertical-align: sub;
+}
+.page-wrapper .editorial blockquote.quote-text cite.signature .name {
+  font-style: normal;
+  font-weight: 600;
 }
 .page-wrapper .editorial .profile-section {
   display: flex;
@@ -974,6 +978,7 @@ ul li {
   .page-wrapper .hero .primary-banner .hero-content {
     left: 15vw;
     padding: 2em;
+    width: 37%;
   }
   .page-wrapper .hero .primary-banner .hero-content .description {
     max-width: unset;

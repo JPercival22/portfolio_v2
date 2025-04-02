@@ -64,11 +64,6 @@
         font-weight: 500;
       }
 
-      h3 {
-        color: #4e5deb;
-        font-size: 1.2rem;
-        font-weight: 500;
-      }
       .form {
         display: flex;
         flex-direction: column;
@@ -271,9 +266,7 @@
         justify-content: flex-start;
       }
       .contact-info .info-card .item .header {
-        border-bottom: 1px solid #d4d4d4;
         margin-bottom: 1em;
-        width: -webkit-fill-available;
       }
       .contact-info .info-card .item .information {
         display: flex;
@@ -496,17 +489,15 @@
       <div class="page-wrapper">
         <section class="hero">
           <div class="primary-banner">
-            <div class="hero-content lazysizes">
-              <span class="expanded-headline">
-                <h1>Let's Connect</h1>
-                <p class="description">
-                  Have a
-                  <span class="highlight-text">project in mind</span>
-                  or just want to chat? Whether you're a startup, a global brand, or a charity, I'm
-                  <span class="highlight-text">always open to new opportunities</span>
-                  to create impactful digital experiences.
-                </p>
-              </span>
+            <div class="hero-content">
+              <h1 class="primary-banner-heading">Let's Connect</h1>
+              <p class="description">
+                Have a
+                <span class="highlight-text">project in mind</span>
+                or just want to chat? Whether you're a startup, a global brand, or a charity, I'm
+                <span class="highlight-text">always open to new opportunities</span>
+                to create impactful digital experiences.
+              </p>
               <div class="two-button-container">
                 <div class="primary-button">
                   <a href="mailto:joseph.m.percival@gmail.com">Email Me</a>
@@ -518,19 +509,18 @@
             </div>
           </div>
         </section>
-
         <section class="editorial">
-          <p class="quote-text">
-            "Great design isn’t just about making it look good – it’s about solving problems and driving success. Let’s
-            build something that works for your business."
-          </p>
+          <blockquote class="quote-text">
+            “Great design isn’t just about looks; it’s about solving problems and driving success.”
+            <cite class="signature"><span class="name">Myself</span>, UX &amp; UI Designer</cite>
+          </blockquote>
         </section>
 
         <section class="editorial">
           <!-- <div class="form-container"> -->
           <div class="form">
             <div class="contact-info">
-              <h2>Let's get in touch</h2>
+              <h2 class="headline-text">Let's get in touch</h2>
               <p>Drop me a message, and let’s build something amazing together.</p>
               <p>You can contact me using any of the links below or using the form to send me a message.</p>
               <div class="info-card">
@@ -577,7 +567,7 @@
                 <input type="hidden" name="_next" value="/thank-you.html" />
                 <input type="hidden" name="_subject" value="New Email From Portfolio" />
 
-                <h2 class="title">Contact Me</h2>
+                <h2 class="headline-text">Contact Me</h2>
                 <p>
                   Feel free to send me a message, I typically responds within
                   <span class="emphasis"><i>2 hours</i></span>

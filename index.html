@@ -80,6 +80,34 @@
         align-items: flex-start;
         justify-content: center;
       }
+      .project-section .card .chip-container {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-top: 1em;
+      }
+      .project-section .card .chip-container .chip {
+        background-color: #38389c;
+        color: #fff;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 16px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+      }
+      .project-section .card .chip-container .chip:hover {
+        background-color: darken(#38389c, 10%);
+        transform: scale(1.05);
+      }
+      .project-subtitle {
+        font-size: 1rem;
+        color: #666;
+        font-style: italic;
+        margin-top: -5px;
+      }
+
       .project-section .card .image-container {
         width: 100%;
         height: 300px;
@@ -274,7 +302,7 @@
         <section class="editorial">
           <blockquote class="quote-text">
             “A user interface is like a joke. If you ever have to explain it, then it’s not that good.”
-            <cite class="signature"> Martin LeBlanc, Designer & CEO of Iconfinder.</cite>
+            <cite class="signature"><span class="name">Martin LeBlanc</span>, Designer & CEO of Iconfinder.</cite>
           </blockquote>
         </section>
 
@@ -427,8 +455,13 @@
             <div class="grid-container-3col">
               <a class="card" href="/come-together.html" aria-label="Explore Come Together Hub Ltd Case study">
                 <div class="image-container come-together-banner"></div>
+                <div class="chip-container">
+                  <div class="chip">UX &amp; UI Design</div>
+                  <div class="chip">UX Testing</div>
+                  <div class="chip">Development</div>
+                </div>
                 <h2>Come Together Hub Ltd.</h2>
-                <p>Bespoke Design (UX&amp;UI) &amp; Development.</p>
+                <p class="project-subtitle">Bespoke UX &amp; UI Design &amp; Development (Pro-Bono).</p>
               </a>
 
               <a
@@ -437,14 +470,27 @@
                 aria-label="Read Synalogik Innovative Solutions Ltd. iOS App Design case study"
               >
                 <div class="image-container syn-banner"></div>
+
+                <div class="chip-container">
+                  <div class="chip">UX &amp; UI Design</div>
+                  <div class="chip">UX Testing</div>
+                  <div class="chip">E-Commerce</div>
+                </div>
+
                 <h2>Synalogik Solutions Ltd.</h2>
-                <p>E-Commerce iOS App Design (UX &amp; UI).</p>
+                <p class="project-subtitle">iOS App Design for E-Commerce (UX &amp; UI).</p>
               </a>
 
               <a class="card" href="/guitar-tutorial.html" aria-label="Explore Guitar Tutorials Case Study">
                 <div class="image-container just-speak-banner"></div>
-                <h2>Just Speak Guitar Tutorials.</h2>
-                <p>Voice Recognition Research Project (UX &amp; UI).</p>
+                <div class="chip-container">
+                  <div class="chip">UX & UI</div>
+                  <div class="chip">User Testing</div>
+                  <div class="chip">Voice Recognition</div>
+                </div>
+
+                <h2>Just Speak Guitar Tutorials</h2>
+                <p class="project-subtitle">A UX & UI Voice Recognition Research Project.</p>
               </a>
             </div>
             <!-- end of grid container  -->
