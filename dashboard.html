@@ -283,21 +283,19 @@
               <div class="item">
                 <h3>Background</h3>
                 <p>
+                  SCOUT is
                   <a
                     class="text-link"
                     href="https://synalogik.com/"
                     target="_blank"
                     rel="noopener"
                     title="Visit Synalogik Innovative Solutions Ltd"
-                    >Synalogik Innovative Solutions Ltd</a
+                    >Synalogik’s</a
                   >
-                  is a UK-based data aggregator supporting government, law enforcement, and national security agencies.
-                  It also serves financial institutions, including banks, betting, and insurance organisations.
-                </p>
-                <p>
-                  The organisations flagship platform SCOUT lacked a dashboard, limiting users ability to track task
-                  progress or KPIs effectively. Feedback from clients highlighted the need for a clear, interactive
-                  dashboard to boost operational insight.
+                  flagship intelligence platform, used by analysts and fraud investigators to streamline task-based
+                  operations. As part of a broader UI overhaul, I designed a new dashboard experience that would act as
+                  a control centre of which, surfaced high-priority tasks, providing status updates, and aligning team
+                  efforts at a glance.
                 </p>
               </div>
 
@@ -327,7 +325,9 @@
                 <h3>Solution</h3>
                 <p>
                   Created a modular, interactive dashboard showing task stats, team overview, and actionable insights to
-                  help users track KPIs and coordinate work better.
+                  help users track KPIs and coordinate work better. This dashboard was intended asa control center for
+                  analysts. The overarchinhg goal was to provide a clear, interactive dashboard that reduce cognitive
+                  load and gave key insights at a glance
                 </p>
               </div>
             </div>
@@ -346,23 +346,29 @@
             </div>
             <h2>Dashboard Development</h2>
             <p>
-              To understand user needs, I conducted informal interviews and brainstorming sessions with key clients and
-              internal stakeholders. This revealed a strong desire for a centralized, easy-to-use dashboard to track
-              tasks and KPIs.
+              At the time of designing the dashboard, I didn’t have direct access to end-users. Instead, I worked
+              closely with stakeholders, internal subject-matter experts, and existing product behaviour to understand
+              user needs.
             </p>
             <p>
-              Existing tools were fragmented, causing frustration and inefficiencies. Without a dedicated PM, user input
-              was vital to guide design priorities quickly and effectively.
+              I conducted informal discovery sessions to define the role this dashboard should play: it needed to
+              present a clear overview of task statuses and facilitate quicker decision-making for live cases.
+            </p>
+            <p>The design approach was informed by:</p>
+            <ul>
+              <li>Existing user workflows in the SCOUT platform.</li>
+              <li>Feedback from client demo sessions.</li>
+              <li>Repeated internal reviews with analysts and engineers.</li>
+            </ul>
+            <p>
+              While this approach offered valuable insight, the absence of structured user validation meant some
+              usability challenges weren’t identified until later. Simple moderated walkthroughs or low-fidelity
+              prototype testing would have helped surface issues earlier and strengthened alignment with real-world
+              tasks.
             </p>
             <p>
-              The goal was to create a prototype that would enable users to track KPIs, monitor teams, and gain control
-              over their daily operations. This involved understanding user needs, defining key features, and designing
-              an intuitive interface.
-            </p>
-            <h3>Initial Assumptions</h3>
-            <p>
-              I began with the assumption that users needed high-level metrics upfront, but early client feedback
-              quickly expanded focus to team visibility and task interactivity.
+              In future projects, I now build lightweight validation into early concepting to reduce assumptions and
+              improve confidence in layout decisions. A direct learning taken from this phase.
             </p>
 
             <h2>Research 1.1</h2>
@@ -407,101 +413,76 @@
             <h2>Research 1.2</h2>
             <h3>Understanding User Expectations</h3>
             <p>
-              User interviews revealed key insights into expectations for online shopping. Engaging a diverse range of
-              users, we explored:
+              After completing the industry and competitor research, I shifted focus to internal knowledge and early
+              client feedback. SCOUT was already embedded in investigative workflows, so I needed to understand how a
+              new dashboard could support users in their daily operations.
             </p>
-
+            <p>
+              Without a product manager, I led informal interviews with stakeholders and reviewed support tickets, user
+              notes, and onboarding feedback. I looked for consistent patterns across analysts, team leads, and managers
+              to identify what users needed but weren’t getting.
+            </p>
+            <p>
+              The outcome was clear. Users weren’t asking for more features. They wanted clarity. They needed a quick,
+              actionable summary of their tasks, team activity, and performance indicators, all surfaced in a single
+              view.
+            </p>
+            <h3>Key Findings</h3>
             <ul>
               <li>
-                <span class="emphasis">Desires:</span>
-                Key features users look for to enhance the online shopping experience.
+                <span class="emphasis">Performance Visibility:</span>
+                Users needed to know whether teams were meeting targets without relying on manual reports.
               </li>
               <li>
-                <span class="emphasis">Pain Points:</span>
-                Common frustrations and barriers users encounter during online shopping.
+                <span class="emphasis">Live Task Tracking:</span>
+                Real-time context around ongoing cases helped teams focus on priorities.
               </li>
               <li>
-                <span class="emphasis">Preferences:</span>
-                Features that improve usability, speed, and overall satisfaction.
+                <span class="emphasis">Time Awareness:</span>
+                A lack of meeting and deadline visibility was causing delays and duplication of effort.
               </li>
               <li>
-                <span class="emphasis">Device:</span>
-                Since clients provided senior employees with Apple products, the prototype was designed with iOS
-                standards. Future updates will support all devices, depending on corporate needs.
+                <span class="emphasis">Ownership &amp; Accountability:</span>
+                Knowing who was working on what reduced confusion and helped avoid overlap.
               </li>
             </ul>
+            <h3>User Snapshot</h3>
+            <p>
+              To capture these insights, I created a simple table mapping key roles with their pain points and goals:
+            </p>
+
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1em">
+              <thead>
+                <tr style="background-color: #c9e1ff; text-align: left">
+                  <th style="padding: 0.75rem; border-bottom: 1px solid #ddd; font-weight: 500">Role</th>
+                  <th style="padding: 0.75rem; border-bottom: 1px solid #ddd; font-weight: 500">Frustration</th>
+                  <th style="padding: 0.75rem; border-bottom: 1px solid #ddd; font-weight: 500">Desired Outcome</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 0.75rem; border-top: 1px solid #ddd">Team Lead</td>
+                  <td style="padding: 0.75rem; border-top: 1px solid #ddd">Lack of insight into team KPIs</td>
+                  <td style="padding: 0.75rem; border-top: 1px solid #ddd">Clear view of team performance</td>
+                </tr>
+                <tr class="" style="background-color: #f0f6ff">
+                  <td style="padding: 0.75rem; border-top: 1px solid #ddd">Analyst</td>
+                  <td style="padding: 0.75rem; border-top: 1px solid #ddd">Missed meetings and progress updates</td>
+                  <td style="padding: 0.75rem; border-top: 1px solid #ddd">Task-level clarity and reminders</td>
+                </tr>
+                <tr style="background-color: #ffffff">
+                  <td style="padding: 0.75rem; border-top: 1px solid #ddd">Manager</td>
+                  <td style="padding: 0.75rem; border-top: 1px solid #ddd">No access to live reporting</td>
+                  <td style="padding: 0.75rem; border-top: 1px solid #ddd">High-level stats and performance charts</td>
+                </tr>
+              </tbody>
+            </table>
 
             <p>
-              These findings helped validate our initial assumptions, providing a deeper understanding of user
-              behaviour, frustrations, and preferences. They were crucial in shaping the platform’s design, ensuring a
-              seamless and user-centric experience. The following Affinity Mapping conveys the research study.
+              This research helped define the dashboard’s priorities. It had to provide visibility, reduce noise, and
+              support alignment without adding complexity. These early insights became the foundation for design
+              decisions in the following stages.
             </p>
-
-            <p class="hide-sm">Click the image to enlarge.</p>
-
-            <div class="grid-container-1col">
-              <div class="image-container lightbox-img-trigger">
-                <figure class="gallery" data-index="1">
-                  <img
-                    class="lazyload"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                    data-src="./assets/images/Case-Studies/CS2/planning/SynUser-Interview-Affinity-Map.svg"
-                    alt="User Interviews Affinity Map"
-                    width="150"
-                    height="300"
-                  />
-                  <p>User Interviews Affinity Map</p>
-                </figure>
-                <div class="lightbox lightbox_1">
-                  <div class="lightbox-content w-85 w-80a w-50b">
-                    <div class="header">
-                      <h4>User Affinity Mapping</h4>
-                      <button type="button" id="close-btn_1" class="close-btn">&times;</button>
-                    </div>
-                    <img
-                      src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      alt="User Interviews Affinity Map"
-                    />
-                    <p>User Interviews Affinity Map</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p>Users emphasised the following aspects in the design:</p>
-            <ul>
-              <li>
-                <span class="emphasis">Visuals:</span>
-                Strong interest in high-resolution product images and easily digestible information.
-              </li>
-              <li>
-                <span class="emphasis">Top Bar:</span>
-                Clear, accessible top bar for essential navigation.
-              </li>
-              <li>
-                <span class="emphasis">Navigation System:</span>
-                A simple, logical system for ease of use.
-              </li>
-              <li>
-                <span class="emphasis">Home Page Categorisation:</span>
-                Effective categorisation for better user orientation.
-              </li>
-              <li>
-                <span class="emphasis">Marketing and Best Offers:</span>
-                Clear presentation of marketing content and best offers to attract and retain users.
-              </li>
-              <li>
-                <span class="emphasis">Product Cards:</span>
-                Minimal text to prevent information overload.
-              </li>
-              <li>
-                <span class="emphasis">Form Design:</span>
-                Clear and intuitive forms to streamline user interactions.
-              </li>
-            </ul>
-
-            <h3>Overview</h3>
-            <p>User insights shaped a more engaging, intuitive platform tailored for Synalogik's audience.</p>
           </section>
 
           <section
@@ -510,178 +491,86 @@
             class="editorial lazyload lazyblurry border-gradient -research_border"
           >
             <h2>Research 1.3</h2>
-            <h3>User Persona Development</h3>
+            <h3>Affinity Mapping</h3>
             <p>
-              Qualitative data from user interviews, produced the following detailed persona, which captures our target
-              audiences key traits, needs, and challenges. This guided design decisions, ensuring solutions were
-              relevant, impactful, and user-focused.
+              To organise early feedback from stakeholders and onboarding sessions, I created a lightweight affinity
+              map. This helped surface recurring needs and frustrations without slowing the project down with formal
+              personas or journey maps.
             </p>
-            <p class="hide-sm">Please click the image to enlarge it</p>
+            <p>
+              Instead of assumptions, insights were clustered directly from real comments. This kept priorities focused
+              and allowed for rapid, evidence-based decisions.
+            </p>
 
             <div class="grid-container-1col">
-              <div class="image-container lightbox-img-trigger">
-                <figure class="gallery" data-index="1a">
+              <div class="image-container">
+                <figure class="gallery">
                   <img
                     class="lazyload"
                     src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                    data-src="./assets/images/Case-Studies/CS2/planning/persona.svg"
-                    alt="User Persona"
-                    width="150"
-                    height="300"
+                    data-src="./assets/images/Case-Studies/CS4/Banners/affinity-map_Dashboard.webp"
+                    alt="Low Fidelity Design - Home Page Layout."
+                    width="204"
+                    height="1110"
                   />
-                  <p>User Persona</p>
+                  <figcaption>Affinity Map</figcaption>
                 </figure>
-                <div class="lightbox lightbox_1a">
-                  <div class="lightbox-content w-85 w-80a w-60b">
-                    <div class="header">
-                      <h4>User Persona</h4>
-                      <button type="button" id="close-btn_1a" class="close-btn">&times;</button>
-                    </div>
-                    <img
-                      src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      alt="User Interviews Affinity Map"
-                    />
-                    <p>Qualitative User Persona</p>
-                  </div>
-                </div>
               </div>
             </div>
-          </section>
 
+            <h3>Key Findings</h3>
+            <ul>
+              <li>
+                <span class="emphasis">Clarity &amp; Complexity:</span><br />
+                Users valued clean layouts, stronger visual cues, and clear iconography.
+              </li>
+              <li>
+                <span class="emphasis">Live Visibility:</span><br />
+                Tracking tasks, seeing team activity, and staying ahead of meetings were top priorities.
+              </li>
+              <li>
+                <span class="emphasis">Flexible Control</span><br />
+                Custom views and better export options were commonly requested.
+              </li>
+              <li>
+                <span class="emphasis">Main Frustrations</span><br />
+                Pale colours, slow data refresh, hidden details, and cluttered layouts blocked efficiency.
+              </li>
+            </ul>
+            <p>These clear, actionable and grounded key findings helped the dashboards early direction.</p>
+          </section>
           <section
             id="research"
             data-color="research_border"
             class="editorial lazyload lazyblurry border-gradient -research_border"
           >
-            <h2>Research 1.4</h2>
-            <h3>Customer Journey Mapping</h3>
-            <p>
-              The customer journey map outlines the steps users take on an e-commerce site, from their initial search to
-              browsing product lists, viewing product details, adding items to the basket, and checking out. This map
-              provides valuable insights into user expectations and experiences at each stage.
-            </p>
-            <p>
-              By understanding users' emotions and expectations at each stage, we can identify pain points, areas for
-              improvement, and what users value most. This helps us create a more user-friendly and engaging platform
-              that effectively meets their needs.
-            </p>
-
-            <p class="hide-sm">Click the image to enlarge.</p>
-
-            <div class="grid-container-1col">
-              <div class="image-container lightbox-img-trigger">
-                <figure class="gallery" data-index="2">
-                  <img
-                    class="lazyload"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                    data-src="./assets/images/Case-Studies/CS2/planning/Customer-Journey.svg"
-                    alt="Customer Journey Map showing the stages of user interaction"
-                    width="500"
-                    height="360"
-                  />
-                  <p>Customer Journey Map</p>
-                </figure>
-                <div class="lightbox lightbox_2">
-                  <div class="lightbox-content w-85 w-80a w-60b">
-                    <div class="header">
-                      <h4>Customer Journey Map</h4>
-                      <button type="button" id="close-btn_2" class="close-btn">&times;</button>
-                    </div>
-                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC" alt="Customer Journey Map" />
-                    <p>Customer Journey Map</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section
-            id="architecture"
-            data-color="IA_border"
-            class="editorial lazyload lazyblurry border-gradient -IA_border"
-          >
-            <div class="split-header">
-              <div class="title-col hide-sm">
-                <h2>Information Architecture</h2>
-              </div>
-              <div class="header-banner IA-banner lazyload lazyblurry"></div>
-            </div>
-            <p>
-              Information architecture (IA) plays a crucial role in UX design by organising content for efficient and
-              intuitive navigation. It ensures users can easily find information through a logical structure. For this
-              project, IA decisions were based on user needs, business goals, and patterns from similar platforms.
-            </p>
-
-            <p>Key IA elements included:</p>
+            <h2>Research Summary</h2>
             <ul>
               <li>
-                <span class="emphasis">System Navigation:</span>
-                Designed to guide users with minimal cognitive load, enhancing efficiency and supporting business
-                objectives such as conversions for example.
+                <strong>Gained insight from indirect sources:</strong> Used stakeholder interviews and onboarding
+                feedback to uncover real user needs despite no direct access.
               </li>
+
               <li>
-                <span class="emphasis">Site Maps:</span>
-                Provided a clear structure for intuitive navigation, aligning with both user needs and business goals.
+                <strong>Kept synthesis lean and actionable:</strong> Affinity mapping replaced formal personas, enabling
+                fast, focused design decisions under tight deadlines.
+              </li>
+
+              <li>
+                <strong>Adapted to constraints:</strong> Worked without a product manager or researchers by prioritising
+                SME reviews and planning future validation rounds.
+              </li>
+
+              <li>
+                <strong>Committed to early validation going forward:</strong> Learned to embed lightweight user testing
+                early to reduce assumptions and rework.
+              </li>
+
+              <li>
+                <strong>Focused on clarity over features:</strong> Users wanted simplicity and quick insights, not added
+                complexity—this shaped the dashboard’s scope.
               </li>
             </ul>
-
-            <div class="tab-container" id="tabContainer1">
-              <div class="tab-buttons">
-                <button type="button" class="tab-button active" data-target="tab1">System Navigation</button>
-                <button type="button" class="tab-button" data-target="tab2">Site Map</button>
-              </div>
-              <div class="tab-contents">
-                <div id="tabContent30" class="tab-module" data-title="Tab 1">
-                  <h3>System Navigation</h3>
-                  <p>
-                    The navigation is designed to be user-centric and intuitive, ensuring efficient, logical flow that
-                    facilitates smooth interactions and goal achievement.
-                  </p>
-
-                  <div class="centered-row">
-                    <div class="image-container">
-                      <figure class="gallery no-border">
-                        <img
-                          class="lazyload no-border"
-                          src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                          data-src="./assets/images/Case-Studies/CS2/planning/Nav-System.svg"
-                          alt="Navigation System IA Design"
-                          width="503"
-                          height="260"
-                        />
-                        <figcaption>Navigation System Design</figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="tabContent31" class="tab-module" data-title="Tab 2">
-                  <h3>Site Maps</h3>
-                  <p>
-                    Site Maps offer a clear representation of the website’s structure, illustrating the page hierarchy
-                    and connections between sections. They were pivotal in refining navigation pathways, supporting a
-                    cohesive user flow and ensuring the platform’s architecture aligns with both user needs and business
-                    objectives.
-                  </p>
-
-                  <div class="centered-row">
-                    <div class="image-container">
-                      <figure class="gallery no-border">
-                        <img
-                          class="lazyload no-border"
-                          src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                          data-src="./assets/images/Case-Studies/CS2/planning/siteMap.svg"
-                          alt="Site Map"
-                          width="503"
-                          height="260"
-                        />
-                        <figcaption>Site Map IA Design</figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </section>
 
           <section
@@ -691,248 +580,36 @@
           >
             <div class="split-header">
               <div class="title-col hide-sm">
-                <h2>Interaction Design</h2>
+                <h2>Design Strategy</h2>
               </div>
               <div class="header-banner Interaction-banner lazyload lazyblurry"></div>
             </div>
+            <h2>Design Strategy</h2>
             <p>
-              Interaction design shapes the user experience by defining how they engage with a product or system. Task
-              flows and user maps are essential tools that map out the steps needed to achieve specific goals. By
-              designing these flows, we create intuitive, efficient journeys that align with user needs, enhancing
-              satisfaction and reducing friction.
+              With a clear understanding of user pain points and expectations, I defined a focused strategy to transform
+              raw research into meaningful design outcomes. Rather than overwhelming users with data, the goal was to
+              craft a clear, role-relevant experience — one that respected user context, speed of access, and daily
+              workflows.
             </p>
-
-            <h2>Interaction Design 1.1</h2>
-            <h3>Task and User Flow Maps</h3>
             <p>
-              Task and User Flow Maps provide a structured approach to designing seamless experiences. These
-              visualisations outline user actions step by step, ensuring interactions are intuitive, goal-driven, and
-              aligned with user behaviour. By refining these flows, we enhance usability and engagement.
+              The decision to design a multi-row dashboard structure was grounded in stakeholder feedback and recurring
+              user needs. It allowed for a clean separation of high-level metrics, task progression, team insights, and
+              time-sensitive actions — all within a single glanceable view.
             </p>
-
             <p>
-              Focusing on this aspect of design improves user engagement, streamlines navigation, enhances the shopping
-              experience, encourages repeat visits, and increases ROI.
+              Given time and engineering constraints, I prioritised features based on two key questions:
+              <i>Does this unlock faster decision-making?</i> and <i>Can it reduce manual effort?</i> This helped remove
+              noise and anchor the design direction in clear user value.
             </p>
-
-            <aside title="Task and User Flow Tabular Views">
-              <div class="tab-container" id="tabContainer2">
-                <div class="tab-buttons">
-                  <button type="button" class="tab-button active" data-target="tab1">Task Flow</button>
-                  <button type="button" class="tab-button" data-target="tab2">User Flow</button>
-                </div>
-                <div class="tab-contents">
-                  <div id="tabContent3" class="tab-module" data-title="Tab 1">
-                    <h3>Task Flow Maps</h3>
-                    <p>
-                      Task Flow Maps visualise the step-by-step process users follow to complete specific actions, such
-                      as logging in or making a purchase. They highlight key decision points, potential bottlenecks, and
-                      opportunities for optimisation, ensuring a smoother and more efficient user experience.
-                    </p>
-
-                    <p class="hide-sm">Click any image to enlarge it.</p>
-
-                    <div class="grid-container-1col">
-                      <div class="image-container lightbox-img-trigger">
-                        <figure class="gallery" data-index="3">
-                          <img
-                            class="lazyload"
-                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="./assets/images/Case-Studies/CS2/planning/Task-Flow.webp"
-                            alt="Task Flow Map."
-                            width="483"
-                            height="252"
-                          />
-                          <figcaption>Task Flow Map.</figcaption>
-                        </figure>
-                        <div class="lightbox lightbox_3">
-                          <div class="lightbox-content w-90 w-60b">
-                            <div class="header">
-                              <h4>Task Flow Map</h4>
-                              <button type="button" id="close-btn_3" class="close-btn">&times;</button>
-                            </div>
-                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC" alt="Task Flow Diagram" />
-                            <p>Task Flow Map</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div id="tabContent2" class="tab-module" data-title="Tab 2">
-                    <h3>User Flow Diagram</h3>
-                    <p>
-                      A user flow maps the overall journey across the app or site, including entry points, decision
-                      paths, and goal completions. It ensures intuitive navigation and supports user goals effectively,
-                      working alongside task flows to create a seamless experience.
-                    </p>
-                    <p class="hide-sm">Please feel free to click on the image to enlarge it.</p>
-
-                    <div class="grid-container-1col">
-                      <div class="image-container lightbox-img-trigger">
-                        <figure class="gallery" data-index="4">
-                          <img
-                            class="lazyload"
-                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                            data-src="./assets/images/Case-Studies/CS2/planning/userflow.webp"
-                            alt="User Flow Map."
-                            width="483"
-                            height="252"
-                          />
-                          <figcaption>User Flow Mapping</figcaption>
-                        </figure>
-                        <div class="lightbox lightbox_4">
-                          <div class="lightbox-content w-90 w-80b">
-                            <div class="header">
-                              <h4>User Flow Mapping</h4>
-                              <button type="button" id="close-btn_4" class="close-btn">&times;</button>
-                            </div>
-                            <img
-                              src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                              alt="User Flow Map analyses the efficient user flow."
-                            />
-                            <p>User Flow Mapping</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </aside>
-          </section>
-
-          <section
-            id="interaction"
-            data-color="Inter_border"
-            class="editorial lazyload lazyblurry border-gradient border -Inter_border"
-          >
-            <div class="split-header">
-              <div class="title-col hide-sm">
-                <h2>Interaction Design</h2>
-              </div>
-              <div class="header-banner Interaction-banner lazyload lazyblurry"></div>
-            </div>
-            <h2>Interaction Design 1.2</h2>
-            <h3>Front-End Technology Analysis</h3>
             <p>
-              Choosing the right front-end framework was critical to balancing cost, development time, and long-term
-              scalability—especially given the organisation's limited front-end development experience. The decision
-              directly influenced the project's budget, timeline, and future adaptability.
+              Each interaction was planned with minimal disruption in mind. Instead of navigating to new areas, users
+              could surface deeper insight via modals and quick filters, supporting a seamless experience while
+              maintaining platform consistency.
             </p>
-            <ul>
-              <li>
-                <span class="emphasis">Alignment with Team Expertise:</span>
-                The framework needed to complement the team’s existing skills in Java and JavaScript, minimising the
-                learning curve and accelerating development.
-              </li>
-              <li>
-                <span class="emphasis">Ease of Adoption:</span>
-                Given the team's limited front-end experience, selecting a user-friendly framework ensured faster
-                implementation and reduced onboarding time.
-              </li>
-              <li>
-                <span class="emphasis">Scalability:</span>
-                The framework had to support future expansion, particularly for iOS (and potentially Android)
-                applications, enabling a unified codebase and reducing maintenance overhead.
-              </li>
-            </ul>
             <p>
-              This strategic selection streamlined development, optimised resources, and laid a solid foundation for
-              future growth.
+              This strategy shaped the foundation for both low-fidelity exploration and high-fidelity visual design —
+              ensuring the end solution remained focused, familiar, and scalable.
             </p>
-
-            <h3>Identified Frameworks:</h3>
-            <ol>
-              <li>
-                <img
-                  class="logo-sm"
-                  src="./assets/images/Case-Studies/CS2/Logos/swift-logo.svg"
-                  width="40"
-                  height="40"
-                  alt="Swift UI Logo"
-                />
-                <a href="https://developer.apple.com/documentation/swiftui">Swift UI (Apple Documentation)</a>
-              </li>
-              <li>
-                <img
-                  class="logo-sm"
-                  src="./assets/images/Case-Studies/CS2/Logos/UIKit-logo.svg"
-                  width="40"
-                  height="40"
-                  alt="UIKit Logo"
-                />
-                <a href="https://developer.apple.com/documentation/uikit">UIKit (Apple Documentation)</a>
-              </li>
-              <li>
-                <img
-                  class="logo-sm"
-                  src="./assets/images/Case-Studies/CS2/Logos/R-Native-logo.svg"
-                  width="40"
-                  height="40"
-                  alt="React Native Logo"
-                />
-                <a href="https://reactnative.dev/">React Native (Documentation)</a>
-              </li>
-              <li>
-                <img
-                  class="logo-sm"
-                  src="./assets/images/Case-Studies/CS2/Logos/React-logo.svg"
-                  width="40"
-                  height="40"
-                  alt="React Logo"
-                />
-                <a href="https://react.dev/">React (Documentation)</a>
-              </li>
-              <li>
-                <img
-                  class="logo-sm"
-                  src="./assets/images/Case-Studies/CS2/Logos/MUI-logo.svg"
-                  width="40"
-                  height="40"
-                  alt="MUI Logo"
-                />
-                <a href="https://mui.com/">MUI (Documentation)</a>
-              </li>
-            </ol>
-
-            <h3>Findings</h3>
-            <p>
-              After evaluating multiple frameworks, it became clear that SwiftUI, while well-suited for iOS development,
-              was not viable due to its incompatibility with the team’s preferred languages. Instead,
-              <span class="emphasis">React Native</span>
-              ,
-              <span class="emphasis">React</span>
-              , and
-              <span class="emphasis">MUI</span>
-              emerged as the strongest candidates for the following reasons:
-            </p>
-            <ul class="no-disc">
-              <li>
-                <span class="emphasis">Developer Availability & Cost:</span>
-                React has a significantly larger developer pool compared to Swift, with a promising 5:1 ratio, making it
-                a cost-effective long-term investment.
-              </li>
-              <li>
-                <span class="emphasis">Familiar Technology Stack:</span>
-                Built on JavaScript, HTML5, and CSS3, React provides an accessible learning curve for the team, ensuring
-                seamless adoption.
-              </li>
-              <li>
-                <span class="emphasis">Scalability & Maintainability:</span>
-                React’s component-based architecture supports reusable code, reducing development time and enhancing
-                scalability.
-              </li>
-              <li>
-                <span class="emphasis">Extensive Component Library:</span>
-                Pre-built components and icon libraries streamline UI development, ensuring consistency and efficiency.
-              </li>
-              <li>
-                <span class="emphasis">Cross-Platform Compatibility:</span>
-                React Native enables a unified codebase for both iOS and Android, simplifying future mobile app
-                expansion.
-              </li>
-            </ul>
           </section>
 
           <section
@@ -946,333 +623,37 @@
               </div>
               <div class="header-banner Low-Fi-banner lazyload lazyblurry"></div>
             </div>
-            <p>
-              Rapid prototyping is a vital stage in the design process, allowing for the quick creation of low-fidelity
-              wireframes and paper prototypes to visualise core concepts. Iterating on these early designs enabled fast
-              feedback collection, idea validation, and UI refinements before investing in high-fidelity mock ups. This
-              user-centric approach ensured flexibility, keeping the design aligned with both user needs and business
-              objectives.
-            </p>
 
-            <h2>Low-Fidelity Design 1.1</h2>
-            <h3>Rapid Prototyping</h3>
+            <h3>Purpose and Approach</h3>
             <p>
-              Initial concepts were shaped by Affinity Mapping, Journey Analysis, and Persona Analysis, resulting in
-              prototypes for the Home Screen, components, and screen layouts. Emphasis was placed on refining card
-              components for ease of use and visual appeal.
-            </p>
-            <p>Key elements of the rapid prototyping phase included:</p>
-
-            <ul>
-              <li>
-                <span class="emphasis">Home Screen Layouts:</span>
-                Developed to create a cohesive, intuitive structure.
-              </li>
-              <li>
-                <span class="emphasis">Card Components:</span>
-                Optimised to enhance both interaction and visual appeal.
-              </li>
-              <li>
-                <span class="emphasis">Calls to Action (CTAs):</span>
-                Strategically placed for easy access based on ergonomic research.
-              </li>
-              <li>
-                <span class="emphasis">Reusable Components:</span>
-                Designed for consistency and familiarity, improving efficiency across the interface.
-              </li>
-              <li>
-                <span class="emphasis">Ergonomic Reach:</span>
-                Designed to enhance the device size in conjunction with important CTA placement and strategic Marketing
-                opportunities to drive user conversion rates.
-              </li>
-            </ul>
-            <p>
-              Special attention was given to refining card components to enhance user interaction and visual appeal.
+              With SCOUT’s dashboard acting as the user’s first point of contact, early design work was essential for
+              shaping its information architecture and interaction flows. These low-fidelity prototypes enabled rapid
+              exploration, quick iteration, and stakeholder alignment — all before investing in more detailed UI
+              decisions.
             </p>
             <p>
-              Design decisions were driven by insights from User Interviews, ensuring alignment with both user needs and
-              business requirements.
+              Wireframes were built around real use cases gathered from onboarding feedback and internal interviews. I
+              conducted informal walkthroughs with internal stakeholders to validate layout logic, feature
+              prioritisation, and user expectations. This kept the focus on solving practical problems without
+              over-designing at an early stage.
             </p>
-            <p>
-              Based on prior research, the Top Bar and Footer were strategically designed to feature prominent Calls to
-              Action (CTAs), each positioned within comfortable thumb reach for optimal usability.
-            </p>
-            <p>
-              This iterative process laid the foundation for User Testing, allowing real-time feedback to refine and
-              optimise the user experience. By continuously incorporating user insights, we created a UI that was
-              intuitive, ergonomic, and visually compelling.
-            </p>
-
-            <p class="hide-sm">You can click on any image to enlarge them.</p>
-
-            <div class="grid-container-4col">
-              <div class="image-container lightbox-img-trigger">
-                <figure class="gallery" data-index="5">
-                  <img
-                    class="lazyload"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                    data-src="./assets/images/Case-Studies/CS2/Low-Fi/Prototypes/Home-Page.webp"
-                    alt="Image showing the early paper prototype of the index page"
-                    width="501"
-                    height="700"
-                  />
-                  <figcaption>Index Page Prototype</figcaption>
-                </figure>
-                <div class="lightbox lightbox_5">
-                  <div class="lightbox-content w-50 w-40a w-30b">
-                    <div class="header">
-                      <h4>Home Page</h4>
-                      <button type="button" id="close-btn_5" class="close-btn">&times;</button>
-                    </div>
-                    <img
-                      src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      alt="Paper Prototype Design - Index page initial layout."
-                    />
-                    <p>Index Page Prototype</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-container lightbox-img-trigger">
-                <figure class="gallery" data-index="6">
-                  <img
-                    class="lazyload"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                    data-src="./assets/images/Case-Studies/CS2/Low-Fi/Prototypes/top-nav&footer.webp"
-                    alt="Paper Prototype Design - Applications Ergonomically Design"
-                    width="501"
-                    height="700"
-                  />
-                  <figcaption>Ergonomic Reach Ideation</figcaption>
-                </figure>
-                <div class="lightbox lightbox_6">
-                  <div class="lightbox-content w-50 w-40a w-30b">
-                    <div class="header">
-                      <h4>Ergonomic Reach Test</h4>
-                      <button type="button" id="close-btn_6" class="close-btn">&times;</button>
-                    </div>
-                    <img
-                      src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      alt="Paper Prototype - Applications Ergonomic Design."
-                    />
-                    <p>Ergonomic Reach Ideation</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-container lightbox-img-trigger">
-                <figure class="gallery" data-index="6a">
-                  <img
-                    class="lazyload"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                    data-src="./assets/images/Case-Studies/CS2/Low-Fi/Prototypes/Top-Bar-btns.webp"
-                    alt="Paper Prototype Design - Top Bar Components layout"
-                    width="501"
-                    height="700"
-                  />
-                  <figcaption>Top Bar Prototype.</figcaption>
-                </figure>
-                <div class="lightbox lightbox_6a">
-                  <div class="lightbox-content w-50 w-40a w-30b">
-                    <div class="header">
-                      <h4>Top Bar</h4>
-                      <button type="button" id="close-btn_6a" class="close-btn">&times;</button>
-                    </div>
-                    <img
-                      src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      alt="Paper Prototype - Top Bar."
-                    />
-                    <p>Top Bar Prototype</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-container lightbox-img-trigger">
-                <figure class="gallery" data-index="7">
-                  <img
-                    class="lazyload"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                    data-src="./assets/images/Case-Studies/CS2/Low-Fi/Prototypes/Menu-Options.webp"
-                    alt="Paper Prototype - Menu Options Initial Layout Wire Frame Design."
-                    width="501"
-                    height="700"
-                  />
-                  <figcaption>User Menu Prototype.</figcaption>
-                </figure>
-                <div class="lightbox lightbox_7">
-                  <div class="lightbox-content w-50 w-40a w-30b">
-                    <div class="header">
-                      <h4>Menu Options</h4>
-                      <button type="button" id="close-btn_7" class="close-btn">&times;</button>
-                    </div>
-                    <img
-                      src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      alt="Paper Prototype - Menu Options Initial Wire Frame Design."
-                    />
-                    <p>User Menu Prototype</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-container lightbox-img-trigger">
-                <figure class="gallery" data-index="8">
-                  <img
-                    class="lazyload"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                    data-src="./assets/images/Case-Studies/CS2/Low-Fi/Prototypes/Product-Description.webp"
-                    alt="Paper Prototype - Menu Options Initial Layout Wire Frame Design."
-                    width="501"
-                    height="700"
-                  />
-                  <figcaption>Description Prototype</figcaption>
-                </figure>
-                <div class="lightbox lightbox_8">
-                  <div class="lightbox-content w-50 w-40a w-30b">
-                    <div class="header">
-                      <h4>Product Description</h4>
-                      <button type="button" id="close-btn_8" class="close-btn">&times;</button>
-                    </div>
-                    <img
-                      src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      alt="Paper Prototype - Product Description Page Wire Frame Design."
-                    />
-                    <p>Description Prototype</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-container lightbox-img-trigger">
-                <figure class="gallery" data-index="9">
-                  <img
-                    class="lazyload"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                    data-src="./assets/images/Case-Studies/CS2/Low-Fi/Prototypes/Basket-Modal.webp"
-                    alt="Paper Prototype Design - Basket Modal Initial Layout Wire Frame Design."
-                    width="204"
-                    height="290"
-                  />
-                  <figcaption>Confirmation Prototype</figcaption>
-                </figure>
-                <div class="lightbox lightbox_9">
-                  <div class="lightbox-content w-50 w-40a w-30b">
-                    <div class="header">
-                      <h4>Confirmation Modal</h4>
-                      <button type="button" id="close-btn_9" class="close-btn">&times;</button>
-                    </div>
-                    <img
-                      src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      alt="Paper Prototype Design - Basket Modal"
-                    />
-                    <p>Confirmation Prototype</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-container lightbox-img-trigger">
-                <figure class="gallery" data-index="10">
-                  <img
-                    class="lazyload"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                    data-src="./assets/images/Case-Studies/CS2/Low-Fi/Prototypes/Basket-Page.webp"
-                    alt="Paper Prototype Design - Basket Page Initial Layout Design."
-                    width="204"
-                    height="290"
-                  />
-                  <figcaption>Your Basket Prototype</figcaption>
-                </figure>
-                <div class="lightbox lightbox_10">
-                  <div class="lightbox-content w-40 w-30a w-20b">
-                    <div class="header">
-                      <h4>Basket Page</h4>
-                      <button type="button" id="close-btn_10" class="close-btn">&times;</button>
-                    </div>
-                    <img
-                      src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      alt="Paper Prototype Design - Basket Page Initial Layout Design."
-                    />
-                    <p>Your Basket Prototype</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-container lightbox-img-trigger">
-                <figure class="gallery" data-index="11">
-                  <img
-                    class="lazyload"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                    data-src="./assets/images/Case-Studies/CS2/Low-Fi/Prototypes/Card-Ideation.webp"
-                    alt="Paper Prototype - Product Card Initial Layout Wire Frame Design."
-                    width="204"
-                    height="290"
-                  />
-                  <figcaption>Card Ideation Prototype</figcaption>
-                </figure>
-                <div class="lightbox lightbox_11">
-                  <div class="lightbox-content w-40 w-30a w-20b">
-                    <div class="header">
-                      <h4>Card Ideation</h4>
-                      <button type="button" id="close-btn_11" class="close-btn">&times;</button>
-                    </div>
-                    <img
-                      src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAAC"
-                      alt="Paper Prototype - Product Card Initial Layout Wire Frame Design."
-                    />
-                    <p>Card Ideation Prototype</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <h3>User Feedback & Iteration</h3>
-            <p>
-              During the refinement phase, user engagement increased significantly as we tested and aligned key
-              marketing strategies with stakeholder expectations. The Landing and Index pages featured elements such as
-              the
-              <span class="emphasis">Hero Section, USP Strip, and Promotional Banners</span>
-              , which played a crucial role in driving conversions and engagement.
-            </p>
-            <p>
-              To validate design choices, we presented users with multiple card layout variations tailored for this
-              platform. While feedback was largely positive, further refinements were needed to enhance clarity and
-              usability. These refinements were made using Figma to develop more polished low-fidelity prototypes.
-            </p>
-
-            <h4>Findings</h4>
-            <ul class="no-disc">
+            <h3>Key Wireframe Considerations</h3>
+            <ul class="styled-list">
               <li>
-                <p>
-                  <span class="emphasis">Conversion-Driven Design:</span>
-                  Users responded positively to time-limited offers, trust signals, and strategic call-to-action
-                  placements, reinforcing the effectiveness of conversion-based design elements.
-                </p>
+                <span class="emphasis">User-Centric Navigation:</span> Designed around analyst workflows to ensure
+                seamless access to critical task, meeting, and performance data.
               </li>
               <li>
-                <p>
-                  <span class="emphasis">Visual Hierarchy & Engagement:</span>
-                  Prominent CTAs in the hero section and curated marketing banners helped guide users seamlessly from
-                  discovery to checkout.
-                </p>
+                <span class="emphasis">Action-Oriented Interface:</span> Interactive elements such as task summaries and
+                meeting prompts encouraged immediate, confident engagement.
               </li>
               <li>
-                <p>
-                  <span class="emphasis">Psychological Triggers:</span>
-                  Features like scarcity indicators (e.g., “Only 3 left in stock”), social proof (e.g., trending product
-                  tags), and urgency-based messaging enhanced user motivation.
-                </p>
+                <span class="emphasis">Clarity Through Structure:</span> Hierarchical grouping and white space were used
+                to create focus areas, reduce noise, and support intuitive scanning.
               </li>
               <li>
-                <p>
-                  <span class="emphasis">Streamlined Card Layouts:</span>
-                  Minimalist card designs with concise information reduced cognitive load, improving readability and
-                  click-through rates.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <span class="emphasis">Data-Driven Refinements:</span>
-                  Insights from user testing led to further refinements in layout structure and interaction flow,
-                  ensuring the platform met both business objectives and user expectations.
-                </p>
+                <span class="emphasis">Lightweight Collaboration:</span> Wireframes were shared and reviewed across the
+                team with minimal overhead, enabling fast alignment on content and layout decisions.
               </li>
             </ul>
           </section>
@@ -1282,54 +663,17 @@
             data-color="Lo-Fi_border"
             class="editorial lazyload lazyblurry border-gradient -Lo-Fi_border"
           >
-            <h2>Low-Fidelity Designs 1.1</h2>
-            <h3>Task-Oriented Wireframes</h3>
+            <h2>Low-Fidelity Designs</h2>
             <p>
-              Using Figma™, we translated initial sketches into interactive wireframes that mapped out core user flows.
-              These wireframes focused on responsiveness, ensuring seamless adaptation across different screen sizes
-              while maintaining usability and accessibility.
+              Early wireframes played a crucial role in shaping the dashboard’s layout and functionality. These
+              low-fidelity designs allowed rapid exploration of key interface elements and workflows before investing in
+              detailed visuals. By focusing on structure and usability, I could identify potential issues and validate
+              layout decisions early with stakeholders. While responsiveness was considered from the start, adaptations
+              across breakpoints were introduced more visually during the high-fidelity phase.
             </p>
             <p>
-              By prioritising a task-driven approach, we crafted intuitive layouts that guide users through key
-              actions—such as product discovery, navigation, and checkout—while aligning with both user preferences and
-              business objectives.
-            </p>
-
-            <h3>Key Wireframe Considerations</h3>
-            <ul>
-              <li>
-                <span class="emphasis">User-Centric Navigation:</span>
-                Designed clear, logical pathways that minimise friction and optimise conversion rates.
-              </li>
-              <li>
-                <span class="emphasis">Conversion-Driven Design:</span>
-                Strategically positioned promotional content, call-to-actions (CTAs), and trust signals to maximise
-                engagement.
-              </li>
-              <li>
-                <span class="emphasis">Responsive Layouts:</span>
-                Ensured seamless scalability across mobile, tablet, and desktop devices for a consistent experience.
-              </li>
-              <li>
-                <span class="emphasis">Streamlined Checkout Flow:</span>
-                Simplified the purchasing process to reduce abandonment rates, integrating frictionless form design and
-                secure payment options.
-              </li>
-              <li>
-                <span class="emphasis">Marketing Integration:</span>
-                Placed key marketing elements (e.g., USP Strip, Hero Banners, and Limited-Time Offers) prominently to
-                drive user engagement.
-              </li>
-              <li>
-                <span class="emphasis">Visual Hierarchy & Readability:</span>
-                Balanced content density with whitespace, ensuring product details are digestible without overwhelming
-                users.
-              </li>
-            </ul>
-
-            <p>
-              These wireframes laid the foundation for usability testing, allowing iterative refinements based on
-              real-world feedback before progressing to high-fidelity designs.
+              The wireframes also provided a foundation for iterative refinement, incorporating feedback to
+              progressively improve clarity and user experience before moving to polished designs.
             </p>
 
             <aside title="Low Fidelity Designs Tabular Views">

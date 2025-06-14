@@ -1,6 +1,9 @@
 // Function to generate sidebar items
 function generateSidebarItems() {
-  return [
+  const currentPage = window.location.pathname.split("/").pop().replace(".html", "");
+
+  // Default full list
+  const defaultItems = [
     { id: "introduction", label: "Introduction", icon: "introduction-icon" },
     { id: "research", label: "Research", icon: "research-icon" },
     { id: "architecture", label: "Information Architecture", icon: "IA-icon" },
@@ -11,22 +14,39 @@ function generateSidebarItems() {
     { id: "ux-testing", label: "UX Testing", icon: "UXTesting-icon" },
     { id: "results", label: "Test Results", icon: "Results-icon" },
     { id: "conclusion", label: "Conclusion", icon: "Conc-icon" },
-    { id: "project-information", label: "Project Information", icon: "Info-icon" }
-  ]
-  .map(item => `
+    { id: "project-information", label: "Project Information", icon: "Info-icon" },
+  ];
+
+  // Reduced sidebar for the dashboard case study
+  const dashboardCaseStudyItems = [
+    { id: "introduction", label: "Introduction", icon: "introduction-icon" },
+    { id: "research", label: "Research", icon: "research-icon" },
+    { id: "design-strategy", label: "Design Strategy", icon: "ID-icon" },
+    { id: "early-designs", label: "Early Designs", icon: "Lo-Fi-icon" },
+    { id: "hi-fidelity-designs", label: "Final Solution", icon: "Hi-Fi-icon" },
+    { id: "conclusion", label: "Reflection", icon: "Conc-icon" },
+    { id: "project-information", label: "Info", icon: "Info-icon" },
+  ];
+  const itemsToUse = currentPage === "dashboard" ? dashboardCaseStudyItems : defaultItems;
+
+  return itemsToUse
+    .map(
+      (item) => `
     <li class="side-bar-list-item">
       <a href="#${item.id}" class="sidebar-link">
         <span class="side-bar-icon ${item.icon}" title="${item.label}"></span>
         <span class="nav-item">${item.label}</span>
       </a>
     </li>
-  `).join('');
+  `
+    )
+    .join("");
 }
 
 // Insert the sidebar into the page
 function insertSidebar() {
   const mobileSidebar = document.getElementById("mobileSidebar"),
-        largeSidebar = document.getElementById("largeSidebar");
+    largeSidebar = document.getElementById("largeSidebar");
 
   if (window.innerWidth <= 1400 && mobileSidebar && !document.getElementById("sidebar")) {
     // Create and insert mobile sidebar
@@ -53,15 +73,15 @@ function insertSidebar() {
     // Attach event listeners to buttons
     function attachMobileSidebarListeners() {
       const openButton = document.querySelector(".open-sidebar-btn"),
-            closeButton = document.querySelector(".close-btn"),
-            sidebar = document.getElementById("sidebar"),
-            contentsButton = document.querySelector(".contents");
+        closeButton = document.querySelector(".close-btn"),
+        sidebar = document.getElementById("sidebar"),
+        contentsButton = document.querySelector(".contents");
 
       if (openButton && closeButton && sidebar && contentsButton) {
         // Open sidebar and hide contents button
         openButton.addEventListener("click", () => {
           sidebar.classList.add("sidebar-open");
-          contentsButton.classList.add("hidden"); 
+          contentsButton.classList.add("hidden");
         });
 
         // Close sidebar and show contents button after transition
@@ -72,8 +92,8 @@ function insertSidebar() {
     attachMobileSidebarListeners();
 
     // Handle sidebar link clicks
-    document.querySelectorAll('.sidebar-link').forEach(link => {
-      link.addEventListener('click', (event) => {
+    document.querySelectorAll(".sidebar-link").forEach((link) => {
+      link.addEventListener("click", (event) => {
         event.preventDefault(); // Prevent default anchor jump behavior
         const targetId = link.getAttribute("href").substring(1); // Get target ID
         const targetElement = document.getElementById(targetId);
@@ -106,7 +126,7 @@ function insertSidebar() {
 // Function to close sidebar properly
 function closeSidebar() {
   const sidebar = document.getElementById("sidebar"),
-        contentsButton = document.querySelector(".contents");
+    contentsButton = document.querySelector(".contents");
 
   if (sidebar) {
     sidebar.classList.remove("sidebar-open");
