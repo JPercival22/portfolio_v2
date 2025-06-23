@@ -1517,14 +1517,18 @@ section {
   .editorial .achievement-cards .card .highlight {
     font-size: 0.9rem;
   }
-  .editorial .grid-container-4col {
+  .editorial .grid-container-1col {
+    margin-top: 2em;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
     grid-gap: 1em;
+    margin-top: 1em;
   }
-  .editorial .grid-container-4col .gallery figcaption {
-    font-size: 0.9rem;
+  .editorial .grid-container-1col .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .editorial .grid-container-2col {
     margin-top: 2em;
@@ -1533,7 +1537,7 @@ section {
     grid-template-rows: auto;
     grid-gap: 1em;
   }
-  .editorial .grid-container-2col .grrid-item {
+  .editorial .grid-container-2col .grid-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1553,6 +1557,9 @@ section {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-gap: 1em;
+  }
+  .editorial .grid-container-4col .gallery figcaption {
+    font-size: 0.9rem;
   }
   .editorial .grid-container-5col {
     display: grid;
