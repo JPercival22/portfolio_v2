@@ -1,5 +1,5 @@
 // Typography
-$font-family: 'Poppins', sans-serif;
+$font-family: "Poppins", sans-serif;
 $color_primary_text: #1a1a1a;
 // color palette
 
@@ -30,7 +30,7 @@ $color_border-focus: 1px solid #5474a1;
 $brad-8: 8px;
 
 //imports
-@use 'sass:color';
+@use "sass:color";
 
 // mixins
 @mixin apply-flex-styles($flex-styles) {
@@ -449,7 +449,7 @@ img {
       justify-content: center;
       padding: 10px;
       .logo {
-        background-image: url('../assets/images/iconography/jp-LOGO-mini.svg');
+        background-image: url("../assets/images/iconography/jp-LOGO-mini.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -476,7 +476,7 @@ img {
       border: none;
       cursor: pointer;
       .icon-bar {
-        background-image: url('../assets/images/iconography/menu-icon.svg');
+        background-image: url("../assets/images/iconography/menu-icon.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -809,7 +809,7 @@ section {
     border-radius: 50%;
     box-shadow: 5px 8px 8px 0px rgba(201, 201, 201, 0.9);
     .chevron {
-      background-image: url('../assets/images/controls/chevron.svg');
+      background-image: url("../assets/images/controls/chevron.svg");
       background-repeat: no-repeat;
       background-position: center;
       width: 30px;
@@ -854,7 +854,7 @@ section {
       border-radius: 50%;
       box-shadow: 5px 8px 8px 0px rgba(201, 201, 201, 0.9);
       .chevron {
-        background-image: url('../assets/images/controls/chevron.svg');
+        background-image: url("../assets/images/controls/chevron.svg");
         background-repeat: no-repeat;
         background-position: center;
         width: 30px;
@@ -876,37 +876,37 @@ section {
           width: 40px;
           height: 40px;
           &.introduction-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Intro-Icon-min.svg');
+            background-image: url("../assets/images/Case-Studies/side-bar-icons/Intro-Icon-min.svg");
           }
           &.research-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
+            background-image: url("../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg");
           }
           &.IA-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/IA-Icon-min.svg');
+            background-image: url("../assets/images/Case-Studies/side-bar-icons/IA-Icon-min.svg");
           }
           &.ID-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Inter-Design-Icon-min.svg');
+            background-image: url("../assets/images/Case-Studies/side-bar-icons/Inter-Design-Icon-min.svg");
           }
           &.Lo-Fi-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Lo-Fi-Icon-min.svg');
+            background-image: url("../assets/images/Case-Studies/side-bar-icons/Lo-Fi-Icon-min.svg");
           }
           &.DesSystem-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Des-System-Icon-min.svg');
+            background-image: url("../assets/images/Case-Studies/side-bar-icons/Des-System-Icon-min.svg");
           }
           &.Hi-Fi-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/HiFi-Icon-min.svg');
+            background-image: url("../assets/images/Case-Studies/side-bar-icons/HiFi-Icon-min.svg");
           }
           &.UXTesting-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/UXTest-icon-min.svg');
+            background-image: url("../assets/images/Case-Studies/side-bar-icons/UXTest-icon-min.svg");
           }
           &.Results-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
+            background-image: url("../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg");
           }
           &.Conc-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Conclusion-Icon-min.svg');
+            background-image: url("../assets/images/Case-Studies/side-bar-icons/Conclusion-Icon-min.svg");
           }
           &.Info-icon {
-            background-image: url('../assets/images/Case-Studies/side-bar-icons/Info-Icon-min.svg');
+            background-image: url("../assets/images/Case-Studies/side-bar-icons/Info-Icon-min.svg");
           }
         }
       }
@@ -991,51 +991,51 @@ section {
         width: 80px;
         height: 80px;
         .invest-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/investment-vector.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/investment-vector.svg");
           @include background-image-style;
         }
         .traffic-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/traffic-vector.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/traffic-vector.svg");
           @include background-image-style;
         }
         .speed-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/speed-vector.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/speed-vector.svg");
           @include background-image-style;
         }
         .awareness-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/awareness-vector.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/awareness-vector.svg");
           @include background-image-style;
         }
         .engagement-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/User-Engagement-Icon.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/User-Engagement-Icon.svg");
           @include background-image-style;
         }
         .innovate-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Innovate-Icon.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/Innovate-Icon.svg");
           @include background-image-style;
         }
         .iterate-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Iterative-icon.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/Iterative-icon.svg");
           @include background-image-style;
         }
         .task-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/Test-rate-icon.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/Test-rate-icon.svg");
           @include background-image-style;
         }
         .accuracy-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/accuracy-icon.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/accuracy-icon.svg");
           @include background-image-style;
         }
         .efficiency-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/efficiency-icon.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/efficiency-icon.svg");
           @include background-image-style;
         }
         .satisfaction-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/satisfaction-icon.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/satisfaction-icon.svg");
           @include background-image-style;
         }
         .usability-img {
-          background-image: url('../assets/images/Case-Studies/banners/metric-vectors/user-testing-icon.svg');
+          background-image: url("../assets/images/Case-Studies/banners/metric-vectors/user-testing-icon.svg");
           @include background-image-style;
         }
       }
@@ -1380,7 +1380,7 @@ section {
         justify-content: center;
         transition: opacity ease-in-out 0.3s;
         .Home-icon {
-          background-image: url('../assets/images/iconography/Home-Icon-min.svg');
+          background-image: url("../assets/images/iconography/Home-Icon-min.svg");
           width: 35px;
           height: 35px;
           background-repeat: no-repeat;
@@ -1388,7 +1388,7 @@ section {
           background-size: contain;
         }
         .linkedIn-icon {
-          background-image: url('../assets/images/iconography/linkedin-min.svg');
+          background-image: url("../assets/images/iconography/linkedin-min.svg");
           width: 40px;
           height: 40px;
           background-repeat: no-repeat;
@@ -1396,7 +1396,7 @@ section {
           background-size: contain;
         }
         .gitHub-icon {
-          background-image: url('../assets/images/iconography/github-logo-min.svg');
+          background-image: url("../assets/images/iconography/github-logo-min.svg");
           width: 40px;
           height: 40px;
           background-repeat: no-repeat;
@@ -1404,7 +1404,7 @@ section {
           background-size: cover;
         }
         .cv-icon {
-          background-image: url('../assets/images/iconography/cv-icon-min.svg');
+          background-image: url("../assets/images/iconography/cv-icon-min.svg");
           width: 40px;
           height: 40px;
           background-repeat: no-repeat;
@@ -1550,18 +1550,18 @@ section {
         }
       }
     }
-    .grid-container-4col {
-      @include apply-grid-styles($grid-4col-auto);
-      .gallery {
-        figcaption {
-          font-size: 0.9rem;
-        }
+
+    .grid-container-1col {
+      margin-top: 2em;
+      @include apply-grid-styles($grid-1col);
+      .grid-item {
+        @include apply-flex-styles($flex-col-center);
       }
     }
     .grid-container-2col {
       margin-top: 2em;
       @include apply-grid-styles($grid-2col-auto);
-      .grrid-item {
+      .grid-item {
         @include apply-flex-styles($flex-col-center);
       }
     }
@@ -1573,6 +1573,11 @@ section {
     }
     .grid-container-4col {
       @include apply-grid-styles($grid-4col-auto);
+      .gallery {
+        figcaption {
+          font-size: 0.9rem;
+        }
+      }
     }
     .grid-container-5col {
       @include apply-grid-styles($grid-5col-auto);
@@ -2109,37 +2114,37 @@ section {
                 background-repeat: no-repeat;
                 background-size: contain;
                 &.introduction-icon {
-                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Intro-Icon-min.svg');
+                  background-image: url("../assets/images/Case-Studies/side-bar-icons/Intro-Icon-min.svg");
                 }
                 &.research-icon {
-                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
+                  background-image: url("../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg");
                 }
                 &.IA-icon {
-                  background-image: url('../assets/images/Case-Studies/side-bar-icons/IA-Icon-min.svg');
+                  background-image: url("../assets/images/Case-Studies/side-bar-icons/IA-Icon-min.svg");
                 }
                 &.ID-icon {
-                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Inter-Design-Icon-min.svg');
+                  background-image: url("../assets/images/Case-Studies/side-bar-icons/Inter-Design-Icon-min.svg");
                 }
                 &.Lo-Fi-icon {
-                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Lo-Fi-Icon-min.svg');
+                  background-image: url("../assets/images/Case-Studies/side-bar-icons/Lo-Fi-Icon-min.svg");
                 }
                 &.DesSystem-icon {
-                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Des-System-Icon-min.svg');
+                  background-image: url("../assets/images/Case-Studies/side-bar-icons/Des-System-Icon-min.svg");
                 }
                 &.Hi-Fi-icon {
-                  background-image: url('../assets/images/Case-Studies/side-bar-icons/HiFi-Icon-min.svg');
+                  background-image: url("../assets/images/Case-Studies/side-bar-icons/HiFi-Icon-min.svg");
                 }
                 &.UXTesting-icon {
-                  background-image: url('../assets/images/Case-Studies/side-bar-icons/UXTest-icon-min.svg');
+                  background-image: url("../assets/images/Case-Studies/side-bar-icons/UXTest-icon-min.svg");
                 }
                 &.Results-icon {
-                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg');
+                  background-image: url("../assets/images/Case-Studies/side-bar-icons/Research-Icon-min.svg");
                 }
                 &.Conc-icon {
-                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Conclusion-Icon-min.svg');
+                  background-image: url("../assets/images/Case-Studies/side-bar-icons/Conclusion-Icon-min.svg");
                 }
                 &.Info-icon {
-                  background-image: url('../assets/images/Case-Studies/side-bar-icons/Info-Icon-min.svg');
+                  background-image: url("../assets/images/Case-Studies/side-bar-icons/Info-Icon-min.svg");
                 }
               }
             }
