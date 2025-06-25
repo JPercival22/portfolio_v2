@@ -23,7 +23,8 @@ function generateSidebarItems() {
     { id: "research", label: "Research", icon: "research-icon" },
     { id: "interaction", label: "Design Strategy", icon: "ID-icon" },
     { id: "early-designs", label: "Early Designs", icon: "Lo-Fi-icon" },
-    { id: "hiFidelityDesigns", label: "Final Solution", icon: "Hi-Fi-icon" },
+    { id: "hiFidelityDesigns", label: "Final Designs", icon: "Hi-Fi-icon" },
+    { id: "ux-testing", label: "Data Visualisation", icon: "UXTesting-icon" },
     { id: "conclusion", label: "Reflection", icon: "Conc-icon" },
     { id: "project-information", label: "Info", icon: "Info-icon" },
   ];
