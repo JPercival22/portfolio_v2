@@ -190,6 +190,9 @@ img {
 .edtorial .split-header .Hi-Fi-banner {
   background-image: url(../assets/images/Case-Studies/banners/section/Hi-Fi-Banner.webp);
 }
+.edtorial .split-header .dataVis-Banner {
+  background-image: url(../assets/images/Case-Studies/banners/section/dataVis-Banner.webp);
+}
 .edtorial .split-header .testing-banner {
   background-image: url(../assets/images/Case-Studies/banners/section/UX-Testing-Banner.webp);
 }
@@ -198,6 +201,9 @@ img {
 }
 .edtorial .split-header .conclusion-banner {
   background-image: url(../assets/images/Case-Studies/banners/section/Conclusion-Banner.webp);
+}
+.edtorial .split-header .reflection-banner {
+  background-image: url(../assets/images/Case-Studies/banners/section/Reflection-Banner.webp);
 }
 .edtorial .hero-content {
   display: flex;
@@ -612,7 +618,7 @@ section {
   border-image: linear-gradient(to right, #ffe7b0 1%, rgba(255, 255, 255, 0) 30%) 1;
 }
 .editorial.border.-conclusion_border {
-  border-image: linear-gradient(to right, #c6ffc6 1%, rgba(255, 255, 255, 0) 30%) 1;
+  border-image: linear-gradient(to right, #a6ce1e 1%, rgba(255, 255, 255, 0) 30%) 1;
 }
 .editorial .split-header {
   display: flex;
@@ -670,6 +676,12 @@ section {
 }
 .editorial .split-header .conclusion-banner {
   background-image: url(../assets/images/Case-Studies/banners/section/Conclusion-Banner.webp);
+}
+.editorial .split-header .reflection-banner {
+  background-image: url(../assets/images/Case-Studies/banners/section/Reflection-Banner.webp);
+}
+.editorial .split-header .dataVis-Banner {
+  background-image: url(../assets/images/Case-Studies/banners/section/dataVis-Banner.webp);
 }
 
 .contents {
@@ -2125,14 +2137,20 @@ section {
   .page-wrapper .border-gradient.-Inter_border {
     border-image: linear-gradient(to right, #ffe079 1%, rgba(255, 255, 255, 0) 30%) 1;
   }
+  .page-wrapper .border-gradient.-LoFi_border {
+    border-image: linear-gradient(to right, #3a86e8 1%, rgba(255, 255, 255, 0) 30%) 1;
+  }
   .page-wrapper .border-gradient.-Lo-Fi_border {
-    border-image: linear-gradient(to right, #9efbe6 1%, rgba(255, 255, 255, 0) 30%) 1;
+    border-image: linear-gradient(to right, #3a86e8 1%, rgba(255, 255, 255, 0) 30%) 1;
   }
   .page-wrapper .border-gradient.-desSystem_border {
     border-image: linear-gradient(to right, #c5ffff 1%, rgba(255, 255, 255, 0) 30%) 1;
   }
+  .page-wrapper .border-gradient.-HiFi_border {
+    border-image: linear-gradient(to right, #8fce70 1%, rgba(255, 255, 255, 0) 30%) 1;
+  }
   .page-wrapper .border-gradient.-Hi-Fi_border {
-    border-image: linear-gradient(to right, #86ffb8 1%, rgba(255, 255, 255, 0) 30%) 1;
+    border-image: linear-gradient(to right, #8fce70 1%, rgba(255, 255, 255, 0) 30%) 1;
   }
   .page-wrapper .border-gradient.-uxTest_border {
     border-image: linear-gradient(to right, #21b1c9 1%, rgba(255, 255, 255, 0) 30%) 1;
@@ -2141,7 +2159,7 @@ section {
     border-image: linear-gradient(to right, #ffe7b0 1%, rgba(255, 255, 255, 0) 30%) 1;
   }
   .page-wrapper .border-gradient.-conclusion_border {
-    border-image: linear-gradient(to right, #c6ffc6 1%, rgba(255, 255, 255, 0) 30%) 1;
+    border-image: linear-gradient(to right, #a6ce1e 1%, rgba(255, 255, 255, 0) 30%) 1;
   }
   .lightbox .lightbox-content.w-15b {
     max-width: 15em;
