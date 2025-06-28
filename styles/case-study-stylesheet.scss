@@ -334,6 +334,9 @@ img {
     .Hi-Fi-banner {
       background-image: url(../assets/images/Case-Studies/banners/section/Hi-Fi-Banner.webp);
     }
+    .dataVis-Banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/dataVis-Banner.webp);
+    }
     .testing-banner {
       background-image: url(../assets/images/Case-Studies/banners/section/UX-Testing-Banner.webp);
     }
@@ -342,6 +345,9 @@ img {
     }
     .conclusion-banner {
       background-image: url(../assets/images/Case-Studies/banners/section/Conclusion-Banner.webp);
+    }
+    .reflection-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Reflection-Banner.webp);
     }
   }
   .hero-content {
@@ -731,7 +737,7 @@ section {
       border-image: linear-gradient(to right, #ffe7b0 1%, #ffffff00 30%) 1;
     }
     &.-conclusion_border {
-      border-image: linear-gradient(to right, #c6ffc6 1%, #ffffff00 30%) 1;
+      border-image: linear-gradient(to right, #a6ce1e 1%, #ffffff00 30%) 1;
     }
   }
   .split-header {
@@ -786,6 +792,12 @@ section {
     }
     .conclusion-banner {
       background-image: url(../assets/images/Case-Studies/banners/section/Conclusion-Banner.webp);
+    }
+    .reflection-banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/Reflection-Banner.webp);
+    }
+    .dataVis-Banner {
+      background-image: url(../assets/images/Case-Studies/banners/section/dataVis-Banner.webp);
     }
   }
 }
@@ -2179,14 +2191,21 @@ section {
       &.-Inter_border {
         border-image: linear-gradient(to right, #ffe079 1%, #ffffff00 30%) 1;
       }
+      &.-LoFi_border {
+        border-image: linear-gradient(to right, #3a86e8 1%, #ffffff00 30%) 1;
+      }
       &.-Lo-Fi_border {
-        border-image: linear-gradient(to right, #9efbe6 1%, #ffffff00 30%) 1;
+        border-image: linear-gradient(to right, #3a86e8 1%, #ffffff00 30%) 1;
       }
       &.-desSystem_border {
         border-image: linear-gradient(to right, #c5ffff 1%, #ffffff00 30%) 1;
       }
+
+      &.-HiFi_border {
+        border-image: linear-gradient(to right, #8fce70 1%, #ffffff00 30%) 1;
+      }
       &.-Hi-Fi_border {
-        border-image: linear-gradient(to right, #86ffb8 1%, #ffffff00 30%) 1;
+        border-image: linear-gradient(to right, #8fce70 1%, #ffffff00 30%) 1;
       }
       &.-uxTest_border {
         border-image: linear-gradient(to right, #21b1c9 1%, #ffffff00 30%) 1;
@@ -2195,7 +2214,7 @@ section {
         border-image: linear-gradient(to right, #ffe7b0 1%, #ffffff00 30%) 1;
       }
       &.-conclusion_border {
-        border-image: linear-gradient(to right, #c6ffc6 1%, #ffffff00 30%) 1;
+        border-image: linear-gradient(to right, #a6ce1e 1%, #ffffff00 30%) 1;
       }
     }
   }
